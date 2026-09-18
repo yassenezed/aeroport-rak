@@ -1,163 +1,237 @@
 ---
 import MoneyLayout from '../layouts/MoneyLayout.astro';
-import TransferOptions from '../components/affiliate/TransferOptions.astro';
 import { getLocalizedPath } from '../i18n';
 import { photos } from '../data/images';
+import { airport, PRICES_CHECKED } from '../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: 'Transferts', href: L('/agadir-airport-transfers/') },
-];
-const facts = [
-  { label: 'Aéroport → ville', value: '22 km' },
-  { label: 'Durée', value: '25–40', sub: 'min' },
-  { label: 'Train / Uber', value: 'Aucun', sub: 'à AGA' },
-  { label: 'Transfert réservé', value: '20 €', sub: 'dès' },
-];
-const faqs = [
-  { q: "Quel est le meilleur moyen d'aller de l'aéroport d'Agadir en ville ?", a: "Pour une course de jour vers un hôtel du centre, le grand taxi de la station convient et reste le moins cher, fixez le prix d'abord (autour de 200–250 MAD). Pour une arrivée du soir, une famille avec sièges-auto, ou un village de surf sur la côte, un transfert privé réservé est plus serein : prix fixe, chauffeur avec votre nom, et quelqu'un capable de trouver une adresse non balisée. À l'AGA il n'y a ni train ni Uber ; ALSA fait bien rouler une navette économique vers le centre d'Agadir (autour de 50 MAD, à peu près toutes les heures en journée), mais elle ne dessert que le centre, et uniquement de jour. Tarifs vérifiés en juin 2026." },
-  { q: "Y a-t-il un train ou un bus depuis l'aéroport d'Agadir ?", a: "Pas de train. Agadir n'a aucune ligne ferroviaire. En revanche il y a désormais un bus : ALSA fait rouler une navette d'aéroport vers le centre d'Agadir (à peu près toutes les heures en journée, environ 50 minutes, autour de 50 MAD), et il existe un trajet local moins cher via la ligne 37 jusqu'à Inezgane puis la ligne 98 vers la ville. Les deux ne desservent que le centre, de jour, pas la porte de votre hôtel, pas la côte, pas tard le soir. Avec des bagages, une arrivée tardive ou une destination hors du centre, le grand taxi, un transfert réservé ou une voiture de location reste donc l'option pratique." },
-  { q: "Combien coûte un transfert d'aéroport à Agadir ?", a: "Un transfert privé réservé vers le centre d'Agadir démarre autour de 20 € par voiture. Vers Taghazout sur la côte, comptez environ 28 €, Taroudant autour de 55 €, et Marrakech environ 120 €. Un grand taxi vers la ville coûte 200–250 MAD en journée (≈ 19–23 €), 300–350 MAD la nuit." },
-  { q: "Peut-on réserver un transfert à l'avance et payer plus tard ?", a: "Oui. La plupart des prestataires permettent de réserver maintenant et payer plus tard, avec annulation gratuite jusqu'à 24 h avant la prise en charge sur la majorité des réservations. Cela bloque le prix et place un chauffeur nommé à l'arrivée, utile pour les vols tardifs ou un premier voyage au Maroc." },
-  { q: "Uber ou Careem sont-ils disponibles à l'aéroport d'Agadir ?", a: "Non. Ni Uber ni Careem ne fonctionnent à Agadir : impossible de commander une course à l'arrivée. La station de grands taxis devant les arrivées et un transfert réservé sont les vraies options porte-à-porte." },
+  { name: 'Transferts & taxi', href: L('/transfert-aeroport-marrakech/') },
 ];
 
-const routes = [
-  { href: '/agadir-airport-to-agadir/', name: "Centre d'Agadir", km: '22 km', min: '25–40 min', eur: '20 €' },
-  { href: '/agadir-airport-to-taghazout/', name: 'Taghazout', km: '48 km', min: '50–65 min', eur: '28 €' },
-  { href: '/agadir-airport-to-tamraght-aourir/', name: 'Tamraght & Aourir', km: '42 km', min: '40–50 min', eur: '26 €' },
-  { href: '/agadir-airport-to-taroudant/', name: 'Taroudant', km: '80 km', min: '70–85 min', eur: '55 €' },
-  { href: '/agadir-airport-to-tiznit/', name: 'Tiznit', km: '95 km', min: '80–95 min', eur: '60 €' },
-  { href: '/agadir-airport-to-imsouane/', name: 'Imsouane', km: '90 km', min: '90–110 min', eur: '70 €' },
-  { href: '/agadir-airport-to-mirleft/', name: 'Mirleft', km: '150 km', min: '130–150 min', eur: '100 €' },
-  { href: '/agadir-airport-to-sidi-ifni/', name: 'Sidi Ifni', km: '165 km', min: '145–165 min', eur: '110 €' },
-  { href: '/agadir-airport-to-essaouira/', name: 'Essaouira', km: '175 km', min: '150–170 min', eur: '110 €' },
-  { href: '/agadir-airport-to-marrakech/', name: 'Marrakech', km: '235 km', min: '165–195 min', eur: '120 €' },
+const facts = [
+  { label: 'Aéroport → médina', value: `${airport.distanceToCityKm} km` },
+  { label: 'Durée réelle', value: `${airport.driveToCityMin.min}–${airport.driveToCityMin.max}`, sub: 'min' },
+  { label: 'Train / VTC', value: 'Aucun', sub: 'au RAK' },
+  { label: 'Transfert réservé', value: '12 €', sub: 'dès' },
+];
+
+const faqs = [
+  {
+    q: "Quel est le meilleur moyen d'aller de l'aéroport de Marrakech au centre ?",
+    a: `Cela dépend surtout de trois choses : l'heure d'atterrissage, votre quartier et vos bagages. Pour un hôtel de Guéliz ou de l'Hivernage en pleine journée, le taxi de la station suffit et reste rapide. Pour un riad au fond de la médina, un transfert réservé change la donne : le chauffeur connaît la bonne porte et vous n'entamez pas le séjour par une négociation. Pour deux personnes en sac à dos, le bus ${airport.bus.line} à ${airport.bus.oneWayMad} MAD est imbattable. Il n'y a ni train ni VTC au RAK : ces trois options, plus la location de voiture, sont tout ce qui existe.`
+  },
+  {
+    q: "Y a-t-il un train entre l'aéroport de Marrakech et la ville ?",
+    a: `Non, aucune voie ferrée ne dessert l'aérogare. Marrakech possède bien une gare ONCF, dans le quartier de Guéliz, avec des trains vers Casablanca, Rabat, Fès et Tanger, mais elle se situe à quelques kilomètres de l'aéroport : il faut y aller en taxi, en transfert ou avec le bus ${airport.bus.line}. Si votre vol n'est qu'une étape vers une autre ville marocaine, prévoyez ce maillon et une bonne marge horaire.`
+  },
+  {
+    q: "Combien coûte un transfert depuis l'aéroport de Marrakech ?",
+    a: "Un transfert privé réservé vers la médina, Guéliz ou l'Hivernage démarre autour de 12 € par véhicule, suivi du vol et sièges-auto inclus selon les prestataires. Pour la Palmeraie ou un camp du désert, comptez plutôt 18 à 35 €. Sur les longues distances, Essaouira tourne autour de 95 €. Ces prix s'entendent par voiture et non par personne : à trois ou quatre, ils deviennent souvent plus intéressants que le taxi."
+  },
+  {
+    q: "Peut-on réserver un transfert et payer plus tard ?",
+    a: "Oui, chez la plupart des opérateurs : la réservation bloque le tarif, le paiement intervient plus tard et l'annulation reste gratuite jusqu'à 24 h avant la prise en charge dans la majorité des cas. C'est le réflexe utile pour un vol du soir, un premier voyage au Maroc ou un groupe chargé, car la disponibilité des grands véhicules est la première chose qui manque en haute saison."
+  },
+  {
+    q: "Uber, Careem ou inDrive fonctionnent-ils à Marrakech ?",
+    a: "Non. Aucune application de VTC n'opère légalement à Marrakech, et surtout pas au départ de l'aéroport, où la desserte est réservée aux taxis agréés. Les mentions que vous croiserez dans de vieux forums ne sont plus d'actualité. Vos options porte-à-porte sont donc le taxi de la station et le transfert réservé à l'avance."
+  },
+  {
+    q: "Le chauffeur peut-il me déposer devant mon riad dans la médina ?",
+    a: "Presque jamais, et ce n'est pas de la mauvaise volonté : les derbs de la médina sont trop étroits pour une voiture et plusieurs accès sont fermés à la circulation. Le chauffeur vous laisse à la porte (bab) la plus proche, puis vous finissez à pied, généralement 3 à 10 minutes. La plupart des riads envoient un porteur avec une charrette si vous annoncez votre heure d'arrivée : demandez-le au moment de la réservation, c'est gratuit ou symbolique et cela évite de traîner une valise sur les pavés."
+  },
+];
+
+const options = [
+  {
+    nom: 'Transfert privé réservé',
+    prix: 'dès 12 € / véhicule',
+    pour: 'Vols de nuit, riads en médina, familles, groupes',
+    contre: 'À réserver avant de partir',
+  },
+  {
+    nom: 'Taxi de la station',
+    prix: `${airport.taxiFare.dayMad[0]}–${airport.taxiFare.dayMad[1]} MAD le jour`,
+    pour: 'Quitter le terminal sans rien préparer',
+    contre: 'Tarif à confirmer avant de charger, 3 passagers max en petit taxi',
+  },
+  {
+    nom: `Bus ${airport.bus.line} (${airport.bus.operator})`,
+    prix: `${airport.bus.oneWayMad} MAD / personne`,
+    pour: 'Petit budget, bagage léger, arrivée en journée',
+    contre: `Rien après ${airport.bus.lastDeparture}, dépose à Jemaa el-Fna uniquement`,
+  },
+  {
+    nom: 'Voiture de location',
+    prix: 'dès 25 € / jour',
+    pour: 'Atlas, Ourika, Essaouira, road-trip',
+    contre: 'Inutile et encombrante pour la médina seule',
+  },
 ];
 ---
 <MoneyLayout
-  lang={lang}
-  title="Transfert aéroport Agadir : tous les moyens vers la ville (2026) | AirportAGA"
-  description="Le guide complet des transferts depuis l'aéroport Agadir Al Massira en 2026, taxi, transfert privé, navette et chauffeur, prix réels, et chaque trajet de l'AGA vers la ville, Taghazout, Marrakech et la côte."
-  eyebrow="Aéroport d'Agadir · Transferts"
-  h1="Transfert aéroport Agadir"
-  lede="Ni train ni Uber à Al Massira, et la nouvelle navette ALSA ne dessert que le centre d'Agadir en journée, pour la plupart des arrivées, sortir de l'aéroport se résume donc à un taxi, un transfert réservé ou une voiture de location. Voici chaque option présentée clairement, ce que chacune coûte vraiment, et le bon choix selon votre arrivée."
+  title="Transfert aéroport Marrakech : toutes les options et les vrais prix (2026) | AirportRAK"
+  description="Transfert, taxi, bus 19 ou location : comment rejoindre la médina, Guéliz ou l'Hivernage depuis l'aéroport Marrakech Ménara. Tarifs réels en dirhams et en euros, dépose aux portes de la médina et conseils pour une arrivée de nuit."
+  eyebrow="Aéroport Marrakech Ménara · Transferts"
+  h1="Transfert aéroport Marrakech"
+  lede="Six kilomètres séparent Ménara de Jemaa el-Fna : le trajet est court, c'est la dernière centaine de mètres qui pose problème, puisque aucune voiture n'entre dans les ruelles de la médina. Voici les quatre façons de sortir du terminal, ce qu'elles coûtent réellement, et laquelle correspond à votre vol."
   breadcrumbs={breadcrumbs}
   facts={facts}
-  priceFrom={20}
-  heroImage={photos['agadir-bay']}
+  priceFrom={12}
+  heroImage={photos['marrakech-airport-transfer']}
   heroProvider="transfer"
   heroCtaLabel="Comparer les prix des transferts"
-  secondaryHref="/agadir-airport-taxi/prices/"
-  secondaryLabel="Voir les prix des taxis"
+  secondaryHref="/taxi-aeroport-marrakech/prix/"
+  secondaryLabel="Voir la grille des prix taxi"
   faqs={faqs}
-  cta={{ heading: 'Bloquez votre course avant de partir', text: 'Prix fixe, un chauffeur qui vous attend avec votre nom, annulation gratuite sur la plupart des réservations, réglez ça maintenant et évitez la négociation à l\'arrivée.', provider: 'transfer', label: 'Voir les prix des transferts' }}
+  cta={{ heading: 'Bloquez votre trajet avant le décollage', text: "Prix fixe par véhicule, chauffeur qui attend avec votre nom, annulation gratuite sur la plupart des réservations : la question est réglée avant même d'embarquer.", provider: 'transfer', label: 'Voir les prix des transferts' }}
 >
   <p>
-    Al Massira se trouve à environ 22 km du centre d'Agadir, du côté de Temsia, un trajet de 25 à
-    40 minutes selon votre destination en ville. L'aéroport reçoit surtout des vols charters du soir
-    venus d'Europe : arriver tard et fatigué est donc la norme. Ce qui surprend, c'est que la plupart des
-    services attendus d'un aéroport européen manquent ici : pas de liaison ferroviaire, et les applis
-    comme Uber ou Careem qui ne fonctionnent tout simplement pas dans la ville. Il existe désormais une
-    navette ALSA vers le centre d'Agadir (autour de 50 MAD, à peu près toutes les heures en journée),
-    mais elle ne dessert que le centre, et seulement de jour, inutile pour un transfert d'hôtel, un
-    charter du soir ou la côte. Restent, pour la plupart des arrivées, trois vraies façons de sortir, et
-    cette page détaille chacune.
+    Marrakech Ménara est l'un des rares grands aéroports internationaux posés à six kilomètres à peine
+    d'un centre historique. En théorie, c'est une chance : un quart d'heure de route et vous êtes devant
+    la Koutoubia. En pratique, deux réalités locales décident de la qualité de votre arrivée. La
+    première, c'est que la médina ne se traverse pas en voiture : votre chauffeur s'arrêtera à une
+    porte et le reste se fera à pied. La seconde, c'est que le RAK a dépassé 9,3 millions de passagers
+    en 2024 et que la sortie des arrivées, aux heures de pointe, ressemble à tout sauf à un couloir
+    désert.
   </p>
-
-  <h2 id="moyens">Les trois façons de quitter l'aéroport d'Agadir</h2>
   <p>
-    Chaque décision de transfert à l'AGA se résume à un choix : négocier sur place, fixer le prix à
-    l'avance, ou conduire soi-même. Aucune n'est « la meilleure » dans l'absolu, tout dépend de
-    l'heure d'arrivée, de qui vous accompagne, et de votre destination.
-  </p>
-  <ul>
-    <li><strong>Grand taxi à la station</strong>, les berlines crème alignées devant les arrivées. Le moins cher pour une course de jour vers le centre, en espèces, prix négocié avant l'ouverture du coffre. Voyez comment ça marche sur la page <a href={L('/agadir-airport-taxi/')}>taxi aéroport</a> et la <a href={L('/agadir-airport-taxi/prices/')}>grille de prix complète</a>.</li>
-    <li><strong>Transfert réservé</strong>, réservé en ligne, prix bloqué avant le départ et chauffeur tenant votre nom à l'arrivée. Du simple <a href={L('/agadir-airport-private-transfer/')}>transfert privé</a> à la <a href={L('/agadir-airport-shuttle/')}>navette partagée</a> moins chère ou au <a href={L('/agadir-airport-vip-transfer/')}>transfert VIP</a> haut de gamme.</li>
-    <li><strong>Voiture ou chauffeur</strong>, une <a href={L('/agadir-airport-car-rental/')}>voiture de location</a> pour une liberté totale, ou un <a href={L('/agadir-private-driver/')}>chauffeur privé</a> pour une journée d'excursions sans prendre le volant.</li>
-  </ul>
-
-  <h2 id="quel">Quelle option pour votre arrivée</h2>
-  <p>
-    Une arrivée de jour vers un hôtel du centre ou de Founty ? Le grand taxi est rapide, simple et bon
-    marché une fois le prix convenu. Un atterrissage à 23 h avec enfants et sièges-auto, ou un camp de
-    surf à Taghazout sans numéro de rue ? Réservez un transfert privé, le petit supplément vous offre
-    un chauffeur qui suit votre vol et connaît déjà l'adresse. Petit budget, en solo et souple sur les
-    horaires ? Une navette partagée divise le coût. Des excursions à Paradise Valley, Taroudant ou la
-    côte ? Une location ou un chauffeur a plus de sens que payer chaque trajet. Nous avons détaillé les
-    compromis sur le comparatif <a href={L('/best-agadir-airport-transfer/')}>meilleur transfert aéroport
-    Agadir</a>.
+    Il n'y a ici ni train, ni Uber, ni Careem, ni inDrive. Le choix se résume à quatre options réelles :
+    un transfert réservé, un taxi pris à la station, le bus {airport.bus.line}, ou une voiture de
+    location. Tous les tarifs de cette page ont été vérifiés en {PRICES_CHECKED} et s'entendent par
+    véhicule, sauf mention contraire.
   </p>
 
-  <h3 id="reserver">Réserver un transfert</h3>
-  <p>Deux prestataires couvrent la côte du Souss de façon fiable. Prix et conditions d'annulation s'affichent avant de payer :</p>
-  <TransferOptions
-    sub="agadir-airport-transfers"
-    options={[
-      { provider: 'transfer', highlight: true, badge: 'Meilleur rapport qualité-prix', pitch: 'Voitures privées et minivans vers toutes les destinations d\'Agadir à Taghazout et Taroudant. Tarifs fixes, annulation gratuite.', label: 'Voir les prix des transferts' },
-      { provider: 'transfer-vip', badge: 'Accueil personnalisé', pitch: 'Chauffeur avec pancarte à votre nom, suivi du vol en direct et arrivée sereine.', label: 'Réserver un transfert VIP' },
-    ]}
-  />
-
-  <h2 id="trajets">Tous les trajets depuis l'aéroport d'Agadir</h2>
-  <p>
-    Voici chaque destination que nous couvrons, avec distance, durée et le prix de départ indicatif d'un
-    transfert privé réservé (par voiture). Cliquez un trajet pour le détail complet, tarifs taxi,
-    moments où la route est la plus lente, et les détails locaux qui comptent. Tarifs vérifiés en
-    juin 2026.
-  </p>
+  <h2>Les quatre façons de quitter le terminal</h2>
   <div class="table-wrap">
     <table class="data">
       <thead>
-        <tr><th>Vers</th><th>Distance</th><th>Durée</th><th>Transfert dès</th></tr>
+        <tr><th>Option</th><th>Prix</th><th>Idéal pour</th><th>Le point faible</th></tr>
       </thead>
       <tbody>
-        {routes.map((r) => (
-          <tr class:list={[{ 'row-highlight': r.href === '/agadir-airport-to-agadir/' }]}>
-            <td><a href={L(r.href)}>{r.name}</a></td>
-            <td class="num">{r.km}</td>
-            <td class="num">{r.min}</td>
-            <td class="num">{r.eur}</td>
+        {options.map((o, i) => (
+          <tr class:list={[{ 'row-highlight': i === 0 }]}>
+            <td><strong>{o.nom}</strong></td>
+            <td class="num">{o.prix}</td>
+            <td>{o.pour}</td>
+            <td>{o.contre}</td>
           </tr>
         ))}
       </tbody>
     </table>
   </div>
 
-  <div class="callout">
-    <span class="callout-label">Conseil local</span>
-    Quel que soit votre choix, retirez d'abord des dirhams à un distributeur du hall d'arrivée. Les
-    grands taxis se paient en espèces, les machines près de la sortie appliquent le vrai taux bancaire,
-    et même un chauffeur réservé vous indiquera volontiers le distributeur avant de monter vers la côte.
-  </div>
-
-  <h2 id="moins-cher">Le moins cher contre le plus simple</h2>
+  <h2>Le vrai sujet : la dépose aux portes de la médina</h2>
   <p>
-    Si seul le prix compte, l'ordre est à peu près : navette partagée ou grand taxi négocié tout en bas,
-    transfert privé au milieu, VIP ou chauffeur à la journée en haut. Mais « le moins cher » et « le
-    moins de tracas » pointent rarement la même option après un charter du soir. Si vous comptez chaque
-    dirham, voyez le guide <a href={L('/cheapest-agadir-airport-transfer/')}>transfert aéroport Agadir
-    pas cher</a> ; pour un verdict net, la page <a href={L('/best-agadir-airport-transfer/')}>meilleur
-    transfert</a> le résume.
+    C'est la particularité que personne n'explique avant le départ. La médina de Marrakech est un
+    labyrinthe de derbs larges d'un mètre cinquante par endroits : aucune voiture n'y circule et
+    plusieurs accès sont fermés par des bornes. Quel que soit le moyen choisi, vous serez déposé à une
+    porte — Bab Doukkala, Bab Laksour, Bab Agnaou ou Bab el Khemis selon votre quartier — puis vous
+    marcherez trois à dix minutes sur des pavés irréguliers, valise à la main.
+  </p>
+  <div class="callout">
+    <span class="callout-label">Le réflexe qui change tout</span>
+    <p>
+      Envoyez à votre riad votre numéro de vol et votre heure d'atterrissage la veille, et demandez un
+      porteur avec charrette à la porte. La quasi-totalité des riads de la médina rend ce service,
+      gratuitement ou pour un pourboire de 20 à 30 MAD. Vous récupérez quelqu'un qui connaît le chemin,
+      vous ne cherchez pas votre derb de nuit et vous ne portez rien. C'est de loin le meilleur rapport
+      confort/prix de tout le trajet.
+    </p>
+  </div>
+  <p>
+    Pour les hôtels de <a href={L('/guide-aeroport-marrakech/aller-a-gueliz/')}>Guéliz et de l'Hivernage</a>,
+    le problème disparaît : avenues larges, dépose devant la réception. C'est un critère à garder en
+    tête au moment de <a href={L('/ou-dormir-marrakech/')}>choisir votre quartier</a> : un riad
+    magnifique à vingt minutes de marche d'une porte praticable ne se vit pas de la même façon avec deux
+    enfants et trois valises.
   </p>
 
-  <div class="disclosure-inline">
-    Certains liens ici sont des liens d'affiliation : si vous réservez un transfert via ces liens, nous
-    pouvons percevoir une petite commission, sans surcoût pour vous. Cela ne change ni les prix affichés
-    ni nos recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
-  </div>
-
+  <h2>Transfert réservé : pourquoi c'est l'option par défaut ici</h2>
   <p>
-    Prêt à entrer dans le détail ? Commencez par le <a href={L('/agadir-airport-taxi/')}>taxi aéroport</a>
-    et sa <a href={L('/agadir-airport-taxi/prices/')}>grille de prix</a>, comparez un
-    <a href={L('/agadir-airport-private-transfer/')}>transfert privé</a>, une
-    <a href={L('/agadir-airport-shuttle/')}>navette</a> ou un <a href={L('/agadir-airport-vip-transfer/')}>transfert
-    VIP</a>, pensez à un <a href={L('/agadir-private-driver/')}>chauffeur privé</a>, ou allez droit à
-    votre trajet, <a href={L('/agadir-airport-to-agadir/')}>centre d'Agadir</a>,
-    <a href={L('/agadir-airport-to-taghazout/')}>Taghazout</a> ou
-    <a href={L('/agadir-airport-to-marrakech/')}>Marrakech</a>.
+    Sur beaucoup de destinations, réserver un transfert relève du confort. À Marrakech, cela règle
+    quatre problèmes d'un coup : le prix est fixé avant le départ, le chauffeur suit votre numéro de vol
+    et absorbe un retard, il sait à quelle porte s'arrêter selon le nom de votre riad, et vous
+    n'arbitrez pas un tarif à une heure du matin après quatre heures d'avion. Les véhicules familiaux et
+    les minibus, eux, se réservent : en février, à Pâques ou pendant les vacances scolaires, les
+    monospaces partent vite.
+  </p>
+  <p>
+    Comptez environ 12 € vers la médina, Guéliz ou l'Hivernage, davantage pour la Palmeraie et les camps
+    du désert. Nous détaillons les opérateurs dans nos avis
+    {' '}<a href={L('/avis-kiwitaxi-marrakech/')}>Kiwitaxi</a>,
+    {' '}<a href={L('/avis-welcome-pickups-marrakech/')}>Welcome Pickups</a> et
+    {' '}<a href={L('/avis-intui-travel-marrakech/')}>Intui Travel</a>, et la comparaison complète se
+    trouve sur la page
+    {' '}<a href={L('/meilleur-transfert-aeroport-marrakech/')}>quel transfert choisir</a>.
+  </p>
+
+  <h2>Taxi : des tarifs affichés, et une négociation qui subsiste</h2>
+  <p>
+    La station de taxis se trouve juste devant les arrivées et un panneau officiel affiche les tarifs
+    par quartier. Dans les faits, le prix annoncé au premier abord dépasse souvent l'affichage :
+    regardez le panneau, annoncez votre quartier et le montant que vous avez lu, puis mettez-vous
+    d'accord avant de charger les bagages. Comptez {airport.taxiFare.dayMad[0]} à
+    {' '}{airport.taxiFare.dayMad[1]} MAD en journée vers la médina et {airport.taxiFare.nightMad[0]} à
+    {' '}{airport.taxiFare.nightMad[1]} MAD la nuit, pour la voiture entière. Un petit taxi n'accepte que
+    trois passagers : à quatre, il faut un grand taxi ou deux voitures, ce qui annule l'écart de prix
+    avec un transfert.
+  </p>
+  <p>
+    Tout est détaillé, quartier par quartier, dans notre
+    {' '}<a href={L('/taxi-aeroport-marrakech/prix/')}>grille des prix taxi</a> et sur la page
+    {' '}<a href={L('/taxi-aeroport-marrakech/')}>taxi à l'aéroport</a>.
+  </p>
+
+  <h2>Bus {airport.bus.line} : la vraie bonne affaire, sous conditions</h2>
+  <p>
+    Contrairement à beaucoup d'aéroports marocains, Marrakech dispose d'une liaison publique fréquente
+    et fiable. La ligne {airport.bus.line} d'{airport.bus.operator} relie l'aérogare à Jemaa el-Fna en
+    une vingtaine de minutes pour {airport.bus.oneWayMad} MAD, ou {airport.bus.returnMad} MAD
+    l'aller-retour si vous le prenez d'emblée. Départ toutes les {airport.bus.frequencyMin} minutes
+    environ, de {airport.bus.firstDeparture} à {airport.bus.lastDeparture}. L'arrêt se trouve de l'autre
+    côté du parking en sortant du hall des arrivées.
+  </p>
+  <p>
+    Ses limites sont franches : rien la nuit, une seule zone de dépose et un bus plein aux heures de
+    pointe, où deux grandes valises tiennent mal. Pour un couple en bagage cabine logé près de la place,
+    c'est imbattable. Pour une famille qui atterrit à 23 h 40, ce n'est pas une option.
+  </p>
+
+  <h2>Voiture de location : utile seulement si vous sortez de la ville</h2>
+  <p>
+    Les comptoirs sont dans le hall des arrivées. Louer une voiture pour visiter Marrakech intra-muros
+    est une fausse bonne idée : circulation dense, stationnement compliqué près des remparts et médina
+    inaccessible. En revanche, dès que le séjour comprend la vallée de l'Ourika, le Toubkal, Essaouira
+    ou Ouarzazate, la voiture reprend tout son sens. Notre
+    {' '}<a href={L('/location-voiture-aeroport-marrakech/')}>guide de la location au RAK</a> compare les
+    comptoirs, les cautions et les politiques de carburant, qui pèsent souvent plus lourd que le tarif
+    journalier affiché.
+  </p>
+
+  <h2>Arriver de nuit : ce qui change</h2>
+  <p>
+    Une large part des vols low cost se pose après 21 h. À cette heure-là, le bus ne roule plus ou
+    presque, les tarifs taxi passent au barème de nuit, et la médina, peu éclairée et désertée, se
+    parcourt beaucoup moins facilement qu'en plein jour. C'est le cas de figure où un transfert réservé,
+    avec un porteur annoncé à la porte, fait la différence entre une arrivée sereine et une première
+    heure pénible. Notre page
+    {' '}<a href={L('/guide-aeroport-marrakech/arrivees/')}>arrivées au RAK</a> détaille le parcours
+    depuis la passerelle jusqu'au parking, contrôle des passeports compris.
+  </p>
+
+  <h2>Et pour les longues distances ?</h2>
+  <p>
+    Marrakech sert aussi de point d'entrée vers la côte et le sud. Les deux trajets que nous détaillons
+    ligne par ligne sont
+    {' '}<a href={L('/transfert-aeroport-marrakech-medina/')}>l'aéroport vers la médina</a>, le plus
+    demandé, et
+    {' '}<a href={L('/transfert-aeroport-marrakech-essaouira/')}>l'aéroport vers Essaouira</a>, environ
+    180 km et deux heures et demie de route, souvent réservé d'avance parce qu'aucun transport public
+    direct ne part de l'aérogare. Pour rejoindre Agadir, comparez les options sur notre page
+    {' '}<a href={L('/marrakech-agadir-transport/')}>Marrakech → Agadir</a>.
   </p>
 </MoneyLayout>
