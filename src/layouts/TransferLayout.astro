@@ -46,7 +46,7 @@ const t = useTranslations(lang);
 const pathname = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : Astro.url.pathname + '/';
 const sub = pathname.replace(/\//g, '-').replace(/^-|-$/g, '') || 'home';
 const absCrumbs = breadcrumbs.map((c) => ({ name: c.name, url: site.url + c.href }));
-const secHref = secondaryHref ? getLocalizedPath(secondaryHref, lang) : getLocalizedPath('/agadir-airport-guide/', lang);
+const secHref = secondaryHref ? getLocalizedPath(secondaryHref, lang) : getLocalizedPath('/guide-aeroport-marrakech/', lang);
 const secLabel = secondaryLabel ?? t('nav.guide');
 ---
 <BaseLayout title={title} description={description} lang={lang} ogImage={ogImage} webpageSchema={false}>
