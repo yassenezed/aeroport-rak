@@ -75,7 +75,7 @@ export function flightWidgetSrc(): string {
     powered_by: 'true',
     border_radius: '0',
     plain: 'true',
-    color_button: '#00A991',
+    color_button: '#3F4BB8',
     color_button_text: '#ffffff',
     promo_id: t.flights.promoId,
     campaign_id: t.flights.campaignId,

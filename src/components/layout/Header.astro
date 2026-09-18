@@ -98,15 +98,13 @@ const navLinks = [
 ---
 
 <header class="site-header">
-  <div class="top-banner">
-    <span class="top-banner-inner">
-      Site non-officiel. Non affilié à l'aéroport de Marrakech Ménara.
-    </span>
-  </div>
   <div class="header-inner">
     <a href={getLocalizedPath('/', lang)} class="brand" aria-label="AirportRAK, accueil">
-      <span class="brand-mark"><Icon name="plane" size={20} /></span>
-      <span class="brand-name">Airport<strong>RAK</strong></span>
+      <span class="brand-mark">RAK</span>
+      <span class="brand-text">
+        <span class="brand-name">Airport<strong>RAK</strong></span>
+        <span class="brand-sub">Marrakech Ménara · guide indépendant</span>
+      </span>
     </a>
 
     <button class="menu-btn" aria-label="Menu" aria-expanded="false">
@@ -117,13 +115,13 @@ const navLinks = [
       {navLinks.map(({ href, label, children }) => {
         const localized = getLocalizedPath(href, lang);
         const isActive = currentPath === localized || currentPath.startsWith(localized);
-        
+
         if (children) {
           return (
             <div class="nav-dropdown-group">
-              <a href={localized} class:list={['nav-link', { active: isActive }]} style="display: flex; align-items: center; gap: 4px;">
+              <a href={localized} class:list={['nav-link', { active: isActive }]}>
                 {label}
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
               </a>
               <div class="services-dropdown">
                 {children.map(child => (
@@ -135,6 +133,8 @@ const navLinks = [
         }
         return <a href={localized} class:list={['nav-link', { active: isActive }]}>{label}</a>;
       })}
+
+      <a href={getLocalizedPath('/reserver-transfert/', lang)} class="nav-cta">Réserver un transfert</a>
     </nav>
   </div>
 </header>
@@ -142,88 +142,94 @@ const navLinks = [
 <style>
   .site-header {
     position: sticky; top: 0; z-index: 100;
-    background: rgba(246, 247, 234, 0.92);
-    backdrop-filter: saturate(140%) blur(8px);
-    border-bottom: 1px solid var(--line);
+    background: var(--ink);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
   }
-  .top-banner {
-    background-color: var(--orange-soft);
-    color: var(--orange-dark);
-    text-align: center;
-    padding: 0.4rem 1rem;
-    font-size: 0.82rem;
-    font-weight: 600;
-    font-family: var(--font-display);
-    border-bottom: 1px solid rgba(255, 98, 44, 0.15);
+  .header-inner {
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    height: 74px; max-width: var(--container); margin: 0 auto; padding: 0 1.25rem;
   }
-  .top-banner-inner {
-    display: inline;
-    background-color: transparent;
-    padding: 0;
-  }
-  .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 68px; max-width: 1360px; margin: 0 auto; padding: 0 1.5rem; }
-  .brand { display: flex; align-items: center; gap: 0.55rem; text-decoration: none; }
+
+  .brand { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; }
   .brand-mark {
-    display: grid; place-items: center; width: 34px; height: 34px;
-    background: var(--orange); color: #fff; border-radius: 10px; transform: rotate(-8deg);
+    display: grid; place-items: center; width: 40px; height: 40px;
+    background: var(--saffron); color: #1b1305;
+    font-family: var(--font-body); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.02em;
+    border-radius: var(--r-sm);
   }
-  .brand-name { font-family: var(--font-display); font-weight: 500; font-size: 1.25rem; color: var(--ink); letter-spacing: -0.02em; }
-  .brand-name strong { font-weight: 700; color: var(--green-dark); }
+  .brand-text { display: flex; flex-direction: column; line-height: 1.15; }
+  .brand-name { font-family: var(--font-display); font-weight: 600; font-size: 1.2rem; color: #fff; letter-spacing: -0.01em; }
+  .brand-name strong { font-weight: 700; color: var(--saffron); }
+  .brand-sub { font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
 
-  .menu-btn { display: none; background: none; border: none; color: var(--ink); cursor: pointer; padding: 0.25rem; }
+  .menu-btn { display: none; background: none; border: none; color: #fff; cursor: pointer; padding: 0.25rem; }
 
-  .main-nav { display: flex; align-items: center; gap: 0.2rem; }
+  .main-nav { display: flex; align-items: center; gap: 0.1rem; }
   .nav-link {
-    font-family: var(--font-display); font-weight: 500; font-size: 0.9rem;
-    color: var(--ink-2); text-decoration: none; padding: 0.4rem 0.5rem; border-radius: var(--r-pill);
+    display: flex; align-items: center; gap: 5px;
+    font-family: var(--font-body); font-weight: 500; font-size: 0.87rem;
+    color: rgba(255,255,255,0.72); text-decoration: none;
+    padding: 0.5rem 0.6rem; border-radius: var(--r-sm);
     transition: color var(--transition), background var(--transition);
     white-space: nowrap;
   }
-  .nav-link:hover { color: var(--ink); background: var(--cream-2); }
-  .nav-link.active { color: var(--orange-dark); }
+  .nav-link:hover { color: #fff; background: rgba(255,255,255,0.08); }
+  .nav-link.active { color: var(--saffron); }
+
+  .nav-cta {
+    margin-left: 0.6rem;
+    font-family: var(--font-body); font-weight: 700; font-size: 0.86rem;
+    color: #fff; text-decoration: none;
+    padding: 0.62rem 1.05rem;
+    background: var(--blue);
+    border-radius: var(--r-md);
+    white-space: nowrap;
+    transition: background var(--transition);
+  }
+  .nav-cta:hover { background: var(--blue-dark); color: #fff; }
 
   .nav-dropdown-group { position: relative; }
   .services-dropdown {
-    position: absolute; top: calc(100% + 5px); left: 50%; transform: translateX(-50%);
-    background: #fff; border: 1px solid var(--line); border-radius: var(--r-md);
-    box-shadow: var(--shadow-md); padding: 0.5rem; min-width: 220px;
-    display: none; flex-direction: column; gap: 0.2rem;
+    position: absolute; top: calc(100% + 6px); left: 0;
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md);
+    box-shadow: var(--shadow-lg); padding: 0.4rem; min-width: 235px;
+    display: none; flex-direction: column;
   }
-  .services-dropdown::before {
-    content: ''; position: absolute; top: -15px; left: 0; right: 0; height: 15px;
-  }
+  .services-dropdown::before { content: ''; position: absolute; top: -10px; left: 0; right: 0; height: 10px; }
   .nav-dropdown-group:hover .services-dropdown { display: flex; }
-  
+
   .services-dropdown-item {
-    padding: 0.5rem 0.8rem; text-decoration: none; color: var(--ink-2);
-    font-size: 0.85rem; font-weight: 500; border-radius: var(--r-sm);
-    transition: background 0.2s, color 0.2s;
+    padding: 0.5rem 0.75rem; text-decoration: none; color: var(--ink-2);
+    font-size: 0.86rem; font-weight: 500; border-radius: var(--r-sm);
+    transition: background var(--transition), color var(--transition);
     white-space: nowrap;
   }
-  .services-dropdown-item:hover { background: var(--cream-2); color: var(--ink); }
+  .services-dropdown-item:hover { background: var(--blue-soft); color: var(--blue-dark); }
 
   @media (max-width: 1250px) {
     .menu-btn { display: block; }
     .main-nav {
-      position: absolute; top: 68px; left: 0; right: 0;
+      position: absolute; top: 74px; left: 0; right: 0;
       flex-direction: column; align-items: stretch; gap: 0;
-      background: var(--cream); border-bottom: 1px solid var(--line);
-      padding: 0.5rem 1.25rem 1.25rem;
-      box-shadow: var(--shadow-md);
+      background: var(--ink); border-bottom: 3px solid var(--saffron);
+      padding: 0.5rem 1.25rem 1.5rem;
+      box-shadow: var(--shadow-lg);
       display: none;
     }
     .main-nav.open { display: flex; }
-    .nav-link { padding: 0.75rem 0.5rem; border-radius: var(--r-md); border-bottom: 1px solid var(--line-2); }
-    
+    .nav-link { padding: 0.8rem 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.08); justify-content: space-between; }
+
     .nav-dropdown-group { width: 100%; display: flex; flex-direction: column; }
-    .nav-dropdown-group .nav-link { border-bottom: none; }
     .services-dropdown {
       position: static; display: none; box-shadow: none; border: none; border-radius: 0;
-      padding: 0.2rem 0 0.5rem 1rem; background: transparent; transform: none;
-      border-bottom: 1px solid var(--line-2);
+      padding: 0.2rem 0 0.6rem 0.9rem; background: transparent; min-width: 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
     .services-dropdown.mobile-open { display: flex; }
-    
+    .services-dropdown-item { color: rgba(255,255,255,0.68); }
+    .services-dropdown-item:hover { background: rgba(255,255,255,0.08); color: #fff; }
+
+    .nav-cta { margin: 0.9rem 0 0; text-align: center; justify-content: center; display: block; }
   }
 </style>
 

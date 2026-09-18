@@ -49,30 +49,35 @@ const faqs = [
   description="Le guide indépendant de l'aéroport Marrakech Ménara (RAK) : rejoindre la médina, Guéliz, la Palmeraie, Agafay ou Essaouira en transfert, taxi, bus 19 ou voiture de location, avec les vrais prix, distances et conseils sur place."
 >
   <!-- Hero -->
-  <section class="hero home-hero hero--photo">
-    <div class="hero-bg"><Image src={photos['marrakech-koutoubia']} alt="La Koutoubia de Marrakech au coucher du soleil" widths={[768, 1280, 1920]} sizes="100vw" loading="eager" fetchpriority="high" /></div>
-    <div class="container hero-inner">
-      <span class="eyebrow">Marrakech Ménara · RAK · Maroc</span>
-      <h1>Sortir de l'aéroport de Marrakech, sans mauvaise surprise.</h1>
-      <p class="lede">
-        Ménara n'est qu'à {airport.distanceToCityKm} km de la médina, et c'est justement là que tout se joue :
-        aucune voiture n'entre dans les ruelles, le rang de taxis affiche ses tarifs, le bus {airport.bus.line}
-        s'arrête derrière le parking. Nous comparons transferts, taxis, bus et location avec les prix réels,
-        les distances honnêtes et les conseils de ceux qui font le trajet.
-      </p>
-      <div class="hero-cta">
-        <a class="btn btn-primary btn-lg btn-arrow" href={L('/guide-aeroport-marrakech/arrivees/')}>Arrivées</a>
-        <a class="btn btn-ghost btn-lg" href={L('/guide-aeroport-marrakech/departs/')}>Départs</a>
+  <section class="hero home-hero hero--split">
+    <div class="container">
+      <div class="hero-split-grid">
+        <div class="hero-split-copy">
+          <div class="hero-rule"><span></span><span></span><span></span></div>
+          <span class="eyebrow">Marrakech Ménara · RAK · Maroc</span>
+          <h1>Sortir de l'aéroport de Marrakech, sans mauvaise surprise.</h1>
+          <p class="lede">
+            Ménara n'est qu'à {airport.distanceToCityKm} km de la médina, et c'est justement là que tout se joue :
+            aucune voiture n'entre dans les ruelles, le rang de taxis affiche ses tarifs, le bus {airport.bus.line}
+            s'arrête derrière le parking. Nous comparons transferts, taxis, bus et location avec les prix réels
+            et les conseils de ceux qui font le trajet.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary btn-lg btn-arrow" href={L('/guide-aeroport-marrakech/arrivees/')}>Arrivées</a>
+            <a class="btn btn-ghost btn-lg" href={L('/guide-aeroport-marrakech/departs/')}>Départs</a>
+          </div>
+        </div>
+        <div class="hero-split-media">
+          <Image src={photos['marrakech-koutoubia']} alt="La Koutoubia de Marrakech au coucher du soleil" widths={[640, 1024, 1400]} sizes="(max-width: 900px) 100vw, 46vw" loading="eager" fetchpriority="high" />
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Recherche vols & hôtels -->
-  <section class="section" style="padding-top: 2rem; padding-bottom: 0;">
+  <section class="section" style="padding-block: 2.25rem;">
     <div class="container">
-      <div style="margin-top: -4rem; position: relative; z-index: 10;">
-        <FlightSearchWidget />
-      </div>
+      <FlightSearchWidget />
     </div>
   </section>
 
