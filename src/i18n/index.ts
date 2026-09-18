@@ -29,10 +29,6 @@ const pathMappings: Record<string, PathEntry> = {
   '/transfert-aeroport-marrakech/': { fr: '/transfert-aeroport-marrakech/' },
   '/taxi-aeroport-marrakech/': { fr: '/taxi-aeroport-marrakech/' },
   '/taxi-aeroport-marrakech/prix/': { fr: '/taxi-aeroport-marrakech/prix/' },
-  '/transfert-prive-aeroport-marrakech/': { fr: '/transfert-prive-aeroport-marrakech/' },
-  '/navette-aeroport-marrakech/': { fr: '/navette-aeroport-marrakech/' },
-  '/transfert-vip-aeroport-marrakech/': { fr: '/transfert-vip-aeroport-marrakech/' },
-  '/chauffeur-prive-marrakech/': { fr: '/chauffeur-prive-marrakech/' },
 
   // ── Trajets depuis le RAK ──
   '/transfert-aeroport-marrakech-medina/': { fr: '/transfert-aeroport-marrakech-medina/' },
@@ -40,8 +36,6 @@ const pathMappings: Record<string, PathEntry> = {
 
   // ── Comparatifs et avis ──
   '/meilleur-transfert-aeroport-marrakech/': { fr: '/meilleur-transfert-aeroport-marrakech/' },
-  '/transfert-aeroport-marrakech-pas-cher/': { fr: '/transfert-aeroport-marrakech-pas-cher/' },
-  '/comparatif-transferts-aeroport-marrakech/': { fr: '/comparatif-transferts-aeroport-marrakech/' },
   '/avis-kiwitaxi-marrakech/': { fr: '/avis-kiwitaxi-marrakech/' },
   '/avis-welcome-pickups-marrakech/': { fr: '/avis-welcome-pickups-marrakech/' },
   '/avis-intui-travel-marrakech/': { fr: '/avis-intui-travel-marrakech/' },

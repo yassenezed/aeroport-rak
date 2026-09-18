@@ -2,12 +2,6 @@ export type AffiliateId = string;
 
 export function buildAffiliateUrl(provider: AffiliateId, sub?: string): string {
   const p = (provider || '').toLowerCase();
-  if (p.includes('vip') || p.includes('executive')) {
-    return '/transfert-vip-aeroport-marrakech/';
-  }
-  if (p.includes('shared') || p.includes('budget')) {
-    return '/transfert-aeroport-marrakech-pas-cher/';
-  }
   if (p.includes('esim') || p.includes('airalo') || p.includes('holafly') || p.includes('sim')) {
     return '/esim-maroc/';
   }
