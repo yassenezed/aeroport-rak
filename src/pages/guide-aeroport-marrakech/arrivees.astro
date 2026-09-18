@@ -3,112 +3,150 @@ import GuideLayout from '../../layouts/GuideLayout.astro';
 import { getLocalizedPath } from '../../i18n';
 import { photos } from '../../data/images';
 import FlightWidget from '../../components/ui/FlightWidget.astro';
+import { airport, PRICES_CHECKED } from '../../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: "Guide de l'aéroport", href: L('/agadir-airport-guide/') },
-  { name: 'Arrivées', href: L('/agadir-airport-guide/arrivals/') },
+  { name: "Guide de l'aéroport", href: L('/guide-aeroport-marrakech/') },
+  { name: 'Arrivées', href: L('/guide-aeroport-marrakech/arrivees/') },
 ];
+
 const toc = [
-  { label: "De l'avion aux tapis", id: 'tapis' },
-  { label: 'Le contrôle des passeports', id: 'passeport' },
-  { label: 'Des espèces aux distributeurs', id: 'distributeurs' },
-  { label: 'Une SIM avant de sortir', id: 'sim' },
-  { label: 'La station de taxis', id: 'station' },
-  { label: 'Si vous avez réservé un transfert', id: 'transfert' },
+  { label: 'Vols en temps réel', id: 'vols' },
+  { label: 'La fiche de police', id: 'fiche' },
+  { label: 'Contrôle des passeports', id: 'passeport' },
+  { label: 'Bagages et douane', id: 'bagages' },
+  { label: 'Dirhams et connexion', id: 'argent' },
+  { label: 'La sortie et les rabatteurs', id: 'sortie' },
+  { label: 'Retrouver son chauffeur', id: 'chauffeur' },
 ];
+
 const faqs = [
-  { q: "Combien de temps pour passer les arrivées à l'aéroport d'Agadir ?", a: "Un soir normal, 30 à 45 minutes entre l'atterrissage et la sortie, les bagages sont l'étape la plus lente. Si deux charters atterrissent à quelques minutes d'écart, la file aux passeports peut atteindre une heure, mais elle avance régulièrement." },
-  { q: "Y a-t-il des distributeurs aux arrivées de l'aéroport d'Agadir ?", a: "Oui, dans le hall d'arrivée avant les portes de sortie. Préférez une machine d'une vraie banque (pas un guichet de change isolé) et retirez 500 à 1 000 MAD pour la course et votre première journée. Le dirham est une monnaie fermée : impossible de l'emporter avec vous." },
-  { q: "Peut-on acheter une carte SIM à l'arrivée à l'AGA ?", a: "Oui. Maroc Telecom, Orange et inwi tiennent des kiosques dans le hall d'arrivée et vendent une SIM touristique sur présentation du passeport en quelques minutes, souvent autour de 50 MAD avec des données. Une eSIM achetée avant le départ est l'alternative si vous voulez éviter le kiosque." },
-  { q: "Y a-t-il une station de taxis aux arrivées de l'aéroport d'Agadir ?", a: "Oui, les grands taxis attendent juste devant les portes des arrivées. Fixez le prix avant de monter (environ 200–250 MAD vers le centre d'Agadir en journée). Il n'y a ni Uber ni Careem à Agadir : c'est la station, un transfert réservé ou une location." },
+  {
+    q: "Combien de temps faut-il pour sortir des arrivées à Marrakech ?",
+    a: "Entre 30 et 50 minutes en temps normal, du débarquement au parvis. Le contrôle des passeports est l'étape la plus variable : quand plusieurs vols européens se posent dans la même demi-heure, en fin d'après-midi ou en soirée, il faut parfois compter une heure. Les bagages arrivent généralement pendant que vous faites la queue, ce qui absorbe une partie de l'attente."
+  },
+  {
+    q: "Faut-il remplir une fiche de police à l'arrivée au Maroc ?",
+    a: "Oui, une fiche d'entrée est demandée au contrôle des passeports. Elle est le plus souvent distribuée à bord en fin de vol : remplissez-la pendant le vol, avec l'adresse exacte de votre hébergement. Sans elle, vous devrez sortir de la file, la remplir sur un comptoir et vous replacer à la fin."
+  },
+  {
+    q: "Y a-t-il des distributeurs de billets dans le hall des arrivées ?",
+    a: "Oui, plusieurs automates de banques marocaines ainsi que des bureaux de change. Retirez de quoi couvrir le trajet et votre première journée. Le dirham est une devise fermée : vous ne pouvez pas en emporter depuis chez vous, et vous devrez dépenser ou reconvertir ce qu'il vous reste avant de repartir."
+  },
+  {
+    q: "Peut-on acheter une carte SIM à l'aéroport de Marrakech ?",
+    a: "Oui, les opérateurs marocains tiennent des corners dans le hall. Comptez quelques minutes, votre passeport et un prix modique pour une SIM prépayée avec de la data. Si vous préférez être connecté dès l'atterrissage — pratique pour prévenir votre riad — une eSIM installée avant le départ fait le travail sans passer par un guichet."
+  },
+  {
+    q: "Comment retrouver le chauffeur de mon transfert à Marrakech ?",
+    a: "Il vous attend dans le hall des arrivées, après la douane, avec une pancarte à votre nom. La zone est compacte et facile à balayer du regard. Traversez sans vous arrêter auprès des personnes qui vous abordent avant : votre chauffeur, lui, reste à sa place avec son panneau."
+  },
+  {
+    q: "Y a-t-il Uber ou Careem à l'arrivée à Marrakech ?",
+    a: `Non, aucune application de VTC ne dessert l'aéroport de Marrakech. Vos options sont le rang de taxis officiel (${airport.taxiFare.dayMad[0]}–${airport.taxiFare.dayMad[1]} MAD le jour vers la médina), un transfert réservé à l'avance, le bus ${airport.bus.line} ou une voiture de location.`
+  },
 ];
 ---
-<GuideLayout keywords="Arrivees Agadir, que faire à Agadir, attractions Agadir" 
-  lang={lang}
-  title="Guide Arrivees Agadir 2026 | Astuces & Incontournables"
-  description="Planifiez votre visite à Arrivees à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+<GuideLayout
+  keywords="arrivées aéroport Marrakech, vols arrivée RAK, sortie aéroport Marrakech, fiche police Maroc"
+  title="Arrivées à l'aéroport de Marrakech : le parcours pas à pas (2026) | AirportRAK"
+  description="De la passerelle au parvis : durée des formalités au RAK, fiche de police, contrôle des passeports, distributeurs, carte SIM, rang de taxis et comment retrouver son chauffeur. Avec les vols en temps réel."
   eyebrow="Guide de l'aéroport · Arrivées"
-  h1="Les arrivées à l'aéroport d'Agadir, pas à pas"
-  lede="Ce qui se passe vraiment après l'atterrissage à l'AGA, des tapis à bagages à la station de taxis, pour sortir avec des espèces, des données et un plan, plutôt que de rester dans le hall à vous demander quoi faire."
+  h1="Arrivées à l'aéroport de Marrakech, pas à pas"
+  lede="Ce qui se passe réellement entre le moment où l'avion s'immobilise et celui où vous montez en voiture. De quoi sortir du hall avec des dirhams, du réseau et un plan, plutôt qu'en cherchant qui suivre."
   breadcrumbs={breadcrumbs}
-  heroImage={photos['agadir-bay']}
+  heroImage={photos['rak-arrivals']}
   toc={toc}
   faqs={faqs}
-  updated="juin 2026"
-  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+  updated={PRICES_CHECKED}
+  cta={{ heading: 'Un chauffeur qui vous attend avec votre nom', text: "Le vol est suivi, le prix est fixe, et la dépose se fait à la porte la plus proche de votre riad. C'est la différence entre arriver et chercher.", provider: 'transfer', label: 'Voir les prix des transferts' }}
 >
-  <FlightWidget type="arrivals" lang={lang} />
-
+  <h2 id="vols">Vols en temps réel à Marrakech Ménara</h2>
   <p>
-    L'arrivée à Agadir Al Massira est une suite courte et simple, et plus vous l'imaginez à l'avance, plus
-    elle se passe en douceur, surtout sur les charters du soir qui composent l'essentiel du trafic de l'AGA.
-    Voici tout le déroulé, dans l'ordre où vous le vivrez.
+    Si vous venez chercher quelqu'un, fiez-vous à ce tableau plutôt qu'à l'horaire du billet, et ajoutez
+    une quarantaine de minutes entre l'atterrissage affiché et l'apparition de votre passager sur le
+    parvis.
   </p>
+  <FlightWidget type="arrivals" />
 
-  <h2 id="tapis">De l'avion aux tapis</h2>
+  <h2 id="fiche">La fiche de police : à remplir dans l'avion</h2>
   <p>
-    Al Massira est un terminal unique : pas de navette interne ni de longue marche, vous descendez de l'avion
-    et suivez le couloir directement vers l'immigration. Les vols internationaux partagent un seul groupe de
-    tapis à bagages, et comme la plupart des arrivées sont des charters ou des vols low-cost du Royaume-Uni, de
-    France, de Belgique et de Scandinavie, le hall se remplit par vagues plutôt que régulièrement. Si deux vols
-    atterrissent ensemble, ce sont les bagages, et non les formalités, qui prennent le plus de temps.
+    Une fiche d'entrée vous sera demandée au contrôle. Le personnel de cabine la distribue en général
+    avant l'atterrissage : remplissez-la à bord, tant que vous avez une tablette devant vous et de la
+    lumière. Il vous faudra votre numéro de passeport, votre profession et surtout l'adresse complète de
+    votre hébergement. Notez-la sur votre téléphone avant de partir, car un nom de riad seul ne suffit
+    pas toujours.
   </p>
 
   <h2 id="passeport">Le contrôle des passeports</h2>
   <p>
-    Le contrôle des passeports est rarement le goulot d'étranglement des grands aéroports marocains. Pour la
-    plupart des nationalités, un passeport valide suffit pour un séjour touristique, rien d'exotique à remplir
-    au comptoir. La seule chose qui fait monter la file, c'est le timing : deux charters du soir arrivant à
-    quelques minutes d'écart. Ça avance quand même régulièrement : comptez de quelques minutes à une vingtaine
-    selon votre place dans la file.
+    C'est l'étape qui décide de la durée totale. Marrakech reçoit énormément de vols européens
+    concentrés sur quelques créneaux : quand quatre appareils se vident en même temps, la file devient
+    longue, même si elle avance à un rythme constant. Les ressortissants de l'Union européenne n'ont pas
+    besoin de visa pour un séjour touristique de moins de 90 jours, mais votre passeport doit être
+    valide pendant toute la durée du séjour. Les conditions précises sont détaillées dans notre page
+    {' '}<a href={L('/formalites-entree-maroc/')}>formalités d'entrée au Maroc</a>.
   </p>
-
-  <h2 id="distributeurs">Des espèces aux distributeurs</h2>
-  <p>
-    Avant les portes de sortie, vous passez les distributeurs, et c'est votre première vraie tâche. Le dirham
-    est une monnaie fermée, impossible de l'acheter avant d'arriver, donc retirer ici est le moyen le plus
-    simple d'avoir du liquide. Préférez une machine d'une vraie banque à un guichet de change isolé, dont les
-    taux sont moins bons, et retirez 500 à 1 000 MAD pour la course, un pourboire et votre première journée. La
-    côte, surtout, fonctionne au liquide. Notre <a href={L('/agadir-airport-guide/money-exchange/')}>page argent
-    et change</a> détaille combien retirer et la question distributeur contre guichet.
-  </p>
-
-  <h2 id="sim">Une SIM avant de quitter le hall</h2>
-  <p>
-    Le même hall compte des kiosques SIM Maroc Telecom, Orange et inwi. Ils vous vendent une SIM touristique sur
-    présentation du passeport en quelques minutes, souvent autour de 50 MAD avec un forfait de données généreux, ou vous arrivez avec une eSIM déjà chargée et sautez la file. Être connecté compte plus ici que dans une
-    ville compacte : il faut parfois écrire à un chauffeur ou partager le point d'un appartement de Taghazout
-    sans vraie adresse. Voyez le <a href={L('/agadir-airport-guide/sim-card-wifi/')}>guide SIM et Wi-Fi</a> pour
-    les opérateurs et les eSIM.
-  </p>
-
-  <h2 id="station">La station de taxis dehors</h2>
-  <p>
-    Les portes s'ouvrent sur la station de grands taxis. Il n'y a ni Uber ni Careem à Agadir : c'est cette
-    station, ou un transfert réservé, que presque tout le monde emprunte. Fixez le prix <em>avant</em> de
-    charger vos bagages : environ 200–250 MAD vers le centre d'Agadir en journée, davantage la nuit. Notre
-    <a href={L('/agadir-airport-taxi/')}>guide du taxi aéroport</a> donne les justes tarifs par destination, et
-    l'<a href={L('/agadir-airport-guide/uber-taxi/')}>explication « pas d'Uber »</a> dit pourquoi les applis de
-    VTC ne marchent pas ici.
-  </p>
-
-  <h2 id="transfert">Si vous avez réservé un transfert</h2>
-  <p>
-    Un chauffeur réservé attend dans la zone des arrivées avec votre nom sur une pancarte et vous écrit dès que
-    votre vol atterrit : pas de station, pas de négociation, le choix sensé pour les arrivées tardives ou les
-    adresses non signalées des villages de surf. Le <a href={L('/agadir-airport-transfers/')}>hub des
-    transferts</a> compare vos options, et la <a href={L('/agadir-airport-to-agadir/')}>page aéroport-Agadir</a>
-    donne les détails du trajet vers la ville.
-  </p>
-
   <div class="callout">
-    <span class="callout-label">Avant de sortir</span>
-    Des espèces au distributeur bancaire · une SIM ou eSIM · le point de votre hôtel enregistré hors ligne · le
-    juste prix du taxi en tête. Quatre choses, toutes dans le hall d'arrivée, et le reste du séjour devient
-    facile.
+    <span class="callout-label">Gagner dix minutes</span>
+    <p>
+      Descendez de l'avion sans traîner et marchez d'un bon pas jusqu'au contrôle : sur un vol plein,
+      l'écart entre les premiers et les derniers passagers dans la file dépasse souvent vingt minutes.
+      Vos bagages, eux, tourneront de toute façon sur le tapis.
+    </p>
   </div>
+
+  <h2 id="bagages">Bagages et douane</h2>
+  <p>
+    Les tapis se trouvent immédiatement après le contrôle. Les bagages sortent en général dans les
+    vingt minutes suivant l'atterrissage, donc souvent pendant que vous faites la queue. En cas de
+    bagage manquant, le comptoir de la compagnie se trouve dans la même salle : faites établir le
+    constat avant de sortir, c'est beaucoup plus simple que d'y revenir le lendemain. La douane est un
+    couloir que l'on traverse sans formalité dans l'immense majorité des cas.
+  </p>
+
+  <h2 id="argent">Dirhams et connexion, avant de franchir les portes</h2>
+  <p>
+    Deux choses à régler pendant que vous êtes encore à l'intérieur. D'abord les espèces : taxi,
+    porteur, pourboires et petits achats fonctionnent en dirhams, et la carte bancaire est rarement
+    acceptée en dehors des hôtels et des grandes enseignes. Les distributeurs du hall sont fiables ;
+    si l'automate vous laisse choisir, privilégiez les coupures de 100 MAD. Rappel utile : le dirham ne
+    s'exporte pas, inutile d'en retirer pour trois semaines si vous restez cinq jours.
+  </p>
+  <p>
+    Ensuite la connexion. Les corners des opérateurs marocains vendent des SIM prépayées sur
+    présentation du passeport, ou vous arrivez déjà connecté avec une
+    {' '}<a href={L('/esim-maroc/')}>eSIM activée avant le départ</a>. C'est plus confortable qu'il n'y
+    paraît : c'est précisément au moment de sortir que vous aurez besoin d'écrire à votre riad ou de
+    vérifier une adresse.
+  </p>
+
+  <h2 id="sortie">La sortie, et les propositions qui vont avec</h2>
+  <p>
+    Les portes du hall donnent directement sur le parvis, et vous serez sollicité. Ce n'est ni agressif
+    ni dangereux, mais les prix annoncés dans le hall sont systématiquement supérieurs à ceux du rang
+    officiel. Le réflexe simple : si vous n'avez rien réservé, avancez jusqu'à la station de taxis et
+    traitez là-bas, après avoir regardé le panneau tarifaire. Nos repères chiffrés sont sur la
+    {' '}<a href={L('/taxi-aeroport-marrakech/prix/')}>grille des prix taxi</a>.
+  </p>
+  <p>
+    Pour le bus {airport.bus.line}, traversez le parking : l'arrêt se trouve de l'autre côté,
+    {' '}{airport.bus.oneWayMad} MAD jusqu'à Jemaa el-Fna, dernier départ vers
+    {' '}{airport.bus.lastDeparture}.
+  </p>
+
+  <h2 id="chauffeur">Si vous avez réservé un transfert</h2>
+  <p>
+    Votre chauffeur attend dans le hall, après la douane, avec une pancarte portant votre nom. Deux
+    conseils qui évitent l'essentiel des ratés : transmettez votre numéro de vol au moment de la
+    réservation, afin qu'un retard soit absorbé automatiquement, et indiquez le nom du riad
+    <em>avec</em> la porte de la médina la plus proche. Le chauffeur saura alors exactement où
+    s'arrêter, au lieu de choisir la porte qui l'arrange. Tout est expliqué sur notre page
+    {' '}<a href={L('/guide-aeroport-marrakech/aller-a-la-medina/')}>aller à la médina</a>, et les
+    options se comparent sur
+    {' '}<a href={L('/transfert-aeroport-marrakech/')}>transferts aéroport Marrakech</a>.
+  </p>
 </GuideLayout>

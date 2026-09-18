@@ -2,132 +2,163 @@
 import GuideLayout from '../layouts/GuideLayout.astro';
 import { getLocalizedPath } from '../i18n';
 import { photos } from '../data/images';
+import { airport, PRICES_CHECKED } from '../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: "Guide de l'aéroport", href: L('/agadir-airport-guide/') },
+  { name: "Guide de l'aéroport", href: L('/guide-aeroport-marrakech/') },
 ];
+
 const toc = [
-  { label: 'Les arrivées', id: 'arrivees' },
-  { label: 'Rejoindre la ville', id: 'ville' },
-  { label: 'Espèces et SIM', id: 'especes-sim' },
-  { label: "Le bus, et pourquoi on l'évite", id: 'pas-de-bus' },
-  { label: 'Parking & prise en charge', id: 'parking' },
-  { label: 'Monter sur la côte', id: 'cote' },
+  { label: "L'aéroport en bref", id: 'en-bref' },
+  { label: 'À quoi ressemble une arrivée', id: 'arrivee' },
+  { label: 'Argent, SIM et Wi-Fi', id: 'argent-sim' },
+  { label: 'Sortir vers la ville', id: 'sortir' },
+  { label: 'Déposer, stationner, louer', id: 'voiture' },
+  { label: 'Repartir : les départs', id: 'departs' },
 ];
+
 const faqs = [
-  { q: "Quel est le nom et le code de l'aéroport d'Agadir ?", a: "Aéroport Agadir Al Massira, code IATA AGA, code OACI GMAD. C'est le seul aéroport commercial desservant Agadir et la région Souss-Massa, à environ 22 km du centre-ville, près de Temsia." },
-  { q: "Combien de temps pour passer les formalités à l'arrivée ?", a: "En général rapide. Al Massira est un terminal unique et discret, et le contrôle des passeports est rarement un goulot d'étranglement, sauf si deux charters du soir atterrissent ensemble. Bagages, contrôle et sortie prennent en général 30 à 45 minutes." },
-  { q: "Y a-t-il du Wi-Fi gratuit et des distributeurs à l'aéroport d'Agadir ?", a: "Oui. Le hall d'arrivée compte des distributeurs de deux ou trois banques marocaines et des kiosques SIM Maroc Telecom, Orange et inwi, ainsi qu'un café ou deux. Retirez des dirhams ici avant de partir, la côte, surtout, fonctionne au liquide." },
-  { q: "Y a-t-il un train ou un bus vers la ville depuis l'aéroport ?", a: "Pas de train, mais il y a un bus : ALSA fait rouler une navette d'aéroport vers le centre d'Agadir (à peu près toutes les heures en journée, environ 50 minutes, autour de 50 MAD), plus un trajet local moins cher via la ligne 37 jusqu'à Inezgane et la ligne 98 vers la ville. Les deux ne rejoignent que le centre, de jour ; pour un hôtel, une arrivée du soir ou la côte, la plupart des gens partent encore en grand taxi, en transfert réservé ou en voiture de location." },
+  {
+    q: "Quel est le nom et le code de l'aéroport de Marrakech ?",
+    a: `Aéroport de Marrakech Ménara, code IATA ${airport.code}, code OACI ${airport.icao}. C'est l'unique aéroport commercial de la ville, situé à ${airport.distanceToCityKm} km à peine du sud-ouest de la médina, dont il tire son nom : la Ménara est la grande oliveraie et son bassin du XIIᵉ siècle, juste à côté des pistes.`
+  },
+  {
+    q: "Combien de temps faut-il pour sortir de l'aéroport après l'atterrissage ?",
+    a: "Comptez 30 à 50 minutes entre la passerelle et le parking en temps normal. Le contrôle des passeports est le goulot d'étranglement : quand trois ou quatre vols européens se posent dans la même demi-heure, en fin d'après-midi ou en soirée, la file s'allonge nettement. Prévoyez large si quelqu'un vous attend, et prévenez votre chauffeur de transfert du numéro de vol plutôt que d'une heure."
+  },
+  {
+    q: "L'aéroport de Marrakech a-t-il plusieurs terminaux ?",
+    a: "Oui, deux terminaux passagers réunis dans un même bâtiment d'environ 42 000 m², ce qui rend les correspondances à pied très simples : on ne prend ni navette ni train interne. Une extension est en cours pour absorber la croissance du trafic, qui a atteint 9,3 millions de passagers en 2024."
+  },
+  {
+    q: "Y a-t-il du Wi-Fi gratuit et des distributeurs à l'aéroport ?",
+    a: "Oui, le Wi-Fi est gratuit dans les terminaux, et le hall des arrivées compte plusieurs distributeurs de banques marocaines ainsi que des bureaux de change. Les corners des opérateurs mobiles y vendent aussi des cartes SIM prépayées. Retirez des dirhams avant de sortir : taxis, porteurs et petits commerces de la médina fonctionnent en espèces."
+  },
+  {
+    q: "Comment rejoindre le centre depuis l'aéroport de Marrakech ?",
+    a: `Quatre options : un transfert réservé à l'avance (dès 12 €), un taxi pris à la station (${airport.taxiFare.dayMad[0]}–${airport.taxiFare.dayMad[1]} MAD le jour), le bus ${airport.bus.line} d'${airport.bus.operator} vers Jemaa el-Fna (${airport.bus.oneWayMad} MAD, environ ${airport.bus.rideMin} minutes) ou une voiture de location retirée aux comptoirs des arrivées. Il n'y a ni train ni application de VTC.`
+  },
 ];
 ---
-<GuideLayout keywords="Guide Aeroport Agadir, que faire à Agadir, attractions Agadir" 
-  lang={lang}
-  title="Guide Guide Aeroport Agadir 2026 | Astuces & Incontournables"
-  description="Planifiez votre visite à Guide Aeroport à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
-  eyebrow="Agadir Al Massira · AGA"
-  h1="Le guide de l'aéroport Agadir Al Massira"
-  lede="Tout pour une arrivée sereine à l'AGA, à quoi ressemblent les arrivées, comment partir, où prendre des espèces et une SIM, et ce que les nouveaux venus auraient aimé savoir."
+<GuideLayout
+  keywords="aéroport Marrakech Ménara, guide aéroport RAK, arrivées Marrakech, rejoindre la médina"
+  title="Guide de l'aéroport de Marrakech Ménara (RAK) : tout ce qu'il faut savoir | AirportRAK"
+  description="Le guide pratique de l'aéroport Marrakech Ménara : durée des formalités, terminaux, distributeurs et cartes SIM, rang de taxis, bus 19, parking et comment rejoindre la médina ou Guéliz sans mauvaise surprise."
+  eyebrow={`Marrakech Ménara · ${airport.code}`}
+  h1="Le guide de l'aéroport de Marrakech Ménara"
+  lede="Ce qui vous attend entre la passerelle et le parking, ce qu'il faut régler avant de sortir du hall, et comment rejoindre votre riad ou votre hôtel. Le tout sans supposer que vous connaissez déjà la ville."
   breadcrumbs={breadcrumbs}
-  heroImage={photos['agadir-bay']}
+  heroImage={photos['rak-terminal']}
   toc={toc}
   faqs={faqs}
-  updated="juin 2026"
-  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+  updated={PRICES_CHECKED}
+  cta={{ heading: "Réglez le trajet avant d'atterrir", text: "Un chauffeur qui suit votre vol, un prix fixe et la dépose à la bonne porte de la médina : c'est la partie du voyage qui gagne le plus à être préparée.", provider: 'transfer', label: 'Voir les prix des transferts' }}
 >
+  <h2 id="en-bref">L'aéroport en bref</h2>
   <p>
-    Agadir Al Massira (AGA) est le troisième aéroport du Maroc, et après la cohue de Marrakech il paraît
-    presque endormi. C'est un terminal unique et moderne qui accueille surtout des vols charters et
-    low-cost du Royaume-Uni, de France, de Belgique et de Scandinavie, donc beaucoup d'arrivées en
-    soirée, et beaucoup de voyageurs qui sortent fatigués dans un endroit sans train et avec un bus de
-    ville qui ne circule qu'en journée. Rien de tout cela n'est un problème une fois qu'on sait comment
-    l'aéroport fonctionne. Voici le pas-à-pas.
+    Marrakech Ménara est le deuxième aéroport du Maroc derrière Casablanca, et sa première porte
+    d'entrée touristique. Il a accueilli 9,3 millions de passagers en 2024, en hausse de 34 % sur un an,
+    un rythme qui explique à la fois les files d'attente aux heures de pointe et les travaux
+    d'agrandissement en cours. Deux terminaux passagers cohabitent dans un même bâtiment : vous
+    n'aurez jamais à prendre une navette interne.
+  </p>
+  <p>
+    Sa particularité tient à sa position : {airport.distanceToCityKm} kilomètres à peine séparent les
+    pistes de la médina. C'est l'un des rares grands aéroports internationaux aussi proche d'un centre
+    historique, au point qu'on aperçoit la Koutoubia peu après le décollage. La contrepartie, c'est
+    qu'aucune infrastructure lourde ne relie l'aérogare à la ville : ni train, ni métro, ni tramway.
   </p>
 
-  <h2 id="arrivees">Les arrivées : à quoi s'attendre</h2>
+  <h2 id="arrivee">À quoi ressemble une arrivée</h2>
   <p>
-    Les vols internationaux partagent un seul groupe de tapis à bagages, et le contrôle des passeports
-    est rarement le goulot d'étranglement des grands aéroports marocains, sauf si deux charters du
-    soir atterrissent à quelques minutes d'écart, auquel cas la file se forme vite. Rien d'exotique à
-    remplir ; un passeport suffit pour la plupart des nationalités en séjour touristique. Récupérez vos
-    bagages et sortez directement dans un hall d'arrivée modeste. En chemin, vous passez les
-    distributeurs, les kiosques SIM et les comptoirs de location, puis les portes s'ouvrent sur la
-    station de taxis. L'endroit se vide vite une fois un vol passé.
+    Le parcours est linéaire : passerelle ou bus de piste, couloir vers la police aux frontières,
+    contrôle des passeports, tapis à bagages, douane, puis le hall des arrivées qui donne directement
+    sur le parvis. Rien de labyrinthique, mais deux moments méritent votre attention.
+  </p>
+  <p>
+    Le premier est le contrôle des passeports. Une fiche de police vous sera demandée : elle est souvent
+    distribuée à bord, remplissez-la pendant le vol, cela vous fait gagner une place dans la file. Le
+    second est la sortie du hall, où vous serez immédiatement sollicité par des chauffeurs. Si vous avez
+    réservé un transfert, cherchez la pancarte à votre nom sans vous arrêter ; si vous comptez prendre
+    un taxi, dirigez-vous vers le rang officiel plutôt que d'accepter une proposition dans le hall.
+    Notre page <a href={L('/guide-aeroport-marrakech/arrivees/')}>arrivées au RAK</a> détaille chaque
+    étape, y compris les vols en temps réel.
   </p>
 
-  <h2 id="ville">Rejoindre la ville</h2>
+  <h2 id="argent-sim">Argent, SIM et Wi-Fi : à régler avant de sortir</h2>
   <p>
-    L'aéroport est à environ 22 km du centre d'Agadir, un vrai trajet de 25 à 40 minutes, pas le court
-    saut de certains aéroports urbains. Vous avez trois options sensées, et le bon choix dépend de
-    votre destination et de l'heure d'arrivée :
+    Le Wi-Fi est gratuit dans les terminaux, mais votre priorité est ailleurs : il vous faut des
+    dirhams. Le taxi, le porteur qui portera vos valises jusqu'au riad, le petit déjeuner du lendemain
+    dans la médina — tout cela se règle en espèces. Les distributeurs du hall fonctionnent bien ;
+    demandez, si l'automate le propose, des coupures de 100 MAD plutôt que des billets de 200, avec
+    lesquels personne ne rend la monnaie.
   </p>
-  <ul>
-    <li><strong>Grand taxi</strong> à la station devant les arrivées, idéal pour le centre d'Agadir si vous fixez le prix d'abord (environ 200–250 MAD en journée). Voyez notre <a href={L('/agadir-airport-taxi/')}>guide du taxi aéroport</a> pour les justes tarifs.</li>
-    <li><strong>Transfert réservé</strong>, un chauffeur nommé, un prix fixe, et le seul choix sensé pour les arrivées tardives ou les adresses non signalées des villages de surf.</li>
-    <li><strong>Voiture de location</strong>, utile pour explorer le Souss, Paradise Valley ou plusieurs spots ; une vingtaine de comptoirs dans le hall. Voyez <a href={L('/agadir-airport-car-rental/')}>la location à l'AGA</a>.</li>
-  </ul>
-
-  <h2 id="especes-sim">Espèces et SIM avant de quitter le hall</h2>
   <p>
-    Le dirham est une monnaie fermée, impossible de l'acheter avant d'arriver, donc les distributeurs
-    de l'arrivée sont votre première tâche. Retirez 500 à 1 000 MAD pour la course, un pourboire et
-    votre première journée ; préférez une machine d'une vraie banque à un guichet de change isolé, dont
-    les taux sont moins bons. Pour les données, les kiosques Maroc Telecom, Orange et inwi vendent des
-    SIM touristiques sur présentation du passeport en quelques minutes, souvent autour de 50 MAD avec
-    un forfait généreux, ou arrivez avec une eSIM déjà chargée. Être connecté dès l'atterrissage compte
-    plus ici que dans une ville compacte : il faut parfois écrire à un chauffeur ou partager le point
-    d'un appartement de Taghazout sans vraie adresse.
+    Pour la connexion, deux écoles. Les corners des opérateurs marocains vendent des SIM prépayées peu
+    chères mais demandent votre passeport et quelques minutes d'activation. Une
+    {' '}<a href={L('/esim-maroc/')}>eSIM installée avant le départ</a> vous connecte dès l'atterrissage,
+    ce qui est confortable quand vous devez justement écrire à votre riad pour confirmer l'arrivée. Le
+    détail des commerces, pharmacies, salles de prière et services du terminal est sur la page
+    {' '}<a href={L('/guide-aeroport-marrakech/services/')}>services de l'aéroport</a>.
   </p>
 
-  <h2 id="pas-de-bus">Le bus, et pourquoi la plupart l'évitent</h2>
+  <h2 id="sortir">Sortir vers la ville</h2>
   <p>
-    Il y a désormais un bus, deux options, même. ALSA fait rouler une navette d'aéroport vers le centre
-    d'Agadir, à peu près toutes les heures en journée, environ 50 minutes, pour quelque 50 MAD. Moins
-    cher encore : la ligne ALSA 37 (environ 8,5 MAD) part de la route principale, à 5–10 minutes à pied
-    du terminal, rejoint Inezgane où l'on prend la ligne 98 (environ 3,5 MAD) jusqu'à Agadir, environ
-    1 h 15 en tout. Si vous voyagez léger, atterrissez de jour et allez au centre, le bus est une vraie
-    option économique.
+    Quatre options, et aucune n'est universellement meilleure. Un
+    {' '}<a href={L('/reserver-transfert/')}>transfert réservé</a> dès 12 € par véhicule, imbattable pour
+    les vols de nuit, les familles et les riads difficiles à localiser. Un
+    {' '}<a href={L('/taxi-aeroport-marrakech/')}>taxi pris au rang</a>, entre
+    {' '}{airport.taxiFare.dayMad[0]} et {airport.taxiFare.dayMad[1]} MAD le jour vers la médina,
+    davantage la nuit. Le bus {airport.bus.line} d'{airport.bus.operator} jusqu'à Jemaa el-Fna pour
+    {' '}{airport.bus.oneWayMad} MAD, entre {airport.bus.firstDeparture} et {airport.bus.lastDeparture}.
+    Ou une <a href={L('/location-voiture-aeroport-marrakech/')}>voiture de location</a>, utile seulement
+    si vous quittez la ville.
   </p>
-  <p>
-    Mais il ne rejoint que le centre d'Agadir, pas la porte de votre hôtel, pas la côte du surf, et il
-    se raréfie ou s'arrête pour les charters du soir. Avec des bagages, en famille, sur un vol du soir ou
-    pour un hôtel hors du centre, le bus cesse d'être pratique et un grand taxi ou un transfert réservé
-    devient le choix plus simple. Si le budget compte mais que le bus ne colle pas à votre arrivée,
-    partager un grand taxi ou un transfert partagé avec d'autres voyageurs allant dans votre direction
-    est la solution la moins chère ensuite. Le tableau complet est sur la
-    <a href={L('/agadir-airport-guide/bus/')}>page du bus de l'aéroport</a>.
-  </p>
-
-  <h2 id="parking">Parking & prise en charge</h2>
-  <p>
-    Si quelqu'un vient vous chercher, un parking se trouve juste devant le terminal, avec une zone
-    courte durée pour les prises en charge et déposes, quelques minutes gratuites, les attentes plus
-    longues à un tarif horaire modéré. Pour les départs, c'est un petit terminal : pas besoin du
-    tampon de deux heures d'un grand hub ; arriver 1 h 30 à 2 h avant le vol est confortable. Les
-    chauffeurs de transfert réservé savent exactement où attendre et vous écrivent à l'arrivée.
-  </p>
-
-  <h2 id="cote">Monter sur la côte</h2>
-  <p>
-    Beaucoup de ceux qui atterrissent à l'AGA ne restent pas à Agadir. Taghazout et Tamraght sont à
-    40–60 minutes au nord par la route côtière ; Taroudant est à l'intérieur, dans la plaine du Souss ;
-    et les longues distances vers Essaouira et Marrakech sont de vrais trajets de deux à trois heures.
-    Chacun a ses particularités, le problème des adresses de surf, l'embouteillage côtier du vendredi
-    après-midi, le tarif élevé de Marrakech, alors consultez la page dédiée à votre destination :
-    <a href={L('/agadir-airport-to-taghazout/')}>Taghazout</a>,
-    <a href={L('/agadir-airport-to-agadir/')}>centre d'Agadir</a>,
-    <a href={L('/agadir-airport-to-marrakech/')}>Marrakech</a> ou
-    <a href={L('/agadir-airport-to-essaouira/')}>Essaouira</a>.
-  </p>
-
   <div class="callout">
-    <span class="callout-label">La check-list du nouveau venu</span>
-    Des espèces au distributeur bancaire · une SIM ou eSIM · le point de votre hôtel/camp enregistré
-    hors ligne · le juste prix du taxi en tête · et, si vous atterrissez tard, un transfert réservé à
-    l'avance. Faites ces cinq choses et le reste d'Agadir devient facile.
+    <span class="callout-label">Le point que tout le monde découvre sur place</span>
+    <p>
+      Aucune voiture n'entre dans les ruelles de la médina. Quel que soit votre choix, vous serez déposé
+      à une porte — Bab Doukkala, Bab Laksour, Bab Agnaou — et finirez à pied. Demandez à votre riad
+      d'envoyer un porteur avec une charrette : c'est gratuit ou symbolique, et cela change tout avec
+      des valises. Nous détaillons l'exercice sur la page
+      {' '}<a href={L('/guide-aeroport-marrakech/aller-a-la-medina/')}>aller à la médina</a>.
+    </p>
   </div>
+  <p>
+    Si vous logez à Guéliz, à l'Hivernage ou à l'Agdal, le problème ne se pose pas : la dépose se fait
+    devant la réception. Voyez <a href={L('/guide-aeroport-marrakech/aller-a-gueliz/')}>aller à Guéliz</a>.
+  </p>
+
+  <h2 id="voiture">Déposer, stationner, louer</h2>
+  <p>
+    Le parvis accueille une zone de dépose-minute juste devant les terminaux, et les parkings s'étendent
+    derrière, avec de l'ordre de 1 500 places au total. C'est aussi là que se trouve l'arrêt du bus
+    {' '}{airport.bus.line}, de l'autre côté du parking. Les tarifs, les zones et les conseils pour
+    laisser une voiture plusieurs jours sont sur la page
+    {' '}<a href={L('/guide-aeroport-marrakech/parking/')}>parking de l'aéroport</a>.
+  </p>
+  <p>
+    Les comptoirs de location — Hertz, Avis, Europcar, Sixt, Budget et plusieurs agences marocaines —
+    occupent le hall des arrivées. Notre
+    {' '}<a href={L('/location-voiture-aeroport-marrakech/')}>guide de la location au RAK</a> compare les
+    cautions et les politiques de carburant, qui creusent l'écart bien davantage que le tarif journalier.
+  </p>
+
+  <h2 id="departs">Repartir : les départs</h2>
+  <p>
+    Au retour, visez trois heures avant un vol international. Ce n'est pas excessif : l'enregistrement
+    des compagnies low cost ouvre tard et ferme tôt, le contrôle de sûreté se densifie en milieu de
+    matinée, et la circulation sur l'avenue Mohammed VI peut vous coûter vingt minutes imprévues en fin
+    d'après-midi. Le déroulé complet, du dépôt des bagages à la salle d'embarquement, est sur la page
+    {' '}<a href={L('/guide-aeroport-marrakech/departs/')}>départs du RAK</a>.
+  </p>
+  <p>
+    Si vous partez tôt, regardez où vous dormez la dernière nuit : un hôtel de l'Hivernage ou de
+    l'Agdal vous met à dix minutes du terminal, contre une demi-heure et une marche depuis un riad au
+    fond de la médina. Nous avons rassemblé les adresses pratiques dans
+    {' '}<a href={L('/hotels-pres-aeroport-marrakech/')}>dormir près du RAK</a>.
+  </p>
 </GuideLayout>

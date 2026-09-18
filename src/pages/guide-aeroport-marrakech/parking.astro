@@ -1,103 +1,128 @@
 ---
 import GuideLayout from '../../layouts/GuideLayout.astro';
 import { getLocalizedPath } from '../../i18n';
+import { photos } from '../../data/images';
+import { airport, PRICES_CHECKED } from '../../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: "Guide de l'aéroport", href: L('/agadir-airport-guide/') },
-  { name: 'Parking', href: L('/agadir-airport-guide/parking/') },
+  { name: "Guide de l'aéroport", href: L('/guide-aeroport-marrakech/') },
+  { name: 'Parking', href: L('/guide-aeroport-marrakech/parking/') },
 ];
+
 const toc = [
-  { label: 'Le parking devant le terminal', id: 'parking' },
-  { label: 'Courte durée & prises en charge', id: 'courte-duree' },
-  { label: 'Séjours plus longs', id: 'longue-duree' },
-  { label: 'Déposer quelqu\'un', id: 'depose' },
-  { label: 'Faut-il vraiment se garer ?', id: 'utile' },
+  { label: 'Les parkings du RAK', id: 'zones' },
+  { label: 'Dépose-minute', id: 'depose' },
+  { label: 'Venir chercher quelqu\'un', id: 'attente' },
+  { label: 'Laisser sa voiture plusieurs jours', id: 'longue-duree' },
+  { label: 'Rendre une voiture de location', id: 'location' },
+  { label: 'Faut-il vraiment se garer ?', id: 'arbitrage' },
 ];
+
 const faqs = [
-  { q: "Y a-t-il un parking à l'aéroport Agadir Al Massira ?", a: "Oui, un parking se trouve juste devant le terminal, avec une zone courte durée pour les prises en charge et déposes, et de la place pour les séjours plus longs. Le terminal étant petit, la marche du parking au comptoir d'enregistrement ne prend que quelques minutes." },
-  { q: "Combien coûte le parking à l'aéroport d'Agadir ?", a: "Quelques minutes pour une dépose ou une prise en charge sont en général gratuites, puis c'est facturé à un tarif horaire modéré, avec des plafonds journaliers pour les séjours plus longs. Gardez de la monnaie en dirhams : le liquide est le moyen fiable de payer à la barrière." },
-  { q: "Puis-je attendre au parking pour récupérer quelqu'un ?", a: "Oui. La zone courte durée est faite pour ça : entrez, et une courte attente coûte peu ou rien. Comme la plupart des arrivées sont des charters du soir, le plus simple est d'attendre que votre passager vous écrive qu'il a récupéré ses bagages avant d'avancer." },
-  { q: "Vaut-il mieux conduire jusqu'à l'aéroport ou prendre un taxi ?", a: "Pour un court séjour, laisser une voiture garée une semaine ou deux peut coûter plus cher que deux courses de grand taxi ou un transfert réservé. Le parking a du sens surtout si vous rendez une voiture de location ou si quelqu'un vient vous chercher ; sinon, un transfert est souvent plus simple et moins cher." },
-  { q: "Comment paie-t-on le parking de l'aéroport d'Agadir ?", a: "En espèces, en dirhams, à la barrière ou à une borne. La carte n'est pas toujours acceptée, donc gardez de la monnaie sur vous, surtout si vous venez chercher quelqu'un sans être passé par un distributeur. Quelques minutes en dépose-minute sont en général gratuites avant que le compteur ne démarre." },
+  {
+    q: "Y a-t-il un parking à l'aéroport de Marrakech Ménara ?",
+    a: "Oui, les parkings s'étendent devant les terminaux, avec de l'ordre de 1 500 places au total, réparties entre courte et longue durée, auxquelles s'ajoutent des emplacements dédiés aux minibus touristiques et aux autocars. L'ensemble est surveillé en permanence et des places réservées aux personnes à mobilité réduite se trouvent au plus près des entrées."
+  },
+  {
+    q: "Combien coûte le parking à l'aéroport de Marrakech ?",
+    a: "Le stationnement courte durée se facture à l'heure pour quelques dirhams, et la longue durée se situe dans l'ordre de grandeur de 60 MAD par journée, avec des dégressivités possibles au-delà de plusieurs jours. Ces tarifs évoluent : l'affichage à l'entrée du parking fait foi, et prévoyez des espèces."
+  },
+  {
+    q: "La dépose devant le terminal est-elle gratuite ?",
+    a: "Une courte dépose est tolérée devant les terminaux, mais l'arrêt doit rester bref : la voie est régulée aux heures de pointe et y stationner pour attendre est mal vu. Si vous venez chercher quelqu'un dont le vol vient seulement d'atterrir, entrez plutôt au parking courte durée : quarante minutes d'attente y coûtent très peu."
+  },
+  {
+    q: "Comment paie-t-on le parking ?",
+    a: "En espèces, en dirhams, à la borne ou à la barrière. La carte n'est pas systématiquement acceptée : gardez de la monnaie, surtout si vous venez chercher quelqu'un sans être passé par un distributeur."
+  },
+  {
+    q: "Vaut-il mieux se garer plusieurs jours ou prendre un transfert ?",
+    a: `Faites le calcul : une semaine de longue durée dépasse souvent le coût de deux trajets aller-retour. Un transfert vers la médina démarre à 12 € par véhicule et un taxi coûte ${airport.taxiFare.dayMad[0]}–${airport.taxiFare.dayMad[1]} MAD en journée. Le parking se justifie surtout si vous habitez la région ou si vous rendez une voiture de location.`
+  },
 ];
 ---
-<GuideLayout keywords="Parking Agadir, que faire à Agadir, attractions Agadir" 
-  lang={lang}
-  title="Guide Parking Agadir 2026 | Astuces & Incontournables"
-  description="Planifiez votre visite à Parking à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+<GuideLayout
+  keywords="parking aéroport Marrakech, tarif parking RAK, dépose minute Marrakech Ménara"
+  title="Parking à l'aéroport de Marrakech Ménara : zones, tarifs et conseils | AirportRAK"
+  description="Où se garer au RAK : dépose-minute devant les terminaux, parking courte durée pour venir chercher quelqu'un, longue durée pour laisser sa voiture, ordres de grandeur tarifaires et alternatives au stationnement."
   eyebrow="Guide de l'aéroport · Parking"
-  h1="Le parking à l'aéroport d'Agadir"
-  lede="Où se garer, ce que ça coûte, et comment gérer une prise en charge ou une dépose au terminal compact de l'AGA, avec un avis franc : le parking bat-il vraiment un taxi pour votre séjour ?"
+  h1="Parking de l'aéroport de Marrakech"
+  lede="Déposer un proche, attendre un vol qui a du retard ou laisser sa voiture dix jours ne posent pas les mêmes questions. Voici comment fonctionnent les parkings du RAK, et les cas où il vaut mieux ne pas prendre la voiture du tout."
   breadcrumbs={breadcrumbs}
+  heroImage={photos['rak-parking']}
   toc={toc}
   faqs={faqs}
-  updated="juin 2026"
-  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+  updated={PRICES_CHECKED}
+  cta={{ heading: 'Et si vous ne preniez pas la voiture ?', text: "Pour un aller-retour vers l'aéroport, un transfert à prix fixe coûte souvent moins cher qu'une semaine de stationnement, sans la question des places en haute saison.", provider: 'transfer', label: 'Comparer les transferts' }}
 >
+  <h2 id="zones">Les parkings du RAK</h2>
   <p>
-    Le parking à Agadir Al Massira est simple, il y a un parking principal et le terminal est assez petit pour
-    que la marche jusqu'à l'enregistrement prenne quelques minutes. La vraie question, pour la plupart des
-    visiteurs, n'est pas où se garer mais s'il faut le faire, et cela dépend de votre séjour. Voici le parking,
-    les coûts et la comparaison honnête.
+    Les parkings s'étendent face aux terminaux, à quelques dizaines de mètres des portes : on traverse,
+    et on y est. C'est l'un des conforts de Marrakech Ménara, où rien n'oblige à prendre une navette
+    entre un parking éloigné et l'aérogare. L'ensemble compte de l'ordre de 1 500 places, dont plus d'un
+    millier pour les voitures, le reste étant réservé aux minibus touristiques et aux autocars, très
+    présents ici du fait du tourisme organisé.
+  </p>
+  <p>
+    Deux usages coexistent : une zone courte durée, pensée pour les prises en charge, et une zone longue
+    durée pour les voyageurs qui laissent leur véhicule. Le site est surveillé en continu, et des places
+    réservées aux personnes à mobilité réduite sont positionnées au plus près des entrées.
   </p>
 
-  <h2 id="parking">Le parking devant le terminal</h2>
+  <h2 id="depose">Dépose-minute : rester bref</h2>
   <p>
-    Le parking est à ciel ouvert, juste devant le terminal, à quelques pas des portes. Pas de parking à
-    étages à traverser ni de navette : vous vous garez et vous marchez droit vers l'entrée, en quelques
-    minutes seulement. Comme Al Massira gère un nombre raisonnable de vols, il sature rarement comme les
-    parkings des grands aéroports urbains. Des chariots à bagages sont disponibles jusque sur le parking,
-    pratique si vous arrivez chargé d'une voiture de location à rendre. La plupart des gens qui l'utilisent
-    viennent chercher quelqu'un, déposer quelqu'un, ou justement rendre un véhicule de location.
+    Déposer quelqu'un devant les terminaux est possible, à condition que l'arrêt reste court. Aux heures
+    de pointe du matin, quand les départs européens s'enchaînent, la voie est dense et la circulation
+    régulée : on s'arrête, on sort les valises, on repart. Ce n'est pas l'endroit pour dire au revoir
+    pendant dix minutes ni pour attendre un passager en retard.
   </p>
 
-  <h2 id="courte-duree">Courte durée & prises en charge</h2>
+  <h2 id="attente">Venir chercher quelqu'un</h2>
   <p>
-    La zone dépose-minute gère les prises en charge et les déposes. Quelques minutes sont en général
-    gratuites, puis l'attente bascule sur un tarif horaire modéré. Gardez de la monnaie en dirhams, le
-    liquide est le moyen fiable de payer à la barrière, et la carte n'est pas toujours acceptée. Si vous
-    venez chercher quelqu'un et n'avez pas de dirhams sur vous, c'est un point à anticiper. Pour un charter
-    du soir, attendez que votre passager vous écrive avoir récupéré ses bagages avant d'avancer, plutôt que
-    de tourner en rond pendant que le compteur grimpe : entre l'atterrissage et la sortie des bagages, il
-    s'écoule facilement une demi-heure.
+    Entrez au parking courte durée plutôt que de tourner. Le coût d'une demi-heure y est faible, et vous
+    attendez tranquillement. Surtout, calez-vous sur le bon signal : ne bougez pas à l'heure
+    d'atterrissage affichée, mais quand votre passager vous écrit qu'il a récupéré ses bagages. Entre
+    les deux, il s'écoule facilement trente à cinquante minutes, l'essentiel se jouant au contrôle des
+    passeports. Le parcours complet est détaillé sur notre page
+    {' '}<a href={L('/guide-aeroport-marrakech/arrivees/')}>arrivées au RAK</a>.
   </p>
-
-  <h2 id="longue-duree">Séjours plus longs</h2>
-  <p>
-    Pour un séjour plus long, le même parking s'applique, facturé à la journée avec des plafonds qui gardent
-    le coût raisonnable, nettement moins cher, à la journée, que les parkings d'aéroport européens
-    équivalents. Vérifiez le plafond journalier affiché à l'entrée pour estimer votre total. C'est correct
-    sur quelques jours, mais le tarif journalier finit par s'accumuler sur une semaine ou deux, d'où
-    l'intérêt de la comparaison ci-dessous.
-  </p>
-
-  <h2 id="depose">Déposer quelqu'un</h2>
-  <p>
-    Déposer un passager est le cas le plus simple : entrez dans la zone dépose-minute, déchargez au trottoir,
-    et c'est réglé dans la fenêtre gratuite. L'entrée du terminal est juste là, donc pas de longue marche
-    d'adieu, un atout réel d'un petit aéroport. Ne laissez pas une voiture sans surveillance au trottoir,
-    cela dit ; si vous voulez accompagner quelqu'un à l'intérieur, garez-vous sur une place plutôt que de
-    bloquer la dépose. À l'inverse, si c'est vous qu'on récupère, un chauffeur de transfert réservé vous
-    attendra dans la zone des arrivées avec une pancarte à votre nom, sans que personne ait à se garer.
-  </p>
-
-  <h2 id="utile">Faut-il vraiment se garer ?</h2>
-  <p>
-    Voici ce que l'aéroport ne vous dira pas : pour beaucoup de visiteurs, se garer n'est pas le bon choix. Si
-    vous partez et revenez, laisser une voiture une semaine peut coûter plus cher que deux courses de grand taxi
-    ou un transfert réservé dans chaque sens, et vous évitez le trajet de nuit après un vol retour retardé. Le
-    parking se justifie si vous <a href={L('/agadir-airport-car-rental/')}>louez une voiture</a> et la rendez à
-    un comptoir, ou si un proche vient vous chercher. Sinon, pesez-le face à un
-    <a href={L('/agadir-airport-guide/')}>taxi ou un transfert</a> avant de vous engager.
-  </p>
-
   <div class="callout">
-    <span class="callout-label">La règle simple</span>
-    Courte prise en charge ou dépose : profitez de la fenêtre gratuite. Voiture de location : garez-vous et
-    rendez-la au comptoir. Une semaine entière de vacances : chiffrez d'abord un transfert, il gagne souvent.
+    <span class="callout-label">Bon à savoir</span>
+    <p>
+      Prévoyez des espèces en dirhams pour la sortie. Le paiement par carte n'est pas garanti aux
+      bornes, et c'est le moment où l'on découvre qu'on n'a que des billets de 200 MAD.
+    </p>
   </div>
+
+  <h2 id="longue-duree">Laisser sa voiture plusieurs jours</h2>
+  <p>
+    La longue durée se situe dans un ordre de grandeur d'une soixantaine de dirhams par journée, avec
+    des formules dégressives au-delà de quelques jours. Les tarifs évoluent et les prestataires
+    changent : considérez l'affichage à l'entrée comme la seule source qui fasse foi, et non les
+    chiffres trouvés sur des sites tiers, y compris le nôtre. En haute saison — vacances scolaires
+    européennes, ponts de printemps — les places partent tôt dans la journée.
+  </p>
+
+  <h2 id="location">Rendre une voiture de location</h2>
+  <p>
+    Si vous restituez un véhicule loué au comptoir, le retour se fait dans la zone dédiée signalée
+    depuis l'entrée des parkings, et le stationnement est généralement compris dans la prestation : vous
+    n'avez rien à régler à la barrière. Prévoyez toutefois une marge de trente minutes, entre l'état des
+    lieux, le plein à faire en amont et la marche jusqu'au comptoir. Nos conseils de restitution et le
+    détail des cautions figurent sur
+    {' '}<a href={L('/location-voiture-aeroport-marrakech/')}>location de voiture au RAK</a>.
+  </p>
+
+  <h2 id="arbitrage">Faut-il vraiment se garer ?</h2>
+  <p>
+    Posez le calcul avant de partir. Dix jours de longue durée représentent une somme qui dépasse
+    souvent deux allers-retours en taxi ou un transfert réservé dans les deux sens. Le stationnement
+    garde tout son sens si vous habitez Marrakech ou la région, si vous partez à plusieurs voitures ou
+    si vous rendez une location. Pour un visiteur qui séjourne en médina, il n'a aucun intérêt : la
+    voiture ne vous servirait de toute façon pas en ville, comme nous l'expliquons dans
+    {' '}<a href={L('/se-deplacer-marrakech/')}>se déplacer à Marrakech</a>.
+  </p>
 </GuideLayout>

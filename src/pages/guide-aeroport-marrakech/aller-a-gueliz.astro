@@ -2,115 +2,126 @@
 import GuideLayout from '../../layouts/GuideLayout.astro';
 import { getLocalizedPath } from '../../i18n';
 import { photos } from '../../data/images';
+import { airport, PRICES_CHECKED } from '../../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: "Guide de l'aéroport", href: L('/agadir-airport-guide/') },
-  { name: 'Aller à Taghazout', href: L('/agadir-airport-guide/airport-to-taghazout-options/') },
+  { name: "Guide de l'aéroport", href: L('/guide-aeroport-marrakech/') },
+  { name: 'Aller à Guéliz', href: L('/guide-aeroport-marrakech/aller-a-gueliz/') },
 ];
+
 const toc = [
-  { label: 'La distance et le trajet', id: 'trajet' },
-  { label: 'Transfert réservé', id: 'transfert' },
-  { label: 'Grand taxi', id: 'grand-taxi' },
-  { label: 'Voiture de location', id: 'location' },
-  { label: 'Le casse-tête des adresses', id: 'adresses' },
-  { label: 'Quelle option choisir', id: 'choisir' },
+  { label: 'Où commencent Guéliz et l\'Hivernage', id: 'quartiers' },
+  { label: 'Le trajet depuis le terminal', id: 'trajet' },
+  { label: 'Taxi, transfert ou bus', id: 'options' },
+  { label: 'La gare ONCF', id: 'gare' },
+  { label: 'Médina ou ville nouvelle', id: 'arbitrage' },
 ];
+
 const faqs = [
-  { q: "Combien de temps pour aller de l'aéroport d'Agadir à Taghazout ?", a: "Comptez 45 minutes à une heure pour une quarantaine de kilomètres : on contourne Agadir avant de prendre la route côtière vers le nord. Le vendredi après-midi et en fin de journée d'été, la sortie d'Agadir se charge et on peut perdre dix à quinze minutes de plus." },
-  { q: "Combien coûte un taxi de l'aéroport à Taghazout ?", a: "Un grand taxi depuis la station de l'aéroport tourne autour de 300 à 400 MAD en journée pour le trajet privatif vers Taghazout, davantage le soir. Fixez le prix avant de charger les bagages. Un transfert réservé à l'avance se situe dans la même fourchette, mais avec un prix bloqué et un chauffeur qui vous attend." },
-  { q: "Y a-t-il un bus de l'aéroport d'Agadir à Taghazout ?", a: "Non, rien de direct ni d'utile. Il n'existe pas de navette d'aéroport vers la côte du surf, et bricoler des bus locaux avec une planche et des bagages n'a aucun sens. C'est grand taxi, transfert réservé ou voiture de location." },
-  { q: "Vaut-il mieux louer une voiture pour Taghazout ?", a: "Si vous comptez surfer plusieurs spots, descendre à Tamraght ou monter vers Imsouane, une voiture se justifie. Pour un séjour posé dans un seul camp ou appartement, un transfert à l'aller et au retour revient souvent moins cher et plus simple que la location plus le stationnement." },
+  {
+    q: "Combien de temps faut-il pour aller de l'aéroport à Guéliz ?",
+    a: `Entre 12 et 20 minutes hors heure de pointe : l'Hivernage et Guéliz sont les premiers quartiers que l'on atteint en sortant de l'aéroport, avant même la médina. En fin d'après-midi, la circulation sur l'avenue Mohammed VI peut ajouter dix minutes.`
+  },
+  {
+    q: "Combien coûte un taxi de l'aéroport à Guéliz ou à l'Hivernage ?",
+    a: `Les mêmes tarifs que vers la médina : environ ${airport.taxiFare.dayMad[0]} à ${airport.taxiFare.dayMad[1]} MAD en journée et ${airport.taxiFare.nightMad[0]} à ${airport.taxiFare.nightMad[1]} MAD la nuit, pour la voiture entière. Ces quartiers font partie de la zone couverte par l'affichage tarifaire du rang de taxis.`
+  },
+  {
+    q: "Le chauffeur peut-il me déposer devant mon hôtel à Guéliz ?",
+    a: "Oui, et c'est tout l'intérêt de ces quartiers : avenues larges, accès dégagés, dépose devant la réception. Contrairement à la médina, vous ne marchez pas avec vos valises et vous n'avez besoin ni de porteur ni de connaître une porte."
+  },
+  {
+    q: "Le bus 19 dessert-il Guéliz ?",
+    a: `La ligne ${airport.bus.line} relie l'aéroport à Jemaa el-Fna en passant par le secteur de la Ménara, l'Hivernage et les abords de la Koutoubia. Selon l'endroit exact où vous logez à Guéliz, vous descendrez en route ou terminerez par une courte course en petit taxi. Comptez ${airport.bus.oneWayMad} MAD.`
+  },
+  {
+    q: "Y a-t-il un train entre l'aéroport et la gare de Marrakech ?",
+    a: "Non. La gare ONCF de Marrakech se trouve à Guéliz, à quelques kilomètres de l'aéroport, mais aucune liaison ferroviaire ne dessert l'aérogare. On y accède en taxi, en transfert ou par le bus 19 suivi d'une courte marche. Prévoyez de la marge si vous enchaînez avec un train pour Casablanca ou Tanger."
+  },
 ];
 ---
-<GuideLayout keywords="Aller A Taghazout Agadir, que faire à Agadir, attractions Agadir" 
-  lang={lang}
-  title="Guide Aller A Taghazout Agadir 2026 | Astuces & Incontournables"
-  description="Planifiez votre visite à Aller A Taghazout à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
-  eyebrow="Guide de l'aéroport · Taghazout"
-  h1="De l'aéroport d'Agadir à Taghazout"
-  lede="Quarante kilomètres de côte séparent l'AGA de Taghazout, et il n'y a ni train ni bus pour les couvrir. Voici les trois vraies options, leur prix honnête, et celle qui convient à votre séjour."
+<GuideLayout
+  keywords="aéroport Marrakech Guéliz, aéroport Hivernage, taxi aéroport Guéliz, gare ONCF Marrakech"
+  title="De l'aéroport de Marrakech à Guéliz et l'Hivernage (2026) | AirportRAK"
+  description="Rejoindre Guéliz, l'Hivernage ou l'Agdal depuis l'aéroport Marrakech Ménara : durée, tarifs taxi, transfert, bus 19 et accès à la gare ONCF. Les quartiers où la voiture vous dépose devant l'hôtel."
+  eyebrow="Guide de l'aéroport · Aller à Guéliz"
+  h1="De l'aéroport de Marrakech à Guéliz et l'Hivernage"
+  lede="La ville nouvelle est le premier morceau de Marrakech que l'on atteint en sortant de l'aéroport, et le seul où la voiture vous dépose vraiment devant la porte de l'hôtel. Voici le trajet, les prix et ce que cela change."
   breadcrumbs={breadcrumbs}
-  heroImage={photos['taghazout']}
+  heroImage={photos['gueliz-hivernage']}
   toc={toc}
   faqs={faqs}
-  updated="juin 2026"
-  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+  updated={PRICES_CHECKED}
+  cta={{ heading: 'Dépose devant la réception', text: "Vers Guéliz, l'Hivernage ou l'Agdal, un transfert réservé vous conduit porte à porte, prix fixé d'avance, sans la moindre marche avec les valises.", provider: 'transfer', label: 'Voir les prix des transferts' }}
 >
+  <h2 id="quartiers">Où commencent Guéliz et l'Hivernage</h2>
   <p>
-    Beaucoup de ceux qui atterrissent à l'AGA ne s'arrêtent pas à Agadir : ils filent au nord, vers
-    Taghazout et sa côte de surf. Le trajet est simple, mais comme il n'y a ni train ni bus d'aéroport
-    utile, mieux vaut décider avant l'atterrissage comment vous allez le faire, surtout sur un charter
-    qui se pose à la nuit tombée.
+    Guéliz est la ville nouvelle héritée du protectorat : avenues rectilignes, immeubles, terrasses de
+    café, enseignes internationales et la gare ONCF. L'Hivernage, juste au sud, est le quartier des
+    grands hôtels, des palmiers et des jardins, coincé entre la Ménara et les remparts. L'Agdal, plus au
+    sud encore, aligne résidences récentes et centres commerciaux.
+  </p>
+  <p>
+    Ces trois quartiers partagent une caractéristique décisive à l'arrivée : ils sont entièrement
+    accessibles en voiture. Là où un riad de la médina implique une dépose à une porte et une marche,
+    ici votre chauffeur s'arrête devant la réception, et un bagagiste s'occupe du reste.
   </p>
 
-  <h2 id="trajet">La distance et le trajet</h2>
+  <h2 id="trajet">Le trajet depuis le terminal</h2>
   <p>
-    Taghazout est à une quarantaine de kilomètres au nord de l'aéroport, soit 45 minutes à une heure de
-    route. On contourne d'abord Agadir, puis on prend la route côtière qui longe l'Atlantique en passant
-    par Aourir et Tamraght. C'est une jolie route, sans difficulté, mais la sortie d'Agadir se charge le
-    vendredi après-midi et aux heures de pointe d'été : prévoyez un peu de marge si vous avez un créneau
-    de check-in serré.
+    C'est le plus court de tous les trajets depuis le RAK. En sortant de l'aéroport, on remonte vers le
+    nord-est et l'on est dans l'Hivernage en une dizaine de minutes, à Guéliz en un quart d'heure.
+    Comptez 12 à 20 minutes en conditions normales, une petite demi-heure en fin d'après-midi, quand
+    l'avenue Mohammed VI se charge.
   </p>
 
-  <h2 id="transfert">Transfert réservé</h2>
+  <h2 id="options">Taxi, transfert ou bus</h2>
   <p>
-    C'est l'option la plus sereine, et de loin la plus sensée pour une arrivée tardive. Vous réservez à
-    l'avance, un chauffeur nommé attend aux arrivées avec votre nom, vous écrit dès l'atterrissage, et le
-    prix est bloqué : pas de négociation à la station après un vol fatigant. C'est aussi le choix le plus
-    fiable pour atteindre un camp ou un appartement dont l'adresse ne veut rien dire au GPS. Notre
-    <a href={L('/agadir-airport-to-taghazout/')}>page transfert aéroport-Taghazout</a> donne les prix et
-    les détails du trajet.
+    <strong>Le taxi</strong> couvre ces quartiers au même barème que la médina :
+    {' '}{airport.taxiFare.dayMad[0]}–{airport.taxiFare.dayMad[1]} MAD en journée,
+    {' '}{airport.taxiFare.nightMad[0]}–{airport.taxiFare.nightMad[1]} MAD la nuit, par véhicule. Ils
+    figurent sur le panneau tarifaire du rang : annoncez le quartier et le nom de l'hôtel, confirmez le
+    montant, chargez. Le détail est sur notre
+    {' '}<a href={L('/taxi-aeroport-marrakech/prix/')}>grille des prix</a>.
+  </p>
+  <p>
+    <strong>Le transfert réservé</strong> conserve son intérêt pour les vols de nuit, les groupes de
+    quatre et plus, et les voyageurs qui veulent éviter toute discussion après un vol : le prix est fixé
+    et le chauffeur attend avec votre nom, même si l'avion a deux heures de retard.
+  </p>
+  <p>
+    <strong>Le bus {airport.bus.line}</strong> traverse le secteur en direction de Jemaa el-Fna. Pour
+    {' '}{airport.bus.oneWayMad} MAD, c'est la solution la plus économique si votre hôtel se trouve sur
+    son parcours ou à courte distance ; sinon, il faut ajouter une course de petit taxi, ce qui réduit
+    l'écart.
   </p>
 
-  <h2 id="grand-taxi">Grand taxi</h2>
+  <h2 id="gare">La gare ONCF : penser au maillon manquant</h2>
   <p>
-    Les grands taxis attendent à la station devant les arrivées. Pour Taghazout, comptez environ 300 à
-    400 MAD en journée pour la course privative, davantage le soir, et il faut <em>fixer le prix avant</em>
-    de charger les bagages, sans quoi la discussion à l'arrivée tourne rarement à votre avantage. Il n'y a
-    ni Uber ni Careem à Agadir, donc pas d'appli pour comparer : c'est la station ou un transfert réservé.
-    Le <a href={L('/agadir-airport-taxi/')}>guide du taxi aéroport</a> détaille les justes tarifs par
-    destination.
+    Marrakech est le terminus sud du réseau ferroviaire marocain, avec des trains vers Casablanca,
+    Rabat, Fès et Tanger. La gare est à Guéliz, mais aucune liaison ne relie l'aéroport au rail : il
+    faut un taxi, un transfert ou le bus. Si votre plan consiste à atterrir puis à enchaîner sur un
+    train, comptez large — contrôle des passeports, récupération des bagages, trajet, achat du billet.
+    Deux heures entre l'atterrissage et le départ du train est un minimum confortable.
   </p>
 
-  <h2 id="location">Voiture de location</h2>
+  <h2 id="arbitrage">Médina ou ville nouvelle : ce que cela change à l'arrivée</h2>
   <p>
-    Une vingtaine de comptoirs de location se trouvent dans le hall des arrivées. La voiture se justifie si
-    vous voulez enchaîner les spots. Tamraght, Imsouane, Paradise Valley, plutôt que de rester dans un
-    seul camp. Sachez seulement qu'on roule à droite, que les contrôles de gendarmerie sont fréquents
-    (gardez vos papiers sur vous) et que le stationnement à Taghazout même est étroit en haute saison.
-    Voyez <a href={L('/agadir-airport-car-rental/')}>la location à l'AGA</a> pour le détail.
+    Le débat se joue rarement sur le transport, et pourtant il devrait en faire partie. Un riad en
+    médina offre une expérience incomparable, mais implique une dépose à une porte, une marche dans les
+    derbs et un porteur à organiser — voyez notre page
+    {' '}<a href={L('/guide-aeroport-marrakech/aller-a-la-medina/')}>aller à la médina</a>. Un hôtel de
+    Guéliz ou de l'Hivernage supprime toute cette logistique, au prix d'un dépaysement moindre.
   </p>
-
-  <h2 id="adresses">Le casse-tête des adresses</h2>
   <p>
-    C'est le vrai piège de la côte du surf : beaucoup de camps et d'appartements n'ont pas d'adresse
-    exploitable, juste un point sur une carte ou un nom de quartier. D'où l'intérêt d'arriver connecté, une SIM ou une eSIM dès l'atterrissage, pour partager votre localisation au chauffeur. Avec un
-    transfert réservé, l'hébergeur a souvent déjà transmis le point exact ; avec un grand taxi, soyez prêt
-    à montrer la carte et à guider sur les derniers mètres.
+    Pour un premier séjour court, un couple qui arrive tard ou une famille avec poussette, la ville
+    nouvelle simplifie sérieusement la vie. Pour trois nuits d'immersion, le riad vaut la marche. Nous
+    comparons les deux dans
+    {' '}<a href={L('/ou-dormir-marrakech/')}>quel quartier pour dormir à Marrakech</a>, et les adresses
+    les plus pratiques pour un vol matinal sont dans
+    {' '}<a href={L('/hotels-pres-aeroport-marrakech/')}>dormir près du RAK</a>.
   </p>
-
-  <h2 id="choisir">Quelle option choisir</h2>
-  <p>
-    Pour un séjour posé dans un camp, un aller-retour en transfert réservé est généralement le meilleur
-    rapport sérénité-prix. Pour un vol de jour et un budget serré, le grand taxi fait l'affaire si vous
-    fixez le prix d'abord. Et pour explorer la côte au-delà de Taghazout, prenez une voiture dès
-    l'aéroport. Si vous venez pour les vagues, le <a href={L('/surfing-taghazout-guide/')}>guide du surf à
-    Taghazout</a> complète le tableau côté spots et niveaux.
-  </p>
-
-  <div class="disclosure-inline">
-    Certains liens de cette page sont des liens d'affiliation : si vous réservez via eux, nous pouvons
-    percevoir une petite commission, sans surcoût pour vous. Cela ne change jamais les prix affichés ni nos
-    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
-  </div>
-
-  <div class="callout">
-    <span class="callout-label">À régler avant l'atterrissage</span>
-    Le point GPS exact de votre camp enregistré hors ligne · une SIM ou eSIM pour écrire au chauffeur · le
-    juste prix du taxi en tête, ou un transfert déjà réservé si vous arrivez de nuit.
-  </div>
 </GuideLayout>

@@ -3,116 +3,146 @@ import GuideLayout from '../../layouts/GuideLayout.astro';
 import { getLocalizedPath } from '../../i18n';
 import { photos } from '../../data/images';
 import FlightWidget from '../../components/ui/FlightWidget.astro';
+import { airport, PRICES_CHECKED } from '../../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: "Guide de l'aéroport", href: L('/agadir-airport-guide/') },
-  { name: 'Départs', href: L('/agadir-airport-guide/departures/') },
+  { name: "Guide de l'aéroport", href: L('/guide-aeroport-marrakech/') },
+  { name: 'Départs', href: L('/guide-aeroport-marrakech/departs/') },
 ];
+
 const toc = [
-  { label: 'À quelle heure arriver', id: 'timing' },
-  { label: 'Enregistrement et dépose bagages', id: 'check-in' },
-  { label: 'La sécurité', id: 'security' },
-  { label: 'Ce qu\'il y a côté piste', id: 'airside' },
+  { label: 'Vols au départ', id: 'vols' },
+  { label: 'Quand partir de votre riad', id: 'partir' },
+  { label: 'Combien de temps avant le vol', id: 'timing' },
+  { label: 'Enregistrement et bagages', id: 'enregistrement' },
+  { label: 'Contrôle de sûreté et police', id: 'surete' },
+  { label: 'Côté piste : ce qui vous attend', id: 'salle' },
   { label: 'Vos derniers dirhams', id: 'dirhams' },
-  { label: 'Partir de votre hôtel', id: 'getting-there' },
 ];
+
 const faqs = [
-  { q: "Combien de temps à l'avance arriver à l'aéroport d'Agadir pour un départ ?", a: "C'est un petit terminal : pas besoin du tampon d'un grand hub. Une heure et demie à deux heures avant le départ est confortable, même quand deux vols partent ensemble. Deux heures suffisent largement pour un départ tôt le matin avec des bagages à déposer." },
-  { q: "Y a-t-il beaucoup à faire côté piste à l'aéroport d'Agadir ?", a: "Pas grand-chose. Comptez une boutique duty-free, un café ou deux et des sièges basiques après la sécurité. C'est un terminal discret : prévoyez de manger avant d'arriver et voyez le côté piste comme un endroit où patienter, pas où flâner." },
-  { q: "Quand ouvre l'enregistrement à l'AGA ?", a: "La plupart des compagnies et opérateurs charters ouvrent l'enregistrement deux à trois heures avant le vol et le ferment 45 à 60 minutes avant le départ. Vérifiez votre compagnie précise, mais viser le comptoir deux heures avant est sûr." },
-  { q: "Faut-il dépenser ses dirhams avant la sécurité à l'aéroport d'Agadir ?", a: "Oui. Le dirham est une monnaie fermée, difficile et peu avantageuse à rechanger une fois rentré, et le change est compliqué côté piste. Réglez vos derniers achats avant la sécurité, au duty-free ou dans les boutiques côté ville, et ne gardez que de la petite monnaie pour un dernier café." },
+  {
+    q: "Combien de temps avant le vol faut-il arriver à l'aéroport de Marrakech ?",
+    a: "Trois heures pour un vol international, deux heures pour un vol intérieur. Ce n'est pas excessif au RAK : avec 9,3 millions de passagers par an et des départs européens très concentrés le matin, l'enregistrement et le contrôle de sûreté forment deux files successives qui peuvent chacune prendre une demi-heure en pointe."
+  },
+  {
+    q: "Quand ouvrent les comptoirs d'enregistrement au RAK ?",
+    a: "En général deux à trois heures avant le départ, avec une fermeture 45 à 60 minutes avant. Les compagnies low cost sont strictes sur cette fermeture. Si vous voyagez avec un bagage en soute et que vous partez tôt le matin, l'enregistrement en ligne la veille vous fait gagner une file entière."
+  },
+  {
+    q: "Combien de temps faut-il pour aller de la médina à l'aéroport ?",
+    a: `Comptez ${airport.driveToCityMin.min} à ${airport.driveToCityMin.max} minutes de trajet, auxquelles il faut ajouter le temps de sortir de la médina à pied jusqu'à une porte accessible en voiture — souvent 5 à 15 minutes avec des bagages. Depuis Guéliz ou l'Hivernage, prévoyez simplement 15 à 20 minutes, hors heure de pointe.`
+  },
+  {
+    q: "Peut-on rechanger ses dirhams à l'aéroport de Marrakech ?",
+    a: "Oui, des bureaux de change opèrent côté ville, mais le taux est rarement à votre avantage et il vous faudra parfois présenter un justificatif de change initial. Le dirham étant une devise fermée, le plus simple reste de dépenser ce qu'il vous reste avant le contrôle de sûreté, ou de n'en garder qu'un peu pour un dernier café."
+  },
+  {
+    q: "Y a-t-il des boutiques et des restaurants côté piste ?",
+    a: "Oui : duty-free, cafés et quelques enseignes de restauration rapide, ainsi que des espaces de détente. C'est correct sans être un grand centre commercial, et les prix sont ceux d'un aéroport. Si vous tenez à un vrai repas, mangez en ville avant de partir."
+  },
+  {
+    q: "Faut-il un test ou un document particulier pour quitter le Maroc ?",
+    a: "Non, un départ touristique ne demande que votre passeport et votre carte d'embarquement. Une fiche de sortie peut vous être remise au contrôle de police, symétrique de celle remplie à l'arrivée. Conservez-la avec votre passeport jusqu'au poste de police."
+  },
 ];
 ---
-<GuideLayout keywords="Departs Agadir, que faire à Agadir, attractions Agadir" 
-  lang={lang}
-  title="Guide Departs Agadir 2026 | Astuces & Incontournables"
-  description="Planifiez votre visite à Departs à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+<GuideLayout
+  keywords="départs aéroport Marrakech, enregistrement RAK, heure arrivée aéroport Marrakech"
+  title="Départs de l'aéroport de Marrakech : timing, enregistrement et sûreté (2026) | AirportRAK"
+  description="Quand quitter votre riad, combien de temps avant le vol arriver au RAK, comment se passent l'enregistrement, le contrôle de sûreté et la police, et que faire de vos derniers dirhams. Avec les vols au départ en temps réel."
   eyebrow="Guide de l'aéroport · Départs"
-  h1="Les départs à l'aéroport d'Agadir"
-  lede="Un petit terminal, c'est un départ serein quand on cale bien son timing. Voici à quelle heure arriver, à quoi ressemblent l'enregistrement et la sécurité, et le peu qu'il y a côté piste une fois passé."
+  h1="Départs de l'aéroport de Marrakech"
+  lede="Le retour se rate plus souvent que l'arrivée : la médina prend du temps à quitter, la circulation se densifie, et l'enregistrement low cost ferme sans état d'âme. Voici le rétroplanning qui évite la course."
   breadcrumbs={breadcrumbs}
-  heroImage={photos['agadir-marina']}
+  heroImage={photos['rak-terminal']}
   toc={toc}
   faqs={faqs}
-  updated="juin 2026"
-  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+  updated={PRICES_CHECKED}
+  cta={{ heading: 'Réservez votre trajet retour', text: "Un chauffeur qui vient vous chercher à la porte de la médina, à l'heure convenue, prix fixé d'avance : le dernier matin est le pire moment pour négocier.", provider: 'transfer', label: 'Voir les prix des transferts' }}
 >
-  <FlightWidget type="departures" lang={lang} />
-
+  <h2 id="vols">Vols au départ de Marrakech Ménara</h2>
   <p>
-    Partir d'Agadir Al Massira est étonnamment serein dès qu'on a compris qu'il s'agit d'un terminal
-    unique et modeste, pas d'un hub tentaculaire. L'astuce tient surtout au timing, à la fois l'heure
-    de quitter l'hôtel et le temps à prévoir une fois sur place. Voici la version pratique.
+    Vérifiez votre porte et votre horaire réel avant de partir de la ville : les retards se répercutent
+    souvent en cascade sur les rotations européennes de la journée.
+  </p>
+  <FlightWidget type="departures" />
+
+  <h2 id="partir">Quand quitter votre riad ou votre hôtel</h2>
+  <p>
+    C'est le calcul que tout le monde sous-estime. Depuis la médina, il faut d'abord <em>sortir</em> :
+    5 à 15 minutes de ruelles avec des valises jusqu'à une porte accessible en voiture, parfois
+    davantage si votre riad est profond et que vous n'avez pas demandé de porteur. Ajoutez ensuite
+    {' '}{airport.driveToCityMin.min} à {airport.driveToCityMin.max} minutes de route. Depuis Guéliz,
+    l'Hivernage ou l'Agdal, le calcul se simplifie : la voiture vient à la réception, et vous êtes au
+    terminal en un quart d'heure.
+  </p>
+  <div class="callout">
+    <span class="callout-label">Rétroplanning simple</span>
+    <p>
+      Vol international à 11 h 00 → au terminal à 8 h 00 → départ du riad à 7 h 15 → porteur commandé la
+      veille pour 7 h 00. Pour un vol de milieu d'après-midi, ajoutez vingt minutes : la circulation sur
+      l'avenue Mohammed VI se charge nettement à partir de 16 h.
+    </p>
+  </div>
+
+  <h2 id="timing">Combien de temps avant le vol</h2>
+  <p>
+    Trois heures pour l'international, deux pour un vol intérieur. Le RAK est un aéroport de forte
+    saisonnalité : un mardi de novembre, vous serez au duty-free en quarante minutes ; un samedi matin
+    de vacances scolaires, les deux files successives — enregistrement puis sûreté — consomment
+    facilement l'heure et demie. Mieux vaut patienter côté piste que regarder un comptoir fermer.
   </p>
 
-  <h2 id="timing">À quelle heure arriver</h2>
+  <h2 id="enregistrement">Enregistrement et dépôt des bagages</h2>
   <p>
-    C'est la question que tout le monde sur-réfléchit. Al Massira est petit, donc le tampon de plus de
-    deux heures qu'exige un grand aéroport est ici exagéré. Deux heures avant le départ est confortable et
-    couvre tous les cas, même un vol tôt le matin avec des bagages à déposer. Si vous voyagez en bagage
-    cabine uniquement et déjà enregistré en ligne, vous pouvez viser plutôt 90 minutes sur un créneau
-    calme. Le moment le plus lent est le même que partout : la file à la dépose bagages quand deux charters
-    s'enregistrent ensemble, c'est ce qui justifie de garder la marge des deux heures en haute saison.
+    Les comptoirs ouvrent deux à trois heures avant le départ et ferment 45 à 60 minutes avant. Si vous
+    voyagez sans bagage en soute et que vous avez votre carte d'embarquement sur le téléphone, vous
+    sautez complètement cette étape et vous présentez directement à la sûreté — c'est le gain de temps
+    le plus simple à obtenir.
+  </p>
+  <p>
+    Attention aux achats de séjour : lanternes, tapis, poteries et huile d'argan pèsent vite, et les
+    excédents se paient cher au comptoir. Pesez votre valise à l'hôtel si l'occasion se présente. Pour
+    l'huile d'argan et les cosmétiques, rappelez-vous la limite des 100 ml en cabine : au-delà, c'est
+    en soute ou rien.
   </p>
 
-  <h2 id="check-in">Enregistrement et dépose bagages</h2>
+  <h2 id="surete">Contrôle de sûreté et police</h2>
   <p>
-    La plupart des compagnies et opérateurs charters ouvrent l'enregistrement deux à trois heures avant et
-    le ferment 45 à 60 minutes avant le départ, vérifiez votre transporteur précis, car les horaires
-    charters varient et certains ferment tôt. Arriver pile à l'ouverture du comptoir n'apporte rien sur un
-    petit terminal ; mieux vaut viser le milieu de cette fenêtre. Si vous vous êtes enregistré en ligne et
-    voyagez en bagage cabine seulement, vous pouvez sauter le comptoir et filer directement à la sécurité.
-    Le hall des départs est compact : trouver votre comptoir prend quelques secondes, pas une traversée de
-    hall.
+    Le contrôle de sûreté fonctionne comme partout : liquides en sachet, ordinateurs et tablettes hors
+    du sac. Vient ensuite la police aux frontières, où votre passeport est tamponné à la sortie du
+    territoire. Sur un départ matinal chargé, c'est là que se forme la deuxième file : gardez votre
+    carte d'embarquement et votre passeport en main plutôt qu'au fond d'un sac.
   </p>
 
-  <h2 id="security">La sécurité</h2>
+  <h2 id="salle">Côté piste : ce qui vous attend</h2>
   <p>
-    La sécurité est classique : ordinateurs et liquides sortis, le scan habituel. Comme le terminal est
-    petit, la file est courte la plupart du temps et ne gonfle vraiment que lorsque plusieurs charters se
-    cumulent et passent en même temps, c'est le seul vrai goulot d'étranglement de l'AGA. Il n'y a pas de
-    coupe-file, mais il en faut rarement un : hors de ces pics, vous passez en quelques minutes. Si votre
-    vol coïncide avec deux ou trois autres départs, c'est là qu'on apprécie d'être arrivé deux heures avant.
-  </p>
-
-  <h2 id="airside">Ce qu'il y a côté piste</h2>
-  <p>
-    Ajustez vos attentes ici. Passé la sécurité, vous trouverez une boutique duty-free, un café ou deux et
-    des sièges basiques, assez pour attendre tranquillement, pas assez pour en faire un repas. La
-    restauration côté piste est limitée et ferme largement la nuit, donc sur un charter qui décolle tard,
-    ne comptez pas sur un vrai dîner sur place : mangez avant d'arriver. Si vous voulez un endroit plus
-    calme pour vous asseoir, voyez si l'<a href={L('/agadir-airport-guide/lounges/')}>accès au salon</a> en
-    vaut la peine pour votre voyage, c'est souvent le seul coin ouvert et confortable sur un départ
-    nocturne.
+    Duty-free, cafés, restauration rapide, boutiques de souvenirs et sièges en quantité correcte. On y
+    patiente sans difficulté une heure, moins facilement trois. Le Wi-Fi gratuit couvre les salles. Les
+    prix, eux, sont ceux d'un aéroport : si vous avez le choix, prenez votre dernier vrai repas en
+    ville. Le détail des commerces et services figure sur la page
+    {' '}<a href={L('/guide-aeroport-marrakech/services/')}>services de l'aéroport</a>.
   </p>
 
   <h2 id="dirhams">Vos derniers dirhams</h2>
   <p>
-    Réflexe à ne pas oublier avant de franchir la sécurité : écouler vos espèces. Le dirham est une monnaie
-    fermée, qu'on ne peut pas racheter à l'étranger et qu'il est peu avantageux de rechanger une fois
-    rentré, et le change devient compliqué une fois côté piste. Faites vos derniers achats, un cadeau, de
-    l'huile d'argan, de l'eau, au duty-free ou dans les boutiques côté ville, et ne gardez qu'un peu de
-    monnaie pour un dernier café. La <a href={L('/agadir-airport-guide/money-exchange/')}>page argent et
-    change</a> détaille comment doser vos retraits pour ne pas finir avec une liasse sur les bras.
+    Le dirham marocain est une devise fermée : il ne s'exporte pas et se rechange mal une fois rentré.
+    Anticipez en ne retirant pas trop dans les derniers jours, puis écoulez le reste avant le contrôle
+    de sûreté — un souvenir, un dernier thé, un pourboire au porteur. Les bureaux de change de
+    l'aéroport peuvent reconvertir une partie de vos dirhams, parfois sur présentation d'un justificatif
+    de change, rarement au meilleur taux.
   </p>
 
-  <h2 id="getting-there">Partir de votre hôtel</h2>
+  <h2>Et si votre vol est retardé ou annulé</h2>
   <p>
-    L'aéroport est à environ 22 km du centre d'Agadir, un vrai trajet de 25 à 40 minutes, plus long
-    depuis les villages de surf sur la côte. Intégrez-le à votre plan de départ, et ajoutez de la marge
-    si vous quittez Taghazout ou Tamraght un vendredi chargé. Un transfert réservé à l'avance pour
-    l'aller retire l'incertitude ; le <a href={L('/agadir-airport-guide/')}>hub du guide de l'aéroport</a>
-    relie les pages d'itinéraire avec des temps de trajet réalistes selon où vous logez.
+    Les vols au départ de Marrakech vers l'Union européenne relèvent du règlement européen sur les
+    droits des passagers dès lors qu'ils sont opérés par une compagnie européenne. Un retard important
+    ou une annulation peuvent ouvrir droit à une indemnisation forfaitaire, indépendamment du prix du
+    billet. Conservez carte d'embarquement et justificatifs, et voyez notre page
+    {' '}<a href={L('/indemnisation-vol/')}>vol retardé ou annulé</a> pour la marche à suivre.
   </p>
-
-  <div class="callout">
-    <span class="callout-label">Check-list rapide</span>
-    Comptez 1 h 30 à 2 h pour l'aéroport · dépensez d'abord vos dirhams · mangez avant d'arriver · et
-    calez le trajet depuis là où vous logez, pas depuis le centre-ville.
-  </div>
 </GuideLayout>
-
