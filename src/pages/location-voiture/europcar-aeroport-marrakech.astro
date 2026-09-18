@@ -2,120 +2,116 @@
 import ReviewLayout from '../../layouts/ReviewLayout.astro';
 import { getLocalizedPath } from '../../i18n';
 import { photos } from '../../data/images';
+import { PRICES_CHECKED } from '../../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: 'Location de voiture', href: L('/agadir-airport-car-rental/') },
-  { name: 'Europcar', href: L('/car-rental/europcar-agadir-airport/') },
+  { name: 'Location de voiture', href: L('/location-voiture-aeroport-marrakech/') },
+  { name: 'Europcar', href: L('/location-voiture/europcar-aeroport-marrakech/') },
 ];
+
 const pros = [
-  'Le plus régulier des internationaux à l\'AGA',
-  'Comptoir aux arrivées, personnel multilingue, prise en charge fluide',
-  'Politique carburant plein-à-plein sur la plupart des tarifs',
-  'Voitures en état honnête et bien entretenues',
-  'Choix tout indiqué pour les visiteurs européens habitués à la marque',
+  'Bon compromis tarif / prévisibilité parmi les enseignes internationales',
+  'Flotte large, des citadines aux monospaces familiaux',
+  'Tarifs hebdomadaires souvent plus compétitifs que la location à la journée',
+  'Comptoir dans le hall des arrivées, personnel francophone',
+  'Politique plein-à-plein courante sur les tarifs standards',
 ];
 const cons = [
-  'Tarif journalier au-dessus des agences locales d\'Agadir',
-  'L\'empreinte de caution peut être conséquente, confirmez avant de réserver',
-  'La franchise de base est élevée sans couverture totale ajoutée',
-  'La flotte exacte varie ; les voitures les plus récentes ne sont pas garanties',
+  'Qualité de l\'accueil variable selon l\'affluence du terminal',
+  'Suppléments nombreux : conducteur additionnel, jeune conducteur, siège enfant',
+  'Modèle exact rarement garanti, seule la catégorie l\'est',
+  'Inspection de retour parfois expéditive : exigez un état des lieux contresigné',
 ];
+
 const faqs = [
-  { q: "Où se trouve le comptoir Europcar à l'aéroport d'Agadir ?", a: "Dans le hall des arrivées, parmi la rangée de comptoirs de location à quelques pas du tapis à bagages, les voitures se récupérant au parking de l'aéroport tout proche. La prise en charge est simple, faites juste le tour du véhicule et photographiez les dégâts existants avant de partir, comme à chaque comptoir de l'AGA." },
-  { q: "Quelles sont la caution et la politique carburant d'Europcar à Agadir ?", a: "Europcar bloque une caution sur une carte de crédit (pas de débit) au nom du conducteur principal ; elle peut être conséquente, alors confirmez le montant sur votre réservation et vérifiez la marge de votre carte. La politique carburant est plein-à-plein sur la plupart des tarifs, récupérez plein, rendez plein, la plus juste, et elle évite de payer du carburant non consommé." },
-  { q: "Europcar est-il bon à l'aéroport d'Agadir ?", a: "C'est selon nous le plus régulier des internationaux à l'AGA, politique carburant juste, voitures bien tenues et prise en charge multilingue fluide. Vous payez plus que les agences locales pour cette régularité. Si vous voulez une valeur sûre internationale avec peu de surprises, Europcar est un choix solide." },
-  { q: "Europcar ou une agence locale à Agadir, lequel est meilleur ?", a: "Europcar offre des conditions prévisibles, une politique carburant juste et un processus familier à un tarif plus élevé. Les agences locales coûtent souvent moins mais varient davantage sur la caution, le carburant et les retours. Si la certitude prime, Europcar ; si vous chassez le prix tout compris le plus bas et que vous lirez les conditions, une bonne agence locale peut l'emporter. Les comparer ensemble est la façon d'en être sûr." },
+  {
+    q: "Où récupérer une voiture Europcar à l'aéroport de Marrakech ?",
+    a: "Le comptoir se trouve dans le hall des arrivées, avec les autres loueurs, et le véhicule est pris au parking adjacent. Le trajet à pied est court : aucune navette n'est nécessaire au RAK, contrairement à des aéroports où les agences sont délocalisées."
+  },
+  {
+    q: "Europcar est-il moins cher que Hertz ou Sixt à Marrakech ?",
+    a: "Souvent un cran en dessous, surtout sur les locations d'une semaine, où la dégressivité joue nettement. L'écart reste modeste entre enseignes internationales : la vraie différence de prix se creuse face aux agences marocaines, dont les tarifs journaliers sont plus bas mais les conditions plus variables."
+  },
+  {
+    q: "Quelle caution demande Europcar au Maroc ?",
+    a: "Une empreinte sur carte de crédit au nom du conducteur, de quelques milliers de dirhams selon la catégorie. Comme partout au Maroc, la carte de débit est généralement refusée. Le montant est indiqué dans les conditions de votre réservation : lisez-le avant de payer, pas au comptoir."
+  },
+  {
+    q: "Peut-on avoir une boîte automatique chez Europcar à Marrakech ?",
+    a: "Oui, mais la flotte automatique reste minoritaire au Maroc et part très tôt en haute saison. Réservez plusieurs semaines à l'avance et gardez en tête qu'une réservation garantit une catégorie, pas un modèle : demandez confirmation écrite si la boîte automatique est indispensable."
+  },
+  {
+    q: "Que vérifier à la restitution du véhicule ?",
+    a: "Obtenez un document de retour signé mentionnant l'absence de nouveaux dommages et le niveau de carburant. Prenez une vidéo complète du véhicule sur place, y compris les jantes et le pare-brise. C'est la seule protection efficace contre une facturation ultérieure, et elle prend deux minutes."
+  },
 ];
 ---
 <ReviewLayout
-  lang={lang}
-  title="Avis Europcar aéroport Agadir 2026 : comptoir, caution et carburant | AirportAGA"
-  description="Avis honnête sur le comptoir Europcar de l'aéroport Agadir Al Massira, emplacement aux arrivées, flotte, caution, politique de carburant et la franchise à surveiller. Le plus régulier des internationaux à l'AGA, et à qui il convient."
-  eyebrow="Aéroport d'Agadir · Avis location"
-  h1="Avis Europcar aéroport Agadir : l'international stable"
-  lede="Europcar est le plus régulier des grands noms à l'AGA, politique carburant juste, voitures bien tenues, prise en charge fluide aux arrivées. Vous payez au-dessus des agences locales pour cette fiabilité. Voici le verdict honnête et à qui le réserver."
+  title="Avis Europcar à l'aéroport de Marrakech : prix, flotte et conditions (2026) | AirportRAK"
+  description="Notre avis sur Europcar au RAK : positionnement tarifaire face à Hertz et Sixt, largeur de flotte, caution, suppléments et précautions à prendre à la restitution."
+  eyebrow="Aéroport Marrakech Ménara · Avis location"
+  h1="Avis Europcar à l'aéroport de Marrakech"
+  lede="Le compromis raisonnable entre les enseignes internationales : un peu moins cher que les concurrents directs, une flotte large et des tarifs hebdomadaires intéressants, avec une exigence — soigner l'état des lieux au retour."
   breadcrumbs={breadcrumbs}
-  heroImage={photos['agadir-marina']}
+  heroImage={photos['marrakech-car-rental']}
   brand="Europcar"
-  rating={4.0}
-  verdict="Le comptoir international le plus stable à l'aéroport d'Agadir : une politique carburant plein-à-plein juste, des voitures en état honnête et une prise en charge fluide aux arrivées, à un tarif journalier au-dessus des agences locales. La valeur sûre si vous voulez un nom international avec le moins de surprises."
+  rating={3.8}
+  verdict="Un bon équilibre au RAK, particulièrement sur une semaine complète et pour les familles, grâce à une flotte étendue. Les conditions sont lisibles, l'accueil variable selon l'affluence, et la restitution mérite un état des lieux contresigné."
   pros={pros}
   cons={cons}
   heroProvider="discovercars"
-  heroCtaLabel="Voir les prix Europcar à l'AGA"
+  heroCtaLabel="Voir les tarifs Europcar au RAK"
   faqs={faqs}
-  cta={{ heading: 'Comparez Europcar à tous les comptoirs de l\'AGA', text: 'Voyez le tarif Europcar en direct à côté des autres agences, caution, politique de carburant et couverture totale en une seule vue, et réservez la meilleure offre tout compris.', provider: 'discovercars', label: 'Comparer les prix de location' }}
+  cta={{ heading: 'Europcar face aux autres comptoirs', text: "Comparez le coût réel : tarif, caution, carburant et franchise, toutes agences du RAK au même endroit.", provider: 'discovercars', label: 'Comparer les prix de location' }}
 >
   <p>
-    Si vous voulez un nom international à Agadir avec le moins de surprises, Europcar est celui que nous
-    citerions en premier. Parmi les grandes marques à l'AGA, c'est le plus régulier, politique carburant
-    plein-à-plein juste, voitures tenues en état honnête, et prise en charge multilingue fluide en plein
-    hall des arrivées. Il coûte plus que les agences locales quelques comptoirs plus loin, et l'empreinte
-    de caution peut être conséquente, mais pour une location sans tracas qui fait ce qu'elle annonce, il
-    mérite le petit supplément.
+    Europcar occupe une place utile dans le paysage du RAK : celle de l'enseigne internationale que l'on
+    prend quand on veut des conditions claires sans payer le haut du marché. Le comptoir est dans le
+    hall des arrivées, le personnel parle français, et la gamme couvre à peu près tous les besoins, de
+    la citadine au monospace sept places — un point qui compte à Marrakech, où les familles et les
+    groupes d'amis représentent une part importante des arrivées.
+  </p>
+  <p>
+    Positionnement tarifaire et conditions relevés en {PRICES_CHECKED}.
   </p>
 
-  <h2 id="location">Emplacement et récupération à l'AGA</h2>
+  <h2>Là où Europcar est le plus intéressant</h2>
   <p>
-    Le comptoir Europcar se trouve dans la rangée de comptoirs de location du hall des arrivées, à
-    quelques pas du tapis à bagages, les voitures étant au parking de l'aéroport tout proche. La
-    récupération est rapide et le personnel manie l'anglais et le français sans souci. Faites quand même
-    les contrôles d'usage : tour du véhicule, photo de chaque rayure, bosse et des jantes, et vérifiez que
-    la jauge correspond aux papiers avant de partir, c'est votre protection contre un frais contesté au
-    retour.
+    <strong>Sur une semaine.</strong> La dégressivité hebdomadaire est plus marquée que chez les
+    concurrents : pour sept jours, l'écart avec une réservation à la journée devient significatif. Si
+    votre séjour comprend l'Ourika, Essaouira et un ou deux jours de montagne, c'est le format qui
+    correspond.
+  </p>
+  <p>
+    <strong>Pour les familles.</strong> Monospaces et véhicules cinq portes sont mieux représentés que
+    chez certaines agences locales, dont la flotte se concentre sur les citadines. Pensez à réserver les
+    sièges enfants en même temps : les stocks sont limités et un siège non réservé ne sera pas
+    disponible sur place en février ou à Pâques.
   </p>
 
-  <h2 id="fleet">Flotte</h2>
+  <h2>Les points de vigilance</h2>
   <p>
-    Une gamme bien tenue, de la citadine économique aux breaks jusqu'aux SUV. Les voitures exactes varient
-    et le stock le plus récent n'est pas garanti. Sixt roule souvent plus frais, mais l'état est
-    fiablement honnête et les voitures sont correctement entretenues. Comme partout, si vous avez besoin
-    d'un vrai 4x4 pour les pistes de l'Anti-Atlas plutôt qu'un SUV de route, confirmez les quatre roues
-    motrices sur la réservation plutôt que de vous fier à l'étiquette de catégorie.
+    Le premier concerne la <strong>restitution</strong>. Aux heures où plusieurs vols partent en même
+    temps, l'inspection peut être rapide, et un document de retour non signé vous laisse sans preuve. Ne
+    quittez pas le parking sans papier contresigné et sans vidéo du véhicule.
+  </p>
+  <p>
+    Le second concerne les <strong>suppléments</strong> : conducteur additionnel, jeune conducteur,
+    siège enfant, restitution hors horaires. Additionnés, ils déplacent sensiblement le coût réel d'une
+    location que le comparateur affichait comme la moins chère. Le détail de ces lignes est sur notre
+    page <a href={L('/location-voiture-aeroport-marrakech/pas-cher/')}>location pas chère</a>.
   </p>
 
-  <h2 id="deposit-fuel">Caution, carburant et assurance</h2>
+  <h2>Notre verdict</h2>
   <p>
-    Anticipez la caution : Europcar bloque une somme sur une carte de crédit au nom du conducteur
-    principal, et elle peut être conséquente, alors confirmez le montant avant de réserver et assurez-vous
-    que la carte a la marge. La politique carburant est plein-à-plein sur la plupart des tarifs, la juste, vous récupérez plein et rendez plein, ne payant que ce que vous utilisez. La franchise d'assurance
-    du tarif de base est élevée, et le comptoir proposera une franchise ; ajouter la couverture totale en
-    ligne à la réservation revient en général moins cher, alors réglez ça à l'avance plutôt que de vous le
-    faire vendre au comptoir.
-  </p>
-
-  <div class="callout">
-    <span class="callout-label">Conseil local</span>
-    Faites le plein dans une station près de l'aéroport au retour et gardez le reçu. Avec une politique
-    plein-à-plein, ce reçu prouve que le réservoir était plein au retour, un moyen simple de clore tout
-    « il manquait juste un peu » quand la voiture est rendue.
-  </div>
-
-  <h2 id="best-for">À qui ça convient</h2>
-  <p>
-    Europcar convient à quiconque veut une marque internationale aux conditions prévisibles et sans
-    tracas, visiteurs européens habitués au nom, primo-arrivants au Maroc, familles qui préfèrent ne pas
-    parier sur des conditions locales variables. Si le prix le plus bas possible est le but et que vous
-    lirez les petites lignes, une agence locale peut sous-coter ; nous les alignons toutes dans le
-    comparatif <a href={L('/best-car-rental-agadir-airport/')}>meilleure location de voiture à l'aéroport
-    d'Agadir</a>.
-  </p>
-
-  <div class="disclosure-inline">
-    Certains liens ici sont des liens d'affiliation : si vous réservez via ces liens, nous pouvons
-    percevoir une petite commission, sans surcoût pour vous. Cela ne change ni les prix affichés ni nos
-    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
-  </div>
-
-  <p>
-    Comparez Europcar avec les autres comptoirs, <a href={L('/car-rental/hertz-agadir-airport/')}>Hertz</a>
-    et <a href={L('/car-rental/sixt-agadir-airport/')}>Sixt</a>, ou partez du
-    <a href={L('/agadir-airport-car-rental/')}>hub de la location à l'aéroport d'Agadir</a>. Vous
-    surveillez le budget ? Voyez la <a href={L('/agadir-airport-car-rental/cheap/')}>location la moins
-    chère</a>.
+    Europcar est le choix par défaut raisonnable au RAK : moins cher que le haut du marché
+    international, plus prévisible qu'une petite agence, avec la flotte la plus polyvalente pour les
+    séjours en famille. Comparez tout de même avec
+    {' '}<a href={L('/location-voiture/hertz-aeroport-marrakech/')}>Hertz</a> et
+    {' '}<a href={L('/location-voiture/sixt-aeroport-marrakech/')}>Sixt</a> sur vos dates exactes : les
+    écarts varient fortement d'une semaine à l'autre.
   </p>
 </ReviewLayout>

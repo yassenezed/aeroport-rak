@@ -2,117 +2,147 @@
 import GuideLayout from '../layouts/GuideLayout.astro';
 import { getLocalizedPath } from '../i18n';
 import { photos } from '../data/images';
+import { PRICES_CHECKED } from '../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: 'Conduire au Maroc', href: L('/fr/conduire-au-maroc/') },
+  { name: 'Conduire au Maroc', href: L('/conduire-au-maroc/') },
 ];
+
 const toc = [
   { label: 'Les règles de base', id: 'regles' },
+  { label: 'Limitations et radars', id: 'limitations' },
   { label: 'Les contrôles de gendarmerie', id: 'controles' },
-  { label: 'Radars et limitations', id: 'radars' },
-  { label: 'Les routes', id: 'routes' },
-  { label: 'En ville et stationnement', id: 'ville' },
-  { label: 'Carburant et péages', id: 'carburant' },
+  { label: 'Conduire en ville à Marrakech', id: 'ville' },
+  { label: 'Routes de montagne', id: 'montagne' },
+  { label: 'Autoroutes et péages', id: 'autoroute' },
+  { label: 'Carburant et stations', id: 'carburant' },
+  { label: 'En cas de problème', id: 'probleme' },
 ];
+
 const faqs = [
-  { q: "Roule-t-on à droite au Maroc ?", a: "Oui, on conduit à droite, comme en Europe continentale, et le code de la route est familier pour un Français. Les panneaux sont en arabe et en français, ce qui simplifie la lecture. L'adaptation est rapide ; la vigilance se concentre surtout en ville et la nuit." },
-  { q: "Que se passe-t-il à un contrôle de gendarmerie au Maroc ?", a: "Les barrages de gendarmerie sont fréquents sur les routes et aux entrées de ville. Le plus souvent, on vous fait simplement signe de passer. Si l'on vous arrête, on peut vérifier permis, papiers du véhicule et assurance : gardez-les à portée de main. Restez courtois, respectez les limites aux abords des barrages, et tout se passe sans difficulté." },
-  { q: "Y a-t-il beaucoup de radars au Maroc ?", a: "Oui, les radars sont nombreux et bien placés, fixes comme mobiles, souvent juste avant ou après les villages où la limite chute brutalement. Les excès de vitesse sont sanctionnés sur place. La parade est simple : respecter scrupuleusement les limitations et lever le pied à chaque entrée d'agglomération." },
-  { q: "Faut-il un 4x4 pour conduire au Maroc ?", a: "Pas pour les axes principaux ni l'autoroute, où une voiture classique suffit. Un 4x4 devient utile si vous quittez le goudron, pistes de l'arrière-pays, approches de certaines plages, routes de montagne dégradées. Pour un séjour côtier et urbain, une berline ou une compacte fait l'affaire." },
+  {
+    q: "Est-il difficile de conduire au Maroc ?",
+    a: "Sur les grands axes et l'autoroute, non : le réseau est bon et la signalisation bilingue arabe-français. La difficulté est urbaine : à Marrakech, deux-roues, calèches, charrettes et piétons partagent la chaussée selon des priorités plus souples qu'en Europe. La règle qui marche est de rouler lentement, d'anticiper et de ne jamais présumer d'une priorité."
+  },
+  {
+    q: "Quelles sont les limitations de vitesse au Maroc ?",
+    a: "En règle générale 120 km/h sur autoroute, 100 km/h sur route express, 60 km/h en agglomération, parfois 40 km/h dans les zones signalées. Les entrées et sorties de village sont le point sensible : la limite tombe brutalement et les contrôles y sont fréquents."
+  },
+  {
+    q: "Les contrôles de police sont-ils fréquents ?",
+    a: "Oui, la gendarmerie royale tient des contrôles réguliers aux abords des villes et sur les grands axes. Ils sont courtois et rapides : ralentissez, présentez permis, contrat de location et carte grise. Rien d'inquiétant pour un conducteur en règle qui respecte les limitations."
+  },
+  {
+    q: "Comment se passent les amendes ?",
+    a: "Un excès de vitesse constaté donne lieu à une amende forfaitaire réglable sur place contre reçu. Exigez toujours un reçu officiel. En cas de doute sur la procédure, demandez poliment les références de l'agent et restez calme : le ton fait beaucoup."
+  },
+  {
+    q: "Y a-t-il des péages sur les autoroutes marocaines ?",
+    a: "Oui, le réseau autoroutier est à péage, réglable en espèces aux barrières. Prévoyez de la monnaie en dirhams. L'axe Marrakech-Casablanca est autoroutier, tandis que les routes vers Essaouira, l'Ourika ou Ouarzazate sont des nationales gratuites."
+  },
+  {
+    q: "Faut-il éviter de conduire de nuit au Maroc ?",
+    a: "C'est plus prudent en dehors des autoroutes. Les nationales ne sont pas éclairées, on y croise des véhicules mal éclairés, des piétons et des animaux, et les bas-côtés sont parfois abrupts. Sur les routes de montagne, organisez vos étapes pour arriver avant la nuit."
+  },
 ];
 ---
-<GuideLayout keywords="Conduire Au Maroc Agadir, que faire à Agadir, attractions Agadir" 
-  lang={lang}
-  title="Guide Conduire Au Maroc Agadir 2026 | Astuces & Incontournables"
-  description="Planifiez votre visite à Conduire Au Maroc à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+<GuideLayout
+  keywords="conduire au Maroc, limitations vitesse Maroc, contrôles gendarmerie Maroc, Tizi n'Tichka"
+  title="Conduire au Maroc : règles, limitations, contrôles et routes de montagne (2026) | AirportRAK"
+  description="Le guide pratique de la conduite au Maroc au départ de Marrakech : limitations et radars, contrôles de gendarmerie, circulation en médina, cols du Haut Atlas, péages, carburant et conduite de nuit."
   eyebrow="Maroc · Conduite"
-  h1="Conduire au Maroc"
-  lede="Prendre le volant au Maroc n'a rien d'intimidant pour un conducteur français, on roule à droite, les panneaux sont bilingues. Restent quelques particularités à connaître : barrages, radars, routes de montagne. Voici l'essentiel."
+  h1="Conduire au Maroc : le guide pratique"
+  lede="Le réseau marocain est meilleur que sa réputation, et la conduite s'y apprend vite. Ce qui surprend n'est pas l'état des routes mais les usages : priorités souples en ville, limites qui chutent à l'entrée des villages, et des cols où l'on roule deux fois moins vite que prévu."
   breadcrumbs={breadcrumbs}
-  heroImage={photos['souss-coast']}
+  heroImage={photos['ouarzazate']}
   toc={toc}
   faqs={faqs}
-  updated="juin 2026"
-  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+  updated={PRICES_CHECKED}
+  cta={{ heading: 'Votre voiture depuis le terminal', text: "Comparez les comptoirs de l'aéroport de Marrakech sur le coût réel : caution, carburant et franchise comprises.", provider: 'discovercars', label: 'Comparer les prix de location' }}
 >
-  <p>
-    Conduire est le meilleur moyen d'explorer le sud du Maroc à son rythme, la côte du surf, Paradise
-    Valley, Taroudant, les plages du sud jusqu'à Légzira. Pour un conducteur français, l'adaptation est
-    rapide, mais quelques réflexes locaux font toute la différence. Voici le mode d'emploi.
-  </p>
-
-
-  <div class="guide-widget-wrapper" style="margin: 2.5rem 0 3.5rem 0; width: 100%; overflow: hidden; border-radius: 5px;">
-    <script is:inline async src="https://tpemd.com/content?trs=554574&amp;shmarker=697149&amp;locale=fr&amp;country=99&amp;city=461&amp;powered_by=true&amp;campaign_id=87&amp;promo_id=2466" charset="utf-8"></script>
-  </div>
-
   <h2 id="regles">Les règles de base</h2>
   <p>
-    On roule à droite, et le code de la route ressemble beaucoup au code français : priorités, ronds-points,
-    feux, ceinture obligatoire. Les panneaux sont en arabe et en français, ce qui rend la lecture aisée.
-    L'usage du téléphone au volant est interdit et contrôlé. Adoptez une conduite prudente et anticipative :
-    deux-roues, charrettes, piétons et animaux peuvent surgir, surtout aux abords des villages et la nuit.
+    On roule à droite, le dépassement se fait par la gauche, la ceinture est obligatoire à l'avant comme
+    à l'arrière et le téléphone au volant est sanctionné. La signalisation est bilingue arabe-français,
+    ce qui rend la lecture aisée pour un francophone. Les ronds-points sont la principale source de
+    malentendus : la priorité y est souvent prise plutôt que cédée, donc entrez prudemment plutôt qu'en
+    présumant de votre droit.
+  </p>
+
+  <h2 id="limitations">Limitations et radars</h2>
+  <p>
+    120 km/h sur autoroute, 100 sur voie express, 60 en agglomération, 40 dans certaines zones
+    signalées. Le point à retenir : <strong>les limites chutent brutalement à l'entrée des villages</strong>,
+    et c'est précisément là que se trouvent les contrôles. Sur la route d'Essaouira ou celle de
+    Ouarzazate, vous traverserez des dizaines de localités où le passage de 100 à 60, puis à 40, se fait
+    en quelques centaines de mètres.
   </p>
 
   <h2 id="controles">Les contrôles de gendarmerie</h2>
   <p>
-    C'est la particularité qui surprend le plus : les barrages de gendarmerie royale sont fréquents sur les
-    routes et aux entrées d'agglomération. La plupart du temps, on vous fait simplement signe de poursuivre.
-    Si l'on vous arrête, on peut demander permis, contrat de location, carte grise et attestation
-    d'assurance, gardez-les accessibles, pas au fond du coffre. Restez poli, ralentissez bien à l'approche
-    des barrages, et l'échange dure quelques secondes.
+    Ils sont fréquents, visibles et généralement courtois. Ralentissez en approchant, baissez la vitre,
+    saluez et présentez permis, contrat de location et carte grise — gardez ces documents accessibles
+    plutôt qu'au fond d'un sac. Un conducteur en règle est relâché en quelques secondes. En cas
+    d'amende, elle se règle sur place : <strong>demandez systématiquement un reçu officiel</strong>.
   </p>
 
-  <h2 id="radars">Radars et limitations</h2>
+  <h2 id="ville">Conduire en ville à Marrakech</h2>
   <p>
-    Les radars sont nombreux et bien placés, fixes comme mobiles, souvent positionnés juste avant ou après
-    une entrée de village, là où la limite passe brutalement de 100 à 60, puis à 40 km/h. Les excès se
-    paient généralement sur place. La règle d'or : respecter scrupuleusement les limitations et lever
-    systématiquement le pied à chaque panneau d'agglomération. C'est moins une question de chance que de
-    discipline.
+    C'est le vrai exercice. La circulation mêle voitures, scooters en grand nombre, vélos, calèches et
+    charrettes, avec des trajectoires qui se négocient au ressenti. Trois réflexes suffisent : rouler
+    lentement, regarder loin devant, et considérer que tout ce qui est plus petit que vous peut surgir à
+    droite. Les grands axes — avenue Mohammed VI, boulevard Mohammed V — sont larges et fluides en
+    dehors des pointes de 8 h et de 18 h.
   </p>
-
-  <h2 id="routes">Les routes</h2>
   <p>
-    L'autoroute A7 (vers Marrakech) et les grands axes sont en bon état, larges et roulants. Les routes
-    secondaires sont plus étroites et parfois bosselées, et les routes de montagne, vers Paradise Valley,
-    Imouzzer, le Haut Atlas, sont sinueuses, à aborder sans se presser, surtout en descente et en fin de
-    journée. Évitez de rouler de nuit hors des grands axes : éclairage rare, véhicules sans feux et obstacles
-    imprévus rendent la conduite nocturne nettement plus risquée.
+    Rappel essentiel : la médina est <strong>interdite aux voitures</strong>. N'essayez pas d'y entrer,
+    même si une application vous y envoie. Garez-vous dans un parking gardé près d'une porte et
+    continuez à pied, comme expliqué dans
+    {' '}<a href={L('/louer-voiture-marrakech-guide/')}>louer une voiture à Marrakech</a>.
   </p>
 
-  <h2 id="ville">En ville et stationnement</h2>
+  <h2 id="montagne">Routes de montagne</h2>
   <p>
-    En ville, la circulation est plus dense et plus libre dans son interprétation des priorités : restez
-    calme et prévisible. Pour le stationnement, vous croiserez souvent un « gardien » en gilet qui surveille
-    les voitures contre un petit pourboire (quelques dirhams), un usage normal, pas une arnaque. Garez-vous
-    dans les zones prévues, ne laissez rien de visible dans l'habitacle, et privilégiez un parking gardé pour
-    la nuit.
+    La route de l'Ourika est étroite et très fréquentée le week-end, quand les Marrakchis montent
+    chercher la fraîcheur. Celle d'Oukaïmeden grimpe fort et peut recevoir de la neige entre décembre et
+    mars. Le Tizi n'Tichka, vers Ouarzazate, culmine à plus de 2 200 mètres : entièrement goudronné et
+    rénové, mais fait de virages continus où l'on double des camions. Comptez quatre heures pour
+    Ouarzazate, pas trois.
   </p>
-
-  <h2 id="carburant">Carburant et péages</h2>
   <p>
-    Les stations-service sont nombreuses sur les axes principaux mais s'espacent dans l'arrière-pays et la
-    montagne : faites le plein avant une longue boucle ou une montée. Le gazole (diesel) est le carburant le
-    plus répandu. L'autoroute A7 est à péage : prévoyez un peu de liquide pour les barrières. Pour louer dès
-    l'arrivée, voyez notre page <a href={L('/agadir-airport-car-rental/')}>location de voiture à l'aéroport
-    d'Agadir</a>.
+    Deux conseils qui valent pour tous les cols : faites le plein <em>avant</em> de monter, et calez vos
+    horaires pour redescendre de jour. Les excursions concernées sont détaillées dans
+    {' '}<a href={L('/excursion-vallee-ourika/')}>vallée de l'Ourika</a>,
+    {' '}<a href={L('/ski-oukaimeden/')}>Oukaïmeden</a> et
+    {' '}<a href={L('/excursion-ait-ben-haddou/')}>Aït Ben Haddou</a>.
   </p>
 
-  <div class="disclosure-inline">
-    Certains liens de cette page sont des liens d'affiliation : si vous réservez via eux, nous pouvons
-    percevoir une petite commission, sans surcoût pour vous. Cela ne change jamais les prix affichés ni nos
-    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
-  </div>
+  <h2 id="autoroute">Autoroutes et péages</h2>
+  <p>
+    L'autoroute A7 relie Marrakech à Casablanca en un peu plus de deux heures, dans d'excellentes
+    conditions. Le réseau est à péage, réglable en espèces : gardez des dirhams en petites coupures dans
+    la voiture. Les routes vers Essaouira, l'Ourika et Ouarzazate sont des nationales gratuites, plus
+    lentes et plus fréquentées.
+  </p>
 
-  <div class="callout">
-    <span class="callout-label">Les réflexes au volant</span>
-    Conduite à droite, panneaux bilingues · papiers (permis, contrat, carte grise, assurance) toujours à
-    portée pour les barrages · respecter les limites, lever le pied à chaque village pour les radars · éviter
-    la nuit hors grands axes · faire le plein avant la montagne.
-  </div>
+  <h2 id="carburant">Carburant et stations</h2>
+  <p>
+    Le gasoil domine largement le parc de location. Les stations sont nombreuses sur les axes et
+    généralement servies par un pompiste — un pourboire de quelques dirhams est d'usage. Elles
+    s'espacent en revanche nettement en altitude et dans le sud : au-delà de l'Ourika ou sur la route de
+    Ouarzazate, ne laissez pas le réservoir descendre sous le quart.
+  </p>
+
+  <h2 id="probleme">En cas de problème</h2>
+  <p>
+    Gardez le numéro d'assistance de votre loueur dans votre téléphone et non seulement sur le contrat
+    papier. En cas d'accident, même léger, un constat est nécessaire et les forces de l'ordre doivent
+    être appelées : les loueurs exigent un procès-verbal pour tout dommage. Ne quittez pas les lieux et
+    photographiez tout. Pour rester joignable partout, une
+    {' '}<a href={L('/esim-maroc/')}>eSIM marocaine</a> couvre les zones où votre forfait européen
+    passera en itinérance coûteuse ou pas du tout.
+  </p>
 </GuideLayout>

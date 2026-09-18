@@ -2,120 +2,148 @@
 import GuideLayout from '../layouts/GuideLayout.astro';
 import { getLocalizedPath } from '../i18n';
 import { photos } from '../data/images';
+import { PRICES_CHECKED } from '../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: 'Louer une voiture à Agadir', href: L('/renting-car-morocco-guide/') },
+  { name: 'Louer une voiture à Marrakech', href: L('/louer-voiture-marrakech-guide/') },
 ];
+
 const toc = [
-  { label: 'Permis et papiers', id: 'permis' },
+  { label: 'Papiers et conditions d\'âge', id: 'papiers' },
   { label: 'La caution', id: 'caution' },
-  { label: 'L\'assurance', id: 'assurance' },
-  { label: 'Le carburant', id: 'carburant' },
-  { label: 'Routes et contrôles', id: 'routes' },
-  { label: 'Réserver malin', id: 'reserver' },
+  { label: 'Assurance et franchise', id: 'assurance' },
+  { label: 'Carburant', id: 'carburant' },
+  { label: 'État des lieux', id: 'etat-des-lieux' },
+  { label: 'Aéroport ou centre-ville ?', id: 'ou-louer' },
+  { label: 'Stationner à Marrakech', id: 'stationnement' },
 ];
+
 const faqs = [
-  { q: "Faut-il un permis international pour louer une voiture au Maroc ?", a: "Non, pas pour les permis européens : un permis national en cours de validité est accepté pour louer et conduire au Maroc. Un permis international ne fait jamais de mal et lève les ambiguïtés lors d'un contrôle, mais il n'est pas exigé pour la plupart des visiteurs de l'UE. Gardez toujours permis, contrat de location et papiers du véhicule sur vous." },
-  { q: "Quelle caution prévoir pour une location de voiture à Agadir ?", a: "Attendez-vous à un blocage de caution important sur une carte de crédit au nom du conducteur, souvent l'équivalent de plusieurs centaines d'euros, davantage sur un 4x4. Une carte de débit ou une carte sans plafond suffisant est régulièrement refusée. Vérifiez le montant exact et la franchise avant de réserver, pas au comptoir." },
-  { q: "La voiture est-elle livrée avec le plein ?", a: "Le plus souvent en formule plein-à-plein : vous repartez le réservoir plein et vous rendez le véhicule plein. C'est la formule la plus juste, évitez le plein-à-vide, où l'on paie d'avance un carburant rarement remboursé. Gardez le ticket de la dernière station avant la restitution." },
-  { q: "Conduire au Maroc est-il difficile pour un visiteur ?", a: "Les grands axes et l'autoroute A7 sont faciles ; la conduite se complique surtout en ville et la nuit. On roule à droite, les contrôles de gendarmerie sont fréquents (ayez vos papiers à portée), les radars sont nombreux et bien placés. Roulez prudemment, respectez les limites, et tout se passe sans histoire." },
+  {
+    q: "Faut-il un permis international pour louer une voiture au Maroc ?",
+    a: "Non pour un permis européen en cours de validité, accepté pour louer et conduire lors d'un séjour touristique. Un permis international ne nuit pas et simplifie un éventuel contrôle, mais il n'est pas exigé. Gardez toujours sur vous permis, contrat de location et carte grise du véhicule."
+  },
+  {
+    q: "Quel âge minimum pour louer à Marrakech ?",
+    a: "Généralement 21 ans, parfois 23 ou 25 selon la catégorie du véhicule, avec un permis détenu depuis au moins un an — souvent deux ou trois pour les catégories supérieures. En dessous de 25 ans, un supplément jeune conducteur s'applique presque partout."
+  },
+  {
+    q: "Quelle caution prévoir ?",
+    a: "Une empreinte sur carte de crédit au nom du conducteur principal, de l'ordre de 3 000 à 10 000 MAD selon le véhicule. Les cartes de débit sont souvent refusées, les prépayées presque toujours. Vérifiez le montant avant de réserver et gardez du plafond disponible pour le reste du séjour."
+  },
+  {
+    q: "L'assurance de base suffit-elle ?",
+    a: "Elle couvre la responsabilité civile mais laisse une franchise élevée à votre charge, avec des exclusions classiques : pneus, vitrage, bas de caisse, toit et conduite hors routes revêtues. Si votre carte bancaire couvre la location, faites-le vérifier ; sinon, une couverture souscrite en ligne coûte nettement moins que le rachat vendu au comptoir."
+  },
+  {
+    q: "Peut-on payer une location en espèces au Maroc ?",
+    a: "Le loyer, parfois ; la caution, non. Elle passe par une empreinte de carte de crédit, et une agence qui accepterait des espèces en garantie vous expose davantage qu'elle ne vous arrange. Considérez la carte de crédit comme une condition d'accès à la location."
+  },
+  {
+    q: "Vaut-il mieux louer à l'aéroport ou en ville ?",
+    a: "À l'aéroport pour la commodité et pour partir directement en excursion. En ville si vous ne louez que deux ou trois jours au milieu du séjour : les agences de Guéliz affichent parfois des tarifs inférieurs, et vous évitez de payer une voiture immobilisée pendant que vous visitez la médina."
+  },
 ];
 ---
-<GuideLayout keywords="Louer Voiture Guide Agadir, que faire à Agadir, attractions Agadir" 
-  lang={lang}
-  title="Guide Louer Voiture Guide Agadir 2026 | Astuces & Incontournables"
-  description="Planifiez votre visite à Louer Voiture Guide à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
-  eyebrow="Agadir · Location de voiture"
-  h1="Louer une voiture à Agadir : ce qu'il faut savoir"
-  lede="Louer au Maroc n'a rien de compliqué quand on connaît les règles du jeu : le bon permis, la caution sur carte, l'assurance qui compte vraiment, et les réflexes de conduite locaux. Voici le guide pratique."
+<GuideLayout
+  keywords="louer une voiture Marrakech, conditions location Maroc, caution location voiture Maroc"
+  title="Louer une voiture à Marrakech : le guide complet des conditions (2026) | AirportRAK"
+  description="Papiers, âge minimum, caution sur carte de crédit, franchise et exclusions, politique de carburant, état des lieux, aéroport ou centre-ville, stationnement : tout ce qu'il faut savoir avant de louer à Marrakech."
+  eyebrow="Marrakech · Location de voiture"
+  h1="Louer une voiture à Marrakech : ce qu'il faut savoir"
+  lede="Louer au Maroc n'a rien de compliqué, à condition de connaître les règles du jeu avant d'arriver au comptoir : la carte exigée, la caution, la franchise et ses exclusions, et les cinq minutes d'état des lieux qui évitent 90 % des litiges."
   breadcrumbs={breadcrumbs}
-  heroImage={photos['souss-coast']}
+  heroImage={photos['marrakech-car-rental']}
   toc={toc}
   faqs={faqs}
-  updated="juin 2026"
-  cta={{ heading: 'Louez une Voiture à l\'Aéroport d\'Agadir', text: 'Comparez les meilleures offres de location de voitures des agences de confiance directement à l\'aéroport.', provider: 'car', label: 'Comparer les prix' }}
+  updated={PRICES_CHECKED}
+  cta={{ heading: 'Comparer avant de réserver', text: "Tarif, caution, carburant et franchise des agences du RAK dans une seule vue : c'est là que se joue le coût réel.", provider: 'discovercars', label: 'Comparer les prix de location' }}
 >
+  <h2 id="papiers">Papiers et conditions d'âge</h2>
   <p>
-    Une voiture transforme un séjour à Agadir : Paradise Valley, les plages du nord, Taroudant, la côte
-    jusqu'à Légzira deviennent accessibles sans dépendre d'un chauffeur. La location est simple, à condition
-    de connaître quelques règles propres au Maroc. Voici l'essentiel, dans l'ordre où ça compte.
+    Un permis national européen valide suffit pour un séjour touristique : le permis international n'est
+    pas exigé, même s'il facilite un contrôle. Prévoyez également votre passeport, la carte de crédit du
+    conducteur principal et, si vous voyagez à deux conducteurs, la présence du second au comptoir avec
+    son permis — un conducteur non déclaré au contrat n'est pas assuré.
+  </p>
+  <p>
+    L'âge minimum est généralement de 21 ans, parfois 23 ou 25 selon la catégorie, avec un permis détenu
+    depuis au moins un an. En dessous de 25 ans, comptez un supplément jeune conducteur quotidien.
   </p>
 
-
-  <div class="guide-widget-wrapper" style="margin: 2.5rem 0 3.5rem 0; width: 100%; overflow: hidden; border-radius: 5px;">
-    <script is:inline async src="https://tpemd.com/content?trs=554574&amp;shmarker=697149&amp;locale=fr&amp;country=99&amp;city=461&amp;powered_by=true&amp;campaign_id=87&amp;promo_id=2466" charset="utf-8"></script>
-  </div>
-
-  <h2 id="permis">Permis et papiers</h2>
+  <h2 id="caution">La caution : le vrai point bloquant</h2>
   <p>
-    Un permis national en cours de validité suffit pour les visiteurs européens : le permis international
-    n'est pas exigé, même s'il lève toute ambiguïté lors d'un contrôle. Le conducteur doit présenter une
-    pièce d'identité et, généralement, une carte de crédit à son nom. Une fois la voiture prise, gardez
-    toujours sur vous le permis, le contrat de location et les papiers du véhicule (carte grise,
-    attestation d'assurance) : c'est ce qu'on vous demandera à un barrage.
+    C'est la première cause d'échec au comptoir au Maroc. L'agence bloque une empreinte sur une
+    <strong>carte de crédit au nom du conducteur principal</strong> : de l'ordre de 3 000 MAD pour une
+    citadine, jusqu'à 10 000 MAD pour un SUV ou un 4x4. Les cartes de débit sont fréquemment refusées et
+    les prépayées quasi systématiquement.
+  </p>
+  <p>
+    Deux conséquences pratiques : vérifiez le plafond disponible avant de partir, et n'utilisez pas la
+    même carte pour régler l'hôtel si la marge est juste. La levée de l'empreinte prend souvent plusieurs
+    jours ouvrés après la restitution.
   </p>
 
-  <h2 id="caution">La caution</h2>
+  <h2 id="assurance">Assurance et franchise</h2>
   <p>
-    C'est le point qui surprend le plus. Le loueur bloque une caution sur une carte de crédit, souvent
-    plusieurs centaines d'euros, davantage pour un 4x4, le temps de la location. Une carte de débit, une
-    carte prépayée ou un plafond insuffisant sont régulièrement refusés au comptoir, ce qui peut faire
-    capoter la prise en main. Vérifiez avant de réserver le montant exact de la caution et celui de la
-    franchise en cas de dommage, et assurez-vous que votre carte tient le coup.
+    Le tarif de base inclut une assurance avec franchise élevée — souvent l'équivalent de la caution.
+    Regardez surtout les <strong>exclusions</strong>, car ce sont elles qui posent problème au Maroc :
+    pneus, jantes, vitrage, bas de caisse, toit, et conduite hors routes revêtues. Cette dernière clause
+    compte si votre itinéraire touche aux pistes de l'Atlas ou aux accès de camps du désert.
+  </p>
+  <p>
+    Pour réduire le risque : vérifiez si votre carte de crédit couvre déjà la location, ou souscrivez
+    une couverture de franchise <em>en ligne à la réservation</em>. Le rachat vendu au comptoir reste
+    l'option la plus chère, et on l'accepte souvent par fatigue.
   </p>
 
-  <h2 id="assurance">L'assurance</h2>
+  <h2 id="carburant">Carburant : une seule formule acceptable</h2>
   <p>
-    La location inclut une assurance de base, mais avec une franchise élevée : en cas de pépin, c'est cette
-    somme qui reste à votre charge. Vous pouvez réduire ou annuler la franchise via le loueur (souvent cher)
-    ou via une protection souscrite au moment de la réservation en ligne (souvent moins chère). Quelle que
-    soit l'option, lisez ce qui reste exclu, bas de caisse, pneus, vitrage, deuxième conducteur, et
-    photographiez la voiture sous tous les angles avant de partir.
+    Exigez le <strong>plein-à-plein</strong>. Vous récupérez le véhicule plein, vous le rendez plein,
+    vous ne payez que ce que vous avez brûlé. Le plein-à-vide — acheter un réservoir au tarif du loueur
+    et rendre la voiture à sec — vous fait payer du carburant non consommé. Le gasoil est la norme au
+    Maroc et les stations sont nombreuses sur les axes ; en montagne, faites le plein avant d'attaquer
+    un col, les stations s'espacent nettement au-delà de l'Ourika.
   </p>
 
-  <h2 id="carburant">Le carburant</h2>
-  <p>
-    Privilégiez la formule plein-à-plein : vous récupérez la voiture pleine et vous la rendez pleine. C'est
-    la plus honnête ; fuyez le plein-à-vide, qui facture un réservoir entier rarement remboursé pour les
-    kilomètres non parcourus. Faites le plein juste avant de rendre le véhicule et gardez le ticket. Les
-    stations sont nombreuses sur les axes principaux mais s'espacent dans l'arrière-pays et la montagne :
-    faites le plein avant Paradise Valley ou une longue boucle vers le sud.
-  </p>
-
-  <h2 id="routes">Routes et contrôles</h2>
-  <p>
-    On roule à droite. Les grands axes et l'A7 sont en bon état et faciles ; la vigilance s'impose surtout
-    en ville, la nuit, et sur les routes de montagne étroites. Deux constantes : les contrôles de
-    gendarmerie sont fréquents, on vous fait souvent simplement signe de continuer, papiers à portée, et
-    les radars sont nombreux et bien placés, fixes comme mobiles. Respectez les limites, ralentissez aux
-    entrées de village, et la conduite se passe sans accroc. Pour le détail des règles, voyez notre guide
-    <a href={L('/fr/conduire-au-maroc/')}>conduire au Maroc</a>.
-  </p>
-
-  <h2 id="reserver">Réserver malin</h2>
-  <p>
-    Les prix et les conditions varient beaucoup d'un loueur à l'autre, et réserver en ligne à l'avance donne
-    presque toujours un meilleur tarif et des conditions plus claires qu'au comptoir. Comparez via
-    <a href={L('/agadir-airport-car-rental/')}>la location à l'aéroport d'Agadir</a>, et si vos plans
-    incluent les pistes ou Paradise Valley, regardez plutôt
-    <a href={L('/agadir-airport-4x4-rental/')}>la location de 4x4 à l'AGA</a> : un vrai 4x4 change tout sur
-    les routes de montagne et les approches non goudronnées.
-  </p>
-
-  <div class="disclosure-inline">
-    Certains liens de cette page sont des liens d'affiliation : si vous réservez via eux, nous pouvons
-    percevoir une petite commission, sans surcoût pour vous. Cela ne change jamais les prix affichés ni nos
-    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
-  </div>
-
+  <h2 id="etat-des-lieux">L'état des lieux : cinq minutes décisives</h2>
   <div class="callout">
-    <span class="callout-label">La check-list location</span>
-    Permis national valide · carte de crédit au nom du conducteur pour la caution · franchise comprise (ou
-    rachetée) · formule plein-à-plein · photos du véhicule avant départ · permis, contrat et papiers du
-    véhicule toujours sur soi.
+    <span class="callout-label">Le protocole</span>
+    <p>
+      Filmez un tour complet du véhicule en vous arrêtant sur chaque rayure, sur les quatre jantes et
+      sur le pare-brise. Photographiez le compteur et la jauge. Faites inscrire les dommages existants
+      sur le contrat avant de signer. À la restitution, refaites la même vidéo et repartez avec un
+      document de retour signé mentionnant l'absence de nouveaux dommages. C'est la seule protection
+      réellement efficace, et elle est gratuite.
+    </p>
   </div>
+
+  <h2 id="ou-louer">Louer à l'aéroport ou en ville ?</h2>
+  <p>
+    L'aéroport gagne sur la commodité : vous atterrissez et partez directement vers l'Ourika ou
+    Essaouira, sans transfert intermédiaire. Voyez notre
+    {' '}<a href={L('/location-voiture-aeroport-marrakech/')}>page location au RAK</a>.
+  </p>
+  <p>
+    La ville gagne quand la voiture ne sert que deux ou trois jours au milieu du séjour. Les agences de
+    Guéliz pratiquent parfois des tarifs plus bas, et vous n'immobilisez pas un véhicule pendant vos
+    journées de médina — une économie double, sur la location et sur le stationnement.
+  </p>
+
+  <h2 id="stationnement">Stationner à Marrakech</h2>
+  <p>
+    Dans la ville nouvelle, le stationnement de rue est courant et un gardien en gilet vous guidera :
+    quelques dirhams suffisent, c'est l'usage. Autour de la médina, visez les parkings gardés proches
+    des portes — Bab Doukkala, Bab Laksour, abords de Jemaa el-Fna — qui pratiquent un forfait à la
+    journée. Dans la médina elle-même, aucun stationnement n'est possible : les ruelles sont interdites
+    aux voitures, comme expliqué sur
+    {' '}<a href={L('/guide-aeroport-marrakech/aller-a-la-medina/')}>aller à la médina</a>.
+  </p>
+  <p>
+    Pour les règles de circulation, les contrôles et les particularités de la conduite locale, voyez
+    {' '}<a href={L('/conduire-au-maroc/')}>conduire au Maroc</a>.
+  </p>
 </GuideLayout>

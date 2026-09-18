@@ -2,174 +2,187 @@
 import CarRentalLayout from '../layouts/CarRentalLayout.astro';
 import AffiliateLink from '../components/affiliate/AffiliateLink.astro';
 import { getLocalizedPath } from '../i18n';
-import { PRICES_CHECKED } from '../data/airport';
+import { PRICES_CHECKED, airport } from '../data/airport';
 import { photos } from '../data/images';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: 'Location de voiture', href: L('/agadir-airport-car-rental/') },
+  { name: 'Location de voiture', href: L('/location-voiture-aeroport-marrakech/') },
 ];
+
 const facts = [
-  { label: 'Comptoirs', value: '~19', sub: 'aux arrivées' },
-  { label: 'Économique', value: '18 €', sub: 'dès/jour' },
-  { label: 'Aéroport → ville', value: '22 km' },
-  { label: 'Caution', value: 'Empreinte', sub: 'à vérifier' },
-];
-const faqs = [
-  { q: "Combien d'agences de location y a-t-il à l'aéroport d'Agadir ?", a: `Environ 19 comptoirs s'alignent dans le hall d'arrivée, les grandes enseignes que vous connaissez (Hertz, Europcar, Avis, Sixt, Budget) à côté d'une rangée d'agences marocaines. Toutes sont à quelques pas du tapis à bagages : récupérer la voiture est simple. Le plus dur est de savoir quel devis est réellement le meilleur une fois la caution, la politique de carburant et la franchise d'assurance prises en compte, d'où l'intérêt de comparer sur EconomyBookings avant de partir. Prix vérifiés en juin 2026.` },
-  { q: "Combien coûte une location de voiture à l'aéroport d'Agadir ?", a: "En basse saison, une citadine économique (type Dacia Sandero) démarre autour de 16–25 € par jour ; un petit SUV coûte plus, un vrai 4x4 nettement plus. Le tarif affiché n'est qu'une partie : la caution bloquée sur votre carte, la politique de carburant et la franchise d'assurance pèsent plus sur le coût réel que le prix journalier. Réservez tôt pour le meilleur tarif, surtout aux pics de février et de Pâques." },
-  { q: "Faut-il réserver à l'avance ou peut-on se présenter directement au comptoir ?", a: "Réservez à l'avance. Les tarifs au comptoir sont en général plus élevés, les voitures les moins chères partent vite en haute saison, et vous perdez la possibilité de comparer caution et conditions de carburant tranquillement avant de vous engager. Réserver en ligne via un comparateur fige le prix et vous laisse lire les petites lignes chez vous plutôt qu'au comptoir avec la file derrière vous." },
-  { q: "Que vérifier avant de partir du comptoir de location ?", a: "Trois choses. La caution (le montant bloqué et comment, généralement une empreinte de carte de crédit, parfois élevée). La politique de carburant (plein-à-plein est la plus juste ; évitez plein-à-vide, où vous payez un plein et rendez la voiture vide). Et la voiture elle-même, faites le tour, photographiez chaque rayure et bosse existante avant de partir, et confirmez le montant de la franchise et si vous êtes couvert." },
-  { q: "Vaut-il mieux louer une voiture à Agadir ou prendre des transferts ?", a: "Une voiture vaut le coup si vous voulez des excursions. Paradise Valley, Taroudant, la côte vers les spots de surf, et la liberté de bouger à votre rythme. Si vous restez dans un seul hôtel de plage ou un camp à Taghazout avec cours sur place, les transferts au coup par coup sont plus simples et moins chers, et vous évitez le stationnement en ville et le blocage de la caution." },
+  { label: 'Comptoirs', value: 'Arrivées', sub: 'dans le hall' },
+  { label: 'Citadine', value: '25 €', sub: 'dès/jour' },
+  { label: 'Caution', value: 'Empreinte', sub: 'carte de crédit' },
+  { label: 'Médina', value: 'Interdite', sub: 'aux voitures' },
 ];
 
 const desks = [
-  { name: 'Hertz', type: 'International', href: '/car-rental/hertz-agadir-airport/' },
-  { name: 'Europcar', type: 'International', href: '/car-rental/europcar-agadir-airport/' },
-  { name: 'Sixt', type: 'International', href: '/car-rental/sixt-agadir-airport/' },
-  { name: 'Avis / Budget', type: 'International', href: null },
-  { name: 'Agences locales', type: 'Marocaines', href: null },
+  { name: 'Hertz', type: 'International', href: '/location-voiture/hertz-aeroport-marrakech/' },
+  { name: 'Europcar', type: 'International', href: '/location-voiture/europcar-aeroport-marrakech/' },
+  { name: 'Sixt', type: 'International', href: '/location-voiture/sixt-aeroport-marrakech/' },
+  { name: 'Avis, Budget', type: 'International', href: null },
+  { name: 'Agences marocaines', type: 'Locales', href: null },
+];
+
+const faqs = [
+  {
+    q: "Quelles agences de location y a-t-il à l'aéroport de Marrakech ?",
+    a: "Les comptoirs occupent le hall des arrivées, à quelques pas des tapis à bagages : Hertz, Avis, Europcar, Sixt et Budget côtoient plusieurs agences marocaines. Récupérer une voiture est simple ; le vrai exercice consiste à comparer ce que recouvrent réellement les devis une fois la caution, la politique de carburant et la franchise prises en compte."
+  },
+  {
+    q: "Combien coûte une location de voiture à l'aéroport de Marrakech ?",
+    a: `Hors haute saison, une citadine de type Dacia Sandero ou Hyundai i10 démarre autour de 25 € par jour, un SUV compact monte à 40–55 €, et un vrai 4x4 dépasse souvent 70 €. Les pics de février, de Pâques et des vacances scolaires européennes font grimper ces montants de moitié. Tarifs relevés en ${PRICES_CHECKED}.`
+  },
+  {
+    q: "Faut-il réserver à l'avance ou se présenter au comptoir ?",
+    a: "Réservez avant de partir. Les tarifs au guichet sont plus élevés, les catégories économiques partent les premières en haute saison, et surtout vous lisez les conditions tranquillement chez vous plutôt que debout au comptoir avec la file derrière vous. Une réservation en ligne fixe le prix et laisse presque toujours la possibilité d'annuler."
+  },
+  {
+    q: "Quelle caution est demandée au Maroc ?",
+    a: "Une empreinte sur carte de crédit au nom du conducteur principal, généralement entre 3 000 et 10 000 MAD selon la catégorie du véhicule. La carte de débit est souvent refusée, et la carte prépayée presque toujours. C'est le premier point à vérifier avant de réserver : un devis attractif sans carte de crédit acceptée ne vous servira à rien."
+  },
+  {
+    q: "A-t-on besoin d'une voiture à Marrakech ?",
+    a: "Pour la ville seule, non : la médina est interdite aux voitures, le stationnement près des remparts est difficile et les petits taxis coûtent quelques dirhams. La location devient pertinente dès que vous sortez — vallée de l'Ourika, Imlil, Ouzoud, Essaouira, Ouarzazate — ou si vous enchaînez plusieurs excursions sur un même séjour."
+  },
+  {
+    q: "Faut-il un permis international pour conduire au Maroc ?",
+    a: "Non pour un permis européen, qui est accepté pour un séjour touristique. Les loueurs demandent généralement un permis d'au moins un an, parfois deux ou trois selon la catégorie de véhicule, ainsi qu'un âge minimum de 21 à 25 ans avec un supplément jeune conducteur en dessous de 25 ans."
+  },
 ];
 ---
 <CarRentalLayout
-  lang={lang}
-  title="Location voiture aéroport Agadir : comptoirs, prix, pièges (2026) | AirportAGA"
-  description="Comment fonctionne vraiment la location de voiture à l'aéroport Agadir Al Massira en 2026, les ~19 comptoirs des arrivées, prix honnêtes, les pièges de la caution et du carburant, et comment réserver la bonne voiture sans payer trop."
-  eyebrow="Aéroport d'Agadir · Location de voiture"
-  h1="Location de voiture à l'aéroport d'Agadir"
-  lede="Une vingtaine de comptoirs occupent le hall d'arrivée, enseignes internationales et agences locales côte à côte. Le vrai sujet n'est pas d'en trouver une, mais de lire la caution, la politique de carburant et l'assurance avant de signer. Voici comment bien faire."
+  title="Location de voiture à l'aéroport de Marrakech : comptoirs, prix et pièges (2026) | AirportRAK"
+  description="Louer une voiture au RAK : quelles agences dans le hall des arrivées, prix réels par catégorie, caution sur carte de crédit, politique de carburant et assurance. Et la question préalable : en avez-vous vraiment besoin à Marrakech ?"
+  eyebrow="Aéroport Marrakech Ménara · Location"
+  h1="Location de voiture à l'aéroport de Marrakech"
+  lede="Les comptoirs sont dans le hall des arrivées et la prise en charge est rapide. Le sujet n'est pas de trouver une voiture, mais de comprendre la caution, le carburant et l'assurance avant de signer — et de savoir si la voiture vous servira vraiment."
   breadcrumbs={breadcrumbs}
   facts={facts}
-  priceFrom={18}
-  heroImage={photos['agadir-marina']}
-faqs={faqs}
-  cta={{ heading: 'Comparez tous les comptoirs de location de l\'AGA', text: 'Cherchez côte à côte les agences de l\'aéroport d\'Agadir, prix, caution, politique de carburant et assurance, le tout au même endroit.', provider: 'economybookings', label: 'Comparer les prix de location' }}
+  priceFrom={25}
+  heroImage={photos['marrakech-car-rental']}
+  faqs={faqs}
 >
   <p>
-    La location de voiture est le service le plus facile à trouver à Al Massira : les comptoirs sont
-    là, aux arrivées, une vingtaine, et on vous tend les clés quelques minutes après le tapis. Cette
-    facilité est aussi le piège. Un voyageur fatigué sortant d'un charter du soir signe ce qui va le
-    plus vite, et le tarif le plus bas cache souvent une grosse caution sur la carte, une politique de
-    carburant qui vous coûte un plein, et une franchise d'assurance assez élevée pour gâcher des
-    vacances pour une jante frottée. Cette page explique comment louer à l'AGA sans rien de tout cela.
+    Marrakech est l'un des meilleurs points de départ du Maroc pour prendre la route : le Haut Atlas
+    commence à quarante minutes, Essaouira et l'Atlantique sont à deux heures et demie, et la route de
+    Ouarzazate franchit le Tizi n'Tichka à plus de 2 200 mètres. Louer une voiture ici ouvre un pays
+    entier. Encore faut-il que ce soit utile à votre séjour, et que le devis signé corresponde à ce que
+    vous paierez réellement.
   </p>
 
-
-  <div class="car-widget-wrapper" style="margin: 2.5rem 0 3.5rem 0;">
-    <h3 style="font-size: 1.75rem; margin-bottom: 0.5rem; text-align: center; margin-top: 0;">Comparez les prix de location</h3>
-    <p style="text-align: center; color: var(--ink-2); margin-bottom: 2rem;">Trouvez la meilleure offre pour l'Aéroport d'Agadir.</p>
-    <div style="width: 100%; border-radius: 5px; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
-      <script is:inline async src="https://tpemd.com/content?trs=554574&amp;shmarker=697149&amp;locale=fr&amp;default_pick_up_location=Agadir%20Airport&amp;powered_by=true&amp;border_radius=5&amp;plain=true&amp;show_logo=true&amp;color_background=%23ffca28&amp;color_button=%2355a539&amp;color_text=%23000000&amp;color_input_text=%23000000&amp;color_button_text=%23ffffff&amp;promo_id=4480&amp;campaign_id=10" charset="utf-8"></script>
-    </div>
-  </div>
-
-  <h2 id="comptoirs">Les comptoirs aux arrivées</h2>
+  <h2>La question préalable : en avez-vous besoin ?</h2>
   <p>
-    Vous trouverez les enseignes internationales que vous connaissez. Hertz, Europcar, Avis, Sixt,
-    Budget, à côté d'une rangée d'agences marocaines. Les internationales offrent des conditions
-    familières, du personnel anglophone et (en général) une politique de carburant plus juste ; les
-    agences locales affichent souvent un tarif journalier plus bas mais varient davantage sur la caution
-    et les petites lignes. Aucune n'est automatiquement la meilleure affaire, c'est tout l'intérêt de
-    comparer avant d'atterrir.
+    Soyons directs, parce que c'est l'erreur la plus fréquente : <strong>pour Marrakech intra-muros, une
+    voiture est un handicap</strong>. La médina est interdite à la circulation, se garer près des
+    remparts relève du sport, la conduite en ville est dense et un petit taxi vous emmène d'un bout à
+    l'autre pour quelques dirhams — voyez
+    {' '}<a href={L('/se-deplacer-marrakech/')}>se déplacer à Marrakech</a>.
   </p>
+  <p>
+    La voiture devient rentable dès que vous sortez de la ville, et surtout si vous enchaînez : Ourika
+    un jour, Agafay le lendemain, Ouzoud ensuite. À raison de deux ou trois excursions, elle coûte moins
+    qu'autant de chauffeurs à la journée, et vous partez à l'heure qui vous convient.
+  </p>
+
+  <h2>Les comptoirs du hall des arrivées</h2>
   <div class="table-wrap">
     <table class="data">
       <thead>
-        <tr><th>Comptoir</th><th>Type</th><th>Notre avis</th></tr>
+        <tr><th>Agence</th><th>Type</th><th>Notre fiche</th></tr>
       </thead>
       <tbody>
         {desks.map((d) => (
           <tr>
-            <td>{d.href ? <a href={L(d.href)}>{d.name}</a> : d.name}</td>
+            <td><strong>{d.name}</strong></td>
             <td>{d.type}</td>
-            <td class="small text-muted">{d.href ? 'Lire notre avis comptoir' : (d.type.startsWith('Moroc') || d.type.startsWith('Maroc') || d.type.startsWith('Marroq') || d.type.startsWith('Marokk') ? 'Comparer via Localrent' : 'Comparer via EconomyBookings')}</td>
+            <td>{d.href ? <a href={L(d.href)}>Voir la fiche</a> : <span class="text-muted">—</span>}</td>
           </tr>
         ))}
       </tbody>
     </table>
   </div>
-  <p class="small text-muted">
-    Une vingtaine de comptoirs opèrent à l'AGA ; la sélection et les enseignes exactes changent d'une
-    saison à l'autre. À titre indicatif.
+  <p>
+    Les enseignes internationales rassurent sur le processus et la gestion des litiges ; les agences
+    marocaines affichent souvent des tarifs plus bas avec des conditions plus variables. Ni les unes ni
+    les autres ne sont un mauvais choix en soi : ce sont les trois points ci-dessous qui font la
+    différence.
   </p>
 
-  <h2 id="reserver">Comment réserver, comparez, ne vous présentez pas au comptoir</h2>
+  <h2>Les trois points qui décident du prix réel</h2>
+  <h3>1. La caution</h3>
   <p>
-    Le meilleur réflexe est de comparer les comptoirs en ligne avant de partir plutôt que d'en choisir
-    un au guichet. Un comparateur met les agences côte à côte, tarif journalier, caution, politique de
-    carburant et assurance dans une seule vue, vous lisez donc les petites lignes chez vous, pas avec
-    la file derrière vous. Cela fige aussi le prix et empêche les voitures les moins chères de partir
-    sous votre nez en haute saison. Nous utilisons
-    <AffiliateLink provider="economybookings" sub="location-voiture-aeroport-agadir-body" class="text-link">EconomyBookings</AffiliateLink>
-    pour cela : le site liste les comptoirs de l'AGA ensemble, et sa couverture tous risques revient
-    en général moins cher que le rachat de franchise qu'on tente de vous vendre à l'arrivée.
+    Une empreinte est bloquée sur une <strong>carte de crédit au nom du conducteur</strong>, le plus
+    souvent entre 3 000 et 10 000 MAD selon la catégorie. Les cartes de débit sont fréquemment refusées,
+    les prépayées quasi systématiquement. Vérifiez ce point avant de réserver : c'est la première cause
+    de refus au comptoir, et vous vous retrouveriez à négocier une solution de repli avec votre vol déjà
+    derrière vous.
   </p>
-
-  <div class="callout">
-    <span class="callout-label">Conseil local</span>
-    Réservez la voiture avant tout ce qui en dépend. Aux pics de février et de Pâques, les économiques
-    bon marché partent vraiment, et un tarif au comptoir peut coûter moitié plus cher que le prix
-    bloqué en ligne quinze jours plus tôt.
-  </div>
-
-  <h2 id="caution-carburant-assurance">Caution, carburant et assurance, les trois qui comptent</h2>
+  <h3>2. La politique de carburant</h3>
   <p>
-    Oubliez un instant le tarif affiché : ces trois points décident de ce que vous payez vraiment et du
-    risque que vous portez.
+    Cherchez le <strong>plein-à-plein</strong> : vous partez avec le réservoir plein, vous rendez plein,
+    vous ne payez que ce que vous avez consommé. Fuyez le plein-à-vide, où vous achetez un réservoir au
+    tarif du loueur et rendez la voiture vide sans remboursement du reste. Sur une location de trois
+    jours, cette seule clause peut représenter plus que l'écart de prix entre deux agences.
   </p>
-  <ul>
-    <li><strong>La caution.</strong> Presque chaque comptoir bloque une somme sur votre carte de crédit, parfois importante, en empreinte, libérée au retour de la voiture sans dommage. Il vous faut une vraie carte de crédit (pas une carte de débit) au nom du conducteur principal, avec un plafond suffisant. Demandez le montant avant de réserver ; il varie beaucoup d'un comptoir à l'autre.</li>
-    <li><strong>La politique de carburant.</strong> Plein-à-plein est la juste : vous prenez le plein et rendez le plein. Évitez plein-à-vide, où vous prépayez un plein au tarif du loueur et rendez la voiture vide sans remboursement de ce qui reste, vous y perdez presque toujours.</li>
-    <li><strong>L'assurance et la franchise.</strong> Le tarif de base inclut le CDW mais avec une franchise élevée, la somme que vous payez de votre poche en cas de dommage. Le comptoir vous vendra un rachat pour la réduire ; la couverture tous risques du comparateur fait souvent le même travail pour moins cher. Décidez avant d'arriver, pour ne pas vous laisser sur-vendre fatigué au guichet.</li>
-  </ul>
-
-  <h2 id="recuperation">Récupérer la voiture aux arrivées</h2>
+  <h3>3. L'assurance et la franchise</h3>
   <p>
-    Une fois signé, faites le tour de la voiture avant de partir. Photographiez chaque rayure, bosse et
-    les pneus, vérifiez que la jauge correspond au contrat, et assurez-vous que les défauts sont notés
-    sur le document. Deux minutes ici, c'est ce qui empêche une rayure « nouvelle » d'être imputée à
-    votre caution au retour. L'aéroport est à environ 22 km du centre d'Agadir sur bonne route : le
-    premier trajet en ville est simple, le stationnement en centre-ville est vraiment facile, et seuls
-    les villages de surf au nord demandent de l'attention.
-  </p>
-
-  <h2 id="quelle-voiture">Quelle voiture pour quel séjour</h2>
-  <p>
-    La plupart des visiteurs n'ont pas besoin de plus qu'une citadine : les routes vers Taghazout,
-    Taroudant et le centre d'Agadir sont du bon bitume. Passez au 4x4 uniquement si vous visez les
-    pistes de l'Anti-Atlas, Tafraoute ou les chemins rugueux au-delà des spots de surf, voyez notre
-    guide <a href={L('/agadir-airport-4x4-rental/')}>location 4x4 à l'aéroport d'Agadir</a> pour savoir
-    quand cela vaut le coup. Si vous surveillez le budget, la page
-    <a href={L('/agadir-airport-car-rental/cheap/')}>location pas chère</a> couvre la voie des agences
-    locales et le piège de la caution ; et notre comparatif
-    <a href={L('/best-car-rental-agadir-airport/')}>meilleure location à l'aéroport d'Agadir</a> classe
-    les comptoirs face à face.
+    Le tarif de base inclut une assurance avec une franchise élevée — souvent l'équivalent de la caution.
+    Le rachat de franchise proposé au comptoir est rentable pour les loueurs, moins pour vous : si votre
+    carte de crédit ou une assurance tierce couvre déjà la location, vérifiez-le avant de partir plutôt
+    que d'accepter dans la précipitation. Attention aussi aux exclusions classiques : pneus, vitrage,
+    bas de caisse et pistes non goudronnées, ces dernières très pertinentes si vous montez vers l'Atlas.
   </p>
 
   <div class="callout">
-    <span class="callout-label">Vous ne conduisez pas ?</span>
-    Si la seule raison de louer serait deux trajets en ville, un
-    <a href={L('/agadir-airport-transfers/')}>transfert d'aéroport</a> à prix fixe vous évite la
-    caution, le stationnement et les calculs de carburant. Une voiture se justifie quand vous bougez
-    presque tous les jours, pas quand vous êtes garé devant un seul hôtel de plage.
+    <span class="callout-label">Cinq minutes qui évitent un litige</span>
+    <p>
+      Avant de quitter le parking, filmez le tour complet de la voiture en vous arrêtant sur chaque
+      rayure, sur les jantes et sur le pare-brise, puis photographiez le compteur et la jauge. Faites
+      inscrire les dommages existants sur le contrat. Au retour, refaites la même vidéo. C'est la seule
+      protection réellement efficace contre une facturation de dégât préexistant.
+    </p>
   </div>
 
-  <div class="disclosure-inline">
-    Certains liens ici sont des liens d'affiliation : si vous réservez via ces liens, nous pouvons
-    percevoir une petite commission, sans surcoût pour vous. Cela ne change jamais les prix affichés ni
-    nos recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
-  </div>
-
+  <h2>Conduire autour de Marrakech</h2>
   <p>
-    Prêt à comparer ? Lisez nos avis comptoirs sur
-    <a href={L('/car-rental/hertz-agadir-airport/')}>Hertz</a>,
-    <a href={L('/car-rental/europcar-agadir-airport/')}>Europcar</a> et
-    <a href={L('/car-rental/sixt-agadir-airport/')}>Sixt</a>, pesez les options de
-    <a href={L('/best-car-rental-agadir-airport/')}>meilleure location</a>, ou regardez la voie de la
-    <a href={L('/agadir-airport-car-rental/cheap/')}>location la moins chère</a>. Pas sûr de vouloir
-    conduire ? Commencez par le <a href={L('/agadir-airport-transfers/')}>hub des transferts</a>.
+    L'autoroute vers Casablanca et la route d'Essaouira sont excellentes. La route de l'Ourika est
+    étroite et fréquentée le week-end. Le Tizi n'Tichka vers Ouarzazate, entièrement rénové, reste une
+    succession de virages où l'on roule moins vite qu'on ne l'imagine — comptez quatre heures plutôt que
+    trois. Les contrôles de gendarmerie sont fréquents, courtois, et sanctionnent surtout les excès de
+    vitesse aux entrées d'agglomération. Tout est détaillé dans
+    {' '}<a href={L('/conduire-au-maroc/')}>conduire au Maroc</a>.
+  </p>
+  <p>
+    Pour les pistes de l'Atlas et les accès aux camps du désert, voyez si un
+    {' '}<a href={L('/location-4x4-aeroport-marrakech/')}>4x4</a> se justifie — souvent moins que ce que
+    l'on croit, la plupart des sites touristiques étant accessibles en berline.
+  </p>
+
+  <h2>Où se garer si vous logez en médina</h2>
+  <p>
+    Vous ne garerez pas devant votre riad. Les solutions praticables sont les parkings gardés qui
+    ceinturent les remparts — près de Bab Doukkala, de Bab Laksour ou de la place Jemaa el-Fna — pour
+    quelques dizaines de dirhams la journée, gardien compris. Beaucoup de riads ont une entente avec un
+    parking proche : demandez-leur avant de réserver la voiture. Si vous ne partez en excursion que deux
+    jours sur sept, louer uniquement pour ces deux jours coûte souvent moins cher que d'immobiliser un
+    véhicule toute la semaine.
+  </p>
+
+  <h2>Réserver au bon moment</h2>
+  <p>
+    Les prix montent fortement en février, à Pâques, pendant les vacances scolaires européennes et
+    autour des ponts de mai. Sur ces périodes, réservez plusieurs semaines à l'avance : ce ne sont pas
+    seulement les tarifs qui grimpent, c'est la disponibilité des boîtes automatiques et des grands
+    véhicules qui disparaît. Nos pages
+    {' '}<a href={L('/location-voiture-aeroport-marrakech/pas-cher/')}>location pas chère</a> et
+    {' '}<a href={L('/meilleure-location-voiture-aeroport-marrakech/')}>quelle agence choisir</a>
+    détaillent les arbitrages.
+  </p>
+  <p>
+    <AffiliateLink provider="discovercars" sub="car-hub-body" class="btn btn-primary">Comparer les offres au RAK</AffiliateLink>
   </p>
 </CarRentalLayout>
