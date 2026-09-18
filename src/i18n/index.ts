@@ -36,15 +36,7 @@ const pathMappings: Record<string, PathEntry> = {
 
   // ── Trajets depuis le RAK ──
   '/transfert-aeroport-marrakech-medina/': { fr: '/transfert-aeroport-marrakech-medina/' },
-  '/transfert-aeroport-marrakech-gueliz-hivernage/': { fr: '/transfert-aeroport-marrakech-gueliz-hivernage/' },
-  '/transfert-aeroport-marrakech-palmeraie/': { fr: '/transfert-aeroport-marrakech-palmeraie/' },
-  '/transfert-aeroport-marrakech-agafay/': { fr: '/transfert-aeroport-marrakech-agafay/' },
   '/transfert-aeroport-marrakech-essaouira/': { fr: '/transfert-aeroport-marrakech-essaouira/' },
-  '/transfert-aeroport-marrakech-ourika/': { fr: '/transfert-aeroport-marrakech-ourika/' },
-  '/transfert-aeroport-marrakech-imlil/': { fr: '/transfert-aeroport-marrakech-imlil/' },
-  '/transfert-aeroport-marrakech-oukaimeden/': { fr: '/transfert-aeroport-marrakech-oukaimeden/' },
-  '/transfert-aeroport-marrakech-ouarzazate/': { fr: '/transfert-aeroport-marrakech-ouarzazate/' },
-  '/transfert-aeroport-marrakech-agadir/': { fr: '/transfert-aeroport-marrakech-agadir/' },
 
   // ── Comparatifs et avis ──
   '/meilleur-transfert-aeroport-marrakech/': { fr: '/meilleur-transfert-aeroport-marrakech/' },

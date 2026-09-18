@@ -14,10 +14,6 @@ const L = (p: string) => getLocalizedPath(p);
 
 const routes = [
   { href: '/transfert-aeroport-marrakech-medina/', img: 'marrakech-medina', name: 'Médina & Jemaa el-Fna', km: 6, time: '15–30 min', price: 'dès 12 €', note: 'Dépose à la porte la plus proche de votre riad', star: true },
-  { href: '/transfert-aeroport-marrakech-gueliz-hivernage/', img: 'gueliz-hivernage', name: 'Guéliz & Hivernage', km: 5, time: '12–20 min', price: 'dès 12 €', note: 'Hôtels modernes, dépose porte-à-porte' },
-  { href: '/transfert-aeroport-marrakech-palmeraie/', img: 'palmeraie', name: 'La Palmeraie', km: 15, time: '25–35 min', price: 'dès 18 €', note: 'Resorts dispersés, adresses difficiles' },
-  { href: '/transfert-aeroport-marrakech-agafay/', img: 'agafay-desert', name: "Désert d'Agafay", km: 35, time: '40–55 min', price: 'dès 35 €', note: 'Camps du désert, piste en fin de trajet' },
-  { href: '/transfert-aeroport-marrakech-ourika/', img: 'ourika-valley', name: "Vallée de l'Ourika", km: 40, time: '50–70 min', price: 'dès 40 €', note: 'Route de montagne vers Setti Fatma' },
   { href: '/transfert-aeroport-marrakech-essaouira/', img: 'essaouira', name: 'Essaouira', km: 180, time: '2½–3 h', price: 'dès 95 €', note: "Longue distance, prix fixé à l'avance" },
 ];
 
@@ -99,7 +95,7 @@ const faqs = [
       <span class="eyebrow">Où allez-vous ?</span>
       <h2>Trajets populaires depuis le RAK</h2>
       <p class="lede" style="max-width:60ch">Choisissez votre destination pour la distance réelle, le temps de trajet, un prix juste et le côté pratique : où le chauffeur vous dépose, et ce à quoi faire attention.</p>
-      <div class="grid grid-3" style="margin-top:1.5rem">
+      <div class="grid grid-2" style="margin-top:1.5rem">
         {routes.map((r) => (
           <a class="card card-link route-card route-card--photo" href={L(r.href)}>
             <div class="route-photo"><Image src={photos[r.img]} alt={r.name} widths={[380, 760]} sizes="(max-width: 560px) 100vw, 360px" /></div>
