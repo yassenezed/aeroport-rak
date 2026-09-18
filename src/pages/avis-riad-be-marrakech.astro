@@ -1,83 +1,80 @@
 ---
 import HotelReviewLayout from '../layouts/HotelReviewLayout.astro';
 import { getLocalizedPath, useTranslations } from '../i18n';
-// Import images
-import heroImg from '../assets/img/placeholder.png';
-import bodyImg from '../assets/img/placeholder.png';
-import { Image } from 'astro:assets';
+import { photos } from '../data/images';
 
-const lang = 'fr';
-const t = useTranslations(lang);
-const L = (p: string) => getLocalizedPath(p, lang);
+const t = useTranslations('fr');
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: t('nav.home'), href: L('/') },
-  { name: t('nav.hotels'), href: L('/best-hotels-agadir/') },
-  { name: 'Tayri Surf House', href: L('/tayri-surf-house-review/') },
+  { name: 'Où dormir', href: L('/ou-dormir-marrakech/') },
+  { name: 'Riad BE', href: L('/avis-riad-be-marrakech/') },
 ];
 ---
 <HotelReviewLayout
-  lang={lang}
-  title={`Tayri Surf House. Avis & Accès Taghazout | AirportAGA`}
-  description={`Notre avis expert sur Tayri Surf House. Découvrez pourquoi c'est l'auberge de surf la mieux notée près d'Agadir.`}
-  h1={`Tayri Surf House. Avis & Accès Taghazout`}
-  subtitle={`L'auberge de surf communautaire par excellence`}
+  title={`Riad BE Marrakech : notre avis et l'accès depuis l'aéroport | AirportRAK`}
+  description={`Notre regard sur Riad BE : l'esprit riad dans une lecture contemporaine, à Bab Doukkala, l'un des accès les plus commodes de la médina depuis l'aéroport de Marrakech.`}
+  h1={`Riad BE Marrakech : notre avis et l'accès depuis l'aéroport`}
+  subtitle={`L'expérience médina, par la porte la plus commode`}
   breadcrumbs={breadcrumbs}
-  brand={`Tayri Surf House`}
-  rating={4.9}
-  verdict={`Un rapport qualité-prix imbattable et une communauté de surf incroyable.`}
-  priceAvg={`25€ - 60€ / nuit`}
-  address={`Tamraght Ouzdar, Agadir`}
-  stars={`Surf Camp / Hostel`}
-  ratingText={`Exceptionnel`}
-  heroImage={heroImg}
-  ctaLink="https://www.booking.com/hotel/ma/tayri-surf-house.fr.html"
-  ctaLabel={`Voir les disponibilités`}
-  faqs={[{"q": "Faut-il savoir surfer pour y séjourner ?", "a": "Pas du tout ! Beaucoup viennent pour l'ambiance, le yoga et pour apprendre à surfer de zéro."}, {"q": "À quelle distance se trouve Tamraght du centre d'Agadir ?", "a": "Tamraght est à environ 15 km au nord d'Agadir, accessible en 20 minutes de taxi."}]}
+  brand={`Riad BE Marrakech`}
+  rating={4.3}
+  verdict={`Le bon compromis pour un premier séjour en riad : patio, bassin et terrasse, mais à Bab Doukkala, l'un des accès les plus simples de la médina pour qui arrive avec des bagages.`}
+  priceAvg={`Moyen`}
+  address={`Médina, secteur Bab Doukkala`}
+  stars={`★★★★`}
+  ratingText={`Très bien`}
+  heroImage={photos['riad-be-marrakech']}
+  ctaLink={L('/ou-dormir-marrakech/')}
+  ctaLabel={`Comparer les disponibilités`}
+  faqs={[
+    { q: "Où se trouve le Riad BE Marrakech ?", a: "Dans la médina, dans le secteur de Bab Doukkala, au nord-ouest. C'est l'un des accès les plus pratiques de la médina : la porte est largement accessible en voiture et la marche jusqu'au riad reste courte." },
+    { q: "Quelle porte indiquer au chauffeur ?", a: "Bab Doukkala, dans la très grande majorité des cas. Confirmez tout de même auprès du riad au moment de la réservation : c'est l'information qui évite d'être déposé du mauvais côté de la médina." },
+    { q: "Le Riad BE a-t-il une piscine ?", a: "Les riads de cette catégorie disposent généralement d'un bassin de patio, dimensionné pour se rafraîchir plutôt que pour nager, et d'une terrasse sur le toit. Vérifiez les équipements exacts au moment de réserver, car ils varient d'une maison à l'autre." },
+    { q: "Peut-on laisser ses bagages le jour du départ ?", a: "Oui, c'est un service standard dans les riads et il est gratuit. C'est particulièrement utile à Marrakech, où l'aéroport ne propose pas de consigne fiable : vous libérez la chambre, vous visitez, et vous repassez prendre vos valises avant le transfert." }
+  ]}
 >
   <div class="content-block">
-    <h2>Présentation</h2>
-    <p>À quelques minutes de route d'Agadir, dans le village mythique de Tamraght, Tayri Surf House est devenu culte parmi les backpackers et les surfeurs. Offrant un mélange d'hospitalité marocaine et de culture surf décontractée, c'est le camp de base idéal pour affronter les vagues de l'Atlantique.</p>
-    
-    <h3>Pourquoi choisir Tayri Surf House ?</h3>
+    <h2>Ce que c'est</h2>
+    <p>
+      Riad BE appartient à cette génération de maisons d'hôtes de la médina qui ont gardé la structure
+      traditionnelle — patio, bassin, terrasse — en y appliquant une lecture contemporaine : lignes
+      épurées, couleurs sobres, confort actuel. Son secteur, autour de Bab Doukkala, est l'un des plus
+      commodes de la médina pour qui arrive avec des bagages.
+    </p>
+
+    <h3>Pourquoi on le retient</h3>
     <ul class="pros-list">
-      <li>Atmosphère communautaire incroyable, parfaite pour les voyageurs solos.</li>
-      <li>Rapport qualité-prix exceptionnel (idéal pour les petits budgets).</li>
-      <li>Moniteurs de surf locaux très expérimentés.</li>
-      <li>Petits-déjeuners et dîners communs légendaires sur le toit.</li>
-      <li>Dortoirs et chambres privées d'une propreté irréprochable.</li>
+      <li>Un accès parmi les plus simples de la médina, par une grande porte carrossable.</li>
+      <li>L'esthétique riad sans l'austérité : décoration soignée et confort contemporain.</li>
+      <li>Une terrasse exploitable, précieuse en fin de journée.</li>
+      <li>Proximité immédiate des souks et de Dar el Bacha, à pied.</li>
     </ul>
 
-    <h3>Les Chambres</h3>
-    <p>Tayri propose un mélange de lits en dortoir économiques et de chambres privées. Bien que les équipements soient simples par rapport aux hôtels de luxe, tout est exceptionnellement propre, confortable et décoré avec une ambiance bohème.</p>
-    
-    <div style="margin: 2rem 0; border-radius: 8px; overflow: hidden;">
-      <Image src={bodyImg} alt={`Tayri Surf House`} widths={[768, 1200]} sizes="(max-width: 768px) 100vw, 800px" />
-    </div>
+    <h2>L'accès depuis l'aéroport</h2>
+    <p>
+      Comptez 15 à 30 minutes de route jusqu'à Bab Doukkala, puis une courte marche. C'est justement
+      l'intérêt du secteur : la porte est large, bien desservie et facilement identifiable par n'importe
+      quel chauffeur, ce qui n'est pas le cas de tous les accès de la médina. Demandez malgré tout un
+      porteur si vous arrivez de nuit ou avec de grosses valises — voyez
+      <a href={L('/guide-aeroport-marrakech/aller-a-la-medina/')}>aller à la médina</a>.
+    </p>
 
-    <h2>Rejoindre Tayri depuis l'Aéroport</h2>
-    <ol class="steps-list">
-      <li>Sortez de l'aéroport d'Agadir (AGA).</li>
-      <li>Réservez un transfert direct vers Tamraght (le bus nécessite plusieurs changements).</li>
-      <li>Le trajet vers le nord dure environ 45-50 minutes.</li>
-      <li>Arrivez dans le village de surf et posez vos bagages à l'auberge.</li>
-    </ol>
+    <h2>Pour qui</h2>
+    <p>
+      Pour un premier séjour en riad : vous obtenez l'expérience de la médina — le calme derrière une
+      porte cloutée, le patio, la terrasse — sans le parcours d'obstacles d'un derb profond. C'est le
+      compromis que nous recommandons à ceux qui hésitent entre riad et hôtel.
+    </p>
 
-    <h2>Équipements & Services</h2>
-    <div class="features-grid">
-      <div class="feature-item"><strong>Cours de Surf</strong><p>Leçons quotidiennes et location de planches.</p></div>
-      <div class="feature-item"><strong>Rooftop</strong><p>Vue magnifique sur le coucher de soleil et sessions de yoga.</p></div>
-      <div class="feature-item"><strong>Repas Communs</strong><p>Délicieux dîners marocains façon familiale.</p></div>
-      <div class="feature-item"><strong>Wi-Fi Rapide</strong><p>Bonne connexion pour les digital nomads.</p></div>
-    </div>
-
-    <h2>Idéal pour les surfeurs, backpackers et voyageurs solos</h2>
-    <p>Si vous voulez surfer des vagues de classe mondiale, vous faire des amis et bien manger avec un budget limité, ne cherchez pas plus loin.</p>
-
-    <div class="promo-box">
-      <h3>Rejoignez la Communauté</h3>
-      <p>Les lits se remplissent extrêmement vite pendant la saison de surf. Vérifiez les prix.</p>
-      <a class="btn btn--green" href="https://www.booking.com/hotel/ma/tayri-surf-house.fr.html" rel="nofollow sponsored" target="_blank">{`Voir les disponibilités`}</a>
-    </div>
+    <h2>À savoir avant de réserver</h2>
+    <p>
+      Comme dans tous les riads, le nombre de chambres est limité et les équipements varient : vérifiez
+      la présence d'une climatisation efficace si vous venez entre juin et septembre, et l'existence
+      d'un ascenseur si les escaliers posent problème. Pour l'ensemble de nos sélections, voyez
+      <a href={L('/riads-medina-marrakech/')}>riads dans la médina</a> et
+      <a href={L('/meilleurs-hotels-marrakech/')}>meilleurs hôtels de Marrakech</a>.
+    </p>
   </div>
 </HotelReviewLayout>

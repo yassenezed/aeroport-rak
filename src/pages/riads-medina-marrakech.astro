@@ -1,123 +1,143 @@
 ---
 import HotelLayout from '../layouts/HotelLayout.astro';
-import AffiliateLink from '../components/affiliate/AffiliateLink.astro';
 import { getLocalizedPath } from '../i18n';
 import { photos } from '../data/images';
+import { PRICES_CHECKED } from '../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: 'Où dormir', href: L('/where-to-stay-agadir/') },
-  { name: 'Hôtels tout inclus', href: L('/agadir-all-inclusive-hotels/') },
+  { name: 'Où dormir', href: L('/ou-dormir-marrakech/') },
+  { name: 'Riads dans la médina', href: L('/riads-medina-marrakech/') },
 ];
+
 const facts = [
-  { label: 'Tout inclus', value: '60 €', sub: 'dès /pers/nuit' },
-  { label: 'Zone principale', value: 'Founty' },
-  { label: 'Aéroport → resort', value: '22 km' },
-  { label: 'Durée', value: '25–40', sub: 'min' },
+  { label: 'Chambres', value: '4–10', sub: 'en moyenne' },
+  { label: 'Accès', value: 'À pied', sub: 'depuis une porte' },
+  { label: 'Porteur', value: '20–30', sub: 'MAD de pourboire' },
+  { label: 'Petit-déj', value: 'Terrasse', sub: 'presque partout' },
 ];
+
+const nos = [
+  { nom: 'Riad Yasmine', angle: 'Le patio le plus photographié de la médina', href: '/avis-riad-yasmine/' },
+  { nom: 'Riad BE Marrakech', angle: 'Esprit riad, lecture contemporaine, accès facile à Bab Doukkala', href: '/avis-riad-be-marrakech/' },
+];
+
 const faqs = [
-  { q: "Agadir est-elle bien pour le tout inclus ?", a: "Oui. Agadir est la capitale marocaine du tout inclus et des séjours en formule. Une large part de ses hôtels, surtout dans la zone de Founty au sud de la baie, sont de grands resorts conçus exactement pour ça : piscines, buffets, bars et animations le soir, tout compris. C'est l'un des endroits les plus simples du Maroc pour réserver une semaine soleil-piscine où tout est réglé." },
-  { q: "Combien coûte un tout inclus à Agadir ?", a: "Environ 60–110 € par personne et par nuit selon le standing du resort et la saison, tarifs vérifiés en juin 2026. Le bas de la fourchette donne un bon 4 étoiles en buffet ; le haut, un resort plus haut de gamme avec plus de restaurants et de meilleures boissons. Les prix culminent pendant les vacances scolaires et à Noël/Nouvel An, et baissent aux saisons intermédiaires." },
-  { q: "Que couvre généralement le tout inclus à Agadir ?", a: "En général la pension complète (petit-déjeuner, déjeuner et dîner en buffet), les boissons de marque locale en journée, les piscines et la plupart des activités et animations de jour. Ce qui varie : la qualité des boissons (locales vs marques/importées), les restaurants à la carte (souvent en supplément ou limités), et le spa, les excursions et les sports nautiques motorisés (en général non inclus). Vérifiez toujours la formule de pension et la politique boissons du resort précis avant de réserver." },
-  { q: "À qui convient le tout inclus à Agadir ?", a: "Aux familles qui veulent les repas et les piscines réglés sans décisions quotidiennes, aux couples cherchant une semaine soleil sans rien faire, et à tous ceux qui aiment un budget fixe sans surprise. Il convient moins aux voyageurs qui veulent dîner dans toute la ville, explorer le Souss ou surfer sur la côte, pour cela, un hôtel de plage en simple chambre laisse plus de liberté." },
+  {
+    q: "Qu'est-ce qu'un riad exactement ?",
+    a: "Une maison traditionnelle organisée autour d'un patio intérieur, sans fenêtres sur la rue : toute la lumière et la vie viennent du centre. Cette architecture explique à la fois le calme surprenant qu'on y trouve et l'absence de vue extérieure depuis les chambres. Beaucoup de riads ont été restaurés en maisons d'hôtes de quatre à dix chambres."
+  },
+  {
+    q: "Comment arrive-t-on à son riad avec des valises ?",
+    a: "Le chauffeur dépose à la porte (bab) la plus proche, puis on termine à pied, généralement 3 à 10 minutes dans les derbs. La quasi-totalité des riads envoient un porteur avec une charrette si vous annoncez votre heure d'arrivée : demandez-le, c'est gratuit ou coûte 20 à 30 MAD de pourboire, et cela change tout."
+  },
+  {
+    q: "Les riads sont-ils bruyants ?",
+    a: "Le patio agit comme une caisse de résonance : ce qui se dit au rez-de-chaussée s'entend aux étages. Les riads sont silencieux quand ils sont peu occupés, plus vivants quand ils sont pleins. L'appel à la prière de l'aube s'entend nettement partout en médina. Si votre sommeil est fragile, demandez une chambre à l'étage supérieur ou côté rue aveugle."
+  },
+  {
+    q: "Y a-t-il une piscine dans les riads ?",
+    a: "Souvent un bassin de patio, dimensionné pour se rafraîchir plutôt que pour nager, parfois non chauffé et à l'ombre une partie de la journée. Si la baignade compte vraiment dans votre séjour, regardez plutôt les hôtels de l'Hivernage ou les resorts de la Palmeraie."
+  },
+  {
+    q: "Un riad est-il adapté aux personnes à mobilité réduite ?",
+    a: "Rarement. Escaliers étroits et raides, seuils, absence d'ascenseur dans la plupart des maisons, et une marche d'approche sur pavés irréguliers. Certains riads disposent d'une chambre en rez-de-patio : demandez explicitement, mais un hôtel de Guéliz reste généralement plus adapté."
+  },
+  {
+    q: "Peut-on laisser ses bagages après le départ ?",
+    a: "Oui, tous les riads le font gratuitement, et c'est précieux à Marrakech : l'aéroport n'offre pas de consigne fiable. Vous libérez la chambre, vous passez la journée en ville, et vous repassez avant votre transfert."
+  },
 ];
 ---
 <HotelLayout
-  lang={lang}
-  title="Hôtels tout inclus Agadir : ce qu'il faut savoir et les prix (2026) | AirportAGA"
-  description="Pourquoi Agadir est la capitale marocaine du tout inclus, ce que la formule couvre vraiment, le prix d'une semaine en resort en 2026, à qui ça convient, et comment s'organise le transfert aéroport."
-  eyebrow="Où dormir · Tout inclus"
-  h1="Hôtels tout inclus à Agadir"
-  lede="Agadir est le cœur du tout inclus au Maroc, la zone de resorts de Founty est faite pour les semaines soleil où l'on défait ses valises une fois et où tout est réglé. Voici ce que couvre vraiment la formule, son prix en 2026, à qui elle convient, et comment rejoindre votre resort depuis l'aéroport."
+  title="Riads dans la médina de Marrakech : comment bien choisir (2026) | AirportRAK"
+  description="Choisir un riad dans la médina de Marrakech : ce qu'est vraiment un riad, l'arrivée à pied depuis une porte, le porteur avec charrette, bruit, escaliers, bassins de patio, et à qui cette formule convient."
+  eyebrow="Marrakech · Riads"
+  h1="Riads dans la médina de Marrakech"
+  lede="Un patio silencieux à trente mètres des souks : c'est ce qu'on vient chercher. Voici ce que la formule implique réellement — l'arrivée à pied, le bruit du patio, les escaliers — et comment choisir la bonne maison."
   breadcrumbs={breadcrumbs}
   facts={facts}
-  priceFrom={60}
-  heroImage={photos['agadir-bay']}
-  heroCtaLabel="Comparer les resorts tout inclus"
+  heroImage={photos['riads-medina']}
   faqs={faqs}
-  cta={{ heading: 'Comparez les resorts tout inclus d\'Agadir', text: 'Prix et avis en direct sur les resorts de Founty et le front de mer, annulation gratuite sur la plupart des réservations.', provider: 'booking', label: 'Voir les offres tout inclus' }}
 >
   <p>
-    Si vous avez réservé Agadir, il y a de bonnes chances que ce soit pour une semaine en tout inclus, et ce n'est pas un hasard. Agadir est la capitale marocaine des vacances en formule, avec une large
-    part d'hôtels conçus spécialement pour les séjours soleil, piscine et buffet où tout est compris.
-    La plupart se trouvent dans la zone de Founty, au sud de la baie, en léger retrait d'une portion de
-    plage plus tranquille. Voici ce que vous achetez vraiment, son prix, et si c'est le bon choix pour
-    votre séjour.
+    Le riad est l'argument numéro un de Marrakech en matière d'hébergement, et il le mérite : peu de
+    villes permettent de dormir dans une maison à patio du XIX<sup>e</sup> siècle, à cinq minutes à
+    pied d'une place classée. Mais c'est une formule avec des règles propres, qu'il vaut mieux
+    connaître avant de réserver que découvrir à 23 h avec deux valises.
   </p>
 
-  <h2 id="pourquoi-hub">Pourquoi Agadir est un pôle du tout inclus</h2>
+  <h2>Ce que vous obtenez</h2>
+  <ul>
+    <li>Un <strong>patio</strong> central, souvent avec bassin et orangers, qui tient la fraîcheur.</li>
+    <li>Une <strong>terrasse</strong> sur le toit, lieu du petit-déjeuner et du thé de fin d'après-midi.</li>
+    <li>Une <strong>petite échelle</strong> : quatre à dix chambres, un service personnalisé.</li>
+    <li>Un emplacement <strong>au cœur de la médina</strong>, souks et monuments à pied.</li>
+  </ul>
+
+  <h2>Ce que personne ne vous dit avant</h2>
   <p>
-    Agadir a bâti son tourisme sur un soleil fiable, une longue baie de sable et des vols charters
-    directs depuis le nord de l'Europe, la recette exacte du modèle resort tout inclus. Résultat : une
-    forte concentration de grands resorts 4 et 5 étoiles, surtout à Founty, pensés pour les voyageurs
-    qui veulent atterrir, défaire leurs valises une fois et ne plus penser à la logistique. La
-    concurrence maintient des prix doux pour le standard méditerranéen, ce qui explique en grande partie
-    pourquoi Agadir reste moins chère que bien des destinations resort européennes à semaine
-    comparable.
+    <strong>L'arrivée se fait à pied.</strong> Aucune voiture n'entre dans les derbs. Le chauffeur
+    s'arrête à une porte et vous marchez trois à dix minutes sur des pavés. La solution est simple et
+    gratuite : demander un porteur avec charrette, en annonçant votre heure d'arrivée. Tout est détaillé
+    sur <a href={L('/guide-aeroport-marrakech/aller-a-la-medina/')}>aller à la médina</a>.
+  </p>
+  <p>
+    <strong>Le patio porte les sons.</strong> C'est la contrepartie de l'architecture : une conversation
+    au rez-de-chaussée monte aux étages. Ajoutez l'appel à la prière avant l'aube, audible partout en
+    médina. Demandez une chambre haute si votre sommeil est léger.
+  </p>
+  <p>
+    <strong>Les escaliers sont raides.</strong> Peu de riads ont un ascenseur. Avec une valise lourde,
+    un genou fragile ou une poussette, la question mérite d'être posée avant de réserver.
+  </p>
+  <p>
+    <strong>Le bassin n'est pas une piscine.</strong> Il rafraîchit, il ne permet pas de nager, et il
+    est souvent à l'ombre l'après-midi. Si la baignade structure vos journées, regardez
+    {' '}<a href={L('/ou-dormir-marrakech/')}>l'Hivernage ou la Palmeraie</a>.
   </p>
 
-  <h2 id="ce-qui-est-couvert">Ce que le tout inclus couvre vraiment</h2>
-  <p>
-    L'argument, c'est la pension complète plus les boissons, mais le détail varie d'un resort à
-    l'autre, et c'est dans ce détail que les vacances se jouent. Voici la répartition habituelle :
-  </p>
-  <div class="grid grid-2" style="margin-top:1.5rem">
-    <div class="card">
-      <h3>Généralement inclus</h3>
-      <p>Petit-déjeuner, déjeuner et dîner en buffet ; boissons de marque locale en journée ; les piscines ; la plupart des activités de jour et des animations du soir ; transats et équipement de base.</p>
-    </div>
-    <div class="card">
-      <h3>Souvent en supplément</h3>
-      <p>Boissons de marque ou importées ; restaurants à la carte (parfois une réservation offerte, puis payants) ; le spa ; les excursions ; les sports nautiques motorisés ; les catégories de chambre supérieures ou vue mer.</p>
-    </div>
+  <h2>Comment choisir la bonne maison</h2>
+  <ol>
+    <li><strong>La porte de rattachement.</strong> Un riad proche d'un grand bab — Doukkala, Laksour, Agnaou — s'atteint en trois minutes ; un riad au cœur du labyrinthe en demande dix.</li>
+    <li><strong>La climatisation.</strong> Indispensable de juin à septembre, où la ville dépasse fréquemment 40 °C.</li>
+    <li><strong>Le nombre de chambres.</strong> Quatre chambres donnent une maison privée ; douze donnent un petit hôtel.</li>
+    <li><strong>Le service de porteur.</strong> Confirmez-le par écrit à la réservation.</li>
+    <li><strong>Le petit-déjeuner en terrasse.</strong> Simple à vérifier, et c'est souvent le meilleur moment de la journée.</li>
+  </ol>
+
+  <h2>Nos fiches détaillées</h2>
+  <div class="table-wrap">
+    <table class="data">
+      <thead>
+        <tr><th>Riad</th><th>Notre angle</th><th>Fiche</th></tr>
+      </thead>
+      <tbody>
+        {nos.map((n) => (
+          <tr>
+            <td><strong>{n.nom}</strong></td>
+            <td>{n.angle}</td>
+            <td><a href={L(n.href)}>Lire</a></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   </div>
-  <p class="small text-muted">
-    Lisez toujours la formule de pension et la politique boissons du resort précis, « tout inclus »
-    n'est pas un standard figé, et l'écart entre une formule basique et premium tient surtout aux
-    boissons et au choix de restaurants.
-  </p>
 
   <div class="callout">
-    <span class="callout-label">Conseil local</span>
-    Même en tout inclus, sortez au moins une fois dîner sur la promenade ou en ville. Le poisson grillé
-    et les tajines d'Agadir sont un autre monde qu'un buffet de resort, et c'est le rappel le plus
-    simple que vous êtes au Maroc, pas dans un resort soleil interchangeable.
+    <span class="callout-label">Le bon compromis</span>
+    <p>
+      Si vous hésitez, réservez un riad dans le premier cercle de la médina, à proximité immédiate d'une
+      grande porte. Vous gardez l'expérience — patio, terrasse, ruelles — en réduisant la marche
+      d'approche à quelques minutes, ce qui règle l'essentiel des réserves formulées plus haut.
+    </p>
   </div>
 
-  <h2 id="pour-qui">À qui ça convient</h2>
-  <p>
-    Le tout inclus à Agadir donne le meilleur aux familles qui veulent les repas et les piscines réglés
-    sans décisions quotidiennes, aux couples cherchant une semaine soleil sans rien faire, et à tous
-    ceux qui aiment un budget fixe sans surprise. Il convient moins si vous voulez dîner dans toute la
-    ville, explorer la vallée du Souss ou Taroudant, ou surfer sur la côte, pour cela, un hôtel de
-    plage ou de marina en simple chambre laisse plus de liberté. Si vous hésitez, notre guide
-    <a href={L('/where-to-stay-agadir/')}>où dormir</a> pèse resort contre hôtel de ville, quartier par
-    quartier.
-  </p>
-
-  <h2 id="transfert">Rejoindre votre resort depuis l'aéroport</h2>
-  <p>
-    Les resorts de Founty sont à environ 22 km d'Al Massira, 25–40 minutes de route, sans train ni
-    bus utile. Beaucoup de séjours en formule incluent un transfert en autocar : pratique, mais cela
-    peut signifier un trajet lent avec plusieurs arrêts hôtels. Si le vôtre n'en comprend pas, ou si
-    vous préférez aller droit à la porte, un transfert privé à prix fixe vous dépose au resort en une
-    fois. Connaissez le nom et la zone de votre resort (Founty, le sud de la baie) pour que le chauffeur
-    vise la bonne extrémité de la corniche. Voyez la route
-    <a href={L('/agadir-airport-to-agadir/')}>aéroport vers Agadir</a> pour les tarifs transfert et
-    taxi du moment.
-  </p>
-
-  <div class="disclosure-inline">
-    Certains liens ici sont des liens d'affiliation : si vous réservez via ces liens, nous pouvons
-    percevoir une petite commission, sans surcoût pour vous. Cela ne change ni les prix affichés ni nos
-    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
-  </div>
-
-  <p>
-    Vous comparez les options ? Lisez le guide complet
-    <a href={L('/where-to-stay-agadir/')}>où dormir à Agadir</a> pour choisir d'abord un quartier.
+  <p class="small text-muted">
+    Repères et conseils vérifiés en {PRICES_CHECKED}. Pour l'ensemble des quartiers, voyez
+    {' '}<a href={L('/ou-dormir-marrakech/')}>où dormir à Marrakech</a> ; pour les grands hôtels,
+    {' '}<a href={L('/meilleurs-hotels-marrakech/')}>notre sélection</a>.
   </p>
 </HotelLayout>

@@ -1,83 +1,80 @@
 ---
 import HotelReviewLayout from '../layouts/HotelReviewLayout.astro';
 import { getLocalizedPath, useTranslations } from '../i18n';
-// Import images
-import heroImg from '../assets/img/placeholder.png';
-import bodyImg from '../assets/img/placeholder.png';
-import { Image } from 'astro:assets';
+import { photos } from '../data/images';
 
-const lang = 'fr';
-const t = useTranslations(lang);
-const L = (p: string) => getLocalizedPath(p, lang);
+const t = useTranslations('fr');
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: t('nav.home'), href: L('/') },
-  { name: t('nav.hotels'), href: L('/best-hotels-agadir/') },
-  { name: 'Iberostar Founty Beach', href: L('/iberostar-founty-beach-review/') },
+  { name: 'Où dormir', href: L('/ou-dormir-marrakech/') },
+  { name: 'Es Saadi Palace', href: L('/avis-es-saadi-palace/') },
 ];
 ---
 <HotelReviewLayout
-  lang={lang}
-  title={`Iberostar Founty Beach. Avis & Accès Aéroport | AirportAGA`}
-  description={`Un avis détaillé sur l'Iberostar Founty Beach à Agadir. Le resort All-Inclusive ultime pour les familles.`}
-  h1={`Iberostar Founty Beach. Avis & Accès Aéroport`}
-  subtitle={`Le resort familial All-Inclusive par excellence à Agadir`}
+  title={`Es Saadi Palace Marrakech : notre avis et l'accès depuis l'aéroport | AirportRAK`}
+  description={`Notre regard sur Es Saadi : un domaine familial de l'Hivernage, plusieurs niveaux d'hébergement dans un grand parc, et le quartier le plus rapide d'accès depuis l'aéroport de Marrakech.`}
+  h1={`Es Saadi Palace : notre avis et l'accès depuis l'aéroport`}
+  subtitle={`Un domaine familial de l'Hivernage, à dix minutes du terminal`}
   breadcrumbs={breadcrumbs}
-  brand={`Iberostar Founty Beach`}
+  brand={`Es Saadi`}
   rating={4.5}
-  verdict={`Une machine à vacances parfaitement huilée pour les familles.`}
-  priceAvg={`120€ - 250€ / nuit`}
-  address={`B.P. 1039, Cite Founty, Agadir 80000`}
-  stars={`★★★★`}
+  verdict={`Un parc de plusieurs hectares en pleine ville, plusieurs catégories d'hébergement et une gestion familiale de longue date. Le quartier le plus rapide depuis l'aéroport, idéal en famille ou pour une dernière nuit.`}
+  priceAvg={`Élevé, variable selon l'aile`}
+  address={`Hivernage, quartier des grands hôtels`}
+  stars={`★★★★★`}
   ratingText={`Excellent`}
-  heroImage={heroImg}
-  ctaLink="https://www.booking.com/hotel/ma/iberostar-founty-beach.fr.html"
-  ctaLabel={`Voir les disponibilités`}
-  faqs={[{"q": "L'Iberostar Founty Beach est-il bien pour les enfants ?", "a": "Absolument. C'est considéré comme le meilleur resort familial d'Agadir grâce à son programme Star Camp."}, {"q": "Combien coûte un taxi de l'aéroport à l'Iberostar ?", "a": "Un taxi officiel coûte environ 220-250 MAD (22-25 EUR). Un transfert privé est recommandé pour les familles."}]}
+  heroImage={photos['es-saadi-palace']}
+  ctaLink={L('/ou-dormir-marrakech/')}
+  ctaLabel={`Comparer les disponibilités`}
+  faqs={[
+    { q: "Où se situe Es Saadi ?", a: "Dans l'Hivernage, le quartier des grands hôtels et des jardins, à environ 4 km de l'aéroport et une dizaine de minutes en voiture. C'est l'un des secteurs les plus rapides d'accès depuis le terminal." },
+    { q: "Quelle différence entre les différentes parties du domaine ?", a: "Le domaine réunit plusieurs entités dans un même parc : une partie hôtelière historique, une partie palace aux prestations supérieures, et des villas privées. Le choix dépend du niveau de service et d'espace recherché, toutes partageant les jardins." },
+    { q: "Es Saadi convient-il aux familles ?", a: "Oui, c'est l'un de ses points forts dans l'Hivernage : de vastes jardins, des espaces piscine généreux et des hébergements familiaux, dans un domaine clos où les enfants circulent sans traverser de rue." },
+    { q: "Peut-on rejoindre la médina à pied depuis l'Hivernage ?", a: "C'est faisable mais long, entre vingt-cinq et quarante minutes selon le point d'entrée, le long d'avenues peu ombragées. En pratique, un petit taxi coûte quelques dirhams et règle la question en dix minutes." }
+  ]}
 >
   <div class="content-block">
-    <h2>Présentation</h2>
-    <p>L'Iberostar Founty Beach est une institution à Agadir. Connu pour ses immenses piscines et ses programmes d'animation intenses, c'est sans doute le resort familial le plus populaire. Situé sur la plage, il offre un environnement sans stress pour les familles atterrissant à l'aéroport d'Agadir.</p>
-    
-    <h3>Pourquoi choisir l'Iberostar Founty Beach ?</h3>
+    <h2>Ce que c'est</h2>
+    <p>
+      Es Saadi est une institution marrakchie d'un genre différent : un domaine familial de l'Hivernage,
+      développé depuis les années 1950 par la même famille, devenu au fil des décennies un parc
+      réunissant plusieurs niveaux d'hébergement — partie hôtelière historique, aile palace plus
+      récente, villas privées — autour de grands jardins.
+    </p>
+
+    <h3>Pourquoi on le retient</h3>
     <ul class="pros-list">
-      <li>Incroyable club enfants (Star Camp) et animation quotidienne.</li>
-      <li>Complexe de piscines géant avec des zones pour tous les âges.</li>
-      <li>Buffets All-Inclusive très généreux et variés.</li>
-      <li>Accès direct à la magnifique plage de sable fin.</li>
-      <li>Chambres familiales spacieuses disponibles.</li>
+      <li>Un parc de plusieurs hectares en pleine ville, rare dans l'Hivernage.</li>
+      <li>Plusieurs catégories d'hébergement sur un même domaine.</li>
+      <li>Une gestion familiale de longue date, sensible dans le ton du service.</li>
+      <li>Espaces piscine généreux, appréciés en famille.</li>
+      <li>L'accès le plus rapide du centre depuis l'aéroport.</li>
     </ul>
 
-    <h3>Les Chambres</h3>
-    <p>Les chambres sont lumineuses, confortables et pensées pour les familles. Beaucoup offrent une vue mer. Bien qu'elles arborent une esthétique de resort traditionnel plutôt qu'un luxe ultra-moderne, elles sont d'une propreté irréprochable et très fonctionnelles.</p>
-    
-    <div style="margin: 2rem 0; border-radius: 8px; overflow: hidden;">
-      <Image src={bodyImg} alt={`Iberostar Founty Beach`} widths={[768, 1200]} sizes="(max-width: 768px) 100vw, 800px" />
-    </div>
+    <h2>L'accès depuis l'aéroport</h2>
+    <p>
+      L'Hivernage est le premier quartier que l'on atteint en sortant du RAK : comptez une dizaine de
+      minutes en conditions normales, un peu plus en fin d'après-midi. Dépose devant la réception,
+      aucune contrainte de bagages. C'est le quartier que nous recommandons pour une dernière nuit avant
+      un vol matinal — voyez <a href={L('/hotels-pres-aeroport-marrakech/')}>dormir près du RAK</a>.
+    </p>
 
-    <h2>Comment rejoindre l'Iberostar depuis l'aéroport</h2>
-    <ol class="steps-list">
-      <li>Sortez du terminal des arrivées d'Agadir Al Massira (AGA).</li>
-      <li>Prenez votre transfert réservé à l'avance ou un grand taxi officiel.</li>
-      <li>Le trajet dure environ 35 minutes jusqu'à la zone touristique de Founty.</li>
-      <li>L'enregistrement est géré efficacement par la grande équipe de réception.</li>
-    </ol>
+    <h2>Pour qui</h2>
+    <p>
+      Pour les familles et les séjours où l'on souhaite un vrai espace extérieur sans quitter le centre,
+      et pour les voyageurs qui préfèrent la commodité d'un grand domaine à l'immersion d'un riad. Les
+      amateurs de ruelles et de patios trouveront leur compte du côté de la
+      <a href={L('/medina-marrakech/')}>médina</a>.
+    </p>
 
-    <h2>Équipements & Services</h2>
-    <div class="features-grid">
-      <div class="feature-item"><strong>Club Enfants (Star Camp)</strong><p>Activités par âge pour divertir les enfants toute la journée.</p></div>
-      <div class="feature-item"><strong>Complexe Aquatique</strong><p>Immenses piscines extérieures et bassins pour enfants.</p></div>
-      <div class="feature-item"><strong>Restauration All-Inclusive</strong><p>Buffets géants avec stands locaux et internationaux.</p></div>
-      <div class="feature-item"><strong>Sports & Fitness</strong><p>Courts de tennis, salle de sport et beach-volley.</p></div>
-    </div>
-
-    <h2>Idéal pour des vacances en famille sans effort</h2>
-    <p>Si vous voulez vous détendre au bord de la piscine pendant que les enfants sont pris en charge par des pros, tout en profitant de repas à volonté, c'est le meilleur choix en ville.</p>
-
-    <div class="promo-box">
-      <h3>Meilleur Tarif Garanti</h3>
-      <p>Réservez vos vacances en famille dès aujourd'hui avec des options d'annulation flexibles.</p>
-      <a class="btn btn--green" href="https://www.booking.com/hotel/ma/iberostar-founty-beach.fr.html" rel="nofollow sponsored" target="_blank">{`Voir les disponibilités`}</a>
-    </div>
+    <h2>À savoir avant de réserver</h2>
+    <p>
+      Le domaine regroupant plusieurs entités, vérifiez précisément laquelle vous réservez : prestations
+      et tarifs diffèrent sensiblement d'une partie à l'autre. Pour le contexte saisonnier, voyez
+      <a href={L('/quand-partir-marrakech/')}>quand partir</a>, et pour l'ensemble de l'offre,
+      <a href={L('/meilleurs-hotels-marrakech/')}>les meilleurs hôtels de Marrakech</a>.
+    </p>
   </div>
 </HotelReviewLayout>

@@ -1,83 +1,82 @@
 ---
 import HotelReviewLayout from '../layouts/HotelReviewLayout.astro';
 import { getLocalizedPath, useTranslations } from '../i18n';
-// Import images
-import heroImg from '../assets/img/placeholder.png';
-import bodyImg from '../assets/img/placeholder.png';
-import { Image } from 'astro:assets';
+import { photos } from '../data/images';
 
-const lang = 'fr';
-const t = useTranslations(lang);
-const L = (p: string) => getLocalizedPath(p, lang);
+const t = useTranslations('fr');
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: t('nav.home'), href: L('/') },
-  { name: t('nav.hotels'), href: L('/best-hotels-agadir/') },
-  { name: 'Riu Tikida Beach', href: L('/riu-tikida-beach-review/') },
+  { name: 'Où dormir', href: L('/ou-dormir-marrakech/') },
+  { name: 'Royal Mansour', href: L('/avis-royal-mansour/') },
 ];
 ---
 <HotelReviewLayout
-  lang={lang}
-  title={`Riu Tikida Beach. Avis Adults Only & Tarifs | AirportAGA`}
-  description={`Notre avis d'expert sur le Riu Tikida Beach. Le meilleur resort All-Inclusive réservé aux adultes à Agadir.`}
-  h1={`Riu Tikida Beach. Avis Adults Only & Tarifs`}
-  subtitle={`L'oasis All-Inclusive premium réservée aux adultes`}
+  title={`Royal Mansour Marrakech : notre avis et l'accès depuis l'aéroport | AirportRAK`}
+  description={`Notre regard sur le Royal Mansour : des riads privés plutôt que des chambres, un artisanat marocain d'exception, et un accès depuis l'aéroport de Marrakech en une vingtaine de minutes.`}
+  h1={`Royal Mansour : notre avis et l'accès depuis l'aéroport`}
+  subtitle={`Des riads privés au lieu de chambres, le long des remparts`}
   breadcrumbs={breadcrumbs}
-  brand={`Riu Tikida Beach`}
-  rating={4.5}
-  verdict={`L'escapade paisible parfaite pour les couples, sans enfants.`}
-  priceAvg={`140€ - 280€ / nuit`}
-  address={`Chemin des Dunes, Agadir 80000`}
-  stars={`★★★★`}
-  ratingText={`Excellent`}
-  heroImage={heroImg}
-  ctaLink="https://www.booking.com/hotel/ma/riu-tikida-beach.fr.html"
-  ctaLabel={`Voir les disponibilités`}
-  faqs={[{"q": "Le Riu Tikida Beach est-il strictement réservé aux adultes ?", "a": "Oui, les clients doivent être âgés de 16 ans ou plus."}, {"q": "Le All-Inclusive inclut-il l'alcool ?", "a": "Oui, la formule comprend une large gamme de boissons alcoolisées locales et internationales."}]}
+  brand={`Royal Mansour`}
+  rating={4.9}
+  verdict={`Le sommet du marché marrakchi, et une conception à part : un jardin de riads privés plutôt qu'un palace vertical. Intimité totale, artisanat d'exception, accès routier immédiat depuis le RAK.`}
+  priceAvg={`Très élevé, tarification par riad`}
+  address={`Le long des remparts, secteur Bab Jdid`}
+  stars={`★★★★★`}
+  ratingText={`Exceptionnel`}
+  heroImage={photos['royal-mansour']}
+  ctaLink={L('/ou-dormir-marrakech/')}
+  ctaLabel={`Comparer les disponibilités`}
+  faqs={[
+    { q: "Où se trouve le Royal Mansour par rapport à l'aéroport ?", a: "À environ 5 km du terminal, le long des remparts, soit 12 à 20 minutes de route. L'accès est entièrement routier : aucune marche dans les ruelles n'est nécessaire." },
+    { q: "Qu'est-ce qui distingue le Royal Mansour des autres palaces de Marrakech ?", a: "Sa conception : l'hôtel n'est pas un bâtiment unique mais un ensemble de riads privés répartis dans un jardin, chacun avec son patio et sa terrasse. L'établissement a été voulu par le roi Mohammed VI et ouvert en 2010, avec un travail d'artisanat marocain poussé très loin." },
+    { q: "Le Royal Mansour est-il adapté aux familles ?", a: "La configuration en riads privés, avec plusieurs chambres et un espace de vie propre, convient particulièrement aux familles et aux groupes qui souhaitent une intimité totale." },
+    { q: "Quel budget prévoir ?", a: "C'est l'adresse la plus haut de gamme de la ville, dans un ordre de prix nettement supérieur aux autres palaces marrakchis. Les tarifs s'entendent par riad et varient fortement selon la saison." }
+  ]}
 >
   <div class="content-block">
-    <h2>Présentation</h2>
-    <p>Une oasis pour adultes au cœur de la baie d'Agadir. Le Riu Tikida Beach promet détente, service premium et excellente gastronomie, sans le bruit d'un resort familial typique. Si vous cherchez la paix, la thalassothérapie et des cocktails au bord de la piscine, c'est votre destination.</p>
-    
-    <h3>Pourquoi choisir le Riu Tikida Beach ?</h3>
+    <h2>Ce que c'est</h2>
+    <p>
+      Ouvert en 2010 à l'initiative du roi Mohammed VI, le Royal Mansour a pris le contre-pied de
+      l'hôtellerie de luxe classique : au lieu d'un palace vertical, un ensemble de riads privés
+      dispersés dans un jardin clos, chacun avec son patio, son salon et sa terrasse sur le toit.
+      L'artisanat y a été porté à un degré d'exécution — zellige, plâtre sculpté, bois de cèdre — qui en
+      fait autant une vitrine du savoir-faire marocain qu'un hôtel.
+    </p>
+
+    <h3>Pourquoi on le retient</h3>
     <ul class="pros-list">
-      <li>Strictement réservé aux adultes (16+) pour une atmosphère calme.</li>
-      <li>Excellent centre de thalassothérapie pour le bien-être.</li>
-      <li>Service All-Inclusive premium 24h/24 (nourriture et boissons).</li>
-      <li>Superbe plage privée avec chaises longues dédiées.</li>
-      <li>Divertissements en soirée sophistiqués.</li>
+      <li>Des riads privés plutôt que des chambres : intimité complète, plusieurs niveaux.</li>
+      <li>Un niveau d'artisanat exceptionnel, jusque dans les circulations de service.</li>
+      <li>Une adresse le long des remparts, à quelques minutes en voiture de la médina.</li>
+      <li>Un service d'une densité rare, pensé pour être invisible.</li>
+      <li>Restauration et spa au niveau de l'ensemble.</li>
     </ul>
 
-    <h3>Les Chambres</h3>
-    <p>Les chambres présentent une décoration élégante propice à la détente. Elles sont équipées d'installations modernes, de lits king-size confortables et de balcons donnant sur la piscine ou l'océan.</p>
-    
-    <div style="margin: 2rem 0; border-radius: 8px; overflow: hidden;">
-      <Image src={bodyImg} alt={`Riu Tikida Beach`} widths={[768, 1200]} sizes="(max-width: 768px) 100vw, 800px" />
-    </div>
+    <h2>L'accès depuis l'aéroport</h2>
+    <p>
+      Cinq kilomètres, douze à vingt minutes, dépose devant l'établissement. L'hôtel prend en charge les
+      transferts pour ses hôtes ; si vous organisez vous-même le trajet, un
+      <a href={L('/reserver-transfert/')}>transfert privé réservé</a> évite toute discussion à l'arrivée
+      et permet d'annoncer un horaire exact.
+    </p>
 
-    <h2>Comment rejoindre le Riu Tikida Beach depuis l'aéroport</h2>
-    <ol class="steps-list">
-      <li>Récupérez vos bagages à l'aéroport d'Agadir.</li>
-      <li>Retrouvez votre chauffeur privé tenant un panneau à votre nom.</li>
-      <li>Profitez d'un trajet agréable de 35 minutes le long de la côte.</li>
-      <li>Arrivez à l'entrée où le personnel vous accueillera avec un verre.</li>
-    </ol>
+    <h2>Pour qui</h2>
+    <p>
+      Pour un séjour où la discrétion et l'espace privé comptent autant que le décor : familles réunies,
+      voyages d'exception, séjours où l'on souhaite ne croiser personne. La configuration en riads le
+      rend particulièrement adapté aux groupes qui veulent rester ensemble sans partager un couloir
+      d'hôtel.
+    </p>
 
-    <h2>Équipements & Services</h2>
-    <div class="features-grid">
-      <div class="feature-item"><strong>Adults Only</strong><p>Un environnement strictement sans enfants.</p></div>
-      <div class="feature-item"><strong>Spa Thalasso</strong><p>Traitements à l'eau de mer et massages.</p></div>
-      <div class="feature-item"><strong>4 Restaurants</strong><p>Restauration variée incluant cuisine marocaine et fusion.</p></div>
-      <div class="feature-item"><strong>Discothèque & Bars</strong><p>Bars élégants et discothèque sur place.</p></div>
-    </div>
-
-    <h2>Idéal pour les couples et les amis</h2>
-    <p>Parfait pour les escapades romantiques ou un voyage relaxant entre amis où l'accent est mis sur le bien-être, la bonne nourriture et la tranquillité.</p>
-
-    <div class="promo-box">
-      <h3>Réservez votre escapade sans enfants</h3>
-      <p>Les resorts "Adults Only" à Agadir se remplissent vite. Vérifiez les prix aujourd'hui.</p>
-      <a class="btn btn--green" href="https://www.booking.com/hotel/ma/riu-tikida-beach.fr.html" rel="nofollow sponsored" target="_blank">{`Voir les disponibilités`}</a>
-    </div>
+    <h2>À savoir avant de réserver</h2>
+    <p>
+      C'est le segment le plus élevé du marché marrakchi, avec une tarification par riad et une forte
+      saisonnalité. Pour comparer avec les autres adresses de la ville, voyez notre sélection
+      <a href={L('/meilleurs-hotels-marrakech/')}>meilleurs hôtels de Marrakech</a>, et
+      <a href={L('/ou-dormir-marrakech/')}>quel quartier pour dormir</a> pour arbitrer entre médina,
+      Hivernage et Palmeraie.
+    </p>
   </div>
 </HotelReviewLayout>

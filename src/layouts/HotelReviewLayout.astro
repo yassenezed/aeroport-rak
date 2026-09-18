@@ -93,13 +93,13 @@ const absCrumbs = breadcrumbs.map((c) => ({ name: c.name, url: site.url + c.href
 
     <aside class="sidebar">
       <div class="widget">
-        <h3>{lang === 'fr' ? 'Infos Pratiques' : lang === 'es' ? 'Información Práctica' : lang === 'de' ? 'Praktische Infos' : lang === 'nl' ? 'Praktische Info' : lang === 'ar' ? 'معلومات عملية' : 'Practical Info'}</h3>
+        <h3>Infos pratiques</h3>
         <ul class="info-list">
-          <li><strong>{lang === 'fr' ? 'Classement' : lang === 'es' ? 'Clasificación' : lang === 'de' ? 'Klassifizierung' : lang === 'nl' ? 'Classificatie' : lang === 'ar' ? 'التصنيف' : 'Category'} :</strong> {stars}</li>
-          <li><strong>{lang === 'fr' ? 'Note Clients' : lang === 'es' ? 'Puntuación' : lang === 'de' ? 'Bewertung' : lang === 'nl' ? 'Beoordeling' : lang === 'ar' ? 'تقييم العملاء' : 'Guest Rating'} :</strong> {rating}/5 ({ratingText})</li>
-          <li><strong>{lang === 'fr' ? 'Prix Moyen' : lang === 'es' ? 'Precio Medio' : lang === 'de' ? 'Durchschnittspreis' : lang === 'nl' ? 'Gemiddelde Prijs' : lang === 'ar' ? 'متوسط السعر' : 'Average Price'} :</strong> {priceAvg}</li>
-          <li><strong>Wi-Fi :</strong> {lang === 'fr' ? 'Gratuit' : lang === 'es' ? 'Gratis' : lang === 'de' ? 'Kostenlos' : lang === 'nl' ? 'Gratis' : lang === 'ar' ? 'مجاني' : 'Free'}</li>
-          <li><strong>{lang === 'fr' ? 'Adresse' : lang === 'es' ? 'Dirección' : lang === 'de' ? 'Adresse' : lang === 'nl' ? 'Adres' : lang === 'ar' ? 'العنوان' : 'Address'} :</strong> {address}</li>
+          <li><strong>Classement :</strong> {stars}</li>
+          <li><strong>Notre note éditoriale :</strong> {rating}/5 ({ratingText})</li>
+          <li><strong>Ordre de prix :</strong> {priceAvg}</li>
+          <li><strong>Wi-Fi :</strong> Gratuit</li>
+          <li><strong>Quartier :</strong> {address}</li>
         </ul>
         <a class="btn btn--full btn--green mt-md" href={ctaLink} rel="nofollow sponsored" target="_blank">{ctaLabel}</a>
       </div>

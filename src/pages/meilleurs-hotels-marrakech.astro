@@ -1,257 +1,130 @@
 ---
-import { Image } from 'astro:assets';
-import img_hotel_1 from '../assets/img/placeholder.png';
-import img_hotel_2 from '../assets/img/placeholder.png';
-import img_hotel_3 from '../assets/img/placeholder.png';
-import img_hotel_4 from '../assets/img/placeholder.png';
-import img_hotel_5 from '../assets/img/placeholder.png';
-import img_hotel_6 from '../assets/img/placeholder.png';
-import img_hotel_7 from '../assets/img/placeholder.png';
-import img_hotel_8 from '../assets/img/placeholder.png';
-import img_hotel_9 from '../assets/img/placeholder.png';
-import img_hotel_10 from '../assets/img/placeholder.png';
-import img_hotel_11 from '../assets/img/placeholder.png';
-import img_hotel_12 from '../assets/img/placeholder.png';
-import img_hotel_13 from '../assets/img/placeholder.png';
-import img_hotel_14 from '../assets/img/placeholder.png';
-import img_hotel_15 from '../assets/img/placeholder.png';
-
-import HotelCard from '../components/hotels/HotelCard.astro';
 import HotelLayout from '../layouts/HotelLayout.astro';
-import AffiliateLink from '../components/affiliate/AffiliateLink.astro';
 import { getLocalizedPath } from '../i18n';
 import { photos } from '../data/images';
+import { PRICES_CHECKED } from '../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: 'Où dormir', href: L('/where-to-stay-agadir/') },
-  { name: 'Meilleurs hôtels', href: L('/best-hotels-agadir/') },
+  { name: 'Où dormir', href: L('/ou-dormir-marrakech/') },
+  { name: 'Meilleurs hôtels', href: L('/meilleurs-hotels-marrakech/') },
 ];
 
 const facts = [
-  { label: 'Top Hôtels', value: '15' },
-  { label: 'Catégories', value: '4' },
-  { label: 'Auberges', value: 'Dès 15€', sub: '/nuit' },
-  { label: 'Luxe 5*', value: 'Dès 120€', sub: '/nuit' },
+  { label: 'Palaces', value: 'Remparts', sub: 'Mamounia, Mansour' },
+  { label: 'Resorts', value: 'Hivernage', sub: 'jardins, piscines' },
+  { label: 'Riads', value: 'Médina', sub: 'petite échelle' },
+  { label: 'Vol matinal', value: 'Agdal', sub: '10–15 min' },
+];
+
+const selection = [
+  { nom: 'Royal Mansour', cat: 'Ultra-luxe', quartier: 'Remparts', pour: 'Intimité absolue, riads privés', href: '/avis-royal-mansour/' },
+  { nom: 'La Mamounia', cat: 'Palace historique', quartier: 'Remparts', pour: 'Jardins, héritage, médina à pied', href: '/avis-la-mamounia/' },
+  { nom: 'Es Saadi', cat: 'Resort familial', quartier: 'Hivernage', pour: 'Parc, piscines, familles', href: '/avis-es-saadi-palace/' },
+  { nom: 'Riad Yasmine', cat: 'Riad boutique', quartier: 'Médina', pour: 'Couples, immersion', href: '/avis-riad-yasmine/' },
+  { nom: 'Riad BE Marrakech', cat: 'Riad contemporain', quartier: 'Médina', pour: 'Premier riad, accès facile', href: '/avis-riad-be-marrakech/' },
 ];
 
 const faqs = [
-  { q: "Quels sont les meilleurs hôtels 5 étoiles à Agadir ?", a: "Agadir regorge de magnifiques établissements 5 étoiles, en particulier en bord de mer. The View Agadir, Riu Palace Tikida, Sofitel Thalassa et Pickalbatros Palais Des Roses figurent parmi les mieux notés, offrant luxe, immenses piscines et accès direct à la plage." },
-  { q: "Vaut-il mieux un resort tout compris ou un hôtel de charme ?", a: "Cela dépend de votre style de vacances. Si vous souhaitez vous détendre sans vous soucier des repas, les resorts tout compris de la zone de Founty (comme Iberostar ou Riu) sont parfaits. Si vous préférez l'intimité et le calme, optez pour un hôtel-boutique comme le Riad Villa Blanche ou Timoulay." },
-  { q: "À quelle distance se trouve l'aéroport de ces hôtels ?", a: "L'aéroport Al Massira (AGA) est situé à environ 22 km du centre et de la zone hôtelière. Il faut entre 30 et 40 minutes en taxi ou en transfert privé pour rejoindre la plupart de ces hôtels. Nous recommandons vivement de réserver un transfert privé à l'avance pour une arrivée sans stress." },
-  { q: "Y a-t-il de bonnes auberges de jeunesse pour les surfeurs à Agadir ?", a: "Absolument ! La région au nord d'Agadir (Taghazout, Tamraght, Banana Village) est mondialement connue pour le surf. Des auberges comme Tayri Surf House ou Dar Surf & Ocean offrent une ambiance incroyable, des prix abordables, et se trouvent à proximité des meilleurs spots de surf." },
+  {
+    q: "Quel est le meilleur hôtel de Marrakech ?",
+    a: "Cela dépend de ce que vous venez chercher. Pour l'intimité et l'artisanat, le Royal Mansour ; pour l'héritage et les jardins, La Mamounia ; pour un séjour en famille avec un vrai parc, Es Saadi dans l'Hivernage ; pour l'immersion en médina, un riad. Nos fiches détaillent chaque profil plutôt que de désigner un vainqueur unique."
+  },
+  {
+    q: "Hôtel ou riad à Marrakech ?",
+    a: "Le riad donne l'expérience de la médina — patio, terrasse, ruelles — avec une contrainte : l'arrivée à pied depuis une porte. L'hôtel de Guéliz, de l'Hivernage ou de la Palmeraie donne du confort pratique, une piscine où nager et une dépose devant la réception. Beaucoup de voyageurs combinent les deux sur un même séjour."
+  },
+  {
+    q: "Quand réserver pour avoir les meilleures adresses ?",
+    a: `Plusieurs mois à l'avance pour février, Pâques, les ponts de mai et les fêtes de fin d'année, qui sont les pics de Marrakech. Juillet et août, très chauds, se réservent facilement et se négocient. Repères relevés en ${PRICES_CHECKED}.`
+  },
+  {
+    q: "Quels hôtels sont les plus proches de l'aéroport ?",
+    a: "Ceux de l'Hivernage et de l'Agdal, à dix à quinze minutes du terminal, avec une dépose devant la réception. C'est le bon choix pour une première nuit après un vol tardif ou une dernière nuit avant un départ matinal — voyez notre page dormir près du RAK."
+  },
 ];
 ---
 <HotelLayout
-  lang={lang}
-  title="Les 15 Meilleurs Hôtels à Agadir (2026) : Palaces, Resorts & Hostels | AirportAGA"
-  description="Découvrez notre guide complet des meilleurs hôtels d'Agadir. Des palaces 5 étoiles et resorts tout compris aux hôtels de charme et surf camps."
-  eyebrow="Où dormir · Meilleurs hôtels"
-  h1="Les 15 Meilleurs Hôtels d'Agadir"
-  lede="Choisir le bon hôtel à Agadir, c'est savoir quel type de vacances vous souhaitez. Que vous cherchiez le luxe absolu face à l'océan, un resort tout compris pour la famille, ou un hostel convivial pour surfer, nous avons sélectionné les meilleurs établissements pour vous."
+  title="Les meilleurs hôtels de Marrakech : notre sélection par profil (2026) | AirportRAK"
+  description="Notre sélection d'adresses à Marrakech, du palace des remparts au riad de la médina : Royal Mansour, La Mamounia, Es Saadi, Riad Yasmine, Riad BE. Choisies par profil de séjour et par accès depuis l'aéroport."
+  eyebrow="Marrakech · Hébergement"
+  h1="Les meilleurs hôtels de Marrakech"
+  lede="Pas un classement, une sélection par profil : ce que chaque adresse fait mieux que les autres, pour qui, et ce que son emplacement implique quand vous arrivez de l'aéroport avec vos valises."
   breadcrumbs={breadcrumbs}
   facts={facts}
-  priceFrom={15}
-  heroImage={photos['agadir-bay']}
-faqs={faqs}
-  cta={{ heading: `Réservez votre transfert depuis l'aéroport d'Agadir`, text: `Évitez les files d'attente des taxis et commencez vos vacances sans stress. Réservez un chauffeur privé direct vers votre hôtel.`, provider: 'welcome-pickups', label: `Vérifier les prix` }}
+  heroImage={photos['la-mamounia']}
+  faqs={faqs}
 >
   <p>
-    En tant que passionnés de voyage, on nous demande souvent : « Quel est le meilleur hôtel à Agadir ? » La vérité est qu'il n'y a pas un seul « meilleur » hôtel. Tout dépend de ce que vous recherchez. Cherchez-vous une détente absolue dans un 5 étoiles ? Une atmosphère animée dans un resort tout compris ? Ou l'esprit bohème d'un surf camp ?
+    Marrakech compte parmi les villes les mieux dotées du bassin méditerranéen en hôtellerie de
+    caractère : palaces historiques le long des remparts, resorts à jardins dans l'Hivernage, resorts
+    plus vastes dans la Palmeraie, et des centaines de riads dans la médina. Trop d'offre, en réalité,
+    ce qui rend le choix difficile. Nous l'abordons par profil de séjour, en intégrant un critère que
+    les classements ignorent : comment on y arrive.
   </p>
+
+  <h2>Notre sélection</h2>
+  <div class="table-wrap">
+    <table class="data">
+      <thead>
+        <tr><th>Adresse</th><th>Catégorie</th><th>Quartier</th><th>Idéale pour</th><th>Fiche</th></tr>
+      </thead>
+      <tbody>
+        {selection.map((s, i) => (
+          <tr class:list={[{ 'row-highlight': i === 0 }]}>
+            <td><strong>{s.nom}</strong></td>
+            <td>{s.cat}</td>
+            <td>{s.quartier}</td>
+            <td>{s.pour}</td>
+            <td><a href={L(s.href)}>Lire</a></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Par profil de séjour</h2>
+  <h3>Voyage d'exception, anniversaire, lune de miel</h3>
   <p>
-    Voici notre sélection très soignée des 15 meilleurs hébergements à Agadir, triés par catégorie et tous avec d'excellentes notes.
+    <a href={L('/avis-royal-mansour/')}>Royal Mansour</a> pour l'intimité de riads privés et un niveau
+    d'artisanat rare, <a href={L('/avis-la-mamounia/')}>La Mamounia</a> pour l'héritage et des jardins
+    qui constituent à eux seuls une raison de venir. Dans les deux cas, l'accès depuis l'aéroport est
+    routier et immédiat.
+  </p>
+  <h3>Famille, séjour d'une semaine</h3>
+  <p>
+    <a href={L('/avis-es-saadi-palace/')}>Es Saadi</a> dans l'Hivernage : un parc clos, des piscines
+    généreuses, plusieurs catégories d'hébergement et dix minutes de route depuis le terminal. La
+    Palmeraie est l'alternative si vous voulez davantage d'espace, avec un éloignement à assumer.
+  </p>
+  <h3>Couple, immersion, court séjour</h3>
+  <p>
+    Un riad en médina : <a href={L('/avis-riad-yasmine/')}>Riad Yasmine</a> pour l'atmosphère et le
+    patio, <a href={L('/avis-riad-be-marrakech/')}>Riad BE</a> pour un premier riad avec un accès simple
+    par Bab Doukkala. Notre guide complet de la formule est sur
+    {' '}<a href={L('/riads-medina-marrakech/')}>riads dans la médina</a>.
+  </p>
+  <h3>Une nuit avant le vol</h3>
+  <p>
+    Hivernage ou Agdal, sans hésitation. Voyez
+    {' '}<a href={L('/hotels-pres-aeroport-marrakech/')}>dormir près du RAK</a>.
   </p>
 
-  <h2 class="category-title" id="luxury">Palaces & Luxe : Les Meilleurs Hôtels 5 Étoiles</h2>
-  <div class="hotel-list">
-    <HotelCard 
-      name="1. The View Agadir"
-      rating={5}
-      location="Baie d'Agadir"
-      description="Un chef-d'œuvre de l'hôtellerie moderne surplombant l'océan avec un design épuré et des restaurants gastronomiques exceptionnels."
-      features={['Design luxueux moderne', 'Restaurants gastronomiques exceptionnels', 'Piscine à débordement sur l\'océan']}
-      imageSrc={img_hotel_1}
-      imageAlt="The View Agadir aeroport al massira"
-      bookingUrl="https://www.booking.com/hotel/ma/the-view-agadir-hotel.fr.html"
-      reviewUrl="/fr/avis-the-view-agadir/"
-      translations={{'viewPrices': 'Voir les prix', 'readReview': 'Lire l\'avis complet'}}
-    />
-    <HotelCard 
-      name="2. Sofitel Agadir Thalassa Sea &amp; Spa"
-      rating={5}
-      location="Bord de mer, Agadir"
-      description="Le summum du bien-être axé sur la thalassothérapie et la détente avec une architecture marocaine contemporaine."
-      features={['Immense centre de thalassothérapie', 'Plage privée', 'Architecture marocaine contemporaine']}
-      imageSrc={img_hotel_2}
-      imageAlt="Sofitel Agadir Thalassa aeroport al massira"
-      bookingUrl="https://www.booking.com/searchresults.html?ss=Sofitel+Agadir+Thalassa"
-      translations={{'viewPrices': 'Voir les prix', 'readReview': 'Lire l\'avis complet'}}
-    />
-    <HotelCard 
-      name="3. Hotel Riu Palace Tikida Agadir"
-      rating={5}
-      location="Promenade, Agadir"
-      description="Un classique intemporel dominant la promenade avec un service 5 étoiles impeccable et des jardins luxuriants."
-      features={['Tout compris Premium', 'Jardins luxuriants', 'Piscine géante']}
-      imageSrc={img_hotel_3}
-      imageAlt="Hotel Riu Palace Tikida Agadir aeroport al massira"
-      bookingUrl="https://www.booking.com/searchresults.html?ss=Riu+Palace+Tikida+Agadir"
-      translations={{'viewPrices': 'Voir les prix', 'readReview': 'Lire l\'avis complet'}}
-    />
-    <HotelCard 
-      name="4. Pickalbatros Palais Des Roses"
-      rating={5}
-      location="Founty, Agadir"
-      description="Un grand resort de style palatial avec un immense complexe de spa et une architecture arabo-mauresque éblouissante."
-      features={['Spa de 12 000 m²', 'Architecture arabo-mauresque', 'Accès privé à la plage']}
-      imageSrc={img_hotel_4}
-      imageAlt="Pickalbatros Palais Des Roses aeroport al massira"
-      bookingUrl="https://www.booking.com/searchresults.html?ss=Pickalbatros+Palais+Des+Roses"
-      translations={{'viewPrices': 'Voir les prix', 'readReview': 'Lire l\'avis complet'}}
-    />
+  <div class="callout">
+    <span class="callout-label">Notre méthode</span>
+    <p>
+      Nous ne notons pas les établissements sur la base d'un séjour unique. Nos fiches s'appuient sur
+      des caractéristiques stables — emplacement, configuration, type d'expérience, accès depuis
+      l'aéroport — et le disent quand une adresse ne convient pas à un profil. Nos notes sont
+      éditoriales et signalées comme telles ; les tarifs ne sont donnés qu'en ordre de grandeur, car ils
+      varient du simple au triple selon la saison.
+    </p>
   </div>
 
-  <h2 class="category-title" id="comfort">Confort & Tout compris : Les Excellents Hôtels 4 Étoiles</h2>
-  <div class="hotel-list">
-    <HotelCard 
-      name="5. Hotel Riu Tikida Beach"
-      rating={4}
-      location="Plage de Founty"
-      description="Un resort festif réservé aux adultes avec un accès direct à la plage et un programme d'animations dynamique."
-      features={['Réservé aux adultes', 'Accès direct à la plage', 'Ambiance festive']}
-      imageSrc={img_hotel_5}
-      imageAlt="Hotel Riu Tikida Beach aeroport al massira"
-      bookingUrl="https://www.booking.com/hotel/ma/riu-tikida-beach.fr.html"
-      reviewUrl="/fr/avis-riu-tikida-beach/"
-      translations={{'viewPrices': 'Voir les prix', 'readReview': 'Lire l\'avis complet'}}
-    />
-    <HotelCard 
-      name="6. Iberostar Founty Beach"
-      rating={4}
-      location="Plage de Founty"
-      description="Le resort familial idéal avec un club enfants fantastique, de multiples piscines et des repas tout compris."
-      features={['Parfait pour les familles', 'Club enfants et animations', 'Grandes piscines']}
-      imageSrc={img_hotel_6}
-      imageAlt="Iberostar Founty Beach aeroport al massira"
-      bookingUrl="https://www.booking.com/hotel/ma/iberostar-founty-beach.fr.html"
-      reviewUrl="/fr/avis-iberostar-founty-beach/"
-      translations={{'viewPrices': 'Voir les prix', 'readReview': 'Lire l\'avis complet'}}
-    />
-    <HotelCard 
-      name="7. Allegro Agadir"
-      rating={4}
-      location="Zone touristique"
-      description="Un tout compris d'un excellent rapport qualité-prix au cœur de la zone touristique, entouré de magnifiques jardins."
-      features={['Cœur du secteur touristique', 'Excellent rapport qualité-prix Tout compris', 'Magnifiques jardins']}
-      imageSrc={img_hotel_7}
-      imageAlt="Allegro Agadir aeroport al massira"
-      bookingUrl="https://www.booking.com/searchresults.html?ss=Allegro+Agadir"
-      translations={{'viewPrices': 'Voir les prix', 'readReview': 'Lire l\'avis complet'}}
-    />
-    <HotelCard 
-      name="8. ROBINSON Agadir"
-      rating={4}
-      location="Dunes royales, Agadir"
-      description="Un resort unique situé dans des dunes spectaculaires à côté du Palais Royal avec de vastes installations sportives."
-      features={['À côté du Palais Royal', 'Cadre de dunes spectaculaire', 'Vastes installations sportives']}
-      imageSrc={img_hotel_8}
-      imageAlt="ROBINSON Agadir aeroport al massira"
-      bookingUrl="https://www.booking.com/searchresults.html?ss=ROBINSON+Agadir"
-      translations={{'viewPrices': 'Voir les prix', 'readReview': 'Lire l\'avis complet'}}
-    />
-  </div>
-
-  <h2 class="category-title" id="budget">Budget & Boutique : Les Meilleurs Hôtels 3 Étoiles</h2>
-  <div class="hotel-list">
-    <HotelCard 
-      name="9. Hotel Timoulay &amp; Spa Agadir"
-      rating={3}
-      location="Marina, Agadir"
-      description="Un hôtel de charme avec une piscine d'eau de mer distinctive et une atmosphère calme et intime."
-      features={['Charme d\'hôtel-boutique', 'Piscine d\'eau de mer', 'Calme olympien']}
-      imageSrc={img_hotel_9}
-      imageAlt="Hotel Timoulay and Spa Agadir aeroport al massira"
-      bookingUrl="https://www.booking.com/searchresults.html?ss=Hotel+Timoulay+Agadir"
-      translations={{'viewPrices': 'Voir les prix', 'readReview': 'Lire l\'avis complet'}}
-    />
-    <HotelCard 
-      name="10. Riad Villa Blanche"
-      rating={4}
-      location="Centre-ville, Agadir"
-      description="Un Riad romantique et intime proposant un restaurant français exceptionnel et un spa de renom."
-      features={['Riad romantique intime', 'Restaurant français exceptionnel', 'Spa de renom']}
-      imageSrc={img_hotel_10}
-      imageAlt="Riad Villa Blanche aeroport al massira"
-      bookingUrl="https://www.booking.com/hotel/ma/riad-villa-blanche.fr.html"
-      reviewUrl="/fr/avis-riad-villa-blanche/"
-      translations={{'viewPrices': 'Voir les prix', 'readReview': 'Lire l\'avis complet'}}
-    />
-    <HotelCard 
-      name="11. Atlantic Hotel Agadir"
-      rating={3}
-      location="Centre-ville, Agadir"
-      description="Un hôtel bien entretenu en centre-ville avec un décor marocain traditionnel et un excellent rapport qualité-prix."
-      features={['Décor marocain traditionnel', 'Emplacement en centre-ville', 'Excellent rapport qualité-prix']}
-      imageSrc={img_hotel_11}
-      imageAlt="Atlantic Hotel Agadir aeroport al massira"
-      bookingUrl="https://www.booking.com/searchresults.html?ss=Atlantic+Hotel+Agadir"
-      translations={{'viewPrices': 'Voir les prix', 'readReview': 'Lire l\'avis complet'}}
-    />
-    <HotelCard 
-      name="12. Tildi Hotel &amp; Spa"
-      rating={3}
-      location="Centre-ville, Agadir"
-      description="Un hôtel pratique près du centre et de la plage avec deux piscines."
-      features={['Proche du centre et de la plage', 'Deux piscines', 'Idéal pour les familles']}
-      imageSrc={img_hotel_12}
-      imageAlt="Tildi Hotel Spa aeroport al massira"
-      bookingUrl="https://www.booking.com/searchresults.html?ss=Tildi+Hotel+Agadir"
-      translations={{'viewPrices': 'Voir les prix', 'readReview': 'Lire l\'avis complet'}}
-    />
-  </div>
-
-  <h2 class="category-title" id="hostels">Auberges de jeunesse & Surf Camps</h2>
-  <div class="hotel-list">
-    <HotelCard 
-      name="13. Tayri Surf House"
-      location="Tamraght"
-      description="Un surf camp dynamique avec des petits déjeuners sur le toit et des prix imbattables pour les voyageurs en solo."
-      features={['Ambiance surfeurs et voyageurs en solo', 'Petits déjeuners sur le toit', 'Prix imbattables']}
-      imageSrc={img_hotel_13}
-      imageAlt="Tayri Surf House aeroport al massira"
-      bookingUrl="https://www.booking.com/hotel/ma/tayri-surf-house.fr.html"
-      reviewUrl="/fr/avis-tayri-surf-house/"
-      translations={{'viewPrices': 'Voir les prix', 'readReview': 'Lire l\'avis complet'}}
-    />
-    <HotelCard 
-      name="14. Surf Zone Villa"
-      location="Taghazout"
-      description="Une villa de surf propre avec vue sur l'océan, parfaite pour les cours de surf près de Taghazout."
-      features={['Vues sur l\'océan', 'Propreté impeccable', 'Idéal pour les cours de surf']}
-      imageSrc={img_hotel_14}
-      imageAlt="Surf Zone Villa aeroport al massira"
-      bookingUrl="https://www.booking.com/searchresults.html?ss=Surf+Zone+Villa"
-      translations={{'viewPrices': 'Voir les prix', 'readReview': 'Lire l\'avis complet'}}
-    />
-    <HotelCard 
-      name="15. Dar Surf &amp; Ocean"
-      location="Anza, Agadir"
-      description="Un surf camp chaleureux près d'Anza avec des dîners communautaires et une hospitalité exceptionnelle."
-      features={['Près du spot de surf d\'Anza', 'Dîners communautaires', 'Hospitalité exceptionnelle']}
-      imageSrc={img_hotel_15}
-      imageAlt="Dar Surf Ocean aeroport al massira"
-      bookingUrl="https://www.booking.com/searchresults.html?ss=Dar+Surf+Ocean"
-      translations={{'viewPrices': 'Voir les prix', 'readReview': 'Lire l\'avis complet'}}
-    />
-  </div>
-
-  <div class="callout" style="margin-top: 3rem;">
-    <span class="callout-label">Conseil d'expert</span>
-    Les tarifs des hôtels à Agadir varient énormément entre la basse saison (novembre-février) et la haute saison (juillet-août). Pour obtenir le meilleur prix, surtout sur les hôtels 4 et 5 étoiles, <strong>réservez 2 à 3 mois à l'avance</strong>. De nombreux hôtels sur Booking.com offrent l'annulation gratuite, ce qui vous permet de garantir un tarif avantageux et de changer d'avis plus tard.
-  </div>
-
+  <p>
+    Pour arbitrer d'abord sur le quartier — le choix le plus structurant — commencez par
+    {' '}<a href={L('/ou-dormir-marrakech/')}>où dormir à Marrakech</a>.
+  </p>
 </HotelLayout>

@@ -1,83 +1,88 @@
 ---
 import HotelReviewLayout from '../layouts/HotelReviewLayout.astro';
 import { getLocalizedPath, useTranslations } from '../i18n';
-// Import images
-import heroImg from '../assets/img/placeholder.png';
-import bodyImg from '../assets/img/placeholder.png';
-import { Image } from 'astro:assets';
+import { photos } from '../data/images';
 
-const lang = 'fr';
-const t = useTranslations(lang);
-const L = (p: string) => getLocalizedPath(p, lang);
+const t = useTranslations('fr');
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: t('nav.home'), href: L('/') },
-  { name: t('nav.hotels'), href: L('/best-hotels-agadir/') },
-  { name: 'Riad Villa Blanche', href: L('/riad-villa-blanche-review/') },
+  { name: 'Où dormir', href: L('/ou-dormir-marrakech/') },
+  { name: 'Riad Yasmine', href: L('/avis-riad-yasmine/') },
 ];
 ---
 <HotelReviewLayout
-  lang={lang}
-  title={`Riad Villa Blanche. Avis Hôtel Boutique | AirportAGA`}
-  description={`Découvrez pourquoi le Riad Villa Blanche est considéré comme le boutique-hôtel le plus charmant d'Agadir.`}
-  h1={`Riad Villa Blanche. Avis Hôtel Boutique`}
-  subtitle={`Le boutique-hôtel le plus romantique et charmant d'Agadir`}
+  title={`Riad Yasmine Marrakech : notre avis et comment y arriver avec ses valises | AirportRAK`}
+  description={`Notre regard sur le Riad Yasmine : le patio le plus photographié de la médina, une vraie échelle de riad, et la marche d'approche à préparer depuis l'aéroport — porte, porteur, petites coupures.`}
+  h1={`Riad Yasmine : notre avis et l'accès depuis l'aéroport`}
+  subtitle={`Le patio vert de la médina, et la logistique qui va avec`}
   breadcrumbs={breadcrumbs}
-  brand={`Riad Villa Blanche`}
-  rating={4.8}
-  verdict={`Un chef-d'œuvre absolu de l'architecture maroco-andalouse.`}
-  priceAvg={`110€ - 190€ / nuit`}
-  address={`Secteur 50, Baie des Palmiers, Agadir 80000`}
-  stars={`★★★★ Boutique`}
-  ratingText={`Superbe`}
-  heroImage={heroImg}
-  ctaLink="https://www.booking.com/hotel/ma/riad-villa-blanche.fr.html"
-  ctaLabel={`Voir les disponibilités`}
-  faqs={[{"q": "Le Riad Villa Blanche est-il sur la plage ?", "a": "Non, il est situé légèrement en retrait (environ 10 minutes à pied de la plage), ce qui garantit son atmosphère paisible."}, {"q": "Le Riad sert-il de l'alcool ?", "a": "Oui, il y a un bar élégant et l'alcool est servi au restaurant."}]}
+  brand={`Riad Yasmine`}
+  rating={4.4}
+  verdict={`Un vrai riad, à l'échelle domestique, avec le patio le plus reconnaissable de la médina. Parfait pour un couple ; demande de préparer l'arrivée, puisque la voiture s'arrête à une porte et que le reste se fait à pied.`}
+  priceAvg={`Moyen à élevé selon la saison`}
+  address={`Médina, secteur Dar el Bacha`}
+  stars={`★★★★`}
+  ratingText={`Excellent`}
+  heroImage={photos['riad-yasmine']}
+  ctaLink={L('/ou-dormir-marrakech/')}
+  ctaLabel={`Comparer les disponibilités`}
+  faqs={[
+    { q: "Où se trouve le Riad Yasmine ?", a: "Dans la médina, dans le secteur nord-ouest proche de Dar el Bacha. Comme tous les riads de la médina, il n'est pas accessible en voiture : la dépose se fait à une porte, puis on termine à pied." },
+    { q: "Comment rejoindre le Riad Yasmine depuis l'aéroport ?", a: "Comptez 15 à 30 minutes de route jusqu'à la porte la plus proche, puis quelques minutes de marche dans les derbs. Demandez au riad la porte exacte à indiquer au chauffeur et faites envoyer un porteur avec charrette : c'est la seule façon confortable d'arriver avec des valises." },
+    { q: "Pourquoi ce riad est-il si connu ?", a: "Pour son patio et sa piscine bordée de zellige vert, largement diffusés sur les réseaux sociaux, devenus l'une des images les plus reconnaissables de la médina. C'est un petit établissement : le nombre de chambres est limité et les disponibilités partent tôt." },
+    { q: "Un riad convient-il avec des enfants ?", a: "Cela dépend de l'âge. Les riads ont des escaliers étroits, des terrasses en hauteur et des patios ouverts, et la marche dans les derbs se fait avec les bagages. Pour de jeunes enfants ou une poussette, un hôtel de Guéliz ou de l'Hivernage simplifie nettement le séjour." }
+  ]}
 >
   <div class="content-block">
-    <h2>Présentation</h2>
-    <p>Agadir est connue pour ses énormes resorts, ce qui fait du Riad Villa Blanche une perle rare. Ce petit hôtel intime offre un rythme de vie totalement différent. À l'écart des immenses clubs, il présente une magnifique architecture, une intimité inégalée et une cour sereine qui semble à mille lieues de la ville animée.</p>
-    
-    <h3>Pourquoi choisir le Riad Villa Blanche ?</h3>
+    <h2>Ce que c'est</h2>
+    <p>
+      Le Riad Yasmine est un petit établissement de la médina devenu, presque malgré lui, l'une des
+      images les plus partagées de Marrakech : un patio étroit, des bananiers, et une piscine bordée de
+      zellige vert. C'est un riad au sens strict — une maison à patio de quelques chambres, organisée
+      autour d'un puits de lumière — et non un hôtel : l'échelle est domestique, le service familier.
+    </p>
+
+    <h3>Pourquoi on le retient</h3>
     <ul class="pros-list">
-      <li>Atmosphère incroyablement romantique et intime (28 chambres seulement).</li>
-      <li>Architecture et décoration maroco-andalouse exquises.</li>
-      <li>Restaurant gastronomique franco-marocain exceptionnel sur place.</li>
-      <li>Spa privé réputé offrant des expériences de hammam authentiques.</li>
-      <li>Service personnalisé et attentionné.</li>
+      <li>Le patio le plus photographié de la médina, et il tient ses promesses.</li>
+      <li>Une vraie échelle de riad : peu de chambres, ambiance intime.</li>
+      <li>Une position centrale dans le nord-ouest de la médina, proche des souks.</li>
+      <li>La terrasse, point de respiration classique des maisons marrakchies.</li>
     </ul>
 
-    <h3>Les Chambres & Suites</h3>
-    <p>Chacune des 28 chambres est décorée de manière unique avec un artisanat marocain exquis. Elles s'articulent autour d'une cour centrale, offrant un sanctuaire frais et calme.</p>
-    
-    <div style="margin: 2rem 0; border-radius: 8px; overflow: hidden;">
-      <Image src={bodyImg} alt={`Riad Villa Blanche`} widths={[768, 1200]} sizes="(max-width: 768px) 100vw, 800px" />
-    </div>
-
-    <h2>Rejoindre le Riad depuis l'Aéroport</h2>
+    <h2>L'accès depuis l'aéroport : à préparer</h2>
+    <p>
+      C'est le seul point sur lequel un riad demande de l'organisation. Aucune voiture n'entre dans les
+      derbs : votre chauffeur s'arrête à la porte la plus proche, et vous marchez ensuite quelques
+      minutes sur des pavés irréguliers.
+    </p>
     <ol class="steps-list">
-      <li>Arrivez à l'aéroport d'Agadir Al Massira.</li>
-      <li>Prenez un transfert privé (recommandé en raison de l'emplacement discret).</li>
-      <li>Roulez 30 minutes vers le secteur de la Baie des Palmiers.</li>
-      <li>Franchissez les portes pour entrer dans une oasis paisible.</li>
+      <li>Demandez au riad <strong>la porte (bab) à indiquer au chauffeur</strong>.</li>
+      <li>Annoncez votre numéro de vol et votre heure d'arrivée la veille.</li>
+      <li>Demandez un <strong>porteur avec charrette</strong> à la porte : gratuit ou 20–30 MAD.</li>
+      <li>Prévoyez des dirhams en petites coupures pour le taxi et le pourboire.</li>
     </ol>
+    <p>
+      Le détail complet de cet exercice est sur notre page
+      <a href={L('/guide-aeroport-marrakech/aller-a-la-medina/')}>aller à la médina</a>.
+    </p>
 
-    <h2>Équipements & Services</h2>
-    <div class="features-grid">
-      <div class="feature-item"><strong>Piscine Intime</strong><p>Une belle piscine centrale calme entourée de palmiers.</p></div>
-      <div class="feature-item"><strong>Restaurant Gastronomique</strong><p>L'une des tables les mieux notées d'Agadir.</p></div>
-      <div class="feature-item"><strong>Spa Authentique</strong><p>Piscine intérieure chauffée, hammam et massages.</p></div>
-      <div class="feature-item"><strong>Échelle Boutique</strong><p>Seulement 28 chambres pour une intimité totale.</p></div>
-    </div>
+    <h2>Pour qui</h2>
+    <p>
+      Pour un couple ou deux amis qui veulent vivre la médina de l'intérieur, sortir le matin dans les
+      souks et rentrer se baigner à l'heure chaude. Nettement moins adapté aux familles avec poussette,
+      aux séjours avec grosses valises et aux voyageurs à mobilité réduite : escaliers étroits, seuils,
+      marche d'approche.
+    </p>
 
-    <h2>Idéal pour les lunes de miel et les escapades romantiques</h2>
-    <p>Si les grandes files de buffet et les équipes d'animation bruyantes sont votre cauchemar, le Riad Villa Blanche est votre rêve. Le refuge parfait pour les couples.</p>
-
-    <div class="promo-box">
-      <h3>Vivez le Charme Authentique</h3>
-      <p>Les hôtels boutiques de ce niveau se remplissent rapidement. Réservez vos dates.</p>
-      <a class="btn btn--green" href="https://www.booking.com/hotel/ma/riad-villa-blanche.fr.html" rel="nofollow sponsored" target="_blank">{`Voir les disponibilités`}</a>
-    </div>
+    <h2>À savoir avant de réserver</h2>
+    <p>
+      Petit établissement signifie disponibilités rares : réservez tôt, surtout entre février et mai.
+      Pour comparer avec d'autres maisons de la médina, voyez
+      <a href={L('/riads-medina-marrakech/')}>les riads de la médina</a>, et pour trancher entre riad et
+      hôtel, <a href={L('/ou-dormir-marrakech/')}>quel quartier pour dormir</a>.
+    </p>
   </div>
 </HotelReviewLayout>
