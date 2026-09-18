@@ -1,0 +1,142 @@
+---
+import '../styles/global.css';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+import StickyTransfer from '../components/ui/StickyTransfer.astro';
+import SchemaOrganization from '../components/seo/SchemaOrganization.astro';
+import SchemaWebSite from '../components/seo/SchemaWebSite.astro';
+import SchemaWebPage from '../components/seo/SchemaWebPage.astro';
+import { defaultLang, getAlternateLinks, getLangFromUrl, type Lang } from '../i18n';
+import { site } from '../data/site';
+import { gaId, travelpayouts } from '../data/affiliate';
+
+interface Props {
+  title: string;
+  description: string;
+  lang?: Lang;
+  ogImage?: string;
+  ogType?: 'website' | 'article';
+  noindex?: boolean;
+  webpageSchema?: boolean;
+  hideStickyTransfer?: boolean;
+  keywords?: string;
+}
+
+const {
+  title,
+  description,
+  lang = getLangFromUrl(Astro.url) ?? defaultLang,
+  ogImage,
+  ogType = 'website',
+  noindex = false,
+  webpageSchema = true,
+  hideStickyTransfer = false,
+  keywords,
+} = Astro.props;
+
+const pathname = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : Astro.url.pathname + '/';
+const canonical = `${site.url}${pathname}`;
+const alternates = getAlternateLinks(pathname);
+const xDefault = alternates.find((a) => a.lang === defaultLang) ?? alternates[0];
+const ogImageUrl = `${site.url}${ogImage ?? site.defaultOgImage}`;
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+<head>
+  {gaId && (
+    <>
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+      <script is:inline define:vars={{ gaId }}>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', gaId);
+      </script>
+    </>
+  )}
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content={Astro.generator} />
+
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  {keywords && <meta name="keywords" content={keywords} />}
+  <meta name="theme-color" content="#f6f7ea" />
+  {noindex
+    ? <meta name="robots" content="noindex, nofollow" />
+    : <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />}
+
+  <link rel="canonical" href={canonical} />
+  {alternates.map((a) => (
+    <link rel="alternate" hreflang={a.lang} href={`${site.url}${a.href}`} />
+  ))}
+  {xDefault && <link rel="alternate" hreflang="x-default" href={`${site.url}${xDefault.href}`} />}
+
+  <!-- Open Graph -->
+  <meta property="og:type" content={ogType} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:site_name" content={site.name} />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:image" content={ogImageUrl} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content={title} />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImageUrl} />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <SchemaOrganization />
+  <SchemaWebSite lang={lang} />
+  {webpageSchema && <SchemaWebPage name={title} description={description} url={canonical} lang={lang} />}
+  <slot name="head" />
+  
+  <!-- Travelpayouts / Emerald tracking script -->
+  {travelpayouts.trackingScript && (
+    <script is:inline nowprocket data-noptimize="1" data-cfasync="false" data-wpfc-render="false" data-no-defer="1" define:vars={{ src: travelpayouts.trackingScript }}>
+      (function () {
+          var script = document.createElement("script");
+          script.async = 1;
+          script.src = src;
+          document.head.appendChild(script);
+      })();
+    </script>
+  )}
+</head>
+<body>
+  <Header lang={lang} />
+  <main>
+    <slot />
+  </main>
+  <Footer lang={lang} />
+  {!hideStickyTransfer && <StickyTransfer lang={lang} />}
+  <script is:inline>
+    window.addEventListener('message', function(e) {
+      if (e.data && e.data.tpemdHeight) {
+        var iframes = document.querySelectorAll('.tpemd-iframe');
+        for (var i = 0; i < iframes.length; i++) {
+          if (iframes[i].contentWindow === e.source) {
+            iframes[i].style.height = (e.data.tpemdHeight + 20) + 'px';
+            break;
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

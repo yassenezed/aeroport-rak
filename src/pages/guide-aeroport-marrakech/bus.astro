@@ -1,0 +1,154 @@
+---
+import GuideLayout from '../../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../../i18n';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: "Guide de l'aéroport", href: L('/agadir-airport-guide/') },
+  { name: 'Bus', href: L('/agadir-airport-guide/bus/') },
+];
+const toc = [
+  { label: "Y a-t-il un bus aéroport ?", id: 'is-there' },
+  { label: "La navette ALSA", id: 'shuttle' },
+  { label: 'Le trajet local pas cher (37 + 98)', id: 'local' },
+  { label: 'À qui le bus convient', id: 'right-for' },
+  { label: 'Qui devrait l\'éviter', id: 'skip' },
+  { label: 'Moins cher qu\'un taxi, mais…', id: 'verdict' },
+];
+const faqs = [
+  { q: "Y a-t-il un bus de l'aéroport d'Agadir vers la ville ?", a: "Oui. ALSA fait rouler une navette d'aéroport vers le centre d'Agadir, à peu près toutes les heures en journée, environ 50 minutes, pour quelque 50 MAD. Il existe aussi un trajet local moins cher : la ligne ALSA 37 depuis la route principale près du terminal jusqu'à Inezgane, puis la ligne 98 vers Agadir. Les deux ne desservent que le centre, de jour. Tarifs vérifiés en juin 2026." },
+  { q: "Combien coûte le bus depuis l'aéroport d'Agadir ?", a: "La navette ALSA vers le centre d'Agadir coûte autour de 50 MAD. L'option locale moins chère revient à environ 12 MAD en tout, quelque 8,5 MAD pour la ligne 37 jusqu'à Inezgane, puis environ 3,5 MAD pour la ligne 98 vers Agadir. Prévoyez de la petite monnaie en dirhams ; on paie à bord." },
+  { q: "Le bus aéroport va-t-il à mon hôtel ou à Taghazout ?", a: "Non. Le bus ne rejoint que le centre d'Agadir, pas la porte de votre hôtel, et pas la côte du surf (Taghazout, Tamraght, Imsouane) ni le sud (Mirleft, Sidi Ifni, Tiznit). Pour cela, il vous faut un grand taxi, un transfert réservé ou une voiture de location." },
+  { q: "Y a-t-il un bus de nuit depuis l'aéroport d'Agadir ?", a: "Pas de façon fiable. Le service est pensé pour la journée, et il se raréfie ou s'arrête pour les arrivées tardives, précisément quand atterrissent la plupart des charters. Si vous arrivez après la tombée du jour, comptez sur un taxi ou un transfert réservé plutôt que sur le bus." },
+];
+---
+<GuideLayout keywords="Bus Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Bus Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Bus à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Guide de l'aéroport · Bus"
+  h1="Le bus de l'aéroport d'Agadir : lignes, tarifs et quand le prendre"
+  lede="Oui, il y a un bus désormais. ALSA fait rouler une navette d'aéroport vers le centre d'Agadir, plus un trajet local moins cher par Inezgane. Voici où prendre chacun, ce qu'ils coûtent, leur durée, et les arrivées où un taxi ou un transfert reste le choix le plus malin."
+  breadcrumbs={breadcrumbs}
+  toc={toc}
+  faqs={faqs}
+  updated="juin 2026"
+  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+>
+  <p>
+    Pendant des années, la réponse honnête à Agadir Al Massira était « pas de bus utile », et bien des
+    guides le répètent encore. C'est dépassé. Il y a maintenant un vrai bus vers le centre d'Agadir, et
+    pour le bon voyageur c'est, de loin, la façon la moins chère de quitter l'aéroport. Le piège est dans
+    le détail : il ne va qu'au centre-ville, il fonctionne de jour, et il vous laisse gérer vos bagages.
+    Réunissez ces conditions et le bus est une vraie bonne affaire ; manquez-en une et vous regretterez de
+    ne pas avoir pris un taxi. Voici exactement comment ça marche.
+  </p>
+
+  <h2 id="is-there">Y a-t-il un bus aéroport ? Oui, deux options</h2>
+  <p>
+    Il y a deux façons de quitter l'AGA en transport public, toutes deux opérées par ALSA, l'exploitant du
+    réseau urbain d'Agadir. La première est une navette d'aéroport directe vers le centre d'Agadir. La
+    seconde est un trajet local moins cher qui emprunte des lignes urbaines ordinaires en passant par la
+    banlieue d'Inezgane. Ni l'une ni l'autre n'est un autocar touristique avec soute à bagages et accueil
+    souriant, ce sont des bus publics, payés en espèces, qui se trouvent être un moyen futé et frugal de
+    rejoindre la ville si votre arrivée s'y prête. Ce qu'aucun ne fait : rejoindre la porte de votre hôtel,
+    la côte du surf ou le sud ; pour cela, voyez le <a href={L('/agadir-airport-taxi/')}>guide du taxi
+    aéroport</a> ou le <a href={L('/agadir-airport-transfers/')}>hub des transferts</a>.
+  </p>
+
+  <h2 id="shuttle">La navette ALSA de l'aéroport</h2>
+  <p>
+    L'option la plus simple est la navette ALSA, qui relie le terminal au centre d'Agadir à peu près
+    toutes les heures pendant la journée. Comptez environ 50 minutes de bout en bout et un tarif autour de
+    50 MAD, payé en dirhams à bord, retirez donc des espèces à un distributeur bancaire du hall
+    d'arrivée avant de partir chercher l'arrêt. Elle vous dépose dans le centre d'Agadir, près de la zone
+    principale des transports, d'où un court trajet en petit taxi ou quelques pas vous mènent à la plupart
+    des hôtels du centre.
+  </p>
+  <p>
+    Deux choses à garder en tête. D'abord, « à peu près toutes les heures, en journée » est la description
+    honnête, traitez les horaires comme indicatifs plutôt que comme une grille imprimée, et ne calez pas
+    une correspondance serrée dessus. Ensuite, l'essentiel du trafic de l'AGA, ce sont les charters du
+    soir, et la navette n'est pas pensée pour ces arrivées tardives ; si vous atterrissez à la nuit,
+    partez du principe qu'elle ne sera pas là. Pour une arrivée de jour en voyageant léger, c'est en
+    revanche la course en ville la moins chère, billet unique, que vous trouverez.
+  </p>
+
+  <h2 id="local">Le trajet local pas cher : ligne 37, puis ligne 98</h2>
+  <p>
+    Si vous voulez dépenser le moins possible et que ça ne vous gêne pas de changer, il existe un trajet
+    local qui coûte une fraction de la navette. Sortez jusqu'à la route principale, la P1714, à 5–10
+    minutes à pied du terminal, et prenez la ligne urbaine ALSA 37, à environ 8,5 MAD, qui rejoint
+    Inezgane, le pôle de transport animé juste au sud d'Agadir. À Inezgane, vous changez pour la ligne 98
+    (environ 3,5 MAD), qui continue jusqu'à Agadir même. En tout, cela fait environ 12 MAD et à peu près
+    une heure et quart, marche et changement compris.
+  </p>
+  <p>
+    C'est la façon la moins chère de rejoindre la ville, point, mais aussi la moins confortable. Vous
+    marchez jusqu'à la route avec vos bagages, montez dans des bus urbains ordinaires parfois bondés, et
+    changez dans un pôle animé où la correspondance n'est pas signalée pour les touristes. Avec un sac à
+    dos et du temps devant soi, c'est une petite aventure agréable ; avec une valise, des enfants ou un
+    emploi du temps serré, c'est plus de tracas que les quelques euros ne le valent. Gardez de petites
+    coupures et des pièces en dirhams pour les deux trajets.
+  </p>
+
+  <h2 id="right-for">À qui le bus convient</h2>
+  <p>
+    Le bus convient à un type d'arrivée bien précis, et quand il colle, il colle bien :
+  </p>
+  <ul>
+    <li><strong>Voyageurs solo et couples au budget serré</strong>, prêts à troquer un peu de confort contre un tarif bien plus bas.</li>
+    <li><strong>Bagages légers</strong>, un sac à dos ou une petite valise que vous portez et soulevez, pas un chariot plein.</li>
+    <li><strong>Une arrivée de jour</strong>, quand la navette circule et que les lignes locales sont fréquentes.</li>
+    <li><strong>Une destination au centre d'Agadir</strong>, le front de mer, le centre, le côté marina, plutôt qu'un hôtel excentré.</li>
+  </ul>
+  <p>
+    Si c'est votre cas, prenez la navette pour la simplicité ou le trajet ligne 37 + 98 pour réduire le
+    tarif au minimum. L'un comme l'autre bat toutes les autres options sur le prix.
+  </p>
+
+  <h2 id="skip">Qui devrait l'éviter</h2>
+  <p>
+    Pour une bonne partie des arrivées à l'AGA, le bus ne colle tout simplement pas, et le forcer rallonge
+    une longue journée de voyage :
+  </p>
+  <ul>
+    <li><strong>Quiconque va vers un hôtel précis.</strong> Le bus vous dépose au centre, pas à votre porte ; avec des bagages, la dernière étape en petit taxi grignote l'économie.</li>
+    <li><strong>Arrivées du soir et de nuit.</strong> La plupart des charters atterrissent tard, quand la navette s'est arrêtée, un <a href={L('/agadir-airport-taxi/')}>grand taxi</a> ou un transfert réservé est alors le choix réaliste.</li>
+    <li><strong>Familles et groupes.</strong> Une fois un grand taxi ou une voiture privée partagés à trois ou quatre, le coût par tête approche celui du bus, avec bien moins de tracas.</li>
+    <li><strong>La côte et le sud.</strong> Taghazout, Tamraght et Imsouane au nord, ou Mirleft, Sidi Ifni et Tiznit au sud, ne sont pas du tout desservis par le bus de l'aéroport.</li>
+  </ul>
+  <p>
+    Dans tous ces cas, réservez à l'avance. Le <a href={L('/agadir-airport-transfers/')}>hub des
+    transferts</a> met les options côte à côte, et la <a href={L('/agadir-airport-to-agadir/')}>page
+    aéroport vers Agadir</a> donne les prix en direct pour le trajet en ville.
+  </p>
+  <div class="disclosure-inline">
+    Certains liens ici sont des liens d'affiliation, réservez via ces liens et nous pouvons percevoir
+    une petite commission, sans surcoût pour vous. Cela ne change ni les prix affichés ni nos
+    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
+  </div>
+
+  <h2 id="verdict">Moins cher qu'un taxi, mais pas toujours</h2>
+  <p>
+    Le constat a changé : l'aéroport d'Agadir a bien un bus de ville, et pour une arrivée de jour, en
+    voyageant léger, vers le centre, c'est la façon la moins chère d'y aller, autour de 50 MAD sur la
+    navette, ou environ 12 MAD via les lignes 37 et 98. Il n'y a toujours pas de train (la gare la plus
+    proche est à Marrakech), ni Uber ni Careem, ni bus jusqu'à la porte de votre hôtel ou la côte. Le bus
+    est donc désormais une vraie option économique, plus le non-sujet qu'il était, mais une option qui
+    récompense le voyageur à qui elle convient et pénalise celui à qui elle ne convient pas. Si votre
+    arrivée ne coche pas les cases ci-dessus, un <a href={L('/agadir-airport-taxi/')}>grand taxi</a> à la
+    station ou un <a href={L('/agadir-airport-transfers/')}>transfert réservé</a> reste la façon pratique
+    de partir.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">À retenir</span>
+    De jour, peu de bagages, centre d'Agadir ? Prenez le bus, ~50 MAD sur la navette ou ~12 MAD via
+    Inezgane. Arrivée du soir, un hôtel, une famille, ou la côte ? Évitez-le et prenez un taxi ou un
+    transfert réservé.
+  </div>
+</GuideLayout>

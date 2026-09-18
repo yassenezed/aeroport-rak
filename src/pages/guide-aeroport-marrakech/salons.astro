@@ -1,0 +1,128 @@
+---
+import GuideLayout from '../../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../../i18n';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: "Guide de l'aéroport", href: L('/agadir-airport-guide/') },
+  { name: 'Salons', href: L('/agadir-airport-guide/lounges/') },
+];
+const toc = [
+  { label: 'Y a-t-il un salon à l\'AGA ?', id: 'is-there' },
+  { label: 'Les deux salons en détail', id: 'which-lounges' },
+  { label: 'Ce que vous y trouverez', id: 'equipement' },
+  { label: 'Comment y entrer', id: 'access' },
+  { label: 'Priority Pass et cartes', id: 'priority-pass' },
+  { label: 'Est-ce que ça vaut le coup ici ?', id: 'worth-it' },
+];
+const faqs = [
+  { q: "Y a-t-il un salon à l'aéroport d'Agadir ?", a: "Oui, deux. L'Agadir Aspire Lounge se trouve au rez-de-chaussée côté piste, près de la porte A8 ; le Pearl Lounge dessert les départs internationaux, vers les portes d'embarquement. Les deux sont des espaces modestes, sièges, boissons sans alcool et finger food plutôt qu'un grand salon affaires, mais nettement plus calmes que les sièges classiques des départs." },
+  { q: "Comment entrer dans le salon de l'aéroport d'Agadir ?", a: "Trois voies habituelles : payer à l'entrée sur place, utiliser un abonnement type Priority Pass, ou obtenir un accès offert via un billet premium ou une carte bancaire voyage incluant l'entrée en salon. L'Aspire comme le Pearl acceptent Priority Pass et l'entrée payante. Vérifiez les avantages de votre carte avant de partir." },
+  { q: "Priority Pass fonctionne-t-il à l'aéroport d'Agadir ?", a: "Oui, l'Aspire Lounge et le Pearl Lounge figurent tous deux au réseau Priority Pass. La couverture peut toujours changer : confirmez la liste actuelle dans votre appli avant de partir plutôt que de la supposer acquise." },
+  { q: "À quelle heure ouvre le salon de l'aéroport d'Agadir ?", a: "L'Aspire Lounge ouvre généralement tous les jours d'environ 7 h à 22 h, avec un accès jusqu'à 3 heures avant votre vol. Le Pearl Lounge suit les départs internationaux. Comme la restauration côté piste ferme la nuit, un salon prend tout son sens pour les charters très tôt le matin ou tard le soir." },
+  { q: "Le salon de l'aéroport d'Agadir vaut-il le coup ?", a: "Ça dépend de votre attente et de la valeur que vous donnez au calme. Pour une longue attente, un départ matinal, un retard de charter ou un voyage avec enfants, un siège tranquille, le Wi-Fi et une boisson valent souvent le coup, d'autant que les cafés côté piste sont limités et ferment la nuit. Pour un passage rapide, les sièges classiques suffisent." },
+];
+---
+<GuideLayout keywords="Salons Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Salons Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Salons à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Guide de l'aéroport · Salons"
+  h1="Accès au salon de l'aéroport d'Agadir"
+  lede="Le salon de l'AGA est modeste, pas une grande suite affaires, mais c'est un siège plus calme avec une boisson le temps d'attendre. Voici comment y entrer, si Priority Pass fonctionne, et quand ça vaut vraiment le coup."
+  breadcrumbs={breadcrumbs}
+  toc={toc}
+  faqs={faqs}
+  updated="juin 2026"
+  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+>
+  <p>
+    Agadir Al Massira est un petit terminal, alors calez vos attentes en conséquence : le salon ici est
+    un coin plus tranquille où attendre, pas une vaste suite affaires. Cela dit, lors d'une longue
+    attente ou d'un départ matinal, ça peut être un endroit vraiment agréable où s'asseoir. Voici comment
+    fonctionne l'accès et si ça vaut votre temps.
+  </p>
+
+  <h2 id="is-there">Y a-t-il un salon à l'AGA ?</h2>
+  <p>
+    Oui, et même deux, tous les deux côté piste une fois la sécurité passée. Imaginez des sièges
+    confortables et climatisés, du Wi-Fi gratuit, des boissons sans alcool et des en-cas à picorer, pas
+    des buffets chauds ni des douches. C'est un cran au-dessus des sièges classiques des départs en calme
+    et en confort, ce qui est la principale raison d'y aller dans un terminal de cette taille. La
+    <a href={L('/agadir-airport-guide/departures/')}>page des départs</a> couvre à quoi ressemble le reste
+    du côté piste.
+  </p>
+
+  <h2 id="which-lounges">Les deux salons en détail</h2>
+  <p>
+    Connaître lequel vise votre carte ou votre billet évite de tourner en rond dans un terminal pourtant
+    minuscule :
+  </p>
+  <ul>
+    <li><strong>Agadir Aspire Lounge</strong>, au rez-de-chaussée côté piste, près de la <strong>porte A8</strong>. C'est le plus accessible : ouvert tous les jours, généralement d'environ 7 h à 22 h, avec un accès jusqu'à 3 heures avant votre vol. Pratique pour la plupart des départs charters de la journée.</li>
+    <li><strong>Pearl Lounge</strong>, du côté des <strong>départs internationaux</strong>, vers les portes d'embarquement. Utile si votre porte se trouve de ce côté et que vous préférez ne pas marcher.</li>
+  </ul>
+  <p>
+    Les deux acceptent les membres Priority Pass et l'entrée payante réglée sur place, donc le choix se
+    fait surtout selon votre porte et l'horaire. Pour un vol de jour, l'Aspire est le pari sûr grâce à ses
+    horaires larges.
+  </p>
+
+  <h2 id="equipement">Ce que vous y trouverez</h2>
+  <p>
+    Calez vos attentes sur un salon régional confortable, pas sur une suite affaires. Au programme, dans
+    l'un comme dans l'autre : Wi-Fi gratuit, sièges climatisés, boissons sans alcool, snacks et finger
+    food, avec quelques touches marocaines comme la pastilla ou la harira selon le service. S'ajoutent en
+    général une télévision, de la presse, un coin pour travailler ou recharger les appareils, et un
+    fumoir. Pas d'alcool servi, pas de douches : c'est un endroit pour souffler et grignoter avant
+    l'embarquement, idéal quand les charters s'enchaînent et que les sièges de la salle d'attente se
+    remplissent.
+  </p>
+
+  <h2 id="access">Comment y entrer</h2>
+  <p>
+    Trois voies habituelles :
+  </p>
+  <ul>
+    <li><strong>Payer à l'entrée</strong>, un tarif d'accès pour une durée donnée, réglé sur place, à l'Aspire comme au Pearl.</li>
+    <li><strong>Un abonnement salon</strong>, des programmes comme Priority Pass couvrent des salons dans le monde entier ; les deux salons de l'AGA en font partie.</li>
+    <li><strong>Votre billet ou votre carte</strong>, un tarif premium ou une carte bancaire voyage avec avantages salon peut inclure l'entrée offerte. Vérifiez les avantages de votre carte avant de partir.</li>
+  </ul>
+  <p>
+    Petit réflexe utile : à l'Aspire, l'accès est ouvert jusqu'à environ 3 heures avant le départ, donc
+    inutile d'arriver trop en avance pour en profiter, calez votre passage en sécurité d'abord, puis
+    posez-vous.
+  </p>
+
+  <h2 id="priority-pass">Priority Pass &amp; cartes salon</h2>
+  <p>
+    L'Agadir Aspire Lounge et le Pearl Lounge figurent tous deux au réseau Priority Pass, et un abonnement
+    est vite rentabilisé si vous voyagez quelques fois par an et avez tendance à arriver tôt ou à patienter
+    longtemps. La couverture peut toujours évoluer : confirmez la liste AGA actuelle dans votre appli avant
+    de compter dessus, ne la supposez pas acquise sur la foi d'une page de guide. Si votre carte bancaire
+    voyage inclut l'accès au salon, c'est souvent la voie la moins chère ; vérifiez juste si elle couvre un
+    invité, car ces deux salons restreignent parfois le nombre d'accompagnants gratuits.
+  </p>
+
+  <h2 id="worth-it">Est-ce que ça vaut le coup ici ?</h2>
+  <p>
+    Honnêtement, ça dépend de votre attente. Dans un petit terminal où vous pourriez rester côté piste
+    moins d'une heure, les sièges habituels suffisent en général et le salon est un luxe plutôt qu'un
+    besoin. Là où il prend toute sa valeur : une longue attente, un vol très tôt le matin ou très tard le
+    soir, un charter retardé, ou un voyage avec des enfants qui ont besoin de calme. L'argument décisif à
+    Agadir, c'est l'horaire : la restauration côté piste est limitée et ferme la nuit, si bien qu'un salon
+    devient souvent le seul endroit où s'asseoir au chaud avec une boisson et du Wi-Fi sur un départ
+    nocturne. Si l'une de ces situations vous correspond, ça vaut le coup d'œil ; si vous entrez et sortez
+    vite, gardez votre argent. Dans tous les cas, arrivez avec de la marge, voyez le
+    <a href={L('/agadir-airport-guide/')}>hub du guide de l'aéroport</a> pour le timing.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">Le verdict rapide</span>
+    Longue attente, vol matinal ou voyage avec enfants ? Le salon vaut le coup. Passage rapide dans un
+    petit terminal ? Les sièges classiques feront l'affaire.
+  </div>
+</GuideLayout>

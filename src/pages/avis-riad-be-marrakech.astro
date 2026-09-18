@@ -1,0 +1,83 @@
+---
+import HotelReviewLayout from '../layouts/HotelReviewLayout.astro';
+import { getLocalizedPath, useTranslations } from '../i18n';
+// Import images
+import heroImg from '../assets/img/placeholder.png';
+import bodyImg from '../assets/img/placeholder.png';
+import { Image } from 'astro:assets';
+
+const lang = 'fr';
+const t = useTranslations(lang);
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: t('nav.home'), href: L('/') },
+  { name: t('nav.hotels'), href: L('/best-hotels-agadir/') },
+  { name: 'Tayri Surf House', href: L('/tayri-surf-house-review/') },
+];
+---
+<HotelReviewLayout
+  lang={lang}
+  title={`Tayri Surf House. Avis & Accès Taghazout | AirportAGA`}
+  description={`Notre avis expert sur Tayri Surf House. Découvrez pourquoi c'est l'auberge de surf la mieux notée près d'Agadir.`}
+  h1={`Tayri Surf House. Avis & Accès Taghazout`}
+  subtitle={`L'auberge de surf communautaire par excellence`}
+  breadcrumbs={breadcrumbs}
+  brand={`Tayri Surf House`}
+  rating={4.9}
+  verdict={`Un rapport qualité-prix imbattable et une communauté de surf incroyable.`}
+  priceAvg={`25€ - 60€ / nuit`}
+  address={`Tamraght Ouzdar, Agadir`}
+  stars={`Surf Camp / Hostel`}
+  ratingText={`Exceptionnel`}
+  heroImage={heroImg}
+  ctaLink="https://www.booking.com/hotel/ma/tayri-surf-house.fr.html"
+  ctaLabel={`Voir les disponibilités`}
+  faqs={[{"q": "Faut-il savoir surfer pour y séjourner ?", "a": "Pas du tout ! Beaucoup viennent pour l'ambiance, le yoga et pour apprendre à surfer de zéro."}, {"q": "À quelle distance se trouve Tamraght du centre d'Agadir ?", "a": "Tamraght est à environ 15 km au nord d'Agadir, accessible en 20 minutes de taxi."}]}
+>
+  <div class="content-block">
+    <h2>Présentation</h2>
+    <p>À quelques minutes de route d'Agadir, dans le village mythique de Tamraght, Tayri Surf House est devenu culte parmi les backpackers et les surfeurs. Offrant un mélange d'hospitalité marocaine et de culture surf décontractée, c'est le camp de base idéal pour affronter les vagues de l'Atlantique.</p>
+    
+    <h3>Pourquoi choisir Tayri Surf House ?</h3>
+    <ul class="pros-list">
+      <li>Atmosphère communautaire incroyable, parfaite pour les voyageurs solos.</li>
+      <li>Rapport qualité-prix exceptionnel (idéal pour les petits budgets).</li>
+      <li>Moniteurs de surf locaux très expérimentés.</li>
+      <li>Petits-déjeuners et dîners communs légendaires sur le toit.</li>
+      <li>Dortoirs et chambres privées d'une propreté irréprochable.</li>
+    </ul>
+
+    <h3>Les Chambres</h3>
+    <p>Tayri propose un mélange de lits en dortoir économiques et de chambres privées. Bien que les équipements soient simples par rapport aux hôtels de luxe, tout est exceptionnellement propre, confortable et décoré avec une ambiance bohème.</p>
+    
+    <div style="margin: 2rem 0; border-radius: 8px; overflow: hidden;">
+      <Image src={bodyImg} alt={`Tayri Surf House`} widths={[768, 1200]} sizes="(max-width: 768px) 100vw, 800px" />
+    </div>
+
+    <h2>Rejoindre Tayri depuis l'Aéroport</h2>
+    <ol class="steps-list">
+      <li>Sortez de l'aéroport d'Agadir (AGA).</li>
+      <li>Réservez un transfert direct vers Tamraght (le bus nécessite plusieurs changements).</li>
+      <li>Le trajet vers le nord dure environ 45-50 minutes.</li>
+      <li>Arrivez dans le village de surf et posez vos bagages à l'auberge.</li>
+    </ol>
+
+    <h2>Équipements & Services</h2>
+    <div class="features-grid">
+      <div class="feature-item"><strong>Cours de Surf</strong><p>Leçons quotidiennes et location de planches.</p></div>
+      <div class="feature-item"><strong>Rooftop</strong><p>Vue magnifique sur le coucher de soleil et sessions de yoga.</p></div>
+      <div class="feature-item"><strong>Repas Communs</strong><p>Délicieux dîners marocains façon familiale.</p></div>
+      <div class="feature-item"><strong>Wi-Fi Rapide</strong><p>Bonne connexion pour les digital nomads.</p></div>
+    </div>
+
+    <h2>Idéal pour les surfeurs, backpackers et voyageurs solos</h2>
+    <p>Si vous voulez surfer des vagues de classe mondiale, vous faire des amis et bien manger avec un budget limité, ne cherchez pas plus loin.</p>
+
+    <div class="promo-box">
+      <h3>Rejoignez la Communauté</h3>
+      <p>Les lits se remplissent extrêmement vite pendant la saison de surf. Vérifiez les prix.</p>
+      <a class="btn btn--green" href="https://www.booking.com/hotel/ma/tayri-surf-house.fr.html" rel="nofollow sponsored" target="_blank">{`Voir les disponibilités`}</a>
+    </div>
+  </div>
+</HotelReviewLayout>

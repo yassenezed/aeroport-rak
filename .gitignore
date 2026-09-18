@@ -1,0 +1,33 @@
+# build output
+dist/
+.output/
+
+# dependencies
+node_modules/
+
+# astro
+.astro/
+
+# env / secrets
+.env
+.env.production
+.env.local
+
+# os / editor
+.DS_Store
+*.log
+.vscode/
+.idea/
+
+# dev tooling / private
+.claude/
+/data/
+
+# docs & other non-runtime files (not needed to build or run the site)
+*.md
+*.pdf
+*.docx
+*.xlsx
+*.zip
+*.txt
+!public/robots.txt

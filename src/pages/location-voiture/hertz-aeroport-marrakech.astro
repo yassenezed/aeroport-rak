@@ -1,0 +1,120 @@
+---
+import ReviewLayout from '../../layouts/ReviewLayout.astro';
+import { getLocalizedPath } from '../../i18n';
+import { photos } from '../../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Location de voiture', href: L('/agadir-airport-car-rental/') },
+  { name: 'Hertz', href: L('/car-rental/hertz-agadir-airport/') },
+];
+const pros = [
+  'Comptoir en plein hall des arrivées, les clés en quelques minutes après le tapis',
+  'Processus familier et prévisible, personnel anglophone',
+  'Politique carburant plein-à-plein sur la plupart des tarifs (la juste)',
+  'Flotte solide de voitures économiques et familiales',
+  'Facile à comparer et à pré-réserver en ligne pour bloquer le tarif',
+];
+const cons = [
+  'Tarif journalier plus élevé que les agences locales voisines',
+  'L\'empreinte de caution tend à être du côté large',
+  'La franchise de base est élevée sauf si vous ajoutez la couverture totale',
+  'La vente de la franchise au comptoir peut être insistante',
+];
+const faqs = [
+  { q: "Où se trouve le comptoir Hertz à l'aéroport d'Agadir ?", a: "Dans le hall des arrivées, dans la rangée de comptoirs de location à quelques pas du tapis à bagages, pas besoin de sortir du terminal pour le trouver. Les voitures se récupèrent au parking de l'aéroport tout proche. Comme à chaque comptoir de l'AGA, faites le tour du véhicule et photographiez les dégâts existants avant de partir." },
+  { q: "Combien est la caution Hertz à Agadir ?", a: "Hertz bloque une caution sur une carte de crédit (pas de débit) au nom du conducteur principal, et à l'AGA elle tend à être du côté large, confirmez le montant exact sur votre réservation avant de payer. Assurez-vous que la carte a la marge ; l'empreinte est levée après le retour de la voiture sans dégât." },
+  { q: "Quelle est la politique carburant de Hertz à l'aéroport d'Agadir ?", a: "La plupart des tarifs Hertz à l'AGA sont en plein-à-plein : vous récupérez le plein et le rendez plein, la politique la plus juste qui évite de payer un carburant non consommé. Vérifiez la ligne sur votre tarif précis, et gardez le reçu de la station près de l'aéroport pour le retour." },
+  { q: "Hertz vaut-il le coup face à une agence locale à Agadir ?", a: "Ça dépend de ce que vous valorisez. Hertz coûte plus qu'une agence locale mais offre un processus prévisible, un personnel anglophone et une politique carburant juste. Si vous voulez de la certitude sans craindre le tarif plus élevé, c'est un choix sûr ; si le prix prime et que vous lirez les conditions avec soin, une agence locale peut offrir un meilleur rapport." },
+];
+---
+<ReviewLayout
+  lang={lang}
+  title="Avis Hertz aéroport Agadir 2026 : comptoir, caution et carburant | AirportAGA"
+  description="Avis honnête sur le comptoir Hertz de l'aéroport Agadir Al Massira, emplacement aux arrivées, flotte, caution, politique de carburant, la franchise à surveiller, et à qui il convient. Comparez avant de réserver."
+  eyebrow="Aéroport d'Agadir · Avis location"
+  h1="Avis Hertz aéroport Agadir : fiable, à son prix"
+  lede="Hertz à l'AGA, c'est le choix sûr et familier, comptoir aux arrivées, conditions prévisibles, politique carburant juste. Vous payez plus que les agences locales voisines, et la caution est du côté large. Voici le verdict honnête et à qui le réserver."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['agadir-marina']}
+  brand="Hertz"
+  rating={3.9}
+  verdict="Un comptoir fiable et sans surprise à l'aéroport d'Agadir : facile à trouver, carburant plein-à-plein juste et processus familier, à un tarif journalier au-dessus des agences locales et avec une empreinte de caution plus large. Idéal si la certitude compte plus que d'arracher le prix le plus bas."
+  pros={pros}
+  cons={cons}
+  heroProvider="discovercars"
+  heroCtaLabel="Voir les prix Hertz à l'AGA"
+  faqs={faqs}
+  cta={{ heading: 'Comparez Hertz à tous les comptoirs de l\'AGA', text: 'Voyez le tarif Hertz en direct à côté des autres agences, caution, politique de carburant et couverture totale en une seule vue, et réservez la meilleure offre tout compris.', provider: 'discovercars', label: 'Comparer les prix de location' }}
+>
+  <p>
+    Hertz est le comptoir vers lequel la plupart des voyageurs gravitent à Agadir, pour une bonne raison :
+    c'est prévisible. Le comptoir est en plein hall des arrivées, le processus est celui que vous
+    connaissez de tous les autres aéroports, le personnel parle anglais, et la politique carburant est le
+    juste plein-à-plein sur la plupart des tarifs. Ce que vous échangez contre cette certitude, c'est de
+    l'argent. Hertz se situe au-dessus des agences locales sur le tarif journalier, et une empreinte de
+    caution du côté large. Pour beaucoup d'arrivées, c'est un échange honnête.
+  </p>
+
+  <h2 id="location">Emplacement et récupération à l'AGA</h2>
+  <p>
+    Le comptoir Hertz est dans la rangée de comptoirs de location du hall des arrivées, à quelques pas du
+    tapis à bagages, et les voitures se récupèrent au parking de l'aéroport tout proche. C'est à peu près
+    la prise en charge la plus fluide qui soit, mais faites quand même les bases : tour du véhicule avant
+    de partir, photo de chaque rayure, bosse et des jantes, et vérifiez que la jauge de carburant
+    correspond au contrat. Deux minutes ici protègent votre caution contre une marque « neuve » au retour.
+  </p>
+
+  <h2 id="fleet">Flotte</h2>
+  <p>
+    Un bel éventail de voitures économiques et familiales. Dacia, petites Renault et compagnie en bas de
+    gamme, breaks et SUV au-dessus. Les voitures sont tenues en état honnête ; pas toujours les plus
+    récentes à l'AGA (Sixt devance souvent sur ce point), mais adaptées et bien entretenues. Si vous avez
+    besoin d'un vrai 4x4 pour les pistes, confirmez la spécification à la réservation plutôt que de
+    supposer qu'une annonce SUV signifie quatre roues motrices.
+  </p>
+
+  <h2 id="deposit-fuel">Caution, carburant et assurance</h2>
+  <p>
+    La caution est le point à anticiper : Hertz bloque une somme sur une carte de crédit au nom du
+    conducteur principal, et à l'AGA elle penche vers le large, alors assurez-vous que votre carte a la
+    marge et confirmez le montant avant de payer. La politique carburant est plein-à-plein sur la plupart
+    des tarifs, récupérez plein, rendez plein, celle qu'il faut. L'assurance de base porte une franchise
+    élevée, et le comptoir proposera une franchise pour la réduire ; cette franchise revient en général
+    plus cher que d'ajouter la couverture totale en ligne à la réservation, alors décidez-le à l'avance
+    plutôt que fatigué au comptoir.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">Conseil local</span>
+    Faites le plein dans une station près de l'aéroport au retour et gardez le reçu. Avec une politique
+    plein-à-plein, un reçu récent prouve que le réservoir était plein au retour, il coupe court à toute
+    contestation « il manquait une barre » au moment de rendre la voiture.
+  </div>
+
+  <h2 id="best-for">À qui ça convient</h2>
+  <p>
+    Réservez Hertz si la prévisibilité vaut quelques euros de plus : un premier voyage au Maroc, quiconque
+    veut un processus connu et un personnel anglophone, ou les voyageurs qui préfèrent ne pas parier sur
+    les conditions variables d'une agence locale. Si le prix le plus bas possible prime et que vous lirez
+    les petites lignes avec soin, une agence locale peut sous-coter, voyez comment elles s'alignent dans
+    notre comparatif <a href={L('/best-car-rental-agadir-airport/')}>meilleure location de voiture à
+    l'aéroport d'Agadir</a>.
+  </p>
+
+  <div class="disclosure-inline">
+    Certains liens ici sont des liens d'affiliation : si vous réservez via ces liens, nous pouvons
+    percevoir une petite commission, sans surcoût pour vous. Cela ne change ni les prix affichés ni nos
+    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
+  </div>
+
+  <p>
+    Comparez Hertz avec les autres comptoirs, <a href={L('/car-rental/europcar-agadir-airport/')}>Europcar</a>
+    et <a href={L('/car-rental/sixt-agadir-airport/')}>Sixt</a>, ou partez du
+    <a href={L('/agadir-airport-car-rental/')}>hub de la location à l'aéroport d'Agadir</a>. Côté budget,
+    voyez la <a href={L('/agadir-airport-car-rental/cheap/')}>location la moins chère</a>.
+  </p>
+</ReviewLayout>

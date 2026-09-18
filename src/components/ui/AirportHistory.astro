@@ -1,0 +1,44 @@
+---
+const t = {
+  eyebrow: "Aéroport de Marrakech Ménara",
+  title: "Un peu d'histoire et de détails techniques",
+  p1: "L'aéroport de Marrakech Ménara (code IATA : <strong>RAK</strong>, code OACI : <strong>GMMX</strong>) est le deuxième aéroport du Maroc derrière Casablanca, et de loin la première porte d'entrée touristique du pays. Il doit son nom à la Ménara, la grande oliveraie et son bassin du XII<sup>e</sup> siècle, qui borde la piste au nord-ouest de la médina.",
+  p2: "Sa piste unique de 3 100 mètres, équipée d'un ILS de catégorie II, accueille aussi bien les gros-porteurs long-courrier que le flot quotidien de Boeing 737 et d'Airbus A320 low cost. Le tarmac peut stationner une quinzaine d'appareils moyen-courrier en simultané.",
+  p3: "L'aérogare réunit deux terminaux passagers dans un même bâtiment d'environ 42 000 m², conçu pour près de 9 millions de voyageurs par an — un seuil déjà dépassé en 2024 avec 9,3 millions de passagers, en hausse de 34 % sur un an. Une extension est en cours pour absorber cette croissance. Ryanair, easyJet, Transavia, Royal Air Maroc, Air Arabia Maroc et une trentaine d'autres compagnies y opèrent, faisant du RAK la première base low cost du royaume.",
+  factsheet: "Fiche technique",
+  rows: [
+    ['Codes', 'RAK / GMMX'],
+    ['Terminaux', '2 terminaux (même bâtiment)'],
+    ['Trafic 2024', '9,3 millions de passagers'],
+    ['Piste', '3 100 m, ILS Cat. II'],
+    ['Altitude', '471 m (1 545 ft)'],
+    ['Compagnies', 'Ryanair, easyJet, RAM, Transavia'],
+    ['Distance du centre', '6 km de la médina'],
+    ['Villes desservies', 'Marrakech, Ourika, Agafay, Essaouira']
+  ]
+};
+---
+<!-- Airport Details & History -->
+<section class="section">
+  <div class="container">
+    <div class="grid grid-2" style="gap: 3rem;">
+      <div>
+        <span class="eyebrow">{t.eyebrow}</span>
+        <h2>{t.title}</h2>
+        <p set:html={t.p1}></p>
+        <p set:html={t.p2}></p>
+        <p set:html={t.p3}></p>
+      </div>
+      <div class="card" style="background: var(--cream-2); border: 1px solid var(--line);">
+        <h3 style="margin-bottom: 1rem;">{t.factsheet}</h3>
+        <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.75rem; margin: 0; font-size: 0.95rem;">
+          {t.rows.map(([label, value], i) => (
+            <li style={`display: flex; justify-content: space-between; gap: 1rem; padding-bottom: 0.4rem;${i < t.rows.length - 1 ? ' border-bottom: 1px solid var(--line);' : ''}`}>
+              <strong>{label} :</strong> <span style="text-align: right;">{value}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

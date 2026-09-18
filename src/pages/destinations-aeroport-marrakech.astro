@@ -1,0 +1,61 @@
+---
+import DestinationsLayout from '../layouts/DestinationsLayout.astro';
+import { getLocalizedPath } from '../i18n';
+
+const breadcrumbs = [
+  { name: 'Accueil', href: '/fr/' },
+  { name: 'Destinations', href: '/fr/destinations-aeroport-agadir/' }
+];
+
+const dict = {
+  city: 'Ville',
+  country: 'Pays',
+  continent: 'Continent',
+  airlines: 'Compagnie(s)',
+  searchPlaceholder: 'Rechercher une ville, un pays ou une compagnie...',
+  noResults: 'Aucune destination trouvée.',
+  stats: {
+    destinations: 'Destinations',
+    airlines: 'Compagnies',
+    continents: 'Continents'
+  }
+};
+---
+<DestinationsLayout
+  lang="fr"
+  title="Destinations & Vols Directs Aéroport d'Agadir (AGA)"
+  description="Découvrez toutes les destinations desservies par vols directs depuis l'aéroport d'Agadir Al Massira. Liste des villes, pays et compagnies (Ryanair, RAM, easyJet...)."
+  h1="Destinations Aéroport d'Agadir"
+  lede="L'aéroport d'Agadir Al Massira relie le Maroc à plus de 70 destinations en Europe et en Afrique. Utilisez notre outil ci-dessous pour trouver les compagnies qui desservent votre ville en vol direct."
+  breadcrumbs={breadcrumbs}
+  dict={dict}
+>
+  <section class="content-section">
+    <div class="container">
+      <div class="content-prose">
+        <h2>À propos des vols depuis Agadir</h2>
+        <p>L'Aéroport Agadir Al Massira (AGA) est une porte d'entrée majeure pour le tourisme dans le sud du Maroc, offrant des liaisons directes vers des dizaines de villes européennes. Les compagnies low-cost telles que <strong>Ryanair</strong>, <strong>easyJet</strong> et <strong>Transavia</strong> assurent la majorité des liaisons, rendant le voyage vers Agadir très accessible depuis la France, la Belgique, la Suisse et d'autres pays.</p>
+        <p>Que vous veniez pour profiter du soleil hivernal, visiter la région de Souss-Massa ou faire du surf à Taghazout, l'aéroport propose des vols réguliers qui s'étendent à chaque nouvelle saison.</p>
+      </div>
+
+      <div class="links-grid">
+        <a href={getLocalizedPath('/agadir-airport-guide/arrivals/', 'fr')} class="link-card">
+          <h3>Arrivées</h3>
+          <p>Vérifiez le statut des vols en direct</p>
+        </a>
+        <a href={getLocalizedPath('/agadir-airport-guide/departures/', 'fr')} class="link-card">
+          <h3>Départs</h3>
+          <p>Horaires et infos d'embarquement</p>
+        </a>
+        <a href={getLocalizedPath('/agadir-airport-transfers/', 'fr')} class="link-card">
+          <h3>Transferts & Taxis</h3>
+          <p>Réservez un trajet vers votre hôtel</p>
+        </a>
+        <a href={getLocalizedPath('/agadir-airport-car-rental/', 'fr')} class="link-card">
+          <h3>Location de Voiture</h3>
+          <p>Comparez et louez un véhicule à l'aéroport</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</DestinationsLayout>

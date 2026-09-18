@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
+import { getLocalizedPath } from '../i18n';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+---
+<BaseLayout keywords="Contact Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Contact Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Contact à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+>
+  <section class="hero">
+    <div class="container hero-inner">
+      <Breadcrumbs items={[{ name: 'Accueil', href: L('/') }, { name: 'Contact', href: L('/contact/') }]} />
+      <span class="eyebrow">Nous écrire</span>
+      <h1>Nous contacter</h1>
+      <p class="lede">Une question sur l’arrivée ou les déplacements à Agadir, un prix qui a bougé, une correction ? Nous lisons tout. Voici comment nous joindre, et ce que nous pouvons réellement faire.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <article class="prose">
+        <p>
+          Le meilleur moyen de nous joindre est l’e-mail :
+          <a href="mailto:hello@airportaga.com">hello@airportaga.com</a>. Nous sommes une petite équipe
+          indépendante, alors laissez-nous un peu de temps pour répondre, mais nous lisons chaque message.
+        </p>
+
+        <h2>Ce que nous pouvons faire</h2>
+        <ul>
+          <li>Répondre aux questions sur l’arrivée et les déplacements à Agadir, transferts, taxis, location, les routes sur la côte.</li>
+          <li>Prendre en compte vos corrections : un prix qui a changé, un détail qui a évolué, un lien cassé. Cela aide vraiment, et nous mettons le guide à jour.</li>
+          <li>Recueillir vos retours sur le site, ou un sujet sur l’AGA et la côte du Souss que vous aimeriez voir traité.</li>
+          <li>Traiter les demandes de partenariat et de presse.</li>
+        </ul>
+
+        <h2>Ce que nous ne pouvons pas faire</h2>
+        <p>
+          Un point important à clarifier : <strong>nous ne sommes ni l’aéroport Agadir Al Massira, ni une
+          compagnie aérienne, ni une société de taxis ou de transferts.</strong> AirportAGA est un guide
+          indépendant. Cela signifie que nous ne pouvons pas :
+        </p>
+        <ul>
+          <li>Enregistrer, modifier ou rembourser un vol, ni répondre sur votre réservation précise, contactez votre compagnie.</li>
+          <li>Retrouver des bagages perdus, gérer l’exploitation de l’aéroport, ni traiter la sûreté et l’immigration, contactez l’aéroport ou votre compagnie.</li>
+          <li>Gérer ou modifier une réservation de transfert, de location ou d’hôtel faite auprès d’un prestataire, contactez directement cette société, avec les coordonnées de votre confirmation.</li>
+        </ul>
+        <p>
+          Pour tout ce qui touche à une réservation effectuée, l’opérateur indiqué sur votre e-mail de
+          confirmation est le bon interlocuteur (et le plus rapide).
+        </p>
+
+        <h2>Un mot sur les prix</h2>
+        <p>
+          Les chiffres du site sont documentés et datés, mais les tarifs varient avec le carburant, la
+          saison et la demande, confirmez toujours le prix en direct auprès de l’opérateur avant de
+          réserver. Plus de détails sur notre fonctionnement dans la
+          <a href={L('/affiliate-disclosure/')}>divulgation d’affiliation</a> et la page
+          <a href={L('/about/')}>à propos</a>.
+        </p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,110 @@
+---
+import GuideLayout from '../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Où manger à Agadir', href: L('/best-restaurants-agadir/') },
+];
+const toc = [
+  { label: 'Le port de pêche (fruits de mer)', id: 'port' },
+  { label: 'La Marina (chic et vue mer)', id: 'marina' },
+  { label: 'Le centre-ville et Talborjt', id: 'centre' },
+  { label: 'Le front de mer (touristique)', id: 'plage' },
+  { label: 'Plats marocains à goûter', id: 'plats' },
+];
+const faqs = [
+  { q: 'Où manger le meilleur poisson à Agadir ?', a: 'Le port de pêche (les gargotes du port) est l\'endroit le plus authentique et le moins cher pour manger du poisson frais grillé. Choisissez votre poisson sur l\'étal, négociez légèrement le prix et installez-vous sur des bancs. Pour une expérience plus chic, les restaurants de la Marina proposent d\'excellents fruits de mer avec vue.' },
+  { q: 'Combien coûte un repas au restaurant à Agadir ?', a: 'Dans un quartier populaire comme Talborjt, un tajine ou un couscous coûte environ 40 à 60 MAD (4-6 €). Sur le front de mer touristique, comptez entre 100 et 200 MAD (10-20 €) pour un plat principal. Les restaurants haut de gamme de la Marina ou des hôtels facturent des prix européens, souvent autour de 200 à 400 MAD (20-40 €).' },
+  { q: 'Peut-on boire de l\'alcool dans les restaurants à Agadir ?', a: 'Seuls les établissements possédant une licence vendent de l\'alcool. On les trouve principalement sur le front de mer, à la Marina, et dans les hôtels. Les petits restaurants traditionnels du centre (Talborjt) et du port n\'en servent pas.' },
+  { q: 'Faut-il laisser un pourboire au restaurant au Maroc ?', a: 'Oui, c\'est la coutume. Dans les cafés ou petits restos, laissez quelques dirhams (5-10 MAD). Dans les restaurants plus touristiques ou haut de gamme, un pourboire de 10 % de l\'addition est apprécié si le service était bon.' },
+];
+---
+<GuideLayout keywords="Restaurants Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Restaurants Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Restaurants à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Agadir · Gastronomie"
+  h1="Où manger à Agadir : Les bons coins"
+  lede="Agadir est le premier port de pêche du Maroc, ce qui en fait un paradis pour les fruits de mer, mais la ville offre aussi une excellente cuisine traditionnelle si l'on sait où chercher. Des grillades enfumées du port aux tables chics de la Marina, voici comment bien manger à Agadir."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['agadir-marina']}
+  toc={toc}
+  faqs={faqs}
+  updated="Juin 2026"
+  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+>
+  <p>
+    Savoir où manger à Agadir fait toute la différence entre un séjour standard de station balnéaire et une
+    véritable expérience marocaine. La règle d'or est simple : plus vous vous éloignez du sable, plus les
+    prix baissent et plus la cuisine gagne en authenticité. Mais chaque quartier a son charme, que vous
+    cherchiez un dîner romantique au coucher du soleil ou un déjeuner sur le pouce à quelques dirhams.
+  </p>
+
+  <h2 id="port">Le port de pêche (L'authentique)</h2>
+  <p>
+    Agadir abrite le plus grand port de pêche aux sardines du monde. Juste à côté de l'entrée du port, vous
+    trouverez une rangée de petites gargotes numérotées. C'est bruyant, rempli de fumée, un peu insistant,
+    mais c'est là qu'on mange <strong>le poisson le plus frais de la ville</strong>.
+  </p>
+  <p>
+    Le fonctionnement : pointez du doigt les dorades, calamars, crevettes ou soles sur l'étal de glace.
+    Demandez le prix, asseyez-vous sur une table couverte de papier, et attendez qu'on vous serve les fruits
+    de mer grillés avec une salade marocaine, du pain frais et des frites. C'est l'expérience locale par
+    excellence, parfaite pour le déjeuner.
+  </p>
+
+  <h2 id="marina">La Marina (Chic et vue mer)</h2>
+  <p>
+    À l'extrémité nord de la plage, la Marina est le quartier huppé d'Agadir. Les yachts y sont amarrés,
+    l'architecture est soignée, et les restaurants sont alignés face à l'eau. C'est l'endroit idéal pour un
+    <strong>dîner élégant ou pour manger des sushis et des fruits de mer raffinés</strong>.
+  </p>
+  <p>
+    Les prix ici sont similaires à ceux de l'Europe. Vous y trouverez d'excellents restaurants de poisson
+    comme <em>Pure Passion</em>, des cafés chics pour le petit-déjeuner, et des établissements servant
+    de l'alcool (bières locales et vins marocains) en terrasse. Idéal au coucher du soleil.
+  </p>
+
+  <h2 id="centre">Le centre-ville et Talborjt (Local et pas cher)</h2>
+  <p>
+    Si vous cherchez la véritable cuisine marocaine de tous les jours (tajines, couscous, harira, pastilla),
+    fuyez le front de mer et dirigez-vous vers le quartier de <strong>Talborjt</strong> ou le <strong>Nouveau
+    Talborjt</strong>, à 15 minutes de marche de la plage.
+  </p>
+  <p>
+    Autour de la place Lahcen Tamri, une myriade de petits restaurants servent des plats copieux pour une
+    fraction du prix de la zone touristique. Un tajine de poulet au citron ou de bœuf aux pruneaux vous
+    coûtera autour de 50 MAD (5 €). C'est simple, délicieux, fréquenté par les locaux, et l'alcool n'y est pas
+    servi. Un incontournable pour les petits budgets.
+  </p>
+
+  <h2 id="plage">Le front de mer (Touristique et pratique)</h2>
+  <p>
+    La corniche pavée qui longe la plage sur plusieurs kilomètres est bordée de restaurants, de pizzerias,
+    de glaciers et de pubs. C'est <strong>pratique, sûr, et très animé le soir</strong>. 
+  </p>
+  <p>
+    On y sert de tout : cuisine internationale, pizzas, tapas, et plats marocains standardisés. Beaucoup
+    d'établissements proposent de l'alcool et des concerts le soir. Si la qualité gastronomique n'y est pas
+    toujours exceptionnelle, l'emplacement face à l'océan compense largement. Lisez les menus affichés à
+    l'extérieur, car les prix varient énormément d'un établissement à l'autre.
+  </p>
+
+  <h2 id="plats">Plats marocains à goûter absolument</h2>
+  <ul>
+    <li><strong>Le Tajine de poisson :</strong> Spécialité de la région du Souss, souvent préparé avec du congre, des tomates, des poivrons et du charme charmoula.</li>
+    <li><strong>La Pastilla :</strong> Un feuilleté sucré-salé, traditionnellement farci au pigeon (ou poulet) et aux amandes, saupoudré de sucre glace et de cannelle. Il existe aussi une excellente variante aux fruits de mer.</li>
+    <li><strong>Le Couscous du vendredi :</strong> Plat national par excellence, traditionnellement consommé le vendredi midi. À commander de préférence ce jour-là pour une fraîcheur optimale.</li>
+    <li><strong>L'Amlou :</strong> La "pâte à tartiner" berbère, servie au petit-déjeuner. Un mélange d'huile d'argan torréfiée, d'amandes pilées et de miel. Délicieux sur du pain chaud.</li>
+  </ul>
+
+  <div class="callout">
+    <span class="callout-label">L'astuce restauration</span>
+    Le couscous se mange traditionnellement le vendredi midi au Maroc. Beaucoup de petits restaurants locaux n'en préparent que ce jour-là. C'est le moment idéal pour en commander un, il sera frais et authentique.
+  </div>
+</GuideLayout>

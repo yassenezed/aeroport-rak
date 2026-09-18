@@ -1,0 +1,22 @@
+---
+import { site } from '../../data/site';
+interface Props {
+  itemName: string;
+  description: string;
+  url: string;
+  rating: number;
+  best?: number;
+}
+const { itemName, description, url, rating, best = 5 } = Astro.props;
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Review',
+  itemReviewed: { '@type': 'Service', name: itemName },
+  reviewBody: description,
+  url,
+  reviewRating: { '@type': 'Rating', ratingValue: rating, bestRating: best, worstRating: 1 },
+  author: { '@type': 'Organization', name: site.name, url: site.url },
+  publisher: { '@id': `${site.url}/#organization` },
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

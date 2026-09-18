@@ -1,0 +1,102 @@
+---
+import GuideLayout from '../../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../../i18n';
+import { photos } from '../../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: "Guide de l'aéroport", href: L('/agadir-airport-guide/') },
+  { name: 'Distance au centre-ville', href: L('/agadir-airport-guide/distance-to-city/') },
+];
+const toc = [
+  { label: 'Les chiffres', id: 'numbers' },
+  { label: "Où se trouve l'aéroport", id: 'location' },
+  { label: 'Ce qui influe sur le temps de trajet', id: 'factors' },
+  { label: 'En taxi, transfert ou voiture', id: 'how' },
+];
+const faqs = [
+  { q: "À quelle distance l'aéroport d'Agadir est-il du centre-ville ?", a: "Environ 22 km. Agadir Al Massira se trouve près de Temsia, au nord-est de la ville, et le trajet vers le centre d'Agadir prend un vrai 25 à 40 minutes selon la circulation et l'endroit exact où vous logez." },
+  { q: "Combien de temps pour aller de l'AGA à Agadir en voiture ?", a: "25 à 40 minutes pour les 22 km. L'essentiel du trajet se fait sur route dégagée qui roule bien, mais le dernier tronçon vers la marina et les hôtels de plage peut ralentir en fin d'après-midi et autour des arrivées de charters en soirée. Prévoyez le haut de la fourchette si vous atterrissez à une heure chargée." },
+  { q: "Pourquoi est-ce si long pour seulement 22 km ?", a: "L'aéroport est au nord-est de la ville près de Temsia, donc le trajet n'est pas un saut rectiligne le long de la plage, il longe le bord de la ville avant d'atteindre le centre. Ajoutez la circulation de fin d'après-midi vers la marina et les vagues de charters du soir, et 22 km deviennent une bonne demi-heure plutôt qu'un sprint de dix minutes." },
+  { q: "Combien coûte le trajet de l'aéroport d'Agadir vers la ville ?", a: "Un grand taxi à la station tourne autour de 200–250 MAD en journée et 300–350 MAD la nuit, par voiture. Un transfert réservé est un prix fixe dès 15–20 € environ. Il n'y a ni train ni Uber ; le moins cher reste la navette ALSA vers le centre d'Agadir, autour de 50 MAD, mais en journée et vers le centre uniquement. Tarifs vérifiés en juin 2026." },
+];
+---
+<GuideLayout keywords="Distance Centre Ville Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Distance Centre Ville Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Distance Centre Ville à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Guide de l'aéroport · Distance"
+  h1="À quelle distance l'aéroport d'Agadir est-il de la ville ?"
+  lede="Environ 22 km, et un vrai 25 à 40 minutes de route, pas le court saut que la distance laisse croire. Voici où se trouve l'aéroport, ce qui allonge le trajet, et ce que coûte vraiment la course vers le centre d'Agadir."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['agadir-marina']}
+  toc={toc}
+  faqs={faqs}
+  updated="juin 2026"
+  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+>
+  <p>
+    La version courte : Agadir Al Massira est à environ 22 km du centre d'Agadir, et il faut prévoir un
+    trajet de 25 à 40 minutes plutôt qu'un transfert express. Cet écart entre la distance et le temps
+    prend les gens au dépourvu, alors voici pourquoi c'est ce que c'est, et ce que coûte la course une
+    fois qu'on le sait. Pour comparer les vrais moyens d'aller en ville et en réserver un, la
+    <a href={L('/agadir-airport-to-agadir/')}>page d'itinéraire aéroport vers Agadir</a> donne les prix en
+    direct.
+  </p>
+
+  <h2 id="numbers">Les chiffres</h2>
+  <ul>
+    <li><strong>Distance :</strong> environ 22 km jusqu'au centre d'Agadir.</li>
+    <li><strong>Temps de trajet :</strong> 25 à 40 minutes, le haut de la fourchette aux heures chargées.</li>
+    <li><strong>Grand taxi :</strong> ~200–250 MAD en journée, ~300–350 MAD la nuit, par voiture.</li>
+    <li><strong>Transfert réservé :</strong> un prix fixe dès 15–20 € environ.</li>
+  </ul>
+
+  <h2 id="location">Où se trouve vraiment l'aéroport</h2>
+  <p>
+    Al Massira est au nord-est de la ville, du côté de Temsia, pas sur le front de mer. C'est la raison
+    pour laquelle 22 km ne ressemblent pas à 22 km sur une carte : le trajet longe le bord de la ville
+    avant de plonger vers la marina et la bande d'hôtels, donc ce n'est jamais le sprint en ligne droite
+    que la distance suggère. La ville s'étire aussi le long de la baie, donc un hôtel à l'extrémité sud
+    peut être à quelques kilomètres de plus que « le centre », bon à savoir si vous jugez votre temps de
+    transfert depuis un point posé sur le front de mer.
+  </p>
+
+  <h2 id="factors">Ce qui influe sur le temps de trajet</h2>
+  <p>
+    Trois choses font bouger l'aiguille. D'abord l'heure : le dernier tronçon vers la marina et les hôtels
+    de plage ralentit en fin d'après-midi et autour des arrivées de charters du soir, ce qui est
+    précisément quand la plupart des vols de l'AGA atterrissent. Ensuite, l'endroit où vous logez, l'extrémité sud de la baie ajoute quelques minutes par rapport au centre. Enfin, votre véhicule et
+    votre chauffeur : un chauffeur de transfert qui connaît la ville file droit, tandis qu'un grand taxi
+    cherchant un hôtel inconnu peut perdre du temps. Rien de dramatique ; ça pousse simplement un trajet
+    de 25 minutes vers 40.
+  </p>
+
+  <h2 id="how">Couvrir la distance : taxi, transfert ou voiture</h2>
+  <p>
+    Il n'y a ni train, ni Uber ou Careem, donc les 22 km se couvrent surtout de l'une de trois façons. Un
+    grand taxi à la station est, parmi elles, le moins cher et toujours là, fixez le tarif avant que les
+    bagages entrent. Un transfert réservé coûte un peu plus pour un prix fixe et un chauffeur qui patiente
+    si vous avez du retard, ce qui convient à un charter du soir ou à une famille avec des bagages. Une
+    voiture de location ne se justifie que si vous comptez vous aventurer au-delà de la ville. Il existe
+    aussi une navette ALSA vers le centre d'Agadir (autour de 50 MAD, à peu près toutes les heures en
+    journée), le moyen le moins cher si vous voyagez léger, atterrissez de jour et logez au centre, mais
+    elle ne rejoint ni un hôtel ni la côte. La <a href={L('/agadir-airport-to-agadir/')}>page aéroport vers
+    Agadir</a> compare les trois avec les prix actuels.
+  </p>
+  <div class="disclosure-inline">
+    Certains liens ici sont des liens d'affiliation, réservez via ces liens et nous pouvons percevoir
+    une petite commission, sans surcoût pour vous. <a href={L('/affiliate-disclosure/')}>Comment ça
+    fonctionne</a>.
+  </div>
+
+  <div class="callout">
+    <span class="callout-label">Prévoyez la demi-heure</span>
+    Ne réservez pas une correspondance serrée sur la foi d'un chiffre de 22 km. Comptez 25 à 40 minutes de
+    porte à porte, davantage si vous atterrissez dans la circulation de fin d'après-midi, et vous ne serez
+    pas pris de court.
+  </div>
+</GuideLayout>

@@ -1,0 +1,94 @@
+---
+import GuideLayout from '../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../i18n';
+import { PRICES_CHECKED } from '../data/airport';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Guide de voyage Agadir', href: L('/agadir-travel-guide/') },
+  { name: 'Balade en chameau et Quad', href: L('/agadir-camel-ride-quad/') },
+];
+
+const toc = [
+  { label: 'Chameau vs Quad', id: 'camel-vs-quad' },
+  { label: 'Où se déroulent les circuits ?', id: 'locations' },
+  { label: 'Ce qu\'il faut porter et apporter', id: 'what-to-bring' },
+  { label: 'Prix et Réservation', id: 'prices' },
+];
+
+const faqs = [
+  { q: 'Est-ce sûr pour les enfants ?', a: 'Oui, les balades en chameau sont très lentes et sûres pour les enfants de tous âges. Pour le quad, les enfants de moins de 16 ans doivent généralement monter en tant que passager avec un conducteur adulte, plutôt que de conduire leur propre quad.' },
+  { q: 'Ai-je besoin d\'un permis de conduire pour le quad ?', a: 'Non. Les quads utilisés pour ces excursions sont entièrement automatiques et bridés à des vitesses sûres. Vous recevrez un briefing complet sur la sécurité et une séance d\'entraînement avant de partir. Aucun permis n\'est requis.' },
+  { q: 'Allons-nous rouler sur la plage ?', a: 'En général, non. Pour protéger les principales plages touristiques et les baigneurs, les quads et les chameaux sont limités à des zones spécifiques. La plupart des excursions traversent les forêts d\'eucalyptus, les dunes de sable et les villages berbères ruraux juste à l\'extérieur de la ville.' },
+  { q: 'Puis-je faire les deux en une journée ?', a: 'Absolument. De nombreux voyagistes proposent des forfaits "combinés" où vous passez 2 heures sur un quad puis passez à une randonnée à dos de chameau de 2 heures, se terminant souvent par une pause thé à la menthe traditionnelle.' },
+];
+---
+
+<GuideLayout keywords="Balade Chameau Quad Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Balade Chameau Quad Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Balade Chameau Quad à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Excursions & Aventure"
+  h1="Balade en chameau et Quad à Agadir : Le guide complet"
+  lede="Si vous souhaitez faire une pause de la plage, les paysages ruraux entourant Agadir offrent un terrain de jeu parfait pour l'aventure. Des paisibles randonnées à dos de chameau au coucher du soleil à travers les forêts d'eucalyptus jusqu'aux montées d'adrénaline en quad dans les dunes, voici tout ce que vous devez savoir pour réserver une excursion."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['souss-coast']}
+  toc={toc}
+  faqs={faqs}
+  updated={PRICES_CHECKED}
+  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+>
+  <p>
+    Alors qu'Agadir est célèbre pour son immense plage de sable et ses hôtels de villégiature, la véritable aventure marocaine commence à quelques kilomètres seulement des limites de la ville. La région du Souss se caractérise par des dunes de sable arides, des réserves d'arganiers et des villages ruraux traditionnels — qui se prêtent parfaitement à l'exploration à dos de chameau ou en quad.
+  </p>
+  <p>
+    Ces excursions d'une demi-journée sont incroyablement populaires, très abordables et offrent un contraste saisissant avec la zone touristique moderne d'Agadir.
+  </p>
+
+  <h2 id="camel-vs-quad">Balades en Chameau vs Quad : Que choisir ?</h2>
+  <p>
+    Le choix dépend finalement du rythme que vous préférez.
+  </p>
+  <p>
+    <strong>Balades en chameau :</strong> Une randonnée à dos de chameau est lente, paisible et rythmée. C'est une expérience marocaine emblématique et offre beaucoup de temps pour prendre des photos et s'imprégner du paysage. C'est vivement recommandé pour les familles avec de jeunes enfants ou toute personne à la recherche d'un après-midi relaxant. Le coucher du soleil est le meilleur moment pour y aller.
+  </p>
+  <p>
+    <strong>Quad et Buggys :</strong> Si vous préférez la vitesse et l'adrénaline, louer un quad (ATV) ou un buggy des dunes est la voie à suivre. Vous couvrirez beaucoup plus de terrain, éclaboussant dans la boue, naviguant sur des pistes sablonneuses et soulevant la poussière. C'est plus bruyant, plus salissant et immensément amusant.
+  </p>
+
+  <h2 id="locations">Où se déroulent les excursions ?</h2>
+  <p>
+    Pour des raisons de sécurité et d'environnement, les excursions ne sont pas autorisées sur la plage touristique principale d'Agadir. Au lieu de cela, les voyagistes viendront vous chercher à votre hôtel et vous conduiront environ 15 à 20 minutes en dehors de la ville jusqu'aux points de départ.
+  </p>
+  <p>
+    La plupart des itinéraires vous font traverser la <strong>forêt d'eucalyptus de Bensergao</strong>, jusqu'aux <strong>dunes de sable pré-sahariennes</strong>, et le long des rives du fleuve Souss, où vous pourrez apercevoir des flamants roses migrateurs. Vous traverserez également de petits villages berbères, et presque toutes les excursions incluent un arrêt dans une maison locale pour un thé à la menthe traditionnel et des biscuits marocains.
+  </p>
+
+  <h2 id="what-to-bring">Ce qu'il faut porter et apporter</h2>
+  <p>
+    Selon l'activité choisie, des vêtements appropriés rendront l'expérience beaucoup plus confortable.
+  </p>
+  <ul>
+    <li>
+      <strong>Pour les balades en chameau :</strong> Portez des pantalons longs pour éviter que les poils rêches du chameau n'irritent vos jambes. Des chaussures fermées sont recommandées, et les lunettes de soleil et la crème solaire sont essentielles.
+    </li>
+    <li>
+      <strong>Pour le Quad :</strong> Vous allez <em>forcément</em> vous salir et prendre la poussière. Portez des vêtements que vous ne craignez pas de salir. Le voyagiste fournira un casque et des lunettes de protection, mais un bandana ou une écharpe pour couvrir votre bouche et votre nez est vivement recommandé pour éviter d'avaler la poussière. Les chaussures fermées sont obligatoires.
+    </li>
+  </ul>
+
+  <h2 id="prices">Prix et Réservation</h2>
+  <p>
+    Ces excursions sont proposées à des prix très raisonnables par rapport aux destinations européennes.
+  </p>
+  <p>
+    Une <strong>balade en chameau</strong> standard de 2 heures coûte généralement entre 20 € et 25 € par personne. Une session de <strong>quad</strong> de 2 heures coûte environ 35 € à 45 € pour un seul conducteur (les passagers sont généralement moins chers).
+  </p>
+  <p>
+    <strong>Les forfaits combinés</strong> (2 heures de quad + 2 heures de chameau) offrent le meilleur rapport qualité-prix et coûtent généralement entre 55 € et 65 €. Nous vous recommandons vivement de les réserver en ligne à l'avance pour vous assurer que la prise en charge à l'hôtel soit organisée sans problème.
+  </p>
+</GuideLayout>

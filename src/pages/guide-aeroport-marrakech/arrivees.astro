@@ -1,0 +1,114 @@
+---
+import GuideLayout from '../../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../../i18n';
+import { photos } from '../../data/images';
+import FlightWidget from '../../components/ui/FlightWidget.astro';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: "Guide de l'aéroport", href: L('/agadir-airport-guide/') },
+  { name: 'Arrivées', href: L('/agadir-airport-guide/arrivals/') },
+];
+const toc = [
+  { label: "De l'avion aux tapis", id: 'tapis' },
+  { label: 'Le contrôle des passeports', id: 'passeport' },
+  { label: 'Des espèces aux distributeurs', id: 'distributeurs' },
+  { label: 'Une SIM avant de sortir', id: 'sim' },
+  { label: 'La station de taxis', id: 'station' },
+  { label: 'Si vous avez réservé un transfert', id: 'transfert' },
+];
+const faqs = [
+  { q: "Combien de temps pour passer les arrivées à l'aéroport d'Agadir ?", a: "Un soir normal, 30 à 45 minutes entre l'atterrissage et la sortie, les bagages sont l'étape la plus lente. Si deux charters atterrissent à quelques minutes d'écart, la file aux passeports peut atteindre une heure, mais elle avance régulièrement." },
+  { q: "Y a-t-il des distributeurs aux arrivées de l'aéroport d'Agadir ?", a: "Oui, dans le hall d'arrivée avant les portes de sortie. Préférez une machine d'une vraie banque (pas un guichet de change isolé) et retirez 500 à 1 000 MAD pour la course et votre première journée. Le dirham est une monnaie fermée : impossible de l'emporter avec vous." },
+  { q: "Peut-on acheter une carte SIM à l'arrivée à l'AGA ?", a: "Oui. Maroc Telecom, Orange et inwi tiennent des kiosques dans le hall d'arrivée et vendent une SIM touristique sur présentation du passeport en quelques minutes, souvent autour de 50 MAD avec des données. Une eSIM achetée avant le départ est l'alternative si vous voulez éviter le kiosque." },
+  { q: "Y a-t-il une station de taxis aux arrivées de l'aéroport d'Agadir ?", a: "Oui, les grands taxis attendent juste devant les portes des arrivées. Fixez le prix avant de monter (environ 200–250 MAD vers le centre d'Agadir en journée). Il n'y a ni Uber ni Careem à Agadir : c'est la station, un transfert réservé ou une location." },
+];
+---
+<GuideLayout keywords="Arrivees Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Arrivees Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Arrivees à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Guide de l'aéroport · Arrivées"
+  h1="Les arrivées à l'aéroport d'Agadir, pas à pas"
+  lede="Ce qui se passe vraiment après l'atterrissage à l'AGA, des tapis à bagages à la station de taxis, pour sortir avec des espèces, des données et un plan, plutôt que de rester dans le hall à vous demander quoi faire."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['agadir-bay']}
+  toc={toc}
+  faqs={faqs}
+  updated="juin 2026"
+  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+>
+  <FlightWidget type="arrivals" lang={lang} />
+
+  <p>
+    L'arrivée à Agadir Al Massira est une suite courte et simple, et plus vous l'imaginez à l'avance, plus
+    elle se passe en douceur, surtout sur les charters du soir qui composent l'essentiel du trafic de l'AGA.
+    Voici tout le déroulé, dans l'ordre où vous le vivrez.
+  </p>
+
+  <h2 id="tapis">De l'avion aux tapis</h2>
+  <p>
+    Al Massira est un terminal unique : pas de navette interne ni de longue marche, vous descendez de l'avion
+    et suivez le couloir directement vers l'immigration. Les vols internationaux partagent un seul groupe de
+    tapis à bagages, et comme la plupart des arrivées sont des charters ou des vols low-cost du Royaume-Uni, de
+    France, de Belgique et de Scandinavie, le hall se remplit par vagues plutôt que régulièrement. Si deux vols
+    atterrissent ensemble, ce sont les bagages, et non les formalités, qui prennent le plus de temps.
+  </p>
+
+  <h2 id="passeport">Le contrôle des passeports</h2>
+  <p>
+    Le contrôle des passeports est rarement le goulot d'étranglement des grands aéroports marocains. Pour la
+    plupart des nationalités, un passeport valide suffit pour un séjour touristique, rien d'exotique à remplir
+    au comptoir. La seule chose qui fait monter la file, c'est le timing : deux charters du soir arrivant à
+    quelques minutes d'écart. Ça avance quand même régulièrement : comptez de quelques minutes à une vingtaine
+    selon votre place dans la file.
+  </p>
+
+  <h2 id="distributeurs">Des espèces aux distributeurs</h2>
+  <p>
+    Avant les portes de sortie, vous passez les distributeurs, et c'est votre première vraie tâche. Le dirham
+    est une monnaie fermée, impossible de l'acheter avant d'arriver, donc retirer ici est le moyen le plus
+    simple d'avoir du liquide. Préférez une machine d'une vraie banque à un guichet de change isolé, dont les
+    taux sont moins bons, et retirez 500 à 1 000 MAD pour la course, un pourboire et votre première journée. La
+    côte, surtout, fonctionne au liquide. Notre <a href={L('/agadir-airport-guide/money-exchange/')}>page argent
+    et change</a> détaille combien retirer et la question distributeur contre guichet.
+  </p>
+
+  <h2 id="sim">Une SIM avant de quitter le hall</h2>
+  <p>
+    Le même hall compte des kiosques SIM Maroc Telecom, Orange et inwi. Ils vous vendent une SIM touristique sur
+    présentation du passeport en quelques minutes, souvent autour de 50 MAD avec un forfait de données généreux, ou vous arrivez avec une eSIM déjà chargée et sautez la file. Être connecté compte plus ici que dans une
+    ville compacte : il faut parfois écrire à un chauffeur ou partager le point d'un appartement de Taghazout
+    sans vraie adresse. Voyez le <a href={L('/agadir-airport-guide/sim-card-wifi/')}>guide SIM et Wi-Fi</a> pour
+    les opérateurs et les eSIM.
+  </p>
+
+  <h2 id="station">La station de taxis dehors</h2>
+  <p>
+    Les portes s'ouvrent sur la station de grands taxis. Il n'y a ni Uber ni Careem à Agadir : c'est cette
+    station, ou un transfert réservé, que presque tout le monde emprunte. Fixez le prix <em>avant</em> de
+    charger vos bagages : environ 200–250 MAD vers le centre d'Agadir en journée, davantage la nuit. Notre
+    <a href={L('/agadir-airport-taxi/')}>guide du taxi aéroport</a> donne les justes tarifs par destination, et
+    l'<a href={L('/agadir-airport-guide/uber-taxi/')}>explication « pas d'Uber »</a> dit pourquoi les applis de
+    VTC ne marchent pas ici.
+  </p>
+
+  <h2 id="transfert">Si vous avez réservé un transfert</h2>
+  <p>
+    Un chauffeur réservé attend dans la zone des arrivées avec votre nom sur une pancarte et vous écrit dès que
+    votre vol atterrit : pas de station, pas de négociation, le choix sensé pour les arrivées tardives ou les
+    adresses non signalées des villages de surf. Le <a href={L('/agadir-airport-transfers/')}>hub des
+    transferts</a> compare vos options, et la <a href={L('/agadir-airport-to-agadir/')}>page aéroport-Agadir</a>
+    donne les détails du trajet vers la ville.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">Avant de sortir</span>
+    Des espèces au distributeur bancaire · une SIM ou eSIM · le point de votre hôtel enregistré hors ligne · le
+    juste prix du taxi en tête. Quatre choses, toutes dans le hall d'arrivée, et le reste du séjour devient
+    facile.
+  </div>
+</GuideLayout>

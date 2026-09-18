@@ -1,0 +1,97 @@
+---
+import GuideLayout from '../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../i18n';
+import { PRICES_CHECKED } from '../data/airport';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Guide de voyage Agadir', href: L('/agadir-travel-guide/') },
+  { name: 'Shopping à Agadir', href: L('/shopping-in-agadir/') },
+];
+
+const toc = [
+  { label: 'Le Souk El Had', id: 'souk-el-had' },
+  { label: 'Que ramener d\'Agadir', id: 'what-to-buy' },
+  { label: 'Prix fixe vs Marchandage', id: 'bargaining' },
+  { label: 'Supermarchés & Centres commerciaux', id: 'modern-shopping' },
+];
+
+const faqs = [
+  { q: 'L\'huile d\'argan est-elle moins chère à Agadir ?', a: 'Oui, la vallée du Souss autour d\'Agadir est le seul endroit au monde où l\'arganier pousse naturellement. Cependant, vous devez l\'acheter auprès de coopératives réputées pour vous assurer qu\'elle est 100 % pure.' },
+  { q: 'Dois-je marchander ?', a: 'Dans le souk et la médina, oui. Le marchandage est la norme. En revanche, dans les boutiques modernes, les coopératives et les supermarchés comme Carrefour ou Marjane, les prix sont fixes.' },
+  { q: 'Puis-je payer par carte bancaire ?', a: 'Dans les grands supermarchés et les boutiques haut de gamme, oui. Dans le souk, vous aurez besoin d\'espèces (dirhams marocains). Ayez toujours de petites coupures pour faciliter les négociations.' },
+  { q: 'Qu\'est-ce que le Amlou ?', a: 'Le Amlou est une délicieuse pâte à tartiner traditionnelle marocaine, à base d\'amandes grillées, d\'huile d\'argan et de miel. On la sert souvent au petit-déjeuner et c\'est un excellent souvenir.' },
+];
+---
+
+<GuideLayout keywords="Shopping Souvenirs Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Shopping Souvenirs Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Shopping Souvenirs à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Shopping & Culture"
+  h1="Shopping à Agadir : Le guide ultime des souvenirs"
+  lede="De l'huile d'argan pure pressée à quelques kilomètres de la ville aux épices éclatantes en passant par le cuir artisanal, Agadir est un endroit fantastique pour faire du shopping. Voici votre guide sur ce qu'il faut acheter, où le trouver et comment marchander comme un local."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['taroudant']}
+  toc={toc}
+  faqs={faqs}
+  updated={PRICES_CHECKED}
+  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+>
+  <p>
+    Agadir est peut-être une station balnéaire moderne, mais cela reste l'un des meilleurs endroits au Maroc pour acheter des produits locaux authentiques. La région environnante du Souss est le cœur agricole du pays, ce qui signifie que les épices, les huiles et le miel y sont souvent moins chers et plus frais qu'à Marrakech.
+  </p>
+  <p>
+    Que vous cherchiez un magnet pour frigo bon marché ou un tapis berbère tissé à la main, voici ce qu'il faut savoir sur le shopping à Agadir.
+  </p>
+
+  <h2 id="souk-el-had">Souk El Had : Le centre de tout</h2>
+  <p>
+    On ne peut pas parler de shopping à Agadir sans mentionner le <strong><a href={L('/souk-el-had-agadir/')}>Souk El Had</a></strong>. C'est le plus grand marché couvert d'Afrique, comptant plus de 6 000 stands. 
+  </p>
+  <p>
+    Contrairement au dédale confus de la médina de Marrakech, le Souk El Had est organisé en zones spécifiques (épices, vêtements, meubles, produits frais) et dispose de larges allées couvertes. Il est ouvert tous les jours sauf le lundi. Si vous n'avez le temps de faire du shopping qu'à un seul endroit, allez-y.
+  </p>
+
+  <h2 id="what-to-buy">Que ramener d'Agadir</h2>
+  <p>
+    Bien que l'on trouve les souvenirs marocains classiques (poufs en cuir, céramiques colorées et théières en argent), Agadir est célèbre pour quelques spécialités régionales :
+  </p>
+  <ul>
+    <li>
+      <strong>L'huile d'Argan :</strong> Agadir est la capitale de l'huile d'argan. Vous pouvez acheter à la fois l'huile cosmétique (pour la peau et les cheveux) et l'huile culinaire (torréfiée, pour la cuisine). Achetez-la dans des coopératives certifiées plutôt que sur un stand au hasard dans le souk pour garantir sa pureté.
+    </li>
+    <li>
+      <strong>Le Amlou :</strong> Parfois surnommé le "Nutella marocain", c'est une pâte riche et sucrée à base d'amandes pilées, d'huile d'argan et de miel. C'est totalement addictif.
+    </li>
+    <li>
+      <strong>Le Safran et les épices :</strong> Taliouine, la capitale africaine du safran, se trouve juste à l'est d'Agadir. Vous pouvez acheter du safran d'excellente qualité, du cumin et le célèbre mélange d'épices <em>Ras el Hanout</em> à très bon prix dans le souk.
+    </li>
+    <li>
+      <strong>Les bijoux en argent :</strong> La ville voisine de Tiznit est la capitale marocaine de l'argent. De nombreuses boutiques à Agadir vendent de superbes colliers et de lourds bracelets berbères en argent, provenant directement des artisans de Tiznit.
+    </li>
+  </ul>
+
+  <h2 id="bargaining">Prix fixe vs Marchandage</h2>
+  <p>
+    Le shopping au Maroc implique deux expériences distinctes : les prix fixes et le marchandage.
+  </p>
+  <p>
+    Dans la <strong>Marina</strong> et les boutiques modernes du quartier de <strong>Talborjt</strong>, les prix sont fixes. Vous regardez l'étiquette et vous payez ce montant. La même règle s'applique aux coopératives de femmes pour l'huile d'argan.
+  </p>
+  <p>
+    Au <strong>Souk El Had</strong> ou dans la nouvelle <strong>Médina d'Agadir</strong>, on s'attend à ce que vous marchandiez. En règle générale, pour les articles non-alimentaires (comme les sacs en cuir, les tapis ou les lampes), le prix initial du vendeur sera le double ou le triple de ce qu'il attend réellement. Souriez, soyez poli, proposez la moitié du prix de départ, et négociez à partir de là. Si le prix reste trop élevé, partez poliment : on vous rappellera souvent avec une meilleure offre.
+  </p>
+
+  <h2 id="modern-shopping">Supermarchés et Centres commerciaux</h2>
+  <p>
+    Si vous voulez faire une pause loin du souk, Agadir dispose d'options de shopping modernes. On y trouve un grand hypermarché <strong>Carrefour</strong> et un <strong>Marjane</strong>. Ce sont en fait d'excellents endroits pour acheter de l'huile d'argan culinaire, des épices et du thé marocain à des prix locaux garantis, sans avoir besoin de marchander.
+  </p>
+  <p>
+    Pour les marques de vêtements internationales (Zara, LC Waikiki, Decathlon), rendez-vous au centre commercial <strong>Agadir City Center</strong> ou dans les boutiques le long de la Marina.
+  </p>
+</GuideLayout>

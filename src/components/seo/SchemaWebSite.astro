@@ -1,0 +1,16 @@
+---
+import { site } from '../../data/site';
+interface Props { lang?: 'fr'; }
+const { lang = 'fr' } = Astro.props;
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${site.url}/#website`,
+  name: site.name,
+  url: site.url,
+  inLanguage: 'fr-FR',
+  description: site.description[lang],
+  publisher: { '@id': `${site.url}/#organization` },
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

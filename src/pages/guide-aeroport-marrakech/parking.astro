@@ -1,0 +1,103 @@
+---
+import GuideLayout from '../../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../../i18n';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: "Guide de l'aéroport", href: L('/agadir-airport-guide/') },
+  { name: 'Parking', href: L('/agadir-airport-guide/parking/') },
+];
+const toc = [
+  { label: 'Le parking devant le terminal', id: 'parking' },
+  { label: 'Courte durée & prises en charge', id: 'courte-duree' },
+  { label: 'Séjours plus longs', id: 'longue-duree' },
+  { label: 'Déposer quelqu\'un', id: 'depose' },
+  { label: 'Faut-il vraiment se garer ?', id: 'utile' },
+];
+const faqs = [
+  { q: "Y a-t-il un parking à l'aéroport Agadir Al Massira ?", a: "Oui, un parking se trouve juste devant le terminal, avec une zone courte durée pour les prises en charge et déposes, et de la place pour les séjours plus longs. Le terminal étant petit, la marche du parking au comptoir d'enregistrement ne prend que quelques minutes." },
+  { q: "Combien coûte le parking à l'aéroport d'Agadir ?", a: "Quelques minutes pour une dépose ou une prise en charge sont en général gratuites, puis c'est facturé à un tarif horaire modéré, avec des plafonds journaliers pour les séjours plus longs. Gardez de la monnaie en dirhams : le liquide est le moyen fiable de payer à la barrière." },
+  { q: "Puis-je attendre au parking pour récupérer quelqu'un ?", a: "Oui. La zone courte durée est faite pour ça : entrez, et une courte attente coûte peu ou rien. Comme la plupart des arrivées sont des charters du soir, le plus simple est d'attendre que votre passager vous écrive qu'il a récupéré ses bagages avant d'avancer." },
+  { q: "Vaut-il mieux conduire jusqu'à l'aéroport ou prendre un taxi ?", a: "Pour un court séjour, laisser une voiture garée une semaine ou deux peut coûter plus cher que deux courses de grand taxi ou un transfert réservé. Le parking a du sens surtout si vous rendez une voiture de location ou si quelqu'un vient vous chercher ; sinon, un transfert est souvent plus simple et moins cher." },
+  { q: "Comment paie-t-on le parking de l'aéroport d'Agadir ?", a: "En espèces, en dirhams, à la barrière ou à une borne. La carte n'est pas toujours acceptée, donc gardez de la monnaie sur vous, surtout si vous venez chercher quelqu'un sans être passé par un distributeur. Quelques minutes en dépose-minute sont en général gratuites avant que le compteur ne démarre." },
+];
+---
+<GuideLayout keywords="Parking Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Parking Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Parking à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Guide de l'aéroport · Parking"
+  h1="Le parking à l'aéroport d'Agadir"
+  lede="Où se garer, ce que ça coûte, et comment gérer une prise en charge ou une dépose au terminal compact de l'AGA, avec un avis franc : le parking bat-il vraiment un taxi pour votre séjour ?"
+  breadcrumbs={breadcrumbs}
+  toc={toc}
+  faqs={faqs}
+  updated="juin 2026"
+  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+>
+  <p>
+    Le parking à Agadir Al Massira est simple, il y a un parking principal et le terminal est assez petit pour
+    que la marche jusqu'à l'enregistrement prenne quelques minutes. La vraie question, pour la plupart des
+    visiteurs, n'est pas où se garer mais s'il faut le faire, et cela dépend de votre séjour. Voici le parking,
+    les coûts et la comparaison honnête.
+  </p>
+
+  <h2 id="parking">Le parking devant le terminal</h2>
+  <p>
+    Le parking est à ciel ouvert, juste devant le terminal, à quelques pas des portes. Pas de parking à
+    étages à traverser ni de navette : vous vous garez et vous marchez droit vers l'entrée, en quelques
+    minutes seulement. Comme Al Massira gère un nombre raisonnable de vols, il sature rarement comme les
+    parkings des grands aéroports urbains. Des chariots à bagages sont disponibles jusque sur le parking,
+    pratique si vous arrivez chargé d'une voiture de location à rendre. La plupart des gens qui l'utilisent
+    viennent chercher quelqu'un, déposer quelqu'un, ou justement rendre un véhicule de location.
+  </p>
+
+  <h2 id="courte-duree">Courte durée & prises en charge</h2>
+  <p>
+    La zone dépose-minute gère les prises en charge et les déposes. Quelques minutes sont en général
+    gratuites, puis l'attente bascule sur un tarif horaire modéré. Gardez de la monnaie en dirhams, le
+    liquide est le moyen fiable de payer à la barrière, et la carte n'est pas toujours acceptée. Si vous
+    venez chercher quelqu'un et n'avez pas de dirhams sur vous, c'est un point à anticiper. Pour un charter
+    du soir, attendez que votre passager vous écrive avoir récupéré ses bagages avant d'avancer, plutôt que
+    de tourner en rond pendant que le compteur grimpe : entre l'atterrissage et la sortie des bagages, il
+    s'écoule facilement une demi-heure.
+  </p>
+
+  <h2 id="longue-duree">Séjours plus longs</h2>
+  <p>
+    Pour un séjour plus long, le même parking s'applique, facturé à la journée avec des plafonds qui gardent
+    le coût raisonnable, nettement moins cher, à la journée, que les parkings d'aéroport européens
+    équivalents. Vérifiez le plafond journalier affiché à l'entrée pour estimer votre total. C'est correct
+    sur quelques jours, mais le tarif journalier finit par s'accumuler sur une semaine ou deux, d'où
+    l'intérêt de la comparaison ci-dessous.
+  </p>
+
+  <h2 id="depose">Déposer quelqu'un</h2>
+  <p>
+    Déposer un passager est le cas le plus simple : entrez dans la zone dépose-minute, déchargez au trottoir,
+    et c'est réglé dans la fenêtre gratuite. L'entrée du terminal est juste là, donc pas de longue marche
+    d'adieu, un atout réel d'un petit aéroport. Ne laissez pas une voiture sans surveillance au trottoir,
+    cela dit ; si vous voulez accompagner quelqu'un à l'intérieur, garez-vous sur une place plutôt que de
+    bloquer la dépose. À l'inverse, si c'est vous qu'on récupère, un chauffeur de transfert réservé vous
+    attendra dans la zone des arrivées avec une pancarte à votre nom, sans que personne ait à se garer.
+  </p>
+
+  <h2 id="utile">Faut-il vraiment se garer ?</h2>
+  <p>
+    Voici ce que l'aéroport ne vous dira pas : pour beaucoup de visiteurs, se garer n'est pas le bon choix. Si
+    vous partez et revenez, laisser une voiture une semaine peut coûter plus cher que deux courses de grand taxi
+    ou un transfert réservé dans chaque sens, et vous évitez le trajet de nuit après un vol retour retardé. Le
+    parking se justifie si vous <a href={L('/agadir-airport-car-rental/')}>louez une voiture</a> et la rendez à
+    un comptoir, ou si un proche vient vous chercher. Sinon, pesez-le face à un
+    <a href={L('/agadir-airport-guide/')}>taxi ou un transfert</a> avant de vous engager.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">La règle simple</span>
+    Courte prise en charge ou dépose : profitez de la fenêtre gratuite. Voiture de location : garez-vous et
+    rendez-la au comptoir. Une semaine entière de vacances : chiffrez d'abord un transfert, il gagne souvent.
+  </div>
+</GuideLayout>

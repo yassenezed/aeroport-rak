@@ -1,0 +1,11 @@
+---
+import MoneyLayout from './MoneyLayout.astro';
+const props = Astro.props as any;
+---
+<MoneyLayout
+  {...props}
+  heroProvider={props.heroProvider ?? 'booking'}
+  cta={props.cta ?? { heading: 'Find your place to stay in Agadir', text: 'Compare hotels and riads across the beach strip, the marina and Founty, free cancellation on most rooms.', provider: 'booking', label: 'Search Agadir hotels' }}
+>
+  <slot />
+</MoneyLayout>

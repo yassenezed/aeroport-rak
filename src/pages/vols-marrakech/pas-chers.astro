@@ -1,0 +1,108 @@
+---
+import MoneyLayout from '../../layouts/MoneyLayout.astro';
+import { getLocalizedPath } from '../../i18n';
+import { photos } from '../../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Vols pour Agadir', href: L('/flights-to-agadir/') },
+  { name: 'Vols pas chers', href: L('/cheap-flights-to-agadir/') },
+];
+const facts = [
+  { label: 'Moins cher', value: 'Hors', sub: 'saison' },
+  { label: 'Meilleur jour', value: 'Semaine', sub: 'en général' },
+  { label: 'Réserver', value: '1–3 mois', sub: 'avant' },
+  { label: 'Compagnies', value: 'Low-cost', sub: '& charter' },
+];
+const faqs = [
+  { q: 'Comment trouver des vols pas chers pour Agadir ?', a: 'Comparez les compagnies au lieu d’en consulter une seule, cherchez en dates flexibles (un départ en milieu de semaine est souvent bien moins cher qu’un week-end) et réservez un à deux mois avant pour les semaines chargées. Créez une alerte prix, évitez si possible les vacances de février et les pics de Noël/Pâques, et pesez un billet Marrakech moins cher contre le long transfert qui suit.' },
+  { q: 'Quand les vols pour Agadir sont-ils les moins chers ?', a: 'Les mi-saisons, globalement le printemps (hors Pâques) et l’automne, affichent en général les tarifs les plus bas, avec un beau temps en prime. Les vols en semaine battent ceux du week-end, et les créneaux charters tôt le matin ou tard le soir sont souvent moins chers que les vols de journée pratiques. Les périodes chères sont Noël/Nouvel An, les vacances de février et Pâques.' },
+  { q: 'Quelles compagnies low-cost desservent Agadir ?', a: 'Ryanair, easyJet, Transavia et Jet2 sont les principales low-cost, aux côtés du charter TUI ; Royal Air Maroc couvre les correspondances. L’opérateur le moins cher change sans cesse d’une route à l’autre, et c’est précisément pourquoi comparer toutes les compagnies, plutôt que réserver celle qu’on prend d’habitude, permet de dénicher le bon prix.' },
+  { q: 'Est-ce moins cher de réserver vol et hôtel ensemble ?', a: 'Parfois. Les forfaits charters vers Agadir, vol, hôtel et souvent transferts groupés, peuvent battre la réservation séparée, surtout pour les grands tout-inclus en pleine saison. Mais pour les voyages indépendants, les surf camps ou tout ce qui sort des forfaits, réserver le vol seul et l’hébergement à part offre plus de choix et souvent un total plus bas. Comparez les deux.' },
+];
+---
+<MoneyLayout
+  lang={lang}
+  title="Vols pas chers pour Agadir 2026 : quand et comment trouver les meilleurs tarifs | AirportAGA"
+  description="Comment trouver des vols pas chers pour Agadir Al Massira (AGA) : les saisons et jours les moins chers, les compagnies low-cost, le bon moment pour réserver et les astuces qui font vraiment baisser le prix."
+  eyebrow="Agadir · Vols pas chers"
+  h1="Vols pas chers pour Agadir"
+  lede="Le marché charter et low-cost d’Agadir fait varier les prix fortement, donc il y a de vraies économies à la clé si l’on réserve bien. Voici quand voler, quelles compagnies comparer et les astuces qui font réellement baisser la note."
+  breadcrumbs={breadcrumbs}
+  facts={facts}
+  heroImage={photos['agadir-bay']}
+  heroProvider="aviasales"
+  heroCtaLabel="Trouver des vols pas chers pour Agadir"
+  faqs={faqs}
+  cta={{ heading: 'Traquez le tarif le plus bas', text: 'Comparez toutes les compagnies et les dates proches en une recherche, puis réservez au bon moment, un départ flexible ou un vol en milieu de semaine, c\'est souvent là que se cachent les vraies économies.', provider: 'aviasales', label: 'Comparer les vols pas chers' }}
+>
+  <p>
+    Voici le bon côté d’un aéroport saisonnier et porté par le charter comme Agadir : quand les prix sont
+    volatils, le voyageur attentif gagne. Les pics de demande qui rendent la semaine de Noël hors de prix
+    laissent les mi-saisons réellement bon marché, et comme plusieurs low-cost se disputent les mêmes
+    lignes, bien les comparer paie. Cette page est le mode d’emploi pratique, pas de gadgets, juste le
+    timing et les réflexes qui font baisser le chiffre que vous payez.
+  </p>
+
+  <h2 id="quand">Quand voler pour les tarifs les plus bas</h2>
+  <p>
+    Le timing est le plus grand levier. Les mi-saisons, printemps hors Pâques, et automne, associent les
+    tarifs les plus bas à un temps encore bon : c’est le créneau idéal. Les départs en milieu de semaine
+    (mardi à jeudi) battent presque toujours le week-end, et les créneaux charters peu commodes (tôt le
+    matin, tard le soir) sont en général moins chers que les vols de journée. Évitez si possible les trois
+    fenêtres chères : Noël et Nouvel An, les vacances de février et Pâques, quand la demande de soleil
+    hivernal culmine.
+  </p>
+
+  <h2 id="comment">Comment chercher et réserver</h2>
+  <p>
+    Ne consultez pas une seule compagnie, comparez-les toutes d’un coup, car la moins chère sur une route
+    d’Agadir change de mois en mois. Utilisez la recherche en dates flexibles pour voir tout un mois d’un
+    œil, créez une alerte prix pour être prévenu d’une baisse, et réservez un à deux mois avant pour les
+    semaines prisées (les sièges les moins chers partent d’abord). Pour le contexte sur les lignes et les
+    compagnies, commencez par le guide <a href={L('/flights-to-agadir/')}>vols pour Agadir</a>.
+  </p>
+
+  <h2 id="compagnies">Les compagnies low-cost</h2>
+  <p>
+    Ryanair, easyJet, Transavia et Jet2 forment l’ossature low-cost du marché d’Agadir, avec TUI côté
+    charter et Royal Air Maroc pour les correspondances via Casablanca. Aucune n’est systématiquement la
+    moins chère, c’est tout l’intérêt. Voyez-les comme un ensemble à comparer, pas une marque à laquelle
+    rester fidèle. Les voyageurs britanniques ont le plus d’options à mettre en concurrence ; voyez
+    <a href={L('/flights-to-agadir-from-uk/')}>les vols depuis le Royaume-Uni</a>.
+  </p>
+
+  <h2 id="options">Surveillez les options</h2>
+  <p>
+    Un prix d’appel bas sur une low-cost peut discrètement doubler une fois ajoutés un bagage en soute, un
+    siège choisi et l’embarquement prioritaire. Avant de crier victoire, ajoutez les options dont vous avez
+    réellement besoin et comparez le vrai total, parfois un billet un peu plus cher mais bagage inclus
+    revient moins cher. En cabine seule, les low-cost sont imbattables ; s’il vous faut de la soute (les
+    planches de surf surtout), chiffrez-le dès le départ.
+  </p>
+
+  <h2 id="forfait">Vol seul ou forfait</h2>
+  <p>
+    Pour les grands tout-inclus en pleine saison, un forfait charter, vol, hôtel et transferts groupés, peut battre la réservation séparée. Pour les voyages indépendants, les surf camps ou les plans souples,
+    le vol seul plus votre hébergement offre en général plus de choix et un total plus bas. Comparez les
+    deux avant de vous décider. Et une fois le vol réservé, réglez le trajet au sol avec le
+    <a href={L('/agadir-airport-transfers/')}>guide des transferts</a> et vérifiez
+    <a href={L('/agadir-weather-when-to-visit/')}>quand partir</a>.
+  </p>
+
+  <div class="disclosure-inline">
+    Certains liens de cette page sont des liens d’affiliation : si vous réservez via eux, nous pouvons
+    percevoir une petite commission, sans surcoût pour vous. Cela ne change jamais les prix affichés ni nos
+    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça marche</a>.
+  </div>
+
+  <div class="callout">
+    <span class="callout-label">La check-list du vol pas cher</span>
+    Volez en mi-saison, en milieu de semaine · comparez toutes les compagnies, pas une · créez une alerte
+    prix et réservez à l’avance · ajoutez les options avant de juger le prix · et pesez le vol seul contre
+    un forfait.
+  </div>
+</MoneyLayout>

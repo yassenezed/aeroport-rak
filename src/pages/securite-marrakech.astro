@@ -1,0 +1,117 @@
+---
+import GuideLayout from '../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Agadir est-elle sûre ?', href: L('/is-agadir-safe/') },
+];
+const toc = [
+  { label: 'La réponse courte', id: 'court' },
+  { label: 'Délinquance et arnaques', id: 'delinquance' },
+  { label: 'Taxis et déplacements', id: 'taxis' },
+  { label: 'Femmes voyageuses', id: 'femmes' },
+  { label: 'Santé et eau', id: 'sante' },
+  { label: 'Plages et mer', id: 'plages' },
+];
+const faqs = [
+  { q: 'Agadir est-elle sûre pour les touristes ?', a: 'Oui. Agadir est l’une des villes les plus calmes et détendues du Maroc, habituée aux visiteurs internationaux. La violence contre les touristes est rare. Les vrais risques sont mineurs, pickpockets dans la foule, prix gonflés, vendeurs insistants, et se gèrent avec le bon sens qu’on appliquerait dans n’importe quelle ville balnéaire animée. Prenez des précautions normales et votre séjour sera tranquille.' },
+  { q: 'Agadir est-elle sûre pour les femmes voyageant seules ?', a: 'En général oui, avec la vigilance habituelle. Les voyageuses trouvent Agadir plus détendue que Marrakech, et les zones touristiques comme la promenade sont confortables. Vous pourrez recevoir quelques regards ou remarques ; s’habiller sobrement hors de la plage, marcher d’un pas assuré et éviter les rues désertes tard le soir réduisent les désagréments. Beaucoup de femmes voyagent seules ici sans souci.' },
+  { q: 'Les taxis sont-ils sûrs à Agadir ?', a: 'Oui, mais convenez du prix d’abord. Les petits taxis orange conviennent aux courtes courses en ville, demandez le compteur ou fixez le tarif avant de partir. Les grands taxis couvrent les trajets plus longs et la course de l’aéroport ; ils se négocient, jamais au compteur. Pas d’Uber ni de Careem. Convenir du prix avant de monter est la meilleure habitude pour éviter les abus.' },
+  { q: 'Peut-on boire l’eau du robinet à Agadir ?', a: 'Tenez-vous-en à l’eau en bouteille. L’eau du robinet d’Agadir est chlorée et généralement jugée sûre pour se brosser les dents et se laver, mais la plupart des visiteurs boivent en bouteille pour éviter les maux de ventre dus à une autre composition minérale. L’eau en bouteille est bon marché et partout. Soyez un peu prudent avec les glaçons et les crudités non épluchées les premiers jours.' },
+];
+---
+<GuideLayout keywords="Securite Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Securite Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Securite à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Agadir · Sécurité"
+  h1="Agadir est-elle sûre ? Un guide honnête"
+  lede="Agadir est l’une des villes les plus calmes et les plus accueillantes du Maroc, et la grande majorité des visiteurs y passent un séjour sans le moindre souci. Voici un regard direct, sans alarmisme, sur les vrais risques, délinquance, taxis, conseils aux femmes, santé et mer, et comment les gérer."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['agadir-marina']}
+  toc={toc}
+  faqs={faqs}
+  updated="juin 2026"
+
+  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+>
+  <p>
+    Agadir est un point d’atterrissage rassurant pour un premier voyage au Maroc. C’est une station
+    balnéaire moderne tournée vers le tourisme international, nettement plus posée que la surcharge
+    sensorielle de la médina de Marrakech, et les risques réels sont mineurs et gérables. Ce n’est pas une
+    raison pour débrancher son cerveau, c’est une ville animée et le bon sens du voyageur s’applique, mais
+    le constat honnête est que l’immense majorité des visiteurs vont et viennent sans aucun problème. Voici
+    le détail, secteur par secteur.
+  </p>
+
+  <h2 id="court">La réponse courte</h2>
+  <p>
+    Oui, Agadir est sûre pour le voyageur ordinaire. La violence contre les touristes est rare ; ce qu’il
+    faut vraiment surveiller relève du menu, pickpockets opportunistes dans la foule, un vendeur ou un
+    « guide » non officiel un peu insistant, ou un prix touriste si vous ne fixez pas le tarif d’abord.
+    Appliquez la même prudence que dans n’importe quelle station balnéaire animée et vous ne devriez avoir
+    aucun ennui.
+  </p>
+
+  <h2 id="delinquance">Délinquance et arnaques</h2>
+  <p>
+    Le principal risque est le petit vol dans les endroits bondés, le Souk El Had, la portion animée de la
+    promenade, les taxis pleins. Gardez téléphone et portefeuille dans une poche avant ou un sac fermé,
+    n’exhibez ni argent ni appareils coûteux, et confiez votre passeport au coffre de l’hôtel. Les
+    « arnaques » sont bénignes pour des standards de grande ville : prix gonflé, quelqu’un qui vous oriente
+    vers une boutique précise, ou un guide auto-proclamé qui s’accroche à vous. Un « non merci » poli mais
+    ferme et le fait de poursuivre votre chemin règlent presque tout. Ayez de petites coupures pour ne pas
+    dépendre de la monnaie rendue.
+  </p>
+
+  <h2 id="taxis">Taxis et déplacements</h2>
+  <p>
+    Pas d’Uber ni de Careem à Agadir : ce sont les taxis ou vos jambes. Les petits taxis orange assurent
+    les courtes courses en ville, demandez le compteur, ou convenez d’un prix avant de monter. Les grands
+    taxis couvrent les trajets plus longs et l’aéroport ; ils se négocient toujours, jamais au compteur,
+    alors réglez le tarif avant que le coffre ne s’ouvre. Cette seule habitude, fixer le prix d’abord, évite presque toutes les mésaventures de taxi. Pour la course de l’aéroport, un transfert réservé
+    supprime tout marchandage ; voyez le <a href={L('/agadir-airport-transfers/')}>récapitulatif des
+    transferts</a> pour les options et les prix justes.
+  </p>
+
+  <h2 id="femmes">Femmes voyageuses</h2>
+  <p>
+    Les voyageuses trouvent en général Agadir détendue et facile, plus que les villes à médina. Vous
+    pourrez recevoir quelques regards, remarques ou un vendeur insistant, c’est le plus souvent verbal et
+    cela s’estompe quand on l’ignore. S’habiller sobrement loin de la plage et des hôtels, marcher d’un pas
+    décidé, rester dans les zones éclairées et animées après la tombée de la nuit et utiliser un transport
+    réservé tard le soir réduisent tous les désagréments. Beaucoup de femmes voyagent ici seules en toute
+    tranquillité ; c’est la vigilance habituelle, pas la peur, le bon réglage.
+  </p>
+
+  <h2 id="sante">Santé et eau</h2>
+  <p>
+    Aucun vaccin particulier n’est requis pour un séjour touristique classique, au-delà d’être à jour de
+    ceux de routine, vérifiez avec un centre de vaccination selon votre situation. Buvez de l’eau en
+    bouteille plutôt que du robinet (le robinet est chloré et convient pour se brosser les dents), allez-y
+    doucement sur les glaçons et les crudités non épluchées les premiers jours, et emportez vos médicaments
+    personnels, de la crème solaire et une petite trousse contre les maux de ventre. Les pharmacies sont
+    nombreuses et bien achalandées. Une assurance voyage couvrant les soins médicaux est sensée.
+  </p>
+
+  <h2 id="plages">Plages et mer</h2>
+  <p>
+    La plage principale d’Agadir est surveillée en saison et généralement sûre pour la baignade, mais c’est
+    l’Atlantique ouvert, il peut y avoir des courants et des vagues de bord, alors baignez-vous là où il y
+    a du monde, respectez les drapeaux et gardez un œil rapproché sur les enfants. Ne laissez pas d’objets
+    de valeur sans surveillance sur le sable. L’eau est fraîche toute l’année. Pour la vue d’ensemble du
+    voyage, voyez le <a href={L('/agadir-travel-guide/')}>guide de voyage d’Agadir</a>.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">La règle des cinq secondes</span>
+    Convenez du prix des taxis d’abord · gardez vos objets de valeur fermés et hors de vue dans la foule ·
+    buvez de l’eau en bouteille · prenez un transport réservé tard le soir · et répondez aux vendeurs
+    insistants par un « non merci » tranquille. Faites cela et Agadir est un endroit facile et accueillant.
+  </div>
+</GuideLayout>

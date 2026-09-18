@@ -1,0 +1,111 @@
+---
+import GuideLayout from '../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Agadir en hiver', href: L('/agadir-in-winter/') },
+];
+const toc = [
+  { label: 'Le climat en hiver', id: 'climat' },
+  { label: 'Plage et baignade', id: 'plage' },
+  { label: 'Le surf en hiver', id: 'surf' },
+  { label: 'Que faire d\'autre', id: 'que-faire' },
+  { label: 'Que mettre dans la valise', id: 'valise' },
+  { label: 'Y aller', id: 'y-aller' },
+];
+const faqs = [
+  { q: "Quel temps fait-il à Agadir en hiver ?", a: "Doux et ensoleillé. Les journées d'hiver tournent souvent autour de 20–22 °C, avec un soleil très présent et peu de pluie. Les matinées et les soirées sont plus fraîches, et la brise atlantique peut être vive. C'est l'une des destinations « soleil d'hiver » les plus fiables à quelques heures de l'Europe." },
+  { q: "Peut-on se baigner à Agadir en hiver ?", a: "Sur la plage, oui pour le farniente et la marche ; pour la baignade, l'Atlantique reste frais, il l'est toute l'année, et l'hiver ne fait rien pour le réchauffer. Beaucoup préfèrent profiter du soleil et des piscines chauffées des hôtels, et réserver l'océan aux surfeurs en combinaison." },
+  { q: "L'hiver est-il une bonne saison pour surfer à Agadir ?", a: "C'est même la meilleure. L'hiver apporte les houles atlantiques les plus régulières sur la côte de Taghazout et Tamraght : c'est la pleine saison de surf. Prévoyez une combinaison, l'eau étant fraîche, et un niveau adapté aux spots les plus puissants ; les débutants trouveront des vagues plus douces à Tamraght." },
+  { q: "Faut-il des vêtements chauds pour Agadir en hiver ?", a: "Emportez surtout des tenues d'été pour la journée, plus une ou deux couches chaudes pour le matin, le soir et la brise : un pull, une veste légère, un pantalon. Inutile de prévoir du grand froid, mais comptez sur des soirées fraîches et, à l'intérieur des terres ou en montagne, des températures nettement plus basses." },
+];
+---
+<GuideLayout keywords="En Hiver Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide En Hiver Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à En Hiver à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Agadir · Saison"
+  h1="Agadir en hiver"
+  lede="Pendant que l'Europe grelotte, Agadir aligne des journées à 20 °C et un grand soleil. C'est l'une des escapades soleil d'hiver les plus sûres du continent, et la pleine saison de surf. Voici à quoi s'attendre."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['agadir-bay']}
+  toc={toc}
+  faqs={faqs}
+  updated="juin 2026"
+  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+>
+  <p>
+    Agadir n'est pas qu'une destination d'été. Sa grande force, c'est justement l'hiver : un climat doux et
+    ensoleillé quand le reste de l'Europe se couvre, à quelques heures d'avion seulement. Voici ce que vaut
+    vraiment la basse saison ici, entre soleil, plage et houles de surf.
+  </p>
+
+  <h2 id="climat">Le climat en hiver</h2>
+  <p>
+    Les journées d'hiver à Agadir tournent souvent autour de 20–22 °C, avec un soleil très présent et peu de
+    pluie : c'est l'un des climats « soleil d'hiver » les plus fiables à portée d'Europe. Le revers, ce sont
+    des matinées et des soirées plus fraîches, et une brise atlantique qui peut être vive sur le front de
+    mer. Rien de rude, mais de quoi apprécier une couche supplémentaire dès que le soleil baisse.
+  </p>
+
+  <h2 id="plage">Plage et baignade</h2>
+  <p>
+    La grande plage reste un plaisir en hiver pour la marche, la lecture au soleil et les longues balades sur
+    la promenade. Pour la baignade, en revanche, l'Atlantique reste frais, il l'est toute l'année, et
+    l'hiver ne l'améliore pas. Beaucoup combinent soleil sur le sable et piscine chauffée à l'hôtel, et
+    laissent l'océan aux surfeurs en combinaison. Les après-midi ensoleillés au bord de l'eau restent
+    superbes.
+  </p>
+
+  <h2 id="surf">Le surf en hiver</h2>
+  <p>
+    C'est la pleine saison de surf, et la principale raison de venir pour beaucoup. L'hiver apporte les
+    houles atlantiques les plus régulières sur la côte de Taghazout et Tamraght : les spots de droite
+    tournent à plein régime. Prévoyez une combinaison pour l'eau fraîche, et un niveau à la hauteur des
+    spots les plus puissants, les débutants se feront plaisir sur les vagues plus douces de Tamraght. Notre
+    <a href={L('/surfing-taghazout-guide/')}>guide du surf à Taghazout</a> détaille les spots selon le
+    niveau.
+  </p>
+
+  <h2 id="que-faire">Que faire d'autre</h2>
+  <p>
+    L'hiver est aussi parfait pour explorer sans la chaleur : le Souk El Had, la Kasbah par téléphérique, une
+    journée à Taroudant, ou une virée vers Paradise Valley quand les vasques se remplissent après les pluies.
+    Les sorties à l'intérieur des terres y gagnent même beaucoup, l'été pouvant y être étouffant. Voyez
+    <a href={L('/things-to-do-agadir/')}>que faire à Agadir</a> pour le programme complet.
+  </p>
+
+  <h2 id="valise">Que mettre dans la valise</h2>
+  <p>
+    L'essentiel reste estival pour la journée : tenues légères, maillot, lunettes, crème solaire. Ajoutez une
+    ou deux couches chaudes pour le matin, le soir et la brise, un pull, une veste légère, un pantalon, et
+    des chaussures confortables pour marcher. Si vous montez vers Paradise Valley ou l'arrière-pays, prévoyez
+    plus chaud encore : les températures y chutent vite avec l'altitude.
+  </p>
+
+  <h2 id="y-aller">Y aller</h2>
+  <p>
+    Agadir reste bien desservie tout l'hiver par les charters et les vols low-cost depuis le Royaume-Uni, la
+    France, la Belgique et la Scandinavie, c'est même un pic de fréquentation. Comparez les dates pour
+    trouver le bon tarif ; pour affiner le choix du mois, notre page
+    <a href={L('/agadir-weather-when-to-visit/')}>météo et quand partir à Agadir</a> donne le détail saison
+    par saison.
+  </p>
+
+  <div class="disclosure-inline">
+    Certains liens de cette page sont des liens d'affiliation : si vous réservez via eux, nous pouvons
+    percevoir une petite commission, sans surcoût pour vous. Cela ne change jamais les prix affichés ni nos
+    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
+  </div>
+
+  <div class="callout">
+    <span class="callout-label">Agadir en hiver, en bref</span>
+    Journées à ~20–22 °C et grand soleil · matins et soirs frais, brise vive · plage pour le farniente,
+    océan frais pour la baignade · pleine saison de surf à Taghazout · tenues d'été + une couche chaude.
+  </div>
+</GuideLayout>

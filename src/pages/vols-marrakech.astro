@@ -1,0 +1,110 @@
+---
+import MoneyLayout from '../layouts/MoneyLayout.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Vols pour Agadir', href: L('/flights-to-agadir/') },
+];
+const facts = [
+  { label: 'Aéroport', value: 'AGA', sub: 'Al Massira' },
+  { label: 'Depuis l’Europe', value: '3–3,5', sub: 'heures' },
+  { label: 'Type de vol', value: 'Charter', sub: '& low-cost' },
+  { label: 'Moins cher', value: 'Hors', sub: 'saison' },
+];
+const faqs = [
+  { q: 'Quelles compagnies desservent Agadir ?', a: 'Agadir Al Massira (AGA) est surtout desservie par des compagnies low-cost et charters d’Europe de l’Ouest. Ryanair, easyJet, TUI, Transavia et Jet2, ainsi que Royal Air Maroc, qui propose aussi des correspondances via Casablanca. Les lignes sont saisonnières et orientées vers les mois de soleil hivernal : les compagnies qui desservent votre route dépendent donc de la période.' },
+  { q: 'Combien de temps dure le vol pour Agadir ?', a: 'Depuis la France et la plupart de l’Europe de l’Ouest, environ 3 à 3,5 heures en direct. Le sud de la France et la Belgique sont dans la fourchette basse ; la Scandinavie et l’Europe centrale un peu plus. Aucun décalage horaire notable, le Maroc est proche de l’heure d’Europe de l’Ouest selon la saison.' },
+  { q: 'Est-ce moins cher de voler vers Agadir ou Marrakech ?', a: 'Cela dépend de la route et des dates. Marrakech (RAK) compte plus de vols et de concurrence, donc un billet pas cher s’y trouve souvent plus facilement, mais pour la côte d’Agadir ou le surf, arriver à Marrakech impose ensuite un transfert de 2,5 à 3 heures. Pour un séjour plage ou surf, un vol direct vers l’AGA un peu plus cher l’emporte une fois le transport terrestre compté.' },
+  { q: 'Quand les vols pour Agadir sont-ils les moins chers ?', a: 'Les mi-saisons, printemps et automne, affichent en général les meilleurs tarifs, tout comme les départs en milieu de semaine et la réservation quelques mois à l’avance. Les périodes chères sont les vacances de février, Noël/Nouvel An et Pâques, quand la demande de soleil hivernal grimpe. Voyez notre guide des vols pas chers pour toutes les astuces.' },
+];
+---
+<MoneyLayout
+  lang={lang}
+  title="Vols pour Agadir (AGA) 2026 : compagnies, lignes et conseils | AirportAGA"
+  description="Guide pratique des vols pour Agadir Al Massira (AGA) : quelles compagnies desservent l’aéroport, depuis où, des temps de vol d’environ 3 à 3,5 heures, les saisons et des conseils honnêtes pour bien réserver."
+  eyebrow="Agadir · Vols"
+  h1="Vols pour Agadir"
+  lede="Agadir Al Massira (AGA) fonctionne surtout au charter et au low-cost depuis l’Europe de l’Ouest, à environ 3 à 3,5 heures. Voici qui dessert l’aéroport, depuis où, quand les prix sont au plus bas, et comment réserver sans trop payer."
+  breadcrumbs={breadcrumbs}
+  facts={facts}
+  heroImage={photos['agadir-bay']}
+  heroProvider="aviasales"
+  heroCtaLabel="Rechercher des vols pour Agadir"
+  faqs={faqs}
+  cta={{ heading: 'Comparez les tarifs entre compagnies', text: 'Les lignes vers Agadir sont saisonnières : les prix varient fort. Comparer les compagnies et les dates proches reste le plus rapide pour trouver un bon tarif.', provider: 'aviasales', label: 'Rechercher des vols pour Agadir' }}
+>
+  <p>
+    Presque tout le monde rejoint la côte d’Agadir en atterrissant à l’aéroport Agadir Al Massira (AGA),
+    et le marché des vols y a une forme particulière qu’il vaut mieux comprendre avant de réserver. Ce
+    n’est pas un grand hub aux dizaines de vols quotidiens, c’est un aéroport saisonnier, tourné vers les
+    loisirs, alimenté surtout par des vols charters et low-cost calés sur les pics de soleil hivernal et de
+    vacances d’été. Cela explique pourquoi tarifs et horaires varient autant au fil de l’année.
+  </p>
+
+  <h2 id="qui">Qui dessert Agadir</h2>
+  <p>
+    L’essentiel du trafic est assuré par des compagnies low-cost et charters d’Europe de l’Ouest :
+    Ryanair, easyJet, TUI, Transavia et Jet2 couvrent à elles toutes la plupart des lignes depuis la
+    France, la Belgique, les Pays-Bas, le Royaume-Uni et la Scandinavie. Royal Air Maroc, la compagnie
+    nationale, ajoute des vols directs et des correspondances par Casablanca, la façon habituelle d’arriver
+    de plus loin. Le bon mélange sur votre route dépend de la saison, beaucoup de lignes ne tournent qu’aux
+    mois chargés.
+  </p>
+
+  <h2 id="depuis">D’où partent les vols</h2>
+  <p>
+    Les vols directs se concentrent sur les marchés qui font vivre le tourisme d’Agadir : la France, la
+    Belgique et les Pays-Bas surtout, plus la Scandinavie et l’Allemagne. Sans vol direct depuis votre
+    ville, vous ferez en général escale à Casablanca sur Royal Air Maroc, ou via un hub européen. Les
+    voyageurs britanniques ont le plus grand choix de directs, le détail est sur notre page
+    <a href={L('/flights-to-agadir-from-uk/')}>vols pour Agadir depuis le Royaume-Uni</a>.
+  </p>
+
+  <h2 id="saisons">Saisons et horaires</h2>
+  <p>
+    Le calendrier des vols d’Agadir suit sa météo. La fenêtre novembre–mars est le pic de la saison
+    charter, quand la demande, et les prix, grimpent, surtout autour de Noël, des vacances de février et
+    de Pâques. L’été amène le trafic des vacances en famille. Les mi-saisons, plus calmes, offrent en
+    général les meilleurs prix avec un temps encore bon. Comme tant de lignes sont saisonnières, vérifiez
+    toujours que votre route fonctionne à vos dates plutôt que de supposer qu’un vol vu l’an dernier existe
+    encore. À associer au guide <a href={L('/agadir-weather-when-to-visit/')}>météo et meilleure période</a>.
+  </p>
+
+  <h2 id="aeroports">Agadir face aux autres aéroports marocains</h2>
+  <p>
+    L’AGA est le choix évident pour la côte d’Agadir et les villages de surf, à seulement 22 km de la
+    ville. Marrakech (RAK) propose parfois des vols moins chers ou plus fréquents, mais c’est à 2,5–3 heures
+    de route : l’économie sur le billet peut être avalée par le transfert pour un séjour plage ou surf. Pour
+    la plupart des voyageurs vers la côte du Souss, le vol direct vers l’AGA vaut un petit supplément. Une
+    fois posé, préparez le trajet vers la ville avec le <a href={L('/agadir-airport-transfers/')}>guide des
+    transferts</a>.
+  </p>
+
+  <h2 id="reserver">Conseils pour réserver</h2>
+  <p>
+    Quelques réflexes améliorent honnêtement le tarif. Réservez un à deux mois avant pour les semaines
+    prisées ; restez souple sur les dates, car les départs en milieu de semaine et hors saison sont moins
+    chers ; et comparez les compagnies plutôt que de rester fidèle à une seule, car l’opérateur le moins
+    cher sur Agadir change sans cesse. Surveillez les options des billets low-cost, bagages, sièges,
+    priorité peuvent doubler un prix d’appel. Pour la méthode complète, voyez
+    <a href={L('/cheap-flights-to-agadir/')}>vols pas chers pour Agadir</a>.
+  </p>
+
+  <div class="disclosure-inline">
+    Certains liens de cette page sont des liens d’affiliation : si vous réservez via eux, nous pouvons
+    percevoir une petite commission, sans surcoût pour vous. Cela ne change jamais les prix affichés ni nos
+    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça marche</a>.
+  </div>
+
+  <div class="callout">
+    <span class="callout-label">Avant de réserver</span>
+    Vérifiez que la ligne tourne à vos dates · comparez les compagnies, pas une seule · pesez un vol direct
+    vers l’AGA contre un billet moins cher pour Marrakech plus un long transfert · et chiffrez les options
+    low-cost avant de parler de « pas cher ».
+  </div>
+</MoneyLayout>

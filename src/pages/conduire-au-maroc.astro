@@ -1,0 +1,118 @@
+---
+import GuideLayout from '../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Conduire au Maroc', href: L('/fr/conduire-au-maroc/') },
+];
+const toc = [
+  { label: 'Les règles de base', id: 'regles' },
+  { label: 'Les contrôles de gendarmerie', id: 'controles' },
+  { label: 'Radars et limitations', id: 'radars' },
+  { label: 'Les routes', id: 'routes' },
+  { label: 'En ville et stationnement', id: 'ville' },
+  { label: 'Carburant et péages', id: 'carburant' },
+];
+const faqs = [
+  { q: "Roule-t-on à droite au Maroc ?", a: "Oui, on conduit à droite, comme en Europe continentale, et le code de la route est familier pour un Français. Les panneaux sont en arabe et en français, ce qui simplifie la lecture. L'adaptation est rapide ; la vigilance se concentre surtout en ville et la nuit." },
+  { q: "Que se passe-t-il à un contrôle de gendarmerie au Maroc ?", a: "Les barrages de gendarmerie sont fréquents sur les routes et aux entrées de ville. Le plus souvent, on vous fait simplement signe de passer. Si l'on vous arrête, on peut vérifier permis, papiers du véhicule et assurance : gardez-les à portée de main. Restez courtois, respectez les limites aux abords des barrages, et tout se passe sans difficulté." },
+  { q: "Y a-t-il beaucoup de radars au Maroc ?", a: "Oui, les radars sont nombreux et bien placés, fixes comme mobiles, souvent juste avant ou après les villages où la limite chute brutalement. Les excès de vitesse sont sanctionnés sur place. La parade est simple : respecter scrupuleusement les limitations et lever le pied à chaque entrée d'agglomération." },
+  { q: "Faut-il un 4x4 pour conduire au Maroc ?", a: "Pas pour les axes principaux ni l'autoroute, où une voiture classique suffit. Un 4x4 devient utile si vous quittez le goudron, pistes de l'arrière-pays, approches de certaines plages, routes de montagne dégradées. Pour un séjour côtier et urbain, une berline ou une compacte fait l'affaire." },
+];
+---
+<GuideLayout keywords="Conduire Au Maroc Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Conduire Au Maroc Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Conduire Au Maroc à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Maroc · Conduite"
+  h1="Conduire au Maroc"
+  lede="Prendre le volant au Maroc n'a rien d'intimidant pour un conducteur français, on roule à droite, les panneaux sont bilingues. Restent quelques particularités à connaître : barrages, radars, routes de montagne. Voici l'essentiel."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['souss-coast']}
+  toc={toc}
+  faqs={faqs}
+  updated="juin 2026"
+  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+>
+  <p>
+    Conduire est le meilleur moyen d'explorer le sud du Maroc à son rythme, la côte du surf, Paradise
+    Valley, Taroudant, les plages du sud jusqu'à Légzira. Pour un conducteur français, l'adaptation est
+    rapide, mais quelques réflexes locaux font toute la différence. Voici le mode d'emploi.
+  </p>
+
+
+  <div class="guide-widget-wrapper" style="margin: 2.5rem 0 3.5rem 0; width: 100%; overflow: hidden; border-radius: 5px;">
+    <script is:inline async src="https://tpemd.com/content?trs=554574&amp;shmarker=697149&amp;locale=fr&amp;country=99&amp;city=461&amp;powered_by=true&amp;campaign_id=87&amp;promo_id=2466" charset="utf-8"></script>
+  </div>
+
+  <h2 id="regles">Les règles de base</h2>
+  <p>
+    On roule à droite, et le code de la route ressemble beaucoup au code français : priorités, ronds-points,
+    feux, ceinture obligatoire. Les panneaux sont en arabe et en français, ce qui rend la lecture aisée.
+    L'usage du téléphone au volant est interdit et contrôlé. Adoptez une conduite prudente et anticipative :
+    deux-roues, charrettes, piétons et animaux peuvent surgir, surtout aux abords des villages et la nuit.
+  </p>
+
+  <h2 id="controles">Les contrôles de gendarmerie</h2>
+  <p>
+    C'est la particularité qui surprend le plus : les barrages de gendarmerie royale sont fréquents sur les
+    routes et aux entrées d'agglomération. La plupart du temps, on vous fait simplement signe de poursuivre.
+    Si l'on vous arrête, on peut demander permis, contrat de location, carte grise et attestation
+    d'assurance, gardez-les accessibles, pas au fond du coffre. Restez poli, ralentissez bien à l'approche
+    des barrages, et l'échange dure quelques secondes.
+  </p>
+
+  <h2 id="radars">Radars et limitations</h2>
+  <p>
+    Les radars sont nombreux et bien placés, fixes comme mobiles, souvent positionnés juste avant ou après
+    une entrée de village, là où la limite passe brutalement de 100 à 60, puis à 40 km/h. Les excès se
+    paient généralement sur place. La règle d'or : respecter scrupuleusement les limitations et lever
+    systématiquement le pied à chaque panneau d'agglomération. C'est moins une question de chance que de
+    discipline.
+  </p>
+
+  <h2 id="routes">Les routes</h2>
+  <p>
+    L'autoroute A7 (vers Marrakech) et les grands axes sont en bon état, larges et roulants. Les routes
+    secondaires sont plus étroites et parfois bosselées, et les routes de montagne, vers Paradise Valley,
+    Imouzzer, le Haut Atlas, sont sinueuses, à aborder sans se presser, surtout en descente et en fin de
+    journée. Évitez de rouler de nuit hors des grands axes : éclairage rare, véhicules sans feux et obstacles
+    imprévus rendent la conduite nocturne nettement plus risquée.
+  </p>
+
+  <h2 id="ville">En ville et stationnement</h2>
+  <p>
+    En ville, la circulation est plus dense et plus libre dans son interprétation des priorités : restez
+    calme et prévisible. Pour le stationnement, vous croiserez souvent un « gardien » en gilet qui surveille
+    les voitures contre un petit pourboire (quelques dirhams), un usage normal, pas une arnaque. Garez-vous
+    dans les zones prévues, ne laissez rien de visible dans l'habitacle, et privilégiez un parking gardé pour
+    la nuit.
+  </p>
+
+  <h2 id="carburant">Carburant et péages</h2>
+  <p>
+    Les stations-service sont nombreuses sur les axes principaux mais s'espacent dans l'arrière-pays et la
+    montagne : faites le plein avant une longue boucle ou une montée. Le gazole (diesel) est le carburant le
+    plus répandu. L'autoroute A7 est à péage : prévoyez un peu de liquide pour les barrières. Pour louer dès
+    l'arrivée, voyez notre page <a href={L('/agadir-airport-car-rental/')}>location de voiture à l'aéroport
+    d'Agadir</a>.
+  </p>
+
+  <div class="disclosure-inline">
+    Certains liens de cette page sont des liens d'affiliation : si vous réservez via eux, nous pouvons
+    percevoir une petite commission, sans surcoût pour vous. Cela ne change jamais les prix affichés ni nos
+    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
+  </div>
+
+  <div class="callout">
+    <span class="callout-label">Les réflexes au volant</span>
+    Conduite à droite, panneaux bilingues · papiers (permis, contrat, carte grise, assurance) toujours à
+    portée pour les barrages · respecter les limites, lever le pied à chaque village pour les radars · éviter
+    la nuit hors grands axes · faire le plein avant la montagne.
+  </div>
+</GuideLayout>

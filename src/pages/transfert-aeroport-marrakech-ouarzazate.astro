@@ -1,0 +1,122 @@
+---
+import RouteLayout from '../layouts/RouteLayout.astro';
+import TransferOptions from '../components/affiliate/TransferOptions.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Transferts', href: L('/agadir-airport-transfers/') },
+  { name: 'Vers Tiznit', href: L('/agadir-airport-to-tiznit/') },
+];
+const facts = [
+  { label: 'Distance', value: '95 km' },
+  { label: 'Durée', value: '80–95', sub: 'min' },
+  { label: 'Transfert réservé', value: '60 €', sub: 'dès' },
+  { label: 'Grand taxi', value: 'à négocier', sub: '' },
+];
+const faqs = [
+  { q: "À quelle distance est Tiznit de l'aéroport d'Agadir ?", a: "Environ 95 km au sud, soit 80 à 95 minutes de route sur l'axe principal rapide qui traverse la plaine. Pas de train, pas de bus direct depuis l'aéroport : c'est un transfert privé ou un grand taxi négocié pour la descente." },
+  { q: "Combien coûte un transfert de l'aéroport d'Agadir à Tiznit ?", a: "Un transfert privé porte-à-porte démarre autour de 60 € pour la voiture entière. Un grand taxi peut faire le trajet si vous négociez le prix à la station, mais sur 95 km beaucoup de voyageurs préfèrent un prix fixe convenu avant le départ. Prix vérifiés en juin 2026." },
+  { q: "Pour quoi Tiznit est-elle connue ?", a: "L'argent. Tiznit est la capitale marocaine de la bijouterie en argent, avec un souk plein d'ateliers qui façonnent des pièces berbères, le tout enserré dans de saisissants remparts d'ocre rouge que l'on peut longer. C'est aussi la porte du grand Sud, la route vers Mirleft, Sidi Ifni et le désert au-delà part d'ici." },
+  { q: "Combien de temps prend la route vers Tiznit ?", a: "Comptez 80 à 95 minutes. La route au sud d'Agadir est rapide et le plus souvent droite à travers la plaine du Souss : c'est l'un des trajets les plus faciles, pas de portions sinueuses avant de bifurquer vers la côte au-delà de Tiznit." },
+  { q: "Tiznit vaut-elle un arrêt ?", a: "Pour le souk de l'argent et les remparts, oui, ne serait-ce que quelques heures. Beaucoup passent par Tiznit en descendant vers Mirleft ou Sidi Ifni et y coupent le trajet ; un chauffeur privé peut attendre pendant que vous longez les murailles et le quartier des bijoutiers avant de poursuivre vers le sud." },
+];
+---
+<RouteLayout
+  lang={lang}
+  title="Aéroport Agadir vers Tiznit : transfert, taxi et prix (2026) | AirportAGA"
+  description="De l'aéroport Agadir Al Massira à Tiznit : 95 km au sud, environ 90 minutes à travers la plaine du Souss. Prix des transferts 2026, le souk de l'argent et les remparts, et Tiznit, porte du grand Sud."
+  eyebrow="Trajets depuis l'AGA · Porte du Sud"
+  h1="Aéroport Agadir vers Tiznit"
+  lede="Tiznit est à 95 km au sud, environ 90 minutes à travers la plaine jusqu'à la ville de l'argent, ceinturée de murs d'ocre rouge et porte du grand Sud. Voici ce que coûte le transfert et ce qu'il faut voir sur place."
+  breadcrumbs={breadcrumbs}
+  facts={facts}
+  priceFrom={60}
+  heroImage={photos['taroudant']}
+  heroProvider="transfer"
+  heroCtaLabel="Voir les prix vers Tiznit"
+  faqs={faqs}
+  cta={{ heading: 'Cap au sud, vers la ville de l\'argent', text: 'Une voiture privée à prix fixe des arrivées de l\'AGA jusqu\'à votre adresse à Tiznit, vol suivi, annulation gratuite sur la plupart des réservations, pas de négociation à la station.', provider: 'transfer', label: 'Réserver votre transfert Tiznit' }}
+>
+  <p>
+    Tiznit, c'est la ville de l'argent et la porte du Sud, une cité fortifiée à 95 km en dessous
+    d'Agadir, où les bijoutiers berbères travaillent encore le souk, et où commence vraiment la route
+    vers Mirleft, Sidi Ifni et le Sud profond. Elle est à 80 à 95 minutes de l'aéroport par l'axe
+    principal rapide qui traverse la plaine du Souss, l'un des trajets les plus faciles depuis l'AGA. Ni
+    train ni bus direct depuis le terminal : c'est un transfert privé ou un grand taxi.
+  </p>
+
+  <h2 id="options">Comment y aller depuis l'aéroport</h2>
+  <p>
+    Deux façons réalistes de descendre :
+  </p>
+  <ul>
+    <li><strong>Transfert privé</strong>, vous accueille aux arrivées et conduit directement à votre adresse, à l'intérieur des murs ou tout près. Dès environ 60 € pour la voiture, prix fixé avant le départ.</li>
+    <li><strong>Grand taxi</strong>, fait le trajet si vous négociez le prix à la station, mais sur 95 km beaucoup préfèrent un prix fixe convenu d'avance. Mettez-vous d'accord avant de charger.</li>
+    <li><strong>Voiture de location</strong>, une bonne base pour le grand Sud si Tiznit est votre point de départ vers Mirleft, Sidi Ifni ou plus loin ; la route descend sans difficulté.</li>
+  </ul>
+
+
+  <div class="widget-wrap">
+    <iframe
+      class="tpemd-iframe"
+      srcdoc='<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;padding:0;font-family:system-ui,sans-serif;overflow:hidden}</style></head><body><script async src="https://tpemd.com/content?currency=EUR&amp;trs=554574&amp;shmarker=697149&amp;locale=fr&amp;from=al%20massira%20airport&amp;to=Tiznit&amp;country=Morocco&amp;powered_by=true&amp;transfer_options_limit=10&amp;transfer_options=MCR&amp;disable_currency_selector=true&amp;hide_form_extras=true&amp;hide_external_links=true&amp;campaign_id=1&amp;promo_id=3879" charset="utf-8"><\/script><script>new MutationObserver(function(){document.documentElement.style.height="auto";window.parent.postMessage({tpemdHeight:document.body.scrollHeight},"*")}).observe(document.body,{childList:true,subtree:true,attributes:true})<\/script></body></html>'
+      style="width:100%;border:none;min-height:200px;overflow:hidden;"
+      loading="lazy"
+      title="Transfer booking widget"
+    ></iframe>
+  </div>
+
+  <h3 id="book">Réserver un transfert vers Tiznit</h3>
+  <TransferOptions
+    sub="agadir-to-tiznit"
+    options={[
+      { provider: 'transfer', highlight: true, badge: 'Meilleur rapport qualité-prix', pitch: 'Une voiture ou un minivan à prix fixe de l\'AGA vers toute adresse de Tiznit, dès environ 60 € pour le véhicule, avec suivi du vol et annulation gratuite jusqu\'à 24 h.', label: 'Voir les prix des transferts' },
+      { provider: 'transfer-vip', badge: 'Accueil personnalisé', pitch: 'Un chauffeur nommé et anglophone qui vous accueille aux arrivées, une première étape fluide si Tiznit ouvre un voyage plus large vers le sud.', label: 'Réserver un transfert VIP' },
+    ]}
+  />
+
+  <h2 id="silver">Le souk de l'argent et les remparts</h2>
+  <p>
+    Le nom de Tiznit est inséparable de l'argent. Son souk de bijoux est l'adresse au Maroc pour l'argent
+    berbère, des ateliers qui martèlent bracelets, fibules et colliers, en grande partie encore faits
+    main, et c'est un endroit bien moins touristique que Marrakech pour acheter. Autour de la vieille
+    ville courent des remparts d'ocre rouge que l'on peut longer, portes et tours largement intactes. Un
+    chauffeur privé peut attendre pendant que vous explorez les murailles et le quartier des bijoutiers,
+    de quoi largement remplir une demi-journée d'arrêt.
+  </p>
+
+  <h2 id="gateway">La porte du Sud</h2>
+  <p>
+    Pour beaucoup de voyageurs, Tiznit n'est pas la destination mais la charnière, le point où la route
+    rapide depuis Agadir cède la place aux axes plus calmes de la côte et du désert vers le sud. Les
+    routes de Mirleft et Sidi Ifni bifurquent ici vers l'Atlantique, et les itinéraires du Sud profond
+    vers le Sahara partent du même carrefour. Si vous continuez plus loin, ça vaut un arrêt pour couper
+    le trajet avant les étapes plus longues et plus lentes qui suivent.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">Conseil local</span>
+    Si vous chinez de l'argent, prévoyez des espèces et du temps. Les ateliers du souk attendent un peu
+    de marchandage bon enfant, les vraies pièces berbères faites main valent qu'on les cherche plutôt que
+    les plateaux produits en série, et une flânerie tranquille vaut mieux qu'une visite pressée, une
+    raison de plus de faire attendre un chauffeur plutôt qu'un taxi qui tourne au compteur.
+  </div>
+
+  <p>
+    Vous continuez sur la côte ? Comparez le trajet
+    <a href={L('/agadir-airport-to-mirleft/')}>aéroport vers Mirleft</a>, qui quitte l'axe principal juste
+    après Tiznit. Pour tous les trajets depuis le terminal et la comparaison des prestataires, voyez le
+    <a href={L('/agadir-airport-transfers/')}>hub des transferts</a>.
+  </p>
+
+  <div class="disclosure-inline">
+    Certains liens ici sont des liens d'affiliation : si vous réservez un transfert via ces liens, nous
+    pouvons percevoir une petite commission, sans surcoût pour vous. Cela ne change ni les prix
+    affichés ni nos recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
+  </div>
+</RouteLayout>

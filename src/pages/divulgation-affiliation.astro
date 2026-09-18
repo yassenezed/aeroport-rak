@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
+import { getLocalizedPath } from '../i18n';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+---
+<BaseLayout keywords="Divulgation Affiliation Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Divulgation Affiliation Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Divulgation Affiliation à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+>
+  <section class="hero">
+    <div class="container hero-inner">
+      <Breadcrumbs items={[{ name: 'Accueil', href: L('/') }, { name: "Divulgation d'affiliation", href: L('/affiliate-disclosure/') }]} />
+      <span class="eyebrow">Transparence</span>
+      <h1>Divulgation d'affiliation</h1>
+      <p class="lede">En bref : certains liens de ce site nous rapportent une commission. Cela ne vous coûte jamais plus cher et ne décide jamais de nos recommandations.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <article class="prose">
+        <p>
+          AirportAGA est un guide indépendant de l'aéroport Agadir Al Massira. Nous ne sommes ni
+          l'autorité aéroportuaire, ni une compagnie aérienne, ni une société de taxis ou de location,
+          et nous ne vendons ni trajets ni chambres. Pour garder le site gratuit et financer le travail
+          de recherche, nous utilisons des <strong>liens d'affiliation</strong>.
+        </p>
+        <p>
+          Lorsque vous cliquez sur certains liens, vers des transporteurs comme Private Transfer et Welcome
+          Pickups, vers EconomyBookings pour la location, ou vers nos partenaires hôtels et vols, et que
+          vous réservez ensuite, nous pouvons percevoir une petite commission de ce partenaire. Vous
+          payez exactement le même prix qu'en passant directement par lui ; la commission provient de
+          sa marge, pas de votre poche.
+        </p>
+        <p>
+          Ces liens d'affiliation portent l'attribut <code>rel="sponsored nofollow"</code> pour les
+          moteurs de recherche et s'ouvrent dans un nouvel onglet.
+        </p>
+        <h2>Ce que cela change, et ne change pas</h2>
+        <ul>
+          <li><strong>Cela ne change pas le prix que vous payez.</strong> Jamais.</li>
+          <li><strong>Cela ne change pas nos recommandations.</strong> Nos prix, distances et conseils « quelle option choisir » reposent sur ce qui fonctionne vraiment à l'AGA, pas sur qui paie le plus. Quand un grand taxi ou une voiture de location est plus malin qu'un transfert réservé, nous le disons.</li>
+          <li><strong>Cela permet de faire vivre le site,</strong> donc de vérifier les tarifs, mettre à jour les grilles de prix et écrire des guides locaux réellement utiles plutôt que du remplissage.</li>
+        </ul>
+        <h2>Prix et exactitude</h2>
+        <p>
+          Tarifs et distances sont vérifiés et datés, mais ils varient avec le carburant, la saison et
+          la demande. Considérez chaque chiffre comme un repère bien documenté, pas un devis :
+          confirmez toujours le prix en direct auprès de l'opérateur avant de réserver ou de monter
+          dans une voiture.
+        </p>
+        <p>Une question ? <a href={L('/contact/')}>Écrivez-nous</a>, nous expliquons volontiers le fonctionnement.</p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

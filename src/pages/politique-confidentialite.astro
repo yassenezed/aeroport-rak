@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
+import { getLocalizedPath } from '../i18n';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+---
+<BaseLayout keywords="Politique Confidentialite Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  noindex={true}
+  title="Guide Politique Confidentialite Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Politique Confidentialite à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+>
+  <section class="hero">
+    <div class="container hero-inner">
+      <Breadcrumbs items={[{ name: 'Accueil', href: L('/') }, { name: 'Politique de confidentialité', href: L('/privacy-policy/') }]} />
+      <span class="eyebrow">Mentions légales</span>
+      <h1>Politique de confidentialité</h1>
+      <p class="lede">En bref : nous collectons le moins possible, nous ne vendons pas vos données, et nous utilisons des cookies pour l’analyse d’audience et le suivi d’affiliation. Voici le détail.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <article class="prose">
+        <p>
+          AirportAGA est un guide de voyage indépendant consacré à l’aéroport Agadir Al Massira. Cette
+          politique explique quelles données nous recueillons lorsque vous utilisez le site et comment
+          nous les traitons. Nous voulons rester simples et honnêtes, en langage clair.
+        </p>
+
+        <h2>Ce que nous collectons</h2>
+        <p>
+          Nous ne vous demandons pas de créer un compte et ne recueillons aucune donnée personnelle, sauf
+          si vous choisissez de nous écrire. Les données collectées automatiquement sont celles que voit
+          tout site web : type de navigateur, localisation approximative, pages visitées et provenance, utilisées de façon agrégée pour comprendre ce qui est utile et corriger ce qui ne l’est pas.
+        </p>
+
+        <h2>Cookies et analyse d’audience</h2>
+        <p>
+          Nous utilisons un outil d’analyse pour mesurer le trafic et améliorer le guide. Cela peut
+          déposer des cookies ou recourir à une technologie similaire pour compter les visites et
+          comprendre, de façon agrégée, l’usage du site. Nous ne nous en servons pas pour établir des
+          profils publicitaires. Vous pouvez bloquer ou supprimer les cookies dans votre navigateur à tout
+          moment ; le site continuera de fonctionner.
+        </p>
+
+        <h2>Cookies d’affiliation</h2>
+        <p>
+          Certains liens d’AirportAGA sont des liens d’affiliation vers des partenaires de transfert, de
+          location, d’hôtels, de vols et d’excursions. En cliquant, le partenaire peut déposer un cookie
+          afin de, si vous réservez ensuite, nous attribuer une petite commission, sans surcoût pour
+          vous. Ce cookie est déposé et géré par le partenaire selon sa propre politique de
+          confidentialité, pas la nôtre. Voyez notre
+          <a href={L('/affiliate-disclosure/')}>divulgation d’affiliation</a> pour le détail.
+        </p>
+
+        <h2>Ce que nous ne faisons pas</h2>
+        <p>
+          <strong>Nous ne vendons, ne louons ni n’échangeons vos données personnelles.</strong> Nous
+          n’exploitons pas notre propre régie publicitaire et ne partageons pas vos informations, hormis
+          ce qui est nécessaire aux fonctions d’analyse et d’affiliation décrites ci-dessus, ou lorsque la
+          loi l’exige.
+        </p>
+
+        <h2>Vos choix</h2>
+        <p>
+          Vous pouvez gérer les cookies depuis votre navigateur, et la plupart permettent une navigation
+          privée. Si vous nous avez écrit et souhaitez que nous supprimions votre message et vos
+          coordonnées, ou si vous avez une question sur vos données, demandez-nous simplement.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          Pour toute demande ou question relative à la confidentialité, écrivez à
+          <a href="mailto:hello@airportaga.com">hello@airportaga.com</a> ou utilisez notre
+          <a href={L('/contact/')}>page de contact</a>. Nous pouvons mettre à jour cette politique de
+          temps à autre ; la version en vigueur se trouve toujours ici.
+        </p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

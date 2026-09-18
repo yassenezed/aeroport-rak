@@ -1,0 +1,210 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AffiliateLink from '../components/affiliate/AffiliateLink.astro';
+import FlightSearchWidget from '../components/affiliate/FlightSearchWidget.astro';
+import FaqSection from '../components/ui/FaqSection.astro';
+import Icon from '../components/ui/Icon.astro';
+import AirportHistory from '../components/ui/AirportHistory.astro';
+import { getLocalizedPath } from '../i18n';
+import { airport, PRICES_CHECKED } from '../data/airport';
+import { photos } from '../data/images';
+
+const L = (p: string) => getLocalizedPath(p);
+
+const routes = [
+  { href: '/transfert-aeroport-marrakech-medina/', img: 'marrakech-medina', name: 'Médina & Jemaa el-Fna', km: 6, time: '15–30 min', price: 'dès 12 €', note: 'Dépose à la porte la plus proche de votre riad', star: true },
+  { href: '/transfert-aeroport-marrakech-gueliz-hivernage/', img: 'gueliz-hivernage', name: 'Guéliz & Hivernage', km: 5, time: '12–20 min', price: 'dès 12 €', note: 'Hôtels modernes, dépose porte-à-porte' },
+  { href: '/transfert-aeroport-marrakech-palmeraie/', img: 'palmeraie', name: 'La Palmeraie', km: 15, time: '25–35 min', price: 'dès 18 €', note: 'Resorts dispersés, adresses difficiles' },
+  { href: '/transfert-aeroport-marrakech-agafay/', img: 'agafay-desert', name: "Désert d'Agafay", km: 35, time: '40–55 min', price: 'dès 35 €', note: 'Camps du désert, piste en fin de trajet' },
+  { href: '/transfert-aeroport-marrakech-ourika/', img: 'ourika-valley', name: "Vallée de l'Ourika", km: 40, time: '50–70 min', price: 'dès 40 €', note: 'Route de montagne vers Setti Fatma' },
+  { href: '/transfert-aeroport-marrakech-essaouira/', img: 'essaouira', name: 'Essaouira', km: 180, time: '2½–3 h', price: 'dès 95 €', note: "Longue distance, prix fixé à l'avance" },
+];
+
+const faqs = [
+  {
+    q: "À quelle distance l'aéroport de Marrakech Ménara est-il du centre-ville ?",
+    a: `Le RAK est l'un des aéroports internationaux les plus proches d'un centre historique : environ ${airport.distanceToCityKm} km de la médina, soit ${airport.driveToCityMin.min} à ${airport.driveToCityMin.max} minutes de route selon la circulation. Aucune voiture n'entre dans les ruelles de la médina : votre chauffeur vous dépose à la porte (bab) la plus proche et vous terminez à pied, parfois cinq à dix minutes de marche avec les bagages.`
+  },
+  {
+    q: "Y a-t-il Uber, Careem ou inDrive à l'aéroport de Marrakech ?",
+    a: `Non, aucune application de VTC n'opère légalement depuis l'aéroport de Marrakech. À la sortie du hall des arrivées, vos options sont le rang de taxis officiel avec ses tarifs affichés, un transfert réservé avant le départ, le bus ${airport.bus.line} d'${airport.bus.operator}, ou une voiture de location retirée aux comptoirs des arrivées.`
+  },
+  {
+    q: "Combien coûte un taxi de l'aéroport de Marrakech à la médina ?",
+    a: `Les tarifs sont affichés au rang de taxis : comptez environ ${airport.taxiFare.dayMad[0]} à ${airport.taxiFare.dayMad[1]} MAD en journée pour la médina, Guéliz ou l'Hivernage, et ${airport.taxiFare.nightMad[0]} à ${airport.taxiFare.nightMad[1]} MAD la nuit. Le prix s'entend par véhicule et non par personne. Mettez-vous d'accord sur le montant avant de charger les bagages, et gardez de la petite monnaie : les chauffeurs rendent rarement sur un gros billet.`
+  },
+  {
+    q: `Le bus ${airport.bus.line} est-il une bonne option depuis l'aéroport ?`,
+    a: `Oui, si vous voyagez léger et de jour. La ligne ${airport.bus.line} d'${airport.bus.operator} relie l'aérogare à Jemaa el-Fna en une vingtaine de minutes pour ${airport.bus.oneWayMad} MAD (${airport.bus.returnMad} MAD l'aller-retour acheté d'emblée), avec un départ toutes les ${airport.bus.frequencyMin} minutes environ entre ${airport.bus.firstDeparture} et ${airport.bus.lastDeparture}. L'arrêt se trouve de l'autre côté du parking en sortant des arrivées. Avec des valises, des enfants ou un vol de nuit, le confort penche vite vers le taxi ou le transfert.`
+  },
+  {
+    q: "Faut-il louer une voiture à l'aéroport de Marrakech ?",
+    a: `Pour un séjour dans la médina, non : tout se fait à pied ou en petit taxi, et se garer près des remparts est un casse-tête. La location devient intéressante dès que vous sortez de la ville — Atlas, Ourika, Ouarzazate, Essaouira — avec les grands loueurs (Hertz, Avis, Europcar, Sixt, Budget) et des agences locales installés dans le hall des arrivées.`
+  },
+];
+---
+<BaseLayout
+  title="Transferts, taxis et location de voiture à l'aéroport de Marrakech | AirportRAK"
+  description="Le guide indépendant de l'aéroport Marrakech Ménara (RAK) : rejoindre la médina, Guéliz, la Palmeraie, Agafay ou Essaouira en transfert, taxi, bus 19 ou voiture de location, avec les vrais prix, distances et conseils sur place."
+>
+  <!-- Hero -->
+  <section class="hero home-hero hero--photo">
+    <div class="hero-bg"><Image src={photos['marrakech-koutoubia']} alt="La Koutoubia de Marrakech au coucher du soleil" widths={[768, 1280, 1920]} sizes="100vw" loading="eager" fetchpriority="high" /></div>
+    <div class="container hero-inner">
+      <span class="eyebrow">Marrakech Ménara · RAK · Maroc</span>
+      <h1>Sortir de l'aéroport de Marrakech, sans mauvaise surprise.</h1>
+      <p class="lede">
+        Ménara n'est qu'à {airport.distanceToCityKm} km de la médina, et c'est justement là que tout se joue :
+        aucune voiture n'entre dans les ruelles, le rang de taxis affiche ses tarifs, le bus {airport.bus.line}
+        s'arrête derrière le parking. Nous comparons transferts, taxis, bus et location avec les prix réels,
+        les distances honnêtes et les conseils de ceux qui font le trajet.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg btn-arrow" href={L('/guide-aeroport-marrakech/arrivees/')}>Arrivées</a>
+        <a class="btn btn-ghost btn-lg" href={L('/guide-aeroport-marrakech/departs/')}>Départs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recherche vols & hôtels -->
+  <section class="section" style="padding-top: 2rem; padding-bottom: 0;">
+    <div class="container">
+      <div style="margin-top: -4rem; position: relative; z-index: 10;">
+        <FlightSearchWidget />
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust -->
+  <section class="section trust-strip">
+    <div class="container">
+      <div class="trust">
+        <div class="trust-item"><Icon name="map-pin" class="trust-ico" size={22} /><span>{airport.distanceToCityKm} km de la médina, chaque option détaillée</span></div>
+        <div class="trust-item"><Icon name="wallet" class="trust-ico" size={22} /><span>Tarifs réels en MAD et €, vérifiés {PRICES_CHECKED}</span></div>
+        <div class="trust-item"><Icon name="map-pin" class="trust-ico" size={22} /><span>Médina, Guéliz, Palmeraie, Agafay, Atlas</span></div>
+        <div class="trust-item"><Icon name="shield" class="trust-ico" size={22} /><span>Indépendant : nous ne vendons pas les trajets</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trajets populaires -->
+  <section class="section section-alt">
+    <div class="container">
+      <span class="eyebrow">Où allez-vous ?</span>
+      <h2>Trajets populaires depuis le RAK</h2>
+      <p class="lede" style="max-width:60ch">Choisissez votre destination pour la distance réelle, le temps de trajet, un prix juste et le côté pratique : où le chauffeur vous dépose, et ce à quoi faire attention.</p>
+      <div class="grid grid-3" style="margin-top:1.5rem">
+        {routes.map((r) => (
+          <a class="card card-link route-card route-card--photo" href={L(r.href)}>
+            <div class="route-photo"><Image src={photos[r.img]} alt={r.name} widths={[380, 760]} sizes="(max-width: 560px) 100vw, 360px" /></div>
+            <div class="route-card-inner">
+              <div class="route-card-head">
+                <h3>{r.name}</h3>
+                {r.star && <span class="chip chip-yellow"><Icon name="star" size={14} /> Trajet n°1</span>}
+              </div>
+              <p class="text-muted small">{r.note}</p>
+              <div class="route-card-meta">
+                <span>{r.km} km</span><span>·</span><span>{r.time}</span><span>·</span><strong>{r.price}</strong>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quatre façons de rejoindre la ville -->
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Vos options à l'arrivée</span>
+      <h2>Quatre façons raisonnables de quitter l'aéroport</h2>
+      <div class="grid grid-4" style="margin-top:1.5rem">
+        <div class="card">
+          <h3>Transfert réservé</h3>
+          <p class="small text-muted">Idéal pour les vols de nuit, les riads introuvables et les groupes.</p>
+          <p>Un chauffeur attend avec votre nom, le prix est fixé avant le départ et il connaît la bonne porte de la médina. À partir d'environ 12 € pour le centre.</p>
+          <AffiliateLink provider="kiwitaxi" sub="home-options" class="btn btn-primary btn-block">Voir les prix</AffiliateLink>
+        </div>
+        <div class="card">
+          <h3>Taxi de l'aéroport</h3>
+          <p class="small text-muted">Idéal si vous acceptez de discuter le prix sur place.</p>
+          <p>Toujours disponible à la sortie, avec des tarifs affichés : environ {airport.taxiFare.dayMad[0]}–{airport.taxiFare.dayMad[1]} MAD de jour, davantage la nuit. Par véhicule, pas par personne.</p>
+          <a class="btn btn-ghost btn-block" href={L('/taxi-aeroport-marrakech/')}>Tarifs et conseils</a>
+        </div>
+        <div class="card">
+          <h3>Bus {airport.bus.line}</h3>
+          <p class="small text-muted">Idéal en voyage léger, de jour, petit budget.</p>
+          <p>{airport.bus.oneWayMad} MAD jusqu'à Jemaa el-Fna, environ {airport.bus.rideMin} minutes, un départ toutes les {airport.bus.frequencyMin} minutes de {airport.bus.firstDeparture} à {airport.bus.lastDeparture}.</p>
+          <a class="btn btn-ghost btn-block" href={L('/guide-aeroport-marrakech/bus/')}>Horaires du bus</a>
+        </div>
+        <div class="card">
+          <h3>Voiture de location</h3>
+          <p class="small text-muted">Idéal pour l'Atlas, Essaouira, Ouarzazate.</p>
+          <p>Les comptoirs sont dans le hall des arrivées. Inutile pour la médina seule, précieux dès que vous sortez de la ville.</p>
+          <a class="btn btn-ghost btn-block" href={L('/location-voiture-aeroport-marrakech/')}>Comparer les loueurs</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location + hébergement -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="grid grid-2">
+        <div class="card">
+          <span class="eyebrow">Location de voiture</span>
+          <h3>Louer une voiture à l'aéroport de Marrakech</h3>
+          <p>Ce que facturent réellement les comptoirs, pourquoi la caution et la politique carburant comptent plus que le tarif affiché, et comment éviter la file après un vol de nuit.</p>
+          <a class="btn btn-secondary" href={L('/location-voiture-aeroport-marrakech/')}>Guide de la location</a>
+        </div>
+        <div class="card">
+          <span class="eyebrow">Où dormir</span>
+          <h3>Riad dans la médina ou hôtel à Guéliz ?</h3>
+          <p>Riad au cœur des ruelles, resort dans la Palmeraie, hôtel moderne à l'Hivernage ou simple nuit près de l'aéroport avant un vol tôt : le choix change tout au transfert.</p>
+          <a class="btn btn-secondary" href={L('/ou-dormir-marrakech/')}>Comparer les quartiers</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <AirportHistory />
+
+  <!-- Guide teaser -->
+  <section class="section">
+    <div class="container center">
+      <span class="eyebrow">Première fois au RAK ?</span>
+      <h2>Le guide de l'aéroport Marrakech Ménara</h2>
+      <p class="lede" style="max-width:58ch;margin-inline:auto">Arrivées, rang de taxis, retrait de dirhams, carte SIM, salons, parking et plan des terminaux : le parcours pratique pour un atterrissage sans friction.</p>
+      <a class="btn btn-ghost btn-lg" href={L('/guide-aeroport-marrakech/')} style="margin-top:1.25rem">Lire le guide de l'aéroport</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-alt">
+    <div class="container container-narrow">
+      <h2 style="margin-bottom:1rem">Aéroport de Marrakech : réponses rapides</h2>
+      <FaqSection faqs={faqs} />
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-band">
+        <h2>Connaissez votre prix avant d'atterrir</h2>
+        <p>Comparez les transferts à prix fixe de l'aéroport vers votre riad, votre hôtel ou votre camp du désert. Paiement différé et annulation gratuite sur la plupart des réservations.</p>
+        <AffiliateLink provider="kiwitaxi" sub="home-footer-cta" class="btn btn-primary btn-lg btn-arrow">Voir les prix des transferts</AffiliateLink>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .home-hero h1 { max-width: 20ch; }
+  .trust-strip { padding-block: 1.75rem; }
+  .route-card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.5rem; }
+  .route-card-head h3 { margin-bottom: 0.2rem; }
+  .route-card .route-card-meta { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; margin-top: 0.9rem; padding-top: 0.9rem; border-top: 1px solid var(--line); font-size: 0.92rem; color: var(--ink-2); }
+  .route-card .route-card-meta strong { color: var(--orange-dark); }
+</style>

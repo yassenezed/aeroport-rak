@@ -1,0 +1,125 @@
+---
+import GuideLayout from '../../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../../i18n';
+import { photos } from '../../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: "Guide de l'aéroport", href: L('/agadir-airport-guide/') },
+  { name: 'Carte SIM & Wi-Fi', href: L('/agadir-airport-guide/sim-card-wifi/') },
+];
+const toc = [
+  { label: 'Les opérateurs', id: 'operateurs' },
+  { label: 'Acheter une SIM à l\'aéroport', id: 'sim-aeroport' },
+  { label: 'L\'eSIM avant le départ', id: 'esim' },
+  { label: 'Le Wi-Fi', id: 'wifi' },
+  { label: 'La couverture sur la côte', id: 'couverture' },
+  { label: 'SIM ou eSIM ?', id: 'choisir' },
+];
+const faqs = [
+  { q: "Peut-on acheter une carte SIM à l'aéroport d'Agadir ?", a: "Oui. Maroc Telecom, Orange et inwi tiennent des kiosques dans le hall d'arrivée. On vous vend une SIM touristique sur présentation du passeport en quelques minutes, souvent autour de 50 MAD avec un forfait de données. C'est l'option la plus simple si vous arrivez à une heure d'ouverture." },
+  { q: "Combien coûte une SIM marocaine pour touriste ?", a: "Comptez autour de 50 MAD (environ 5 €) pour une SIM touristique avec un forfait de données généreux, parfois un peu plus selon la quantité de gigaoctets. Les recharges se font ensuite facilement en boutique ou dans les épiceries. Apportez votre passeport : l'enregistrement est obligatoire." },
+  { q: "Vaut-il mieux une eSIM pour le Maroc ?", a: "Une eSIM est pratique si votre téléphone la prend en charge : vous l'achetez et l'activez avant le départ, et vous êtes connecté dès l'atterrissage, sans passer par un kiosque. C'est idéal pour les arrivées tardives. La SIM physique locale reste souvent moins chère au gigaoctet et permet de recharger sur place ; les deux se valent selon vos priorités." },
+  { q: "Y a-t-il du Wi-Fi gratuit à l'aéroport d'Agadir ?", a: "Oui, mais il est souvent limité dans le temps (autour de 3 heures) et la qualité reste inégale, suffisant pour prévenir de votre arrivée ou commander un transfert, pas pour en dépendre. Il est plus prudent d'avoir sa propre connexion en sortant : sur la côte, beaucoup d'hébergements n'ont pas d'adresse claire, et écrire au chauffeur ou partager sa position demande des données mobiles." },
+  { q: "Quel opérateur a la meilleure couverture autour d'Agadir ?", a: "Pour un séjour côtier classique entre Agadir et Taghazout, les trois opérateurs (Maroc Telecom, Orange, inwi) couvrent très bien. La différence se joue dans l'arrière-pays montagneux. Paradise Valley, Imouzzer, où le réseau se dégrade pour tout le monde ; Maroc Telecom est souvent cité comme le plus couvrant hors des villes. Téléchargez vos cartes hors-ligne avant une excursion en montagne." },
+];
+---
+<GuideLayout keywords="location voiture Agadir, location auto Agadir, conduire au Maroc" 
+  lang={lang}
+  title="Location de Voiture Aéroport Agadir | Guide Ultime 2026"
+  description="Comparez les meilleures offres de location de voitures à l'Aéroport d'Agadir. Évitez les frais cachés et réservez le véhicule parfait pour votre voyage au Maroc."
+  eyebrow="Guide de l'aéroport · SIM & Wi-Fi"
+  h1="Carte SIM et données à l'aéroport d'Agadir"
+  lede="Être connecté dès l'atterrissage compte plus ici qu'ailleurs : sur la côte, on partage souvent un point GPS plutôt qu'une adresse. Voici les options. SIM locale, eSIM, Wi-Fi, et laquelle choisir."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['agadir-marina']}
+  toc={toc}
+  faqs={faqs}
+  updated="juin 2026"
+  cta={{ heading: 'Obtenez une eSIM pour le Maroc', text: 'Restez connecté dès votre atterrissage. Aucune carte SIM physique nécessaire.', provider: 'esim', label: 'Obtenir une eSIM' }}
+>
+  <p>
+    Avoir des données dès la sortie de l'avion change tout à Agadir. Le hall d'arrivée compte des kiosques
+    SIM, mais on peut aussi tout préparer à la maison avec une eSIM. Voici comment rester connecté dès la
+    première minute, sans se compliquer la vie.
+  </p>
+
+  <h2 id="operateurs">Les opérateurs</h2>
+  <p>
+    Trois opérateurs se partagent le marché marocain : Maroc Telecom (IAM), Orange Maroc et inwi. La
+    couverture est bonne en ville et sur les axes ; elle peut se dégrader dans l'arrière-pays montagneux,
+    vers Paradise Valley ou Imouzzer. Maroc Telecom est souvent cité comme le plus couvrant hors des villes,
+    mais pour un séjour côtier classique, les trois font le travail sans souci.
+  </p>
+
+  <h2 id="sim-aeroport">Acheter une SIM à l'aéroport</h2>
+  <p>
+    Les trois opérateurs tiennent des kiosques dans le hall d'arrivée, avant ou juste après les portes de
+    sortie. On vous vend une SIM touristique sur présentation du passeport, l'enregistrement est obligatoire
+    au Maroc, en quelques minutes, souvent autour de 50 MAD pour un forfait de données généreux. Réglez en
+    dirhams : retirez d'abord au distributeur du même hall si vous arrivez les poches vides. C'est l'option
+    la plus simple à une heure d'ouverture, et l'agent active et teste la carte devant vous. Les recharges
+    se font ensuite en boutique, dans les épiceries de quartier ou via l'application de l'opérateur.
+  </p>
+  <p>
+    Un point d'horaire à anticiper : sur un charter qui se pose tard le soir, les kiosques peuvent être
+    fermés. Si votre vol arrive en pleine nuit, préparez plutôt une eSIM avant de partir (voir ci-dessous)
+    pour ne pas dépendre de leur ouverture.
+  </p>
+
+  <h2 id="esim">L'eSIM avant le départ</h2>
+  <p>
+    Si votre téléphone gère l'eSIM, c'est l'alternative la plus pratique : vous l'achetez et la configurez à
+    la maison, puis l'activez à l'atterrissage, connecté immédiatement, sans file au kiosque. C'est
+    particulièrement utile sur un charter qui se pose tard, quand les comptoirs peuvent être fermés. Vérifiez
+    simplement la compatibilité de votre appareil et conservez votre numéro habituel pour les SMS de votre
+    banque.
+  </p>
+
+  <h2 id="wifi">Le Wi-Fi</h2>
+  <p>
+    L'aéroport propose un Wi-Fi gratuit, mais souvent plafonné (autour de 3 heures de connexion) et de
+    qualité inégale, bon pour prévenir de votre arrivée ou commander un transfert le temps de récupérer
+    les bagages, pas pour en dépendre. Ne comptez donc pas dessus une fois dehors : il vaut mieux disposer
+    de sa propre connexion mobile en sortant. Sur la côte du surf, beaucoup d'hébergements n'ont pas
+    d'adresse exploitable, et écrire au chauffeur ou partager sa position en temps réel suppose des
+    données. Rassurez-vous pour la suite : la plupart des hôtels, cafés et camps de surf offrent le Wi-Fi
+    sur place.
+  </p>
+
+  <h2 id="couverture">La couverture sur la côte</h2>
+  <p>
+    Pour le séjour côtier typique. Agadir, Taghazout, Tamraght, les trois opérateurs offrent une bonne
+    couverture en 4G, largement de quoi naviguer, partager un point GPS ou passer un appel. La donne change
+    dès qu'on prend de l'altitude : vers Paradise Valley, Imouzzer ou les vallées de l'Anti-Atlas, le
+    réseau faiblit pour tout le monde, Maroc Telecom tenant souvent un peu mieux que les autres. Avant une
+    excursion en montagne ou une journée surf isolée, téléchargez vos itinéraires et le point GPS de votre
+    hébergement en hors-ligne, c'est plus fiable que d'espérer du réseau sur une piste.
+  </p>
+
+  <h2 id="choisir">SIM ou eSIM ?</h2>
+  <p>
+    Pas de mauvais choix. L'eSIM gagne si vous arrivez tard, voulez zéro file et un téléphone compatible : on
+    est connecté avant même de quitter le tarmac. La SIM physique locale gagne souvent au gigaoctet et permet
+    de recharger partout sur place, ce qui est utile pour un long séjour. Beaucoup de voyageurs prennent une
+    eSIM pour les premières heures, puis avisent. Une fois connecté, organisez la suite : notre page
+    <a href={L('/agadir-airport-transfers/')}>transferts aéroport d'Agadir</a> compare les options pour
+    rejoindre votre hébergement.
+  </p>
+
+  <div class="disclosure-inline">
+    Certains liens de cette page sont des liens d'affiliation : si vous réservez via eux, nous pouvons
+    percevoir une petite commission, sans surcoût pour vous. Cela ne change jamais les prix affichés ni nos
+    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
+  </div>
+
+  <div class="callout">
+    <span class="callout-label">Connecté en cinq minutes</span>
+    SIM locale au kiosque (passeport, ~50 MAD) à une heure d'ouverture · ou eSIM activée avant le vol pour
+    une arrivée tardive · le Wi-Fi de l'aéroport pour dépanner · le point GPS de l'hébergement prêt à
+    partager.
+  </div>
+</GuideLayout>

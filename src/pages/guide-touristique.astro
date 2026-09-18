@@ -1,0 +1,201 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
+import Icon from '../components/ui/Icon.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const title = "Guide Guide Touristique Agadir 2026 | Astuces & Incontournables";
+const description = "Planifiez votre visite à Guide Touristique à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!";
+
+const places = [
+  { name: 'Souk El Had', img: 'agadir-bay', desc: 'Plongez dans les couleurs et parfums vibrants du plus grand marché urbain d\'Afrique. Nos guides vous aideront à naviguer et négocier comme un local.' },
+  { name: 'Agadir Oufella (Kasbah)', img: 'agadir-marina', desc: 'Vivez une vue panoramique époustouflante sur la ville et l\'océan depuis les ruines de cette forteresse historique du 16ème siècle.' },
+  { name: 'Vallée du Paradis (Paradise Valley)', img: 'souss-coast', desc: 'Évadez-vous dans une oasis naturelle éblouissante avec palmiers, piscines naturelles et cascades à quelques minutes de la ville.' },
+  { name: 'Taroudant', img: 'taroudant', desc: 'Souvent appelée "La petite Marrakech", cette ville fortifiée authentique offre un aperçu de la vie marocaine traditionnelle sans la foule.' },
+  { name: 'Village de Surf de Taghazout', img: 'taghazout', desc: 'Une ville côtière bohème décontractée, célèbre pour ses vagues de classe mondiale, ses rues colorées et ses cafés relaxants face à l\'océan.' },
+  { name: 'Essaouira', img: 'essaouira', desc: 'La majestueuse ville du vent. Promenez-vous dans la Médina classée à l\'UNESCO et dégustez les fruits de mer les plus frais de la côte.' }
+];
+---
+<BaseLayout keywords="Guide Touristique Agadir, que faire à Agadir, attractions Agadir"  title={title} description={description} lang={lang}>
+  <section class="hero home-hero hero--photo">
+    <div class="hero-bg"><Image src={photos['agadir-marina']} alt="Guide touristique prive Aeroport Agadir Al Massira excursions" widths={[768, 1280, 1920]} sizes="100vw" loading="eager" fetchpriority="high" /></div>
+    <div class="container hero-inner">
+      <Breadcrumbs items={[{ name: 'Accueil', href: L('/') }, { name: 'Guide Touristique', href: L('/tour-guide/') }]} />
+      <span class="eyebrow">Expérience Premium</span>
+      <h1 style="color:white; text-shadow: 0 2px 8px rgba(0,0,0,0.7); max-width: 20ch;">Découvrez l'âme véritable d'Agadir</h1>
+      <p class="lede" style="color:white; text-shadow: 0 1px 4px rgba(0,0,0,0.8); max-width: 50ch;">Évitez les pièges à touristes. Laissez nos experts locaux passionnés vous montrer les joyaux cachés du Maroc. Prise en charge VIP depuis l'Aéroport Agadir Al Massira ou votre hôtel.</p>
+      <div class="hero-cta" style="margin-top: 1.5rem;">
+        <a href={L('/contact/')} class="btn btn-primary btn-lg btn-arrow">Réservez votre guide privé</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section">
+    <div class="container">
+      <div class="center" style="margin-bottom: 3rem;">
+        <span class="eyebrow">Pourquoi nous sommes les meilleurs</span>
+        <h2>Vos Ambassadeurs Marocains Personnels</h2>
+        <p class="lede" style="max-width:60ch; margin: 0 auto;">Nous ne faisons pas de bus bondés. Nous offrons des expériences de voyage intimes et sur-mesure conçues exclusivement autour de vos centres d'intérêt.</p>
+      </div>
+      
+      <div class="grid grid-3">
+        <div class="card" style="text-align:center; padding: 2rem;">
+          <Icon name="star" size={40} style="color: var(--orange-dark); margin-bottom: 1rem;" />
+          <h3>Experts Locaux</h3>
+          <p class="small text-muted">Nés et grandis dans la région du Souss-Massa. Nous connaissons l'histoire, la culture et les meilleurs endroits secrets qui ne sont pas dans les guides touristiques.</p>
+        </div>
+        <div class="card" style="text-align:center; padding: 2rem;">
+          <Icon name="shield" size={40} style="color: var(--orange-dark); margin-bottom: 1rem;" />
+          <h3>Transport Sécurisé & VIP</h3>
+          <p class="small text-muted">Profitez d'un transport de luxe climatisé dès l'instant où vous atterrissez à <strong>l'Aéroport Agadir Al Massira</strong>. Des transferts sans stress garantis.</p>
+        </div>
+        <div class="card" style="text-align:center; padding: 2rem;">
+          <Icon name="map-pin" size={40} style="color: var(--orange-dark); margin-bottom: 1rem;" />
+          <h3>Itinéraires 100% Personnalisés</h3>
+          <p class="small text-muted">Votre temps, vos règles. Que vous vouliez marchander des épices, gravir des montagnes ou vous détendre sur des plages cachées, nous concevons la journée pour vous.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Best Places -->
+  <section class="section section-alt">
+    <div class="container">
+      <span class="eyebrow">Les Incontournables</span>
+      <h2>Les Meilleurs Endroits à Visiter à Agadir et Alentours</h2>
+      <p class="lede" style="max-width:65ch; margin-bottom: 2rem;">Dès l'instant où vous sortez de <strong>l'Aéroport Agadir Al Massira</strong>, un monde incroyable de souks vibrants, de montagnes majestueuses et de plages dorées vous attend.</p>
+      
+      <div class="grid grid-3">
+        {places.map((p) => (
+          <div class="card route-card route-card--photo" style="display:flex; flex-direction:column; overflow:hidden; padding:0;">
+            <div class="route-photo" style="height:200px;"><Image src={photos[p.img]} alt={`${p.name} guide touristique Aeroport Agadir Al Massira`} widths={[380, 760]} sizes="(max-width: 560px) 100vw, 360px" style="width:100%; height:100%; object-fit:cover;" /></div>
+            <div style="padding: 1.5rem; flex: 1; display:flex; flex-direction:column;">
+              <h3 style="margin-bottom: 0.5rem; font-size: 1.25rem;">{p.name}</h3>
+              <p class="small text-muted" style="flex:1;">{p.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="background: var(--ink); color: white;">
+    <div class="container">
+      <div class="grid grid-2" style="align-items: center; gap: 4rem;">
+        <!-- Left: Persuasion & Review -->
+        <div>
+          <h2 style="color:white; margin-bottom: 1rem;">Prêt pour le voyage d'une vie ?</h2>
+          <p style="font-size: 1.1rem; color: var(--ink-3); margin-bottom: 2rem;">Les places avec nos guides locaux de haut niveau sont très limitées. Réservez votre guide privé aujourd'hui pour garantir un séjour inoubliable et sans stress, directement depuis l'Aéroport Agadir Al Massira.</p>
+          
+          <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--orange-dark);">
+            <div style="display:flex; align-items:center; gap: 1rem; margin-bottom: 1rem;">
+              <div style="width:50px; height:50px; border-radius:50%; overflow:hidden;">
+                <Image src={photos['taghazout']} alt="Customer Review" widths={[100]} sizes="50px" style="width:100%; height:100%; object-fit:cover;" />
+              </div>
+              <div>
+                <div style="display:flex; color: var(--orange-dark);">
+                  <Icon name="star" size={16} /><Icon name="star" size={16} /><Icon name="star" size={16} /><Icon name="star" size={16} /><Icon name="star" size={16} />
+                </div>
+                <p style="margin:0; font-weight:bold;">Camille Dupont</p>
+                <p style="margin:0; font-size:0.85rem; color:var(--ink-3);">Paris, FR</p>
+              </div>
+            </div>
+            <p style="font-style:italic; font-size:0.95rem; margin:0; color:var(--ink-2);">"Notre guide a rendu notre voyage à Agadir absolument inoubliable. Ils nous ont récupérés directement à l'aéroport et nous ont montré des endroits secrets dans le Souk que nous n'aurions jamais trouvés seuls. Fortement recommandé !"</p>
+          </div>
+        </div>
+        
+        <!-- Right: Form -->
+        <div style="background: white; color: var(--ink); padding: 2rem; border-radius: 12px; box-shadow: 0 15px 35px rgba(0,0,0,0.3);">
+          <h3 style="margin-top:0; margin-bottom:1.5rem;">Demandez votre devis gratuit</h3>
+          
+          <div data-fs-success class="form-success" style="padding:1rem; background:#d4edda; color:#155724; border-radius:4px; margin-bottom:1rem; display:none;">Merci pour votre demande ! Nous vous contacterons sur WhatsApp ou par Email très prochainement.</div>
+          <div data-fs-error class="form-error" style="padding:1rem; background:#f8d7da; color:#721c24; border-radius:4px; margin-bottom:1rem; display:none;">Oups ! Un problème est survenu lors de l'envoi de votre demande.</div>
+          
+          <form id="tour-form" action="https://formspree.io/f/mrenoaeb" method="POST">
+            <div class="grid grid-2" style="gap:1rem; margin-bottom:1rem;">
+              <div>
+                <label for="name" style="display:block; font-weight:bold; margin-bottom:0.3rem; font-size:0.9rem;">Nom Complet</label>
+                <input type="text" id="name" name="name" data-fs-field style="width:100%; padding:0.6rem; border:1px solid #ccc; border-radius:4px;" required />
+              </div>
+              <div>
+                <label for="email" style="display:block; font-weight:bold; margin-bottom:0.3rem; font-size:0.9rem;">Adresse Email</label>
+                <input type="email" id="email" name="email" data-fs-field style="width:100%; padding:0.6rem; border:1px solid #ccc; border-radius:4px;" required />
+              </div>
+            </div>
+
+            <div class="grid grid-2" style="gap:1rem; margin-bottom:1rem;">
+              <div>
+                <label for="phone" style="display:block; font-weight:bold; margin-bottom:0.3rem; font-size:0.9rem;">WhatsApp / Téléphone</label>
+                <input type="tel" id="phone" name="phone" data-fs-field style="width:100%; padding:0.6rem; border:1px solid #ccc; border-radius:4px;" required />
+              </div>
+              <div>
+                <label for="date" style="display:block; font-weight:bold; margin-bottom:0.3rem; font-size:0.9rem;">Date d'arrivée</label>
+                <input type="date" id="date" name="arrival_date" data-fs-field style="width:100%; padding:0.6rem; border:1px solid #ccc; border-radius:4px;" required />
+              </div>
+            </div>
+
+            <div style="margin-bottom:1rem;">
+              <label for="group" style="display:block; font-weight:bold; margin-bottom:0.3rem; font-size:0.9rem;">Taille du groupe</label>
+              <input type="text" id="group" name="group_size" placeholder="ex: 2 Adultes, 1 Enfant" data-fs-field style="width:100%; padding:0.6rem; border:1px solid #ccc; border-radius:4px;" required />
+            </div>
+            
+            <div style="margin-bottom: 1.5rem;">
+              <label for="message" style="display:block; font-weight:bold; margin-bottom:0.3rem; font-size:0.9rem;">Que souhaitez-vous voir ?</label>
+              <textarea id="message" name="message" placeholder="Partagez vos intérêts (Souk, Montagnes, Chameaux...)" data-fs-field rows="3" style="width:100%; padding:0.6rem; border:1px solid #ccc; border-radius:4px;" required></textarea>
+              <span data-fs-error="message" style="color:red; font-size:0.875rem;"></span>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-lg" data-fs-submit-btn style="width:100%;">Obtenir mon devis gratuit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree("initForm", { formElement: "#tour-form", formId: "mrenoaeb" });
+
+    const form = document.getElementById('tour-form');
+    const successEl = document.querySelector('[data-fs-success]');
+    const errorEl = document.querySelector('[data-fs-error]');
+
+    if (form) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = form.querySelector('[data-fs-submit-btn]');
+        const originalText = btn ? btn.innerText : 'Envoyer';
+        if (btn) { btn.disabled = true; btn.innerText = 'Envoi en cours...'; }
+        if (successEl) successEl.style.display = 'none';
+        if (errorEl) errorEl.style.display = 'none';
+
+        try {
+          const formData = new FormData(form);
+          const res = await fetch('https://formspree.io/f/mrenoaeb', {
+            method: 'POST',
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+          });
+          if (res.ok) {
+            if (successEl) successEl.style.display = 'block';
+            form.style.display = 'none';
+          } else {
+            if (errorEl) errorEl.style.display = 'block';
+            if (btn) { btn.disabled = false; btn.innerText = originalText; }
+          }
+        } catch (err) {
+          if (errorEl) errorEl.style.display = 'block';
+          if (btn) { btn.disabled = false; btn.innerText = originalText; }
+        }
+      });
+    }
+  </script>
+  <script is:inline src="https://unpkg.com/@formspree/ajax@1" defer></script>
+</BaseLayout>

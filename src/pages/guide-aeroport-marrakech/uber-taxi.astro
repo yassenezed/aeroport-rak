@@ -1,0 +1,88 @@
+---
+import GuideLayout from '../../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../../i18n';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: "Guide de l'aéroport", href: L('/agadir-airport-guide/') },
+  { name: 'Uber, inDrive & VTC', href: L('/agadir-airport-guide/uber-taxi/') },
+];
+const toc = [
+  { label: 'Y a-t-il Uber à Agadir ?', id: 'pas-uber' },
+  { label: 'Et inDrive ?', id: 'indrive' },
+  { label: 'Que faire à l\'aéroport', id: 'a-la-place' },
+  { label: 'Grand taxi ou transfert', id: 'comparer' },
+  { label: 'Obtenir un juste prix', id: 'prix' },
+];
+const faqs = [
+  { q: "Y a-t-il Uber à Agadir ?", a: "Non. Uber ne fonctionne pas à Agadir, et Careem non plus. Pour les VTC sur appli, inDrive fonctionne en ville mais pas pour la prise en charge à l'aéroport." },
+  { q: "Est-ce qu'inDrive fonctionne à l'aéroport d'Agadir ?", a: "inDrive marche bien dans le centre d'Agadir, mais pas à l'aéroport. Les syndicats de taxis interdisent aux chauffeurs inDrive de prendre des passagers devant le terminal. La plupart des chauffeurs annulent les courses aéroport." },
+  { q: "Quelle est la meilleure alternative à Uber depuis l'aéroport d'Agadir ?", a: "Pour un prix fixe avec un chauffeur nommé qui attend aux arrivées, un transfert réservé est ce qui se rapproche le plus d'Uber. En station, le grand taxi officiel est parfait si vous fixez le prix d'abord." },
+  { q: "Combien coûte un taxi de l'aéroport d'Agadir vers la ville ?", a: "Environ 200–250 MAD vers le centre d'Agadir en journée et 300–350 MAD la nuit, par voiture." },
+];
+---
+<GuideLayout keywords="taxi aéroport Agadir, prix taxi Agadir, taxi officiel Agadir" 
+  lang={lang}
+  title="Prix Taxi Aéroport Agadir 2026 | Évitez les Arnaques"
+  description="Trouvez les prix officiels des taxis de l'Aéroport d'Agadir pour 2026. Apprenez comment éviter les arnaques, sauter les files et réserver une course fiable."
+  eyebrow="Guide de l'aéroport · VTC"
+  h1="Y a-t-il Uber ou inDrive à Agadir ?"
+  lede="Uber et Careem ne fonctionnent pas à Agadir. Si inDrive est très populaire en ville, il ne peut pas effectuer de prise en charge au terminal de l'aéroport d'Agadir à cause des réglementations locales des taxis."
+  breadcrumbs={breadcrumbs}
+  toc={toc}
+  faqs={faqs}
+  updated="juin 2026"
+  cta={{ heading: 'Réservez un Taxi Aéroport', text: 'Évitez la file d\'attente. Ayez un taxi à prix fixe prêt pour vous à l\'atterrissage.', provider: 'taxi', label: 'Réserver un taxi' }}
+>
+  <p>
+    Beaucoup de voyageurs atterrissent à l'aéroport Agadir Al Massira (AGA), ouvrent leur application Uber ou Careem par habitude, et ne trouvent aucun véhicule disponible.
+  </p>
+
+  <h2 id="pas-uber">Y a-t-il Uber ou Careem à Agadir ?</h2>
+  <p>
+    Non. Uber ne fonctionne pas à Agadir, et Careem ni Bolt non plus, aucune des grandes applications internationales de VTC n'y propose de service fonctionnel.
+  </p>
+
+  <h2 id="indrive">Et inDrive à Agadir ?</h2>
+  <p>
+    <strong>inDrive</strong> (anciennement inDriver) est très populaire au Maroc et <strong>fonctionne très bien dans le centre-ville d'Agadir</strong> pour se déplacer en ville, aller au Souk El Had ou à la plage.
+  </p>
+  <p>
+    Cependant, <strong>inDrive ne fonctionne pas pour les départs depuis l'aéroport (AGA)</strong> :
+  </p>
+  <ul>
+    <li><strong>Réglementation des taxis :</strong> Les règles locales réservent la prise en charge au terminal exclusivement aux Grands Taxis officiels de l'aéroport et aux transferts VTC autorisés.</li>
+    <li><strong>Annulations systématiques :</strong> Les chauffeurs de taxi officiels bloquent les chauffeurs inDrive devant les arrivées. Par conséquent, les chauffeurs inDrive refusent ou annulent quasi systématiquement les demandes à l'aéroport.</li>
+    <li><strong>Prise en charge hors périmètre :</strong> Dans les rares cas où un chauffeur accepte, il vous demandera de marcher 15 à 20 minutes avec vos bagages jusqu'au rond-point extérieur sur la route nationale.</li>
+  </ul>
+  <p>
+    <em>En résumé : Utilisez inDrive pour vous déplacer dans la ville d'Agadir, mais privilégiez les Grands Taxis officiels ou les transferts réservés à votre arrivée à l'aéroport.</em>
+  </p>
+
+  <h2 id="a-la-place">Que faire à l'aéroport</h2>
+  <p>
+    Deux options principales s'offrent à vous à l'atterrissage :
+  </p>
+  <ul>
+    <li><strong>Grand taxi à la station</strong>, la file de taxis officiels directement devant la sortie des arrivées. Idéal pour rejoindre le centre d'Agadir (fixez le prix avant de partir, voir notre <a href={L('/agadir-airport-taxi/')}>guide taxi aéroport</a>).</li>
+    <li><strong>Transfert privé réservé</strong>, un chauffeur privé qui vous attend avec une pancarte à votre nom et un prix fixe payé en ligne. C'est l'équivalent parfait du service Uber.</li>
+  </ul>
+
+  <h2 id="comparer">Grand taxi ou transfert réservé</h2>
+  <p>
+    Le grand taxi est économique et disponible immédiatement. Un transfert réservé garantit un prix fixe, le suivi de votre vol en cas de retard et un accueil personnalisé, idéal pour les vols de nuit ou les trajets vers Taghazout et Imsouane. Consultez tous les détails sur notre <a href={L('/agadir-airport-transfers/')}>hub des transferts</a>.
+  </p>
+
+  <h2 id="prix">Obtenir un juste prix</h2>
+  <p>
+    Les grands taxis officiels n'ont pas de compteur depuis l'aéroport. Comptez 200–250 MAD vers le centre d'Agadir en journée et 300–350 MAD la nuit. Consultez notre <a href={L('/agadir-airport-taxi/prices/')}>page des prix de taxi</a> pour tous les tarifs.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">À retenir</span>
+    Pas d'Uber à Agadir. <strong>inDrive marche très bien en ville</strong>, mais ne prend pas en charge au terminal de l'aéroport. Réservez un transfert à l'avance ou prenez un Grand Taxi officiel aux arrivées.
+  </div>
+</GuideLayout>

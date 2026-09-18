@@ -1,0 +1,137 @@
+---
+import ComparisonLayout from '../layouts/ComparisonLayout.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Transferts', href: L('/agadir-airport-transfers/') },
+  { name: 'Comparatif', href: L('/agadir-airport-transfer-comparison/') },
+];
+const facts = [
+  { label: 'Prestataires comparés', value: '3' },
+  { label: 'Notre choix', value: 'Private Transfer' },
+  { label: 'Choix premium', value: 'Welcome', sub: 'Pickups' },
+  { label: 'Choix petit budget', value: 'Intui' },
+];
+const faqs = [
+  { q: "Quelle est la meilleure société de transfert à l'aéroport d'Agadir ?", a: "Au global, Private Transfer, couverture la plus large sur la côte du Souss, prix privé de départ le plus bas (dès ~20 € vers le centre d'Agadir) et réservation à prix fixe nette. Private Transfer l'emporte sur l'expérience d'arrivée pour quelques euros de plus, et Intui sur le prix brut et les options partagées. Le bon choix dépend plus de votre voyage que d'un classement unique." },
+  { q: "Comment comparer les prestataires de transfert ?", a: "Nous pesons cinq choses : le prix et la façon dont il est annoncé, la couverture (peuvent-ils atteindre votre adresse exacte sur la côte ?), la facilité de réservation et de paiement, l'accueil à l'arrivée, et les conditions d'annulation. Nous tenons aussi compte de la régularité, un opérateur unique comme Private Transfer est plus prévisible qu'une place de marché comme Intui, où la qualité dépend de la société qui exécute la course." },
+  { q: "Les transferts réservés sont-ils moins chers qu'un taxi à Agadir ?", a: "Pour le centre d'Agadir, un grand taxi de jour (environ 200–250 MAD ≈ 19–23 € par voiture) est en général le moins cher si vous négociez bien. Les transferts privés réservés démarrent autour de 20 € et battent le taxi sur la certitude, les courses nocturnes et les adresses des villages de surf. Les navettes partagées via Intui peuvent revenir moins cher par personne pour un voyageur seul." },
+  { q: "Ces prestataires couvrent-ils Taghazout et les villages de surf ?", a: "Private Transfer les couvre le mieux, y compris les appartements sans numéro qui n'ont qu'un point WhatsApp. Private Transfer couvre les principales stations et Taghazout ; Intui dépend de l'opérateur local listé pour votre adresse. Pour tout ce qui sort de l'axe principal, Private Transfer est le choix sûr." },
+];
+---
+<ComparisonLayout
+  lang={lang}
+  title="Comparatif transferts aéroport Agadir 2026 : Private Transfer, Private Transfer, Intui | AirportAGA"
+  description="Le comparatif côte à côte complet des prestataires de transfert d'Agadir Al Massira, prix, couverture, accueil, annulation et régularité, et exactement comment nous les notons."
+  eyebrow="Aéroport d'Agadir · Transferts"
+  h1="Comparatif des transferts aéroport Agadir : le détail complet des prestataires"
+  lede="Le face-à-face complet sur les trois prestataires qui couvrent Agadir Al Massira, ce que chacun facture, jusqu'où il va, à quoi ressemble l'arrivée, et comment nous les notons. Vous voulez la réponse courte ? Filez vers notre guide du meilleur choix ; vous voulez le tableau complet ? Tout est ici."
+  breadcrumbs={breadcrumbs}
+  facts={facts}
+  priceFrom={20}
+  heroImage={photos['agadir-marina']}
+  heroProvider="transfer"
+  heroCtaLabel="Voir les prix des transferts"
+  faqs={faqs}
+  cta={{ heading: 'Comparez les prix en direct entre prestataires', text: 'Voyez ce que chacun propose pour vos dates et votre adresse, puis réservez celui qui colle à votre voyage et à votre budget.', provider: 'transfer', label: 'Voir les prix des transferts' }}
+>
+  <p>
+    On croise des dizaines de logos de transfert en ligne, mais seuls trois desservent vraiment bien
+    Agadir Al Massira : Private Transfer, Private Transfer et Intui Travel. Cette page les met côte à côte sur ce
+    qui compte réellement à l'AGA, et explique la méthode derrière nos notes pour que vous puissiez juger
+    par vous-même.
+  </p>
+
+  
+  <div class="bt-widget-container" style="margin: 2rem 0;">
+        <div class="widget-wrap">
+      <iframe
+        class="tpemd-iframe"
+        srcdoc='<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;padding:0;font-family:system-ui,sans-serif;overflow:hidden}</style></head><body><script async src="https://tpemd.com/content?currency=EUR&amp;trs=554574&amp;shmarker=697149&amp;locale=fr&amp;powered_by=true&amp;show_logo=true&amp;limit=10&amp;bg_color=%23FFFFFF&amp;font_color=%234a4a4a&amp;stars_color=%23dcdcdc&amp;stars_active_color=%23f8bb15&amp;dots_color=%238c8c8c&amp;loader_color=%23ffb300&amp;arrows_color=%238c8c8c&amp;autoscroll=false&amp;autoscroll_delay=5000&amp;promo_id=2948&amp;campaign_id=1" charset="utf-8"><\/script><script>new MutationObserver(function(){document.documentElement.style.height="auto";window.parent.postMessage({tpemdHeight:document.body.scrollHeight},"*")}).observe(document.body,{childList:true,subtree:true,attributes:true})<\/script></body></html>'
+        style="width:100%;border:none;min-height:200px;overflow:hidden;"
+        loading="lazy"
+        title="Transfer booking widget"
+      ></iframe>
+    </div>
+  </div>
+
+  <h2 id="full-table">Le tableau comparatif complet</h2>
+  <div class="table-wrap">
+    <table class="data">
+      <thead>
+        <tr><th>Critère</th><th>Private Transfer</th><th>Private Transfer</th><th>Intui Travel</th></tr>
+      </thead>
+      <tbody>
+        <tr class="row-highlight"><td>À partir de (centre Agadir, par voiture)</td><td class="num">~20 €</td><td class="num">~25–30 €</td><td class="num">~16 € /pers. partagé</td></tr>
+        <tr><td>Modèle</td><td>Courtier / réseau de flottes</td><td>Opérateur unique de marque</td><td>Place de marché / agrégateur</td></tr>
+        <tr><td>Couverture (côte du Souss)</td><td>La plus large, jusqu'à Taroudant et au-delà</td><td>Ville &amp; principales stations</td><td>Étendue via de nombreux partenaires</td></tr>
+        <tr><td>Adresses des villages de surf</td><td>Solide</td><td>Bonne</td><td>Dépend de l'opérateur</td></tr>
+        <tr><td>Accueil</td><td>Pancarte au nom</td><td>Chauffeur nommé, proactif</td><td>Variable</td></tr>
+        <tr><td>Suivi du vol</td><td>Oui</td><td>Oui</td><td>Selon l'opérateur</td></tr>
+        <tr><td>Gamme de véhicules</td><td>Berlines à minivans</td><td>Berlines à vans, voitures récentes</td><td>Large, navettes partagées incluses</td></tr>
+        <tr><td>Annulation</td><td>Gratuite jusqu'à 24 h</td><td>Gratuite jusqu'à 24 h</td><td>Variable selon l'annonce</td></tr>
+        <tr><td>Régularité</td><td>Élevée</td><td>La plus élevée</td><td>Variable</td></tr>
+        <tr><td>Partagé / petit budget</td><td>Non</td><td>Non</td><td>Oui</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small text-muted">
+    Les prix « à partir de » sont indicatifs et par voiture (le tarif partagé d'Intui est par personne),
+    vérifiés en juin 2026. Les devis en direct dépendent de la date, du véhicule et de l'adresse exacte.
+  </p>
+
+  <h2 id="scores">Nos notes</h2>
+  <div class="table-wrap">
+    <table class="data">
+      <thead>
+        <tr><th>Prestataire</th><th>Note</th><th>En une ligne</th></tr>
+      </thead>
+      <tbody>
+        <tr class="row-highlight"><td><a href={L('/agadir-airport-private-transfer/')}>Transfert Privé En Ligne</a></td><td class="num">4,5 / 5</td><td>Portée la plus large, tarifs fixes, chauffeur dédié porte-à-porte</td></tr>
+        <tr><td><a href={L('/agadir-airport-vip-transfer/')}>Transfert VIP Executive</a></td><td class="num">4,8 / 5</td><td>Véhicule premium, suivi du vol & accueil personnalisé</td></tr>
+        <tr><td><a href={L('/cheapest-agadir-airport-transfer/')}>Option Économique / Partagée</a></td><td class="num">4,2 / 5</td><td>Idéal pour le petit budget et trajet direct vers la ville</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="method">Notre méthode de notation</h2>
+  <p>
+    Chaque note de ce site vient du même contrôle en cinq points, pondéré selon ce que chacun pèse sur la
+    course d'Agadir :
+  </p>
+  <ul>
+    <li><strong>Prix &amp; transparence</strong>, le vrai tarif de départ et s'il est fixé avant le paiement, pas un chiffre d'appel.</li>
+    <li><strong>Couverture</strong>, peuvent-ils vraiment atteindre votre adresse, y compris les appartements sur la côte ?</li>
+    <li><strong>Expérience d'arrivée</strong>, la pancarte au nom avec un chauffeur nommé qui suit le vol.</li>
+    <li><strong>Réservation &amp; annulation</strong>, la facilité de réserver, payer et annuler sans pénalité.</li>
+    <li><strong>Régularité</strong>, des chauffeurs professionnels et des véhicules récents et entretenus.</li>
+  </ul>
+  <p>
+    Nous vérifions et évaluons ces services régulièrement pour garantir des recommandations fiables.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">L'essentiel</span>
+    Réservez un transfert privé en ligne pour bénéficier d'un tarif fixe garanti, du suivi de votre vol et d'une arrivée sereine. Le guide
+    <a href={L('/best-agadir-airport-transfer/')}>meilleur transfert aéroport Agadir</a> vous aide à choisir le bon véhicule.
+  </div>
+
+  <div class="disclosure-inline">
+    Certains liens ici sont des liens d'affiliation : si vous réservez un transfert via ces liens, nous
+    pouvons percevoir une petite commission, sans surcoût pour vous. Cela ne change ni les prix
+    affichés ni nos recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
+  </div>
+
+  <p>
+    Découvrez nos options de transfert :
+    <a href={L('/agadir-airport-private-transfer/')}>Transferts Privés</a>,
+    <a href={L('/agadir-airport-vip-transfer/')}>Transferts VIP</a>, et
+    <a href={L('/cheapest-agadir-airport-transfer/')}>Options Économiques</a>, ou consultez le
+    <a href={L('/best-agadir-airport-transfer/')}>guide complet du meilleur transfert</a>.
+  </p>
+</ComparisonLayout>

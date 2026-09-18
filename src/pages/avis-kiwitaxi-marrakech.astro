@@ -1,0 +1,122 @@
+---
+import ReviewLayout from '../layouts/ReviewLayout.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Transferts', href: L('/agadir-airport-transfers/') },
+  { name: 'Avis Private Transfer', href: L('/kiwitaxi-agadir-review/') },
+];
+const pros = [
+  'Prix de départ le plus bas des prestataires privés (dès ~20 € vers le centre d\'Agadir)',
+  'Couverture la plus large de la côte du Souss, ville, Taghazout, Taroudant et au-delà',
+  'Prix fixe confirmé avant paiement, annulation gratuite jusqu\'à 24 h',
+  'Fiable sur les adresses sans numéro des villages de surf qui posent problème ailleurs',
+  'Réservation nette, multilingue, avec suivi du vol',
+];
+const cons = [
+  'Arrivée avec pancarte au nom, pas l\'accueil chaleureux de Private Transfer',
+  'Le véhicule exact varie, réseau de flottes, pas un opérateur unique de marque',
+  'La communication du chauffeur peut être brève ; anglais fonctionnel plutôt que bavard',
+];
+const faqs = [
+  { q: "Private Transfer est-il fiable pour l'aéroport d'Agadir ?", a: "Oui. D'après notre expérience et les avis voyageurs, Private Transfer est fiable à l'AGA, le chauffeur est là pour le vol, le prix est celui réservé, et il gère bien les adresses délicates de la côte. L'arrivée est fonctionnelle plutôt que chaleureuse, mais elle fait le travail de façon régulière." },
+  { q: "Combien coûte Private Transfer depuis l'aéroport d'Agadir ?", a: "Dès environ 20 € par véhicule vers le centre d'Agadir, autour de 28 € pour Taghazout, 55 € pour Taroudant et 120 € pour Marrakech, vérifié en juin 2026. Le prix est fixé à la réservation et dépend du véhicule et de l'adresse exacte. Un minivan pour famille ou groupe coûte plus qu'une berline." },
+  { q: "Private Transfer vous accueille-t-il aux arrivées d'Agadir ?", a: "Oui, votre chauffeur attend dans la zone des arrivées avec une pancarte au nom, et Private Transfer suit votre vol : un retard n'est donc pas un problème. C'est un accueil standard, pas l'accueil proactif avec aide aux bagages de Private Transfer." },
+  { q: "Peut-on annuler une réservation Private Transfer ?", a: "La plupart des réservations Private Transfer permettent une annulation gratuite jusqu'à 24 h avant la prise en charge. Confirmez les conditions exactes sur votre réservation avant de payer, car elles peuvent varier selon le trajet et le véhicule." },
+  { q: "Private Transfer ou un grand taxi de la station ?", a: "Pour une course de jour en ville au budget serré, un grand taxi peut être moins cher si vous négociez. Private Transfer l'emporte quand vous voulez un prix fixe sans négociation, un atterrissage de nuit couvert par le suivi du vol, ou un chauffeur qui connaît déjà votre adresse à Taghazout." },
+];
+---
+<ReviewLayout
+  lang={lang}
+  title="Avis Private Transfer Agadir 2026 : prix et service au crible | AirportAGA"
+  description="Notre avis Private Transfer Agadir testé sur le terrain, prix réels, expérience de réservation, véhicules, l'arrivée, et à qui il convient. Le transfert le mieux couvert et le plus économique d'Al Massira, avec ses limites."
+  eyebrow="Aéroport d'Agadir · Avis transfert"
+  h1="Avis Private Transfer Agadir : le meilleur rapport qualité-prix, avec des réserves"
+  lede="Private Transfer est le transfert que nous recommandons en premier pour la plupart des arrivées à Agadir, couverture la plus large, prix privé le plus bas, fixe et simple. Voici ce qu'il fait vraiment bien, ses limites face aux options premium, et à qui le réserver."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['agadir-marina']}
+  brand="Private Transfer"
+  rating={4.3}
+  verdict="Le transfert privé au meilleur rapport qualité-prix à Agadir Al Massira : la couverture la plus large, le prix de départ le plus bas, et une réservation fixe et sans tracas. Vous échangez l'accueil chaleureux contre ce rapport, parfait pour la plupart des voyages, moins pour une première arrivée stressante."
+  pros={pros}
+  cons={cons}
+  heroProvider="transfer"
+  heroCtaLabel="Voir les prix des transferts"
+  faqs={faqs}
+  cta={{ heading: 'Réservez un transfert Private Transfer à prix fixe', text: "Voyez les prix en direct pour vos dates et votre adresse, bloquez le tarif, et un chauffeur vous attendra à l'atterrissage, annulation gratuite sur la plupart des trajets.", provider: 'transfer', label: 'Voir les prix des transferts' }}
+>
+  <p>
+    Private Transfer est un courtier de transferts : vous réservez en ligne, il attribue un chauffeur local de
+    son réseau, et le prix est fixé avant le paiement. À Agadir Al Massira, ce modèle fonctionne bien,
+    car le plus dur sur la course de l'AGA, c'est d'atteindre les adresses sans numéro de rue de la
+    côte, et la portée de Private Transfer est son meilleur atout. Nous l'avons utilisé sur toute la côte du
+    Souss et le classons comme le choix par défaut pour la plupart des arrivées, avec quelques réserves
+    honnêtes ci-dessous.
+  </p>
+
+  <h2 id="prix">Prix</h2>
+  <p>
+    C'est là que Private Transfer devance les opérateurs premium. Vers le centre d'Agadir, il démarre autour de
+    20 € par véhicule ; Taghazout coûte environ 28 €, Taroudant environ 55 € et Marrakech autour de
+    120 € (par véhicule, vérifié en juin 2026). Le prix est bloqué à la réservation, pas de surprise de
+    supplément de nuit, pas de négociation à la station, et un minivan pour une famille ou un groupe est
+    un supplément clair plutôt qu'un mystère. Face à un grand taxi, une course de jour en ville peut
+    rester moins chère à la station si vous négociez bien, mais Private Transfer l'emporte sur la certitude et
+    sur tout trajet plus long ou nocturne.
+  </p>
+
+  <h2 id="reservation">Expérience de réservation</h2>
+  <p>
+    Le site est net et multilingue, vous saisissez votre adresse exacte et votre numéro de vol, et le
+    devis est le prix que vous payez, pas de chiffre d'appel qui gonfle au moment de payer. Le suivi du
+    vol est inclus, donc un charter en retard ne signifie pas un chauffeur perdu, et la plupart des
+    réservations offrent une annulation gratuite jusqu'à 24 h avant la prise en charge. La confirmation
+    et les coordonnées du chauffeur arrivent par e-mail et le processus est vraiment fluide. La seule
+    chose à faire de votre côté : enregistrer le point de localisation de votre logement, surtout pour
+    les villages de surf.
+  </p>
+
+  <h2 id="vehicules">Véhicules et arrivée</h2>
+  <p>
+    Comme Private Transfer s'appuie sur un réseau de flottes plutôt que sur un opérateur unique de marque, le
+    véhicule exact varie, propre et adapté, mais pas la flotte uniforme et plus récente que pourrait
+    fournir Private Transfer. La gamme va de la berline au minivan, donc groupes et familles sont bien
+    servis. L'arrivée est une pancarte au nom standard dans la zone des arrivées : votre chauffeur est
+    là, la prise en charge est rapide, et vous partez. C'est fiable mais transactionnel, n'attendez pas
+    l'accueil proactif avec aide aux bagages dont l'option premium fait tout son argument.
+  </p>
+
+  <h2 id="pour-qui">À qui il convient</h2>
+  <p>
+    Réservez Private Transfer si le rapport qualité-prix et la portée priment : un voyageur à l'aise rejoignant
+    une adresse claire en ville, ceux qui vont loin dans l'intérieur ou vers un appartement de la côte
+    sans numéro, et les groupes voulant un prix fixe en minivan. Si c'est votre premier voyage au Maroc,
+    que vous atterrissez au petit matin, ou que vous voulez simplement l'arrivée la plus sereine, les
+    quelques euros de plus pour <a href={L('/agadir-airport-transfers/')}>Private Transfer</a>
+    peuvent valoir le coup.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">Conseil local</span>
+    Enregistrez le numéro WhatsApp de votre chauffeur (fourni avec la confirmation) et partagez votre
+    position en direct à l'atterrissage. C'est le meilleur moyen de rendre la dépose à Taghazout ou
+    Tamraght fluide.
+  </div>
+
+  <div class="disclosure-inline">
+    Certains liens ici sont des liens d'affiliation : si vous réservez un transfert via ces liens, nous
+    pouvons percevoir une petite commission, sans surcoût pour vous. Cela ne change ni les prix
+    affichés ni nos recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
+  </div>
+
+  <p>
+    Voyez comment Private Transfer se situe face aux alternatives sur notre guide
+    <a href={L('/best-agadir-airport-transfer/')}>meilleur transfert aéroport Agadir</a>, ou partez du
+    <a href={L('/agadir-airport-transfers/')}>hub des transferts</a>.
+  </p>
+</ReviewLayout>

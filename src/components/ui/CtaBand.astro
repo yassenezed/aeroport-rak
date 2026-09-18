@@ -1,0 +1,21 @@
+---
+import AffiliateLink from '../affiliate/AffiliateLink.astro';
+import type { AffiliateId } from '../../data/providers';
+interface Props {
+  heading: string;
+  text?: string;
+  provider: AffiliateId;
+  sub?: string;
+  ctaLabel: string;
+}
+const { heading, text, provider, sub, ctaLabel } = Astro.props;
+---
+<section class="section">
+  <div class="container">
+    <div class="cta-band">
+      <h2>{heading}</h2>
+      {text && <p>{text}</p>}
+      <AffiliateLink provider={provider} sub={sub} class="btn btn-primary btn-lg btn-arrow">{ctaLabel}</AffiliateLink>
+    </div>
+  </div>
+</section>

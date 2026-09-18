@@ -1,0 +1,123 @@
+---
+import RouteLayout from '../layouts/RouteLayout.astro';
+import TransferOptions from '../components/affiliate/TransferOptions.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Transferts', href: L('/agadir-airport-transfers/') },
+  { name: 'Vers Tamraght et Aourir', href: L('/agadir-airport-to-tamraght-aourir/') },
+];
+const facts = [
+  { label: 'Distance', value: '42 km' },
+  { label: 'Durée', value: '40–50', sub: 'min' },
+  { label: 'Transfert réservé', value: '26 €', sub: 'dès' },
+  { label: 'Grand taxi', value: '250–350', sub: 'MAD' },
+];
+const faqs = [
+  { q: "Comment aller de l'aéroport d'Agadir à Tamraght ou Aourir ?", a: "Par la route uniquement, ni train ni bus utile. Vous réservez un transfert privé qui vous conduit au camp ou à l'appartement exact grâce à un point de localisation, ou vous négociez un grand taxi à la station. Le trajet fait environ 42 km vers le nord, soit 40 à 50 minutes par Agadir et Aourir." },
+  { q: "Combien coûte un transfert vers Tamraght ou Aourir ?", a: "Un transfert privé réservé démarre autour de 26 € pour la voiture, prix fixé avant le départ. Un grand taxi à la station revient à environ 250–350 MAD en journée selon la négociation ; convenez le tarif avant de charger. Prix vérifiés en juin 2026." },
+  { q: "Où se trouvent exactement Tamraght et Aourir ?", a: "Sur la route côtière entre Agadir et Taghazout. Aourir est le plus grand village, surnommé « le village des bananes » pour ses étals de fruits, et Tamraght juste après, plus près des spots de Devil's Rock et Banana Beach. Tous deux sont à quelques minutes avant Taghazout." },
+  { q: "Un taxi trouvera-t-il l'adresse de mon camp de surf ?", a: "Souvent pas tout seul. Camps et appartements n'ont presque jamais de vrai numéro de rue, juste un nom et un point près de Banana Beach ou Devil's Rock. Un chauffeur réservé qui a le point d'avance vous dépose à la porte ; un taxi de station risque de vous laisser « à Tamraght » à vous de chercher. Enregistrez le point hors ligne avant de partir." },
+  { q: "Est-il moins cher de loger à Tamraght ou à Taghazout ?", a: "Tamraght et Aourir sont en général un peu moins chers et plus calmes que Taghazout, tout en partageant les mêmes spots et à un saut du village. Beaucoup de surfeurs réguliers les préfèrent justement pour cela, mêmes vagues, base plus tranquille, transfert un peu plus court depuis l'aéroport." },
+];
+---
+<RouteLayout
+  lang={lang}
+  title="Transfert aéroport Agadir – Tamraght et Aourir : prix (2026) | AirportAGA"
+  description="De l'aéroport Agadir Al Massira à Tamraght et Aourir (le village des bananes) : 42 km sur la côte du surf, environ 45 minutes. Prix transfert et taxi 2026, et comment rejoindre un camp sans adresse."
+  eyebrow="Trajets depuis l'AGA · Côte du surf"
+  h1="Transfert aéroport Agadir → Tamraght et Aourir"
+  lede="Tamraght et Aourir, les villages des bananes juste avant Taghazout, sont à environ 42 km au nord, soit 45 minutes de l'aéroport. Voici le prix du transfert, et comment arriver à un camp de surf qui a un point mais pas d'adresse."
+  breadcrumbs={breadcrumbs}
+  facts={facts}
+  priceFrom={26}
+  heroImage={photos['tamraght']}
+  heroProvider="transfer"
+  heroCtaLabel="Voir les prix vers Tamraght"
+  faqs={faqs}
+  cta={{ heading: 'À la porte du camp, pas dans le village', text: 'Envoyez le point de votre camp ou appartement et un chauffeur vous y conduit directement, prix fixe, place pour les planches sur demande, annulation gratuite sur la plupart des réservations.', provider: 'transfer', label: 'Réserver votre transfert Tamraght' }}
+>
+  <p>
+    Tamraght et Aourir forment le duo plus tranquille de la côte du surf, les villages que l'on traverse
+    juste avant Taghazout, égrenés sur la même route côtière et partageant les mêmes spots. Aourir est
+    le plus grand, surnommé « le village des bananes » pour les étals qui bordent la route ; Tamraght
+    juste après, à deux pas de Banana Beach et de Devil's Rock. Ils sont à environ 42 km de l'aéroport
+    vers le nord, soit 40 à 50 minutes par Agadir et Aourir.
+  </p>
+
+  <h2 id="options">Vos options depuis l'aéroport</h2>
+  <p>
+    Pas de train, pas de bus utile, trois choix routiers, et pour les villages de surf ils ne vous
+    déposent pas au même endroit :
+  </p>
+  <ul>
+    <li><strong>Transfert privé réservé</strong>, un chauffeur attend avec votre nom, prend le point de votre camp et vous dépose à la porte. Dès 26 €, avec place pour les planches sur demande.</li>
+    <li><strong>Grand taxi à la station</strong>, possible si vous fixez le tarif d'abord (environ 250–350 MAD en journée), mais les chauffeurs rechignent aux adresses de camp non signalées.</li>
+    <li><strong>Voiture de location</strong>, pratique pour enchaîner les spots d'Imsouane jusqu'à la ville ; moins utile pour un séjour fixe avec cours organisés.</li>
+  </ul>
+
+
+  <div class="widget-wrap">
+    <iframe
+      class="tpemd-iframe"
+      srcdoc='<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;padding:0;font-family:system-ui,sans-serif;overflow:hidden}</style></head><body><script async src="https://tpemd.com/content?currency=EUR&amp;trs=554574&amp;shmarker=697149&amp;locale=fr&amp;from=al%20massira%20airport&amp;to=Tamraght&amp;country=Morocco&amp;powered_by=true&amp;transfer_options_limit=10&amp;transfer_options=MCR&amp;disable_currency_selector=true&amp;hide_form_extras=true&amp;hide_external_links=true&amp;campaign_id=1&amp;promo_id=3879" charset="utf-8"><\/script><script>new MutationObserver(function(){document.documentElement.style.height="auto";window.parent.postMessage({tpemdHeight:document.body.scrollHeight},"*")}).observe(document.body,{childList:true,subtree:true,attributes:true})<\/script></body></html>'
+      style="width:100%;border:none;min-height:200px;overflow:hidden;"
+      loading="lazy"
+      title="Transfer booking widget"
+    ></iframe>
+  </div>
+
+  <h2 id="adresse">Le problème des adresses non signalées</h2>
+  <p>
+    C'est le détail qui piège les nouveaux venus, comme à Taghazout. Camps et appartements de Tamraght
+    et Aourir n'ont le plus souvent pas de numéro de rue, ils se repèrent par un nom et un point de
+    localisation près de Banana Beach ou Devil's Rock. Un chauffeur à qui le point a été envoyé d'avance
+    vous y conduit directement ; un taxi pris à la station peut tourner dans le village, demander autour,
+    puis abandonner ou facturer le tracas. Enregistrez le point de votre logement hors ligne avant de
+    partir, et réservez un transfert où vous transmettez l'adresse au paiement.
+  </p>
+
+  <h3 id="reserver">Réserver un transfert vers Tamraght</h3>
+  <TransferOptions
+    sub="aeroport-agadir-tamraght-aourir"
+    options={[
+      { provider: 'transfer', highlight: true, badge: 'Meilleur rapport', pitch: 'Voitures et minivans avec place pour les planches, directement à votre camp près de Banana Beach, prix fixe dès 26 €, annulation gratuite jusqu\'à 24 h.', label: 'Voir les prix des transferts' },
+      { provider: 'transfer-vip', badge: 'Accueil personnalisé', pitch: 'Un chauffeur nommé, anglophone, et le suivi du vol, l\'arrivée la plus simple pour un premier voyage surf au Maroc.', label: 'Réserver un transfert VIP' },
+    ]}
+  />
+
+  <h2 id="comparaison">Tamraght, Aourir ou Taghazout ?</h2>
+  <p>
+    Ces villages partagent les vagues de Taghazout, mais sont en général un peu moins chers et bien plus
+    calmes, ce qui explique que tant de surfeurs réguliers s'y installent. Le transfert est légèrement
+    plus court, les spots de Banana Beach et Devil's Rock sont juste là, et Taghazout n'est qu'à
+    quelques minutes pour une soirée. Si vous hésitez encore, comparez le trajet
+    <a href={L('/agadir-airport-to-taghazout/')}>aéroport → Taghazout</a>, la même route un peu plus
+    loin.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">Conseil local</span>
+    Prenez des espèces et une SIM dans le hall d'arrivée avant de partir. Les villages fonctionnent au
+    liquide, repas du camp, boulangerie, location de planches, et une connexion data permet de
+    partager le point de votre camp au chauffeur et de vérifier le report de surf avant d'avoir quitté
+    l'aéroport.
+  </div>
+
+  <p>
+    Vous préparez le volet surf du voyage ? Notre
+    <a href={L('/surfing-taghazout-guide/')}>guide du surf à Taghazout</a> couvre les spots, les saisons
+    et le fonctionnement des cours dans les trois villages. Pour tous les trajets depuis le terminal,
+    voyez le <a href={L('/agadir-airport-transfers/')}>hub des transferts</a>.
+  </p>
+
+  <div class="disclosure-inline">
+    Certains liens ici sont des liens d'affiliation, réservez via ces liens et nous pouvons percevoir
+    une petite commission, sans surcoût pour vous. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
+  </div>
+</RouteLayout>

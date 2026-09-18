@@ -1,0 +1,334 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  name: string;
+  rating?: number; // number of stars, e.g. 5
+  ratingLabel?: string; // e.g. "Boutique" or "Adults Only"
+  location?: string; // e.g. "Beachfront, Agadir"
+  description: string;
+  features: string[];
+  imageSrc: ImageMetadata | string;
+  imageAlt: string;
+  bookingUrl: string;
+  reviewUrl?: string; // Optional, if provided it shows the secondary link
+  translations?: {
+    viewPrices: string;
+    readReview: string;
+  };
+}
+
+const {
+  name,
+  rating,
+  ratingLabel,
+  location,
+  description,
+  features,
+  imageSrc,
+  imageAlt,
+  bookingUrl,
+  reviewUrl,
+  translations = {
+    viewPrices: 'View Prices',
+    readReview: 'Read Full Review'
+  }
+} = Astro.props;
+
+// Determine if the image is an Astro ImageMetadata object (from import) or a static string path
+const isImageMetadata = typeof imageSrc !== 'string';
+---
+
+<article class="hotel-card">
+  <div class="hc-image-wrapper">
+    {isImageMetadata ? (
+      <Image src={imageSrc as ImageMetadata} alt={imageAlt} width={500} height={400} class="hc-image" />
+    ) : (
+      <>
+        <img src={imageSrc as string} alt={imageAlt} class="hc-image" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="hc-image-fallback" style="display: none;">
+          <span>No Image Available</span>
+        </div>
+      </>
+    )}
+  </div>
+
+  <div class="hc-content">
+    <div class="hc-header">
+      <h3 class="hc-title">{name}</h3>
+      <div class="hc-meta">
+        {rating && (
+          <span class="hc-stars" aria-label={`${rating} stars`}>
+            {'★'.repeat(rating)}
+          </span>
+        )}
+        {ratingLabel && <span class="hc-rating-label">{ratingLabel}</span>}
+        {location && (
+          <span class="hc-location">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            {location}
+          </span>
+        )}
+      </div>
+    </div>
+    
+    <p class="hc-description">{description}</p>
+    
+    {features && features.length > 0 && (
+      <ul class="hc-features">
+        {features.map(feature => (
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>{feature}</span>
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+  <div class="hc-action">
+    {reviewUrl ? (
+      <>
+        <a href={reviewUrl} class="hc-btn-primary">
+          {translations.readReview}
+        </a>
+        <a href={bookingUrl} target="_blank" rel="nofollow sponsored" class="hc-link-secondary">
+          {translations.viewPrices}
+        </a>
+      </>
+    ) : (
+      <a href={bookingUrl} target="_blank" rel="nofollow sponsored" class="hc-btn-primary">
+        {translations.viewPrices}
+      </a>
+    )}
+  </div>
+</article>
+
+<style>
+  .hotel-card {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 1.5rem;
+    max-width: 1150px;
+    width: 100%;
+  }
+  
+  .hotel-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+    border-color: #d1d5db;
+  }
+
+  /* Mobile Layout */
+  .hc-image-wrapper {
+    width: 100%;
+    height: 220px;
+    position: relative;
+    background: #f3f4f6;
+  }
+  
+  .hc-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .hc-image-fallback {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9ca3af;
+    font-size: 0.9rem;
+    background: #f3f4f6;
+  }
+
+  .hc-content {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .hc-header {
+    margin-bottom: 0.75rem;
+  }
+
+  .hc-title {
+    margin: 0 0 0.4rem 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    line-height: 1.3;
+  }
+
+  .hc-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .hc-stars {
+    color: #f59e0b;
+    letter-spacing: 2px;
+  }
+
+  .hc-rating-label {
+    background: #fef3c7;
+    color: #b45309;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.75rem;
+  }
+
+  .hc-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: #4b5563;
+  }
+  
+  .hc-location svg {
+    width: 14px;
+    height: 14px;
+    opacity: 0.7;
+  }
+
+  .hc-description {
+    margin: 0 0 1rem 0;
+    color: #4b5563;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .hc-features {
+    list-style: none;
+    padding: 0;
+    margin: auto 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .hc-features li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: #374151;
+    font-weight: 500;
+  }
+
+  .hc-features svg {
+    width: 14px;
+    height: 14px;
+    color: var(--green); /* Brand green checkmark */
+    flex-shrink: 0;
+  }
+
+  .hc-action {
+    padding: 1.25rem;
+    border-top: 1px solid #f3f4f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    background: #fafafa;
+  }
+
+  .hc-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    background: var(--orange);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+  }
+
+  .hc-btn-primary:hover {
+    background: var(--orange-dark);
+  }
+
+  .hc-link-secondary {
+    display: inline-flex;
+    align-items: center;
+    color: var(--text);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.2s;
+  }
+
+  .hc-link-secondary:hover {
+    text-decoration-color: var(--text);
+  }
+
+  /* Desktop Layout */
+  @media (min-width: 768px) {
+    .hotel-card {
+      flex-direction: row;
+      min-height: 280px; /* Ensure uniform minimum height but allow growth */
+    }
+
+    .hc-image-wrapper {
+      width: 33%;
+      height: auto; /* flexbox handles stretching */
+      flex-shrink: 0;
+    }
+
+    .hc-content {
+      padding: 1.5rem;
+      border-right: 1px solid #f3f4f6;
+    }
+
+    .hc-title {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hc-description {
+      font-size: 0.95rem;
+      -webkit-line-clamp: 3;
+    }
+
+    .hc-features {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+    }
+
+    .hc-action {
+      width: 240px;
+      flex-shrink: 0;
+      border-top: none;
+      padding: 1.5rem;
+      background: transparent;
+    }
+  }
+</style>

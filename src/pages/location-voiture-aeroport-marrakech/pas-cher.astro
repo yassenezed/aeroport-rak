@@ -1,0 +1,153 @@
+---
+import CarRentalLayout from '../../layouts/CarRentalLayout.astro';
+import AffiliateLink from '../../components/affiliate/AffiliateLink.astro';
+import { getLocalizedPath } from '../../i18n';
+import { PRICES_CHECKED } from '../../data/airport';
+import { photos } from '../../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Location de voiture', href: L('/agadir-airport-car-rental/') },
+  { name: 'Pas chère', href: L('/agadir-airport-car-rental/cheap/') },
+];
+const facts = [
+  { label: 'Économique', value: '16 €', sub: 'dès/jour' },
+  { label: 'Caution', value: 'Le piège', sub: 'sur carte' },
+  { label: 'Carburant', value: 'Plein→plein', sub: 'le plus juste' },
+  { label: 'Comptoirs', value: '~19', sub: 'à comparer' },
+];
+const faqs = [
+  { q: "Quelle est la location de voiture la moins chère à l'aéroport d'Agadir ?", a: `En basse saison, une voiture économique (Dacia Sandero ou équivalent) peut démarrer autour de 16 € par jour, en général chez une agence marocaine locale plutôt qu'une grande enseigne. Mais le tarif journalier le plus bas n'est pas toujours le séjour le moins cher : un devis bas avec une grosse caution, une politique plein-à-vide et une franchise élevée peut revenir plus cher qu'un tarif tout compris un peu plus haut. Comparez les vraies conditions, pas seulement le prix affiché. Prix vérifiés en juin 2026.` },
+  { q: "Les agences locales sont-elles moins chères que Hertz ou Europcar à Agadir ?", a: "Souvent, oui, les agences locales affichent fréquemment un tarif journalier plus bas que les internationales. La contrepartie est la régularité : les montants de caution, la politique de carburant et la gestion d'un éventuel litige varient davantage. Une bonne agence locale est un excellent rapport ; une mauvaise vous gratte au retour. Réserver via un comparateur qui montre leurs conditions et avis d'avance, c'est obtenir le prix local sans la loterie locale." },
+  { q: "Pourquoi le devis le moins cher n'est-il pas toujours le moins cher ?", a: "Parce que le tarif journalier n'est qu'une ligne de la facture. La caution immobilise de l'argent sur votre carte. Une politique plein-à-vide signifie payer un plein dont vous rendez une partie. Et un tarif bas s'accompagne souvent d'une franchise élevée, la somme due en cas de dommage, que le comptoir réduit ensuite via un rachat coûteux. Additionnez tout et la voiture « pas chère » peut battre la « chère ». Lisez la franchise et le carburant avant le prix." },
+  { q: "Comment éviter le piège de la caution sur une location pas chère à Agadir ?", a: "Vérifiez le montant de la caution avant de réserver, pas au comptoir, il va de modeste à très élevé, et il doit passer sur une carte de crédit (pas de débit) au nom du conducteur principal. Assurez-vous d'avoir le plafond disponible, gardez la carte libre d'autres gros blocages pendant la location, et photographiez la voiture en détail à la prise en charge pour qu'aucun montant injustifié ne soit imputé au retour." },
+  { q: "Faut-il prendre l'assurance tous risques sur une location économique ?", a: "C'est l'option qui vaut généralement le coup. Le tarif de base vous laisse exposé à une franchise élevée ; un pare-chocs frotté peut effacer toutes vos économies sur le tarif journalier. La façon la moins chère de se couvrir est une couverture tous risques prise via le comparateur à la réservation, normalement moins chère que le rachat poussé à l'arrivée, et elle garde une location réellement bon marché réellement bon marché." },
+];
+---
+<CarRentalLayout
+  lang={lang}
+  title="Location voiture pas chère aéroport Agadir : vrais prix (2026) | AirportAGA"
+  description="La façon honnête de trouver une location de voiture pas chère à l'aéroport Agadir Al Massira en 2026, agences locales vs internationales, le piège de la caution, et pourquoi le devis le plus bas n'est pas toujours le moins cher."
+  eyebrow="Aéroport d'Agadir · Location de voiture"
+  h1="Location de voiture pas chère à l'aéroport d'Agadir"
+  lede="Une économique peut démarrer autour de 16 € par jour à l'AGA, mais le prix affiché le plus bas est un piège si la caution est énorme, le carburant en plein-à-vide et la franchise au plafond. Voici comment trouver du vraiment pas cher, pas du pas-cher en apparence."
+  breadcrumbs={breadcrumbs}
+  facts={facts}
+  priceFrom={16}
+  heroImage={photos['agadir-marina']}
+  heroCtaLabel="Trouver la location la moins chère"
+  faqs={faqs}
+  cta={{ heading: 'Comparez tous les comptoirs de location de l\'AGA', text: 'Cherchez côte à côte les agences de l\'aéroport d\'Agadir, prix, caution, politique de carburant et assurance, le tout au même endroit.', provider: 'economybookings', label: 'Comparer les prix de location' }}
+>
+  <p>
+    Louer une voiture à Agadir est bon marché à l'échelle européenne, une citadine peut démarrer
+    autour de 16 € par jour hors saison, mais le tarif affiché est le chiffre le plus facile à
+    truquer. Les comptoirs qui annoncent le plus bas se rattrapent souvent sur la caution, la politique
+    de carburant et la franchise d'assurance : la voiture qui paraissait la moins chère sur la page de
+    recherche peut devenir discrètement la plus chère au moment de rendre les clés. Cette page explique
+    comment trouver le prix réellement bas, pas celui qui en a l'air.
+  </p>
+
+
+  <div class="car-widget-wrapper" style="margin: 2.5rem 0 3.5rem 0;">
+    <h3 style="font-size: 1.75rem; margin-bottom: 0.5rem; text-align: center; margin-top: 0;">Comparez les locations pas chères</h3>
+    <p style="text-align: center; color: var(--ink-2); margin-bottom: 2rem;">Trouvez les tarifs les plus bas pour l'Aéroport d'Agadir.</p>
+    <div class="cheap-banner-wrapper" style="width: 100%; overflow: hidden; border-radius: 5px;">
+      <script is:inline async src="https://tpemd.com/content?trs=554574&amp;shmarker=697149&amp;locale=fr&amp;powered_by=true&amp;campaign_id=10&amp;promo_id=2082" charset="utf-8"></script>
+    </div>
+  </div>
+
+  <h2 id="locales-vs-internationales">Agences locales vs grandes enseignes</h2>
+  <p>
+    Les tarifs journaliers les plus bas à l'AGA viennent en général des agences marocaines locales
+    plutôt que de Hertz, Europcar ou Sixt. Une bonne agence locale, c'est un vrai rapport : la même
+    Dacia pour moins cher, un personnel sympathique, de la souplesse sur les détails. Le hic, c'est la
+    variabilité, cautions, conditions de carburant et gestion d'un litige au retour diffèrent plus
+    qu'avec les internationales, où les conditions sont au moins prévisibles. Vous ne choisissez pas
+    entre « pas cher et risqué » et « cher et sûr » ; vous choisissez le prix local avec les conditions
+    lues d'avance, ce qu'un comparateur permet.
+  </p>
+  <div class="table-wrap">
+    <table class="data">
+      <thead>
+        <tr><th></th><th>Agences locales</th><th>Internationales</th></tr>
+      </thead>
+      <tbody>
+        <tr class="row-highlight"><td>Tarif journalier</td><td>Souvent le plus bas</td><td>Plus élevé</td></tr>
+        <tr><td>Caution</td><td>Très variable</td><td>Prévisible, souvent élevée</td></tr>
+        <tr><td>Carburant</td><td>À vérifier de près</td><td>En général plein-à-plein</td></tr>
+        <tr><td>Conditions au retour</td><td>Plus variables</td><td>Plus régulières</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small text-muted">
+    Des généralités, pas des garanties, les agences diffèrent. Lisez les conditions précises de la
+    réservation avant de vous engager.
+  </p>
+
+  <h2 id="piege-caution">Le piège de la caution</h2>
+  <p>
+    C'est celui qui surprend sur une location à petit budget. Presque chaque comptoir bloque une
+    caution sur votre carte de crédit en empreinte, et sur les tarifs les moins chers elle peut être
+    plus élevée, pas plus basse, c'est une façon de rentabiliser un tarif bas. Il vous faut une vraie
+    carte de crédit (le débit ne passe en général pas) au nom du conducteur principal avec un plafond
+    libre suffisant, et vous voulez récupérer cet argent vite, donc rendre la voiture propre, sans
+    dommage et avec un dossier en règle. Demandez le montant avant de réserver : une voiture « pas
+    chère » avec une caution que vous ne pouvez pas couvrir n'est pas pas chère, elle est inlouable.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">Conseil local</span>
+    Photographiez la voiture sous tous les angles à la prise en charge, chaque rayure, les roues, la
+    jauge, et gardez les clichés horodatés. Sur une location économique, où les contrôles au retour
+    peuvent être plus stricts, c'est votre preuve si un comptoir tente d'imputer une vieille éraflure à
+    votre caution.
+  </div>
+
+  <h2 id="devis-moins-cher">Pourquoi le devis le moins cher n'est pas toujours le moins cher</h2>
+  <p>
+    Faites le vrai calcul et l'ordre s'inverse souvent. Une voiture à 16 €/jour avec une politique
+    plein-à-vide signifie que vous payez un plein entier au comptoir et rendez gratuitement ce qui
+    reste, facilement 20 à 30 € perdus. Ajoutez une franchise élevée et le rachat vendu pour la
+    réduire, et la facture grimpe encore. Une voiture à deux euros de plus par jour, en plein-à-plein
+    et couverte via le comparateur, ressort fréquemment moins chère au total. L'astuce : lire la ligne
+    carburant et la franchise avant de lire le prix.
+  </p>
+
+  <h2 id="rester-pas-cher">Comment la garder vraiment pas chère</h2>
+  <p>Quelques réflexes pèsent plus sur la note finale que de grappiller le dernier euro sur le tarif journalier :</p>
+  <ul>
+    <li><strong>Réservez à l'avance, pas au comptoir.</strong> Les tarifs à l'AGA grimpent à mesure que les voitures partent, surtout en pic d'hiver et à Pâques, deux semaines d'avance battent confortablement un prix sur place.</li>
+    <li><strong>Prise en charge et retour à l'aéroport.</strong> Une location en aller simple, départ à l'AGA, dépôt à Marrakech ou Essaouira, ajoute des frais d'aller simple qui dépassent souvent l'économie. Rendre la voiture à l'AGA reste le moins cher.</li>
+    <li><strong>Prenez une boîte manuelle si possible.</strong> La plupart des voitures économiques au Maroc sont manuelles ; les automatiques sont plus rares et nettement plus chères, donc le manuel fait une vraie différence.</li>
+    <li><strong>Refusez les extras du comptoir.</strong> GPS (votre téléphone le fait gratuitement), sièges enfant surfacturés (ajoutez-les en ligne ou apportez le vôtre) et le deuxième conducteur si vous ne partagez pas réellement la conduite.</li>
+    <li><strong>Allongez un peu si les dates sont proches.</strong> Le tarif journalier baisse en général avec la durée : 7 jours coûtent souvent à peine plus que 5.</li>
+    <li><strong>Restez sur le bitume, au Maroc.</strong> Les voitures de location ne passent pas la frontière, et la piste/hors-route est normalement exclue de l'assurance, sortir du goudron peut annuler la couverture et faire grimper la facture.</li>
+  </ul>
+
+  <h3 id="reserver">Comparer les vrais prix</h3>
+  <p>
+    Le moyen le plus rapide de voir le vrai moins cher est de comparer les comptoirs de l'AGA ensemble,
+    avec caution, carburant et franchise côte à côte. Nous utilisons
+    <AffiliateLink provider="economybookings" sub="location-voiture-aeroport-agadir-pas-cher-body" class="text-link">EconomyBookings</AffiliateLink> :
+    le site fait remonter les agences locales comme les internationales, montre les conditions avant le
+    paiement, et sa couverture tous risques est en général moins chère que le rachat du comptoir, ce
+    qui garde un tarif bas réellement bas.
+  </p>
+
+  <div class="disclosure-inline">
+    Certains liens ici sont des liens d'affiliation : réservez via ces liens et nous pouvons percevoir
+    une petite commission, sans surcoût pour vous. Cela ne change jamais les prix affichés ni nos
+    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
+  </div>
+
+  <p>
+    Vous voulez d'abord le tableau complet ? Commencez par le
+    <a href={L('/agadir-airport-car-rental/')}>hub location de voiture à l'aéroport d'Agadir</a>, ou
+    voyez quels comptoirs sortent en tête dans notre comparatif
+    <a href={L('/best-car-rental-agadir-airport/')}>meilleure location à l'aéroport d'Agadir</a>.
+  </p>
+</CarRentalLayout>

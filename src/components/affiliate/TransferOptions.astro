@@ -1,0 +1,36 @@
+---
+import AffiliateLink from './AffiliateLink.astro';
+import type { AffiliateId } from '../../data/providers';
+import { providers } from '../../data/providers';
+
+interface Option {
+  provider: AffiliateId;
+  name?: string;
+  pitch: string;
+  badge?: string;
+  label: string;
+  highlight?: boolean;
+}
+interface Props { options: Option[]; sub?: string; }
+const { options, sub } = Astro.props;
+---
+<div class="transfer-options">
+  {options.map((o) => (
+    <div class:list={['to-card', { featured: o.highlight }]}>
+      <div class="to-head">
+        <span class="to-name">{o.name || providers[o.provider].name}</span>
+        {o.badge && <span class="chip chip-green">{o.badge}</span>}
+      </div>
+      <p class="to-pitch">{o.pitch}</p>
+      <AffiliateLink provider={o.provider} sub={sub} class="btn btn-primary btn-block">{o.label}</AffiliateLink>
+    </div>
+  ))}
+</div>
+<style>
+  .transfer-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+  .to-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 1.25rem; display: flex; flex-direction: column; }
+  .to-card.featured { border-color: var(--orange); box-shadow: var(--shadow-md); }
+  .to-head { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.5rem; }
+  .to-name { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; color: var(--ink); }
+  .to-pitch { font-size: 0.94rem; color: var(--ink-2); flex: 1; margin-bottom: 1rem; }
+</style>

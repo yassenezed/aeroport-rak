@@ -1,0 +1,31 @@
+---
+// Widget de réservation de transferts (Travelpayouts / tpemd).
+// Les identifiants et paramètres vivent dans src/data/affiliate.ts.
+// L'iframe isole le script du widget et remonte sa hauteur via postMessage
+// (écouté dans BaseLayout).
+import { transferWidgetSrc } from '../../data/affiliate';
+
+interface Props {
+  /** Destination pré-remplie, ex. "Essaouira". Par défaut : Marrakech. */
+  to?: string;
+  title?: string;
+}
+
+const { to, title = 'Widget de réservation de transfert' } = Astro.props;
+
+const src = to
+  ? transferWidgetSrc().replace(/([?&])to=[^&]*/, (_m, sep) => `${sep}to=${encodeURIComponent(to)}`)
+  : transferWidgetSrc();
+
+const srcdoc = `<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;padding:0;font-family:system-ui,sans-serif;overflow:hidden}</style></head><body><script async src="${src.replace(/&/g, '&amp;')}" charset="utf-8"><\/script><script>new MutationObserver(function(){document.documentElement.style.height="auto";window.parent.postMessage({tpemdHeight:document.body.scrollHeight},"*")}).observe(document.body,{childList:true,subtree:true,attributes:true})<\/script></body></html>`;
+---
+
+<div class="widget-wrap">
+  <iframe
+    class="tpemd-iframe"
+    srcdoc={srcdoc}
+    style="width:100%;border:none;min-height:200px;overflow:hidden;"
+    loading="lazy"
+    title={title}
+  ></iframe>
+</div>

@@ -1,0 +1,124 @@
+---
+import HotelLayout from '../layouts/HotelLayout.astro';
+import AffiliateLink from '../components/affiliate/AffiliateLink.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Où dormir', href: L('/where-to-stay-agadir/') },
+];
+const facts = [
+  { label: 'Hôtel plage', value: '40 €', sub: 'dès /nuit' },
+  { label: 'Aéroport → ville', value: '22 km' },
+  { label: 'Quartiers', value: '4', sub: 'principaux' },
+  { label: 'Base surf', value: 'Taghazout' },
+];
+const faqs = [
+  { q: "Quel est le meilleur quartier où loger à Agadir ?", a: "Pour la plupart des visiteurs, c'est le front de mer, la longue corniche avec sa promenade, où se trouvent la majorité des hôtels et resorts et où tout est accessible à pied. La Marina est l'alternative plus calme et plus chic ; Founty, au sud, c'est le territoire des resorts et du tout inclus ; et Talborjt, l'ancien centre-ville, le choix moins cher et plus local. Les surfeurs évitent en général Agadir et logent sur la côte, à Taghazout ou Tamraght." },
+  { q: "Faut-il loger à Agadir ou à Taghazout ?", a: "Logez à Agadir pour la plage, la promenade, les restaurants et des vacances familiales faciles ; logez à Taghazout si vous venez surfer. Taghazout est à environ 45–60 minutes sur la côte, c'est un village de surf décontracté, pas une ville-resort, ambiance totalement différente. On peut faire l'aller-retour à la journée, mais basez-vous là où vous passerez le plus de temps." },
+  { q: "Agadir est-elle bien pour des vacances en tout inclus ?", a: "Oui. Agadir est la capitale marocaine du tout inclus et des séjours en formule. La zone de Founty et certaines parties du front de mer sont bordées de grands resorts pensés exactement pour ça, avec piscines, buffets et animations. Pour défaire ses valises une fois sans penser à la logistique, c'est l'une des destinations tout inclus les plus simples du pays." },
+  { q: "Quel quartier d'Agadir est le moins cher ?", a: "Talborjt, l'ancien centre-ville à l'écart du front de mer, propose les chambres les moins chères et l'ambiance la plus locale, petits hôtels et maisons d'hôtes plutôt que resorts. Vous troquez l'emplacement en bord de plage contre le prix et une marche (ou un court taxi) jusqu'au sable. Le front de mer a aussi des options petit budget, mais c'est à Talborjt que se trouve le meilleur rapport qualité-prix." },
+];
+---
+<HotelLayout
+  lang={lang}
+  title="Où dormir à Agadir : meilleurs quartiers et secteurs (guide 2026) | AirportAGA"
+  description="Le guide honnête des quartiers d'Agadir, front de mer vs Marina vs Founty vs Talborjt, plus Taghazout pour les surfeurs. À qui convient chaque secteur, son prix, et comment s'organise le transfert aéroport."
+  eyebrow="Où dormir · Agadir"
+  h1="Où dormir à Agadir"
+  lede="Agadir n'est pas un dédale de quartiers, ce sont en réalité quatre secteurs plus une côte de surf, et bien choisir, c'est l'essentiel du travail. Voici à qui conviennent le front de mer, la Marina, Founty et Talborjt, et quand préférer Taghazout à Agadir."
+  breadcrumbs={breadcrumbs}
+  facts={facts}
+  priceFrom={40}
+  heroImage={photos['agadir-bay']}
+  heroCtaLabel="Chercher un hôtel à Agadir"
+  faqs={faqs}
+  cta={{ heading: 'Choisissez votre secteur, puis votre chambre', text: 'Comparez les hôtels du front de mer, de la Marina et de Founty avec annulation gratuite sur la plupart des réservations.', provider: 'booking', label: 'Chercher un hôtel à Agadir' }}
+>
+  <p>
+    Agadir se lit plus facilement que la plupart des villes marocaines. Reconstruite sur un plan en
+    damier après le séisme de 1960, elle n'a pas de médina où se perdre, juste une longue plage avec
+    une promenade, une marina au nord, une zone de resorts au sud, et un ancien centre-ville en retrait
+    du sable. Bien choisir le secteur, et le reste du séjour suit. Voici le tour d'horizon honnête.
+  </p>
+
+  <h2 id="front-de-mer">Le front de mer / la corniche</h2>
+  <p>
+    C'est là que loge la majorité des gens et, pour un premier séjour, là où la majorité devrait
+    loger. Le front de mer s'étire sur des kilomètres avec une large promenade, des cafés et l'essentiel
+    des hôtels et resorts d'Agadir juste derrière. On rejoint le sable, le dîner et la balade du soir
+    sans taxi. C'est le plus animé et pas le moins cher, mais c'est le choix par défaut pour des
+    vacances plage, et un transfert atteint l'aéroport en 25–35 minutes. <strong>Idéal pour :</strong>
+    premier voyage, familles, tous ceux qui veulent la plage au pas de la porte.
+  </p>
+
+  <h2 id="marina">La Marina</h2>
+  <p>
+    Le quartier de la marina, à l'extrémité nord, est plus neuf, plus soigné et plus haut de gamme, pontons à bateaux, restaurants au bord de l'eau et atmosphère plus calme que la corniche
+    principale. Il convient aux couples et aux voyageurs qui veulent quelque chose de plus chic et plus
+    tranquille tout en restant à deux pas de la plage. Moins de grands resorts ici, davantage d'hôtels
+    et d'appartements milieu-haut de gamme. <strong>Idéal pour :</strong> couples, base chic et calme,
+    ceux qui trouvent la corniche trop animée.
+  </p>
+
+  <h2 id="founty">Founty / Founti</h2>
+  <p>
+    Le sud de la baie, c'est le pays des resorts, les grands hôtels tout inclus avec piscines et
+    jardins y sont concentrés, en léger retrait d'une portion de plage plus tranquille. On est un peu
+    à l'écart de l'animation de la promenade, ce qui est le but quand on vient pour rester dans son
+    resort. C'est le cœur du tourisme en formule d'Agadir. <strong>Idéal pour :</strong> séjours tout
+    inclus, familles cherchant piscines et espace, vacances où l'on défait ses valises une fois.
+  </p>
+
+  <h2 id="talborjt">Talborjt</h2>
+  <p>
+    Talborjt est l'ancien centre-ville, en retrait du front de mer, la partie la plus locale et la
+    moins chère d'Agadir. Petits hôtels et maisons d'hôtes, cafés et commerces du quotidien, vraie vie
+    de quartier plutôt que resorts. On est à pied ou à court taxi de la plage : c'est la contrepartie
+    des prix plus bas et de l'ambiance plus authentique. <strong>Idéal pour :</strong> petits budgets,
+    longs séjours, ceux qui veulent le Maroc plutôt qu'une bulle de vacances.
+  </p>
+
+  <h2 id="taghazout">Taghazout (pour les surfeurs)</h2>
+  <p>
+    Si vous venez surfer, ne vous basez pas du tout à Agadir. Les logements de surf sont sur la côte, à
+    Taghazout et Tamraght, camps de surf et appartements plutôt que resorts, à 45–60 minutes au nord.
+    C'est une ambiance de village détendue, construite autour des spots, au rythme totalement différent
+    de la corniche-resort. <strong>Idéal pour :</strong> surfeurs, nomades numériques, tous ceux qui
+    préfèrent la côte tranquille à l'expérience plage-resort. Voyez notre guide
+    <a href={L('/taghazout-surf-camps/')}>camps de surf de Taghazout</a> pour ce qu'inclut un camp.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">Repère rapide</span>
+    Premier séjour plage → la corniche. Plus calme et plus chic → la Marina. Tout inclus en famille →
+    Founty. Pas cher et local → Talborjt. Venu pour surfer → Taghazout, sur la côte.
+  </div>
+
+  <h2 id="aeroport">Comment s'organise le transfert aéroport</h2>
+  <p>
+    Quel que soit votre choix, l'aéroport est toujours à 22 km, 25–40 minutes jusqu'à la baie, plus
+    long jusqu'à Taghazout. Pas de train ni de bus utile : prévoyez un grand taxi ou un transfert
+    réservé jusqu'à votre secteur. Connaître le nom de votre quartier (Founty, la marina, la corniche)
+    évite aussi qu'un chauffeur prétende que c'est « beaucoup plus loin ». Voyez la route
+    <a href={L('/agadir-airport-to-agadir/')}>aéroport vers Agadir</a> pour les tarifs, ou, s'il vous
+    faut juste un lit pour un vol matinal, notre page
+    <a href={L('/agadir-airport-hotels/')}>hôtels près de l'aéroport</a>.
+  </p>
+
+  <div class="disclosure-inline">
+    Certains liens ici sont des liens d'affiliation : si vous réservez via ces liens, nous pouvons
+    percevoir une petite commission, sans surcoût pour vous. Cela ne change ni les prix affichés ni nos
+    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
+  </div>
+
+  <p>
+    Prêt à affiner ? Pour le tout inclus, voyez les
+    <a href={L('/agadir-all-inclusive-hotels/')}>hôtels tout inclus d'Agadir</a> ; pour la côte de
+    surf, rendez-vous sur <a href={L('/taghazout-surf-camps/')}>les camps de surf de Taghazout</a>.
+  </p>
+</HotelLayout>

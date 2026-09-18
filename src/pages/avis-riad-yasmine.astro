@@ -1,0 +1,83 @@
+---
+import HotelReviewLayout from '../layouts/HotelReviewLayout.astro';
+import { getLocalizedPath, useTranslations } from '../i18n';
+// Import images
+import heroImg from '../assets/img/placeholder.png';
+import bodyImg from '../assets/img/placeholder.png';
+import { Image } from 'astro:assets';
+
+const lang = 'fr';
+const t = useTranslations(lang);
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: t('nav.home'), href: L('/') },
+  { name: t('nav.hotels'), href: L('/best-hotels-agadir/') },
+  { name: 'Riad Villa Blanche', href: L('/riad-villa-blanche-review/') },
+];
+---
+<HotelReviewLayout
+  lang={lang}
+  title={`Riad Villa Blanche. Avis Hôtel Boutique | AirportAGA`}
+  description={`Découvrez pourquoi le Riad Villa Blanche est considéré comme le boutique-hôtel le plus charmant d'Agadir.`}
+  h1={`Riad Villa Blanche. Avis Hôtel Boutique`}
+  subtitle={`Le boutique-hôtel le plus romantique et charmant d'Agadir`}
+  breadcrumbs={breadcrumbs}
+  brand={`Riad Villa Blanche`}
+  rating={4.8}
+  verdict={`Un chef-d'œuvre absolu de l'architecture maroco-andalouse.`}
+  priceAvg={`110€ - 190€ / nuit`}
+  address={`Secteur 50, Baie des Palmiers, Agadir 80000`}
+  stars={`★★★★ Boutique`}
+  ratingText={`Superbe`}
+  heroImage={heroImg}
+  ctaLink="https://www.booking.com/hotel/ma/riad-villa-blanche.fr.html"
+  ctaLabel={`Voir les disponibilités`}
+  faqs={[{"q": "Le Riad Villa Blanche est-il sur la plage ?", "a": "Non, il est situé légèrement en retrait (environ 10 minutes à pied de la plage), ce qui garantit son atmosphère paisible."}, {"q": "Le Riad sert-il de l'alcool ?", "a": "Oui, il y a un bar élégant et l'alcool est servi au restaurant."}]}
+>
+  <div class="content-block">
+    <h2>Présentation</h2>
+    <p>Agadir est connue pour ses énormes resorts, ce qui fait du Riad Villa Blanche une perle rare. Ce petit hôtel intime offre un rythme de vie totalement différent. À l'écart des immenses clubs, il présente une magnifique architecture, une intimité inégalée et une cour sereine qui semble à mille lieues de la ville animée.</p>
+    
+    <h3>Pourquoi choisir le Riad Villa Blanche ?</h3>
+    <ul class="pros-list">
+      <li>Atmosphère incroyablement romantique et intime (28 chambres seulement).</li>
+      <li>Architecture et décoration maroco-andalouse exquises.</li>
+      <li>Restaurant gastronomique franco-marocain exceptionnel sur place.</li>
+      <li>Spa privé réputé offrant des expériences de hammam authentiques.</li>
+      <li>Service personnalisé et attentionné.</li>
+    </ul>
+
+    <h3>Les Chambres & Suites</h3>
+    <p>Chacune des 28 chambres est décorée de manière unique avec un artisanat marocain exquis. Elles s'articulent autour d'une cour centrale, offrant un sanctuaire frais et calme.</p>
+    
+    <div style="margin: 2rem 0; border-radius: 8px; overflow: hidden;">
+      <Image src={bodyImg} alt={`Riad Villa Blanche`} widths={[768, 1200]} sizes="(max-width: 768px) 100vw, 800px" />
+    </div>
+
+    <h2>Rejoindre le Riad depuis l'Aéroport</h2>
+    <ol class="steps-list">
+      <li>Arrivez à l'aéroport d'Agadir Al Massira.</li>
+      <li>Prenez un transfert privé (recommandé en raison de l'emplacement discret).</li>
+      <li>Roulez 30 minutes vers le secteur de la Baie des Palmiers.</li>
+      <li>Franchissez les portes pour entrer dans une oasis paisible.</li>
+    </ol>
+
+    <h2>Équipements & Services</h2>
+    <div class="features-grid">
+      <div class="feature-item"><strong>Piscine Intime</strong><p>Une belle piscine centrale calme entourée de palmiers.</p></div>
+      <div class="feature-item"><strong>Restaurant Gastronomique</strong><p>L'une des tables les mieux notées d'Agadir.</p></div>
+      <div class="feature-item"><strong>Spa Authentique</strong><p>Piscine intérieure chauffée, hammam et massages.</p></div>
+      <div class="feature-item"><strong>Échelle Boutique</strong><p>Seulement 28 chambres pour une intimité totale.</p></div>
+    </div>
+
+    <h2>Idéal pour les lunes de miel et les escapades romantiques</h2>
+    <p>Si les grandes files de buffet et les équipes d'animation bruyantes sont votre cauchemar, le Riad Villa Blanche est votre rêve. Le refuge parfait pour les couples.</p>
+
+    <div class="promo-box">
+      <h3>Vivez le Charme Authentique</h3>
+      <p>Les hôtels boutiques de ce niveau se remplissent rapidement. Réservez vos dates.</p>
+      <a class="btn btn--green" href="https://www.booking.com/hotel/ma/riad-villa-blanche.fr.html" rel="nofollow sponsored" target="_blank">{`Voir les disponibilités`}</a>
+    </div>
+  </div>
+</HotelReviewLayout>

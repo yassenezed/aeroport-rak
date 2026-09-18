@@ -1,0 +1,92 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
+import FaqSection from '../components/ui/FaqSection.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const title = "Guide Esim Maroc Agadir 2026 | Astuces & Incontournables";
+const description = "Planifiez votre visite à Esim Maroc à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!";
+
+const faqs = [
+  { q: 'Puis-je acheter une eSIM à l\'Aéroport d\'Agadir ?', a: 'Des cartes SIM physiques sont disponibles à l\'aéroport, mais acheter une eSIM pour le Maroc en ligne avant votre voyage vous permet de vous connecter dès l\'atterrissage sans faire la queue.' },
+  { q: 'Quelle est la meilleure eSIM pour le Maroc ?', a: 'La meilleure eSIM dépend de vos besoins en données. Des fournisseurs comme Holafly ou Airalo offrent d\'excellents forfaits utilisant les réseaux locaux comme Maroc Telecom et Orange.' },
+  { q: 'Mon WhatsApp fonctionnera-t-il avec une eSIM marocaine ?', a: 'Oui ! Lorsque vous installez une eSIM pour les données, vous pouvez conserver votre numéro WhatsApp d\'origine pour les messages et les appels.' }
+];
+---
+<BaseLayout keywords="Esim Maroc Agadir, que faire à Agadir, attractions Agadir"  title={title} description={description} lang={lang}>
+  <section class="hero home-hero hero--photo">
+    <div class="hero-bg"><Image src={photos['agadir-bay']} alt="Agadir" widths={[768, 1280, 1920]} sizes="100vw" loading="eager" fetchpriority="high" /></div>
+    <div class="container hero-inner">
+      <Breadcrumbs items={[{ name: 'Accueil', href: L('/') }, { name: 'eSIM Maroc', href: L('/esim-morocco/') }]} />
+      <span class="eyebrow">Internet Mobile</span>
+      <h1 style="color:white; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">La Meilleure eSIM pour le Maroc</h1>
+      <p class="lede" style="color:white; text-shadow: 0 1px 3px rgba(0,0,0,0.5);">Accès Internet Instantané à l'Aéroport d'Agadir Al Massira</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <article class="prose">
+        <h2>Évitez les files d'attente pour les cartes SIM à l'Aéroport d'Agadir</h2>
+        <p>Vous arrivez à <strong>l'Aéroport Agadir Al Massira</strong> ? La dernière chose que vous voulez faire après un long vol est de faire la queue pour acheter une carte SIM physique locale. En achetant une <strong>eSIM pour le Maroc</strong> avant votre voyage, vous pouvez vous connecter à internet dès l'atterrissage de votre avion.</p>
+        <p>Nous nous sommes associés aux meilleurs fournisseurs mondiaux d'eSIM pour vous offrir les forfaits internet mobile les plus fiables et les plus abordables pour votre séjour à Agadir et au-delà.</p>
+        
+        <div class="widget-container" style="margin: 2rem 0; text-align: center; background: #fff; padding: 1rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+          <h3 style="margin-bottom: 1rem;">Comparez et Achetez votre eSIM Maroc</h3>
+          <!-- English Fallback Widget -->
+                    <div class="widget-wrap">
+            <iframe
+              class="tpemd-iframe"
+              srcdoc='<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;padding:0;font-family:system-ui,sans-serif;overflow:hidden}</style></head><body><script async src="https://tpemd.com/content?trs=554574&amp;shmarker=697149&amp;locale=en&amp;country=Morocco&amp;powered_by=true&amp;color_button=%23f2685f&amp;color_focused=%23f2685f&amp;secondary=%23FFFFFF&amp;dark=%2311100f&amp;light=%23FFFFFF&amp;special=%23C4C4C4&amp;border_radius=5&amp;plain=false&amp;no_labels=true&amp;promo_id=8588&amp;campaign_id=541" charset="utf-8"><\/script><script>new MutationObserver(function(){document.documentElement.style.height="auto";window.parent.postMessage({tpemdHeight:document.body.scrollHeight},"*")}).observe(document.body,{childList:true,subtree:true,attributes:true})<\/script></body></html>'
+              style="width:100%;border:none;min-height:200px;overflow:hidden;"
+              loading="lazy"
+              title="Transfer booking widget"
+            ></iframe>
+          </div>
+        </div>
+
+        <h2>Pourquoi choisir une eSIM pour votre voyage à Agadir ?</h2>
+        <ul>
+          <li><strong>Activation instantanée :</strong> Pas besoin d'attendre la livraison ou de trouver un magasin à <em>l'Aéroport Agadir Al Massira</em>. Scannez le code QR et vous êtes connecté.</li>
+          <li><strong>Gardez votre numéro :</strong> Utilisez votre WhatsApp principal et recevez des SMS sur votre numéro habituel tout en utilisant l'eSIM pour les données au Maroc.</li>
+          <li><strong>Économique :</strong> Évitez les frais d'itinérance (roaming) exorbitants de votre opérateur réseau national.</li>
+          <li><strong>Couverture :</strong> Profitez d'une couverture 4G/LTE rapide à travers Agadir, Taghazout, Marrakech et le reste du Maroc.</li>
+        </ul>
+
+        <h2>Comment ça marche à l'Aéroport Agadir Al Massira</h2>
+        <p>Une fois que vous avez acheté votre eSIM en utilisant le widget ci-dessus, vous recevrez un e-mail avec un code QR. Nous recommandons de scanner ce code QR pendant que vous êtes encore chez vous, connecté au WiFi. L'eSIM s'activera automatiquement et se connectera au réseau local marocain (comme Maroc Telecom, Inwi ou Orange) dès que vous désactiverez le mode avion lors de votre atterrissage à l'Aéroport d'Agadir.</p>
+        
+        <p>Si vous cherchez également un moyen de transport depuis l'aéroport, consultez notre guide sur les <a href={L('/agadir-airport-transfers/')}>transferts à l'aéroport d'Agadir</a> ou sur la <a href={L('/agadir-airport-car-rental/')}>location de voiture à Agadir</a>.</p>
+
+        <h2>Mon téléphone est-il compatible eSIM ?</h2>
+        <p>Avant l'achat, assurez-vous que votre smartphone supporte la technologie eSIM et qu'il est débloqué tout opérateur. La plupart des appareils récents sont compatibles :</p>
+        <ul>
+          <li><strong>Apple :</strong> Séries iPhone XS, XR, 11, 12, 13, 14, 15 et plus récents.</li>
+          <li><strong>Samsung :</strong> Séries Galaxy S20, S21, S22, S23, S24, et modèles Z Flip/Fold.</li>
+          <li><strong>Google :</strong> Séries Pixel 3, 4, 5, 6, 7, 8 et plus récents.</li>
+          <li><strong>Autres :</strong> Modèles récents de Motorola, Xiaomi, Huawei et OnePlus.</li>
+        </ul>
+        
+        <h2>Guide d'Installation</h2>
+        <ol>
+          <li><strong>Achetez :</strong> Sélectionnez et achetez votre forfait de données via le widget ci-dessus.</li>
+          <li><strong>Recevez le QR Code :</strong> Consultez vos e-mails pour obtenir le code QR d'activation (livraison instantanée).</li>
+          <li><strong>Scannez & Installez :</strong> Sur votre téléphone, allez dans Réglages > Données cellulaires > Ajouter une eSIM, puis scannez le QR code. Nous recommandons de le faire chez vous en WiFi avant le vol.</li>
+          <li><strong>Activez à l'Aéroport d'Agadir :</strong> À l'atterrissage, activez simplement le profil eSIM et activez l'option "Données à l'étranger" (Roaming) pour vous connecter instantanément au réseau marocain.</li>
+        </ol>
+      </article>
+    </div>
+  </section>
+  
+  <section class="section section-alt">
+    <div class="container container-narrow">
+      <h2 style="margin-bottom:1rem">eSIM au Maroc : Questions fréquentes</h2>
+      <FaqSection faqs={faqs} />
+    </div>
+  </section>
+</BaseLayout>

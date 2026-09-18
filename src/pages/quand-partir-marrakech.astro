@@ -1,0 +1,103 @@
+---
+import GuideLayout from '../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Quand partir à Agadir', href: L('/agadir-weather-when-to-visit/') },
+];
+const toc = [
+  { label: 'Le climat en bref', id: 'climat' },
+  { label: 'Saison par saison', id: 'saisons' },
+  { label: 'La meilleure période', id: 'meilleure' },
+  { label: 'Surf ou soleil', id: 'surf-soleil' },
+  { label: 'La mer et les bagages', id: 'mer' },
+];
+const faqs = [
+  { q: 'Quel temps fait-il à Agadir ?', a: 'Doux et ensoleillé une grande partie de l’année. Agadir se niche dans une baie atlantique abritée, avec des étés chauds et secs et des hivers cléments, environ 20–22°C l’après-midi en janvier, autour de 27–28°C en été, et très peu de pluie. L’Atlantique garde la côte plus fraîche et plus venteuse que l’intérieur brûlant, ce qui en fait justement une destination de soleil hivernal.' },
+  { q: 'Quelle est la meilleure période pour visiter Agadir ?', a: 'Le printemps (avril–juin) et l’automne (septembre–octobre) sont le créneau idéal : chaud, ensoleillé et pas trop fréquenté. L’hiver (novembre–mars) est la saison classique du soleil d’hiver, doux, sec et lumineux, même si la mer est fraîche. Le plein été est chaud mais adouci par la brise marine. Choisissez selon votre envie : confort plage, surf ou soleil d’hiver pas cher.' },
+  { q: 'La mer est-elle assez chaude pour se baigner à Agadir ?', a: 'On peut se baigner, mais elle n’est jamais tiède, c’est l’Atlantique, pas la Méditerranée. La température de l’eau va d’environ 17–18°C en hiver à 21–22°C en fin d’été. Beaucoup se baignent toute l’année, mais l’entrée reste fraîche. Les surfeurs portent une combinaison 3/2 toute la saison.' },
+  { q: 'Pleut-il beaucoup à Agadir ?', a: 'Très peu. Agadir ne compte qu’une poignée de jours de pluie par an, presque tous entre novembre et mars, et il s’agit le plus souvent d’averses brèves plutôt que de déluges. Les étés sont quasiment secs. Cette régularité fait une bonne part du charme.' },
+];
+---
+<GuideLayout keywords="Quand Partir Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Quand Partir Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Quand Partir à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Agadir · Météo"
+  h1="Météo d’Agadir et meilleure période pour partir"
+  lede="Agadir est douce, sèche et ensoleillée presque toute l’année, d’où l’afflux des charters de soleil hivernal et des surfeurs. Voici le climat saison par saison, la meilleure période selon votre voyage, et ce qu’il faut vraiment emporter."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['best-time-to-visit-agadir']}
+  toc={toc}
+  faqs={faqs}
+  updated="juin 2026"
+
+  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+>
+  <p>
+    Agadir doit toute son économie touristique à sa météo. Blottie dans une baie abritée de l’Atlantique,
+    elle connaît des étés chauds et secs, des hivers exceptionnellement doux et très peu de pluie, ce
+    soleil régulier qui remplit les charters d’hiver venus de l’Europe du Nord grise. L’Atlantique est
+    l’autre moitié de l’histoire : le même courant frais et la même brise qui rendent la côte agréable en
+    été gardent la mer vive et alimentent la saison de surf. Voici le détail au fil de l’année.
+  </p>
+
+  <h2 id="climat">Le climat en bref</h2>
+  <p>
+    Doux, lumineux et sec. En hiver, l’après-midi tourne autour de 20–22°C avec des soirées fraîches ; en
+    été, le mercure atteint 27–28°C sur la côte (et bien plus juste à l’intérieur). La pluie est rare, quelques jours, presque tous entre novembre et mars, et l’humidité faible. Le trait marquant est la
+    brise marine de l’après-midi venue de l’Atlantique, qui casse la chaleur estivale et explique pourquoi
+    la côte d’Agadir reste agréable quand l’intérieur, vers Taroudant, cuit.
+  </p>
+
+  <h2 id="saisons">Saison par saison</h2>
+  <ul>
+    <li><strong>Hiver (nov.–mars)</strong>, la saison du soleil d’hiver. Doux, sec et ensoleillé pour des standards européens, maximales autour de 20–22°C, nuits fraîches. Idéal pour visiter et lézarder ; la mer est fraîche mais les spots tournent à plein pour les surfeurs.</li>
+    <li><strong>Printemps (avr.–juin)</strong>, sans doute la meilleure période polyvalente. Chaud, ensoleillé, confortable pour la plage, et pas encore au pic de foule ni de chaleur.</li>
+    <li><strong>Été (juil.–août)</strong>, chaud et fréquenté, mais la brise marine garde la côte plus supportable que l’intérieur. Pleine saison des vacances en famille ; la mer est au plus chaud.</li>
+    <li><strong>Automne (sept.–oct.)</strong>, mer chaude, temps stable et foule qui s’éclaircit. Excellent pour la plage comme pour le début de la saison de surf.</li>
+  </ul>
+
+  <h2 id="meilleure">La meilleure période</h2>
+  <p>
+    Il n’y a pas de mauvaise période, seulement la bonne pour votre voyage. Pour le confort général,
+    venez au printemps (avril–juin) ou au début de l’automne (septembre–octobre) : chaud, ensoleillé,
+    foule gérable. Pour du soleil fiable et bon marché quand il fait froid chez vous, la fenêtre
+    novembre–mars est toute la raison d’être d’Agadir, mais ne comptez pas nager longtemps. Pour les
+    familles qui veulent la mer la plus chaude et l’animation des plages, le plein été fait l’affaire, la
+    brise rendant la côte plus agréable que les chiffres ne le laissent croire. Quoi qu’il en soit, cela
+    se prépare en réglant vos <a href={L('/flights-to-agadir/')}>vols pour Agadir</a>, les prix varient
+    fort selon la saison.
+  </p>
+
+  <h2 id="surf-soleil">Surf ou soleil</h2>
+  <p>
+    Les deux grandes raisons de venir tirent dans des sens un peu opposés. Les amateurs de bronzage et
+    les familles veulent le temps chaud et stable de la fin du printemps au début de l’automne, quand la
+    mer est la plus douce. Les surfeurs veulent l’autre bout de l’année : les houles atlantiques qui
+    arrivent de septembre à avril sont ce qui réveille les spots sur la côte. Elles se recoupent aux
+    mi-saisons, octobre et mars offrent à la fois des journées chaudes et des vagues surfables. Si vous
+    venez pour les vagues, lisez le <a href={L('/surfing-taghazout-guide/')}>guide du surf à Taghazout</a>.
+  </p>
+
+  <h2 id="mer">La mer et que mettre dans la valise</h2>
+  <p>
+    Ici l’Atlantique se baigne mais ne se réchauffe jamais vraiment, environ 17–18°C en hiver, jusqu’à
+    21–22°C en fin d’été. L’entrée reste toujours vive. Préparez-vous au soleil et à la brise : couches
+    légères, maillot, crème solaire et une veste ou un pull léger pour les soirées fraîches, même en été.
+    En hiver, prévoyez plus chaud pour la nuit. Les surfeurs tablent sur une combinaison 3/2 toute
+    l’année, facile à louer sur la côte.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">Le verdict express</span>
+    Meilleure période globale : avril–juin ou septembre–octobre. Soleil le moins cher : novembre–mars
+    (mer fraîche). Baignade la plus chaude : juillet–août. Meilleur compromis surf-et-soleil : octobre et
+    mars.
+  </div>
+</GuideLayout>

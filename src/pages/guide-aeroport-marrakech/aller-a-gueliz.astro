@@ -1,0 +1,116 @@
+---
+import GuideLayout from '../../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../../i18n';
+import { photos } from '../../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: "Guide de l'aéroport", href: L('/agadir-airport-guide/') },
+  { name: 'Aller à Taghazout', href: L('/agadir-airport-guide/airport-to-taghazout-options/') },
+];
+const toc = [
+  { label: 'La distance et le trajet', id: 'trajet' },
+  { label: 'Transfert réservé', id: 'transfert' },
+  { label: 'Grand taxi', id: 'grand-taxi' },
+  { label: 'Voiture de location', id: 'location' },
+  { label: 'Le casse-tête des adresses', id: 'adresses' },
+  { label: 'Quelle option choisir', id: 'choisir' },
+];
+const faqs = [
+  { q: "Combien de temps pour aller de l'aéroport d'Agadir à Taghazout ?", a: "Comptez 45 minutes à une heure pour une quarantaine de kilomètres : on contourne Agadir avant de prendre la route côtière vers le nord. Le vendredi après-midi et en fin de journée d'été, la sortie d'Agadir se charge et on peut perdre dix à quinze minutes de plus." },
+  { q: "Combien coûte un taxi de l'aéroport à Taghazout ?", a: "Un grand taxi depuis la station de l'aéroport tourne autour de 300 à 400 MAD en journée pour le trajet privatif vers Taghazout, davantage le soir. Fixez le prix avant de charger les bagages. Un transfert réservé à l'avance se situe dans la même fourchette, mais avec un prix bloqué et un chauffeur qui vous attend." },
+  { q: "Y a-t-il un bus de l'aéroport d'Agadir à Taghazout ?", a: "Non, rien de direct ni d'utile. Il n'existe pas de navette d'aéroport vers la côte du surf, et bricoler des bus locaux avec une planche et des bagages n'a aucun sens. C'est grand taxi, transfert réservé ou voiture de location." },
+  { q: "Vaut-il mieux louer une voiture pour Taghazout ?", a: "Si vous comptez surfer plusieurs spots, descendre à Tamraght ou monter vers Imsouane, une voiture se justifie. Pour un séjour posé dans un seul camp ou appartement, un transfert à l'aller et au retour revient souvent moins cher et plus simple que la location plus le stationnement." },
+];
+---
+<GuideLayout keywords="Aller A Taghazout Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Aller A Taghazout Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Aller A Taghazout à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Guide de l'aéroport · Taghazout"
+  h1="De l'aéroport d'Agadir à Taghazout"
+  lede="Quarante kilomètres de côte séparent l'AGA de Taghazout, et il n'y a ni train ni bus pour les couvrir. Voici les trois vraies options, leur prix honnête, et celle qui convient à votre séjour."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['taghazout']}
+  toc={toc}
+  faqs={faqs}
+  updated="juin 2026"
+  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+>
+  <p>
+    Beaucoup de ceux qui atterrissent à l'AGA ne s'arrêtent pas à Agadir : ils filent au nord, vers
+    Taghazout et sa côte de surf. Le trajet est simple, mais comme il n'y a ni train ni bus d'aéroport
+    utile, mieux vaut décider avant l'atterrissage comment vous allez le faire, surtout sur un charter
+    qui se pose à la nuit tombée.
+  </p>
+
+  <h2 id="trajet">La distance et le trajet</h2>
+  <p>
+    Taghazout est à une quarantaine de kilomètres au nord de l'aéroport, soit 45 minutes à une heure de
+    route. On contourne d'abord Agadir, puis on prend la route côtière qui longe l'Atlantique en passant
+    par Aourir et Tamraght. C'est une jolie route, sans difficulté, mais la sortie d'Agadir se charge le
+    vendredi après-midi et aux heures de pointe d'été : prévoyez un peu de marge si vous avez un créneau
+    de check-in serré.
+  </p>
+
+  <h2 id="transfert">Transfert réservé</h2>
+  <p>
+    C'est l'option la plus sereine, et de loin la plus sensée pour une arrivée tardive. Vous réservez à
+    l'avance, un chauffeur nommé attend aux arrivées avec votre nom, vous écrit dès l'atterrissage, et le
+    prix est bloqué : pas de négociation à la station après un vol fatigant. C'est aussi le choix le plus
+    fiable pour atteindre un camp ou un appartement dont l'adresse ne veut rien dire au GPS. Notre
+    <a href={L('/agadir-airport-to-taghazout/')}>page transfert aéroport-Taghazout</a> donne les prix et
+    les détails du trajet.
+  </p>
+
+  <h2 id="grand-taxi">Grand taxi</h2>
+  <p>
+    Les grands taxis attendent à la station devant les arrivées. Pour Taghazout, comptez environ 300 à
+    400 MAD en journée pour la course privative, davantage le soir, et il faut <em>fixer le prix avant</em>
+    de charger les bagages, sans quoi la discussion à l'arrivée tourne rarement à votre avantage. Il n'y a
+    ni Uber ni Careem à Agadir, donc pas d'appli pour comparer : c'est la station ou un transfert réservé.
+    Le <a href={L('/agadir-airport-taxi/')}>guide du taxi aéroport</a> détaille les justes tarifs par
+    destination.
+  </p>
+
+  <h2 id="location">Voiture de location</h2>
+  <p>
+    Une vingtaine de comptoirs de location se trouvent dans le hall des arrivées. La voiture se justifie si
+    vous voulez enchaîner les spots. Tamraght, Imsouane, Paradise Valley, plutôt que de rester dans un
+    seul camp. Sachez seulement qu'on roule à droite, que les contrôles de gendarmerie sont fréquents
+    (gardez vos papiers sur vous) et que le stationnement à Taghazout même est étroit en haute saison.
+    Voyez <a href={L('/agadir-airport-car-rental/')}>la location à l'AGA</a> pour le détail.
+  </p>
+
+  <h2 id="adresses">Le casse-tête des adresses</h2>
+  <p>
+    C'est le vrai piège de la côte du surf : beaucoup de camps et d'appartements n'ont pas d'adresse
+    exploitable, juste un point sur une carte ou un nom de quartier. D'où l'intérêt d'arriver connecté, une SIM ou une eSIM dès l'atterrissage, pour partager votre localisation au chauffeur. Avec un
+    transfert réservé, l'hébergeur a souvent déjà transmis le point exact ; avec un grand taxi, soyez prêt
+    à montrer la carte et à guider sur les derniers mètres.
+  </p>
+
+  <h2 id="choisir">Quelle option choisir</h2>
+  <p>
+    Pour un séjour posé dans un camp, un aller-retour en transfert réservé est généralement le meilleur
+    rapport sérénité-prix. Pour un vol de jour et un budget serré, le grand taxi fait l'affaire si vous
+    fixez le prix d'abord. Et pour explorer la côte au-delà de Taghazout, prenez une voiture dès
+    l'aéroport. Si vous venez pour les vagues, le <a href={L('/surfing-taghazout-guide/')}>guide du surf à
+    Taghazout</a> complète le tableau côté spots et niveaux.
+  </p>
+
+  <div class="disclosure-inline">
+    Certains liens de cette page sont des liens d'affiliation : si vous réservez via eux, nous pouvons
+    percevoir une petite commission, sans surcoût pour vous. Cela ne change jamais les prix affichés ni nos
+    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
+  </div>
+
+  <div class="callout">
+    <span class="callout-label">À régler avant l'atterrissage</span>
+    Le point GPS exact de votre camp enregistré hors ligne · une SIM ou eSIM pour écrire au chauffeur · le
+    juste prix du taxi en tête, ou un transfert déjà réservé si vous arrivez de nuit.
+  </div>
+</GuideLayout>

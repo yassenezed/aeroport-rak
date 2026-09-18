@@ -1,0 +1,133 @@
+---
+import GuideLayout from '../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: "Guide de l'aéroport", href: L('/agadir-airport-guide/') },
+];
+const toc = [
+  { label: 'Les arrivées', id: 'arrivees' },
+  { label: 'Rejoindre la ville', id: 'ville' },
+  { label: 'Espèces et SIM', id: 'especes-sim' },
+  { label: "Le bus, et pourquoi on l'évite", id: 'pas-de-bus' },
+  { label: 'Parking & prise en charge', id: 'parking' },
+  { label: 'Monter sur la côte', id: 'cote' },
+];
+const faqs = [
+  { q: "Quel est le nom et le code de l'aéroport d'Agadir ?", a: "Aéroport Agadir Al Massira, code IATA AGA, code OACI GMAD. C'est le seul aéroport commercial desservant Agadir et la région Souss-Massa, à environ 22 km du centre-ville, près de Temsia." },
+  { q: "Combien de temps pour passer les formalités à l'arrivée ?", a: "En général rapide. Al Massira est un terminal unique et discret, et le contrôle des passeports est rarement un goulot d'étranglement, sauf si deux charters du soir atterrissent ensemble. Bagages, contrôle et sortie prennent en général 30 à 45 minutes." },
+  { q: "Y a-t-il du Wi-Fi gratuit et des distributeurs à l'aéroport d'Agadir ?", a: "Oui. Le hall d'arrivée compte des distributeurs de deux ou trois banques marocaines et des kiosques SIM Maroc Telecom, Orange et inwi, ainsi qu'un café ou deux. Retirez des dirhams ici avant de partir, la côte, surtout, fonctionne au liquide." },
+  { q: "Y a-t-il un train ou un bus vers la ville depuis l'aéroport ?", a: "Pas de train, mais il y a un bus : ALSA fait rouler une navette d'aéroport vers le centre d'Agadir (à peu près toutes les heures en journée, environ 50 minutes, autour de 50 MAD), plus un trajet local moins cher via la ligne 37 jusqu'à Inezgane et la ligne 98 vers la ville. Les deux ne rejoignent que le centre, de jour ; pour un hôtel, une arrivée du soir ou la côte, la plupart des gens partent encore en grand taxi, en transfert réservé ou en voiture de location." },
+];
+---
+<GuideLayout keywords="Guide Aeroport Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Guide Aeroport Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Guide Aeroport à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Agadir Al Massira · AGA"
+  h1="Le guide de l'aéroport Agadir Al Massira"
+  lede="Tout pour une arrivée sereine à l'AGA, à quoi ressemblent les arrivées, comment partir, où prendre des espèces et une SIM, et ce que les nouveaux venus auraient aimé savoir."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['agadir-bay']}
+  toc={toc}
+  faqs={faqs}
+  updated="juin 2026"
+  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+>
+  <p>
+    Agadir Al Massira (AGA) est le troisième aéroport du Maroc, et après la cohue de Marrakech il paraît
+    presque endormi. C'est un terminal unique et moderne qui accueille surtout des vols charters et
+    low-cost du Royaume-Uni, de France, de Belgique et de Scandinavie, donc beaucoup d'arrivées en
+    soirée, et beaucoup de voyageurs qui sortent fatigués dans un endroit sans train et avec un bus de
+    ville qui ne circule qu'en journée. Rien de tout cela n'est un problème une fois qu'on sait comment
+    l'aéroport fonctionne. Voici le pas-à-pas.
+  </p>
+
+  <h2 id="arrivees">Les arrivées : à quoi s'attendre</h2>
+  <p>
+    Les vols internationaux partagent un seul groupe de tapis à bagages, et le contrôle des passeports
+    est rarement le goulot d'étranglement des grands aéroports marocains, sauf si deux charters du
+    soir atterrissent à quelques minutes d'écart, auquel cas la file se forme vite. Rien d'exotique à
+    remplir ; un passeport suffit pour la plupart des nationalités en séjour touristique. Récupérez vos
+    bagages et sortez directement dans un hall d'arrivée modeste. En chemin, vous passez les
+    distributeurs, les kiosques SIM et les comptoirs de location, puis les portes s'ouvrent sur la
+    station de taxis. L'endroit se vide vite une fois un vol passé.
+  </p>
+
+  <h2 id="ville">Rejoindre la ville</h2>
+  <p>
+    L'aéroport est à environ 22 km du centre d'Agadir, un vrai trajet de 25 à 40 minutes, pas le court
+    saut de certains aéroports urbains. Vous avez trois options sensées, et le bon choix dépend de
+    votre destination et de l'heure d'arrivée :
+  </p>
+  <ul>
+    <li><strong>Grand taxi</strong> à la station devant les arrivées, idéal pour le centre d'Agadir si vous fixez le prix d'abord (environ 200–250 MAD en journée). Voyez notre <a href={L('/agadir-airport-taxi/')}>guide du taxi aéroport</a> pour les justes tarifs.</li>
+    <li><strong>Transfert réservé</strong>, un chauffeur nommé, un prix fixe, et le seul choix sensé pour les arrivées tardives ou les adresses non signalées des villages de surf.</li>
+    <li><strong>Voiture de location</strong>, utile pour explorer le Souss, Paradise Valley ou plusieurs spots ; une vingtaine de comptoirs dans le hall. Voyez <a href={L('/agadir-airport-car-rental/')}>la location à l'AGA</a>.</li>
+  </ul>
+
+  <h2 id="especes-sim">Espèces et SIM avant de quitter le hall</h2>
+  <p>
+    Le dirham est une monnaie fermée, impossible de l'acheter avant d'arriver, donc les distributeurs
+    de l'arrivée sont votre première tâche. Retirez 500 à 1 000 MAD pour la course, un pourboire et
+    votre première journée ; préférez une machine d'une vraie banque à un guichet de change isolé, dont
+    les taux sont moins bons. Pour les données, les kiosques Maroc Telecom, Orange et inwi vendent des
+    SIM touristiques sur présentation du passeport en quelques minutes, souvent autour de 50 MAD avec
+    un forfait généreux, ou arrivez avec une eSIM déjà chargée. Être connecté dès l'atterrissage compte
+    plus ici que dans une ville compacte : il faut parfois écrire à un chauffeur ou partager le point
+    d'un appartement de Taghazout sans vraie adresse.
+  </p>
+
+  <h2 id="pas-de-bus">Le bus, et pourquoi la plupart l'évitent</h2>
+  <p>
+    Il y a désormais un bus, deux options, même. ALSA fait rouler une navette d'aéroport vers le centre
+    d'Agadir, à peu près toutes les heures en journée, environ 50 minutes, pour quelque 50 MAD. Moins
+    cher encore : la ligne ALSA 37 (environ 8,5 MAD) part de la route principale, à 5–10 minutes à pied
+    du terminal, rejoint Inezgane où l'on prend la ligne 98 (environ 3,5 MAD) jusqu'à Agadir, environ
+    1 h 15 en tout. Si vous voyagez léger, atterrissez de jour et allez au centre, le bus est une vraie
+    option économique.
+  </p>
+  <p>
+    Mais il ne rejoint que le centre d'Agadir, pas la porte de votre hôtel, pas la côte du surf, et il
+    se raréfie ou s'arrête pour les charters du soir. Avec des bagages, en famille, sur un vol du soir ou
+    pour un hôtel hors du centre, le bus cesse d'être pratique et un grand taxi ou un transfert réservé
+    devient le choix plus simple. Si le budget compte mais que le bus ne colle pas à votre arrivée,
+    partager un grand taxi ou un transfert partagé avec d'autres voyageurs allant dans votre direction
+    est la solution la moins chère ensuite. Le tableau complet est sur la
+    <a href={L('/agadir-airport-guide/bus/')}>page du bus de l'aéroport</a>.
+  </p>
+
+  <h2 id="parking">Parking & prise en charge</h2>
+  <p>
+    Si quelqu'un vient vous chercher, un parking se trouve juste devant le terminal, avec une zone
+    courte durée pour les prises en charge et déposes, quelques minutes gratuites, les attentes plus
+    longues à un tarif horaire modéré. Pour les départs, c'est un petit terminal : pas besoin du
+    tampon de deux heures d'un grand hub ; arriver 1 h 30 à 2 h avant le vol est confortable. Les
+    chauffeurs de transfert réservé savent exactement où attendre et vous écrivent à l'arrivée.
+  </p>
+
+  <h2 id="cote">Monter sur la côte</h2>
+  <p>
+    Beaucoup de ceux qui atterrissent à l'AGA ne restent pas à Agadir. Taghazout et Tamraght sont à
+    40–60 minutes au nord par la route côtière ; Taroudant est à l'intérieur, dans la plaine du Souss ;
+    et les longues distances vers Essaouira et Marrakech sont de vrais trajets de deux à trois heures.
+    Chacun a ses particularités, le problème des adresses de surf, l'embouteillage côtier du vendredi
+    après-midi, le tarif élevé de Marrakech, alors consultez la page dédiée à votre destination :
+    <a href={L('/agadir-airport-to-taghazout/')}>Taghazout</a>,
+    <a href={L('/agadir-airport-to-agadir/')}>centre d'Agadir</a>,
+    <a href={L('/agadir-airport-to-marrakech/')}>Marrakech</a> ou
+    <a href={L('/agadir-airport-to-essaouira/')}>Essaouira</a>.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">La check-list du nouveau venu</span>
+    Des espèces au distributeur bancaire · une SIM ou eSIM · le point de votre hôtel/camp enregistré
+    hors ligne · le juste prix du taxi en tête · et, si vous atterrissez tard, un transfert réservé à
+    l'avance. Faites ces cinq choses et le reste d'Agadir devient facile.
+  </div>
+</GuideLayout>

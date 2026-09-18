@@ -1,0 +1,114 @@
+---
+import GuideLayout from '../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Les plages près d\'Agadir', href: L('/best-beaches-near-agadir/') },
+];
+const toc = [
+  { label: 'La plage d\'Agadir', id: 'agadir' },
+  { label: 'Taghazout', id: 'taghazout' },
+  { label: 'Tamraght / Banana Beach', id: 'tamraght' },
+  { label: 'Imsouane', id: 'imsouane' },
+  { label: 'Légzira', id: 'legzira' },
+  { label: 'Aglou', id: 'aglou' },
+];
+const faqs = [
+  { q: "Quelle est la plus belle plage près d'Agadir ?", a: "Cela dépend de ce que vous cherchez. La grande plage d'Agadir est la plus pratique et la plus aménagée ; Taghazout et Tamraght sont les meilleures pour le surf et l'ambiance ; Imsouane séduit les surfeurs et les amateurs de calme ; et Légzira, plus au sud, offre les plus belles arches de grès rouge du littoral. Pour la photo, Légzira ; pour se baigner facilement, Agadir." },
+  { q: "Peut-on se baigner sur les plages près d'Agadir ?", a: "Oui, mais l'Atlantique reste frais toute l'année, plus que la Méditerranée, et les courants peuvent être marqués sur les plages ouvertes du nord. La grande plage d'Agadir, abritée et surveillée par endroits, est la plus sûre pour la baignade simple. Sur les spots de surf, méfiez-vous des courants et baignez-vous près des autres." },
+  { q: "Reste-t-il une arche à Légzira ?", a: "Oui, une seule. Légzira, près de Sidi Ifni, était célèbre pour ses deux grandes arches de grès rouge ; l'une d'elles s'est effondrée en septembre 2016. L'arche restante et la longue plage rougeoyante valent toujours le détour, surtout au coucher du soleil, mais ne vous attendez pas à retrouver les anciennes photos aux deux arches." },
+  { q: "Comment rejoindre les plages au nord d'Agadir ?", a: "Taghazout et Tamraght sont à 40 minutes à une heure au nord par la route côtière ; Imsouane est à 2 h 30 à 3 h ; Légzira et Aglou sont au sud, vers Sidi Ifni et Tiznit. Il n'y a pas de transport en commun pratique : on y va en voiture de location, en grand taxi ou en transfert réservé." },
+];
+---
+<GuideLayout keywords="Plages Pres Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Plages Pres Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Plages Pres à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Agadir · Plages"
+  h1="Les plus belles plages près d'Agadir"
+  lede="De la grande baie d'Agadir aux arches rouges de Légzira, le littoral du Souss aligne des plages très différentes. Voici notre sélection honnête, du plus pratique au plus sauvage, avec ce qui rend chacune particulière."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['agadir-bay']}
+  toc={toc}
+  faqs={faqs}
+  updated="juin 2026"
+  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+>
+  <p>
+    Agadir est avant tout une ville de plage, mais le littoral autour ne se résume pas à la grande baie. En
+    remontant vers le nord ou en descendant vers le sud, on trouve des spots de surf réputés, des villages
+    de pêcheurs et des criques de grès rouge. Voici les plages qui valent vraiment le déplacement, et ce
+    qu'on vient y chercher.
+  </p>
+
+  <h2 id="agadir">La plage d'Agadir</h2>
+  <p>
+    La référence en ville : un croissant de sable de six kilomètres, pente douce, eau propre et longue
+    promenade pavée bordée de cafés et de beach clubs. C'est la plus pratique et la plus sûre pour une
+    baignade simple, surveillée par endroits, avec balades à dos de chameau et jet-skis en arrière-plan. La
+    baie est abritée du gros de la houle, donc plus calme que les spots du nord. Seul bémol : l'eau reste
+    fraîche toute l'année, comme partout sur cet Atlantique.
+  </p>
+
+  <h2 id="taghazout">Taghazout</h2>
+  <p>
+    À une quarantaine de kilomètres au nord, Taghazout est l'épicentre du surf de la région : un ancien
+    village de pêcheurs devenu repaire de surfeurs et de cafés décontractés, avec des spots célèbres comme
+    Anchor Point pour les vagues de droite. Même sans surfer, on aime l'ambiance et les couchers de soleil.
+    Pour la baignade pure, ce n'est pas l'idéal, courants et fond rocheux par endroits, mais pour
+    l'atmosphère, c'est imbattable. Voyez le <a href={L('/surfing-taghazout-guide/')}>guide du surf à
+    Taghazout</a>.
+  </p>
+
+  <h2 id="tamraght">Tamraght / Banana Beach</h2>
+  <p>
+    Juste avant Taghazout, Tamraght et sa Banana Beach (du nom des bananeraies de la vallée) offrent une
+    longue plage de sable plus douce pour débuter le surf, avec des écoles et une ambiance plus posée que sa
+    voisine. C'est un bon compromis : assez de vagues pour apprendre, assez de sable pour s'allonger, et des
+    prix souvent plus doux qu'à Taghazout. Idéale pour un premier cours dans l'eau.
+  </p>
+
+  <h2 id="imsouane">Imsouane</h2>
+  <p>
+    Plus au nord encore, à 2 h 30 à 3 h d'Agadir, Imsouane est un petit village de pêcheurs au charme rare.
+    Son spot « la Baie » déroule l'une des plus longues vagues de droite du Maroc, un terrain de jeu de
+    rêve pour le longboard et la progression, douce et interminable. Le village vit au ralenti, entre port
+    de pêche et cafés simples. Pour les surfeurs en quête de longues vagues et de calme, c'est une étape à
+    part. Notre <a href={L('/surfing-taghazout-guide/')}>guide du surf à Taghazout</a> situe Imsouane dans
+    la côte.
+  </p>
+
+  <h2 id="legzira">Légzira</h2>
+  <p>
+    Cap au sud, près de Sidi Ifni : Légzira est la plage la plus spectaculaire du coin, avec ses immenses
+    arches de grès rouge sculptées par l'océan et sa longue étendue de sable qui rougeoie au soleil couchant.
+    Une précision importante : Légzira comptait deux arches célèbres, mais l'une d'elles s'est effondrée en
+    septembre 2016, il en reste une, toujours superbe. Venez en fin de journée pour la lumière, et
+    surveillez les marées, qui peuvent couper le passage sous l'arche.
+  </p>
+
+  <h2 id="aglou">Aglou</h2>
+  <p>
+    Près de Tiznit, Aglou Plage est une longue plage atlantique sauvage, très peu aménagée, prisée des
+    Marocains en été et de quelques surfeurs le reste de l'année. On y trouve d'étonnantes habitations de
+    pêcheurs creusées dans la falaise. Les courants y sont sérieux : baignade prudente. C'est l'option pour
+    qui cherche du grand large et de l'authenticité plutôt que des services.
+  </p>
+
+  <div class="disclosure-inline">
+    Certains liens de cette page sont des liens d'affiliation : si vous réservez via eux, nous pouvons
+    percevoir une petite commission, sans surcoût pour vous. Cela ne change jamais les prix affichés ni nos
+    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
+  </div>
+
+  <div class="callout">
+    <span class="callout-label">Choisir sa plage</span>
+    Baignade facile et services → Agadir · surf et ambiance → Taghazout/Tamraght · longue vague et calme →
+    Imsouane · décor spectaculaire → Légzira (une seule arche depuis 2016) · grand large sauvage → Aglou.
+  </div>
+</GuideLayout>

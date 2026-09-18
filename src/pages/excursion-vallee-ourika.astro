@@ -1,0 +1,124 @@
+---
+import GuideLayout from '../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Surf à Taghazout', href: L('/surfing-taghazout-guide/') },
+];
+const toc = [
+  { label: 'Le décor', id: 'decor' },
+  { label: 'Les spots de surf', id: 'spots' },
+  { label: 'Saisons et houle', id: 'saisons' },
+  { label: 'Les surf camps', id: 'camps' },
+  { label: 'Cours et débutants', id: 'cours' },
+  { label: 'Y arriver', id: 'arriver' },
+];
+const faqs = [
+  { q: 'Taghazout convient-elle aux débutants ?', a: 'Oui, et c’est une grande raison de sa popularité. Les beach breaks sableux de Crocro, Hash Point, Panorama et, tout près, Tamraght et Banana Beach sont indulgents et parfaits pour apprendre, tandis que les fameux points (Anchor Point, Killer Point) sont à réserver aux surfeurs sûrs d’eux. La plupart des camps font débuter sur les plages plus douces et ne vous emmènent aux points qu’une fois prêt.' },
+  { q: 'Quelle est la meilleure période pour surfer à Taghazout ?', a: 'La saison court grosso modo de septembre à avril, quand les houles de l’Atlantique Nord réveillent les points. Octobre–novembre et mars sont des créneaux sûrs, vagues régulières, eau assez douce et moins de monde qu’en plein hiver. L’été est petit et surtout bon pour les vrais débutants. L’eau reste fraîche toute l’année : la combinaison 3/2 est la norme.' },
+  { q: 'À quelle distance Taghazout est-elle de l’aéroport d’Agadir ?', a: 'Environ 48 km, soit 50 à 65 minutes de route vers le nord en longeant la côte. Ni train ni bus pratique : c’est un grand taxi, un transfert réservé ou une voiture de location. Le transfert réservé est le choix simple, car beaucoup d’adresses de surf camps ne sont pas signalées, voyez notre page de transfert aéroport–Taghazout pour les prix.' },
+  { q: 'Dois-je apporter ma propre planche ?', a: 'Non. Chaque surf camp et les boutiques de location de Taghazout et Tamraght louent planches et combinaisons à la journée ou à la semaine, et les cours incluent toujours le matériel. Apporter la vôtre n’a de sens que si vous tenez à votre planche et acceptez de payer les frais de housse de surf en avion.' },
+];
+---
+<GuideLayout keywords="Guide Surf Taghazout Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Guide Surf Taghazout Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Guide Surf Taghazout à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Maroc · Côte du surf"
+  h1="Le surf à Taghazout : les spots, les saisons et les camps"
+  lede="À 40 minutes au nord d’Agadir, Taghazout est la capitale marocaine du surf, des droites de classe mondiale, des beach breaks accueillants pour apprendre et une saison qui dure tout l’automne et l’hiver. Voici où surfer, quand, et comment tout organiser."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['taghazout']}
+  toc={toc}
+  faqs={faqs}
+  updated="juin 2026"
+  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+>
+  <p>
+    Taghazout était un paisible village de pêcheurs jusqu’à ce que les surfeurs découvrent ses points dans
+    les années 1960 et 70, et c’est depuis le cœur du surf marocain. Ce qui la rend unique, c’est la
+    diversité concentrée sur un court tronçon de côte : de longues droites bien déroulantes qui attirent
+    des surfeurs confirmés du monde entier, et des beach breaks sableux et doux à quelques minutes, idéaux
+    pour votre première semaine sur une planche. La saison traverse l’hiver européen, l’eau ne devient
+    jamais vraiment froide, et l’ambiance est café-et-rack-à-planches plutôt que ville de fête.
+  </p>
+
+  <h2 id="decor">Le décor</h2>
+  <p>
+    « Taghazout » comme destination de surf, c’est en réalité l’ensemble des spots entre Tamraght et Aourir
+    au sud et le village de Taghazout et Imsouane au nord. La plupart logent à Taghazout même ou dans la
+    plus tranquille Tamraght, toutes deux bordées de surf camps, de boutiques de location et de spots à
+    petit-déjeuner. Les vagues sont proches les unes des autres : un van du camp ou une courte marche vous
+    mène là où ça marche le matin, et le bon spot change selon la direction de la houle, la marée et le
+    vent, d’où l’importance de la connaissance locale.
+  </p>
+
+  <h2 id="spots">Les spots de surf</h2>
+  <p>
+    Du sud au nord, voici les noms que vous entendrez :
+  </p>
+  <ul>
+    <li><strong>Anchor Point</strong>, la légende : une longue droite rapide qui tient une taille sérieuse en hiver. Surfeurs confirmés uniquement, et c’est bondé quand ça marche.</li>
+    <li><strong>Killer Point</strong>, une droite puissante plus au nord, baptisée d’après les orques parfois aperçues au large. Spot de gros jours, pour les forts.</li>
+    <li><strong>La Source</strong>, une droite sur fond rocheux juste au sud de Killer, nommée d’après la source d’eau douce ; marche sur une bonne houle.</li>
+    <li><strong>Panorama</strong>, un setup plage/reef plus accueillant tout près de Taghazout, prisé des intermédiaires et spot de cours fréquent quand c’est petit.</li>
+    <li><strong>Imsouane</strong>, à une heure environ au nord, « La Baie » offre l’une des vagues les plus longues et les plus douces du pays, parfaite pour progresser en longboard et pour les intermédiaires. Voyez notre page de <a href={L('/agadir-airport-to-imsouane/')}>transfert aéroport–Imsouane</a>.</li>
+    <li><strong>Les spots de Tamraght</strong>. Crocro, Banana Beach et les plages sableuses d’ici sont la salle de classe quotidienne des débutants. Lisez la page de <a href={L('/agadir-airport-to-taghazout/')}>transfert vers Taghazout</a> pour tout rejoindre.</li>
+  </ul>
+
+  <h2 id="saisons">Saisons et houle</h2>
+  <p>
+    Le moteur, c’est l’Atlantique Nord. De septembre à avril, les dépressions au large envoient la houle
+    sur les points : voilà la saison. Le cœur de l’hiver (décembre–février) apporte les vagues les plus
+    grosses et les plus régulières, et la foule qui va avec sur les spots célèbres. Les ailes de saison, octobre, novembre et mars, sont le créneau idéal pour la plupart : du solide sans le chaos de la haute
+    saison. L’été est petit et doux, parfait pour les vrais débutants mais calme pour les autres. L’eau
+    reste fraîche toute l’année : emportez ou louez une combinaison 3/2.
+  </p>
+
+  <h2 id="camps">Les surf camps</h2>
+  <p>
+    Taghazout et Tamraght vivent au rythme des surf camps, des formules réunissant lit, petit-déjeuner,
+    location de planche et de combinaison, sessions guidées quotidiennes vers le spot adapté à votre
+    niveau, et souvent yoga et transfert aéroport. Cela va de la maison sociale pour routards au camp
+    boutique soigné. Réserver un camp est la façon la plus simple de surfer ici pour une première fois : le
+    guidage retire le casse-tête du « quel spot, quand ». Pour où loger et ce que couvrent les camps, voyez
+    notre guide des <a href={L('/taghazout-surf-camps/')}>surf camps de Taghazout</a>.
+  </p>
+
+  <h2 id="cours">Cours et débutants</h2>
+  <p>
+    Si vous n’avez jamais surfé, vous êtes au bon endroit pour commencer. Les cours se donnent sur les
+    plages sableuses et indulgentes autour de Tamraght et Panorama, avec moniteurs diplômés, planches et
+    combinaisons fournies. Un stage de deux ou trois jours met la plupart des gens debout sur un mousse ;
+    une semaine vous fait prendre des vagues vertes. Restez à l’écart des points rocheux tant qu’un moniteur
+    ne vous dit pas que vous êtes prêt, ils ne pardonnent pas et sont bondés.
+  </p>
+
+  <h2 id="arriver">Y arriver depuis l’aéroport</h2>
+  <p>
+    Taghazout est à environ 48 km au nord de l’aéroport Agadir Al Massira, 50 à 65 minutes de route le
+    long de la côte. Ni train ni bus pratique, et beaucoup d’adresses de camps ne sont pas signalées : un
+    transfert réservé qui trouve votre porte est l’option sans douleur ; un grand taxi ou une location
+    marchent aussi. Prix complets et détail du trajet sur la page
+    <a href={L('/agadir-airport-to-taghazout/')}>aéroport d’Agadir vers Taghazout</a>, avec
+    <a href={L('/agadir-airport-to-imsouane/')}>Imsouane</a> traité à part.
+  </p>
+
+  <div class="disclosure-inline">
+    Certains liens de cette page sont des liens d’affiliation : si vous réservez via eux, nous pouvons
+    percevoir une petite commission, sans surcoût pour vous. Cela ne change jamais les prix affichés ni nos
+    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça marche</a>.
+  </div>
+
+  <div class="callout">
+    <span class="callout-label">Le plan du débutant</span>
+    Venez en octobre–novembre ou en mars · installez-vous à Taghazout ou Tamraght · réservez un camp ou un
+    stage de cours · louez planche et combinaison sur place · et laissez les guides choisir le spot. Les
+    points seront encore là quand vous serez prêt.
+  </div>
+</GuideLayout>

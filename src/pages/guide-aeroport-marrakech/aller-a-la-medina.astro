@@ -1,0 +1,127 @@
+---
+import GuideLayout from '../../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../../i18n';
+import { photos } from '../../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: "Guide de l'aéroport", href: L('/agadir-airport-guide/') },
+  { name: 'Aller au centre-ville', href: L('/agadir-airport-guide/airport-to-city-options/') },
+];
+const toc = [
+  { label: 'À quelle distance', id: 'distance' },
+  { label: 'Grand taxi à la station', id: 'grand-taxi' },
+  { label: 'Transfert réservé', id: 'transfer' },
+  { label: 'Voiture de location', id: 'rental' },
+  { label: 'Le bus de ville, et ses limites', id: 'no-bus' },
+  { label: 'Lequel vous convient', id: 'verdict' },
+];
+const faqs = [
+  { q: "Comment aller de l'aéroport d'Agadir au centre-ville ?", a: "En grand taxi à la station devant les arrivées, en transfert privé réservé, ou en voiture de location, il n'y a ni train ni Uber. Il existe aussi une navette ALSA vers le centre d'Agadir (autour de 50 MAD, à peu près toutes les heures en journée), le moyen le moins cher si vous voyagez léger et allez au centre de jour. La ville est à environ 22 km, un vrai trajet de 25 à 40 minutes selon la circulation et l'endroit où vous logez." },
+  { q: "Combien coûte un taxi de l'aéroport d'Agadir vers la ville ?", a: "Environ 200–250 MAD vers le centre d'Agadir en journée et 300–350 MAD la nuit, par voiture, pas par personne. Les grands taxis de l'aéroport démarrent souvent haut, alors fixez le prix avant de charger les bagages. Un transfert réservé est un prix fixe dès 15–20 € environ. Tarifs vérifiés en juin 2026." },
+  { q: "Y a-t-il un bus de l'aéroport d'Agadir vers la ville ?", a: "Oui. ALSA fait rouler une navette d'aéroport vers le centre d'Agadir (autour de 50 MAD, à peu près toutes les heures en journée, environ 50 minutes), plus un trajet local moins cher via la ligne 37 jusqu'à Inezgane puis la ligne 98 vers la ville. Les deux ne desservent que le centre, de jour ; pour un hôtel, une arrivée du soir ou une destination hors du centre, partager un grand taxi ou un transfert partagé reste le meilleur rapport." },
+  { q: "Combien de temps pour aller de l'AGA au centre d'Agadir ?", a: "Un vrai trajet de 25 à 40 minutes pour les 22 km. L'essentiel se fait sur route dégagée, mais le dernier tronçon vers la marina et les hôtels de plage peut ralentir en fin d'après-midi et autour des arrivées de charters en soirée. Prévoyez le haut de la fourchette si vous atterrissez à une heure chargée." },
+];
+---
+<GuideLayout keywords="Aller Au Centre Ville Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Aller Au Centre Ville Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Aller Au Centre Ville à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Guide de l'aéroport · Vers la ville"
+  h1="Aller de l'aéroport d'Agadir au centre-ville"
+  lede="Le centre d'Agadir est à environ 22 km du terminal, 25 à 40 minutes de route, sans train et avec un bus de ville qui ne circule qu'en journée. Voici une comparaison claire des moyens d'y aller, ce que chacun coûte, et lequel convient selon la façon dont vous avez atterri."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['agadir-marina']}
+  toc={toc}
+  faqs={faqs}
+  updated="juin 2026"
+  cta={{ heading: 'Réservez un Transfert Aéroport', text: 'Commencez votre voyage sans stress avec un chauffeur privé qui vous attend aux arrivées.', provider: 'transfer', label: 'Voir les prix' }}
+>
+  <p>
+    La plage, la marina et la bande d'hôtels d'Agadir sont à environ 22 km d'Al Massira, un vrai trajet
+    de 25 à 40 minutes, pas le court saut de certains aéroports urbains. Il n'y a ni train, ni Uber ou
+    Careem ; il existe bien une navette ALSA vers le centre d'Agadir en journée, mais pour la plupart des
+    arrivées le choix se résume encore à trois options par la route. Cette page les compare honnêtement
+    pour décider avant d'atterrir ; pour le détail complet de l'itinéraire et les prix de transfert en
+    direct vers la ville, la <a href={L('/agadir-airport-to-agadir/')}>page d'itinéraire aéroport vers
+    Agadir</a> les donne.
+  </p>
+
+  <h2 id="distance">À quelle distance c'est vraiment</h2>
+  <p>
+    Le terminal est près de Temsia, au nord-est de la ville, et la ville elle-même s'étale, donc « 22 km »
+    correspond au centre, tandis qu'un hôtel tout au bout de la plage peut être à quelques kilomètres de
+    plus. L'essentiel du trajet se fait sur route dégagée qui roule bien, mais le dernier tronçon vers la
+    marina et le front de mer ralentit en fin d'après-midi et autour des vagues de charters du soir.
+    Prévoyez le haut de la fourchette de 25 à 40 minutes si vous atterrissez à une heure chargée ou si
+    votre hôtel est à l'extrémité sud de la baie.
+  </p>
+
+  <h2 id="grand-taxi">Option 1 : grand taxi à la station</h2>
+  <p>
+    La file de grands taxis juste devant les arrivées est la façon dont la plupart des gens rejoignent la
+    ville. Comptez 200–250 MAD en journée et 300–350 MAD la nuit, par voiture, pas par personne, et
+    fixez le chiffre avant de charger les bagages, car les chauffeurs de l'aéroport démarrent haut. C'est
+    l'option sensée la moins chère et il y en a toujours un qui attend, ce qui en fait le choix naturel
+    pour une arrivée en journée sans réservation. La voiture peut être une vieille berline et il n'y a
+    pas de compteur : le prix est celui que vous négociez. Notre <a href={L('/agadir-airport-taxi/')}>guide
+    du taxi aéroport</a> donne les justes tarifs et le fonctionnement de la station.
+  </p>
+
+  <h2 id="transfer">Option 2 : transfert privé réservé</h2>
+  <p>
+    Un transfert coûte un peu plus, un prix fixe dès 15–20 € environ, mais un chauffeur nommé attend
+    avec une pancarte, le tarif ne peut pas bouger, et il patiente si votre vol a du retard. C'est
+    exactement ce qu'on veut en descendant d'un charter du soir, avec un groupe et des bagages, ou si on
+    préfère simplement ne pas négocier après une longue journée. C'est ce qui se rapproche le plus de la
+    course par appli que vous pourriez attendre, puisqu'il n'y en a pas. Le
+    <a href={L('/agadir-airport-transfers/')}>hub des transferts</a> met les prestataires côte à côte.
+  </p>
+  <div class="disclosure-inline">
+    Certains liens ici sont des liens d'affiliation, réservez via ces liens et nous pouvons percevoir
+    une petite commission, sans surcoût pour vous. <a href={L('/affiliate-disclosure/')}>Comment ça
+    fonctionne</a>.
+  </div>
+
+  <h2 id="rental">Option 3 : voiture de location</h2>
+  <p>
+    Pour un simple aéroport-hôtel, une voiture de location est excessive, vous paierez le parking et une
+    voiture inutile pendant que vous êtes à la plage. Elle ne se justifie que si vous comptez explorer le
+    Souss, remonter la côte ou faire des excursions à l'intérieur. Une vingtaine de comptoirs opèrent aux
+    arrivées. Voyez <a href={L('/agadir-airport-car-rental/')}>la location à l'AGA</a> si c'est le voyage
+    que vous préparez.
+  </p>
+
+  <h2 id="no-bus">Le bus de ville, et ses limites</h2>
+  <p>
+    Il y a maintenant un bus vers le centre d'Agadir : ALSA fait rouler une navette d'aéroport, à peu près
+    toutes les heures en journée, environ 50 minutes, pour quelque 50 MAD, et il existe un trajet local
+    moins cher, la ligne 37 (environ 8,5 MAD) depuis la route principale à quelques minutes à pied du
+    terminal jusqu'à Inezgane, puis la ligne 98 (environ 3,5 MAD) vers la ville, environ 1 h 15 en tout.
+    Si vous voyagez léger, atterrissez de jour et allez au centre, c'est une vraie option économique. Mais
+    il ne rejoint que le centre, pas la porte de votre hôtel ni la côte, et il se raréfie pour les charters
+    tardifs, donc pour une arrivée du soir, une famille ou une destination hors du centre, partager un
+    grand taxi ou un transfert partagé est la voie économique plus pratique. La
+    <a href={L('/agadir-airport-guide/bus/')}>page du bus de l'aéroport</a> donne le détail.
+  </p>
+
+  <h2 id="verdict">Lequel vous convient</h2>
+  <p>
+    Arrivée en journée, peu de bagages, prêt à négocier ? Le grand taxi convient et coûte le moins cher.
+    Charter tardif, voyage en famille, ou vous voulez juste de la certitude ? Un transfert vaut les
+    quelques euros de plus. Vous comptez vous aventurer au-delà de la ville ? Alors une voiture de
+    location. Si vous choisissez votre base près de l'aéroport lui-même, le guide des
+    <a href={L('/agadir-airport-hotels/')}>hôtels près de l'aéroport</a> couvre la poignée d'options qui
+    évitent complètement le trajet vers la ville.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">Avant de quitter le hall</span>
+    Retirez des espèces à un distributeur bancaire, prenez une SIM ou chargez une eSIM, et ayez le juste
+    tarif du taxi en tête avant d'atteindre la station. Trois minutes dans le hall d'arrivée et le trajet
+    en ville devient la partie facile.
+  </div>
+</GuideLayout>

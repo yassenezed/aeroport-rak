@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
+import { getLocalizedPath } from '../i18n';
+import { photoCredits } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+const clean = (t: string) => t.replace(/^File:/, '').replace(/\.[a-zA-Z]+$/, '').replace(/_/g, ' ');
+---
+<BaseLayout keywords="Credits Photos Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Credits Photos Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Credits Photos à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  noindex={true}
+>
+  <section class="hero">
+    <div class="container hero-inner">
+      <Breadcrumbs items={[{ name: 'Accueil', href: L('/') }, { name: 'Crédits photos', href: L('/photo-credits/') }]} />
+      <span class="eyebrow">Crédits</span>
+      <h1>Crédits photos</h1>
+      <p class="lede">Les photographies de lieux de ce site proviennent de Wikimedia Commons sous licences Creative Commons. Attribution complète ci-dessous, avec nos remerciements aux photographes.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="content-col">
+        <ul class="credits-list">
+          {photoCredits.map((c) => (
+            <li>
+              <strong>{clean(c.title)}</strong>
+              {c.artist && <>, par {c.artist}</>}
+              {' · '}
+              {c.licenseurl ? <a href={c.licenseurl} rel="nofollow">{c.license}</a> : c.license}
+              {' · '}
+              <a href={c.descurl} rel="nofollow">via Wikimedia Commons</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .credits-list { list-style: none; padding: 0; }
+  .credits-list li { padding: 0.85rem 0; border-bottom: 1px solid var(--line); font-size: 0.95rem; color: var(--ink-2); }
+  .credits-list li:last-child { border-bottom: none; }
+</style>

@@ -1,0 +1,139 @@
+---
+import CarRentalLayout from '../layouts/CarRentalLayout.astro';
+import AffiliateLink from '../components/affiliate/AffiliateLink.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Location de voiture', href: L('/agadir-airport-car-rental/') },
+  { name: 'Meilleure location', href: L('/best-car-rental-agadir-airport/') },
+];
+const facts = [
+  { label: 'Comptoirs comparés', value: '~19', sub: 'à l\'AGA' },
+  { label: 'Bon réflexe', value: 'Comparer', sub: 'avant de partir' },
+  { label: 'Économique dès', value: '18 €', sub: '/jour' },
+  { label: 'À surveiller', value: 'Caution', sub: '& franchise' },
+];
+const faqs = [
+  { q: "Quelle est la meilleure agence de location à l'aéroport d'Agadir ?", a: "Il n'y a pas un gagnant pour tout le monde. Europcar est en général le plus régulier des internationaux à l'AGA sur la politique de carburant et l'état des voitures ; Hertz est fiable avec un processus familier ; Sixt a des voitures plus récentes mais des contrôles de retour plus stricts. Les agences locales peuvent battre les trois sur le prix, avec plus de variabilité. Le vrai bon réflexe, c'est de comparer les devis en direct, caution, carburant et franchise compris, plutôt que de rester fidèle à un nom. Prix vérifiés en juin 2026." },
+  { q: "Vaut-il mieux réserver une marque internationale ou une agence locale à Agadir ?", a: "Les internationaux offrent des conditions prévisibles, un personnel anglophone et en général une politique carburant plein-à-plein, à un tarif journalier plus élevé. Les agences locales les sous-cotent souvent mais varient davantage sur la caution, le carburant et la façon dont les retours sont gérés. Aucun ne l'emporte d'office, réservez celui qui offre les meilleures conditions tout compris pour vos dates, ce que les comparer ensemble montre justement." },
+  { q: "Qu'est-ce qui rend une location meilleure qu'une autre à l'aéroport ?", a: "Pas le tarif affiché. Ce qui fait une bonne location : une politique carburant juste (plein-à-plein), une caution que vous couvrez sans souci sur une carte de crédit, une franchise d'assurance raisonnable (ou une couverture totale pas chère pour l'effacer), une voiture en état honnête, et un comptoir qui n'invente pas de dégâts au retour. Un tarif un peu plus cher avec tout ça vaut mieux qu'un pas cher sans." },
+  { q: "Comment comparer les cautions et les politiques de carburant à Agadir ?", a: "Utilisez un comparateur qui affiche les conditions avant le paiement, pas seulement le prix. Vous voulez voir le montant de la caution, si la politique carburant est plein-à-plein ou plein-à-vide, et quelle est la franchise d'assurance. Les lire chez soi permet d'écarter les voitures « pas chères » mais à mauvais rapport et de choisir la vraiment meilleure, au lieu de découvrir les conditions au comptoir." },
+  { q: "Faut-il réserver sa location à l'avance pour l'aéroport d'Agadir ?", a: "Oui. Réserver à l'avance bloque un tarif plus bas qu'au comptoir, sécurise la voiture avant que les semaines de pointe n'épuisent le stock pas cher, et permet de comparer caution et carburant tranquillement. Cela permet aussi d'ajouter une couverture totale moins chère en ligne plutôt que d'acheter la franchise du comptoir, fatigué à l'arrivée. Rien à gagner à tout laisser au comptoir." },
+];
+
+const compare = [
+  { name: 'Europcar', type: 'International', deposit: 'Prévisible', fuel: 'Plein → plein', rank: 'L\'international le plus régulier', href: '/car-rental/europcar-agadir-airport/' },
+  { name: 'Hertz', type: 'International', deposit: 'Empreinte plus large', fuel: 'Plein → plein', rank: 'Fiable, processus familier', href: '/car-rental/hertz-agadir-airport/' },
+  { name: 'Sixt', type: 'International', deposit: 'Empreinte plus large', fuel: 'Plein → plein', rank: 'Voitures récentes, retours plus stricts', href: '/car-rental/sixt-agadir-airport/' },
+  { name: 'Agences locales', type: 'Marocaine', deposit: 'Très variable', fuel: 'À vérifier de près', rank: 'Les moins chères, plus variables', href: null },
+];
+---
+<CarRentalLayout
+  lang={lang}
+  title="Meilleure location de voiture à l'aéroport d'Agadir : comptoirs comparés (2026) | AirportAGA"
+  description="Les comptoirs de l'aéroport Agadir Al Massira comparés pour 2026, caution, politique de carburant et classement de chacun. Choix honnêtes entre Hertz, Europcar, Sixt et les agences locales, et comment réserver la meilleure offre."
+  eyebrow="Aéroport d'Agadir · Location de voiture"
+  h1="Meilleure location de voiture à l'aéroport d'Agadir"
+  lede="Il n'y a pas de comptoir unique meilleur à l'AGA, le bon dépend de la caution, de la politique de carburant et de la franchise, pas du logo au-dessus du comptoir. Voici comment les agences se comparent et comment réserver la meilleure offre pour votre voyage."
+  breadcrumbs={breadcrumbs}
+  facts={facts}
+  priceFrom={18}
+  heroImage={photos['agadir-marina']}
+  heroCtaLabel="Comparer les meilleures offres de location"
+  faqs={faqs}
+>
+  <p>
+    « Meilleur » est le mauvais angle pour la location à Agadir, car aucun comptoir ne gagne pour tout le
+    monde. Les internationaux. Hertz, Europcar, Sixt, apportent des conditions prévisibles et une
+    politique carburant plus juste, à un tarif plus élevé ; les agences locales les sous-cotent mais
+    varient davantage. Ce qui fait vraiment une bonne location, c'est la combinaison caution, politique de
+    carburant, franchise d'assurance et état honnête, et le seul moyen de voir cette combinaison sur les
+    ~19 comptoirs de l'AGA, c'est de les comparer ensemble. Voici comment ils se situent.
+  </p>
+
+
+  <div class="car-widget-wrapper" style="margin: 2.5rem 0 3.5rem 0;">
+    <h3 style="font-size: 1.75rem; margin-bottom: 0.5rem; text-align: center; margin-top: 0;">Comparez les prix de location</h3>
+    <p style="text-align: center; color: var(--ink-2); margin-bottom: 2rem;">Trouvez la meilleure offre pour l'Aéroport d'Agadir.</p>
+    <div style="width: 100%; border-radius: 5px; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
+      <script is:inline async src="https://tpemd.com/content?trs=554574&amp;shmarker=697149&amp;locale=fr&amp;default_pick_up_location=Agadir%20Airport&amp;powered_by=true&amp;border_radius=5&amp;plain=true&amp;show_logo=true&amp;color_background=%23ffca28&amp;color_button=%2355a539&amp;color_text=%23000000&amp;color_input_text=%23000000&amp;color_button_text=%23ffffff&amp;promo_id=4480&amp;campaign_id=10" charset="utf-8"></script>
+    </div>
+  </div>
+
+  <h2 id="compare">Les comptoirs comparés</h2>
+  <p>
+    Un regard à conditions égales sur les agences que vous croiserez aux arrivées. Traitez les colonnes
+    caution et carburant comme les facteurs décisifs, ils pèsent plus sur le vrai coût que le tarif
+    journalier.
+  </p>
+  <div class="table-wrap">
+    <table class="data">
+      <thead>
+        <tr><th>Comptoir</th><th>Caution</th><th>Carburant</th><th>Classement</th></tr>
+      </thead>
+      <tbody>
+        {compare.map((c) => (
+          <tr class:list={[{ 'row-highlight': c.name === 'Europcar' }]}>
+            <td>{c.href ? <a href={L(c.href)}>{c.name}</a> : c.name}</td>
+            <td>{c.deposit}</td>
+            <td>{c.fuel}</td>
+            <td class="small">{c.rank}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p class="small text-muted">
+    Notre lecture des conditions typiques à l'AGA, vérifiée en juin 2026. Les devis individuels varient
+    selon la saison et la voiture, confirmez toujours la caution, la politique de carburant et la
+    franchise sur votre réservation précise.
+  </p>
+
+  <h2 id="picks">Nos choix</h2>
+  <ul>
+    <li><strong>L'international le plus régulier, <a href={L('/car-rental/europcar-agadir-airport/')}>Europcar</a>.</strong> Le plus stable des grands noms à l'AGA sur la politique de carburant et l'état des voitures. Une valeur sûre si vous voulez zéro surprise.</li>
+    <li><strong>Fiable et familier, <a href={L('/car-rental/hertz-agadir-airport/')}>Hertz</a>.</strong> Un processus connu et un personnel anglophone ; attendez-vous à une empreinte de caution plus large.</li>
+    <li><strong>Voitures récentes, lisez les règles de retour, <a href={L('/car-rental/sixt-agadir-airport/')}>Sixt</a>.</strong> Souvent la flotte la plus fraîche, mais le plus strict sur les contrôles de retour, photographiez tout.</li>
+    <li><strong>Les moins chères, avec précaution, les agences locales.</strong> Meilleurs tarifs journaliers, conditions plus variables. Excellent rapport quand on réserve via un comparateur qui affiche la caution, la politique de carburant et les avis en amont.</li>
+  </ul>
+
+  <div class="callout">
+    <span class="callout-label">Conseil local</span>
+    Quel que soit le comptoir choisi, ajoutez la couverture totale via le comparateur plutôt que d'acheter
+    la franchise du comptoir à l'arrivée. C'est presque toujours moins cher, et ça transforme un tarif de
+    base à franchise élevée en une location où une jante éraflée n'est pas un drame financier.
+  </div>
+
+  <h2 id="book">Comment réserver la meilleure offre</h2>
+  <p>
+    Le meilleur réflexe, c'est de comparer les comptoirs de l'AGA côte à côte avant de partir, tarif
+    journalier, caution, politique de carburant et franchise en une seule vue, et de réserver les
+    meilleures conditions tout compris plutôt que le prix le plus bas ou le logo le plus familier. Nous
+    utilisons
+    <AffiliateLink provider="economybookings" sub="best-car-rental-agadir-airport-body" class="text-link">EconomyBookings</AffiliateLink>
+    exactement pour ça : il liste les internationaux et les agences locales ensemble, affiche les
+    conditions avant le paiement, et son option couverture totale sous-cote la franchise du comptoir.
+    Bloquez le prix, lisez les petites lignes chez vous, et récupérez les clés en sachant que l'offre est
+    déjà la meilleure disponible pour vos dates.
+  </p>
+
+  <div class="disclosure-inline">
+    Certains liens ici sont des liens d'affiliation : si vous réservez via ces liens, nous pouvons
+    percevoir une petite commission, sans surcoût pour vous. Cela ne change ni les prix affichés ni nos
+    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
+  </div>
+
+  <p>
+    Lisez les avis complets de chaque comptoir, <a href={L('/car-rental/hertz-agadir-airport/')}>Hertz</a>,
+    <a href={L('/car-rental/europcar-agadir-airport/')}>Europcar</a> et
+    <a href={L('/car-rental/sixt-agadir-airport/')}>Sixt</a>, , voyez la vue d'ensemble sur le
+    <a href={L('/agadir-airport-car-rental/')}>hub de la location</a>, chassez la
+    <a href={L('/agadir-airport-car-rental/cheap/')}>location la moins chère</a>, ou montez en gamme avec
+    un <a href={L('/agadir-airport-4x4-rental/')}>4x4</a> pour la montagne.
+  </p>
+</CarRentalLayout>

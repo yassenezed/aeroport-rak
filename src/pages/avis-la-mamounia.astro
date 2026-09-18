@@ -1,0 +1,83 @@
+---
+import HotelReviewLayout from '../layouts/HotelReviewLayout.astro';
+import { getLocalizedPath, useTranslations } from '../i18n';
+// Import images
+import heroImg from '../assets/img/placeholder.png';
+import bodyImg from '../assets/img/placeholder.png';
+import { Image } from 'astro:assets';
+
+const lang = 'fr';
+const t = useTranslations(lang);
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: t('nav.home'), href: L('/') },
+  { name: t('nav.hotels'), href: L('/best-hotels-agadir/') },
+  { name: 'The View Agadir', href: L('/the-view-agadir-review/') },
+];
+---
+<HotelReviewLayout
+  lang={lang}
+  title={`The View Agadir. Avis, Tarifs & Accès Aéroport | AirportAGA`}
+  description={`Découvrez notre avis d'expert sur The View Agadir. Découvrez pourquoi c'est le meilleur hôtel 5 étoiles, ses équipements et comment s'y rendre.`}
+  h1={`The View Agadir. Avis, Tarifs & Accès Aéroport`}
+  subtitle={`L'expérience 5 étoiles la plus luxueuse de la côte d'Agadir`}
+  breadcrumbs={breadcrumbs}
+  brand={`The View Agadir`}
+  rating={5}
+  verdict={`Luxe moderne exceptionnel et gastronomie hors pair.`}
+  priceAvg={`350€ - 500€ / nuit`}
+  address={`Boulevard 20 Aout, Agadir 80000`}
+  stars={`★★★★★`}
+  ratingText={`Exceptionnel`}
+  heroImage={heroImg}
+  ctaLink="https://www.booking.com/hotel/ma/the-view-agadir-hotel.fr.html"
+  ctaLabel={`Voir les disponibilités`}
+  faqs={[{"q": "À quelle distance se trouve The View de l'aéroport d'Agadir ?", "a": "Il se trouve à environ 25 km de l'aéroport Al Massira, soit environ 30 à 35 minutes en voiture ou transfert privé."}, {"q": "The View Agadir propose-t-il une formule All-Inclusive ?", "a": "Non, The View privilégie la gastronomie à la carte premium et propose d'excellentes formules petit-déjeuner ou demi-pension."}, {"q": "La piscine de The View est-elle chauffée ?", "a": "Oui, la magnifique piscine à débordement est chauffée toute l'année."}]}
+>
+  <div class="content-block">
+    <h2>Présentation</h2>
+    <p>Situé directement sur la prestigieuse corniche, The View Agadir est un chef-d'œuvre d'architecture moderne et de luxe. Cet établissement 5 étoiles offre une retraite élégante pour les voyageurs exigeants. Que vous arriviez de l'aéroport Al Massira pour affaires ou pour une escapade romantique, The View redéfinit le luxe dans la région.</p>
+    
+    <h3>Pourquoi choisir The View Agadir ?</h3>
+    <ul class="pros-list">
+      <li>Vue imprenable sur l'océan depuis des chambres au design élégant.</li>
+      <li>Plusieurs restaurants gastronomiques (cuisine marocaine et internationale).</li>
+      <li>Une immense piscine à débordement à température contrôlée.</li>
+      <li>Spa exclusif Chuan Body + Soul pour une relaxation totale.</li>
+      <li>Service 5 étoiles impeccable et ultra-personnalisé.</li>
+    </ul>
+
+    <h3>Les Chambres & Suites</h3>
+    <p>Les hébergements sont une leçon de luxe minimaliste. Chaque chambre dispose d'une literie haut de gamme, d'une domotique de pointe et de balcons spacieux. Les salles de bains en marbre ajoutent une touche de confort palatial.</p>
+    
+    <div style="margin: 2rem 0; border-radius: 8px; overflow: hidden;">
+      <Image src={bodyImg} alt={`The View Agadir`} widths={[768, 1200]} sizes="(max-width: 768px) 100vw, 800px" />
+    </div>
+
+    <h2>Comment rejoindre The View depuis l'aéroport</h2>
+    <ol class="steps-list">
+      <li>Récupérez vos bagages dans le hall des arrivées de l'aéroport d'Agadir (AGA).</li>
+      <li>Réservez un transfert privé à l'avance pour une arrivée 5 étoiles sans stress.</li>
+      <li>Profitez d'un trajet de 30 minutes le long de la route côtière jusqu'à l'hôtel.</li>
+      <li>Le voiturier prendra immédiatement en charge vos bagages.</li>
+    </ol>
+
+    <h2>Équipements & Services</h2>
+    <div class="features-grid">
+      <div class="feature-item"><strong>Restauration Gastronomique</strong><p>4 restaurants à la carte exclusifs et un bar premium.</p></div>
+      <div class="feature-item"><strong>Piscine à Débordement</strong><p>Piscine chauffée surplombant l'Océan Atlantique.</p></div>
+      <div class="feature-item"><strong>Spa de Luxe</strong><p>Traitements holistiques, hammam et massothérapie.</p></div>
+      <div class="feature-item"><strong>Service Voiturier</strong><p>Parking sécurisé et gratuit pour les clients.</p></div>
+    </div>
+
+    <h2>Idéal pour les voyageurs de luxe et les couples</h2>
+    <p>Si vous souhaitez découvrir le summum de l'hospitalité marocaine combiné au luxe moderne, The View est inégalé. Parfait pour les lunes de miel ou les escapades relaxantes.</p>
+
+    <div class="promo-box">
+      <h3>Meilleur Tarif Garanti</h3>
+      <p>Réservez directement via notre partenaire vérifié pour obtenir les meilleurs prix et une annulation flexible.</p>
+      <a class="btn btn--green" href="https://www.booking.com/hotel/ma/the-view-agadir-hotel.fr.html" rel="nofollow sponsored" target="_blank">{`Voir les disponibilités`}</a>
+    </div>
+  </div>
+</HotelReviewLayout>

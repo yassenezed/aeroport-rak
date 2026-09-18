@@ -1,0 +1,77 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
+import FaqSection from '../components/ui/FaqSection.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const title = "Guide Indemnisation Vol Agadir 2026 | Astuces & Incontournables";
+const description = "Planifiez votre visite à Indemnisation Vol à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!";
+
+const faqs = [
+  { q: 'Combien puis-je toucher pour un vol retardé à Agadir ?', a: 'Selon le règlement européen EU261, les vols entre l\'Europe et le Maroc retardés de plus de 3 heures peuvent vous donner droit à une indemnisation allant de 400€ à 600€, selon la distance.' },
+  { q: 'Puis-je être indemnisé si mon vol a été annulé à cause de la météo ?', a: 'Non, les conditions météorologiques extrêmes sont considérées comme des "circonstances extraordinaires". Les compagnies ne sont pas tenues de vous indemniser, mais doivent vous proposer un remboursement ou un vol alternatif.' },
+  { q: 'Jusqu\'à quand puis-je réclamer mon indemnisation ?', a: 'Généralement, vous pouvez réclamer pour des vols retardés ou annulés au cours des 3 dernières années (jusqu\'à 5 ans en France).' }
+];
+---
+<BaseLayout keywords="Indemnisation Vol Agadir, que faire à Agadir, attractions Agadir"  title={title} description={description} lang={lang}>
+  <section class="hero home-hero hero--photo">
+    <div class="hero-bg"><Image src={photos['agadir-bay']} alt="Indemnisation vol Aeroport Agadir Al Massira annulation" widths={[768, 1280, 1920]} sizes="100vw" loading="eager" fetchpriority="high" /></div>
+    <div class="container hero-inner">
+      <Breadcrumbs items={[{ name: 'Accueil', href: L('/') }, { name: 'Indemnisation Vol', href: L('/flight-compensation/') }]} />
+      <span class="eyebrow">Droits des Passagers</span>
+      <h1 style="color:white; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Vol Retardé à Agadir ?</h1>
+      <p class="lede" style="color:white; text-shadow: 0 1px 3px rgba(0,0,0,0.5);">Obtenez jusqu'à 600€ d'indemnisation à l'Aéroport Agadir Al Massira</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <article class="prose">
+        <h2>Connaissez vos droits à l'Aéroport Agadir Al Massira</h2>
+        <p>Un vol en retard ou annulé peut facilement gâcher le début ou la fin de vos vacances marocaines. Que vous soyez coincé à <strong>l'Aéroport Agadir Al Massira</strong> en attendant de rentrer en Europe, ou que vous soyez arrivé à Agadir avec des heures de retard, vous avez peut-être légalement droit à une indemnisation financière.</p>
+        <p>De nombreux vols vers Agadir étant opérés par des compagnies européennes (comme Ryanair, easyJet, ou Transavia), ils relèvent du strict <strong>règlement européen EU261</strong>. Cela signifie que si votre vol a plus de 3 heures de retard, ou est annulé, vous pourriez réclamer jusqu'à <strong>600€ par passager</strong>.</p>
+        
+        <div class="widget-container" style="margin: 2rem 0; text-align: center; background: #fff; padding: 1rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+          <h3 style="margin-bottom: 1rem;">Vérifiez votre éligibilité instantanément</h3>
+          <p class="small text-muted" style="margin-bottom:1rem;">Entrez les détails de votre vol ci-dessous pour voir si la compagnie vous doit de l'argent.</p>
+          <!-- French Widget -->
+                    <div class="widget-wrap">
+            <iframe
+              class="tpemd-iframe"
+              srcdoc='<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;padding:0;font-family:system-ui,sans-serif;overflow:hidden}</style></head><body><script async src="https://tpemd.com/content?trs=554574&amp;shmarker=697149&amp;lang=fr&amp;powered_by=true&amp;campaign_id=120&amp;promo_id=8679" charset="utf-8"><\/script><script>new MutationObserver(function(){document.documentElement.style.height="auto";window.parent.postMessage({tpemdHeight:document.body.scrollHeight},"*")}).observe(document.body,{childList:true,subtree:true,attributes:true})<\/script></body></html>'
+              style="width:100%;border:none;min-height:200px;overflow:hidden;"
+              loading="lazy"
+              title="Transfer booking widget"
+            ></iframe>
+          </div>
+        </div>
+
+        <h2>Quand avez-vous droit à une indemnisation ?</h2>
+        <p>Vous avez de très fortes chances d'être indemnisé si votre perturbation à <em>l'Aéroport Agadir Al Massira</em> répond à ces critères :</p>
+        <ul>
+          <li><strong>Retards :</strong> Votre vol est arrivé à sa destination finale avec plus de 3 heures de retard.</li>
+          <li><strong>Annulations :</strong> La compagnie aérienne a annulé votre vol moins de 14 jours avant le départ.</li>
+          <li><strong>Refus d'embarquement :</strong> On vous a refusé l'accès à bord en raison d'un surbooking (surréservation).</li>
+          <li><strong>Faute de la compagnie :</strong> La perturbation a été causée par la compagnie (ex: problème technique, manque d'équipage), et non par des "circonstances extraordinaires" comme le mauvais temps ou une grève des contrôleurs aériens.</li>
+        </ul>
+
+        <h2>Pas de victoire, pas de frais</h2>
+        <p>Réclamer une indemnisation directement auprès des compagnies aériennes peut être un processus long et frustrant, ces dernières ignorant souvent les demandes ou inventant des excuses. En utilisant le service juridique spécialisé ci-dessus, des experts se battront en votre nom. Ils fonctionnent sur la base du "no win, no fee" : vous ne payez une commission que s'ils réussissent à récupérer votre argent.</p>
+
+        <p>Vous avez besoin de plus d'informations sur l'aéroport en attendant ? Consultez notre <a href={L('/agadir-airport-guide/')}>Guide complet de l'Aéroport d'Agadir</a> ou parcourez les horaires sur notre page de <a href={L('/flights-to-agadir/')}>Vols vers Agadir</a>.</p>
+      </article>
+    </div>
+  </section>
+  
+  <section class="section section-alt">
+    <div class="container container-narrow">
+      <h2 style="margin-bottom:1rem">FAQ - Indemnisation de Vol</h2>
+      <FaqSection faqs={faqs} />
+    </div>
+  </section>
+</BaseLayout>

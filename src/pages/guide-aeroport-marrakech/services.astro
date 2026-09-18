@@ -1,0 +1,162 @@
+---
+import GuideLayout from '../../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../../i18n';
+import { PRICES_CHECKED } from '../../data/airport';
+import heroImg from '../../assets/img/placeholder.png';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: "Guide de l'aéroport", href: L('/agadir-airport-guide/') },
+  { name: 'Services', href: L('/agadir-airport-guide/facilities/') },
+];
+const toc = [
+  { label: 'Manger & boire', id: 'food' },
+  { label: 'Distributeurs & argent', id: 'money' },
+  { label: 'Cartes SIM & Wi-Fi', id: 'connectivity' },
+  { label: 'Boutiques & duty-free', id: 'shops' },
+  { label: 'Bagages, poste & santé', id: 'baggage' },
+  { label: 'Salle de prière & toilettes', id: 'prayer' },
+  { label: 'Familles, fumeurs & repos', id: 'families' },
+  { label: 'Accessibilité', id: 'accessibility' },
+];
+const faqs = [
+  { q: "Quels services propose l'aéroport d'Agadir ?", a: "L'essentiel, sobrement : un café ou deux, des distributeurs et des kiosques SIM aux arrivées, une vingtaine de comptoirs de location, une boutique duty-free et des boutiques côté piste, une salle de prière de chaque côté, un service médical 24h/24, un bureau de poste et des chariots à bagages. C'est un petit terminal : n'attendez pas un grand hall commercial, mais les bases sont toutes là." },
+  { q: "Y a-t-il un Wi-Fi gratuit à l'aéroport d'Agadir ?", a: "Oui, mais il est souvent limité (autour de 3 heures) et inégal. La plupart des voyageurs achètent une SIM locale aux kiosques des arrivées (autour de 50 MAD) ou arrivent avec une eSIM, plus fiable que de dépendre du réseau gratuit." },
+  { q: "Y a-t-il une consigne à bagages à l'aéroport d'Agadir ?", a: "Non, l'AGA n'a pas de consigne ni de casiers. En revanche, vous trouverez des chariots à bagages gratuits côté ville, aux arrivées et au parking, ainsi qu'un service d'emballage des valises près de l'enregistrement. Prévoyez de garder vos bagages avec vous." },
+  { q: "Y a-t-il une salle de prière à l'aéroport d'Agadir ?", a: "Oui, et même deux : une côté piste, à l'embarquement international, et une côté ville, aux arrivées internationales, avec les toilettes et points d'ablution habituels. La signalétique en arabe et français indique le chemin." },
+  { q: "L'aéroport d'Agadir est-il accessible aux personnes en fauteuil roulant ?", a: "Oui. C'est un terminal compact de plain-pied avec de courtes marches, et l'assistance s'organise à l'avance via votre compagnie. Comme les distances sont courtes, on s'y déplace plus facilement que dans un grand hub." },
+];
+---
+<GuideLayout keywords="Services Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Services Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Services à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Guide de l'aéroport · Services"
+  h1="Services et équipements de l'aéroport d'Agadir"
+  lede="L'essentiel, sobrement. Voici ce qu'il y a vraiment dans le terminal de l'AGA, restauration, espèces, une SIM, boutiques, une salle de prière et l'accessibilité, pour savoir à quoi s'attendre et ce qu'il faut régler avant d'arriver."
+  breadcrumbs={breadcrumbs}
+  toc={toc}
+  faqs={faqs}
+  updated={PRICES_CHECKED}
+  heroImage={heroImg}
+
+  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+>
+  <p>
+    Agadir Al Massira couvre bien les bases sans chercher à être un centre commercial. C'est un petit
+    terminal, donc la règle est simple : l'essentiel est là, mais ne prévoyez pas d'y passer des heures à
+    flâner. Voici un tour d'horizon clair de ce que vous trouverez, aux arrivées comme aux départs.
+  </p>
+
+  <h2 id="food">Manger &amp; boire</h2>
+  <p>
+    Comptez une cafétéria et un café ou deux plutôt qu'une aire de restauration, un endroit pour un café,
+    un soda et un en-cas, à la fois dans la zone publique côté ville et côté piste passé la sécurité. De
+    quoi tenir, pas de quoi organiser un repas. Point important sur l'horaire : la restauration suit les
+    horaires de vols et ferme surtout la nuit, donc sur un charter qui décolle tard ou se pose tôt, ne
+    comptez pas dessus. Si vous avez faim avant un vol retour en soirée, mangez en ville ou à votre hôtel
+    d'abord ; la <a href={L('/agadir-airport-guide/departures/')}>page des départs</a> donne le timing.
+  </p>
+
+  <h2 id="money">Distributeurs &amp; argent</h2>
+  <p>
+    Le hall d'arrivée compte des distributeurs de deux ou trois banques marocaines, et c'est votre premier
+    arrêt à l'atterrissage, le dirham est une monnaie fermée, impossible de l'emporter avec vous. On
+    trouve aussi des bureaux de change, mais préférez une machine d'une vraie banque pour un meilleur taux
+    et moins de commission, et retirez de quoi couvrir la course et votre première journée. Refusez la
+    « conversion dynamique » que propose parfois la machine et payez toujours en dirhams. La
+    <a href={L('/agadir-airport-guide/money-exchange/')}>page argent et change</a> traite distributeur
+    contre guichet et combien retirer.
+  </p>
+
+  <h2 id="connectivity">Cartes SIM &amp; Wi-Fi</h2>
+  <p>
+    Le hall d'arrivée compte des kiosques SIM Maroc Telecom, Orange et inwi, qui vendent des SIM
+    touristiques sur présentation du passeport pour environ 50 MAD avec des données. Il y a aussi un
+    Wi-Fi d'aéroport, mais capricieux : une SIM locale ou une eSIM préchargée est le choix fiable. Le
+    <a href={L('/agadir-airport-guide/sim-card-wifi/')}>guide SIM et Wi-Fi</a> détaille les opérateurs et
+    les options eSIM.
+  </p>
+
+  <h2 id="shops">Boutiques &amp; duty-free</h2>
+  <p>
+    Côté piste, vous trouverez une boutique duty-free et quelques commerces bien marocains, sucreries,
+    fleurs, huile d'argan et huiles essentielles, artisanat, assez pour une bouteille ou un cadeau de
+    dernière minute, pas pour une longue flânerie. C'est d'ailleurs le bon endroit pour écouler vos
+    derniers dirhams avant l'embarquement. Côté ville, c'est surtout du fonctionnel : la vingtaine de
+    comptoirs de location bordent le passage de sortie des arrivées, que vous croisez en allant vers les
+    portes.
+  </p>
+
+  <h2 id="baggage">Bagages, poste &amp; service médical</h2>
+  <p>
+    Quelques services pratiques qu'on oublie souvent. Des chariots à bagages gratuits sont disponibles
+    dans le hall public, aux arrivées et au parking, et un service d'emballage des valises se trouve près
+    de l'enregistrement si vous voulez filmer un sac avant la soute. En revanche, l'AGA n'a
+    <strong>pas de consigne ni de casiers</strong> : impossible d'y laisser un bagage entre deux, prévoyez
+    de le garder avec vous. Un bureau de poste se trouve dans le hall public (ouverture vers 9 h 30), et un
+    service médical fonctionne 24h/24 en cas de besoin.
+  </p>
+
+  <h2 id="prayer">Salle de prière &amp; toilettes</h2>
+  <p>
+    Il y a deux salles de prière (musalla) dans le terminal : une côté piste, à l'embarquement
+    international, et une côté ville, aux arrivées internationales, pratique selon que vous partez ou que
+    vous venez d'atterrir. On y trouve les toilettes et points d'ablution habituels. La signalétique en
+    arabe et français indique le chemin ; le personnel peut vous orienter si vous ne la trouvez pas.
+  </p>
+
+  <h2 id="families">Familles, fumeurs &amp; repos</h2>
+  <p>
+    Une aire de jeux pour enfants se trouve dans le hall des départs, de quoi occuper les plus petits avant
+    l'embarquement. Les fumeurs disposent d'un espace dédié côté piste, près de la cafétéria. Une chose à
+    savoir si vous envisagez une nuit sur place : l'aéroport reste ouvert 24h/24, mais il n'y a pas de
+    zones de repos dédiées, quelques bancs, sans plus. Pour un vol très tôt, mieux vaut une chambre près de
+    l'aéroport qu'une nuit dans le hall ; un <a href={L('/agadir-airport-guide/lounges/')}>salon</a> côté
+    piste reste l'option la plus confortable pour patienter, le temps qu'il est ouvert.
+  </p>
+
+  <h2 id="accessibility">Accessibilité</h2>
+  <p>
+    Le terminal est compact et essentiellement de plain-pied, donc les marches sont courtes, ce qui rend
+    l'AGA plus facile à parcourir qu'un grand hub si vous avez une mobilité réduite. L'assistance fauteuil
+    roulant et les services d'assistance spéciale s'organisent à l'avance via votre compagnie :
+    demandez-les à la réservation, ou au moins 48 heures avant de partir. Comme les distances internes
+    sont courtes, le plus délicat est en général le trajet trottoir-terminal, qu'un
+    <a href={L('/agadir-airport-guide/')}>transfert réservé ou un taxi</a> peut gérer de porte à porte.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">À régler dès l'arrivée</span>
+    Les distributeurs automatiques et les puces (SIM) se trouvent dans le hall des arrivées. La restauration et le shopping sont limités et souvent fermés la nuit. Il n'y a pas de consignes à bagages ni de vrais espaces de repos. N'hésitez pas à demander l'assistance PMR à l'avance via votre compagnie aérienne.
+  </div>
+
+  <section class="content-section" style="margin-top: 4rem; padding-top: 4rem; border-top: 1px solid var(--line);">
+    <div class="content-prose">
+      <h2>Pourquoi utiliser les services de l'Aéroport d'Agadir ?</h2>
+      <p>Malgré sa taille modeste, l'aéroport d'Agadir Al Massira offre tout ce dont vous avez besoin pour bien commencer vos vacances. De l'achat d'une carte SIM locale au retrait de dirhams, en passant par un café rapide, l'aménagement est simple, efficace et facile à parcourir sans se perdre.</p>
+    </div>
+
+    <div class="links-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+      <a href={L('/agadir-airport-guide/arrivals/')} class="link-card" style="background: #fff; padding: 2rem; border-radius: var(--r-lg); border: 1px solid var(--line); box-shadow: var(--shadow-sm); text-decoration: none; color: var(--ink); display: block;">
+        <h3 style="font-size: 1.15rem; font-family: var(--font-display); margin-bottom: 0.5rem; color: var(--green-dark);">Arrivées (Direct)</h3>
+        <p style="font-size: 0.95rem; color: var(--ink-2); margin: 0;">Vérifiez les vols</p>
+      </a>
+      <a href={L('/agadir-airport-guide/departures/')} class="link-card" style="background: #fff; padding: 2rem; border-radius: var(--r-lg); border: 1px solid var(--line); box-shadow: var(--shadow-sm); text-decoration: none; color: var(--ink); display: block;">
+        <h3 style="font-size: 1.15rem; font-family: var(--font-display); margin-bottom: 0.5rem; color: var(--green-dark);">Départs (Direct)</h3>
+        <p style="font-size: 0.95rem; color: var(--ink-2); margin: 0;">Infos d'embarquement</p>
+      </a>
+      <a href={L('/agadir-airport-transfers/')} class="link-card" style="background: #fff; padding: 2rem; border-radius: var(--r-lg); border: 1px solid var(--line); box-shadow: var(--shadow-sm); text-decoration: none; color: var(--ink); display: block;">
+        <h3 style="font-size: 1.15rem; font-family: var(--font-display); margin-bottom: 0.5rem; color: var(--green-dark);">Transferts & Taxi</h3>
+        <p style="font-size: 0.95rem; color: var(--ink-2); margin: 0;">Réserver un trajet</p>
+      </a>
+      <a href={L('/agadir-airport-car-rental/')} class="link-card" style="background: #fff; padding: 2rem; border-radius: var(--r-lg); border: 1px solid var(--line); box-shadow: var(--shadow-sm); text-decoration: none; color: var(--ink); display: block;">
+        <h3 style="font-size: 1.15rem; font-family: var(--font-display); margin-bottom: 0.5rem; color: var(--green-dark);">Location Voiture</h3>
+        <p style="font-size: 0.95rem; color: var(--ink-2); margin: 0;">Comparer les prix</p>
+      </a>
+    </div>
+  </section>
+</GuideLayout>

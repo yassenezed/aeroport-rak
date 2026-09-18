@@ -1,0 +1,129 @@
+---
+import HotelLayout from '../layouts/HotelLayout.astro';
+import AffiliateLink from '../components/affiliate/AffiliateLink.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Où dormir', href: L('/where-to-stay-agadir/') },
+  { name: "Hôtels près de l'aéroport", href: L('/agadir-airport-hotels/') },
+];
+const facts = [
+  { label: 'Aéroport → ville', value: '22 km' },
+  { label: 'Durée', value: '25–40', sub: 'min' },
+  { label: 'Hôtel plage', value: '40 €', sub: 'dès /nuit' },
+  { label: 'Transfert', value: '20 €', sub: 'dès' },
+];
+const faqs = [
+  { q: "Y a-t-il un hôtel à l'aéroport d'Agadir ?", a: "Non. Aucun hôtel à l'intérieur ni accolé au terminal Al Massira, et les abords immédiats de l'aéroport sont de la pleine campagne près de Temsia, pas une zone hôtelière. Quand on parle d'« hôtel à l'aéroport » à Agadir, on entend un hôtel à courte distance en voiture, généralement dans le centre d'Agadir, à environ 22 km et 25–40 minutes, pratique pour un vol matinal ou une arrivée tardive." },
+  { q: "Où loger pour un vol tôt le matin depuis Agadir ?", a: "Un hôtel du front de mer ou de Founty, dans le centre d'Agadir, est le choix logique : proche des restaurants et de la promenade pour votre dernière soirée, avec un transfert réservé qui peut vous prendre à n'importe quelle heure pour les 25–40 minutes de route vers l'AGA. Réservez le transfert la veille pour avoir un chauffeur confirmé à 4 h plutôt que d'espérer un taxi." },
+  { q: "Quel est l'hôtel le plus proche de l'aéroport d'Agadir ?", a: "Les lits réellement les plus proches sont quelques hôtels et maisons d'hôtes du côté d'Inezgane et de la rocade, à environ 10–15 minutes du terminal. La plupart des voyageurs les ignorent et logent sur le front de mer (à environ 22 km), car il y a bien plus à faire et le temps de transfert reste modeste." },
+  { q: "Vaut-il mieux un hôtel près de l'aéroport ou un bon transfert ?", a: "Pour la plupart des séjours, un bon transfert compte plus que la proximité. Agadir est petite et la course de l'aéroport est courte : un hôtel de plage confortable plus un transfert à prix fixe vaut mieux qu'une chambre quelconque près des pistes. Ne réservez par pure proximité que si vous avez un départ avant l'aube et voulez grappiller chaque minute." },
+];
+---
+<HotelLayout
+  lang={lang}
+  title="Hôtels près de l'aéroport d'Agadir (AGA) : nuit avant un vol tôt et vraies distances 2026 | AirportAGA"
+  description="Ce que veut vraiment dire « hôtel près de l'aéroport d'Agadir », l'aéroport est à 22 km de la ville, sans hôtel au terminal. Où loger pour un vol matinal ou une arrivée de nuit, les meilleurs choix au centre, et comment caler le transfert."
+  eyebrow="Où dormir · Près de l'AGA"
+  h1="Hôtels près de l'aéroport d'Agadir"
+  lede="Il n'y a pas d'hôtel à Al Massira même, le terminal est à 22 km, en pleine campagne. « Près de l'aéroport » veut donc dire à courte distance en voiture. Voici où dormir pour de vrai avant un vol tôt ou après une arrivée tardive, et comment caler le transfert pour ne jamais être juste."
+  breadcrumbs={breadcrumbs}
+  facts={facts}
+  priceFrom={40}
+  heroImage={photos['agadir-marina']}
+  heroCtaLabel="Chercher un hôtel à Agadir"
+  faqs={faqs}
+  cta={{ heading: 'Un lit pour votre vol matinal', text: 'Comparez les hôtels du centre d\'Agadir avec annulation gratuite, puis réservez un transfert à l\'heure exacte qu\'il vous faut.', provider: 'booking', label: 'Chercher un hôtel près de l\'AGA' }}
+>
+  <p>
+    On cherche un hôtel « près de l'aéroport d'Agadir » en imaginant un établissement au bord des
+    pistes pour dormir avant un vol à l'aube. Al Massira n'en a pas. Le terminal est à environ 22 km de
+    la ville, vers Temsia, entouré de plaine agricole du Souss et non d'une rangée d'hôtels
+    d'aéroport. La réponse honnête : « près de l'aéroport » signifie à courte distance en voiture, et
+    pour presque tout le monde cette distance se termine dans le centre d'Agadir, à 25–40 minutes, là
+    où sont les vrais hôtels.
+  </p>
+
+  <h2 id="ce-que-veut-dire">Ce que « près de l'aéroport » veut vraiment dire à l'AGA</h2>
+  <p>
+    La distance compte parce qu'elle change la décision. À un aéroport de ville, on paierait un
+    supplément pour une chambre accessible à pied depuis le terminal. Ici, rien n'est à pied, et la
+    course vers le centre est assez rapide pour que la proximité n'apporte presque rien. Quelques
+    petits hôtels et maisons d'hôtes sont plus près, du côté d'Inezgane et de la rocade, à 10–15
+    minutes, mais ils sont surtout fonctionnels, avec peu autour. Le meilleur choix pour une dernière
+    nuit avant de voler reste un vrai hôtel d'Agadir, plus un transfert réservé à l'heure de votre
+    départ.
+  </p>
+
+  <h2 id="meilleurs-secteurs">Les meilleurs secteurs pour la nuit avant un vol</h2>
+  <p>
+    Si vous choisissez où passer cette dernière soirée tout en visant une route nette vers l'aéroport
+    au matin, voici les quartiers d'Agadir qui marchent le mieux :
+  </p>
+  <div class="grid grid-3" style="margin-top:1.5rem">
+    <div class="card">
+      <h3>Front de mer / Founty</h3>
+      <p class="small text-muted">Le meilleur compromis pour une dernière soirée.</p>
+      <p>Le front de mer et la zone resort de Founty, au sud, concentrent le plus de chambres, la promenade pour une dernière balade et de nombreux restaurants. Un transfert atteint l'aéroport en 25–35 minutes.</p>
+      <AffiliateLink provider="booking" sub="hotels-pres-aeroport-agadir-plage" class="btn btn-primary btn-block">Hôtels de plage</AffiliateLink>
+    </div>
+    <div class="card">
+      <h3>La Marina</h3>
+      <p class="small text-muted">Pour une nuit plus calme et haut de gamme.</p>
+      <p>Le quartier neuf de la marina est plus tranquille et plus chic, à deux pas de la plage. Idéal pour un hôtel soigné et un départ tôt et facile, sans l'agitation des resorts en club.</p>
+      <AffiliateLink provider="booking" sub="hotels-pres-aeroport-agadir-marina" class="btn btn-primary btn-block">Hôtels de la marina</AffiliateLink>
+    </div>
+    <div class="card">
+      <h3>Près de la rocade</h3>
+      <p class="small text-muted">Seulement pour un vol vraiment matinal.</p>
+      <p>Les adresses fonctionnelles vers Inezgane font gagner 10–15 minutes de route. À retenir uniquement pour un départ avant l'aube, sinon, dormez là où il y a de quoi faire.</p>
+      <a class="btn btn-ghost btn-block" href={L('/where-to-stay-agadir/')}>Comparer les quartiers</a>
+    </div>
+  </div>
+
+  <div class="callout">
+    <span class="callout-label">Conseil local</span>
+    Réservez le transfert la veille, pas le matin même. Une voiture réservée pour une prise en charge à
+    4 h, c'est un chauffeur confirmé devant la porte, il n'y a pas d'Uber à Agadir, et trouver un
+    grand taxi avant l'aube est un pari à éviter avant un vol.
+  </div>
+
+  <h2 id="timing">Caler le transfert du matin</h2>
+  <p>
+    Al Massira est un petit terminal : pas besoin des deux heures d'avance d'un grand hub, 90 minutes
+    à deux heures avant le départ suffisent largement. En remontant : la route prend 25–40 minutes
+    selon le quartier et la circulation en ville, donc un vol à 7 h implique une prise en charge vers
+    4 h 30–5 h. Fixez-la dès la réservation de l'hôtel, et consultez notre
+    <a href={L('/agadir-airport-to-agadir/')}>page route aéroport-Agadir</a> pour les prix des
+    transferts et les tarifs grand taxi du moment. Si vous arrivez plutôt que vous partez, le
+    <a href={L('/agadir-airport-guide/arrivals/')}>guide des arrivées</a> détaille espèces, cartes SIM
+    et station de taxis.
+  </p>
+
+  <h2 id="arrivee-tardive">Pour une arrivée de nuit</h2>
+  <p>
+    La plupart des vols vers l'AGA sont des charters du soir : beaucoup atterrissent fatigués vers
+    21 h–23 h. Pas besoin non plus d'un « hôtel d'aéroport » spécial, réservez n'importe quel hôtel
+    du centre avec réception 24 h/24, arrangez un transfert avec suivi de vol, et vous serez installé
+    en moins d'une heure. La seule chose utile : prévenir l'hôtel de votre arrivée tardive pour qu'il
+    garde la chambre.
+  </p>
+
+  <div class="disclosure-inline">
+    Certains liens ici sont des liens d'affiliation : si vous réservez via ces liens, nous pouvons
+    percevoir une petite commission, sans surcoût pour vous. Cela ne change ni les prix affichés ni nos
+    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
+  </div>
+
+  <p>
+    Vous hésitez encore sur votre base ? Lisez le guide complet
+    <a href={L('/where-to-stay-agadir/')}>où dormir à Agadir</a> pour le comparatif front de mer vs
+    Marina vs Founty, ou, si vous voulez tout en une formule, voyez les
+    <a href={L('/agadir-all-inclusive-hotels/')}>hôtels tout inclus d'Agadir</a>.
+  </p>
+</HotelLayout>

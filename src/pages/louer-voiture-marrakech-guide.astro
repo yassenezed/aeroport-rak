@@ -1,0 +1,121 @@
+---
+import GuideLayout from '../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Louer une voiture à Agadir', href: L('/renting-car-morocco-guide/') },
+];
+const toc = [
+  { label: 'Permis et papiers', id: 'permis' },
+  { label: 'La caution', id: 'caution' },
+  { label: 'L\'assurance', id: 'assurance' },
+  { label: 'Le carburant', id: 'carburant' },
+  { label: 'Routes et contrôles', id: 'routes' },
+  { label: 'Réserver malin', id: 'reserver' },
+];
+const faqs = [
+  { q: "Faut-il un permis international pour louer une voiture au Maroc ?", a: "Non, pas pour les permis européens : un permis national en cours de validité est accepté pour louer et conduire au Maroc. Un permis international ne fait jamais de mal et lève les ambiguïtés lors d'un contrôle, mais il n'est pas exigé pour la plupart des visiteurs de l'UE. Gardez toujours permis, contrat de location et papiers du véhicule sur vous." },
+  { q: "Quelle caution prévoir pour une location de voiture à Agadir ?", a: "Attendez-vous à un blocage de caution important sur une carte de crédit au nom du conducteur, souvent l'équivalent de plusieurs centaines d'euros, davantage sur un 4x4. Une carte de débit ou une carte sans plafond suffisant est régulièrement refusée. Vérifiez le montant exact et la franchise avant de réserver, pas au comptoir." },
+  { q: "La voiture est-elle livrée avec le plein ?", a: "Le plus souvent en formule plein-à-plein : vous repartez le réservoir plein et vous rendez le véhicule plein. C'est la formule la plus juste, évitez le plein-à-vide, où l'on paie d'avance un carburant rarement remboursé. Gardez le ticket de la dernière station avant la restitution." },
+  { q: "Conduire au Maroc est-il difficile pour un visiteur ?", a: "Les grands axes et l'autoroute A7 sont faciles ; la conduite se complique surtout en ville et la nuit. On roule à droite, les contrôles de gendarmerie sont fréquents (ayez vos papiers à portée), les radars sont nombreux et bien placés. Roulez prudemment, respectez les limites, et tout se passe sans histoire." },
+];
+---
+<GuideLayout keywords="Louer Voiture Guide Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Louer Voiture Guide Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Louer Voiture Guide à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Agadir · Location de voiture"
+  h1="Louer une voiture à Agadir : ce qu'il faut savoir"
+  lede="Louer au Maroc n'a rien de compliqué quand on connaît les règles du jeu : le bon permis, la caution sur carte, l'assurance qui compte vraiment, et les réflexes de conduite locaux. Voici le guide pratique."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['souss-coast']}
+  toc={toc}
+  faqs={faqs}
+  updated="juin 2026"
+  cta={{ heading: 'Louez une Voiture à l\'Aéroport d\'Agadir', text: 'Comparez les meilleures offres de location de voitures des agences de confiance directement à l\'aéroport.', provider: 'car', label: 'Comparer les prix' }}
+>
+  <p>
+    Une voiture transforme un séjour à Agadir : Paradise Valley, les plages du nord, Taroudant, la côte
+    jusqu'à Légzira deviennent accessibles sans dépendre d'un chauffeur. La location est simple, à condition
+    de connaître quelques règles propres au Maroc. Voici l'essentiel, dans l'ordre où ça compte.
+  </p>
+
+
+  <div class="guide-widget-wrapper" style="margin: 2.5rem 0 3.5rem 0; width: 100%; overflow: hidden; border-radius: 5px;">
+    <script is:inline async src="https://tpemd.com/content?trs=554574&amp;shmarker=697149&amp;locale=fr&amp;country=99&amp;city=461&amp;powered_by=true&amp;campaign_id=87&amp;promo_id=2466" charset="utf-8"></script>
+  </div>
+
+  <h2 id="permis">Permis et papiers</h2>
+  <p>
+    Un permis national en cours de validité suffit pour les visiteurs européens : le permis international
+    n'est pas exigé, même s'il lève toute ambiguïté lors d'un contrôle. Le conducteur doit présenter une
+    pièce d'identité et, généralement, une carte de crédit à son nom. Une fois la voiture prise, gardez
+    toujours sur vous le permis, le contrat de location et les papiers du véhicule (carte grise,
+    attestation d'assurance) : c'est ce qu'on vous demandera à un barrage.
+  </p>
+
+  <h2 id="caution">La caution</h2>
+  <p>
+    C'est le point qui surprend le plus. Le loueur bloque une caution sur une carte de crédit, souvent
+    plusieurs centaines d'euros, davantage pour un 4x4, le temps de la location. Une carte de débit, une
+    carte prépayée ou un plafond insuffisant sont régulièrement refusés au comptoir, ce qui peut faire
+    capoter la prise en main. Vérifiez avant de réserver le montant exact de la caution et celui de la
+    franchise en cas de dommage, et assurez-vous que votre carte tient le coup.
+  </p>
+
+  <h2 id="assurance">L'assurance</h2>
+  <p>
+    La location inclut une assurance de base, mais avec une franchise élevée : en cas de pépin, c'est cette
+    somme qui reste à votre charge. Vous pouvez réduire ou annuler la franchise via le loueur (souvent cher)
+    ou via une protection souscrite au moment de la réservation en ligne (souvent moins chère). Quelle que
+    soit l'option, lisez ce qui reste exclu, bas de caisse, pneus, vitrage, deuxième conducteur, et
+    photographiez la voiture sous tous les angles avant de partir.
+  </p>
+
+  <h2 id="carburant">Le carburant</h2>
+  <p>
+    Privilégiez la formule plein-à-plein : vous récupérez la voiture pleine et vous la rendez pleine. C'est
+    la plus honnête ; fuyez le plein-à-vide, qui facture un réservoir entier rarement remboursé pour les
+    kilomètres non parcourus. Faites le plein juste avant de rendre le véhicule et gardez le ticket. Les
+    stations sont nombreuses sur les axes principaux mais s'espacent dans l'arrière-pays et la montagne :
+    faites le plein avant Paradise Valley ou une longue boucle vers le sud.
+  </p>
+
+  <h2 id="routes">Routes et contrôles</h2>
+  <p>
+    On roule à droite. Les grands axes et l'A7 sont en bon état et faciles ; la vigilance s'impose surtout
+    en ville, la nuit, et sur les routes de montagne étroites. Deux constantes : les contrôles de
+    gendarmerie sont fréquents, on vous fait souvent simplement signe de continuer, papiers à portée, et
+    les radars sont nombreux et bien placés, fixes comme mobiles. Respectez les limites, ralentissez aux
+    entrées de village, et la conduite se passe sans accroc. Pour le détail des règles, voyez notre guide
+    <a href={L('/fr/conduire-au-maroc/')}>conduire au Maroc</a>.
+  </p>
+
+  <h2 id="reserver">Réserver malin</h2>
+  <p>
+    Les prix et les conditions varient beaucoup d'un loueur à l'autre, et réserver en ligne à l'avance donne
+    presque toujours un meilleur tarif et des conditions plus claires qu'au comptoir. Comparez via
+    <a href={L('/agadir-airport-car-rental/')}>la location à l'aéroport d'Agadir</a>, et si vos plans
+    incluent les pistes ou Paradise Valley, regardez plutôt
+    <a href={L('/agadir-airport-4x4-rental/')}>la location de 4x4 à l'AGA</a> : un vrai 4x4 change tout sur
+    les routes de montagne et les approches non goudronnées.
+  </p>
+
+  <div class="disclosure-inline">
+    Certains liens de cette page sont des liens d'affiliation : si vous réservez via eux, nous pouvons
+    percevoir une petite commission, sans surcoût pour vous. Cela ne change jamais les prix affichés ni nos
+    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
+  </div>
+
+  <div class="callout">
+    <span class="callout-label">La check-list location</span>
+    Permis national valide · carte de crédit au nom du conducteur pour la caution · franchise comprise (ou
+    rachetée) · formule plein-à-plein · photos du véhicule avant départ · permis, contrat et papiers du
+    véhicule toujours sur soi.
+  </div>
+</GuideLayout>

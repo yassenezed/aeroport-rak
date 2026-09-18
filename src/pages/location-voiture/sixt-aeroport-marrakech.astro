@@ -1,0 +1,123 @@
+---
+import ReviewLayout from '../../layouts/ReviewLayout.astro';
+import { getLocalizedPath } from '../../i18n';
+import { photos } from '../../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Location de voiture', href: L('/agadir-airport-car-rental/') },
+  { name: 'Sixt', href: L('/car-rental/sixt-agadir-airport/') },
+];
+const pros = [
+  'Souvent les voitures les plus récentes des internationaux de l\'AGA',
+  'Comptoir aux arrivées, personnel multilingue, prise en charge rapide',
+  'Politique carburant plein-à-plein sur la plupart des tarifs',
+  'Bon choix de SUV et de modèles premium',
+  'Facile à pré-réserver et à comparer en ligne',
+];
+const cons = [
+  'Le plus strict sur les contrôles de retour, photographiez tout',
+  'L\'empreinte de caution tend à être large',
+  'Tarif journalier au-dessus des agences locales',
+  'La franchise de base est élevée ; la franchise du comptoir est chère',
+];
+const faqs = [
+  { q: "Où se trouve le comptoir Sixt à l'aéroport d'Agadir ?", a: "Dans la rangée de comptoirs de location du hall des arrivées, à quelques pas du tapis à bagages, les voitures se récupérant au parking de l'aéroport tout proche. La prise en charge est rapide, mais avec Sixt en particulier, faites un tour du véhicule minutieux et photographiez chaque marque existante avant de partir, car le contrôle de retour est strict." },
+  { q: "Pourquoi Sixt est-il strict sur les retours à Agadir ?", a: "Sixt tend à rouler les voitures les plus récentes des internationaux à l'AGA, et il les inspecte de près au retour : de petites marques qu'un autre comptoir laisserait passer peuvent être relevées. Ce n'est pas une raison d'éviter Sixt, mais une raison de photographier la voiture en détail à la prise en charge (chaque panneau, les jantes, le pare-brise) pour pouvoir prouver ce qui était déjà là." },
+  { q: "Quelles sont la caution et la politique carburant de Sixt à Agadir ?", a: "Sixt bloque une caution sur une carte de crédit (pas de débit) au nom du conducteur principal, et elle tend à être large, confirmez le montant avant de réserver et vérifiez la marge de votre carte. La politique carburant est plein-à-plein sur la plupart des tarifs : récupérez plein, rendez plein, l'option juste." },
+  { q: "Sixt vaut-il le coup à l'aéroport d'Agadir ?", a: "Si vous voulez la voiture la plus fraîche et que le contrôle de retour strict ne vous gêne pas, oui. Sixt a souvent la flotte la plus récente des internationaux. Associez-le à la couverture totale pour que l'inspection serrée ne soit pas un souci, et photographiez tout à la prise en charge. Si vous préférez un retour plus détendu, Europcar est le choix plus stable ; les agences locales sont moins chères mais plus variables." },
+];
+---
+<ReviewLayout
+  lang={lang}
+  title="Avis Sixt aéroport Agadir 2026 : voitures récentes, retours stricts | AirportAGA"
+  description="Avis honnête sur le comptoir Sixt de l'aéroport Agadir Al Massira, emplacement aux arrivées, la flotte plus récente, caution, politique de carburant, et le contrôle de retour strict à anticiper. À qui il convient, et comment réserver."
+  eyebrow="Aéroport d'Agadir · Avis location"
+  h1="Avis Sixt aéroport Agadir : voitures les plus récentes, retours les plus stricts"
+  lede="Sixt roule souvent la flotte la plus fraîche des internationaux de l'AGA, et l'inspecte de près au retour. Avec la couverture totale et un jeu de photos complet à la prise en charge, c'est un échange honnête. Voici le verdict honnête et à qui le réserver."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['agadir-marina']}
+  brand="Sixt"
+  rating={3.8}
+  verdict="Les voitures les plus récentes des internationaux à l'aéroport d'Agadir, avec une politique carburant juste, associées au contrôle de retour le plus strict et à une empreinte de caution large. Un bon choix si vous photographiez tout à la prise en charge et ajoutez la couverture totale ; moins reposant qu'Europcar sinon."
+  pros={pros}
+  cons={cons}
+  heroProvider="discovercars"
+  heroCtaLabel="Voir les prix Sixt à l'AGA"
+  faqs={faqs}
+  cta={{ heading: 'Comparez Sixt à tous les comptoirs de l\'AGA', text: 'Voyez le tarif Sixt en direct à côté des autres agences, caution, politique de carburant et couverture totale en une seule vue, et réservez la meilleure offre tout compris.', provider: 'discovercars', label: 'Comparer les prix de location' }}
+>
+  <p>
+    Sixt est le comptoir à choisir à Agadir si vous voulez la voiture la plus récente, il roule en
+    général la flotte la plus fraîche des internationaux à l'AGA. Le hic, c'est le retour : Sixt inspecte
+    ses voitures de près, et de petites marques qu'un autre comptoir laisserait passer peuvent être
+    relevées ici. Ce n'est pas une raison de l'éviter ; c'est une raison de photographier la voiture dans
+    le moindre détail à la prise en charge et d'ajouter la couverture totale pour qu'une inspection serrée
+    ne soit pas un souci. Faites ces deux choses et Sixt est un choix solide.
+  </p>
+
+  <h2 id="location">Emplacement et récupération à l'AGA</h2>
+  <p>
+    Le comptoir Sixt est dans la rangée de comptoirs de location du hall des arrivées, à quelques pas du
+    tapis à bagages, les voitures étant au parking de l'aéroport tout proche. La prise en charge est
+    rapide et le personnel manie l'anglais et le français. Avec Sixt en particulier, prenez votre temps
+    pour le tour du véhicule : photographiez chaque panneau, les jantes, le pare-brise et la jauge, et
+    assurez-vous que tout dégât existant est noté sur les papiers. Le contrôle de retour strict rend ce
+    jeu de photos de prise en charge vraiment précieux.
+  </p>
+
+  <h2 id="fleet">Flotte</h2>
+  <p>
+    Souvent les voitures les plus récentes des internationaux de l'AGA, avec un bon choix de SUV et
+    quelques modèles premium à côté de la gamme économique. Si vous voulez une voiture fraîche et une
+    conduite confortable pour parcourir la montagne, Sixt livre fréquemment. Comme toujours, un SUV de
+    route n'est pas un vrai 4x4 tout-terrain, si les pistes de l'Anti-Atlas sont au programme, confirmez
+    les quatre roues motrices sur la réservation plutôt que de vous fier à la catégorie.
+  </p>
+
+  <h2 id="deposit-fuel">Caution, carburant et assurance</h2>
+  <p>
+    La caution tend à être large : Sixt bloque une somme sur une carte de crédit au nom du conducteur
+    principal, alors confirmez le montant avant de réserver et vérifiez la marge de la carte. La politique
+    carburant est plein-à-plein sur la plupart des tarifs, récupérez plein, rendez plein, la juste. La
+    franchise de base est élevée et la franchise du comptoir est chère ; vu la rigueur du contrôle de
+    retour de Sixt, la couverture totale achetée en ligne à la réservation est le bon réflexe ici, à la
+    fois moins chère que la franchise du comptoir et exactement la protection qu'il faut contre une
+    éraflure relevée.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">Conseil local</span>
+    Avec Sixt, traitez les photos de prise en charge comme l'essentiel : faites le tour complet de la
+    voiture, des gros plans de chaque marque existante avec l'horodatage activé, et envoyez-les-vous par
+    e-mail. Combiné à la couverture totale, c'est ce qui transforme le contrôle de retour strict d'un
+    souci en non-événement.
+  </div>
+
+  <h2 id="best-for">À qui ça convient</h2>
+  <p>
+    Réservez Sixt si une voiture plus récente compte pour vous et que vous acceptez d'être rigoureux à la
+    prise en charge comme au retour, voyageurs qui veulent un SUV frais pour parcourir la montagne, ou
+    qui préfèrent simplement la flotte la plus récente. Si vous voulez le retour le plus détendu,
+    <a href={L('/car-rental/europcar-agadir-airport/')}>Europcar</a> est l'international le plus stable ;
+    si le prix mène, une agence locale est moins chère mais plus variable. Voyez comment ils se comparent
+    tous sur la page <a href={L('/best-car-rental-agadir-airport/')}>meilleure location de voiture à
+    l'aéroport d'Agadir</a>.
+  </p>
+
+  <div class="disclosure-inline">
+    Certains liens ici sont des liens d'affiliation : si vous réservez via ces liens, nous pouvons
+    percevoir une petite commission, sans surcoût pour vous. Cela ne change ni les prix affichés ni nos
+    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
+  </div>
+
+  <p>
+    Comparez Sixt avec les autres comptoirs, <a href={L('/car-rental/hertz-agadir-airport/')}>Hertz</a> et
+    <a href={L('/car-rental/europcar-agadir-airport/')}>Europcar</a>, ou partez du
+    <a href={L('/agadir-airport-car-rental/')}>hub de la location à l'aéroport d'Agadir</a>. Besoin d'un
+    vrai véhicule tout-terrain ? Voyez la <a href={L('/agadir-airport-4x4-rental/')}>location de 4x4</a>.
+  </p>
+</ReviewLayout>

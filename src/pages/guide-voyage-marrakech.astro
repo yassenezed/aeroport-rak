@@ -1,0 +1,233 @@
+---
+import GuideLayout from '../layouts/GuideLayout.astro';
+import { getLocalizedPath, useTranslations } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const t = useTranslations(lang);
+const blogLinks = [
+  { href: '/things-to-do-agadir/', label: 'nav.thingsToDo', img: photos['things-to-do-agadir'], alt: 'Vue sur la Marina d\'Agadir et la montagne Oufella - meilleures activités' },
+  { href: '/best-beaches-near-agadir/', label: 'nav.bestBeaches', img: photos['agadir-beach'], alt: 'Vue panoramique sur la baie d\'Agadir et la plage de sable au coucher du soleil' },
+  { href: '/agadir-weather-when-to-visit/', label: 'nav.weather', img: photos['best-time-to-visit-agadir'], alt: "Vue panoramique aérienne de la baie d'Agadir et de sa longue plage de sable - meilleure période pour visiter Agadir pour un temps ensoleillé" },
+  { href: '/is-agadir-safe/', label: 'nav.isSafe', img: photos['is-agadir-safe'], alt: "Vue côtière du village de Taghazout près d'Agadir - Agadir est-elle sûre pour les touristes et les familles" },
+  { href: '/agadir-vs-marrakech/', label: 'nav.vsMarrakech', img: photos['agadir-vs-marrakech'], alt: 'Comparaison Agadir vs Marrakech pour les vacances' },
+  { href: '/agadir-to-marrakech-transport/', label: 'nav.transportMarrakech', img: photos['marrakech'], alt: 'Agadir à Marrakech transport en bus et taxi' },
+  { href: '/agadir-to-essaouira-day-trip/', label: 'nav.dayTripEssaouira', img: photos['essaouira-day-trip'], alt: 'Excursion d\'une journée d\'Agadir à la médina d\'Essaouira' },
+  { href: '/paradise-valley-from-agadir/', label: 'nav.paradiseValley', img: photos['paradise-valley'], alt: 'Excursion Paradise Valley depuis Agadir montagnes de l\'Atlas' },
+  { href: '/souk-el-had-agadir/', label: 'nav.soukElHad', img: photos['souk-el-had'], alt: 'Shopping au marché Souk El Had à Agadir' },
+  { href: '/surfing-taghazout-guide/', label: 'nav.surfingTaghazout', img: photos['taghazout'], alt: 'Guide de surf de Taghazout et meilleures vagues' },
+  { href: '/taghazout-surf-camps/', label: 'nav.taghazoutSurfCamps', img: photos['taghazout-surf-camps'], alt: 'Meilleurs surf camps et écoles de surf de Taghazout' },
+  { href: '/imsouane-surf-guide/', label: 'nav.imsouaneSurfGuide', img: photos['imsouane-bay'], alt: 'Guide de surf longboard Imsouane' },
+  { href: '/morocco-entry-requirements/', label: 'nav.entryRequirements', img: photos['morocco-entry-requirements'], alt: 'Conditions d\'entrée au Maroc et aéroport d\'Agadir' },
+  { href: '/flights-to-agadir/', label: 'nav.flightsAgadir', img: photos['agadir-airport-transfer'], alt: 'Vols pas chers vers l\'aéroport d\'Agadir' },
+  { href: '/best-restaurants-agadir/', label: 'nav.bestRestaurants', img: photos['best-restaurants-agadir'], alt: 'Meilleurs restaurants de la marina d\'Agadir' },
+  { href: '/agadir-with-kids/', label: 'nav.agadirWithKids', img: photos['agadir-with-kids'], alt: 'Vacances en famille à Agadir avec enfants' },
+  { href: '/agadir-medina/', label: 'nav.agadirMedina', img: photos['agadir-medina'], alt: 'La Médina d\'Agadir reconstruction et architecture' },
+  { href: '/getting-around-agadir/', label: 'nav.gettingAroundAgadir', img: photos['getting-around-agadir'], alt: 'Se déplacer à Agadir en petit taxi et bus' },
+  { href: '/agadir-camel-ride-quad/', label: 'nav.camelQuad', img: photos['agadir-camel-ride-quad'], alt: 'Balade en chameau et quad dans les dunes d\'Agadir' },
+  { href: '/shopping-in-agadir/', label: 'nav.shoppingAgadir', img: photos['shopping-in-agadir'], alt: 'Faire du shopping à Agadir souvenirs et huile d\'argan' }
+];
+
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Guide de voyage Agadir', href: L('/agadir-travel-guide/') },
+];
+const toc = [
+  { label: 'Pourquoi Agadir', id: 'pourquoi' },
+  { label: 'Arriver depuis l’aéroport', id: 'arriver' },
+  { label: 'Se déplacer', id: 'deplacer' },
+  { label: 'Où poser ses valises', id: 'quartiers' },
+  { label: 'Quand venir', id: 'quand' },
+  { label: 'Que faire', id: 'faire' },
+  { label: 'Les excursions', id: 'excursions' },
+];
+const faqs = [
+  { q: 'Agadir vaut-elle le voyage ?', a: 'Oui, avec les bonnes attentes. Agadir est une station balnéaire moderne, reconstruite après le séisme de 1960 : elle n’a donc pas le charme des médinas anciennes de Marrakech ou de Fès. Ce qu’elle offre, en revanche, c’est une longue plage atlantique propre, du soleil quasiment toute l’année, de bons produits de la mer et un accès facile à l’arrière-pays du Souss et à la côte du surf. C’est avant tout un camp de base balnéaire tranquille d’où rayonner, plutôt qu’une ville de visites en soi.' },
+  { q: 'Combien de jours faut-il à Agadir ?', a: 'Trois ou quatre jours suffisent pour la ville elle-même, la plage, la marina, le Souk El Had et la Kasbah avec son nouveau téléphérique. Pour y ajouter Paradise Valley, une journée de surf à Taghazout et une virée à Taroudant ou Essaouira, comptez une semaine. Beaucoup restent plus longtemps, tout simplement parce qu’on y est bien et sans effort.' },
+  { q: 'Agadir convient-elle aux familles ?', a: 'Tout à fait. La plage descend en pente douce, la promenade se fait facilement en poussette, et les grands hôtels-clubs sont pensés pour les familles, avec piscines et clubs enfants. Crocoparc et le téléphérique de la Kasbah font des demi-journées faciles, et l’ambiance calme et sans tracas de la ville la rend moins intimidante qu’un premier séjour dans la médina de Marrakech.' },
+  { q: 'A-t-on besoin d’une voiture à Agadir ?', a: 'Pas pour la ville, les taxis sont bon marché et le front de mer se parcourt à pied. La voiture se justifie si vous voulez explorer : Paradise Valley, les villages de surf, Taroudant et les petites routes du Souss sont bien plus accessibles avec votre propre véhicule. Pour un séjour plage et marina, vous pouvez vous en passer.' },
+];
+---
+<GuideLayout keywords="Guide Voyage Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Guide Voyage Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Guide Voyage à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Maroc · Agadir"
+  h1="Le guide de voyage d’Agadir"
+  lede="Une station balnéaire atlantique moderne, du soleil toute l’année, de bons produits de la mer et la côte du surf à deux pas. Voici comment arriver depuis l’aéroport, où poser ses valises, quand venir et ce qui vaut vraiment votre temps."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['agadir-bay']}
+  toc={toc}
+  faqs={faqs}
+  updated="juin 2026"
+  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+>
+  <p>
+    Agadir est la capitale balnéaire du Maroc, et elle assume ce rôle sans complexe. Reconstruite en damier
+    après le séisme de 1960, elle n’a rien du dédale romantique de Marrakech ou de Fès, et c’est
+    précisément pour cela que ceux qui cherchent le soleil, le sable et une première approche facile du
+    Maroc finissent par l’adorer. Six kilomètres de plage, un climat doux qui attire les charters de soleil
+    hivernal, du poisson frais débarqué des bateaux et les vagues de Taghazout à 40 minutes au nord : voilà
+    le programme. Ce guide donne la vue d’ensemble, chaque lien plus bas creuse le sujet.
+  </p>
+
+  <h2 id="pourquoi">Pourquoi venir à Agadir</h2>
+  <p>
+    Deux choses font tourner Agadir. La première, c’est la météo : la ville est blottie dans une baie
+    abritée aux hivers doux, ce qui explique pourquoi les Européens du Nord y débarquent par avions entiers
+    de novembre à mars, sûrs de trouver de la chaleur quand il fait gris chez eux. La seconde, c’est la
+    côte. Juste au nord, la houle qui gâche l’hiver des baigneurs fait d’Anchor Point l’un des meilleurs
+    spots de droite au monde : la même région attire donc les surfeurs de septembre à avril. Ajoutez la
+    bonne cuisine, les prix bas et une ambiance calme et accueillante, et vous tenez un endroit qui plaît
+    autant aux familles qu’aux jeunes voyageurs venus avec leur planche.
+  </p>
+
+  <h2 id="arriver">Arriver depuis l’aéroport</h2>
+  <p>
+    Presque tout le monde atterrit à l’aéroport Agadir Al Massira (AGA), à environ 22 km au sud-est de la
+    ville, près de Temsia. C’est un aéroport modeste, à terminal unique, qui traite surtout des vols
+    charters et low-cost depuis la France, la Belgique, le Royaume-Uni et la Scandinavie, voyez la page
+    complète <a href={L('/flights-to-agadir/')}>vols pour Agadir</a> pour savoir qui dessert quoi. Le hic à
+    l’arrivée : ni train ni navette utile, donc rejoindre la ville passe par un grand taxi, un transfert
+    réservé ou une voiture de location. Le <a href={L('/agadir-airport-guide/')}>guide de l’aéroport</a>
+    déroule l’arrivée étape par étape, et le <a href={L('/agadir-airport-transfers/')}>récapitulatif des
+    transferts</a> détaille chaque trajet et son vrai coût.
+  </p>
+
+  <h2 id="deplacer">Se déplacer</h2>
+  <p>
+    En ville même, on n’a presque rien à planifier. La promenade du front de mer est plate et se parcourt
+    d’un bout à l’autre à pied, et les petits taxis orange sont bon marché pour le reste, demandez le
+    compteur ou fixez le prix pour les courtes distances. Pas d’Uber ni de Careem à Agadir : ce sont les
+    taxis au compteur ou vos jambes. Pour la région. Paradise Valley, les villages de surf, Taroudant, une voiture de location offre le plus de liberté, tandis qu’un chauffeur a du sens si vous préférez ne
+    pas affronter vous-même les petites routes marocaines.
+  </p>
+
+  <h2 id="quartiers">Où poser ses valises</h2>
+  <p>
+    La plupart des visiteurs logent dans la bande hôtelière derrière la plage, entre la marina et le
+    quartier de Founty (Sonaba), à deux pas du sable, hérissée d’hôtels, des tours en tout-compris aux
+    riads plus modestes. Le côté marina est plus calme et plus récent ; la promenade centrale est plus
+    animée. Les surfeurs zappent souvent la ville et s’installent à Taghazout ou Tamraght, plus haut sur la
+    côte. Notre guide <a href={L('/where-to-stay-agadir/')}>où dormir à Agadir</a> détaille les quartiers
+    comme il faut.
+  </p>
+
+  <h2 id="quand">Quand venir</h2>
+  <p>
+    Agadir se visite toute l’année, mais la saison choisie change le voyage. Le printemps et l’automne
+    (grosso modo avril–juin et septembre–octobre) sont le créneau idéal : chaud, ensoleillé et pas encore
+    bondé. L’hiver est doux et lumineux pour des standards européens, la fenêtre classique du soleil
+    hivernal, même si l’Atlantique est vif. Le plein été est chaud, mais la brise marine garde la côte plus
+    agréable que l’intérieur brûlant vers Taroudant. Les surfeurs visent la saison de houle de
+    septembre–avril. La page <a href={L('/agadir-weather-when-to-visit/')}>météo et meilleure période</a>
+    donne le détail mois par mois.
+  </p>
+
+  <h2 id="faire">Que faire</h2>
+  <p>
+    La vedette, c’est la plage, mais Agadir a plus que du sable. La marina, l’immense Souk El Had, les
+    ruines de la Kasbah perchée et son nouveau téléphérique, et des attractions familiales comme Crocoparc
+    remplissent plusieurs journées faciles. Le panorama complet, avec ce qui vaut votre temps et ce qu’on
+    peut sauter, est sur le guide <a href={L('/things-to-do-agadir/')}>que faire à Agadir</a>, et si vous
+    êtes venu pour les vagues, commencez par le
+    <a href={L('/surfing-taghazout-guide/')}>guide du surf à Taghazout</a>.
+  </p>
+
+  <h2 id="excursions">Les excursions qui valent le coup</h2>
+  <p>
+    Agadir donne le meilleur d’elle-même quand on en fait un camp de base. Paradise Valley, une gorge
+    bordée de palmiers avec des vasques naturelles, est à une heure au nord-est, l’escapade classique
+    d’une demi-journée. Taghazout et la côte du surf sont à 40 minutes au nord. Taroudant, la « petite
+    Marrakech » fortifiée de la plaine du Souss, fait une belle journée, et le port bleu et blanc
+    d’Essaouira est un trajet plus long mais récompensé. La plupart se font facilement en voiture ou en
+    excursion guidée.
+  </p>
+
+  
+
+  <style>
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 3rem 0;
+    }
+    .blog-card {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--r-md);
+      text-decoration: none;
+      color: var(--ink);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+      transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+      overflow: hidden;
+    }
+    .blog-card:hover {
+      box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+      transform: translateY(-2px);
+      border-color: var(--green);
+    }
+    .blog-card-image {
+      width: 100%;
+      height: 160px;
+      overflow: hidden;
+      background: var(--cream-2);
+    }
+    .blog-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .blog-card:hover .blog-card-image img {
+      transform: scale(1.05);
+    }
+    .blog-card-content {
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .blog-card-content h3 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.15rem;
+      color: var(--green);
+      line-height: 1.3;
+    }
+    .blog-card-content span {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--ink-2);
+      margin-top: auto;
+    }
+  </style>
+
+  <div class="blog-grid">
+    {blogLinks.map(link => (
+      <a href={L(link.href)} class="blog-card">
+        <div class="blog-card-image">
+          <img src={link.img.src} width={link.img.width} height={link.img.height} alt={link.alt} loading="lazy" />
+        </div>
+        <div class="blog-card-content">
+          <h3>{t(link.label as any)}</h3>
+          <span>{t('common.readMore' as any)} &rarr;</span>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <div class="callout">
+    <span class="callout-label">La liste pour préparer son voyage</span>
+    Réglez vos <a href={L('/flights-to-agadir/')}>vols</a> et un moyen de quitter
+    l’<a href={L('/agadir-airport-transfers/')}>aéroport</a> · choisissez un point de chute avec
+    <a href={L('/where-to-stay-agadir/')}>où dormir</a> · programmez
+    <a href={L('/things-to-do-agadir/')}>que faire</a> · et vérifiez
+    <a href={L('/agadir-weather-when-to-visit/')}>quand venir</a> avant de réserver.
+  </div>
+</GuideLayout>

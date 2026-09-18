@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
+import { getLocalizedPath } from '../i18n';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+---
+<BaseLayout keywords="A Propos Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide A Propos Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à A Propos à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+>
+  <section class="hero">
+    <div class="container hero-inner">
+      <Breadcrumbs items={[{ name: 'Accueil', href: L('/') }, { name: 'À propos', href: L('/about/') }]} />
+      <span class="eyebrow">À propos</span>
+      <h1>À propos d’AirportAGA</h1>
+      <p class="lede">Un guide indépendant de l’aéroport Agadir Al Massira et de la côte alentour, écrit pour être vraiment utile, pas pour vous vendre l’option la plus chère.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <article class="prose">
+        <p>
+          AirportAGA est un guide de voyage indépendant consacré à l’aéroport Agadir Al Massira (AGA) et à
+          la côte Souss-Massa qu’il dessert. Nous ne sommes ni l’autorité aéroportuaire, ni une compagnie
+          aérienne, ni une société de taxis ou de transferts, nous ne vendons ni trajets ni chambres.
+          Nous sommes des voyageurs lassés des conseils minces et recopiés sur l’arrivée et les
+          déplacements à Agadir, et nous avons construit le guide que nous aurions aimé trouver.
+        </p>
+
+        <h2>Ce que nous couvrons</h2>
+        <p>
+          Le concret, celui qui pose vraiment problème : à quoi ressemblent les arrivées à l’AGA, comment
+          rejoindre la ville et monter sur la côte quand il n’y a pas de train et qu’un bus de ville ne
+          circule qu’en journée, les justes prix des taxis et transferts, la location de voiture, où
+          dormir, et les conseils de voyage, météo,
+          que faire, surf, sécurité, qui transforment une arrivée sereine en bon séjour.
+        </p>
+
+        <h2>Comment nous documentons</h2>
+        <p>
+          Nos prix, distances et temps de trajet proviennent de la vérification de vrais devis
+          d’opérateurs et de la réalité du terrain, et nous les datons pour que vous sachiez leur
+          fraîcheur, les chiffres ici ont été vérifiés pour la dernière fois en juin 2026. Les tarifs
+          varient avec le carburant, la saison et la demande : nous traitons donc chaque chiffre comme un
+          repère bien documenté plutôt qu’un devis, et nous disons clairement quand l’option la moins
+          chère est une fausse économie ou quand un grand taxi vaut mieux qu’un transfert réservé.
+        </p>
+
+        <h2>Pourquoi nous faire confiance</h2>
+        <p>
+          Nous gardons le site gratuit grâce aux liens d’affiliation : si vous réservez un transfert, une
+          voiture, une chambre, un vol ou une excursion via certains liens, un partenaire peut nous verser
+          une petite commission, sans surcoût pour vous. Cela ne change jamais le prix que vous payez et, c’est l’essentiel, ne décide jamais de nos recommandations. Quand le choix le plus malin est le
+          moins cher, nous le disons. Tous les détails dans notre
+          <a href={L('/affiliate-disclosure/')}>divulgation d’affiliation</a>.
+        </p>
+
+        <h2>Nous contacter</h2>
+        <p>
+          Vous avez repéré un prix qui a bougé, un détail qui a changé, ou quelque chose qui nous a
+          échappé ? Nous voulons vraiment le savoir, c’est ce qui garde le guide exact.
+          <a href={L('/contact/')}>Écrivez-nous</a> et nous y jetterons un œil.
+        </p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,171 @@
+---
+import TransferLayout from '../../layouts/TransferLayout.astro';
+import TransferOptions from '../../components/affiliate/TransferOptions.astro';
+import { getLocalizedPath } from '../../i18n';
+import { photos } from '../../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Transferts', href: L('/agadir-airport-transfers/') },
+  { name: 'Taxi aéroport', href: L('/agadir-airport-taxi/') },
+  { name: 'Prix', href: L('/agadir-airport-taxi/prices/') },
+];
+const facts = [
+  {
+    label: "Ville (jour)",
+    value: "200–250",
+    sub: "MAD"
+  },
+  {
+    label: "Ville (nuit)",
+    value: "300–350",
+    sub: "MAD"
+  },
+  {
+    label: "Par voiture",
+    value: "pas /pers",
+    sub: "privé"
+  },
+  {
+    label: "Paiement",
+    value: "Espèces & Carte",
+    sub: "acceptés"
+  }
+];
+const faqs = [
+  { q: "Combien devrait coûter un taxi de l'aéroport d'Agadir en 2026 ?", a: "Vers le centre d'Agadir, une course correcte en grand taxi coûte 200–250 MAD en journée (≈ 19–23 €) et 300–350 MAD la nuit. Taghazout : 300–400 MAD jour, 400–500 MAD nuit ; Taroudant : 600–800 MAD. Ce sont des prix au véhicule pour une course privée, convenus avant de charger. Vérifiés en juin 2026." },
+  { q: "Le prix du taxi est-il par personne ou par voiture ?", a: "Pour une course privée, c'est au véhicule, jusqu'au nombre de places, un couple ou une famille paie donc autant qu'un voyageur seul. La confusion vient des grands taxis « partagés » que les habitants se répartissent par place, mais à la station de l'aéroport vous louez presque toujours toute la voiture. Confirmez « par voiture, pas par personne » au moment de fixer le prix." },
+  { q: "Pourquoi le taxi de l'aéroport d'Agadir est-il plus cher la nuit ?", a: "Il n'y a pas de compteur sur la course de l'aéroport, et un supplément de nuit reconnu s'applique après 20–21 h environ, généralement 30 à 50 % de plus que le tarif de jour. Comme la plupart des vols charters atterrissent le soir à l'AGA, c'est ce tarif de nuit que paient la plupart des arrivants. C'est normal : prévoyez simplement le chiffre plus élevé du tableau." },
+  { q: "Peut-on payer le taxi de l'aéroport par carte ?", a: "Non. Les grands taxis se paient en espèces, en dirhams. Retirez des MAD à un distributeur du hall d'arrivée avant de rejoindre la station, et prévoyez de petites coupures, les chauffeurs rendent rarement sur un billet de 200 dirhams. Pour payer par carte, un transfert réservé et réglé en ligne est la seule vraie option." },
+  { q: "Un taxi est-il moins cher qu'un transfert réservé ?", a: "Pour une course de jour vers le centre d'Agadir, un grand taxi négocié est en général un peu moins cher qu'un transfert. Mais l'écart se réduit la nuit et sur les longs trajets, et disparaît dès qu'un chauffeur annonce le tarif touriste. Un transfert réservé vers la ville dès 20 € supprime ce risque avec un prix fixe." },
+];
+---
+<TransferLayout
+  lang={lang}
+  title="Prix taxi aéroport Agadir 2026 : grille complète (jour & nuit) | AirportAGA"
+  description="Une grille de prix complète et datée pour les taxis depuis l'aéroport Agadir Al Massira en 2026, tarifs grand taxi vers la ville, Taghazout, Marrakech et Taroudant, jour et nuit, en MAD et en euros, et comment éviter le tarif touriste."
+  eyebrow="Aéroport d'Agadir · Prix des taxis"
+  h1="Prix taxi aéroport Agadir (2026)"
+  lede="Tous les tarifs grand taxi depuis Al Massira, jour et nuit, en dirhams et en euros, pour arriver à la station en connaissant le juste prix au lieu de deviner. Il n'y a pas de compteur : voici votre repère."
+  breadcrumbs={breadcrumbs}
+  facts={facts}
+  priceFrom={19}
+  heroImage={photos['agadir-marina']}
+  heroProvider="transfer"
+  heroCtaLabel="Comparer aux transferts à prix fixe"
+  secondaryHref="/agadir-airport-taxi/"
+  secondaryLabel="Comment fonctionne le taxi"
+  faqs={faqs}
+  cta={{ heading: 'Connaissez le prix avant d\'atterrir', text: 'Un transfert réservé fixe le tarif en ligne et place un chauffeur à l\'arrivée avec votre nom, pas de compteur, pas de négociation, annulation gratuite sur la plupart des réservations.', provider: 'transfer', label: 'Bloquer un prix fixe' }}
+>
+  <p>
+    Il n'y a pas de compteur sur la course de l'aéroport : le tarif à la station est celui que vous
+    convenez avec le chauffeur, d'où l'importance de connaître les vrais chiffres. Les tableaux
+    ci-dessous donnent des prix grand taxi réalistes et localement justes, vérifiés en juin 2026.
+    Prenez-les comme repère : quand un chauffeur démarre haut, vous savez à peu près où vous arrêter, et
+    vous fixez le montant avant que les bagages n'entrent dans le coffre.
+  </p>
+
+  
+  
+  <h2 id="ville">Taxi vers le centre d'Agadir, jour et nuit</h2>
+  <p>
+    La course la plus fréquente, et celle qu'il vaut le plus la peine de connaître par cœur. Founty, la
+    marina et les grands hôtels de plage tombent dans la même fourchette ; aucun secteur central n'est
+    « beaucoup plus loin », quoi qu'en dise un chauffeur.
+  </p>
+  <div class="table-wrap">
+    <table class="data">
+      <thead>
+        <tr><th>Destination</th><th>Journée (MAD)</th><th>Nuit (MAD)</th><th>≈ en €</th></tr>
+      </thead>
+      <tbody>
+        <tr class="row-highlight"><td>Centre d'Agadir</td><td class="num">200–250</td><td class="num">300–350</td><td class="num">19–32 €</td></tr>
+        <tr><td>Marina / Founty</td><td class="num">200–250</td><td class="num">300–350</td><td class="num">19–32 €</td></tr>
+        <tr><td>Hôtels front de mer</td><td class="num">200–250</td><td class="num">300–350</td><td class="num">19–32 €</td></tr>
+        <tr><td>Inezgane / Dcheira</td><td class="num">150–200</td><td class="num">200–280</td><td class="num">14–26 €</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="cote">Taxi vers la côte. Tamraght, Aourir, Taghazout</h2>
+  <p>
+    Les villages de surf coûtent plus cher car ils sont plus loin et parce que les adresses non balisées
+    rendent les chauffeurs méfiants. Enregistrez le point WhatsApp de votre logement hors ligne avant de
+    négocier, et attendez-vous au haut de la fourchette si vous arrivez tard.
+  </p>
+  <div class="table-wrap">
+    <table class="data">
+      <thead>
+        <tr><th>Destination</th><th>Journée (MAD)</th><th>Nuit (MAD)</th><th>≈ en €</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Aourir (village bananier)</td><td class="num">250–300</td><td class="num">350–400</td><td class="num">23–37 €</td></tr>
+        <tr><td>Tamraght</td><td class="num">250–350</td><td class="num">350–450</td><td class="num">23–42 €</td></tr>
+        <tr class="row-highlight"><td>Taghazout</td><td class="num">300–400</td><td class="num">400–500</td><td class="num">28–46 €</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="long">Tarifs longue distance. Taroudant, Marrakech et au-delà</h2>
+  <p>
+    Pour ces trajets, vous louez la voiture pour un long parcours : les chiffres grimpent vite et il y a
+    une vraie marge de négociation, ou de comparaison avec un transfert à prix fixe, souvent gagnant
+    sur les longs trajets. La course de Marrakech est un trajet de deux heures et demie à trois heures ;
+    convenez de tout, y compris les arrêts, avant de partir.
+  </p>
+  <div class="table-wrap">
+    <table class="data">
+      <thead>
+        <tr><th>Destination</th><th>Journée (MAD)</th><th>Nuit (MAD)</th><th>≈ en €</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Taroudant</td><td class="num">600–800</td><td class="num">700–900</td><td class="num">55–83 €</td></tr>
+        <tr><td>Tiznit</td><td class="num">700–900</td><td class="num">800–1000</td><td class="num">65–93 €</td></tr>
+        <tr><td>Essaouira</td><td class="num">1100–1400</td><td class="num">1300–1600</td><td class="num">102–148 €</td></tr>
+        <tr class="row-highlight"><td>Marrakech</td><td class="num">1300–1700</td><td class="num">1500–1900</td><td class="num">120–176 €</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small text-muted">
+    Tous les montants sont au véhicule pour une course privée, en espèces et en dirhams, convenus avant
+    de charger. Ils varient avec le carburant et la saison : un repère, pas une garantie. Taux utilisé :
+    ~1 EUR ≈ 10,8 MAD.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">Conseil local</span>
+    Retirez des dirhams à un distributeur du hall d'arrivée avant de rejoindre la station, et faites la
+    monnaie, les chauffeurs rendent rarement sur un billet de 200 dirhams, et « gardez la monnaie » sur
+    un gros billet, c'est ainsi qu'un juste prix devient discrètement un mauvais prix.
+  </div>
+
+  <h2 id="arnaque">Comment décrocher le juste prix</h2>
+  <ul>
+    <li><strong>Fixez le prix avant l'ouverture du coffre</strong>, « Combien pour le centre d'Agadir ? » suffit.</li>
+    <li><strong>Calez-vous sur le tableau ci-dessus</strong> et annoncez votre chiffre ; si le premier prix double, passez à la voiture suivante.</li>
+    <li><strong>Confirmez que c'est au véhicule, pas par personne</strong>, surtout en couple ou en famille.</li>
+    <li><strong>Connaissez votre quartier</strong> (Founty, marina, front de mer) pour que « c'est beaucoup plus loin » ne passe pas.</li>
+    <li><strong>Enregistrez le point GPS de la côte hors ligne</strong> pour les déposes à Taghazout et Tamraght.</li>
+  </ul>
+
+  <h3 id="reserver">Comparer avec un transfert à prix fixe</h3>
+  <p>Si vous préférez ne pas négocier, un transfert réservé bloque le prix en ligne. Les conditions s'affichent avant de payer :</p>
+  
+
+  <div class="disclosure-inline">
+    Certains liens ici sont des liens d'affiliation : si vous réservez un transfert via ces liens, nous
+    pouvons percevoir une petite commission, sans surcoût pour vous. Cela ne change ni les prix affichés
+    ni nos recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
+  </div>
+
+  <p>
+    Retour au fonctionnement du <a href={L('/agadir-airport-taxi/')}>taxi aéroport</a>, voyez toutes les
+    options sur le <a href={L('/agadir-airport-transfers/')}>hub des transferts</a>, lisez le détail du
+    <a href={L('/agadir-airport-to-agadir/')}>trajet aéroport-ville</a>, ou consultez le
+    <a href={L('/agadir-airport-guide/uber-taxi/')}>guide Uber &amp; taxi</a> pour comprendre pourquoi les applis ne sont pas une option ici.
+  </p>
+</TransferLayout>

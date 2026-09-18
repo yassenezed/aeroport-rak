@@ -1,0 +1,48 @@
+---
+export interface Props {
+  type: 'arrivals' | 'departures';
+  lang?: string;
+}
+
+const { type, lang = 'fr' } = Astro.props;
+
+// Fallback to English if lang is not explicitly supported by Avionio
+// Note: Avionio supports many languages, but we'll inject the current lang directly.
+const avionioLang = lang;
+const widgetUrl = `https://www.avionio.com/widget/${avionioLang}/rak/${type}?style=2`;
+const linkUrl = `https://www.avionio.com/${avionioLang}/airport/rak/${type}`;
+const homeUrl = `https://www.avionio.com/${avionioLang}`;
+---
+
+<div class="avionio-widget">
+  <iframe 
+    id={`avionio-frame-${type}`} 
+    height="650px" 
+    frameborder="0" 
+    scrolling="no" 
+    style="border:0; width: 100%; margin:0; padding:0; min-height: 500px" 
+    src={widgetUrl}>
+  </iframe>
+  <div style="font-size:12px; width: 100%; text-align: center; margin-top: 10px;">
+    <a style="text-decoration:none; color:#333;" href={linkUrl} target="_blank">RAK • Marrakech Ménara</a>
+    <span style="color: #FD6150;">♥</span>
+    <a style="text-decoration:none; color:#333;" href={homeUrl} target="_blank">Avionio.com</a>
+  </div>
+  <script is:inline define:vars={{ type }}>
+    window.addEventListener("message", function(e) {
+      if (typeof e.data === 'string') {
+        const frame = document.getElementById('avionio-frame-' + type);
+        if (!frame) return;
+        
+        if (e.data.indexOf('avionioHeight:') > -1) {
+          frame.height = parseInt(e.data.split('avionioHeight:')[1]) + 30 + 'px';
+        } else if (e.data.indexOf('avionioHeightScroll:') > -1) {
+          const se = document.documentElement || document.body;
+          const sp = se.scrollTop - (se.scrollHeight - se.clientHeight);
+          frame.height = parseInt(e.data.split('avionioHeightScroll:')[1]) + 30 + 'px';
+          se.scrollTop = sp + se.scrollHeight - se.clientHeight;
+        }
+      }
+    }, false);
+  </script>
+</div>

@@ -1,0 +1,119 @@
+---
+import GuideLayout from '../../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../../i18n';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: "Guide de l'aéroport", href: L('/agadir-airport-guide/') },
+  { name: 'Plan du terminal', href: L('/agadir-airport-guide/terminal-map/') },
+];
+const toc = [
+  { label: 'Un terminal, deux moitiés', id: 'overview' },
+  { label: 'Le côté arrivées', id: 'arrivals-side' },
+  { label: 'Le côté départs', id: 'departures-side' },
+  { label: 'Devant les portes', id: 'outside' },
+  { label: 'La signalétique', id: 'signage' },
+  { label: 'Comment se repérer', id: 'orient' },
+];
+const faqs = [
+  { q: "Combien de terminaux compte l'aéroport d'Agadir ?", a: "Un seul. Agadir Al Massira a un unique terminal passagers compact qui gère tous les vols commerciaux, domestiques et internationaux, arrivées et départs sous le même toit. Aucun terminal séparé à rejoindre, aucune navette." },
+  { q: "L'aéroport d'Agadir est-il facile à parcourir ?", a: "Oui, il est petit et agencé simplement. Arrivées et départs sont nettement séparés, les marches sont courtes, et on voit l'essentiel du terminal depuis n'importe quel point. Difficile de s'y perdre." },
+  { q: "Où est la station de taxis à l'aéroport d'Agadir ?", a: "Juste devant les portes des arrivées. Une fois passé les tapis à bagages et le hall d'arrivée, la sortie débouche directement sur la station de grands taxis et le parking courte durée." },
+  { q: "Où sont les comptoirs de location de voitures à l'aéroport d'Agadir ?", a: "Dans le hall d'arrivée, sur le chemin des tapis à bagages vers la sortie. Une vingtaine de comptoirs bordent le passage : vous les croisez avant d'atteindre les portes." },
+  { q: "Combien de temps pour traverser le terminal de l'aéroport d'Agadir ?", a: "Quelques minutes à peine. C'est un bâtiment compact sur un seul niveau, sans long couloir ni changement de hall. À l'arrivée, des tapis à la station de taxis, comptez le temps de récupérer un bagage et de marcher quelques dizaines de mètres ; au départ, l'enregistrement, la sécurité et les portes A s'enchaînent de près." },
+];
+---
+<GuideLayout keywords="Plan Terminal Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Plan Terminal Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Plan Terminal à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Guide de l'aéroport · Agencement"
+  h1="Plan et agencement du terminal de l'aéroport d'Agadir"
+  lede="L'AGA n'a qu'un petit terminal : une image mentale compte plus qu'un plan. Voici comment l'endroit est organisé, arrivées d'un côté, départs de l'autre, pour savoir où est tout avant même d'atterrir."
+  breadcrumbs={breadcrumbs}
+  toc={toc}
+  faqs={faqs}
+  updated="juin 2026"
+
+  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+>
+  <p>
+    Agadir Al Massira a un seul terminal passagers, et il est assez petit pour qu'on en saisisse
+    l'essentiel d'un coup d'œil. Pas de navette entre terminaux, pas de dédale de halls, juste deux
+    moitiés nettes sous un même toit. Plutôt que de chercher un plan imprimé, imaginez l'agencement
+    ci-dessous et vous le traverserez sans réfléchir.
+  </p>
+
+  <h2 id="overview">Un terminal, deux moitiés</h2>
+  <p>
+    Voyez le terminal comme un seul bâtiment, vols domestiques et internationaux confondus, partagé entre
+    un côté arrivées et un côté départs. Tout s'enchaîne en ligne droite : à l'entrée, vous faites tapis →
+    hall → portes ; à la sortie, vous faites portes → enregistrement → sécurité → portes A côté piste.
+    Comme c'est compact et de plain-pied, les marches se comptent en minutes, pas en longues traversées de
+    grand hub. Si vous avez fréquenté un grand aéroport marocain ou européen, réduisez-le mentalement : on
+    en voit l'essentiel d'un coin à l'autre.
+  </p>
+
+  <h2 id="arrivals-side">Le côté arrivées</h2>
+  <p>
+    Les arrivées sont au rez-de-chaussée. En descendant de l'avion, vous suivez le couloir vers le contrôle
+    des passeports, puis le hall des bagages, où les vols internationaux partagent un seul groupe de tapis.
+    Des tapis, vous traversez un hall d'arrivée modeste vers la sortie, et sur ce court trajet vous passez
+    ce dont vous avez besoin en premier : les distributeurs des banques marocaines, les bureaux de change,
+    les kiosques SIM de Maroc Telecom, Orange et inwi, un café ou deux, et l'enfilade de comptoirs de
+    location (une vingtaine). Les portes au bout débouchent directement sur la station de grands taxis et la
+    zone de prise en charge, juste devant. Le déroulé complet est sur la
+    <a href={L('/agadir-airport-guide/arrivals/')}>page des arrivées</a>.
+  </p>
+
+  <h2 id="departures-side">Le côté départs</h2>
+  <p>
+    Côté départs, vous entrez près des comptoirs d'enregistrement, faciles à trouver puisque le hall est
+    petit. Passé la dépose bagages, vous franchissez la sécurité, et au-delà se trouvent les portes A côté
+    piste : une zone modeste avec une boutique duty-free, un café ou deux, des sièges et les
+    <a href={L('/agadir-airport-guide/lounges/')}>salons</a>, plutôt qu'un hall commercial. Les portes
+    d'embarquement sont à courte distance de la sécurité, un dernier réflexe utile, c'est de dépenser vos
+    dirhams avant de passer, car le change est compliqué une fois côté piste. La
+    <a href={L('/agadir-airport-guide/departures/')}>page des départs</a> couvre le timing et ce à quoi
+    s'attendre une fois passé.
+  </p>
+
+  <h2 id="outside">Devant les portes</h2>
+  <p>
+    Sortez des arrivées et vous êtes au bord du trottoir : la station de grands taxis et la zone de prise en
+    charge sont juste là, et le parking à ciel ouvert se trouve directement devant le terminal, avec une
+    zone dépose-minute pour les prises en charge et déposes à quelques pas. Des chariots à bagages sont
+    disponibles jusque sur le parking. Les chauffeurs de transfert réservé attendent dans la zone des
+    arrivées ou juste devant, avec une pancarte au nom. Tout ce qu'il faut pour partir est à portée de vue
+    des portes.
+  </p>
+
+  <h2 id="signage">La signalétique</h2>
+  <p>
+    Les panneaux sont en arabe et en français, avec souvent de l'anglais en complément, et les pictogrammes
+    habituels (bagages, taxis, toilettes, salle de prière) suffisent à se guider même sans lire les trois
+    langues. Comme le bâtiment est petit et sur un seul niveau, vous voyez en général votre prochaine étape
+    avant même de chercher le panneau qui l'indique. Inutile de photographier un plan : suivez le flux des
+    autres passagers, il ne mène qu'à deux endroits.
+  </p>
+
+  <h2 id="orient">Comment se repérer</h2>
+  <p>
+    La façon la plus simple de naviguer à l'AGA, c'est par sens de circulation. Vous arrivez ? Continuez
+    vers la sortie et vous passerez les espèces, une SIM et les comptoirs de location dans cet ordre
+    avant d'atteindre la station. Vous partez ? Trouvez l'enregistrement, puis suivez les panneaux à
+    travers la sécurité jusqu'aux portes d'embarquement. Aucune astuce à retenir, le terminal fait
+    l'essentiel du guidage pour vous. Pour tout le reste dans le bâtiment, voyez la
+    <a href={L('/agadir-airport-guide/facilities/')}>page des services</a>.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">La carte mentale</span>
+    À l'arrivée : tapis → distributeurs, SIM, location → portes → station de taxis. Au départ :
+    enregistrement → sécurité → petit côté piste → portes d'embarquement. Un seul niveau, des marches
+    courtes, difficile de se perdre.
+  </div>
+</GuideLayout>

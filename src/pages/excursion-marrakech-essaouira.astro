@@ -1,0 +1,113 @@
+---
+import GuideLayout from '../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'La vallée du Paradis', href: L('/paradise-valley-from-agadir/') },
+];
+const toc = [
+  { label: 'Ce que c\'est', id: 'cest-quoi' },
+  { label: 'Où et à quelle distance', id: 'ou' },
+  { label: 'Comment s\'y rendre', id: 'comment' },
+  { label: 'Quand y aller', id: 'quand' },
+  { label: 'Sur place', id: 'sur-place' },
+  { label: 'À prévoir', id: 'prevoir' },
+];
+const faqs = [
+  { q: "Où se trouve la vallée du Paradis ?", a: "Dans les contreforts du Haut Atlas, près d'Imouzzer Ida Outanane, à environ 60 km au nord-est d'Agadir, soit à peu près 1 h 15 de route de montagne. C'est une gorge creusée par un oued, ponctuée de vasques naturelles et de palmiers, dans l'arrière-pays au-dessus de la côte du surf." },
+  { q: "Comment aller à la vallée du Paradis depuis Agadir ?", a: "Il n'y a pas de transport en commun pratique. La plupart des visiteurs y vont en excursion guidée à la demi-journée, en voiture de location ou avec un chauffeur privé. La route monte et serpente : confortable mais sinueuse, à aborder sans se presser, surtout au retour en fin de journée." },
+  { q: "Peut-on se baigner dans la vallée du Paradis ?", a: "Oui, dans les vasques naturelles, quand elles sont pleines. Tout dépend de la saison : au printemps et après les pluies, l'eau est généreuse et fraîche, parfaite pour la baignade et les sauts de rochers. En plein été et en année sèche, certaines vasques peuvent être basses, voire à sec. Renseignez-vous sur le niveau d'eau avant de partir." },
+  { q: "Quelle est la meilleure période pour la vallée du Paradis ?", a: "Le printemps est idéal : températures douces, végétation verte et vasques bien remplies. L'automne après les premières pluies est bon aussi. Évitez le cœur de l'été, à la fois pour la chaleur et pour le risque de vasques basses. Partez tôt le matin dans tous les cas, pour devancer la foule du week-end et la chaleur." },
+];
+---
+<GuideLayout keywords="Vallee Du Paradis Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Vallee Du Paradis Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Vallee Du Paradis à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Agadir · Excursion"
+  h1="La vallée du Paradis, près d'Agadir"
+  lede="Une gorge de palmiers et de vasques turquoise dans les montagnes au-dessus d'Agadir : la vallée du Paradis est l'escapade nature la plus prisée de la région. Voici comment y aller, quand, et à quoi s'attendre vraiment."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['souss-coast']}
+  toc={toc}
+  faqs={faqs}
+  updated="juin 2026"
+  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+>
+  <p>
+    À une heure et quart d'Agadir, la vallée du Paradis change complètement de décor : on quitte la côte
+    pour grimper dans les montagnes, jusqu'à une gorge bordée de palmiers où l'oued forme des vasques d'eau
+    claire. C'est l'escapade nature classique depuis Agadir, à condition de bien choisir sa saison et son
+    moyen de transport.
+  </p>
+
+  <h2 id="cest-quoi">Ce que c'est</h2>
+  <p>
+    La vallée du Paradis est une gorge creusée par un oued dans les contreforts du Haut Atlas, ponctuée de
+    vasques naturelles, de cascades selon la saison et de palmiers. On y vient pour marcher au fond du
+    canyon, se baigner dans les bassins et sauter des rochers quand le niveau le permet. Rien d'aménagé à
+    grande échelle : c'est un site naturel, pas un parc, et c'est tout son charme.
+  </p>
+
+  <h2 id="ou">Où et à quelle distance</h2>
+  <p>
+    On la situe près d'Imouzzer Ida Outanane, à environ 60 km au nord-est d'Agadir, soit à peu près 1 h 15
+    par une route de montagne qui monte et serpente. La distance est modeste, mais le relief allonge le
+    trajet : ce n'est pas une sortie de dernière minute, plutôt une vraie demi-journée, voire une journée si
+    vous poussez jusqu'à Imouzzer et ses cascades.
+  </p>
+
+  <h2 id="comment">Comment s'y rendre</h2>
+  <p>
+    Il n'y a pas de transport en commun utile vers la vallée. Trois options sensées : l'excursion guidée à
+    la demi-journée, la plus simple, qui gère la route et le timing ; la voiture de location, pour aller à
+    son rythme et s'arrêter en chemin ; ou un chauffeur privé, le compromis confort sans conduire. La route
+    de montagne est belle mais sinueuse, à aborder sans se presser, surtout au retour en fin de journée.
+    Voyez <a href={L('/things-to-do-agadir/')}>que faire à Agadir</a> pour replacer cette sortie parmi les
+    autres.
+  </p>
+
+  <h2 id="quand">Quand y aller</h2>
+  <p>
+    Tout se joue sur l'eau. Au printemps et après les pluies, les vasques sont pleines, l'eau fraîche et la
+    végétation verte : c'est le moment idéal. L'automne, après les premières pluies, fonctionne aussi. En
+    plein été et en année sèche, en revanche, certaines vasques peuvent être basses, voire à sec, la sortie
+    perd alors beaucoup de son intérêt. Renseignez-vous sur le niveau d'eau du moment avant de vous décider,
+    et partez tôt le matin pour devancer la foule du week-end et la chaleur.
+  </p>
+
+  <h2 id="sur-place">Sur place</h2>
+  <p>
+    Au point d'arrivée, des cafés et des vendeurs proposent boissons et tajines avec vue sur la gorge.
+    L'accès aux vasques se fait à pied, parfois sur des sentiers caillouteux et des rochers : prévoyez de
+    bonnes chaussures. Des guides locaux proposent de vous mener aux meilleurs bassins et points de saut, utile, mais convenez du tarif à l'avance. Respectez le site : on remporte ses déchets, l'eau est partagée
+    avec les habitants en aval.
+  </p>
+
+  <h2 id="prevoir">À prévoir</h2>
+  <p>
+    Maillot et serviette, chaussures qui accrochent, eau et en-cas, crème solaire et un peu de liquide
+    (l'arrière-pays fonctionne au cash). Un coupe-vent n'est pas inutile : il peut faire frais en montagne le
+    matin. Si vous conduisez, faites le plein avant la montée, les stations se raréfient en hauteur. Et gardez
+    une bonne marge horaire pour le retour : la route de descente se fait lentement.
+  </p>
+
+  <div class="disclosure-inline">
+    Certains liens de cette page sont des liens d'affiliation : si vous réservez une excursion ou un
+    chauffeur via eux, nous pouvons percevoir une petite commission, sans surcoût pour vous. Cela ne change
+    jamais les prix affichés ni nos recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça
+    fonctionne</a>.
+  </div>
+
+  <div class="callout">
+    <span class="callout-label">L'essentiel</span>
+    ~60 km / 1 h 15 d'Agadir, près d'Imouzzer · route de montagne sinueuse · pas de transport en commun →
+    excursion, location ou chauffeur · vasques pleines au printemps et après les pluies, basses en plein été
+    · partez tôt.
+  </div>
+</GuideLayout>

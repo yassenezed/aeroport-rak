@@ -1,0 +1,123 @@
+---
+import RouteLayout from '../layouts/RouteLayout.astro';
+import TransferOptions from '../components/affiliate/TransferOptions.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Transferts', href: L('/agadir-airport-transfers/') },
+  { name: 'Vers Essaouira', href: L('/agadir-airport-to-essaouira/') },
+];
+const facts = [
+  { label: 'Distance', value: '175 km' },
+  { label: 'Durée', value: '2½–3', sub: 'h' },
+  { label: 'Transfert réservé', value: '110 €', sub: 'dès' },
+  { label: 'Grand taxi', value: 'à négocier', sub: '' },
+];
+const faqs = [
+  { q: "À quelle distance Essaouira se trouve-t-elle de l'aéroport d'Agadir ?", a: "Environ 175 km au nord par la côte, soit 2 h 30 à 3 h de route. L'itinéraire longe l'Atlantique sur une nationale à voie unique : c'est une belle route plutôt qu'une autoroute rapide. Prévoyez le temps et vous l'apprécierez." },
+  { q: "Combien coûte un transfert de l'aéroport d'Agadir à Essaouira ?", a: "Un transfert privé porte-à-porte démarre autour de 110 € pour la voiture entière. Il n'existe pas de service aéroport à tarif fixe vers Essaouira : un grand taxi pour ce long trajet doit se négocier ferme à la station et bat rarement une voiture réservée une fois la distance prise en compte. Prix vérifiés en juin 2026." },
+  { q: "Y a-t-il un bus d'Agadir à Essaouira ?", a: "Supratours et CTM relient Agadir et Essaouira, mais leurs cars partent des gares routières de la ville, pas de l'aéroport : il faut donc un taxi vers Agadir d'abord. Pour la plupart des voyageurs arrivant avec des bagages, le transfert privé direct le long de la côte reste le plus simple." },
+  { q: "Peut-on faire Essaouira en excursion à la journée depuis Agadir ?", a: "Oui, et beaucoup le font, environ 2 h 30 à l'aller, donc une journée longue mais faisable avec un chauffeur privé qui attend pendant que vous flânez sur les remparts et dans la médina. Si vous préférez ne pas organiser la voiture vous-même, des excursions guidées au départ d'Agadir couvrent le même parcours." },
+  { q: "Pourquoi Essaouira est-elle si venteuse ?", a: "Les mêmes alizés atlantiques qui en font un haut lieu du kitesurf et de la planche maintiennent la plage venteuse même l'été, ce qui la garde plus fraîche que Marrakech à l'intérieur. Prévoyez une petite veste pour le soir sur les remparts, on la surnomme « la ville du vent » à juste titre." },
+];
+---
+<RouteLayout
+  lang={lang}
+  title="Transfert aéroport Agadir – Essaouira : taxi et prix (2026) | AirportAGA"
+  description="Le trajet côtier de l'aéroport Agadir Al Massira à Essaouira : 175 km et environ 3 heures de route atlantique. Prix transfert privé 2026, l'option excursion, et comment fonctionne la cité des remparts."
+  eyebrow="Trajets depuis l'AGA · Côte atlantique"
+  h1="Transfert aéroport Agadir → Essaouira"
+  lede="Essaouira est à 175 km au nord, une belle route atlantique de 2 h 30 à 3 h jusqu'aux remparts battus par le vent et à la médina aux volets bleus. Voici le prix d'un transfert privé, comment marche l'excursion à la journée, et pourquoi prévoir une petite veste pour la brise du soir."
+  breadcrumbs={breadcrumbs}
+  facts={facts}
+  priceFrom={110}
+  heroImage={photos['essaouira']}
+  heroProvider="transfer"
+  heroCtaLabel="Voir les prix vers Essaouira"
+  faqs={faqs}
+  cta={{ heading: 'Vers les remparts, le long de la côte', text: 'Une voiture privée à prix fixe de l\'arrivée AGA à votre riad d\'Essaouira, vol suivi, annulation gratuite sur la plupart des réservations, et un trajet tranquille le long de l\'Atlantique.', provider: 'transfer', label: 'Réserver votre transfert Essaouira' }}
+>
+  <p>
+    Essaouira est le compagnon classique d'une arrivée à Agadir, un port fortifié battu par le vent,
+    avec sa médina bleu et blanc, sa musique gnaoua et l'un des meilleurs spots de kitesurf de la côte.
+    Elle se trouve à environ 175 km au nord, soit 2 h 30 à 3 h de route côtière. Ce n'est pas une
+    autoroute : une voie unique qui suit l'Atlantique à travers le pays de l'arganier et les villages de
+    pêcheurs. Considérez le trajet comme une partie du voyage, pas comme une course.
+  </p>
+
+  <h2 id="options">Y aller depuis l'aéroport</h2>
+  <p>
+    Pas de train, et aucun bus au départ du terminal : les choix réalistes sont :
+  </p>
+  <ul>
+    <li><strong>Transfert privé</strong>, il vous accueille à l'arrivée et vous conduit droit à la porte du riad, ce qui compte à Essaouira où la médina est piétonne et les adresses sont des repères. Dès 110 € la voiture entière.</li>
+    <li><strong>Grand taxi</strong>, envisageable sur le long trajet, mais à négocier ferme à la station ; pour 175 km, il dépasse rarement une voiture réservée une fois marchandé. Convenez le tarif complet avant de charger.</li>
+    <li><strong>Excursion organisée</strong>, si Essaouira est une journée plutôt qu'un séjour, une sortie guidée depuis Agadir gère la conduite et ajoute du contexte aux remparts et au port.</li>
+  </ul>
+
+
+  <div class="widget-wrap">
+    <iframe
+      class="tpemd-iframe"
+      srcdoc='<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;padding:0;font-family:system-ui,sans-serif;overflow:hidden}</style></head><body><script async src="https://tpemd.com/content?currency=EUR&amp;trs=554574&amp;shmarker=697149&amp;locale=fr&amp;from=al%20massira%20airport&amp;to=Essaouira&amp;country=Morocco&amp;powered_by=true&amp;transfer_options_limit=10&amp;transfer_options=MCR&amp;disable_currency_selector=true&amp;hide_form_extras=true&amp;hide_external_links=true&amp;campaign_id=1&amp;promo_id=3879" charset="utf-8"><\/script><script>new MutationObserver(function(){document.documentElement.style.height="auto";window.parent.postMessage({tpemdHeight:document.body.scrollHeight},"*")}).observe(document.body,{childList:true,subtree:true,attributes:true})<\/script></body></html>'
+      style="width:100%;border:none;min-height:200px;overflow:hidden;"
+      loading="lazy"
+      title="Transfer booking widget"
+    ></iframe>
+  </div>
+
+  <h3 id="reserver">Réserver un transfert vers Essaouira</h3>
+  <TransferOptions
+    sub="aeroport-agadir-essaouira"
+    options={[
+      { provider: 'transfer', highlight: true, badge: 'Meilleur rapport', pitch: 'Une voiture ou un minivan à prix fixe de l\'AGA vers n\'importe quelle adresse d\'Essaouira, dès 110 € le véhicule, avec suivi du vol et annulation gratuite jusqu\'à 24 h. Se partage bien en groupe.', label: 'Voir les prix des transferts' },
+      { provider: 'transfer-vip', badge: 'Accueil personnalisé', pitch: 'Un chauffeur nommé, anglophone, pour le long trajet côtier, utile pour un premier voyage avec un contact clair sur les 3 heures de route vers le nord.', label: 'Réserver un transfert VIP' },
+    ]}
+  />
+
+  <h2 id="excursion">L'option excursion à la journée</h2>
+  <p>
+    Essaouira se prête magnifiquement à une journée depuis une base à Agadir, et beaucoup font
+    exactement cela : environ 2 h 30 à l'aller, quelques heures à arpenter les remparts, le port de
+    pêche et la médina, puis retour le soir même. Avec un chauffeur privé, vous le faites attendre
+    pendant la visite et repartez quand vous voulez, confortable, mais une longue journée : partez
+    tôt. Si vous préférez un guide et un itinéraire fixe, des excursions organisées depuis Agadir
+    couvrent le même parcours. Dans tous les cas, c'est une ville portuaire faite pour les
+    après-midis lents, pas pour une halte à cocher.
+  </p>
+
+  <h2 id="depose">Où le chauffeur vous dépose</h2>
+  <p>
+    La médina d'Essaouira est fortifiée et largement piétonne : un transfert ou un taxi ne peut vous
+    déposer qu'à l'une des portes, en général Bab Doukkala ou Bab Marrakech, pas à la porte du riad à
+    l'intérieur. De là, une courte marche dans les ruelles, et la plupart des riads envoient quelqu'un
+    avec une charrette pour les bagages si vous indiquez votre heure d'arrivée. Un chauffeur réservé qui
+    connaît le nom du riad et la porte la plus proche rend la chose simple ; un taxi de station risque
+    de vous laisser au parking, à vous de vous débrouiller.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">Conseil local</span>
+    Emportez une veste légère, même l'été. Les alizés atlantiques qui attirent les véliplanchistes
+    gardent Essaouira fraîche et venteuse sur les remparts à la nuit tombée, un soulagement après la
+    chaleur de l'intérieur, mais le front de mer surprend ceux qui ont fait leur valise pour la plage.
+  </div>
+
+  <p>
+    Vous associez Essaouira à la ville impériale ? Elle se situe à peu près à mi-chemin du trajet
+    <a href={L('/agadir-airport-to-marrakech/')}>aéroport → Marrakech</a>, idéal pour une boucle. Pour
+    un seul chauffeur sur tout le circuit, lisez le
+    <a href={L('/agadir-private-driver/')}>guide du chauffeur privé</a>, ou voyez tous les trajets
+    depuis l'aéroport sur le <a href={L('/agadir-airport-transfers/')}>hub des transferts</a>.
+  </p>
+
+  <div class="disclosure-inline">
+    Certains liens ici sont des liens d'affiliation, réservez via ces liens et nous pouvons percevoir
+    une petite commission, sans surcoût pour vous. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
+  </div>
+</RouteLayout>

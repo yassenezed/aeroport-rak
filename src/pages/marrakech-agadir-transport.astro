@@ -1,0 +1,116 @@
+---
+import GuideLayout from '../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Agadir – Marrakech', href: L('/agadir-to-marrakech-transport/') },
+];
+const toc = [
+  { label: 'La distance et la route', id: 'distance' },
+  { label: 'En voiture par l\'A7', id: 'voiture' },
+  { label: 'En bus : Supratours & CTM', id: 'bus' },
+  { label: 'En grand taxi', id: 'grand-taxi' },
+  { label: 'Pourquoi pas de train', id: 'train' },
+  { label: 'Que choisir', id: 'choisir' },
+];
+const faqs = [
+  { q: "Combien de temps entre Agadir et Marrakech ?", a: "Environ 235 km par l'autoroute A7. En voiture, comptez à peu près 3 heures à allure raisonnable, péage compris. En bus Supratours ou CTM, c'est plutôt 3 h 30 à 4 h avec les arrêts. La route est bonne et roulante, mais ce reste un vrai trajet, pas une excursion d'une heure." },
+  { q: "Y a-t-il un train entre Agadir et Marrakech ?", a: "Non. Agadir n'a pas de gare : aucune ligne de train ne dessert la ville. Le réseau ferré marocain s'arrête à Marrakech au sud-ouest. Pour rejoindre Marrakech, c'est la voiture, le bus longue distance ou un transfert privatif." },
+  { q: "Le bus ou la voiture pour aller à Marrakech ?", a: "Le bus Supratours ou CTM est l'option économique et confortable si vous allez de centre à centre sans bagages encombrants : sièges réservés, climatisation, prix modeste. La voiture (location ou transfert) gagne dès que vous êtes plusieurs, chargés, ou que vous voulez vous arrêter en chemin, à Argan ou à Imintanoute, par exemple." },
+  { q: "Combien coûte un transfert privé d'Agadir à Marrakech ?", a: "Un transfert privatif porte-à-porte est la formule la plus chère mais la plus souple : un chauffeur, votre horaire, vos arrêts. C'est surtout pertinent en famille, avec beaucoup de bagages ou pour une arrivée tardive. Réservez à l'avance pour bloquer le prix." },
+];
+---
+<GuideLayout keywords="Transfert aéroport Agadir, taxi aéroport Agadir, transfert privé Agadir" 
+  lang={lang}
+  title="Transfert Aéroport Agadir 2026 | Fiable & Prix Fixe"
+  description="Pré-réservez votre transfert à l'Aéroport d'Agadir pour une arrivée sans stress. Chauffeurs professionnels et prix fixes. Réservez dès maintenant!"
+  eyebrow="Agadir · Transport"
+  h1="Agadir – Marrakech : comment s'y rendre"
+  lede="Environ 235 km séparent les deux villes, et il n'y a pas de train pour les relier. Voici le comparatif honnête, voiture, bus, grand taxi, transfert, avec les durées et les prix réels."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['marrakech']}
+  toc={toc}
+  faqs={faqs}
+  updated="juin 2026"
+  cta={{ heading: 'Réservez un Transfert Aéroport', text: 'Commencez votre voyage sans stress avec un chauffeur privé qui vous attend aux arrivées.', provider: 'transfer', label: 'Voir les prix' }}
+>
+  <p>
+    Marrakech est l'escapade naturelle depuis Agadir, mais la distance surprend ceux qui imaginent les
+    deux villes voisines. Il faut un vrai trajet, et le choix du moyen de transport change beaucoup le
+    budget comme le confort. Voici comment chacun se compare dans la réalité.
+  </p>
+
+  <h2 id="distance">La distance et la route</h2>
+  <p>
+    On compte environ 235 km entre Agadir et Marrakech, parcourus presque entièrement par l'autoroute A7
+    (à péage). La route est en bon état, large et roulante, et traverse l'arrière-pays argan avant de
+    redescendre vers la plaine du Haouz. Comptez à peu près 3 heures en voiture sans traîner, davantage en
+    bus avec les arrêts. Ce n'est pas une sortie d'une heure : prévoyez la demi-journée pour l'aller.
+  </p>
+
+  <h2 id="voiture">En voiture par l'A7</h2>
+  <p>
+    Avec une voiture de location, l'A7 rend le trajet facile : sortie d'Agadir vers le nord-est, péage,
+    puis ligne quasi droite jusqu'à Marrakech. C'est l'option la plus souple si vous êtes plusieurs ou
+    chargés, et la seule qui permette de s'arrêter librement en chemin. Gardez à l'esprit les réflexes
+    marocains : conduite à droite, contrôles de gendarmerie fréquents (papiers sur soi), radars réguliers,
+    et plein-à-plein conseillé pour le carburant. Voyez notre
+    <a href={L('/agadir-airport-car-rental/')}>page location de voiture à l'AGA</a> pour louer dès
+    l'aéroport.
+  </p>
+
+  <h2 id="bus">En bus : Supratours & CTM</h2>
+  <p>
+    C'est l'option économique de référence, et elle est bien meilleure que sa réputation. Supratours
+    (liée à l'ONCF) et CTM assurent plusieurs liaisons par jour entre les gares routières d'Agadir et de
+    Marrakech, en 3 h 30 à 4 h environ : cars climatisés, sièges réservés, bagages en soute. Réservez le
+    billet à l'avance en haute saison, surtout pour les départs du matin. Le bus a tout son sens si vous
+    voyagez léger et que vous allez de centre à centre ; il l'a moins avec beaucoup de bagages ou une
+    famille.
+  </p>
+
+  <h2 id="grand-taxi">En grand taxi</h2>
+  <p>
+    Le grand taxi longue distance existe entre Agadir et Marrakech, en départ partagé depuis les stations
+    dédiées (pas depuis l'aéroport). On part une fois la voiture pleine, à six passagers, ce qui suppose un
+    peu d'attente et beaucoup moins de confort que le bus. On peut aussi privatiser la course en payant les
+    places vides. C'est faisable et rapide, mais pour ce trajet le bus est généralement plus confortable, et
+    le transfert plus souple.
+  </p>
+
+  <h2 id="train">Pourquoi il n'y a pas de train</h2>
+  <p>
+    Une question revient toujours : et le train ? Il n'y en a pas. Agadir n'a pas de gare et le réseau
+    ferroviaire marocain ne descend pas jusqu'ici, la ligne s'arrête à Marrakech. Toute personne qui vous
+    vend un « billet de train Agadir-Marrakech » vous vend en réalité un trajet en bus, souvent Supratours.
+    Inutile donc de chercher des horaires de train : raisonnez bus, voiture ou transfert.
+  </p>
+
+  <h2 id="choisir">Que choisir</h2>
+  <p>
+    Voyageur solo ou en couple, léger, de centre à centre : le bus Supratours ou CTM est imbattable. En
+    famille, chargés, ou pour un horaire libre avec des arrêts : la voiture de location ou le transfert
+    privatif. Et si vous arrivez de l'aéroport et filez directement à Marrakech, un transfert porte-à-porte
+    évite la double manœuvre. Pour réserver un chauffeur de bout en bout, voyez notre
+    <a href={L('/agadir-airport-to-marrakech/')}>transfert aéroport-Marrakech</a>, ou le
+    <a href={L('/agadir-private-driver/')}>chauffeur privé à la journée</a> si vous voulez aussi explorer
+    sur place.
+  </p>
+
+  <div class="disclosure-inline">
+    Certains liens de cette page sont des liens d'affiliation : si vous réservez via eux, nous pouvons
+    percevoir une petite commission, sans surcoût pour vous. Cela ne change jamais les prix affichés ni nos
+    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
+  </div>
+
+  <div class="callout">
+    <span class="callout-label">En un coup d'œil</span>
+    ~235 km, ~3 h en voiture par l'A7 (péage) · bus Supratours/CTM en 3 h 30–4 h · grand taxi partagé
+    possible · aucun train. Léger et économique → bus ; souple et chargé → voiture ou transfert.
+  </div>
+</GuideLayout>

@@ -1,0 +1,251 @@
+---
+import { useTranslations, getLocalizedPath, defaultLang, type Lang } from '../../i18n';
+import Icon from '../ui/Icon.astro';
+
+interface Props { lang?: Lang; }
+const { lang = defaultLang } = Astro.props;
+const t = useTranslations(lang);
+const currentPath = Astro.url.pathname;
+
+const navLinks = [
+  {
+    href: '/guide-aeroport-marrakech/',
+    label: t('nav.guide')
+  },
+  { href: '/guide-aeroport-marrakech/arrivees/', label: t('nav.arrivals') },
+  { href: '/guide-aeroport-marrakech/departs/', label: t('nav.departures') },
+  {
+    href: '/guide-aeroport-marrakech/services/',
+    label: t('nav.services'),
+    children: [
+      { href: '/esim-maroc/', label: t('nav.esim') },
+      { href: '/indemnisation-vol/', label: t('nav.compensation') },
+      { href: '/guide-touristique/', label: t('nav.tourGuide') },
+      { href: '/guide-aeroport-marrakech/parking/', label: t('nav.parking') },
+      { href: '/guide-aeroport-marrakech/grand-taxi/', label: t('nav.grandTaxi') },
+      { href: '/guide-aeroport-marrakech/bus/', label: t('nav.bus') },
+      { href: '/guide-aeroport-marrakech/salons/', label: t('nav.lounges') },
+      { href: '/guide-aeroport-marrakech/change-argent/', label: t('nav.moneyExchange') },
+      { href: '/guide-aeroport-marrakech/carte-sim/', label: t('nav.simCard') },
+      { href: '/guide-aeroport-marrakech/plan-terminal/', label: t('nav.terminalMap') },
+      { href: '/guide-aeroport-marrakech/uber-taxi/', label: t('nav.uberTaxi') },
+      { href: '/guide-aeroport-marrakech/distance-centre-ville/', label: t('nav.distanceToCity') }
+    ]
+  },
+  {
+    href: '/destinations-aeroport-marrakech/',
+    label: t('nav.destinations'),
+    children: [
+      { href: '/transfert-aeroport-marrakech-medina/', label: t('nav.toMedina') },
+      { href: '/transfert-aeroport-marrakech-gueliz-hivernage/', label: t('nav.toGueliz') },
+      { href: '/transfert-aeroport-marrakech-palmeraie/', label: t('nav.toPalmeraie') },
+      { href: '/transfert-aeroport-marrakech-agafay/', label: t('nav.toAgafay') },
+      { href: '/transfert-aeroport-marrakech-ourika/', label: t('nav.toOurika') },
+      { href: '/transfert-aeroport-marrakech-imlil/', label: t('nav.toImlil') },
+      { href: '/transfert-aeroport-marrakech-oukaimeden/', label: t('nav.toOukaimeden') },
+      { href: '/transfert-aeroport-marrakech-essaouira/', label: t('nav.toEssaouira') },
+      { href: '/transfert-aeroport-marrakech-ouarzazate/', label: t('nav.toOuarzazate') },
+      { href: '/transfert-aeroport-marrakech-agadir/', label: t('nav.toAgadir') }
+    ]
+  },
+  {
+    href: '/transfert-aeroport-marrakech/',
+    label: t('nav.transfers'),
+    children: [
+      { href: '/reserver-transfert/', label: t('nav.bookTransfer') },
+      { href: '/transfert-prive-aeroport-marrakech/', label: t('nav.privateTransfer') },
+      { href: '/transfert-vip-aeroport-marrakech/', label: t('nav.vipTransfer') },
+      { href: '/navette-aeroport-marrakech/', label: t('nav.shuttle') },
+      { href: '/transfert-aeroport-marrakech-pas-cher/', label: t('nav.cheapestTransfer') },
+      { href: '/comparatif-transferts-aeroport-marrakech/', label: t('nav.compareTransfers') },
+      { href: '/chauffeur-prive-marrakech/', label: t('nav.privateDriver') }
+    ]
+  },
+  {
+    href: '/taxi-aeroport-marrakech/',
+    label: t('nav.taxi'),
+    children: [
+      { href: '/taxi-aeroport-marrakech/prix/', label: t('nav.taxiPrices') }
+    ]
+  },
+  {
+    href: '/location-voiture-aeroport-marrakech/',
+    label: t('nav.carRental'),
+    children: [
+      { href: '/location-voiture-aeroport-marrakech/pas-cher/', label: t('nav.cheapCarRental') },
+      { href: '/location-4x4-aeroport-marrakech/', label: t('nav.rent4x4') },
+      { href: '/louer-voiture-marrakech-guide/', label: t('nav.rentingGuide') }
+    ]
+  },
+  {
+    href: '/meilleurs-hotels-marrakech/',
+    label: t('nav.hotels'),
+    children: [
+      { href: '/riads-medina-marrakech/', label: t('nav.riadsMedina') },
+      { href: '/hotels-pres-aeroport-marrakech/', label: 'Hôtels près du RAK' },
+      { href: '/avis-la-mamounia/', label: 'La Mamounia (palace)' },
+      { href: '/avis-royal-mansour/', label: 'Royal Mansour (ultra-luxe)' },
+      { href: '/avis-es-saadi-palace/', label: 'Es Saadi (resort)' },
+      { href: '/avis-riad-yasmine/', label: 'Riad Yasmine (boutique)' },
+      { href: '/avis-riad-be-marrakech/', label: 'Riad BE (charme)' }
+    ]
+  },
+  {
+    href: '/guide-voyage-marrakech/',
+    label: t('nav.blog')
+  },
+];
+---
+
+<header class="site-header">
+  <div class="top-banner">
+    <span class="top-banner-inner">
+      Site non-officiel. Non affilié à l'aéroport de Marrakech Ménara.
+    </span>
+  </div>
+  <div class="header-inner">
+    <a href={getLocalizedPath('/', lang)} class="brand" aria-label="AirportRAK, accueil">
+      <span class="brand-mark"><Icon name="plane" size={20} /></span>
+      <span class="brand-name">Airport<strong>RAK</strong></span>
+    </a>
+
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false">
+      <Icon name="menu" size={26} />
+    </button>
+
+    <nav class="main-nav" aria-label="Primary">
+      {navLinks.map(({ href, label, children }) => {
+        const localized = getLocalizedPath(href, lang);
+        const isActive = currentPath === localized || currentPath.startsWith(localized);
+        
+        if (children) {
+          return (
+            <div class="nav-dropdown-group">
+              <a href={localized} class:list={['nav-link', { active: isActive }]} style="display: flex; align-items: center; gap: 4px;">
+                {label}
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </a>
+              <div class="services-dropdown">
+                {children.map(child => (
+                  <a href={getLocalizedPath(child.href, lang)} class="services-dropdown-item">{child.label}</a>
+                ))}
+              </div>
+            </div>
+          );
+        }
+        return <a href={localized} class:list={['nav-link', { active: isActive }]}>{label}</a>;
+      })}
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(246, 247, 234, 0.92);
+    backdrop-filter: saturate(140%) blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .top-banner {
+    background-color: var(--orange-soft);
+    color: var(--orange-dark);
+    text-align: center;
+    padding: 0.4rem 1rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    font-family: var(--font-display);
+    border-bottom: 1px solid rgba(255, 98, 44, 0.15);
+  }
+  .top-banner-inner {
+    display: inline;
+    background-color: transparent;
+    padding: 0;
+  }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 68px; max-width: 1360px; margin: 0 auto; padding: 0 1.5rem; }
+  .brand { display: flex; align-items: center; gap: 0.55rem; text-decoration: none; }
+  .brand-mark {
+    display: grid; place-items: center; width: 34px; height: 34px;
+    background: var(--orange); color: #fff; border-radius: 10px; transform: rotate(-8deg);
+  }
+  .brand-name { font-family: var(--font-display); font-weight: 500; font-size: 1.25rem; color: var(--ink); letter-spacing: -0.02em; }
+  .brand-name strong { font-weight: 700; color: var(--green-dark); }
+
+  .menu-btn { display: none; background: none; border: none; color: var(--ink); cursor: pointer; padding: 0.25rem; }
+
+  .main-nav { display: flex; align-items: center; gap: 0.2rem; }
+  .nav-link {
+    font-family: var(--font-display); font-weight: 500; font-size: 0.9rem;
+    color: var(--ink-2); text-decoration: none; padding: 0.4rem 0.5rem; border-radius: var(--r-pill);
+    transition: color var(--transition), background var(--transition);
+    white-space: nowrap;
+  }
+  .nav-link:hover { color: var(--ink); background: var(--cream-2); }
+  .nav-link.active { color: var(--orange-dark); }
+
+  .nav-dropdown-group { position: relative; }
+  .services-dropdown {
+    position: absolute; top: calc(100% + 5px); left: 50%; transform: translateX(-50%);
+    background: #fff; border: 1px solid var(--line); border-radius: var(--r-md);
+    box-shadow: var(--shadow-md); padding: 0.5rem; min-width: 220px;
+    display: none; flex-direction: column; gap: 0.2rem;
+  }
+  .services-dropdown::before {
+    content: ''; position: absolute; top: -15px; left: 0; right: 0; height: 15px;
+  }
+  .nav-dropdown-group:hover .services-dropdown { display: flex; }
+  
+  .services-dropdown-item {
+    padding: 0.5rem 0.8rem; text-decoration: none; color: var(--ink-2);
+    font-size: 0.85rem; font-weight: 500; border-radius: var(--r-sm);
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+  }
+  .services-dropdown-item:hover { background: var(--cream-2); color: var(--ink); }
+
+  @media (max-width: 1250px) {
+    .menu-btn { display: block; }
+    .main-nav {
+      position: absolute; top: 68px; left: 0; right: 0;
+      flex-direction: column; align-items: stretch; gap: 0;
+      background: var(--cream); border-bottom: 1px solid var(--line);
+      padding: 0.5rem 1.25rem 1.25rem;
+      box-shadow: var(--shadow-md);
+      display: none;
+    }
+    .main-nav.open { display: flex; }
+    .nav-link { padding: 0.75rem 0.5rem; border-radius: var(--r-md); border-bottom: 1px solid var(--line-2); }
+    
+    .nav-dropdown-group { width: 100%; display: flex; flex-direction: column; }
+    .nav-dropdown-group .nav-link { border-bottom: none; }
+    .services-dropdown {
+      position: static; display: none; box-shadow: none; border: none; border-radius: 0;
+      padding: 0.2rem 0 0.5rem 1rem; background: transparent; transform: none;
+      border-bottom: 1px solid var(--line-2);
+    }
+    .services-dropdown.mobile-open { display: flex; }
+    
+  }
+</style>
+
+<script>
+  const btn = document.querySelector('.menu-btn');
+  const nav = document.querySelector('.main-nav');
+  btn?.addEventListener('click', () => {
+    const open = nav?.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(!!open));
+  });
+
+  // Handle mobile accordion dropdowns
+  const dropdownLinks = document.querySelectorAll('.nav-dropdown-group > .nav-link');
+  dropdownLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (window.innerWidth <= 1250) {
+        e.preventDefault();
+        const dropdown = link.nextElementSibling;
+        if (dropdown) {
+          dropdown.classList.toggle('mobile-open');
+        }
+      }
+    });
+  });
+</script>

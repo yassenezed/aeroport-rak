@@ -1,0 +1,118 @@
+---
+import GuideLayout from '../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Excursion Agadir – Essaouira', href: L('/agadir-to-essaouira-day-trip/') },
+];
+const toc = [
+  { label: 'Vaut-elle une journée ?', id: 'vaut-elle' },
+  { label: 'Distance et durée', id: 'distance' },
+  { label: 'Comment y aller', id: 'comment' },
+  { label: 'Que faire à Essaouira', id: 'faire' },
+  { label: 'Les arrêts argan en chemin', id: 'argan' },
+  { label: 'Un plan de journée réaliste', id: 'plan' },
+];
+const faqs = [
+  { q: 'Peut-on faire Essaouira en une journée depuis Agadir ?', a: 'Oui, et beaucoup le font. C’est environ 175 km et 2h30 à 3h dans chaque sens par la route côtière, soit cinq à six heures de conduite en plus de votre temps sur place. Cela tient comme une longue journée si vous partez vers 8 h, mais vous rentrerez tard. Si vous pouvez vous offrir une nuit, Essaouira récompense bien plus un séjour qu’un après-midi expédié.' },
+  { q: 'Combien de temps dure la route Agadir – Essaouira ?', a: 'Environ 2h30 à 3h dans un sens pour les 175 km, selon la circulation à la sortie d’Agadir et le nombre d’arrêts photo dans le pays de l’argan au nord de Taghazout. La route est goudronnée et facile, surtout à une voie par sens en longeant l’Atlantique.' },
+  { q: 'Y a-t-il un bus d’Agadir à Essaouira ?', a: 'Oui. Supratours et CTM assurent des cars le long de la côte pour un tarif modique, en environ trois heures. C’est l’option la moins chère, mais l’horaire fixe rend le retour dans la journée serré : le bus convient mieux à ceux qui dorment sur place qu’aux excursionnistes.' },
+  { q: 'Pour quoi Essaouira est-elle connue ?', a: 'Une médina fortifiée classée à l’UNESCO, un port de pêche en activité avec ses barques bleues, le vent qui lui a valu le surnom de « ville des alizés » (et en a fait un aimant à kitesurf), et le pays de l’argan tout autour. Elle paraît plus douce et plus bohème que Marrakech, facile à arpenter, avec l’air marin et les remparts plutôt que la chaleur et le tumulte.' },
+];
+---
+<GuideLayout keywords="Excursion Essaouira Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Excursion Essaouira Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Excursion Essaouira à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Excursions · Depuis Agadir"
+  h1="Agadir – Essaouira : l’excursion, bien faite"
+  lede="Essaouira est la plus belle longue excursion depuis Agadir, un port fortifié classé à l’UNESCO, avec l’air marin, les barques bleues et le pays de l’argan en chemin. Voici la vraie distance, comment y aller, et comment organiser la journée pour qu’elle ne soit pas que de la route."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['essaouira']}
+  toc={toc}
+  faqs={faqs}
+  updated="juin 2026"
+  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+>
+  <p>
+    Essaouira se trouve à environ 175 km au nord d’Agadir, en remontant la côte atlantique, et c’est
+    l’excursion dont on parle le plus une fois rentré. Elle est l’opposé d’Agadir, dans le bon sens : là où
+    Agadir est moderne et tracée au cordeau, Essaouira est une petite médina fortifiée qu’on traverse à
+    pied, avec un port de pêche en activité, des remparts que l’Atlantique vient battre, et une atmosphère
+    lente, iodée, un brin bohème. Le hic, c’est la distance, c’est un vrai trajet, pas un saut de puce, alors mieux vaut être honnête sur la journée avant de s’engager.
+  </p>
+
+  <h2 id="vaut-elle">Vaut-elle une journée ?</h2>
+  <p>
+    Oui, en connaissance de cause. Essaouira est vraiment charmante et très différente de l’ambiance
+    station balnéaire d’Agadir : le contraste à lui seul justifie le voyage. Mais la route fait 2h30 à 3h
+    dans chaque sens, soit cinq à six heures en voiture pour peut-être quatre ou cinq heures sur place.
+    Partez tôt, vers 8 h, et cela fonctionne bien. Si votre programme permet une seule nuit, prenez-la :
+    Essaouira au crépuscule et tôt le matin, une fois les excursionnistes repartis, c’est la version qui
+    vaut le coup d’œil.
+  </p>
+
+  <h2 id="distance">Distance et durée</h2>
+  <p>
+    Comptez environ 175 km et 2h30 à 3h dans un sens. La route est goudronnée sur tout le parcours et
+    facile à conduire, surtout à une voie par sens en suivant la côte, grimpant à travers les collines
+    d’arganiers au nord de Taghazout avant de redescendre vers la mer. Prévoyez du rab pour la sortie lente
+    d’Agadir et pour les arrêts photo que vous voudrez forcément faire au milieu des arganiers. Il n’y a pas
+    d’autoroute à péage sur cette route, contrairement au trajet vers Marrakech.
+  </p>
+
+  <h2 id="comment">Comment y aller</h2>
+  <ul>
+    <li><strong>Excursion guidée</strong>, le choix facile : quelqu’un conduit, l’arrêt à la coopérative d’argan et la balade dans la médina sont inclus, et vous évitez le casse-tête du stationnement à Essaouira.</li>
+    <li><strong>Chauffeur privé ou transfert</strong>, plus souple qu’une excursion et bien pour les familles ; vous fixez le rythme et les arrêts. Voyez notre page de <a href={L('/agadir-airport-to-essaouira/')}>transfert Agadir – Essaouira</a> pour le coût du trajet.</li>
+    <li><strong>Voiture de location</strong>, parfait si vous êtes à l’aise pour conduire au Maroc ; garez-vous hors des remparts (l’intérieur est piéton) sur l’un des parkings signalés.</li>
+    <li><strong>Bus Supratours / CTM</strong>, de loin le moins cher, environ trois heures, mais l’horaire rend le retour dans la journée serré.</li>
+  </ul>
+  <div class="disclosure-inline">
+    Certains liens de cette page sont des liens d’affiliation : réservez via eux et nous pouvons percevoir
+    une petite commission, sans surcoût pour vous. <a href={L('/affiliate-disclosure/')}>Comment ça
+    marche</a>.
+  </div>
+
+  <h2 id="faire">Que faire à Essaouira</h2>
+  <p>
+    Commencez par le port. Les barques de bois bleues, les mouettes et la criée du matin sont l’image de
+    carte postale, et il y a là des grillades où l’on vous cuit le poisson devant vous. De là, parcourez la
+    Skala de la Ville, les remparts marins bordés de vieux canons de bronze, où Game of Thrones a tourné
+    Astapor, puis perdez-vous une heure dans la médina, bien plus paisible à arpenter que celle de
+    Marrakech. Essaouira est aussi une ville d’artisanat : marqueterie de thuya et longue tradition de
+    musique gnaoua. Et le vent qui en fait la « ville des alizés » a transformé la longue plage en repaire
+    de kitesurf et de planche à voile.
+  </p>
+
+  <h2 id="argan">Les arrêts argan en chemin</h2>
+  <p>
+    Les collines entre Agadir et Essaouira sont le cœur du pays de l’argan, l’un des rares endroits au
+    monde où pousse l’arganier. Vous passerez devant des coopératives de femmes qui pressent l’huile
+    d’argan à la main, et elles font un arrêt qui vaut le détour pour voir le procédé et acheter de l’huile
+    à un prix juste (cosmétique pour la peau et les cheveux, ou la version culinaire plus typée). Vous
+    apercevrez peut-être les fameuses chèvres perchées dans les arganiers ; là où la scène paraît montée
+    pour le pourboire, passez votre chemin sans remords.
+  </p>
+
+  <h2 id="plan">Un plan de journée réaliste</h2>
+  <p>
+    Quittez Agadir vers 8 h. Arrêt à une coopérative d’argan en milieu de matinée, arrivée à Essaouira vers
+    11 h. Le port et la Skala avant le déjeuner, du poisson grillé ou un café dans la médina, puis flânerie
+    dans les souks et sur les remparts l’après-midi. Visez un départ retour vers 16 h – 16 h 30 pour être
+    rentré pour le dîner. Si vous préférez ne pas surveiller l’heure toute la journée, c’est exactement le
+    genre de voyage qu’une nuit sur place transforme, et pour plus d’idées près du camp de base, voyez
+    <a href={L('/things-to-do-agadir/')}>que faire à Agadir</a>.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">La liste de l’excursionniste</span>
+    Partez vers 8 h · un arrêt argan, pas trois · garez-vous hors des remparts · poisson grillé au port
+    pour le déjeuner · et entamez le retour vers 16 h 30.
+  </div>
+</GuideLayout>

@@ -1,0 +1,16 @@
+---
+import { buildAffiliateUrl, type AffiliateId } from '../../data/providers';
+import { getLocalizedPath, getLangFromUrl } from '../../i18n';
+
+interface Props {
+  provider: AffiliateId;
+  sub?: string;
+  class?: string;
+}
+const { provider, sub, class: cls = 'btn btn-primary' } = Astro.props;
+const rawHref = buildAffiliateUrl(provider, sub);
+const lang = getLangFromUrl(Astro.url);
+const href = rawHref.startsWith('/') ? getLocalizedPath(rawHref, lang) : rawHref;
+const isExternal = href.startsWith('http://') || href.startsWith('https://');
+---
+<a href={href} class={cls} rel={isExternal ? "sponsored nofollow" : undefined} target={isExternal ? "_blank" : undefined}><slot /></a>

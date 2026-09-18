@@ -1,0 +1,113 @@
+---
+import GuideLayout from '../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Se déplacer à Agadir', href: L('/getting-around-agadir/') },
+];
+const toc = [
+  { label: 'Les Petits Taxis (urbains)', id: 'petit-taxi' },
+  { label: 'Les Grands Taxis (régionaux)', id: 'grand-taxi' },
+  { label: 'Les bus urbains (Alsa)', id: 'bus' },
+  { label: 'Le transport touristique (VTC)', id: 'vtc' },
+  { label: 'La location de voiture', id: 'location' },
+];
+const faqs = [
+  { q: 'Y a-t-il Uber ou Careem à Agadir ?', a: 'Non, les applications comme Uber, Bolt ou Careem ne fonctionnent pas à Agadir (et sont illégales ou bloquées dans la majorité du Maroc). Les alternatives sont les taxis traditionnels ou les sociétés de transfert touristique privé (VTC locaux).' },
+  { q: 'Combien coûte un Petit Taxi à Agadir ?', a: 'La prise en charge commence à environ 2 MAD (le soir 3 MAD). Une course moyenne dans le centre (par exemple, de la plage au Souk El Had) vous coûtera entre 10 et 20 MAD (1 à 2 €). Exigez toujours que le chauffeur allume le compteur.' },
+  { q: 'Comment aller de l\'aéroport d\'Agadir au centre-ville ?', a: 'Les Petits Taxis ne sont pas autorisés à l\'aéroport. Vous devez prendre un Grand Taxi (220 MAD tarif fixe officiel), le bus de l\'aéroport (L-AE, 50 MAD), ou réserver un transfert privé à l\'avance (recommandé pour éviter l\'attente et les négociations).' },
+  { q: 'Peut-on aller à Taghazout en taxi depuis Agadir ?', a: 'Les Petits Taxis rouges d\'Agadir ne peuvent pas sortir de la ville. Pour aller à Taghazout, vous devez prendre un Grand Taxi (partagé ou privatisé) depuis le centre d\'Agadir (place Batoire), le bus Alsa numéro 32 ou 33, ou réserver un transfert privé.' },
+];
+---
+<GuideLayout keywords="Se Deplacer Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Se Deplacer Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Se Deplacer à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Agadir · Transport"
+  h1="Comment se déplacer à Agadir : Le guide complet"
+  lede="Agadir est une ville étendue. Si vous pouvez longer la plage à pied, vous aurez besoin de transport pour aller au Souk El Had, à la Médina, ou pour explorer Taghazout et la Vallée du Paradis. Des Petits Taxis rouges aux VTC locaux, voici comment vous déplacer sans vous faire arnaquer."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['getting-around-agadir']}
+  toc={toc}
+  faqs={faqs}
+  updated="Juin 2026"
+  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+>
+  <p>
+    Le système de transport au Maroc a ses propres règles. Uber n'existe pas, les taxis sont divisés en 
+    deux couleurs (et deux fonctions bien distinctes), et les bus peuvent être chaotiques pour les 
+    non-initiés. Une fois que vous comprenez le fonctionnement des "Petits" et des "Grands" taxis, se 
+    déplacer à Agadir devient incroyablement bon marché et facile.
+  </p>
+
+  <h2 id="petit-taxi">Les Petits Taxis (Pour le centre-ville)</h2>
+  <p>
+    À Agadir, les Petits Taxis sont <strong>peints en rouge</strong> (ils sont orange à Marrakech, bleus à 
+    Essaouira). Ce sont généralement des Dacia Logan ou Sandero.
+  </p>
+  <ul>
+    <li><strong>Règle d'or :</strong> Ils ne sont autorisés à circuler <em>que dans les limites de la 
+    ville</em> d'Agadir (ils ne peuvent pas aller à l'aéroport ni à Taghazout).</li>
+    <li><strong>Capacité :</strong> 3 passagers maximum. C'est la loi. Si vous êtes 4, vous devrez prendre deux Petits Taxis ou un Grand Taxi.</li>
+    <li><strong>Tarifs :</strong> Ils fonctionnent au compteur. La prise en charge est de ~2 MAD (3 MAD après 20h). Une course moyenne coûte entre 10 et 20 MAD (1 à 2 €). <em>Demandez toujours au chauffeur d'allumer le compteur (le "mètre"). S'il refuse, sortez et prenez le suivant.</em></li>
+    <li><strong>Partage :</strong> Il est courant que le chauffeur s'arrête pour prendre d'autres clients en chemin si la direction est la même. Chacun paiera sa course au compteur.</li>
+  </ul>
+
+  <h2 id="grand-taxi">Les Grands Taxis (Pour sortir de la ville)</h2>
+  <p>
+    Les Grands Taxis (souvent des Dacia Lodgy ou de vieilles Mercedes) sont de couleur crème ou jaune avec
+    une bande bleue. Eux ont l'autorisation de <strong>sortir de la ville</strong>.
+  </p>
+  <ul>
+    <li><strong>Fonctionnement partagé :</strong> Traditionnellement, ils partent de stations fixes (comme la station Batoire) quand les 6 places sont pleines. Vous payez à la place (ex: Agadir-Taghazout coûte environ 15 MAD/place).</li>
+    <li><strong>Fonctionnement privatisé ("Korsa") :</strong> Vous pouvez payer pour l'ensemble du taxi (les 6 places) pour partir immédiatement ou aller à une destination spécifique (ex: l'aéroport). Le prix se négocie ferme avant de monter (pas de compteur).</li>
+  </ul>
+  <p>Pour aller de <a href={L('/agadir-airport-to-taghazout/')}>l'aéroport à Taghazout</a> ou pour des trajets interurbains, c'est l'option locale par excellence.</p>
+
+  <h2 id="bus">Les bus urbains (Alsa)</h2>
+  <p>
+    La compagnie Alsa gère les bus urbains d'Agadir. C'est le moyen le moins cher de se déplacer 
+    (environ 4 à 5 MAD le ticket, acheté auprès du chauffeur).
+  </p>
+  <p>
+    Les bus sont très utilisés par les locaux pour aller travailler ou se rendre à la plage, ils peuvent 
+    donc être bondés. Les lignes les plus utiles pour les touristes sont la <strong>ligne 32 et la 
+    ligne 33</strong>, qui partent du centre d'Agadir et remontent la côte jusqu'à Tamraght et Taghazout.
+  </p>
+  <p>Depuis 2024, une ligne de bus spéciale aéroport (la ligne L-AE) relie également l'aéroport au centre-ville pour 50 MAD.</p>
+
+  <h2 id="vtc">Le transport touristique et VTC</h2>
+  <p>
+    Comme les applications internationales type Uber sont bloquées au Maroc, la seule façon de bénéficier 
+    d'un service "porte à porte" avec chauffeur privé à prix fixe (sans compteur truqué ni négociation 
+    éprouvante) est de réserver un <strong>Transport Touristique Privé</strong>.
+  </p>
+  <p>
+    Ces véhicules (berlines ou minivans confortables) ont une plaque d'immatriculation spéciale et sont
+    autorisés à opérer partout. C'est l'option recommandée pour vos transferts depuis <a href={L('/agadir-airport-transfers/')}>l'aéroport d'Agadir</a>,
+    ou si vous êtes un groupe de 4 à 8 personnes (qui ne rentre pas dans un Petit Taxi). Vous devez les 
+    réserver à l'avance par internet ou via votre hôtel.
+  </p>
+
+  <h2 id="location">La location de voiture</h2>
+  <p>
+    Si vous prévoyez d'explorer la région (Parc National de Souss-Massa, Taroudant, Taghazout, Imsouane), 
+    <a href={L('/renting-car-morocco-guide/')}>louer une voiture</a> est de loin la meilleure option.
+  </p>
+  <p>
+    Les routes autour d'Agadir sont en excellent état, droites et très peu fréquentées par rapport 
+    à Casablanca ou Marrakech. Le stationnement est facile dans la zone touristique (des gardiens 
+    de parking en gilet jaune s'en occupent pour 2 à 5 MAD). Comptez à partir de 25 € / jour pour une 
+    citadine.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">L'arnaque à éviter</span>
+    À la sortie des hôtels ou au Souk El Had, certains chauffeurs de Petits Taxis "oublient" d'allumer le compteur et demandent 50 MAD à l'arrivée (le quintuple du prix normal). Répétez "Khdem l'compteur, afak" (Allumez le compteur, s'il vous plaît) avant que la voiture ne démarre.
+  </div>
+</GuideLayout>

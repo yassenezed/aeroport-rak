@@ -1,0 +1,115 @@
+---
+import GuideLayout from '../../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../../i18n';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: "Guide de l'aéroport", href: L('/agadir-airport-guide/') },
+  { name: 'Argent & change', href: L('/agadir-airport-guide/money-exchange/') },
+];
+const toc = [
+  { label: 'Le dirham est une monnaie fermée', id: 'closed' },
+  { label: 'Distributeurs vs guichets de change', id: 'atm-vs-booth' },
+  { label: 'Refusez la conversion dynamique', id: 'dcc' },
+  { label: 'Combien retirer', id: 'how-much' },
+  { label: 'Cartes, espèces & pourboires', id: 'cards' },
+  { label: 'Dépensez-le avant de partir', id: 'leftover' },
+];
+const faqs = [
+  { q: "Puis-je obtenir des dirhams marocains avant de voyager ?", a: "Pas facilement, et pas à bon taux. Le dirham est une monnaie fermée, donc restreinte hors du Maroc. L'approche standard est de retirer des dirhams à un distributeur du hall d'arrivée de l'aéroport d'Agadir à l'atterrissage." },
+  { q: "Y a-t-il des distributeurs à l'aéroport d'Agadir ?", a: "Oui, dans le hall d'arrivée avant les portes de sortie, de deux ou trois banques marocaines. Préférez une machine d'une vraie banque à un guichet de change isolé, le taux est meilleur et l'opération est simple avec n'importe quelle carte courante." },
+  { q: "Combien d'espèces retirer à l'aéroport d'Agadir ?", a: "Environ 500 à 1 000 MAD couvrent la course vers la ville, un pourboire et votre première journée. Vous pourrez toujours retirer davantage en ville. Beaucoup d'endroits sur la côte préfèrent le liquide : n'arrivez pas les mains vides." },
+  { q: "Vaut-il mieux le distributeur ou le guichet de change à l'aéroport ?", a: "Le distributeur, presque toujours. Les distributeurs des banques marocaines offrent un meilleur taux et moins de commission que les bureaux de change isolés de l'aéroport, qui intègrent une marge large à leurs prix. Si vous devez changer du liquide, changez peu et fiez-vous au distributeur pour le reste." },
+  { q: "Faut-il payer en dirhams ou dans sa monnaie à un distributeur marocain ?", a: "Toujours en dirhams. Si la machine propose de vous débiter dans votre monnaie d'origine (la « conversion dynamique » ou DCC), refusez : le taux appliqué est nettement moins bon que celui de votre banque. Choisissez « sans conversion » ou « en MAD » et laissez votre banque convertir." },
+];
+---
+<GuideLayout keywords="Change Argent Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Change Argent Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Change Argent à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Guide de l'aéroport · Argent"
+  h1="Argent & change à l'aéroport d'Agadir"
+  lede="Le dirham est une monnaie fermée : vos premières espèces viennent du distributeur des arrivées. Voici la question distributeur contre guichet tranchée, combien retirer, et comment éviter de vous retrouver avec des dirhams inutilisables."
+  breadcrumbs={breadcrumbs}
+  toc={toc}
+  faqs={faqs}
+  updated="juin 2026"
+
+  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+>
+  <p>
+    Régler la question des espèces est la première tâche pratique une fois passé les tapis à Agadir Al
+    Massira, et c'est plus simple qu'il n'y paraît dès qu'on sait deux choses : comment fonctionne le
+    dirham, et pourquoi le distributeur bat le guichet. Voici toute la question argent à l'AGA, du début
+    à la fin.
+  </p>
+
+  <h2 id="closed">Le dirham est une monnaie fermée</h2>
+  <p>
+    Le dirham marocain (MAD) est une monnaie fermée, ce qui veut dire qu'il est restreint hors du Maroc, vous ne pouvez pas l'acheter de façon fiable avant de voyager, et les petites quantités disponibles
+    à l'étranger viennent à mauvais taux. Le plan standard et sensé est donc d'arriver sans dirham et de
+    retirer vos premiers à un distributeur du hall d'arrivée à l'atterrissage. Comme repère grossier, 1
+    EUR vaut environ 10,8 MAD, même si le taux exact bouge.
+  </p>
+
+  <h2 id="atm-vs-booth">Distributeurs vs guichets de change</h2>
+  <p>
+    Le hall d'arrivée compte des distributeurs de deux ou trois banques marocaines, côté ville comme côté
+    piste, et il y a aussi des bureaux de change. Prenez le distributeur. Les machines d'une vraie banque
+    offrent un meilleur taux que les bureaux de change de l'aéroport, qui intègrent une marge large à leurs
+    prix et ajoutent souvent une commission par-dessus. Un bureau isolé peut afficher « 0 % de
+    commission » tout en se rattrapant sur un taux médiocre, d'où l'intérêt de comparer ce que vous
+    recevez réellement, pas l'argument mis en avant. N'importe quelle carte de débit ou de crédit courante
+    fonctionne au distributeur. Si vous devez vraiment changer des espèces, n'en changez qu'un peu et
+    laissez le distributeur faire le reste.
+  </p>
+
+  <h2 id="dcc">Refusez la conversion dynamique</h2>
+  <p>
+    Au moment de valider un retrait, la machine vous demandera souvent si vous voulez être débité « en
+    dirhams » ou « dans votre monnaie d'origine ». Choisissez toujours <strong>les dirhams</strong>.
+    L'option dans votre monnaie, appelée conversion dynamique (DCC), applique un taux fixé par l'opérateur
+    du distributeur, presque toujours moins avantageux que celui de votre banque, parfois de plusieurs
+    pour cent. Le même piège se présente ensuite chez certains commerçants au terminal de paiement :
+    réflexe identique, payez en MAD. Vous laissez ainsi votre banque convertir au taux interbancaire, bien
+    plus proche du réel.
+  </p>
+
+  <h2 id="how-much">Combien retirer</h2>
+  <p>
+    Pour votre premier retrait, 500 à 1 000 MAD sont le bon dosage : assez pour le taxi ou un pourboire,
+    un repas et votre première journée, sans vous laisser une liasse difficile à rechanger. Vous pourrez
+    toujours retirer davantage en ville, les distributeurs sont fréquents dans tout Agadir et sur la
+    côte. La course en grand taxi vers le centre d'Agadir tourne autour de 200–250 MAD en journée, alors
+    prenez-le en compte ; la <a href={L('/agadir-airport-guide/arrivals/')}>page des arrivées</a> couvre
+    le trajet pour sortir.
+  </p>
+
+  <h2 id="cards">Cartes, espèces &amp; pourboires</h2>
+  <p>
+    Les cartes sont acceptées dans les hôtels, les grands restaurants et les supermarchés, mais le
+    liquide règne pour les taxis, les petits cafés, les marchés et les pourboires, et la côte en
+    particulier fonctionne au liquide. Gardez un stock de petites coupures et de pièces pour les
+    chauffeurs, les porteurs et le café qui ne prend pas la carte. Ne comptez pas vous en sortir à la
+    carte seule, surtout hors de la ville.
+  </p>
+
+  <h2 id="leftover">Dépensez-le avant de partir</h2>
+  <p>
+    Comme le dirham est fermé, rechanger les billets restants à l'étranger est peu avantageux : dépensez
+    vos espèces avant de rentrer. Visez à atterrir à l'aéroport avec seulement de la petite monnaie pour
+    un dernier café. Si vous avez mal calculé, les options de l'aéroport sont limitées : mieux vaut
+    acheter quelque chose d'utile en ville que de céder une marge à un guichet de change en partant. Le
+    <a href={L('/agadir-airport-guide/')}>hub du guide de l'aéroport</a> couvre le reste du départ.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">L'argent en une ligne</span>
+    N'apportez pas de dirhams · retirez 500 à 1 000 MAD à un distributeur bancaire à l'arrivée (payez en
+    dirhams, pas dans votre monnaie d'origine) · gardez des petites coupures pour les endroits sans carte
+    · dépensez-le avant de rentrer.
+  </div>
+</GuideLayout>

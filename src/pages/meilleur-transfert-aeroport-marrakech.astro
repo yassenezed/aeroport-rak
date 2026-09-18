@@ -1,0 +1,88 @@
+---
+import TransferLayout from '../layouts/TransferLayout.astro';
+import TransferOptions from '../components/affiliate/TransferOptions.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Transferts', href: L('/agadir-airport-transfers/') },
+  { name: 'Meilleur transfert', href: L('/best-agadir-airport-transfer/') },
+];
+const facts = [
+  { label: 'Transfert privé dès', value: '~20 €' },
+  { label: 'Transfert VIP dès', value: '~35 €' },
+  { label: 'Destination surf populaire', value: 'Taghazout (~30 €)' },
+  { label: 'Annulation', value: 'Gratuite jusqu\'à 24h' },
+];
+const faqs = [
+  { q: "Quelle est la meilleure façon de rejoindre son hôtel depuis l'aéroport d'Agadir ?", a: "Pour la plupart des voyageurs, un transfert privé réservé à l'avance est le plus simple : prix fixe bloqué à la réservation, chauffeur vous attendant aux arrivées avec une pancarte, et aucune négociation sur place." },
+  { q: "Un transfert privé est-il préférable au taxi de la station ?", a: "Oui. Les grands taxis de l'aéroport ne fonctionnent pas au compteur et les prix annoncés au départ peuvent être élevés. Réserver en ligne garantit un véhicule moderne et climatisé, le suivi de votre vol en cas de retard, et un prix fixe sans surprise." },
+  { q: "Peut-on payer son transfert en ligne avec annulation gratuite ?", a: "Oui, la majorité des réservations de transfert en ligne s'effectuent à tarif fixe avec annulation gratuite jusqu'à 24 heures avant la prise en charge." },
+  { q: "Comment le chauffeur vous accueille-t-il à l'aéroport ?", a: "Le chauffeur suit votre vol en temps réel. Dès votre sortie de la zone des bagages et douanes dans le hall principal des arrivées, votre chauffeur vous attend avec un panneau à votre nom." },
+];
+---
+<TransferLayout
+  lang={lang}
+  title="Meilleur transfert aéroport Agadir 2026 : Privé, VIP & Économique | AirportAGA"
+  description="Comparez les options de transferts depuis l'aéroport Agadir Al Massira (AGA) : berlines privées, minivans VIP et transports économiques."
+  eyebrow="Aéroport d'Agadir · Transferts"
+  h1="Le meilleur transfert aéroport Agadir selon votre voyage"
+  lede="Il n'y a pas un transfert unique pour tout le monde, il y a le meilleur choix pour votre trajet. Comparez nos options privées, VIP et économiques sur les tarifs, la couverture et le confort à l'arrivée."
+  breadcrumbs={breadcrumbs}
+  facts={facts}
+  priceFrom={20}
+  heroImage={photos['agadir-marina']}
+  heroProvider="transfer"
+  heroCtaLabel="Voir les prix des transferts"
+  faqs={faqs}
+  cta={{ heading: 'Réservez votre transfert au meilleur prix', text: 'Bloquez votre tarif fixe à l\'avance avec suivi de vol et annulation gratuite sur la plupart des trajets.', provider: 'transfer', label: 'Voir les tarifs' }}
+>
+  <p>
+    Les transferts réservés au départ de l'aéroport Agadir Al Massira (AGA) desservent le centre-ville d'Agadir, la côte surf (Taghazout, Tamraght, Imsouane) ainsi que l'intérieur des terres (Taroudant, Marrakech).
+  </p>
+
+  <h2 id="tableau">Comparatif rapide des options</h2>
+  <div class="table-wrap">
+    <table class="data">
+      <thead>
+        <tr><th>Option</th><th>Transfert Privé Standard</th><th>Transfert VIP Executive</th><th>Économique / Partagé</th></tr>
+      </thead>
+      <tbody>
+        <tr class="row-highlight"><td>Tarif dès (vers centre d'Agadir)</td><td class="num">~20 €</td><td class="num">~35–45 €</td><td class="num">~15–18 €</td></tr>
+        <tr><td>Couverture côte du Souss</td><td>Très large (Ville, Taghazout, Taroudant)</td><td>Ville &amp; complexes hôteliers</td><td>Axes principaux</td></tr>
+        <tr><td>Accueil aux arrivées</td><td>Chauffeur avec pancarte nominative</td><td>Accueil personnalisé &amp; aide bagages</td><td>Point de rendez-vous standard</td></tr>
+        <tr><td>Suivi du vol en direct</td><td>Inclus</td><td>Inclus (proactif)</td><td>Selon réservation</td></tr>
+        <tr><td>Annulation gratuite</td><td>Jusqu'à 24h avant le départ</td><td>Jusqu'à 24h avant le départ</td><td>Selon conditions</td></tr>
+        <tr><td>Recommandé pour</td><td>Familles, couples, surfeurs</td><td>Voyages d'affaires &amp; séjour VIP</td><td>Voyageurs en solo</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="prive">Transfert Privé. La valeur sûre</h2>
+  <p>
+    Pour la grande majorité des arrivées à l'aéroport AGA, le transfert privé est le choix optimal. Vous bénéficiez d'une berline ou d'un minivan privé avec chauffeur dédié, dès 20 € vers Agadir centre ou ~30 € vers Taghazout. Votre chauffeur suit votre vol et vous dépose directement devant votre hôtel ou résidence.
+  </p>
+
+  <h2 id="vip">Transfert VIP Executive. Le confort absolu</h2>
+  <p>
+    Pour un voyage d'affaires ou un confort haut de gamme, choisissez le transfert VIP avec véhicules premium (Mercedes Classe E, V-Class). Accueil personnalisé avec nom, prise en charge immédiate des bagages et conduite haut de gamme.
+  </p>
+
+  <h3 id="reserver">Réserver votre transfert en ligne</h3>
+  <TransferOptions
+    sub="meilleur-transfert-aeroport-agadir"
+    options={[
+      { provider: 'transfer', highlight: true, badge: 'Le plus populaire', pitch: 'Transfert privé porte-à-porte à tarif fixe, suivi du vol et annulation gratuite jusqu\'à 24h avant la course.', label: 'Voir les tarifs des transferts' },
+      { provider: 'transfer-vip', badge: 'Service VIP', pitch: 'Véhicules Mercedes récents, accueil personnalisé aux arrivées et service classe affaires.', label: 'Réserver un transfert VIP' },
+    ]}
+  />
+
+  <div class="callout">
+    <span class="callout-label">En résumé</span>
+    Réservez votre transfert privé en ligne pour bénéficier d'un tarif fixe garanti, du suivi de votre vol et d'une arrivée fluide. Découvrez toutes nos liaisons sur le <a href={L('/agadir-airport-transfers/')}>hub des transferts</a>.
+  </div>
+</TransferLayout>

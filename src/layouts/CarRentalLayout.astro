@@ -1,0 +1,11 @@
+---
+import MoneyLayout from './MoneyLayout.astro';
+const props = Astro.props as any;
+---
+<MoneyLayout
+  {...props}
+  heroProvider={props.heroProvider ?? 'discovercars'}
+  cta={props.cta ?? { heading: 'Compare every car-hire desk at AGA', text: 'Search the agencies at Agadir airport side by side, price, deposit, fuel policy and insurance, all in one place.', provider: 'discovercars', label: 'Compare car hire prices' }}
+>
+  <slot />
+</MoneyLayout>

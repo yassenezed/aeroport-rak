@@ -1,0 +1,111 @@
+---
+import GuideLayout from '../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Souk El Had Agadir', href: L('/souk-el-had-agadir/') },
+];
+const toc = [
+  { label: 'Ce qu’est le Souk El Had', id: 'cest-quoi' },
+  { label: 'Jours et horaires d’ouverture', id: 'horaires' },
+  { label: 'Les portes et les sections', id: 'plan' },
+  { label: 'Quoi acheter', id: 'acheter' },
+  { label: 'Comment marchander', id: 'marchander' },
+  { label: 'Rester prudent et avisé', id: 'prudence' },
+];
+const faqs = [
+  { q: 'Le Souk El Had est-il ouvert le lundi ?', a: 'Non, le souk est fermé le lundi. C’est le seul jour à éviter. Il est ouvert le reste de la semaine et bat son plein le week-end, quand le plus d’étals et de marchands sont là.' },
+  { q: 'Qu’est-ce que le Souk El Had d’Agadir ?', a: 'C’est l’un des plus grands marchés urbains du Maroc, un marché clos d’environ 13 hectares aux milliers d’étals, organisé en sections pour les produits frais, les épices, l’artisanat, les vêtements et le reste. C’est le vrai marché local d’Agadir, pas une création touristique, et c’est précisément ce qui le rend digne d’une visite.' },
+  { q: 'Quel est le meilleur moment pour visiter le Souk El Had ?', a: 'Le milieu de matinée, un jour d’ouverture, est agréable, les sections de produits frais sont au plus frais tôt, et vous devancez la chaleur de midi. Les week-ends sont les plus remplis et les plus animés, mais aussi les plus bondés. N’oubliez pas qu’il ferme le lundi.' },
+  { q: 'Faut-il marchander au Souk El Had ?', a: 'Dans les sections artisanat, vêtements et souvenirs, oui, les prix ne sont pas fixes et le premier chiffre est en général bien au-dessus de ce que le vendeur acceptera. Dans les sections alimentaires, les prix sont plus standards. Marchandez poliment et avec humour, arrêtez-vous à un prix qui vous convient, et ne vous sentez pas sous pression.' },
+];
+---
+<GuideLayout keywords="Souk El Had Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Souk El Had Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Souk El Had à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Que faire · Agadir"
+  h1="Le Souk El Had d’Agadir : le vrai marché"
+  lede="L’un des plus grands marchés urbains du Maroc, un dédale clos de 13 hectares aux milliers d’étals. C’est la tranche la plus authentique d’Agadir locale que vous trouverez. Voici comment vous y repérer, quoi acheter, et le seul jour à ne pas venir."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['souk-el-had']}
+  toc={toc}
+  faqs={faqs}
+  updated="juin 2026"
+  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+>
+  <p>
+    Agadir n’a pas de médina ancienne, le séisme de 1960 y a veillé, c’est donc au Souk El Had que se
+    joue la vraie vie de la ville, sans mise en scène. C’est l’un des plus grands marchés urbains du Maroc :
+    une enceinte close d’environ 13 hectares bourrée de milliers d’étals, organisée en sections et où l’on
+    entre par des portes numérotées. Ce n’est pas un bazar pour touristes maquillé pour la photo ; c’est là
+    que les Agadiris achètent vraiment leurs légumes, leurs épices, leurs vêtements et leur poterie. C’est
+    bien pour cela qu’il mérite une heure ou deux, et qu’un peu de savoir-faire aide.
+  </p>
+
+  <h2 id="cest-quoi">Ce qu’est le Souk El Had</h2>
+  <p>
+    Imaginez une petite ville close entièrement vouée au commerce. À l’intérieur des murs, le marché se
+    divise en quartiers thématiques, montagnes de produits frais, pyramides d’épices et d’olives, cuir et
+    poterie, tissus et vêtements, articles ménagers et souvenirs. C’est animé, bruyant et entièrement
+    fonctionnel, et c’est cette authenticité qui attire. Venez par curiosité plutôt qu’en mission de
+    shopping stricte et vous en profiterez le plus.
+  </p>
+
+  <h2 id="horaires">Jours et horaires d’ouverture</h2>
+  <p>
+    Le point le plus important : <strong>le Souk El Had est fermé le lundi.</strong> Organisez-vous en
+    conséquence. Il est ouvert le reste de la semaine, du milieu de matinée jusqu’en soirée, et il est au
+    plus rempli et au plus vivant le week-end, quand le plus grand nombre de marchands s’installent. Pour
+    une visite plus calme, allez-y un jour de semaine en milieu de matinée ; pour le grand spectacle, venez
+    le week-end et acceptez la foule.
+  </p>
+
+  <h2 id="plan">Les portes et les sections</h2>
+  <p>
+    Le marché est ceint d’un mur percé de portes numérotées (les portes), il y en a bien plus d’une
+    dizaine, et ce sont elles, votre carte. Chacune débouche grosso modo sur le même quartier à chaque
+    fois : notez par quelle porte vous êtes entré et choisissez une porte repère pour ressortir. À
+    l’intérieur, les sections thématiques rendent le tout navigable, une fois accepté que vous vous perdrez
+    un peu. Se perdre fait partie du jeu ; gardez simplement un numéro de porte en tête pour retrouver la
+    sortie.
+  </p>
+
+  <h2 id="acheter">Quoi acheter</h2>
+  <ul>
+    <li><strong>Épices et produits secs</strong>, safran, ras el-hanout, dattes, olives et citrons confits, vendus au poids.</li>
+    <li><strong>Huile d’argan</strong>. Agadir est au cœur du pays de l’argan ; achetez ici la version culinaire ou cosmétique, mais goûtez/vérifiez avant de payer.</li>
+    <li><strong>Artisanat</strong>, cuir, poterie, paniers tressés, lanternes et tapis berbères.</li>
+    <li><strong>Vêtements et tissus</strong>, djellabas, foulards et vêtements du quotidien bon marché dans le quartier des fripes.</li>
+  </ul>
+
+  <h2 id="marchander">Comment marchander</h2>
+  <p>
+    Dans les sections artisanat, souvenirs et vêtements, les prix ne sont pas fixes, et le premier chiffre
+    est en général bien au-dessus du vrai prix. Le tempo est simple : souriez, montrez de l’intérêt,
+    contre-proposez à environ un tiers ou la moitié du chiffre de départ, et arrêtez-vous au milieu si vous
+    voulez tous les deux conclure. Gardez le ton léger et bon enfant, soyez prêt à tourner les talons (ce
+    qui fait souvent baisser le prix), et ne vous sentez jamais sous pression. Dans les sections de produits
+    frais, les prix sont plus standards : gardez votre énergie de négociation pour l’artisanat.
+  </p>
+
+  <h2 id="prudence">Rester prudent et avisé</h2>
+  <p>
+    C’est un marché accueillant et en activité, pas une zone dangereuse, mais c’est bondé, donc les règles
+    habituelles s’appliquent : gardez votre sac fermé et devant vous, ayez de petites coupures pour ne pas
+    exhiber un gros portefeuille, et gardez votre téléphone rangé. Prévoyez des espèces, presque aucun étal
+    ne prend la carte. Allez-y doucement sur les photos dans les sections alimentaires, demandez d’abord, et vous serez bien accueilli. Pour la ville au-delà du marché, voyez
+    <a href={L('/things-to-do-agadir/')}>que faire à Agadir</a>.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">La liste du marché</span>
+    Pas le lundi · venez en milieu de matinée · retenez votre numéro de porte · espèces uniquement ·
+    marchandez l’artisanat, pas les légumes · et gardez votre sac fermé et devant vous.
+  </div>
+</GuideLayout>

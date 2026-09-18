@@ -1,0 +1,27 @@
+---
+import { site } from '../../data/site';
+interface Props {
+  headline: string;
+  description: string;
+  url: string;
+  lang?: 'fr';
+  datePublished?: string;
+  dateModified?: string;
+  image?: string;
+}
+const { headline, description, url, lang, datePublished = '2026-06-01', dateModified = '2026-06-18', image } = Astro.props;
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline,
+  description,
+  inLanguage: 'fr-FR',
+  mainEntityOfPage: url,
+  datePublished,
+  dateModified,
+  image: image ? `${site.url}${image}` : `${site.url}${site.defaultOgImage}`,
+  author: { '@type': 'Organization', name: site.name, url: site.url },
+  publisher: { '@id': `${site.url}/#organization` },
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

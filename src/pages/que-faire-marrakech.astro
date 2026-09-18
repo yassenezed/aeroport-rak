@@ -1,0 +1,127 @@
+---
+import GuideLayout from '../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Que faire à Agadir', href: L('/things-to-do-agadir/') },
+];
+const toc = [
+  { label: 'La plage et la promenade', id: 'plage' },
+  { label: 'La marina', id: 'marina' },
+  { label: 'Souk El Had', id: 'souk' },
+  { label: 'La Kasbah et le téléphérique', id: 'kasbah' },
+  { label: 'Paradise Valley', id: 'paradise-valley' },
+  { label: 'Crocoparc', id: 'crocoparc' },
+  { label: 'Excursions', id: 'excursions' },
+];
+const faqs = [
+  { q: 'Que faire à Agadir en dehors de la plage ?', a: 'De quoi remplir plusieurs jours. Le Souk El Had est l’un des plus grands marchés du Maroc ; la Kasbah reconstruite, sur la colline qui domine la ville, est désormais accessible par téléphérique et offre une vue superbe sur la baie ; la marina est agréable le soir pour une promenade et du poisson grillé. Ajoutez Crocoparc pour les familles et des excursions vers Paradise Valley, Taghazout et Taroudant, et vous ne manquerez pas d’occupations.' },
+  { q: 'Le Souk El Had vaut-il le détour ?', a: 'Oui, c’est un vrai marché, pas un bazar à touristes. Des milliers d’étals, derrière des murs et des portes, vendent épices, huile d’argan, olives, vêtements, céramiques et articles du quotidien. Allez-y le matin, marchandez sans excès, gardez votre sac fermé dans la foule, et notez qu’il ferme le lundi.' },
+  { q: 'Comment aller à Paradise Valley depuis Agadir ?', a: 'Paradise Valley est à environ une heure au nord-est, sur la route d’Imouzzer. La plupart des visiteurs y vont en excursion guidée à la demi-journée, en voiture de location ou avec un chauffeur : il n’y a pas de transport en commun pratique. Évitez le plein été pour trouver de l’eau dans les vasques, et partez tôt pour devancer la foule et la chaleur.' },
+  { q: 'Le téléphérique d’Agadir vaut-il le coup ?', a: 'Le téléphérique qui monte à la Kasbah / Oufella est une courte montée panoramique avec une vue large sur la baie et l’inscription « Dieu, Patrie, Roi » à flanc de colline, et il évite la grimpette. C’est une visite courte plutôt qu’une demi-journée : associez-le au souk ou à la plage. La Kasbah elle-même n’est plus que ruines, c’est la vue qui compte.' },
+];
+---
+<GuideLayout keywords="Que Faire Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Que Faire Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Que Faire à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Agadir · Que faire"
+  h1="Que faire à Agadir"
+  lede="Au-delà de la plage, Agadir compte un immense marché, une Kasbah perchée désormais accessible par téléphérique et quelques-unes des plus belles excursions du Maroc à deux pas. Voici ce qui vaut vraiment votre temps, et ce qu’on peut zapper."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['agadir-marina']}
+  toc={toc}
+  faqs={faqs}
+  updated="juin 2026"
+  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+>
+  <p>
+    La plage est l’attraction phare d’Agadir, mais en faisant de la ville un camp de base, on tient
+    facilement une semaine d’activités. Le centre reconstruit est pauvre en monuments anciens, héritage du séisme de 1960, donc les vrais plaisirs sont le long front de mer, un marché tentaculaire,
+    un fort perché désormais relié par téléphérique, et la nature sauvage à quelques minutes de route.
+    Voici le panorama honnête, à peu près dans l’ordre où on les découvre.
+  </p>
+
+  <h2 id="plage">La plage et la promenade</h2>
+  <p>
+    Le croissant de sable de six kilomètres est la raison d’être d’Agadir comme station balnéaire. La
+    pente est douce, l’eau propre, et la promenade pavée longe toute la baie devant les cafés, les beach
+    clubs et les hôtels. Les matinées sont calmes ; l’après-midi amène une brise atlantique bienvenue en
+    été et vive en hiver. Balades à dos de chameau, jet-skis et parties de foot improvisées font partie
+    du décor. La baignade est vraiment agréable, sachez seulement que l’océan reste plus frais que la
+    Méditerranée toute l’année.
+  </p>
+
+  <h2 id="marina">La marina</h2>
+  <p>
+    À l’extrémité nord de la plage, la marina est le visage le plus récent et le plus soigné d’Agadir, bâtiments blancs, yachts à quai et une enfilade de restaurants au mieux de leur forme au coucher du
+    soleil. Belle promenade du soir et valeur sûre pour le poisson grillé, même si les prix grimpent par
+    rapport aux ruelles. N’y cherchez pas l’ambiance du vieux Maroc ; attendez-vous à un front de mer
+    propre et facile.
+  </p>
+
+  <h2 id="souk">Souk El Had</h2>
+  <p>
+    C’est l’expérience « vrai Maroc » à ne pas manquer en ville. Le Souk El Had est l’un des plus grands
+    marchés du pays, des milliers d’étals derrière des murs et des portes, répartis grosso modo entre
+    épices, huile d’argan, olives, fruits et légumes, vêtements, céramiques et bazar du quotidien.
+    Allez-y le matin, marchandez sans vous échauffer, et gardez vos affaires fermées dans les allées
+    bondées. Fermé le lundi. Même sans rien acheter, c’est le coin le plus vivant d’Agadir.
+  </p>
+
+  <h2 id="kasbah">La Kasbah et le téléphérique</h2>
+  <p>
+    Sur la colline qui domine la ville se dressent les ruines d’Agadir Oufella, l’ancienne Kasbah, avec
+    la célèbre inscription à flanc de coteau, « Dieu, Patrie, Roi », éclairée la nuit. Le fort lui-même
+    n’est plus que ruines, rasé par le séisme, mais la vue sur la baie est la plus belle de la ville. Le
+    nouveau téléphérique vous y hisse en quelques minutes panoramiques et évite la montée, avec un petit
+    belvédère au sommet. La visite est courte, associez-la à la plage ou au souk plutôt que d’y consacrer
+    une demi-journée.
+  </p>
+
+  <h2 id="paradise-valley">Paradise Valley</h2>
+  <p>
+    À une heure au nord-est, sur la route d’Imouzzer, Paradise Valley est une gorge bordée de palmiers
+    avec des vasques naturelles où l’on se baigne et saute des rochers. C’est l’escapade classique d’une
+    demi-journée depuis Agadir, partez tôt pour devancer la foule et la chaleur, et visez le printemps
+    ou l’après-pluie quand les vasques sont pleines (le plein été peut les laisser à sec). La plupart des
+    visiteurs viennent en excursion guidée, en location ou avec un chauffeur ; pas de transport en commun
+    utile.
+  </p>
+
+  <h2 id="crocoparc">Crocoparc</h2>
+  <p>
+    À quelques kilomètres sur la route de Marrakech, Crocoparc est un parc paysager construit autour de
+    quelques centaines de crocodiles du Nil, avec jardins botaniques et allées ombragées. C’est clairement
+    une demi-journée en famille, facile, bien tenue et appréciée des plus jeunes, plutôt qu’un
+    incontournable. Sans enfants, on peut tranquillement le sauter.
+  </p>
+
+  <h2 id="excursions">Excursions depuis Agadir</h2>
+  <p>
+    Le meilleur d’Agadir est souvent à une route de distance. Taghazout et la côte du surf sont à
+    40 minutes au nord, même les non-surfeurs aiment l’ambiance café décontractée ; commencez par le
+    <a href={L('/surfing-taghazout-guide/')}>guide du surf à Taghazout</a>. Taroudant, la « petite
+    Marrakech » fortifiée, fait une belle journée à l’intérieur des terres. Le port bleu et blanc
+    d’Essaouira est un trajet plus long mais récompensé sur la côte. Pour savoir où loger entre deux
+    sorties, voyez <a href={L('/where-to-stay-agadir/')}>où dormir à Agadir</a>.
+  </p>
+
+  <div class="disclosure-inline">
+    Certains liens de cette page sont des liens d’affiliation : si vous réservez une excursion via eux,
+    nous pouvons percevoir une petite commission, sans surcoût pour vous. Cela ne change jamais les prix
+    affichés ni nos recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça marche</a>.
+  </div>
+
+  <div class="callout">
+    <span class="callout-label">Une première journée bien remplie</span>
+    Plage et promenade le matin · Souk El Had avant le déjeuner (sauf lundi) · le téléphérique jusqu’à la
+    Kasbah pour le coucher du soleil sur la baie. Gardez Paradise Valley et la côte du surf pour une
+    journée avec une voiture.
+  </div>
+</GuideLayout>

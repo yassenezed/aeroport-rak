@@ -1,0 +1,105 @@
+---
+import GuideLayout from '../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Agadir en famille', href: L('/agadir-with-kids/') },
+];
+const toc = [
+  { label: 'Pourquoi Agadir est idéale', id: 'pourquoi' },
+  { label: 'La plage et les activités nautiques', id: 'plage' },
+  { label: 'Crocoparc (Le parc aux crocodiles)', id: 'crocoparc' },
+  { label: 'Le téléphérique et la Kasbah', id: 'telepherique' },
+  { label: 'Conseils pratiques et sécurité', id: 'conseils' },
+];
+const faqs = [
+  { q: 'Agadir est-elle une destination sûre pour les familles ?', a: 'Oui, Agadir est l\'une des destinations les plus sûres et les plus adaptées aux familles au Maroc. L\'infrastructure est moderne, la grande plage est surveillée et les Marocains adorent les enfants. Vous y trouverez des supermarchés (comme Carrefour) vendant des produits pour bébés, des couches et du lait en poudre sans difficulté.' },
+  { q: 'Que faire à Agadir avec des enfants en bas âge ?', a: 'La plage reste l\'attraction principale avec son sable fin et son eau peu profonde. Le téléphérique (Oufella) est amusant et facilement accessible. La Vallée des Oiseaux (parc animalier gratuit en centre-ville) est parfaite pour une courte promenade, bien qu\'elle soit vieillissante. Les piscines des hôtels clubs sont souvent le meilleur atout pour les tout-petits.' },
+  { q: 'Faut-il louer une voiture pour un séjour en famille ?', a: 'Si vous restez à Agadir même, les Petits Taxis (max 3 passagers) sont bon marché, mais peu pratiques pour les familles de 4 ou plus (il faut en prendre deux). Louer une voiture est très recommandé si vous avez plusieurs enfants ou si vous prévoyez d\'explorer Crocoparc, Taghazout ou la Vallée du Paradis à votre rythme.' },
+  { q: 'L\'eau du robinet est-elle potable pour les enfants ?', a: 'L\'eau du robinet est traitée à Agadir, mais pour éviter les maux de ventre liés au changement bactériologique (la fameuse turista), il est fortement conseillé de donner de l\'eau en bouteille aux enfants pour boire et même pour se brosser les dents.' },
+];
+---
+<GuideLayout keywords="En Famille Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide En Famille Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à En Famille à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Agadir · En famille"
+  h1="Agadir avec des enfants : Le guide familial"
+  lede="Avec plus de 300 jours de soleil par an, une immense plage de sable fin et une culture qui adore les enfants, Agadir est la destination familiale numéro un au Maroc. Voici ce qu'il faut faire pour occuper les petits comme les ados, sans stress."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['family-beach']}
+  toc={toc}
+  faqs={faqs}
+  updated="Juin 2026"
+  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+>
+  <p>
+    S'il y a une ville au Maroc conçue pour des vacances sans heurts avec des enfants, c'est Agadir. Contrairement
+    au labyrinthe trépidant de Marrakech, Agadir offre de larges trottoirs, une promenade en bord de mer 
+    sans voitures de plusieurs kilomètres, et un accès facile aux parcs et aux loisirs. Voici les meilleures
+    activités pour transformer un simple séjour à la mer en véritables vacances familiales.
+  </p>
+
+  <h2 id="pourquoi">Pourquoi Agadir est idéale pour les enfants</h2>
+  <p>
+    La culture marocaine place les enfants au centre de la société. Vous constaterez que les serveurs, les
+    chauffeurs de taxi et les commerçants seront extrêmement accueillants avec vos petits. 
+    L'infrastructure de la ville (reconstruite après 1960) est spacieuse, ce qui permet de se promener 
+    facilement en poussette. De plus, le climat est tempéré : la brise océanique évite les chaleurs 
+    étouffantes que l'on trouve dans les terres en été.
+  </p>
+
+  <h2 id="plage">La grande plage et les activités nautiques</h2>
+  <p>
+    La baie d'Agadir forme un croissant de sable doré de plus de 6 km. L'eau y est propre, le rivage descend
+    en pente douce, et la baie protège la plage des grosses vagues de l'Atlantique. C'est un immense terrain
+    de jeu sécurisé.
+  </p>
+  <ul>
+    <li><strong>Pour les tout-petits :</strong> La construction de châteaux de sable et la pataugeoire au bord de l'eau. Des zones sont surveillées par des maîtres-nageurs en été.</li>
+    <li><strong>Pour les ados :</strong> Le front de mer regorge d'activités : location de jet-skis, bouées tractées, et même des initiations au surf sur les petites vagues de la baie.</li>
+    <li><strong>L'incontournable :</strong> Une balade à dos de chameau au coucher du soleil. Vous trouverez de nombreux chameliers sur la plage (négociez le prix avant de monter).</li>
+  </ul>
+
+  <h2 id="crocoparc">Crocoparc (Le parc aux crocodiles)</h2>
+  <p>
+    Situé à l'extérieur de la ville (sur la route de Marrakech), <a href="https://www.crocoparc.com/" target="_blank" rel="noopener">Crocoparc</a> est souvent le point d'orgue du voyage pour les enfants.
+    C'est un magnifique jardin botanique abritant plus de 300 crocodiles du Nil.
+  </p>
+  <p>
+    L'aménagement est de classe mondiale : chemins ombragés parfaits pour les poussettes, flore
+    spectaculaire, cascades, et des enclos en verre qui permettent aux enfants de voir les crocodiles de
+    très près en toute sécurité. Prévoyez-y une demi-journée. Des navettes partent du centre d'Agadir
+    plusieurs fois par jour.
+  </p>
+
+  <h2 id="telepherique">Le téléphérique et la Kasbah</h2>
+  <p>
+    Pour éviter la montée raide et fatigante vers les ruines de la Kasbah d'Oufella, prenez le téléphérique
+    (Danialand). Le trajet en cabine vitrée au-dessus de la montagne est une petite aventure en soi qui
+    plaît beaucoup aux enfants. 
+  </p>
+  <p>
+    Au sommet, la vue sur toute la baie est époustouflante. Un petit parc d'attractions (Danialand) se
+    trouve également à la station de départ, bien qu'il soit plus modeste que les parcs européens. C'est 
+    une activité facile et amusante pour une fin d'après-midi.
+  </p>
+
+  <h2 id="conseils">Conseils pratiques et sécurité</h2>
+  <ul>
+    <li><strong>Alimentation et lait :</strong> Vous trouverez des supermarchés Carrefour, Marjane ou Uniprix qui vendent des petits pots (souvent de marques européennes), du lait infantile et des couches. Pas besoin de surcharger vos valises.</li>
+    <li><strong>Transport :</strong> Les Petits Taxis (rouges) n'acceptent que 3 passagers maximum. Si vous êtes une famille de 4 ou 5, vous devrez soit louer deux Petits Taxis, soit héler un Grand Taxi, soit <a href={L('/agadir-airport-car-rental/')}>louer une voiture à Agadir</a> pour plus de liberté.</li>
+    <li><strong>Santé :</strong> Le soleil marocain est redoutable, même quand la brise fraîche de l'océan souffle. Crème solaire indice 50, chapeaux et bouteilles d'eau sont obligatoires. Buvez de l'eau en bouteille exclusivement (Sidi Ali, Sidi Harazem).</li>
+    <li><strong>Hébergement :</strong> De nombreux hôtels le long de la plage sont des resorts "Tout Compris" avec des clubs pour enfants et d'immenses piscines (voir <a href={L('/best-hotels-agadir/')}>les meilleurs hôtels d'Agadir</a>). C'est souvent l'option la plus reposante pour les parents.</li>
+  </ul>
+
+  <div class="callout">
+    <span class="callout-label">L'idée excursion</span>
+    Pour les enfants à partir de 7-8 ans, une demi-journée au <a href={L('/paradise-valley-from-agadir/')}>Vallée du Paradis (Paradise Valley)</a> est une belle aventure : petite randonnée, sauts dans les piscines naturelles et têtards à observer.
+  </div>
+</GuideLayout>

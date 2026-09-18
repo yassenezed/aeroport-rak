@@ -1,0 +1,123 @@
+---
+import HotelLayout from '../layouts/HotelLayout.astro';
+import AffiliateLink from '../components/affiliate/AffiliateLink.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Où dormir', href: L('/where-to-stay-agadir/') },
+  { name: 'Hôtels tout inclus', href: L('/agadir-all-inclusive-hotels/') },
+];
+const facts = [
+  { label: 'Tout inclus', value: '60 €', sub: 'dès /pers/nuit' },
+  { label: 'Zone principale', value: 'Founty' },
+  { label: 'Aéroport → resort', value: '22 km' },
+  { label: 'Durée', value: '25–40', sub: 'min' },
+];
+const faqs = [
+  { q: "Agadir est-elle bien pour le tout inclus ?", a: "Oui. Agadir est la capitale marocaine du tout inclus et des séjours en formule. Une large part de ses hôtels, surtout dans la zone de Founty au sud de la baie, sont de grands resorts conçus exactement pour ça : piscines, buffets, bars et animations le soir, tout compris. C'est l'un des endroits les plus simples du Maroc pour réserver une semaine soleil-piscine où tout est réglé." },
+  { q: "Combien coûte un tout inclus à Agadir ?", a: "Environ 60–110 € par personne et par nuit selon le standing du resort et la saison, tarifs vérifiés en juin 2026. Le bas de la fourchette donne un bon 4 étoiles en buffet ; le haut, un resort plus haut de gamme avec plus de restaurants et de meilleures boissons. Les prix culminent pendant les vacances scolaires et à Noël/Nouvel An, et baissent aux saisons intermédiaires." },
+  { q: "Que couvre généralement le tout inclus à Agadir ?", a: "En général la pension complète (petit-déjeuner, déjeuner et dîner en buffet), les boissons de marque locale en journée, les piscines et la plupart des activités et animations de jour. Ce qui varie : la qualité des boissons (locales vs marques/importées), les restaurants à la carte (souvent en supplément ou limités), et le spa, les excursions et les sports nautiques motorisés (en général non inclus). Vérifiez toujours la formule de pension et la politique boissons du resort précis avant de réserver." },
+  { q: "À qui convient le tout inclus à Agadir ?", a: "Aux familles qui veulent les repas et les piscines réglés sans décisions quotidiennes, aux couples cherchant une semaine soleil sans rien faire, et à tous ceux qui aiment un budget fixe sans surprise. Il convient moins aux voyageurs qui veulent dîner dans toute la ville, explorer le Souss ou surfer sur la côte, pour cela, un hôtel de plage en simple chambre laisse plus de liberté." },
+];
+---
+<HotelLayout
+  lang={lang}
+  title="Hôtels tout inclus Agadir : ce qu'il faut savoir et les prix (2026) | AirportAGA"
+  description="Pourquoi Agadir est la capitale marocaine du tout inclus, ce que la formule couvre vraiment, le prix d'une semaine en resort en 2026, à qui ça convient, et comment s'organise le transfert aéroport."
+  eyebrow="Où dormir · Tout inclus"
+  h1="Hôtels tout inclus à Agadir"
+  lede="Agadir est le cœur du tout inclus au Maroc, la zone de resorts de Founty est faite pour les semaines soleil où l'on défait ses valises une fois et où tout est réglé. Voici ce que couvre vraiment la formule, son prix en 2026, à qui elle convient, et comment rejoindre votre resort depuis l'aéroport."
+  breadcrumbs={breadcrumbs}
+  facts={facts}
+  priceFrom={60}
+  heroImage={photos['agadir-bay']}
+  heroCtaLabel="Comparer les resorts tout inclus"
+  faqs={faqs}
+  cta={{ heading: 'Comparez les resorts tout inclus d\'Agadir', text: 'Prix et avis en direct sur les resorts de Founty et le front de mer, annulation gratuite sur la plupart des réservations.', provider: 'booking', label: 'Voir les offres tout inclus' }}
+>
+  <p>
+    Si vous avez réservé Agadir, il y a de bonnes chances que ce soit pour une semaine en tout inclus, et ce n'est pas un hasard. Agadir est la capitale marocaine des vacances en formule, avec une large
+    part d'hôtels conçus spécialement pour les séjours soleil, piscine et buffet où tout est compris.
+    La plupart se trouvent dans la zone de Founty, au sud de la baie, en léger retrait d'une portion de
+    plage plus tranquille. Voici ce que vous achetez vraiment, son prix, et si c'est le bon choix pour
+    votre séjour.
+  </p>
+
+  <h2 id="pourquoi-hub">Pourquoi Agadir est un pôle du tout inclus</h2>
+  <p>
+    Agadir a bâti son tourisme sur un soleil fiable, une longue baie de sable et des vols charters
+    directs depuis le nord de l'Europe, la recette exacte du modèle resort tout inclus. Résultat : une
+    forte concentration de grands resorts 4 et 5 étoiles, surtout à Founty, pensés pour les voyageurs
+    qui veulent atterrir, défaire leurs valises une fois et ne plus penser à la logistique. La
+    concurrence maintient des prix doux pour le standard méditerranéen, ce qui explique en grande partie
+    pourquoi Agadir reste moins chère que bien des destinations resort européennes à semaine
+    comparable.
+  </p>
+
+  <h2 id="ce-qui-est-couvert">Ce que le tout inclus couvre vraiment</h2>
+  <p>
+    L'argument, c'est la pension complète plus les boissons, mais le détail varie d'un resort à
+    l'autre, et c'est dans ce détail que les vacances se jouent. Voici la répartition habituelle :
+  </p>
+  <div class="grid grid-2" style="margin-top:1.5rem">
+    <div class="card">
+      <h3>Généralement inclus</h3>
+      <p>Petit-déjeuner, déjeuner et dîner en buffet ; boissons de marque locale en journée ; les piscines ; la plupart des activités de jour et des animations du soir ; transats et équipement de base.</p>
+    </div>
+    <div class="card">
+      <h3>Souvent en supplément</h3>
+      <p>Boissons de marque ou importées ; restaurants à la carte (parfois une réservation offerte, puis payants) ; le spa ; les excursions ; les sports nautiques motorisés ; les catégories de chambre supérieures ou vue mer.</p>
+    </div>
+  </div>
+  <p class="small text-muted">
+    Lisez toujours la formule de pension et la politique boissons du resort précis, « tout inclus »
+    n'est pas un standard figé, et l'écart entre une formule basique et premium tient surtout aux
+    boissons et au choix de restaurants.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">Conseil local</span>
+    Même en tout inclus, sortez au moins une fois dîner sur la promenade ou en ville. Le poisson grillé
+    et les tajines d'Agadir sont un autre monde qu'un buffet de resort, et c'est le rappel le plus
+    simple que vous êtes au Maroc, pas dans un resort soleil interchangeable.
+  </div>
+
+  <h2 id="pour-qui">À qui ça convient</h2>
+  <p>
+    Le tout inclus à Agadir donne le meilleur aux familles qui veulent les repas et les piscines réglés
+    sans décisions quotidiennes, aux couples cherchant une semaine soleil sans rien faire, et à tous
+    ceux qui aiment un budget fixe sans surprise. Il convient moins si vous voulez dîner dans toute la
+    ville, explorer la vallée du Souss ou Taroudant, ou surfer sur la côte, pour cela, un hôtel de
+    plage ou de marina en simple chambre laisse plus de liberté. Si vous hésitez, notre guide
+    <a href={L('/where-to-stay-agadir/')}>où dormir</a> pèse resort contre hôtel de ville, quartier par
+    quartier.
+  </p>
+
+  <h2 id="transfert">Rejoindre votre resort depuis l'aéroport</h2>
+  <p>
+    Les resorts de Founty sont à environ 22 km d'Al Massira, 25–40 minutes de route, sans train ni
+    bus utile. Beaucoup de séjours en formule incluent un transfert en autocar : pratique, mais cela
+    peut signifier un trajet lent avec plusieurs arrêts hôtels. Si le vôtre n'en comprend pas, ou si
+    vous préférez aller droit à la porte, un transfert privé à prix fixe vous dépose au resort en une
+    fois. Connaissez le nom et la zone de votre resort (Founty, le sud de la baie) pour que le chauffeur
+    vise la bonne extrémité de la corniche. Voyez la route
+    <a href={L('/agadir-airport-to-agadir/')}>aéroport vers Agadir</a> pour les tarifs transfert et
+    taxi du moment.
+  </p>
+
+  <div class="disclosure-inline">
+    Certains liens ici sont des liens d'affiliation : si vous réservez via ces liens, nous pouvons
+    percevoir une petite commission, sans surcoût pour vous. Cela ne change ni les prix affichés ni nos
+    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
+  </div>
+
+  <p>
+    Vous comparez les options ? Lisez le guide complet
+    <a href={L('/where-to-stay-agadir/')}>où dormir à Agadir</a> pour choisir d'abord un quartier.
+  </p>
+</HotelLayout>

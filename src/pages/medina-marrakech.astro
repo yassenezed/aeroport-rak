@@ -1,0 +1,114 @@
+---
+import GuideLayout from '../layouts/GuideLayout.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'La Médina d\'Agadir', href: L('/agadir-medina/') },
+];
+const toc = [
+  { label: 'L\'histoire de la Médina Polizzi', id: 'histoire' },
+  { label: 'Ce qu\'on y trouve aujourd\'hui', id: 'visite' },
+  { label: 'Prix d\'entrée et horaires', id: 'infos' },
+  { label: 'Comment s\'y rendre', id: 'transport' },
+  { label: 'La Médina vaut-elle le coup ?', id: 'avis' },
+];
+const faqs = [
+  { q: 'Où se trouve la vieille Médina d\'Agadir ?', a: 'L\'ancienne Médina d\'Agadir (la Kasbah d\'Oufella) a été détruite par le tremblement de terre de 1960. Ce que l\'on appelle aujourd\'hui "La Médina d\'Agadir" est une reconstruction artistique située dans le quartier de Bensergao, à environ 5 kilomètres du centre-ville et de la plage.' },
+  { q: 'Qui a construit la nouvelle Médina d\'Agadir ?', a: 'Elle a été imaginée et construite par Coco Polizzi, un artisan décorateur d\'origine italienne né à Rabat. En 1992, il a décidé de recréer une médina traditionnelle marocaine en utilisant les techniques de construction ancestrales (terre crue, bois, pierre).' },
+  { q: 'Combien coûte l\'entrée à la Médina d\'Agadir ?', a: 'Le tarif d\'entrée est généralement de 40 MAD (environ 4 €) par adulte. Une partie du prix inclut parfois une boisson gratuite. Prévoyez des espèces, car les cartes bancaires ne sont pas toujours acceptées au guichet.' },
+  { q: 'La Médina d\'Agadir est-elle un attrape-touriste ?', a: 'Oui et non. C\'est indéniablement une construction récente destinée aux visiteurs, et non un lieu d\'habitation historique. Cependant, l\'architecture est magnifique, le travail artisanal de Coco Polizzi est impressionnant, et le lieu est très photogénique. C\'est un bel endroit pour se promener, même si certains estiment que cela manque d\'âme.' },
+];
+---
+<GuideLayout keywords="Medina Agadir, que faire à Agadir, attractions Agadir" 
+  lang={lang}
+  title="Guide Medina Agadir 2026 | Astuces & Incontournables"
+  description="Planifiez votre visite à Medina à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+  eyebrow="Agadir · Culture"
+  h1="La Médina d'Agadir : Un chef-d'œuvre ressuscité"
+  lede="Agadir a perdu sa ville historique en 1960. Trente ans plus tard, un homme a décidé de la reconstruire. La Médina d'Agadir, souvent appelée Médina Polizzi, est une merveille architecturale moderne qui rend hommage à l'artisanat marocain. Voici ce qu'il faut savoir avant de la visiter."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['agadir-marina']}
+  toc={toc}
+  faqs={faqs}
+  updated="Juin 2026"
+  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+>
+  <p>
+    Contrairement à Marrakech ou Fès, Agadir ne possède pas de cœur historique grouillant de vie. Le
+    tremblement de terre de 1960 a tout emporté. Cependant, si vous cherchez l'atmosphère de
+    l'architecture traditionnelle marocaine, de ses ruelles ombragées et de son artisanat, <strong>La Médina
+    d'Agadir</strong> est l'endroit où aller. Ce n'est pas un monument antique, mais c'est une œuvre d'art 
+    à ciel ouvert qui mérite d'être explorée.
+  </p>
+
+  <h2 id="histoire">L'histoire de la Médina Polizzi</h2>
+  <p>
+    En 1992, l'architecte et décorateur <strong>Coco Polizzi</strong> (d'origine italienne, né au Maroc)
+    décide de rendre à Agadir un peu de son âme perdue. Il acquiert un terrain dans la forêt d'eucalyptus 
+    de Bensergao et commence à construire une médina idéale.
+  </p>
+  <p>
+    La particularité de ce projet est l'utilisation exclusive de <strong>matériaux et de techniques 
+    traditionnels</strong> : pierre de Taza, terre pisé, bois sculpé, zelliges (mosaïques). Il aura fallu 
+    des années pour que des maîtres artisans venus de tout le Maroc érigent cette reconstitution 
+    s'étendant sur plus de 4 hectares.
+  </p>
+
+  <h2 id="visite">Ce qu'on y trouve aujourd'hui</h2>
+  <p>
+    En franchissant les lourdes portes en bois, vous pénétrez dans un dédale de ruelles pavées, de 
+    placettes et de passages voûtés. Le lieu est extrêmement calme, bien loin de l'agitation du <a href={L('/souk-el-had-agadir/')}>Souk El Had</a>.
+  </p>
+  <ul>
+    <li><strong>L'architecture :</strong> C'est la principale attraction. Les murs de terre cuite, les balcons en bois et les détails géométriques sont un paradis pour les photographes.</li>
+    <li><strong>Les artisans :</strong> La Médina abrite plusieurs ateliers où vous pouvez observer (et acheter) le travail de ferronniers, de menuisiers, de potiers et de bijoutiers.</li>
+    <li><strong>Le café :</strong> Un charmant café mauresque se trouve à l'intérieur, idéal pour déguster un thé à la menthe avec des pâtisseries dans un cadre idyllique.</li>
+  </ul>
+
+  <h2 id="infos">Prix d'entrée et horaires</h2>
+  <p>
+    L'entrée à la Médina d'Agadir n'est pas gratuite, car il s'agit d'un projet privé visant à financer 
+    l'entretien du lieu et des artisans.
+  </p>
+  <ul>
+    <li><strong>Tarif adulte :</strong> Environ 40 Dirhams (4 €). Il arrive que l'entrée inclue une consommation gratuite (thé ou boisson) au café, bien que cette politique change souvent.</li>
+    <li><strong>Horaires :</strong> Généralement ouverte tous les jours de 9h00 à 18h00 ou 19h00 (selon la saison).</li>
+  </ul>
+  <p>
+    <em>Conseil :</em> Prévoyez de l'argent liquide pour l'entrée et pour vos éventuels achats dans les boutiques artisanales.
+  </p>
+
+  <h2 id="transport">Comment s'y rendre</h2>
+  <p>
+    La Médina Polizzi est située à l'extérieur du centre touristique, dans le quartier de Bensergao, à 
+    environ 5 à 6 kilomètres de la plage d'Agadir.
+  </p>
+  <ul>
+    <li><strong>En Petit Taxi :</strong> C'est le moyen le plus simple. Depuis la zone touristique, la course coûtera environ 20 à 30 MAD. Précisez bien au chauffeur "Médina Polizzi" ou "Nouvelle Médina" pour ne pas être confondu avec la Kasbah d'Oufella.</li>
+    <li><strong>En voiture de location :</strong> Il y a un grand parking devant l'entrée.</li>
+    <li><strong>En visite guidée :</strong> La Médina est incluse dans la quasi-totalité des excursions d'une demi-journée "City Tour" organisées au départ des hôtels.</li>
+  </ul>
+
+  <h2 id="avis">La Médina vaut-elle le coup ? (Notre avis)</h2>
+  <p>
+    Si vous vous attendez à la vie frénétique, aux odeurs d'épices et au chaos authentique des médinas de
+    Marrakech ou de Fès, vous serez déçu. La Médina d'Agadir ressemble davantage à un 
+    <strong>musée d'architecture en plein air</strong>. Elle est propre, silencieuse, et certains 
+    diront "sans âme" car personne n'y habite réellement.
+  </p>
+  <p>
+    Cependant, si vous souhaitez admirer de près le savoir-faire de l'artisanat marocain, prendre de 
+    superbes photos dans des décors de terre cuite, et fuir l'agitation de la plage le temps d'une heure 
+    ou deux, <strong>c'est une visite hautement recommandée</strong>.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">L'astuce photo</span>
+    Venez en fin de journée (vers 16h-17h). La lumière rasante du soleil sur les murs de terre ocre donne une atmosphère magique à la Médina, parfaite pour vos photos.
+  </div>
+</GuideLayout>

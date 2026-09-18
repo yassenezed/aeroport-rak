@@ -1,0 +1,131 @@
+---
+import TransferLayout from '../layouts/TransferLayout.astro';
+import TransferOptions from '../components/affiliate/TransferOptions.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Transferts', href: L('/agadir-airport-transfers/') },
+  { name: 'Chauffeur privé', href: L('/agadir-private-driver/') },
+];
+const facts = [
+  { label: 'Chauffeur / jour', value: '60 €', sub: 'dès' },
+  { label: 'Marrakech', value: '120 €', sub: 'aller' },
+  { label: 'Pas d\'Uber', value: 'Oui', sub: 'à Agadir' },
+  { label: 'Excursions', value: 'À la', sub: 'journée' },
+];
+const faqs = [
+  { q: "Combien coûte un chauffeur privé à Agadir ?", a: "Un chauffeur privé pour une journée complète autour d'Agadir et de la vallée du Souss démarre autour de 60–90 € selon la distance et le véhicule, les excursions plus longues (Paradise Valley, Taroudant, la route du Sahara) coûtant davantage. Les longs trajets aller comme Agadir–Marrakech démarrent autour de 120 €. Obtenez un devis fixe avant de vous engager. Vérifié en juin 2026." },
+  { q: "Peut-on louer un chauffeur à la journée depuis l'aéroport d'Agadir ?", a: "Oui. Vous pouvez réserver un chauffeur qui vous accueille à l'arrivée et reste avec vous pour la journée ou le séjour, utile pour les excursions, les journées à plusieurs arrêts, ou les longs trajets vers Marrakech ou Essaouira où vous préférez ne pas conduire. C'est la réponse à l'absence d'Uber à Agadir : un chauffeur réservé à l'avance, à prix fixe." },
+  { q: "Un chauffeur privé vaut-il mieux qu'une voiture de location à Agadir ?", a: "Cela dépend du voyage. Un chauffeur a du sens pour les longs trajets aller, les excursions sur des routes de montagne que vous préférez éviter, et toute personne qui ne veut tout simplement pas conduire à l'étranger. La location l'emporte pour une semaine indépendante de plage et de surf, avec surtout de courts trajets familiers et une liberté totale." },
+  { q: "Un chauffeur privé peut-il m'emmener en excursion depuis Agadir ?", a: "Oui, c'est une réservation courante. Paradise Valley, les remparts de Taroudant, le parc du Souss-Massa ou une longue journée à Essaouira fonctionnent bien avec un chauffeur qui attend pendant que vous explorez. Convenez de l'itinéraire, des heures et du prix d'avance pour éviter toute surprise en fin de journée." },
+  { q: "Comment obtenir un devis pour un chauffeur privé à Agadir ?", a: "Réservez un trajet à prix fixe via une plateforme de transfert, ou pour une journée sur mesure ou un itinéraire sur plusieurs jours, utilisez un service comme GetTransfer où des chauffeurs locaux vous envoient des devis concurrents pour votre plan exact. Dans tous les cas, bloquez le prix et l'itinéraire par écrit avant le voyage." },
+];
+---
+<TransferLayout
+  lang={lang}
+  title="Chauffeur privé Agadir : à la journée ou au séjour (2026) | AirportAGA"
+  description="Comment louer un chauffeur privé à Agadir en 2026, tarifs à la journée, excursions à Paradise Valley et Taroudant, longs trajets vers Marrakech et Essaouira, et comment obtenir un devis fixe sans Uber en ville."
+  eyebrow="Agadir · Chauffeur privé"
+  h1="Chauffeur privé à Agadir"
+  lede="Ni Uber, ni Careem, mais vous pouvez louer un chauffeur qui accueille votre vol et reste avec vous pour la journée ou tout le séjour. Le moyen souple de rejoindre les montagnes, les médinas et la côte sans prendre le volant."
+  breadcrumbs={breadcrumbs}
+  facts={facts}
+  priceFrom={60}
+  heroImage={photos['souss-coast']}
+  heroProvider="transfer"
+  heroCtaLabel="Voir les prix chauffeur & transfert"
+  secondaryHref="/agadir-airport-transfers/"
+  secondaryLabel="Toutes les options de transfert"
+  faqs={faqs}
+  cta={{ heading: 'Un chauffeur à la journée, réglé avant l\'atterrissage', text: 'Réservez un trajet à prix fixe, ou obtenez des devis concurrents de chauffeurs locaux pour un itinéraire sur mesure, la réponse à l\'absence d\'applis de course à Agadir.', provider: 'transfer', label: 'Voir les prix chauffeur' }}
+>
+  <p>
+    Il n'y a ni Uber ni Careem à Agadir : la course à la demande que vous prendriez chez vous n'existe
+    pas ici. L'alternative vaut mieux qu'il n'y paraît, un chauffeur privé réservé à l'avance qui
+    accueille votre vol et reste avec vous, pour un seul long trajet, une journée d'excursions bien
+    remplie, ou plusieurs jours de tourisme. Le prix est fixé à l'avance, ce qui supprime précisément ce
+    qui rend une appli au compteur stressante à l'étranger.
+  </p>
+
+  <h2 id="usages">Pourquoi louer un chauffeur</h2>
+  <ul>
+    <li><strong>Excursions à la journée</strong>, les gorges de palmiers de Paradise Valley, les remparts de Taroudant, le pays de l'arganier, ou une grande boucle vers le parc du Souss-Massa, le chauffeur attendant pendant que vous explorez.</li>
+    <li><strong>Longs trajets aller</strong>, <a href={L('/agadir-airport-to-marrakech/')}>Agadir vers Marrakech</a> ou <a href={L('/agadir-airport-to-essaouira/')}>Essaouira</a>, où un chauffeur à prix fixe vaut mieux que d'affronter une voiture inconnue à travers le pays.</li>
+    <li><strong>Tourisme sur plusieurs jours</strong>, un circuit mêlant la côte, les montagnes et les médinas, le même chauffeur du début à la fin, les bagages restant dans la voiture.</li>
+    <li><strong>Vacances sans conduire</strong>, pour quiconque ne veut tout simplement pas conduire au Maroc mais veut sortir au-delà de l'hôtel.</li>
+  </ul>
+
+  <h2 id="vs-location">Chauffeur ou voiture de location ?</h2>
+  <p>
+    Le partage honnête : louez un chauffeur quand la valeur est de ne pas conduire, routes de montagne,
+    longs trajets aller, excursions où vous préférez regarder par la fenêtre que naviguer. Louez une
+    voiture quand la valeur est l'indépendance, une semaine de courts trajets familiers plage-surf où
+    vous voulez partir à votre rythme. Pour une semaine de surf le long de la côte, une
+    <a href={L('/agadir-airport-car-rental/')}>voiture de location</a> l'emporte en général ; pour
+    quelques excursions phares, un chauffeur est plus simple et vous arrivez détendu.
+  </p>
+
+  <h3 id="reserver">Réserver un chauffeur ou obtenir un devis</h3>
+  <p>
+    Pour les trajets à prix fixe et les locations standard à la journée, Private Transfer couvre bien Agadir.
+    Pour une journée entièrement sur mesure ou un itinéraire de plusieurs jours, GetTransfer permet aux
+    chauffeurs locaux de vous envoyer des devis concurrents pour votre plan exact :
+  </p>
+  
+
+  <div class="bt-widget-container" style="margin: 2rem 0;">
+        <div class="widget-wrap">
+      <iframe
+        class="tpemd-iframe"
+        srcdoc='<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;padding:0;font-family:system-ui,sans-serif;overflow:hidden}</style></head><body><script async src="https://tpemd.com/content?currency=EUR&amp;trs=554574&amp;shmarker=697149&amp;locale=fr&amp;from=Al%20Massira%20Airport%20Agadir&amp;to=Agadir&amp;country=Morocco&amp;powered_by=true&amp;transfer_options_limit=10&amp;transfer_options=MCR&amp;disable_currency_selector=true&amp;hide_form_extras=true&amp;hide_external_links=true&amp;campaign_id=1&amp;promo_id=3879" charset="utf-8"><\/script><script>new MutationObserver(function(){document.documentElement.style.height="auto";window.parent.postMessage({tpemdHeight:document.body.scrollHeight},"*")}).observe(document.body,{childList:true,subtree:true,attributes:true})<\/script></body></html>'
+        style="width:100%;border:none;min-height:200px;overflow:hidden;"
+        loading="lazy"
+        title="Transfer booking widget"
+      ></iframe>
+    </div>
+  </div>
+
+
+
+  <h2 id="cout">Combien coûte un chauffeur</h2>
+  <p>Au véhicule, fixé à la réservation. Points de départ indicatifs, vérifiés en juin 2026 :</p>
+  <div class="table-wrap">
+    <table class="data">
+      <thead>
+        <tr><th>Location</th><th>Coût indicatif</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr class="row-highlight"><td>Journée complète autour d'Agadir</td><td class="num">60–90 €</td><td>excursions locales, chauffeur attend</td></tr>
+        <tr><td>Excursion Paradise Valley / Taroudant</td><td class="num">70–110 €</td><td>plus long, routes de montagne</td></tr>
+        <tr><td>Aller vers Marrakech</td><td class="num">120 €+</td><td>2 h 30–3 h de route</td></tr>
+        <tr><td>Aller vers Essaouira</td><td class="num">110 €+</td><td>route côtière vers le nord</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small text-muted">Indicatif, obtenez un devis écrit pour votre itinéraire et vos heures exacts avant de vous engager. Au véhicule, pas par personne.</p>
+
+  <div class="callout">
+    <span class="callout-label">Conseil local</span>
+    Convenez de l'itinéraire, du nombre d'heures et du prix par écrit avant de partir, et confirmez si
+    le carburant, le stationnement et les entrées de sites sont inclus. Un plan clair d'avance, c'est ce
+    qui garde une location de chauffeur à la journée détendue plutôt qu'une négociation permanente.
+  </div>
+
+  <div class="disclosure-inline">
+    Certains liens ici sont des liens d'affiliation : si vous réservez via ces liens, nous pouvons
+    percevoir une petite commission, sans surcoût pour vous. Cela ne change ni les prix affichés ni nos
+    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
+  </div>
+
+  <p>
+    Vous voulez une voiture haut de gamme avec votre chauffeur ? Voyez l'option
+    <a href={L('/agadir-airport-vip-transfer/')}>transfert VIP</a>. Vous planifiez les grands trajets ?
+    Lisez <a href={L('/agadir-airport-to-marrakech/')}>Agadir vers Marrakech</a> et
+    <a href={L('/agadir-airport-to-essaouira/')}>Agadir vers Essaouira</a> en détail.
+  </p>
+</TransferLayout>

@@ -1,0 +1,13 @@
+---
+interface Fact { label: string; value: string; sub?: string; }
+interface Props { facts: Fact[]; }
+const { facts } = Astro.props;
+---
+<div class="facts">
+  {facts.map((f) => (
+    <div class="fact">
+      <div class="fact-label">{f.label}</div>
+      <div class="fact-value">{f.value}{f.sub && <small> {f.sub}</small>}</div>
+    </div>
+  ))}
+</div>

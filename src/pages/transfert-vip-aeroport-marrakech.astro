@@ -1,0 +1,127 @@
+---
+import TransferLayout from '../layouts/TransferLayout.astro';
+import TransferOptions from '../components/affiliate/TransferOptions.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Transferts', href: L('/agadir-airport-transfers/') },
+  { name: 'Transfert VIP', href: L('/agadir-airport-vip-transfer/') },
+];
+const facts = [
+  { label: 'Aéroport → ville', value: '22 km' },
+  { label: 'Durée', value: '25–40', sub: 'min' },
+  { label: 'Transfert VIP', value: '45 €', sub: 'dès' },
+  { label: 'Véhicule', value: 'Premium', sub: 'gamme' },
+];
+const faqs = [
+  { q: "Qu'est-ce qu'un transfert VIP à Agadir ?", a: "C'est un transfert privé en véhicule haut de gamme. Mercedes Classe E ou S, SUV premium ou van business, généralement avec un chauffeur anglophone, de l'eau à bord et un accueil soigné. Vers le centre d'Agadir, il démarre autour de 45 € contre environ 20 € pour une voiture standard. Vérifié en juin 2026." },
+  { q: "Combien coûte un transfert VIP depuis l'aéroport d'Agadir ?", a: "Comptez environ 45 à 80 € vers le centre d'Agadir selon la catégorie de véhicule, davantage pour les SUV, les longs trajets sur la côte et la liaison vers Marrakech. Comme tout transfert privé, le prix est au véhicule : le supplément paie la voiture et le service, pas un tarif par personne." },
+  { q: "Le VIP vaut-il vraiment le coup face à un transfert privé standard ?", a: "Pour la plupart des arrivées de vacances, un transfert privé standard couvre déjà l'essentiel, prix fixe, pancarte au nom, voiture confortable. Le VIP justifie son supplément quand le véhicule et l'impression comptent : un voyage d'affaires, une occasion particulière, plus d'espace pour les jambes et les bagages, ou simplement l'envie d'une voiture haut de gamme après un long vol." },
+  { q: "Peut-on réserver une voiture de luxe pour un déplacement professionnel à Agadir ?", a: "Oui. Les transferts VIP et business sont faits exactement pour ça, une berline de direction ou un SUV premium avec chauffeur professionnel, réservés à prix fixe avec suivi du vol. Précisez le motif et le nombre de passagers à la réservation pour qu'on attribue la bonne catégorie de véhicule." },
+];
+---
+<TransferLayout
+  lang={lang}
+  title="Transfert VIP aéroport Agadir : voitures de luxe et business (2026) | AirportAGA"
+  description="Transferts VIP et business depuis l'aéroport Agadir Al Massira en 2026. Mercedes premium, SUV et vans de direction avec chauffeur professionnel, prix fixes, et quand l'upgrade en vaut la peine."
+  eyebrow="Aéroport d'Agadir · Transfert VIP"
+  h1="Transfert VIP aéroport Agadir"
+  lede="Quand la voiture compte autant que le trajet, une Mercedes premium ou un SUV de direction, un chauffeur professionnel, et un prix bloqué avant le départ. La sortie soignée d'Al Massira pour les voyages d'affaires et les arrivées qui se marquent."
+  breadcrumbs={breadcrumbs}
+  facts={facts}
+  priceFrom={45}
+  heroImage={photos['agadir-marina']}
+  heroProvider="transfer"
+  heroCtaLabel="Voir les prix des transferts VIP"
+  secondaryHref="/agadir-airport-private-transfer/"
+  secondaryLabel="Transfert privé standard"
+  faqs={faqs}
+  cta={{ heading: 'Descendez de l\'avion dans une voiture premium', text: 'Un véhicule haut de gamme, un chauffeur professionnel qui suit votre vol, et un prix fixé à l\'avance, l\'upgrade qui rend une arrivée d\'affaires ou d\'exception sans effort.', provider: 'transfer', label: 'Réserver un transfert VIP' }}
+>
+  <p>
+    Le transfert VIP, c'est la même logique de prix fixe et d'accueil qu'un transfert privé standard,
+    montée d'un cran : un véhicule haut de gamme, un chauffeur professionnel, et les petites attentions
+    qui rendent l'arrivée fluide plutôt que simplement réglée. Vers le centre d'Agadir, il démarre autour
+    de 45 €, contre environ 20 € pour une voiture ordinaire. Ce qu'on paie, ce n'est pas d'arriver plus
+    vite, le trajet reste 22 km, mais la voiture dans laquelle on monte et l'impression qu'elle laisse
+    à l'arrivée.
+  </p>
+
+  <h2 id="vehicles">Les véhicules et le service</h2>
+  <p>
+    Selon le prestataire et les disponibilités, une réservation VIP vous installe dans une Mercedes
+    Classe E ou S, un SUV haut de gamme type GLE ou Q7, ou un van business pour un groupe qui veut garder
+    l'espace et le confort. Le service comprend en général un chauffeur anglophone, de l'eau en bouteille,
+    un coffre généreux et un accueil plus soigné, la pancarte au nom, l'aide pour les bagages, la portière
+    tenue. Le suivi du vol est de série : un retard ne vous coûte donc pas la voiture.
+  </p>
+
+  <h2 id="who">À qui ça s'adresse</h2>
+  <p>
+    Soyez honnête sur le besoin réel. Pour une famille qui rejoint un hôtel de plage, un
+    <a href={L('/agadir-airport-private-transfer/')}>transfert privé</a> standard offre déjà le prix
+    fixe, la pancarte au nom et une voiture confortable, le supplément VIP achète un soin que vous
+    n'utiliserez peut-être pas. Là où il prend tout son sens : le voyage d'affaires où le véhicule fait
+    partie du décor, une occasion à marquer, l'envie de vrai espace pour les jambes et les bagages après
+    un long vol, ou simplement la préférence pour une voiture haut de gamme. Si c'est votre cas, l'argent
+    est bien dépensé ; sinon, l'option standard est le choix le plus malin.
+  </p>
+
+  <h3 id="book">Réserver un transfert VIP</h3>
+  <p>Pour un véhicule premium avec un accueil professionnel, ces deux prestataires couvrent bien Agadir :</p>
+  
+
+  <div class="bt-widget-container" style="margin: 2rem 0;">
+        <div class="widget-wrap">
+      <iframe
+        class="tpemd-iframe"
+        srcdoc='<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;padding:0;font-family:system-ui,sans-serif;overflow:hidden}</style></head><body><script async src="https://tpemd.com/content?currency=EUR&amp;trs=554574&amp;shmarker=697149&amp;locale=fr&amp;from=Al%20Massira%20Airport%20Agadir&amp;to=Agadir&amp;country=Morocco&amp;powered_by=true&amp;transfer_options_limit=10&amp;transfer_options=MCR&amp;disable_currency_selector=true&amp;hide_form_extras=true&amp;hide_external_links=true&amp;campaign_id=1&amp;promo_id=3879" charset="utf-8"><\/script><script>new MutationObserver(function(){document.documentElement.style.height="auto";window.parent.postMessage({tpemdHeight:document.body.scrollHeight},"*")}).observe(document.body,{childList:true,subtree:true,attributes:true})<\/script></body></html>'
+        style="width:100%;border:none;min-height:200px;overflow:hidden;"
+        loading="lazy"
+        title="Transfer booking widget"
+      ></iframe>
+    </div>
+  </div>
+
+
+
+  <h2 id="cost">Le prix d'un transfert VIP</h2>
+  <p>Tarif au véhicule, fixé à la réservation. Repères de départ, vérifiés en juin 2026 :</p>
+  <div class="table-wrap">
+    <table class="data">
+      <thead>
+        <tr><th>Vers</th><th>Voiture standard</th><th>VIP / premium</th></tr>
+      </thead>
+      <tbody>
+        <tr class="row-highlight"><td>Centre d'Agadir</td><td class="num">20 €</td><td class="num">45–70 €</td></tr>
+        <tr><td>Taghazout</td><td class="num">28 €</td><td class="num">60–90 €</td></tr>
+        <tr><td>Marrakech</td><td class="num">120 €</td><td class="num">180–250 €</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small text-muted">Indicatif, le prix VIP final dépend de la catégorie exacte choisie au paiement. Au véhicule, pas par personne.</p>
+
+  <div class="callout">
+    <span class="callout-label">Conseil local</span>
+    Si vous voulez une catégorie précise plutôt qu'un « premium au choix du chauffeur », réservez tôt et
+    précisez-la, la flotte haut de gamme d'Agadir est plus réduite que celle d'un grand hub européen, et
+    la S-Class ou le grand SUV exact peut être complet pour les soirées de charters chargées.
+  </div>
+
+  <div class="disclosure-inline">
+    Certains liens ici sont des liens d'affiliation : si vous réservez un transfert via ces liens, nous
+    pouvons percevoir une petite commission, sans surcoût pour vous. Cela ne change ni les prix
+    affichés ni nos recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
+  </div>
+
+  <p>
+    Pas besoin du niveau premium ? Un <a href={L('/agadir-airport-private-transfer/')}>transfert
+    privé</a> standard couvre la plupart des arrivées. Voyez comment chaque option se compare sur le
+    <a href={L('/agadir-airport-transfers/')}>hub des transferts</a>.
+  </p>
+</TransferLayout>

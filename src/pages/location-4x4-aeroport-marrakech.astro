@@ -1,0 +1,146 @@
+---
+import CarRentalLayout from '../layouts/CarRentalLayout.astro';
+import AffiliateLink from '../components/affiliate/AffiliateLink.astro';
+import { getLocalizedPath } from '../i18n';
+import { PRICES_CHECKED } from '../data/airport';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Location de voiture', href: L('/agadir-airport-car-rental/') },
+  { name: 'Location 4x4', href: L('/agadir-airport-4x4-rental/') },
+];
+const facts = [
+  { label: 'Location 4x4 / SUV', value: '40 €', sub: 'dès/jour' },
+  { label: 'Vrai 4x4 ?', value: 'Pistes', sub: 'seulement' },
+  { label: 'Caution', value: 'Plus élevée', sub: 'qu\'économique' },
+  { label: 'Routes côtières', value: 'Bitume', sub: 'pas besoin de 4x4' },
+];
+const faqs = [
+  { q: "Combien coûte la location d'un 4x4 à l'aéroport d'Agadir ?", a: `Un 4x4 ou un grand SUV à l'AGA démarre en général autour de 40 € par jour en basse saison et grimpe aux pics de charters et pour les modèles les plus capables, bien au-dessus des 16–25 € d'une économique. La caution est aussi plus élevée. Réservez à l'avance, surtout si vous voulez un vrai véhicule tout-terrain plutôt qu'un crossover routier, car les vrais 4x4 sont une part plus réduite de la flotte. Prix vérifiés en juin 2026.` },
+  { q: "Ai-je vraiment besoin d'un 4x4 dans la région d'Agadir ?", a: "Pour la plupart des trajets, non. Les routes vers Taghazout, Taroudant, le centre d'Agadir et même jusqu'à Tafraoute par l'itinéraire principal sont du bon bitume qu'une voiture normale prend sans souci. Un vrai 4x4 ne s'impose que lorsque vous quittez le goudron, les pistes de l'Anti-Atlas, les chemins rugueux vers des villages reculés, le sable en bord de désert, ou les montées non revêtues raides. Si votre plan reste sur les traits pleins de la carte, gardez l'argent et louez une citadine." },
+  { q: "Quelle différence entre un 4x4 et un SUV routier pour ces trajets ?", a: "Un SUV routier (crossover) offre hauteur, espace et confort sur bitume mais n'est pas conçu pour le vrai tout-terrain, beaucoup sont à deux roues motrices. Un vrai 4x4 a quatre roues motrices, la garde au sol et le rapport de boîte pour les pistes et surfaces meubles. Pour des routes de montagne goudronnées avec famille et bagages, un SUV suffit largement. Pour les pistes de l'Anti-Atlas ou tout ce qui est réellement non revêtu, il vous faut le vrai 4x4 et vous devez confirmer la spec à la réservation." },
+  { q: "Peut-on emmener une voiture de location sur les pistes vers Tafraoute et l'Anti-Atlas ?", a: "La route principale vers Tafraoute est goudronnée et convient à toute voiture. Les pistes au-delà, les itinéraires secondaires entre villages, les accès rugueux aux gorges et points de vue, c'est là qu'un 4x4 mérite sa location. Vérifiez aussi vos conditions : beaucoup de contrats restreignent ou interdisent la conduite hors bitume, et les dommages hors goudron peuvent ne pas être couverts. Si le hors-piste est le but du voyage, louez un 4x4 et confirmez la clause hors-route avant de signer." },
+  { q: "La location d'un 4x4 vaut-elle le coup pour un trip désert ou montagne depuis Agadir ?", a: "Si votre voyage est bâti autour de l'Anti-Atlas, des pistes de Tafraoute ou de l'accès au bord du désert par vos propres moyens, un 4x4 fait la différence entre y aller ou pas, il vaut son supplément. Si vous voulez surtout du tourisme confortable sur bitume avec çà et là un parking non revêtu, une voiture normale ou un SUV routier fait l'affaire pour bien moins. Choisissez le véhicule pour la route la plus rude que vous emprunterez vraiment, pas celle que vous pourriez emprunter." },
+];
+---
+<CarRentalLayout
+  lang={lang}
+  title="Location 4x4 aéroport Agadir : quand en louer un, prix (2026) | AirportAGA"
+  description="Location de 4x4 et SUV à l'aéroport Agadir Al Massira pour l'Anti-Atlas, Tafraoute, les pistes et le bord du désert en 2026, prix réels, quand un 4x4 est vraiment nécessaire vs une voiture normale, et comment bien réserver."
+  eyebrow="Aéroport d'Agadir · Location de voiture"
+  h1="Location de 4x4 à l'aéroport d'Agadir"
+  lede="Un 4x4 depuis l'AGA ouvre l'Anti-Atlas, les pistes de Tafraoute et le bord du désert, mais la plupart des trajets autour d'Agadir roulent sur du bon bitume qui n'exige rien de spécial. Voici quand un 4x4 vaut son supplément, et quand une voiture normale suffit."
+  breadcrumbs={breadcrumbs}
+  facts={facts}
+  priceFrom={40}
+  heroImage={photos['souss-coast']}
+  heroCtaLabel="Comparer les prix de location 4x4"
+  faqs={faqs}
+  cta={{ heading: 'Comparez tous les comptoirs de location de l\'AGA', text: 'Cherchez côte à côte les agences de l\'aéroport d\'Agadir, prix, caution, politique de carburant et assurance, le tout au même endroit.', provider: 'economybookings', label: 'Comparer les prix de location' }}
+>
+  <p>
+    Un 4x4 depuis Agadir est la clé du pays que la plupart des visiteurs ne voient jamais, les pistes
+    de l'Anti-Atlas au-dessus de Tafraoute, les chemins rugueux vers des villages reculés et des
+    gorges, le bord du désert au-delà des routes goudronnées. C'est aussi bien plus cher qu'une
+    économique, avec une caution plus élevée, et pour la plupart des séjours à Agadir c'est plus de
+    véhicule que les routes n'en demandent. La vraie question n'est pas « quel 4x4 ? » mais « ai-je
+    besoin d'un 4x4 tout court ? », et cette page y répond avant que vous ne payiez le supplément.
+  </p>
+
+
+  <div class="car-widget-wrapper" style="margin: 2.5rem 0 3.5rem 0;">
+    <h3 style="font-size: 1.75rem; margin-bottom: 0.5rem; text-align: center; margin-top: 0;">Comparez les locations 4x4</h3>
+    <p style="text-align: center; color: var(--ink-2); margin-bottom: 2rem;">Trouvez les meilleures offres 4x4 pour l'Aéroport d'Agadir.</p>
+    <div style="width: 100%; border-radius: 5px; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
+      <script is:inline async src="https://tpemd.com/content?trs=554574&amp;shmarker=697149&amp;locale=fr&amp;default_pick_up_location=Agadir%20Airport&amp;powered_by=true&amp;border_radius=5&amp;plain=true&amp;show_logo=true&amp;color_background=%23ffca28&amp;color_button=%2355a539&amp;color_text=%23000000&amp;color_input_text=%23000000&amp;color_button_text=%23ffffff&amp;promo_id=4480&amp;campaign_id=10" charset="utf-8"></script>
+    </div>
+  </div>
+
+  <h2 id="besoin">Quand un 4x4 est vraiment nécessaire</h2>
+  <p>
+    Les routes qui comptent pour un séjour classique, la côte vers Taghazout, la N1/N10 vers
+    Taroudant, l'itinéraire principal vers Tafraoute, le centre d'Agadir lui-même, sont du bon bitume.
+    Une voiture normale les prend toutes confortablement. Vous entrez en territoire 4x4 seulement
+    lorsque vous quittez le revêtement :
+  </p>
+  <ul>
+    <li><strong>Pistes de l'Anti-Atlas</strong>, les itinéraires secondaires non revêtus entre villages au-dessus de Tafraoute, où le paysage est tout l'intérêt et la surface est de la roche meuble.</li>
+    <li><strong>Chemins reculés et gorges</strong>, les accès aux points de vue, gorges de palmiers et hameaux que la route principale ne fait qu'approcher.</li>
+    <li><strong>Bord du désert et sable</strong>, partout où le sol est meuble, où la garde au sol et les quatre roues motrices vous évitent l'ensablement.</li>
+    <li><strong>Montées rugueuses et raides non revêtues</strong>, le genre d'accès où un crossover bas frotterait ou perdrait l'adhérence.</li>
+  </ul>
+  <p>
+    Si rien de tout cela n'est au programme, une citadine ou un break est la dépense la plus maligne.
+    Restez sur le bitume et le 4x4 vous fait payer une capacité que vous n'utiliserez jamais.
+  </p>
+
+  <h2 id="4x4-vs-suv">Vrai 4x4 vs SUV routier</h2>
+  <p>
+    Ce ne sont pas la même chose, et la différence compte à l'AGA. Un SUV routier, un crossover, offre une position haute, du coffre et un roulage confortable, mais beaucoup sont à deux roues
+    motrices et ne sont pas faits pour le vrai tout-terrain. Un vrai 4x4 a quatre roues motrices, la
+    garde au sol et le rapport de boîte pour les surfaces meubles. Pour du tourisme de montagne sur
+    bitume avec famille et bagages, le SUV suffit largement et coûte moins. Pour les pistes, il vous
+    faut le vrai 4x4, et confirmez la spec sur la réservation, car « SUV » sur une annonce ne garantit
+    pas les quatre roues motrices.
+  </p>
+  <div class="table-wrap">
+    <table class="data">
+      <thead>
+        <tr><th>Votre trajet</th><th>Quoi louer</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Côte, ville, Taroudant, route goudronnée de Tafraoute</td><td>Citadine ou break</td></tr>
+        <tr><td>Montagne sur bitume, famille + bagages</td><td>SUV routier (confort, pas tout-terrain)</td></tr>
+        <tr class="row-highlight"><td>Pistes de l'Anti-Atlas, chemins rugueux, bord du désert</td><td>Vrai 4x4 (quatre roues motrices)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <span class="callout-label">Conseil local</span>
+    Lisez la clause hors-route avant de louer un 4x4. Beaucoup de contrats restreignent ou interdisent
+    la conduite sur routes non revêtues, et les dommages subis hors bitume peuvent ne pas être couverts
+    même dans un 4x4. Si les pistes sont le but du voyage, faites confirmer par écrit que la conduite
+    hors goudron est autorisée et ce que l'assurance couvre, sinon le bon véhicule sur le papier vous
+    laisse exposé.
+  </div>
+
+  <h2 id="cout-caution">Coût, caution et réservation</h2>
+  <p>
+    Comptez un 4x4 à partir d'environ 40 € par jour hors saison, grimpant fortement pour les modèles
+    les plus capables et aux pics de février et de Pâques. La caution est en général plus élevée que sur
+    une économique : les mêmes règles s'appliquent en plus strict, une vraie carte de crédit au nom du
+    conducteur principal avec le plafond pour couvrir le blocage. Comme les vrais 4x4 sont une part plus
+    réduite de la flotte de l'AGA, ils partent en premier, réservez tôt si vos dates sont fixes.
+  </p>
+
+  <h3 id="reserver">Comparer la location de 4x4</h3>
+  <p>
+    Comparez les comptoirs de l'AGA ensemble pour filtrer les vrais 4x4 et lire la caution, la
+    politique de carburant et les conditions hors-route avant de payer. Nous utilisons
+    <AffiliateLink provider="economybookings" sub="location-4x4-aeroport-agadir-body" class="text-link">EconomyBookings</AffiliateLink> :
+    le site liste les agences côte à côte, montre la spec et les conditions d'avance, et sa couverture
+    tous risques est en général moins chère que le rachat du comptoir, bonne à avoir quand vous partez
+    sur terrain rugueux.
+  </p>
+
+  <div class="disclosure-inline">
+    Certains liens ici sont des liens d'affiliation : réservez via ces liens et nous pouvons percevoir
+    une petite commission, sans surcoût pour vous. Cela ne change jamais les prix affichés ni nos
+    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
+  </div>
+
+  <p>
+    Pas sûr qu'un 4x4 soit adapté ? Voyez le guide complet
+    <a href={L('/agadir-airport-car-rental/')}>location de voiture à l'aéroport d'Agadir</a> pour la
+    flotte standard et le fonctionnement de la réservation, ou comparez les comptoirs sur notre page
+    <a href={L('/best-car-rental-agadir-airport/')}>meilleure location à l'aéroport d'Agadir</a>. Si
+    vous préférez ne pas conduire vous-même les routes rugueuses, un
+    <a href={L('/agadir-private-driver/')}>chauffeur privé</a> peut vous emmener en montagne à votre
+    place.
+  </p>
+</CarRentalLayout>

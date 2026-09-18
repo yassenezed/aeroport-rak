@@ -1,0 +1,82 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
+import FactStrip from '../components/ui/FactStrip.astro';
+import FaqSection from '../components/ui/FaqSection.astro';
+import CtaBand from '../components/ui/CtaBand.astro';
+import AffiliateLink from '../components/affiliate/AffiliateLink.astro';
+import SchemaBreadcrumb from '../components/seo/SchemaBreadcrumb.astro';
+import SchemaProduct from '../components/seo/SchemaProduct.astro';
+import { site } from '../data/site';
+import { useTranslations, getLocalizedPath, type Lang } from '../i18n';
+
+interface Fact { label: string; value: string; sub?: string; }
+interface FAQ { q: string; a: string; }
+interface Crumb { name: string; href: string; }
+interface Props {
+  title: string;
+  description: string;
+  lang: Lang;
+  ogImage?: string;
+  heroImage?: ImageMetadata;
+  eyebrow: string;
+  h1: string;
+  lede: string;
+  breadcrumbs: Crumb[];
+  facts: Fact[];
+  priceFrom: number;
+  heroProvider: any;
+  heroCtaLabel: string;
+  faqs: FAQ[];
+  faqHeading?: string;
+  cta: { heading: string; text?: string; provider: any; label: string };
+}
+const {
+  title, description, lang, ogImage, heroImage,
+  eyebrow, h1, lede, breadcrumbs, facts, priceFrom,
+  heroProvider, heroCtaLabel, faqs, faqHeading, cta,
+} = Astro.props;
+const t = useTranslations(lang);
+const pathname = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : Astro.url.pathname + '/';
+const sub = pathname.replace(/\//g, '-').replace(/^-|-$/g, '') || 'home';
+const absCrumbs = breadcrumbs.map((c) => ({ name: c.name, url: site.url + c.href }));
+---
+<BaseLayout title={title} description={description} lang={lang} ogImage={ogImage} webpageSchema={false}>
+  <SchemaBreadcrumb slot="head" items={absCrumbs} />
+  <SchemaProduct slot="head" name={h1} description={description} url={`${site.url}${pathname}`} priceFrom={priceFrom} />
+
+  <section class:list={['hero', { 'hero--photo': heroImage }]}>
+    {heroImage && <div class="hero-bg"><Image src={heroImage} alt="" widths={[768, 1280, 1920]} sizes="100vw" loading="eager" fetchpriority="high" /></div>}
+    <div class="container hero-inner">
+      <Breadcrumbs items={breadcrumbs} />
+      <span class="eyebrow">{eyebrow}</span>
+      <h1>{h1}</h1>
+      <p class="lede">{lede}</p>
+      <div class="hero-cta">
+        <AffiliateLink provider={heroProvider} sub={sub} class="btn btn-primary btn-lg btn-arrow">{heroCtaLabel}</AffiliateLink>
+        <a class="btn btn-ghost" href={getLocalizedPath('/agadir-airport-transfers/', lang)}>{t('common.backToTransfers')}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="content-col">
+        <FactStrip facts={facts} />
+        <slot />
+      </div>
+    </div>
+  </section>
+
+  {faqs.length > 0 && (
+    <section class="section section-alt">
+      <div class="container content-col">
+        <FaqSection faqs={faqs} heading={faqHeading ?? t('common.faqHeading')} />
+      </div>
+    </section>
+  )}
+
+  <CtaBand heading={cta.heading} text={cta.text} provider={cta.provider} sub={sub} ctaLabel={cta.label} />
+</BaseLayout>

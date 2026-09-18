@@ -1,0 +1,37 @@
+---
+import { site } from '../../data/site';
+// Product + Offer schema for a bookable transfer/service money page.
+interface Props {
+  name: string;
+  description: string;
+  url: string;
+  priceFrom: number;
+  currency?: string;
+  rating?: number;
+  reviewCount?: number;
+}
+const { name, description, url, priceFrom, currency = 'EUR', rating, reviewCount } = Astro.props;
+const schema: Record<string, unknown> = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name,
+  description,
+  brand: { '@type': 'Brand', name: site.name },
+  offers: {
+    '@type': 'AggregateOffer',
+    priceCurrency: currency,
+    lowPrice: priceFrom,
+    availability: 'https://schema.org/InStock',
+    url,
+  },
+};
+if (rating && reviewCount) {
+  schema.aggregateRating = {
+    '@type': 'AggregateRating',
+    ratingValue: rating,
+    reviewCount,
+    bestRating: 5,
+  };
+}
+---
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

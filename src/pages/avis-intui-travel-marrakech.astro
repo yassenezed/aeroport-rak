@@ -1,0 +1,119 @@
+---
+import ReviewLayout from '../layouts/ReviewLayout.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Transferts', href: L('/agadir-airport-transfers/') },
+  { name: 'Avis Intui Travel', href: L('/intui-travel-agadir-review/') },
+];
+const pros = [
+  'Le modèle place de marché permet de comparer d\'un coup de nombreux opérateurs locaux et leurs prix',
+  'Des navettes partagées qui peuvent battre une voiture privée pour un voyageur seul',
+  'Couverture étendue grâce à son réseau de partenaires',
+  'Utile quand vous cherchez le tarif le plus bas possible et que vous avez du temps',
+];
+const cons = [
+  'La qualité et l\'accueil dépendent de l\'opérateur qui exécute votre réservation',
+  'Les conditions d\'annulation varient selon l\'annonce, il faut lire chacune',
+  'Les courses partagées impliquent d\'attendre que le van se remplisse ou que d\'autres soient déposés d\'abord',
+  'Moins d\'accompagnement qu\'un opérateur unique de marque comme Private Transfer',
+];
+const faqs = [
+  { q: "Intui Travel est-il fiable et sûr pour Agadir ?", a: "Oui, Intui est une place de marché de transferts légitime qui vous met en relation avec des opérateurs locaux vérifiés. Le hic, c'est la régularité : votre expérience dépend de la société précise qui exécute la course, alors vérifiez les avis de l'annonce et ses conditions d'annulation avant de payer. C'est un choix solide pour comparer les prix, moins si vous voulez un standard garanti." },
+  { q: "Combien coûte un transfert Intui depuis l'aéroport d'Agadir ?", a: "Les navettes partagées peuvent démarrer autour de 16 € par personne vers le centre d'Agadir, et les voitures privées sont à des tarifs compétitifs face aux prestataires dédiés, vérifié en juin 2026. Comme c'est une place de marché, les prix varient selon l'opérateur et la date, l'intérêt est d'en comparer plusieurs d'un coup." },
+  { q: "Quelle différence entre Intui et Private Transfer ?", a: "Private Transfer est un courtier au standard de réservation et de service plus uniforme ; Intui est une place de marché ouverte qui liste de nombreux opérateurs, navettes partagées comprises. Intui peut être moins cher, surtout pour un voyageur seul, mais Private Transfer est plus prévisible. Utilisez Intui pour comparer et dénicher les options petit budget, Private Transfer quand vous voulez la régularité." },
+  { q: "Intui propose-t-il des transferts partagés à Agadir ?", a: "Oui, les navettes partagées sont l'un des points forts d'Intui et l'option réaliste la moins chère pour un voyageur seul, puisqu'il n'y a pas de bus d'aéroport utile à Agadir. Vous partagez un minivan avec d'autres passagers à un prix par personne, donc attendez-vous à un peu d'attente et à des arrêts supplémentaires." },
+];
+---
+<ReviewLayout
+  lang={lang}
+  title="Avis Intui Travel Agadir 2026 : le meilleur pour le petit budget et le partagé | AirportAGA"
+  description="Notre avis Intui Travel Agadir, comment fonctionne la place de marché de transferts, les prix réels, les navettes partagées et le compromis sur la régularité. Idéal pour comparer les prix et les petits budgets, avec les réserves expliquées."
+  eyebrow="Aéroport d'Agadir · Avis transfert"
+  h1="Avis Intui Travel Agadir : la place de marché du petit budget et du partagé"
+  lede="Intui n'est pas un opérateur, c'est une place de marché qui permet de comparer les sociétés de transfert locales et de trouver des navettes partagées qui battent une voiture privée. Voici ce qu'il fait bien, le compromis sur la régularité que vous acceptez, et à qui ça convient."
+  breadcrumbs={breadcrumbs}
+  heroImage={photos['agadir-marina']}
+  brand="Intui Travel"
+  rating={4.0}
+  verdict="Une place de marché utile pour comparer les prix et trouver des courses partagées à Agadir Al Massira, souvent le trajet le moins cher pour un voyageur seul. Le compromis, c'est la régularité : la qualité dépend de l'opérateur derrière votre réservation, alors lisez l'annonce avant de payer."
+  pros={pros}
+  cons={cons}
+  heroProvider="intui"
+  heroCtaLabel="Comparer les prix Intui"
+  faqs={faqs}
+  cta={{ heading: 'Comparez les prix des transferts sur Intui', text: 'Alignez côte à côte plusieurs opérateurs locaux et navettes partagées, puis réservez le tarif le plus bas qui convient à vos dates et votre groupe, vérifiez juste d\'abord les conditions de l\'annonce.', provider: 'intui', label: 'Comparer les prix Intui' }}
+>
+  <p>
+    Intui Travel fonctionne autrement que les deux autres prestataires que nous notons. Plutôt que
+    d'exploiter sa propre flotte ou d'attribuer un chauffeur via un courtier, c'est une place de marché :
+    elle liste des transferts de nombreux opérateurs locaux pour que vous compariez prix et formats, navettes partagées comprises, au même endroit. À Agadir, où il n'y a pas de bus d'aéroport utile,
+    cela en fait l'adresse naturelle des petits budgets et des voyageurs seuls, à condition d'en
+    comprendre le compromis.
+  </p>
+
+  <h2 id="pricing">Prix</h2>
+  <p>
+    C'est la meilleure carte d'Intui. Les navettes partagées peuvent démarrer autour de 16 € par personne
+    vers le centre d'Agadir, et les voitures privées affichent des tarifs compétitifs face aux
+    prestataires dédiés (vérifié en juin 2026). Comme vous comparez plusieurs opérateurs d'un coup, vous
+    trouvez en général un tarif sous le prix privé de référence, surtout en voyageant seul, où une place
+    partagée bat le fait de payer toute une voiture. Pour un groupe, une voiture privée partagée peut
+    encore l'emporter ; l'intérêt, c'est qu'Intui laisse voir les deux et choisir.
+  </p>
+
+  <h2 id="booking">Expérience de réservation</h2>
+  <p>
+    Vous cherchez votre trajet et voyez une liste d'options de différents opérateurs, chacun avec son
+    prix, son véhicule et sa politique d'annulation. C'est la force et le piège : le choix est large, mais
+    il faut lire chaque annonce plutôt que se fier à un standard unique. Vérifiez les conditions
+    d'annulation et les avis de l'opérateur avant de payer, ils varient vraiment. La confirmation arrive
+    avec les coordonnées de l'opérateur, et pour les courses partagées vous aurez une plage de prise en
+    charge plutôt qu'un créneau privé exact.
+  </p>
+
+  <h2 id="vehicles">Véhicules et arrivée</h2>
+  <p>
+    Comme l'exécution est répartie entre de nombreuses sociétés locales, il n'y a pas de standard de
+    véhicule ni d'expérience d'arrivée unique, tout dépend de qui vous réservez. Certains opérateurs
+    proposent une voiture privée nette et un accueil avec pancarte au nom ; les navettes partagées sont
+    des minivans où vous attendrez que le van se remplisse ou que d'autres passagers soient déposés
+    d'abord. Ça peut être tout à fait correct, mais c'est moins prévisible qu'un opérateur unique de
+    marque, et l'accueil est rarement aussi attentionné que celui de
+    <a href={L('/agadir-airport-transfers/')}>Private Transfer</a>.
+  </p>
+
+  <h2 id="best-for">À qui ça convient</h2>
+  <p>
+    Utilisez Intui si le prix prime et que vous avez un peu de souplesse : les voyageurs seuls qui veulent
+    une navette partagée, ceux qui aiment comparer plusieurs devis avant de s'engager, et les arrivées de
+    jour avec du temps devant soi. Si vous voulez un standard garanti, un accueil attentionné, ou que vous
+    atterrissez tard et n'avez aucune envie d'incertitude, un prestataire dédié comme
+    <a href={L('/best-agadir-airport-transfer/')}>Private Transfer</a> est le choix plus sûr. Pour la stratégie petit
+    budget complète, voyez le guide
+    <a href={L('/cheapest-agadir-airport-transfer/')}>transfert aéroport Agadir le moins cher</a>.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">Conseil local</span>
+    Sur une place de marché, l'annonce la moins chère n'est pas automatiquement la meilleure. Passez deux
+    minutes sur les avis de l'opérateur et la ligne d'annulation avant de réserver, c'est ce qui sépare
+    une course partagée fluide d'une longue attente sur le trottoir.
+  </div>
+
+  <div class="disclosure-inline">
+    Certains liens ici sont des liens d'affiliation : si vous réservez un transfert via ces liens, nous
+    pouvons percevoir une petite commission, sans surcoût pour vous. Cela ne change ni les prix
+    affichés ni nos recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
+  </div>
+
+  <p>
+    Voyez comment Intui se classe face aux prestataires dédiés sur notre guide
+    <a href={L('/best-agadir-airport-transfer/')}>meilleur transfert aéroport Agadir</a>.
+  </p>
+</ReviewLayout>

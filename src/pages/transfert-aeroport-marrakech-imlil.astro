@@ -1,0 +1,111 @@
+---
+import RouteLayout from '../layouts/RouteLayout.astro';
+import TransferOptions from '../components/affiliate/TransferOptions.astro';
+import { getLocalizedPath } from '../i18n';
+import { photos } from '../data/images';
+
+const lang = 'fr';
+const L = (p: string) => getLocalizedPath(p, lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: 'Transferts', href: L('/agadir-airport-transfers/') },
+  { name: 'Vers Mirleft', href: L('/agadir-airport-to-mirleft/') },
+];
+const facts = [
+  { label: 'Distance', value: '150 km' },
+  { label: 'Durée', value: '2¼–2½', sub: 'h' },
+  { label: 'Transfert réservé', value: '100 €', sub: 'dès' },
+  { label: 'Grand taxi', value: 'à négocier', sub: '' },
+];
+const faqs = [
+  { q: "À quelle distance Mirleft se trouve-t-elle de l'aéroport d'Agadir ?", a: "Environ 150 km vers le sud par la côte, soit 2 h 15 à 2 h 30 de route. On descend par Tiznit puis on rejoint la côte, pas de train ni de bus direct depuis l'aéroport, donc c'est un transfert privé ou un grand taxi longue distance négocié à la station." },
+  { q: "Combien coûte un transfert de l'aéroport d'Agadir à Mirleft ?", a: "Un transfert privé porte-à-porte démarre autour de 100 € pour la voiture entière. Pour 150 km, un prix fixe convenu avant le départ est en général plus serein que de marchander un grand taxi, et fiable sur les routes plus calmes du sud. Prix vérifiés en juin 2026." },
+  { q: "La plage de Legzira est-elle proche de Mirleft ?", a: "Oui. Legzira, avec sa spectaculaire arche de grès rouge et son immense plage déserte, se trouve à quelques kilomètres au sud de Mirleft, sur la route de Sidi Ifni. La plupart des visiteurs logés à Mirleft vont y admirer le coucher de soleil ; un chauffeur privé peut l'intégrer au transfert ou vous y mener séparément." },
+  { q: "Combien de temps dure le trajet vers Mirleft ?", a: "Comptez 2 h 15 à 2 h 30. La partie rapide est la route vers Tiznit ; ensuite on bifurque vers la côte sur des routes plus calmes et sinueuses jusqu'à Mirleft. Une conduite détendue à travers la campagne du Souss, pas une course d'autoroute." },
+  { q: "À quoi ressemble Mirleft ?", a: "Un petit village côtier décontracté qui attire surfeurs, parapentistes et amateurs d'un coin tranquille de l'Atlantique. Bas, quelques maisons d'hôtes et cafés, une enfilade de criques et Legzira au bout de la route, l'antidote à l'Agadir balnéaire, et le long transfert l'entretient." },
+];
+---
+<RouteLayout
+  lang={lang}
+  title="Transfert aéroport Agadir – Mirleft : taxi et prix (2026) | AirportAGA"
+  description="De l'aéroport Agadir Al Massira à Mirleft, sur la côte sud : 150 km et environ 2 h 30 par Tiznit. Prix transfert 2026, le lien avec la plage de Legzira, et à quoi ressemble ce village décontracté."
+  eyebrow="Trajets depuis l'AGA · Côte sud"
+  h1="Transfert aéroport Agadir → Mirleft"
+  lede="Mirleft est à 150 km sur la côte sud, environ 2 h 30 par Tiznit jusqu'à un village tranquille de criques, de surfeurs et de parapentistes, avec les arches rouges de la plage de Legzira au bout de la route. Voici le prix du transfert et comment y aller."
+  breadcrumbs={breadcrumbs}
+  facts={facts}
+  priceFrom={100}
+  heroImage={photos['souss-coast']}
+  heroProvider="transfer"
+  heroCtaLabel="Voir les prix vers Mirleft"
+  faqs={faqs}
+  cta={{ heading: 'Au sud, vers la côte tranquille', text: 'Une voiture privée à prix fixe de l\'arrivée AGA à votre maison d\'hôtes de Mirleft, vol suivi, les 150 km gérés, annulation gratuite sur la plupart des réservations. Halte à Legzira sur demande.', provider: 'transfer', label: 'Réserver votre transfert Mirleft' }}
+>
+  <p>
+    Mirleft, c'est là qu'on va pour échapper à l'Agadir balnéaire, un petit village bas égrené sur la
+    côte sud, avec une succession de criques tranquilles, une scène surf et parapente, et le célèbre grès
+    rouge de la plage de Legzira à quelques kilomètres. Il se trouve à environ 150 km au sud de
+    l'aéroport, soit 2 h 15 à 2 h 30 de route par Tiznit. Pas de train ni de bus direct depuis le
+    terminal : c'est un transfert privé ou un grand taxi longue distance.
+  </p>
+
+  <h2 id="options">Y aller depuis l'aéroport</h2>
+  <p>
+    Deux façons réalistes de descendre vers le sud :
+  </p>
+  <ul>
+    <li><strong>Transfert privé</strong>, il vous accueille à l'arrivée et parcourt les 150 km jusqu'à votre maison d'hôtes, utile dans un village où les adresses sont dispersées et la signalétique rare. Dès 100 € la voiture.</li>
+    <li><strong>Grand taxi</strong>, possible si vous négociez ferme à la station, mais pour cette distance et les routes plus calmes du sud, un prix fixe réservé est le choix le plus simple et serein. Convenez le tarif complet avant de charger.</li>
+    <li><strong>Voiture de location</strong>, un bon choix si vous explorez la côte sud. Legzira, Sidi Ifni, les criques, par vos propres moyens sur plusieurs jours.</li>
+  </ul>
+
+  <h3 id="reserver">Réserver un transfert vers Mirleft</h3>
+  <TransferOptions
+    sub="aeroport-agadir-mirleft"
+    options={[
+      { provider: 'transfer', highlight: true, badge: 'Meilleur rapport', pitch: 'Une voiture ou un minivan à prix fixe sur les 150 km jusqu\'à votre maison d\'hôtes de Mirleft, dès 100 € le véhicule, avec suivi du vol et annulation gratuite jusqu\'à 24 h.', label: 'Voir les prix des transferts' },
+      { provider: 'transfer-vip', badge: 'Accueil personnalisé', pitch: 'Un chauffeur nommé, anglophone, qui s\'engage sur le long trajet vers le sud, rassurant pour une première descente sur la côte, avec un contact clair.', label: 'Réserver un transfert VIP' },
+    ]}
+  />
+
+  <h2 id="legzira">Legzira, au bout de la route</h2>
+  <p>
+    Si tant de gens choisissent Mirleft, c'est aussi pour Legzira, une étendue sauvage de falaises de
+    grès rouge et de plage déserte un peu plus au sud, sur la route de Sidi Ifni, qui rougeoie au
+    coucher du soleil. Une escapade facile depuis Mirleft, et un chauffeur privé glissera souvent une
+    halte à Legzira dans le transfert ou vous y mènera séparément. (Une note pour les habitués : l'une
+    des deux arches naturelles de Legzira s'est effondrée il y a quelques années ; la plage et l'arche
+    restante demeurent spectaculaires.)
+  </p>
+
+  <h2 id="route">À quoi ressemble le trajet</h2>
+  <p>
+    La partie rapide est la route principale vers Tiznit, rapide et droite à travers la plaine. Après
+    Tiznit, on bifurque vers la côte sur des routes plus étroites et légèrement sinueuses jusqu'à
+    Mirleft, une conduite détendue à travers la campagne ouverte du Souss, avec l'Atlantique qui
+    apparaît à l'approche du village. Rien d'exigeant, mais ce sont plus de deux heures et les services
+    se raréfient plus on descend au sud : partez avec le plein, de l'eau, et la localisation de la maison
+    d'hôtes enregistrée.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">Conseil local</span>
+    Calez le trajet pour arriver à Legzira en fin d'après-midi. Les falaises virent au rouge profond
+    quand le soleil baisse et la marée se retire pour laisser un vaste miroir de sable humide, la côte
+    sud à son meilleur, et une bien plus belle première impression que sous la lumière plate de midi.
+  </div>
+
+  <p>
+    Vous continuez sur la côte ? Comparez le trajet
+    <a href={L('/agadir-airport-to-sidi-ifni/')}>aéroport → Sidi Ifni</a>, juste au-delà de Legzira, ou
+    l'étape <a href={L('/agadir-airport-to-tiznit/')}>aéroport → Tiznit</a> que vous traversez en
+    chemin. Pour tous les trajets depuis le terminal, voyez le
+    <a href={L('/agadir-airport-transfers/')}>hub des transferts</a>.
+  </p>
+
+  <div class="disclosure-inline">
+    Certains liens ici sont des liens d'affiliation, réservez via ces liens et nous pouvons percevoir
+    une petite commission, sans surcoût pour vous. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
+  </div>
+</RouteLayout>
