@@ -12,7 +12,7 @@ export function buildAffiliateUrl(provider: AffiliateId, sub?: string): string {
     return '/esim-maroc/';
   }
   if (p.includes('lounge') || p.includes('priority') || p.includes('pass') || p.includes('salon')) {
-    return '/guide-aeroport-marrakech/salons/';
+    return '/guide-aeroport-marrakech/';
   }
   if (p.includes('car') || p.includes('discover') || p.includes('hertz') || p.includes('europcar') || p.includes('sixt') || p.includes('rental') || p.includes('economybookings') || p.includes('localrent') || p.includes('getrentacar')) {
     return '/location-voiture-aeroport-marrakech/';

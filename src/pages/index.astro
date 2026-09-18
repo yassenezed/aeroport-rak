@@ -115,12 +115,12 @@ const faqs = [
     </div>
   </section>
 
-  <!-- Quatre façons de rejoindre la ville -->
+  <!-- Trois façons de rejoindre la ville -->
   <section class="section">
     <div class="container">
       <span class="eyebrow">Vos options à l'arrivée</span>
-      <h2>Quatre façons raisonnables de quitter l'aéroport</h2>
-      <div class="grid grid-4" style="margin-top:1.5rem">
+      <h2>Trois façons raisonnables de quitter l'aéroport</h2>
+      <div class="grid grid-3" style="margin-top:1.5rem">
         <div class="card">
           <h3>Transfert réservé</h3>
           <p class="small text-muted">Idéal pour les vols de nuit, les riads introuvables et les groupes.</p>
@@ -132,12 +132,6 @@ const faqs = [
           <p class="small text-muted">Idéal si vous acceptez de discuter le prix sur place.</p>
           <p>Toujours disponible à la sortie, avec des tarifs affichés : environ {airport.taxiFare.dayMad[0]}–{airport.taxiFare.dayMad[1]} MAD de jour, davantage la nuit. Par véhicule, pas par personne.</p>
           <a class="btn btn-ghost btn-block" href={L('/taxi-aeroport-marrakech/')}>Tarifs et conseils</a>
-        </div>
-        <div class="card">
-          <h3>Bus {airport.bus.line}</h3>
-          <p class="small text-muted">Idéal en voyage léger, de jour, petit budget.</p>
-          <p>{airport.bus.oneWayMad} MAD jusqu'à Jemaa el-Fna, environ {airport.bus.rideMin} minutes, un départ toutes les {airport.bus.frequencyMin} minutes de {airport.bus.firstDeparture} à {airport.bus.lastDeparture}.</p>
-          <a class="btn btn-ghost btn-block" href={L('/guide-aeroport-marrakech/bus/')}>Horaires du bus</a>
         </div>
         <div class="card">
           <h3>Voiture de location</h3>
