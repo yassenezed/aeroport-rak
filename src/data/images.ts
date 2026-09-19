@@ -28,10 +28,7 @@ export const REQUIRED_PHOTOS = [
   'palmeraie',                  // palmeraie et resorts
   'agafay-desert',              // camps du désert d'Agafay
   'ourika-valley',              // vallée de l'Ourika
-  'imlil-toubkal',              // Imlil et le Haut Atlas
-  'oukaimeden',                 // station de ski d'Oukaïmeden
   'ouzoud-falls',               // cascades d'Ouzoud
-  'ait-ben-haddou',             // ksar d'Aït Ben Haddou
   'ouarzazate',                 // Ouarzazate / Tizi n'Tichka
   'essaouira',                  // remparts et port d'Essaouira
   'agadir',                     // baie d'Agadir

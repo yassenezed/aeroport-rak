@@ -89,9 +89,6 @@ const pathMappings: Record<string, PathEntry> = {
   '/excursion-vallee-ourika/': { fr: '/excursion-vallee-ourika/' },
   '/excursion-cascades-ouzoud/': { fr: '/excursion-cascades-ouzoud/' },
   '/excursion-desert-agafay/': { fr: '/excursion-desert-agafay/' },
-  '/trek-imlil-toubkal/': { fr: '/trek-imlil-toubkal/' },
-  '/excursion-ait-ben-haddou/': { fr: '/excursion-ait-ben-haddou/' },
-  '/ski-oukaimeden/': { fr: '/ski-oukaimeden/' },
   '/excursion-marrakech-essaouira/': { fr: '/excursion-marrakech-essaouira/' },
   '/excursion-marrakech-casablanca/': { fr: '/excursion-marrakech-casablanca/' },
 
