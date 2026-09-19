@@ -1,6 +1,8 @@
 export type AffiliateId = string;
 
 export function buildAffiliateUrl(provider: AffiliateId, sub?: string): string {
+  // Une ancre (#recherche) ou une URL absolue est utilisée telle quelle.
+  if (provider && (provider.startsWith('#') || /^https?:\/\//.test(provider))) return provider;
   const p = (provider || '').toLowerCase();
   if (p.includes('esim') || p.includes('airalo') || p.includes('holafly') || p.includes('sim')) {
     return '/esim-maroc/';

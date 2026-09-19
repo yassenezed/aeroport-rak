@@ -2,58 +2,81 @@
 import DestinationsLayout from '../layouts/DestinationsLayout.astro';
 import { getLocalizedPath } from '../i18n';
 
+const L = (p: string) => getLocalizedPath(p);
+
 const breadcrumbs = [
-  { name: 'Accueil', href: '/fr/' },
-  { name: 'Destinations', href: '/fr/destinations-aeroport-agadir/' }
+  { name: 'Accueil', href: L('/') },
+  { name: 'Vols', href: L('/vols-marrakech/') },
+  { name: 'Lignes et compagnies', href: L('/destinations-aeroport-marrakech/') },
 ];
 
 const dict = {
   city: 'Ville',
   country: 'Pays',
-  continent: 'Continent',
+  continent: 'Région',
   airlines: 'Compagnie(s)',
   searchPlaceholder: 'Rechercher une ville, un pays ou une compagnie...',
   noResults: 'Aucune destination trouvée.',
   stats: {
     destinations: 'Destinations',
     airlines: 'Compagnies',
-    continents: 'Continents'
+    continents: 'Régions'
   }
 };
 ---
 <DestinationsLayout
   lang="fr"
-  title="Destinations & Vols Directs Aéroport d'Agadir (AGA)"
-  description="Découvrez toutes les destinations desservies par vols directs depuis l'aéroport d'Agadir Al Massira. Liste des villes, pays et compagnies (Ryanair, RAM, easyJet...)."
-  h1="Destinations Aéroport d'Agadir"
-  lede="L'aéroport d'Agadir Al Massira relie le Maroc à plus de 70 destinations en Europe et en Afrique. Utilisez notre outil ci-dessous pour trouver les compagnies qui desservent votre ville en vol direct."
+  title="Vols directs depuis Marrakech (RAK) : villes desservies et compagnies | AirportRAK"
+  description="Les villes reliées en vol direct à l'aéroport Marrakech Ménara, par pays et par compagnie : France, Royaume-Uni, Espagne, Belgique, Suisse, Allemagne, Italie, Maroc et long-courrier."
+  h1="Lignes et compagnies au départ de Marrakech"
+  lede="Recherchez votre ville pour savoir quelles compagnies la relient à Marrakech en vol direct. La liste évolue à chaque saison : elle donne un ordre de grandeur fiable, pas un horaire."
   breadcrumbs={breadcrumbs}
   dict={dict}
 >
   <section class="content-section">
     <div class="container">
       <div class="content-prose">
-        <h2>À propos des vols depuis Agadir</h2>
-        <p>L'Aéroport Agadir Al Massira (AGA) est une porte d'entrée majeure pour le tourisme dans le sud du Maroc, offrant des liaisons directes vers des dizaines de villes européennes. Les compagnies low-cost telles que <strong>Ryanair</strong>, <strong>easyJet</strong> et <strong>Transavia</strong> assurent la majorité des liaisons, rendant le voyage vers Agadir très accessible depuis la France, la Belgique, la Suisse et d'autres pays.</p>
-        <p>Que vous veniez pour profiter du soleil hivernal, visiter la région de Souss-Massa ou faire du surf à Taghazout, l'aéroport propose des vols réguliers qui s'étendent à chaque nouvelle saison.</p>
+        <h2>Comment lire cette liste</h2>
+        <p>
+          Marrakech Ménara est le premier aéroport touristique du Maroc et le plus dense de son réseau
+          après Casablanca. Ce tableau recense les villes reliées en vol régulier et les compagnies qui
+          opèrent ces lignes. Il ne remplace pas un moteur de réservation : les fréquences changent
+          avec les saisons — programmes d'hiver et d'été — et une ligne active en juillet peut être
+          suspendue en janvier.
+        </p>
+        <p>
+          Les compagnies à bas coût — Ryanair, easyJet, Transavia, Vueling, Wizz Air, Jet2 — assurent
+          l'essentiel des rotations européennes. Royal Air Maroc et Air Arabia Maroc relient la plupart
+          des grandes villes marocaines et proposent des correspondances vers l'Afrique et l'Amérique du
+          Nord. Pour la comparaison des prix et des horaires, utilisez la recherche de notre page
+          <a href={L('/vols-marrakech/')}>vols pour Marrakech</a>.
+        </p>
+
+        <h2>Ce qu'il faut retenir avant de réserver</h2>
+        <ul>
+          <li><strong>Les vols directs existent depuis la plupart des grandes villes européennes</strong> : évitez les correspondances sauf si aucun direct n'existe.</li>
+          <li><strong>Le passeport est obligatoire</strong> pour les ressortissants français : la carte d'identité ne suffit pas. Voyez les <a href={L('/formalites-entree-maroc/')}>formalités d'entrée</a>.</li>
+          <li><strong>Depuis la France</strong>, une dizaine de villes sont reliées : détail sur <a href={L('/vols-marrakech-depuis-france/')}>vols de France vers Marrakech</a>.</li>
+          <li><strong>Pour payer moins</strong>, la saison et le bagage comptent plus que la compagnie : voyez <a href={L('/vols-marrakech/pas-chers/')}>vols pas chers</a>.</li>
+        </ul>
       </div>
 
       <div class="links-grid">
-        <a href={getLocalizedPath('/agadir-airport-guide/arrivals/', 'fr')} class="link-card">
+        <a href={L('/guide-aeroport-marrakech/arrivees/')} class="link-card">
           <h3>Arrivées</h3>
-          <p>Vérifiez le statut des vols en direct</p>
+          <p>Vols en temps réel et parcours d'arrivée</p>
         </a>
-        <a href={getLocalizedPath('/agadir-airport-guide/departures/', 'fr')} class="link-card">
+        <a href={L('/guide-aeroport-marrakech/departs/')} class="link-card">
           <h3>Départs</h3>
-          <p>Horaires et infos d'embarquement</p>
+          <p>Horaires et rétroplanning du retour</p>
         </a>
-        <a href={getLocalizedPath('/agadir-airport-transfers/', 'fr')} class="link-card">
-          <h3>Transferts & Taxis</h3>
-          <p>Réservez un trajet vers votre hôtel</p>
+        <a href={L('/transfert-aeroport-marrakech/')} class="link-card">
+          <h3>Transferts et taxis</h3>
+          <p>Rejoindre la médina depuis le terminal</p>
         </a>
-        <a href={getLocalizedPath('/agadir-airport-car-rental/', 'fr')} class="link-card">
-          <h3>Location de Voiture</h3>
-          <p>Comparez et louez un véhicule à l'aéroport</p>
+        <a href={L('/location-voiture-aeroport-marrakech/')} class="link-card">
+          <h3>Location de voiture</h3>
+          <p>Comparer les agences du hall des arrivées</p>
         </a>
       </div>
     </div>

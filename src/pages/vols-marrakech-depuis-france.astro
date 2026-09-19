@@ -1,116 +1,155 @@
 ---
 import MoneyLayout from '../layouts/MoneyLayout.astro';
+import FlightSearchWidget from '../components/affiliate/FlightSearchWidget.astro';
 import { getLocalizedPath } from '../i18n';
 import { photos } from '../data/images';
+import { PRICES_CHECKED } from '../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: 'Vols pour Agadir', href: L('/flights-to-agadir/') },
-  { name: 'Depuis la France', href: L('/flights-to-agadir-from-uk/') },
+  { name: 'Vols', href: L('/vols-marrakech/') },
+  { name: 'Depuis la France', href: L('/vols-marrakech-depuis-france/') },
 ];
+
 const facts = [
-  { label: 'Temps de vol', value: '~3', sub: 'heures' },
-  { label: 'Compagnies', value: 'Transavia', sub: 'Ryanair, easyJet, RAM' },
-  { label: 'Décalage', value: 'Faible', sub: '1 h selon saison' },
-  { label: 'Moins cher', value: 'Mi-', sub: 'saison' },
+  { label: 'Villes en direct', value: 'Une dizaine', sub: 'en France' },
+  { label: 'Paris', value: '≈ 3 h 30', sub: 'de vol' },
+  { label: 'Passeport', value: 'Obligatoire', sub: 'CNI insuffisante' },
+  { label: 'Décalage', value: '0 à −1 h', sub: 'selon la saison' },
 ];
+
+const villes = [
+  { ville: 'Paris (Orly, Roissy, Beauvais)', duree: '≈ 3 h 30', note: 'Le plus large choix : plusieurs compagnies, low cost et classique' },
+  { ville: 'Marseille', duree: '≈ 2 h 50', note: 'Ligne bien fournie, forte demande en vacances scolaires' },
+  { ville: 'Lyon', duree: '≈ 3 h 15', note: 'Plusieurs compagnies, dont low cost' },
+  { ville: 'Toulouse', duree: '≈ 2 h 45', note: 'Vol le plus court du territoire' },
+  { ville: 'Bordeaux', duree: '≈ 2 h 45', note: 'Lignes régulières, surtout low cost' },
+  { ville: 'Nantes', duree: '≈ 3 h', note: 'Rotations régulières' },
+  { ville: 'Nice', duree: '≈ 3 h', note: 'Ligne saisonnière renforcée en haute saison' },
+  { ville: 'Montpellier, Lille, Strasbourg', duree: '≈ 3 h – 3 h 30', note: 'Selon les saisons, à vérifier avant de bloquer les dates' },
+];
+
 const faqs = [
-  { q: 'Quels aéroports français proposent des vols pour Agadir ?', a: 'Les vols directs partent surtout de Paris (Orly et Roissy-CDG), Marseille, Lyon, Nantes et Bordeaux, avec des lignes saisonnières depuis d’autres aéroports de province selon la compagnie et la période. Les lignes sont saisonnières et orientées vers les mois de soleil hivernal : vérifiez donc que votre aéroport dessert bien la route à vos dates.' },
-  { q: 'Combien de temps dure le vol entre la France et Agadir ?', a: 'Environ 3 heures en direct depuis la plupart des aéroports français, un peu moins depuis le sud, un peu plus depuis le nord. C’est un seul saut confortable, sans décalage horaire notable : le Maroc est à l’heure d’Europe de l’Ouest, à une heure près selon la saison. Pas de jet-lag à gérer.' },
-  { q: 'Quelles compagnies relient la France à Agadir ?', a: 'Les principales sont Transavia, Ryanair, easyJet et Royal Air Maroc. Transavia, Ryanair et easyJet sont les options low-cost (billet avec bagage cabine, le reste en options payantes) ; Royal Air Maroc, la compagnie nationale, propose des directs et des correspondances par Casablanca, souvent avec bagage inclus. La moins chère dépend entièrement de votre route et de vos dates : comparez les quatre plutôt que d’en supposer une toujours gagnante.' },
-  { q: 'Quand les vols France–Agadir sont-ils les moins chers ?', a: 'Les mi-saisons, printemps et automne, affichent en général les meilleurs tarifs, tout comme les départs en milieu de semaine et la réservation un à deux mois à l’avance. Les périodes chères sont les vacances de février, Noël/Nouvel An et Pâques, quand la demande de soleil hivernal grimpe et que les places partent les premières.' },
+  {
+    q: "Quelles villes françaises ont un vol direct pour Marrakech ?",
+    a: "Paris (Orly, Roissy et Beauvais), Marseille, Lyon, Toulouse, Bordeaux et Nantes forment le noyau des lignes régulières, complétées selon les saisons par Nice, Montpellier, Lille et Strasbourg. Les compagnies et les fréquences changent d'une saison à l'autre : vérifiez votre ligne à vos dates précises."
+  },
+  {
+    q: "Combien de temps dure le vol depuis la France ?",
+    a: "Entre 2 h 45 depuis Toulouse ou Bordeaux et 3 h 30 depuis Paris, Lille ou Strasbourg. C'est une durée comparable à un vol vers les Canaries, pour une destination très différente."
+  },
+  {
+    q: "Ma carte d'identité suffit-elle pour aller à Marrakech ?",
+    a: "Non. Il faut un passeport en cours de validité, valable pendant tout le séjour, et de préférence au moins six mois pour éviter tout refus d'embarquement par la compagnie. Aucun visa n'est requis pour un séjour touristique de moins de 90 jours."
+  },
+  {
+    q: "Y a-t-il un décalage horaire avec la France ?",
+    a: "Le Maroc est à UTC+1 toute l'année. Vous avez donc la même heure que la France de fin octobre à fin mars, et une heure de moins le reste de l'année. Pendant le ramadan, le pays passe à UTC+0, ce qui ajoute une heure d'écart."
+  },
+  {
+    q: "Peut-on utiliser son forfait mobile français au Maroc ?",
+    a: "Le Maroc n'est pas dans la zone d'itinérance sans surcoût de l'Union européenne : selon votre opérateur, les données peuvent être coûteuses ou désactivées. Une eSIM marocaine achetée avant le départ coûte quelques euros et vous connecte dès l'atterrissage. Voir notre page eSIM Maroc."
+  },
+  {
+    q: "Quelle valise et quels bagages pour un vol low cost ?",
+    a: "Le tarif d'appel ne comprend que le sac sous le siège. Pour un séjour court, un bagage cabine suffit et économise l'option soute. Pour un séjour long ou avec des achats, ajoutez le bagage à l'avance : le tarif augmente sensiblement à l'aéroport."
+  },
 ];
 ---
 <MoneyLayout
-  lang={lang}
-  title="Vols pour Agadir depuis la France 2026 : aéroports, compagnies et durées | AirportAGA"
-  description="Vols pour Agadir depuis la France : quels aéroports desservent en direct (Paris, Marseille, Lyon, Nantes, Bordeaux), les compagnies (Transavia, Ryanair, easyJet, Royal Air Maroc), un vol d’environ 3 heures, et comment trouver un bon tarif pour un séjour soleil ou surf."
-  eyebrow="Agadir · Vols depuis la France"
-  h1="Vols pour Agadir depuis la France"
-  lede="C’est un seul saut d’environ 3 heures entre la France et Agadir, sans vrai décalage horaire, d’où l’afflux des chasseurs de soleil hivernal et des surfeurs. Voici les aéroports français, les compagnies, et comment réserver un bon tarif."
+  title="Vols Paris, Lyon, Marseille, Toulouse → Marrakech : lignes et conseils (2026) | AirportRAK"
+  description="Les vols directs depuis la France vers Marrakech : villes desservies, durées de vol, passeport obligatoire, décalage horaire, bagages low cost et recherche en direct."
+  eyebrow="Marrakech · Vols depuis la France"
+  h1="Vols de France vers Marrakech"
+  lede="Moins de quatre heures de vol depuis n'importe quelle grande ville française, des lignes régulières toute l'année et un passeport à vérifier avant de bloquer les dates. Voici ce qu'il faut savoir avant de réserver."
   breadcrumbs={breadcrumbs}
   facts={facts}
-  heroImage={photos['agadir-bay']}
-  heroProvider="aviasales"
-  heroCtaLabel="Rechercher des vols France–Agadir"
+  heroImage={photos['rak-terminal']}
+  heroProvider="#recherche"
+  heroCtaLabel="Rechercher un vol depuis la France"
+  secondaryHref="/vols-marrakech/pas-chers/"
+  secondaryLabel="Vols pas chers"
   faqs={faqs}
-  cta={{ heading: 'Comparez les départs français', text: 'Les routes et les compagnies bougent avec la saison. Rechercher tous les aéroports français et les dates proches d’un coup reste le plus rapide pour trouver le meilleur tarif.', provider: 'aviasales', label: 'Rechercher des vols France–Agadir' }}
+  cta={{ heading: 'Trouvez votre vol', text: "Comparez les compagnies au départ de votre ville : les tarifs varient fortement d'un jour à l'autre.", provider: '#recherche', label: 'Rechercher des vols' }}
 >
-  <p>
-    La France est l’un des plus gros marchés d’Agadir, et c’est une bonne nouvelle pour les voyageurs
-    français : des vols directs, un saut bien gérable d’environ 3 heures et pas de jet-lag à proprement
-    parler. C’est pour cela que la foule du soleil hivernal et un flux régulier de surfeurs descendent
-    chaque année. Le hic, c’est que, comme tout le marché aérien d’Agadir, ces lignes sont saisonnières et
-    penchent vers les mois chargés, un peu de timing fait donc une vraie différence. Voici comment marche
-    le France–Agadir.
-  </p>
-
-  <h2 id="aeroports">Quels aéroports français desservent Agadir</h2>
-  <p>
-    Les valeurs sûres sont Paris. Orly et Roissy-Charles-de-Gaulle selon les compagnies, ainsi que
-    Marseille et Lyon. Au-delà, des aéroports de province comme Nantes, Bordeaux et d’autres prennent des
-    lignes saisonnières, surtout pendant la fenêtre du soleil hivernal, selon l’opérateur. Comme une
-    grande part est saisonnière, vérifiez toujours que votre aéroport dessert la route à vos vraies dates
-    plutôt que de supposer que l’horaire de l’an dernier tient encore.
-  </p>
-
-  <h2 id="compagnies">Les compagnies</h2>
-  <p>
-    Quatre compagnies assurent l’essentiel du trafic France–Agadir :
-  </p>
-  <ul>
-    <li><strong>Transavia</strong>, la low-cost du groupe Air France-KLM, large réseau depuis Paris-Orly et plusieurs villes de province, billet de base avec bagage cabine et le reste en options.</li>
-    <li><strong>Ryanair</strong>, low-cost, le plus de points de départ régionaux, tarifs en bagage cabine, tout le reste payant en supplément.</li>
-    <li><strong>easyJet</strong>, low-cost depuis les grandes bases comme Paris et Lyon, modèle d’options similaire.</li>
-    <li><strong>Royal Air Maroc</strong>, la compagnie nationale ; des directs et des correspondances par Casablanca, souvent avec bagage en soute inclus, la façon habituelle d’arriver de plus loin.</li>
-  </ul>
-  <p>
-    Aucune n’est systématiquement la moins chère, cela dépend de votre aéroport et de vos dates, alors
-    comparez les quatre. Pour la méthode d’économie complète, voyez
-    <a href={L('/cheap-flights-to-agadir/')}>vols pas chers pour Agadir</a>.
-  </p>
-
-  <h2 id="duree">Temps de vol et décalage</h2>
-  <p>
-    Tablez sur environ 3 heures de vol depuis la plupart de la France, un peu moins depuis le sud, un peu
-    plus depuis le nord. Pas de décalage horaire notable à encaisser : le Maroc est à l’heure d’Europe de
-    l’Ouest, à une heure près selon la saison, donc vous arrivez à peu près à la même heure que vous êtes
-    parti, sans jet-lag. Même un court séjour reste donc vraiment faisable.
-  </p>
-
-  <h2 id="quand">Quand réserver et partir</h2>
-  <p>
-    La demande française culmine à Noël et au Nouvel An, aux vacances de février et à Pâques, exactement
-    quand les tarifs sont au plus haut et les places partent en premier. Les mi-saisons de part et d’autre
-    sont moins chères et encore chaudes. Réservez un à deux mois avant pour les semaines prisées, partez en
-    milieu de semaine quand vous le pouvez, et comparez compagnies et dates proches. La vue d’ensemble des
-    routes est sur la page <a href={L('/flights-to-agadir/')}>vols pour Agadir</a>, et caler son voyage sur
-    la météo est traité dans <a href={L('/agadir-weather-when-to-visit/')}>quand partir</a>.
-  </p>
-
-  <h2 id="arrivee">Sortir de l’aéroport</h2>
-  <p>
-    En atterrissant à Agadir Al Massira, ce que les arrivants français n’anticipent pas toujours, c’est
-    qu’il n’y a ni train ni navette utile, et pas d’Uber. Rejoindre votre hôtel ou votre surf camp passe
-    par un grand taxi, un transfert réservé ou une voiture de location. Réglez cela avant de partir,
-    surtout pour un atterrissage charter tardif ou une adresse à Taghazout ; le
-    <a href={L('/agadir-airport-transfers/')}>récapitulatif des transferts</a> détaille chaque option et
-    son prix juste.
-  </p>
-
-  <div class="disclosure-inline">
-    Certains liens de cette page sont des liens d’affiliation : si vous réservez via eux, nous pouvons
-    percevoir une petite commission, sans surcoût pour vous. Cela ne change jamais les prix affichés ni nos
-    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça marche</a>.
+  <div id="recherche" style="scroll-margin-top: 6rem;">
+    <h2 style="margin-top:0">Recherchez depuis votre ville</h2>
+    <FlightSearchWidget />
+    <p class="disclosure-inline">
+      Prix indicatifs. Nous pouvons percevoir une commission sur les réservations effectuées via ce
+      comparateur, sans surcoût pour vous.
+    </p>
   </div>
 
+  <p>
+    La France est le premier marché de Marrakech : la proximité, la langue, l'histoire commune et
+    l'absence de décalage horaire pénalisant en font une destination naturelle pour un week-end
+    prolongé comme pour deux semaines. C'est aussi une des routes les plus concurrentielles d'Europe,
+    ce qui joue en faveur du voyageur.
+  </p>
+
+  <h2>Les villes reliées en direct</h2>
+  <div class="table-wrap">
+    <table class="data">
+      <thead>
+        <tr><th>Départ</th><th>Durée</th><th>À savoir</th></tr>
+      </thead>
+      <tbody>
+        {villes.map((v, i) => (
+          <tr class:list={[{ 'row-highlight': i === 0 }]}>
+            <td><strong>{v.ville}</strong></td>
+            <td class="num">{v.duree}</td>
+            <td>{v.note}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p class="small text-muted">Durées indicatives. Les lignes régionales varient selon les saisons.</p>
+
+  <h2>Le passeport : le point qui coûte le plus cher quand on l'oublie</h2>
+  <p>
+    Pour entrer au Maroc, un Français doit présenter un <strong>passeport</strong> en cours de validité :
+    la carte nationale d'identité ne suffit pas, même si elle est valide. Le passeport doit couvrir
+    toute la durée du séjour, et il est plus prudent de viser six mois de validité restante, ce que
+    certaines compagnies exigent à l'embarquement. Aucun visa n'est nécessaire pour un séjour
+    touristique de moins de 90 jours.
+  </p>
   <div class="callout">
-    <span class="callout-label">La liste du voyageur français</span>
-    Choisissez l’aéroport le plus proche qui dessert la route à vos dates · comparez Transavia, Ryanair,
-    easyJet et Royal Air Maroc · partez en mi-saison et en milieu de semaine pour le meilleur tarif · et
-    réservez votre sortie de l’aéroport avant de partir.
+    <span class="callout-label">À vérifier dès la réservation</span>
+    <p>
+      Un passeport renouvelé prend plusieurs semaines. Avant de bloquer des dates, contrôlez sa date
+      d'expiration. Le détail des formalités est sur
+      <a href={L('/formalites-entree-maroc/')}>formalités d'entrée au Maroc</a>.
+    </p>
   </div>
+
+  <h2>Le décalage horaire : nul ou d'une heure</h2>
+  <p>
+    Le Maroc est à UTC+1 en permanence. Vous aurez donc la même heure qu'à Paris de fin octobre à fin
+    mars, puis une heure de moins de fin mars à fin octobre. Pendant le mois de ramadan, le pays repasse
+    temporairement à UTC+0. Retenez simplement que l'heure de votre billet est l'heure locale, et
+    donnez toujours votre <em>numéro de vol</em> à votre chauffeur plutôt qu'un horaire.
+  </p>
+
+  <h2>Choisir son aéroport de départ</h2>
+  <p>
+    Si vous habitez à égale distance de deux aéroports, comparez le coût total, pas le tarif du vol : le
+    train ou la voiture jusqu'à l'aéroport, le stationnement, et l'heure de départ. Un vol à 6 h 15 au
+    départ d'un aéroport à une heure de route peut coûter plus cher, en transport et en sommeil, que le
+    même vol à 11 h depuis chez vous. Pensez aussi au retour : un atterrissage après minuit en France
+    pèse sur le lendemain.
+  </p>
+
+  <h2>À l'arrivée : ce qui vous attend</h2>
+  <p>
+    À l'atterrissage, comptez 30 à 50 minutes avant de sortir. Une fiche de police vous sera remise à
+    bord : remplissez-la avec l'adresse de votre hébergement. Notre guide des
+    {' '}<a href={L('/guide-aeroport-marrakech/arrivees/')}>arrivées au RAK</a> déroule le parcours, et
+    {' '}<a href={L('/transfert-aeroport-marrakech/')}>transferts aéroport</a> compare les façons de
+    rejoindre la médina. Une <a href={L('/esim-maroc/')}>eSIM</a> vous évite les frais d'itinérance.
+  </p>
+  <p class="small text-muted">Repères vérifiés en {PRICES_CHECKED}.</p>
 </MoneyLayout>

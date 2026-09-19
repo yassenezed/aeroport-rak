@@ -8,7 +8,8 @@ import { useTranslations, type Lang } from '../i18n';
 import { destinations } from '../data/destinations';
 
 import { Image } from 'astro:assets';
-import heroImg from '../assets/img/placeholder.png';
+import { photos } from '../data/images';
+const heroImg = photos['rak-terminal'];
 
 interface Props {
   title: string;
@@ -39,6 +40,9 @@ const absCrumbs = breadcrumbs.map((c) => ({ name: c.name, url: site.url + c.href
 
 // Serialize destinations data to pass to client
 const destinationsJson = JSON.stringify(destinations);
+const nbDestinations = destinations.length;
+const nbAirlines = new Set(destinations.flatMap((d) => d.airlines)).size;
+const nbContinents = new Set(destinations.map((d) => d.continent)).size;
 ---
 
 <BaseLayout title={title} description={description} lang={lang} ogType="article" webpageSchema={false}>
@@ -61,15 +65,15 @@ const destinationsJson = JSON.stringify(destinations);
       <!-- Stats Cards -->
       <div class="stats-grid">
         <div class="stat-card">
-          <div class="stat-num">70+</div>
+          <div class="stat-num">{nbDestinations}</div>
           <div class="stat-label">{dict.stats.destinations}</div>
         </div>
         <div class="stat-card">
-          <div class="stat-num">~20</div>
+          <div class="stat-num">{nbAirlines}</div>
           <div class="stat-label">{dict.stats.airlines}</div>
         </div>
         <div class="stat-card">
-          <div class="stat-num">2</div>
+          <div class="stat-num">{nbContinents}</div>
           <div class="stat-label">{dict.stats.continents}</div>
         </div>
       </div>
