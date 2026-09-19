@@ -2,38 +2,36 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getLocalizedPath } from '../i18n';
 
-const lang = 'en';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 const links = [
-  ['/agadir-airport-transfers/', 'Airport transfers'],
-  ['/agadir-airport-taxi/', 'Airport taxi & prices'],
-  ['/agadir-airport-car-rental/', 'Car rental'],
-  ['/agadir-airport-hotels/', 'Hotels near AGA'],
-  ['/agadir-airport-guide/', 'Airport guide'],
-  ['/agadir-airport-to-taghazout/', 'Airport → Taghazout'],
+  ['/reserver-transfert/', 'Réserver un transfert'],
+  ['/taxi-aeroport-marrakech/', 'Taxi et tarifs'],
+  ['/location-voiture-aeroport-marrakech/', 'Location de voiture'],
+  ['/guide-aeroport-marrakech/', "Guide de l'aéroport"],
+  ['/ou-dormir-marrakech/', 'Où dormir'],
+  ['/que-faire-marrakech/', 'Que faire à Marrakech'],
 ];
 ---
 <BaseLayout
-  lang={lang}
-  title="Page not found (404) | AirportAGA"
-  description="That page could not be found. Jump back to the AirportAGA guides on Agadir airport transfers, taxis, car rental and hotels."
+  title="Page introuvable (404) | AirportRAK"
+  description="Cette page est introuvable. Retrouvez les guides AirportRAK : transferts, taxis, location de voiture, hébergement et visites à Marrakech."
   noindex={true}
 >
   <section class="hero">
     <div class="container hero-inner center">
-      <span class="eyebrow">Error 404</span>
-      <h1>This page took a wrong turn</h1>
-      <p class="lede" style="margin-inline:auto;max-width:48ch">We couldn't find that page, it may have moved. Here's the fast way back to what you need at Agadir Al Massira.</p>
+      <span class="eyebrow">Erreur 404</span>
+      <h1>Cette page s'est perdue dans la médina</h1>
+      <p class="lede" style="margin-inline:auto;max-width:48ch">Nous n'avons pas retrouvé cette page : elle a peut-être changé d'adresse. Voici le chemin le plus court vers ce dont vous avez besoin.</p>
       <div class="hero-cta" style="justify-content:center">
-        <a class="btn btn-primary btn-arrow" href={L('/')}>Back to home</a>
-        <a class="btn btn-ghost" href={L('/agadir-airport-guide/')}>Airport guide</a>
+        <a class="btn btn-primary btn-arrow" href={L('/')}>Retour à l'accueil</a>
+        <a class="btn btn-ghost" href={L('/guide-aeroport-marrakech/')}>Guide de l'aéroport</a>
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container content-col">
-      <h2>Popular pages</h2>
+      <h2>Pages les plus consultées</h2>
       <div class="grid grid-3" style="margin-top:1.25rem">
         {links.map(([href, label]) => (
           <a class="card card-link" href={L(href)}><h3 style="margin:0;font-size:1.05rem">{label}</h3></a>

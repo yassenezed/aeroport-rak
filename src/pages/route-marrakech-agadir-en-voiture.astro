@@ -2,113 +2,105 @@
 import GuideLayout from '../layouts/GuideLayout.astro';
 import { getLocalizedPath } from '../i18n';
 import { photos } from '../data/images';
+import { PRICES_CHECKED } from '../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: 'Agadir – Marrakech en voiture', href: L('/driving-agadir-to-marrakech/') },
+  { name: "Marrakech → Agadir", href: L("/marrakech-agadir-transport/") },
+  { name: "En voiture", href: L("/route-marrakech-agadir-en-voiture/") },
 ];
+
 const toc = [
-  { label: 'L’autoroute A7', id: 'a7' },
-  { label: 'Le péage et son coût', id: 'peage' },
-  { label: 'Carburant et aires de repos', id: 'carburant' },
-  { label: 'L’alternative panoramique N8', id: 'n8' },
-  { label: 'Conseils de conduite', id: 'conseils' },
+  { label: "Deux itinéraires", id: "itineraires" },
+  { label: "L'autoroute A7", id: "autoroute" },
+  { label: "Par le Tizi n'Test", id: "montagne" },
+  { label: "Carburant, radars, contrôles", id: "pratique" },
+  { label: "Étapes possibles", id: "etapes" },
+  { label: "Louer et restituer", id: "location" },
 ];
+
 const faqs = [
-  { q: 'Combien de temps dure la route Agadir – Marrakech ?', a: 'Environ trois heures sans arrêt sur l’autoroute à péage A7, pour à peu près 233 km. Ajoutez le temps d’un café ou d’un plein vers Imi n’Tanoute et comptez trois heures et demie de porte à porte à un rythme tranquille.' },
-  { q: 'L’autoroute Agadir – Marrakech est-elle à péage ?', a: 'Oui. L’A7 (l’autoroute Marrakech – Agadir) est une route à péage. On prend un ticket à l’entrée et on paie en espèces à la barrière de sortie, gardez des dirhams en billets et pièces sous la main. C’est une autoroute moderne à deux fois deux voies, bien revêtue, et les péages restent modestes pour la distance.' },
-  { q: 'Est-il facile de conduire d’Agadir à Marrakech ?', a: 'Oui. L’A7 est une autoroute moderne et simple, bien revêtue et clairement signalée, de loin le plus facile des longs trajets de la région. On roule à droite, la limite est d’environ 120 km/h, et les radars sont fréquents, restez à la vitesse affichée et ce sont trois heures faciles.' },
-  { q: 'Faut-il prendre la N8 plutôt que l’A7 ?', a: 'Seulement si vous avez le temps et voulez le paysage. La vieille N8 serpente à travers les contreforts et les villages : elle est plus lente, plus étroite et plus chargée de trafic local. L’A7 est plus rapide, plus sûre et bien moins fatigante ; la plupart prennent l’A7 et gardent la N8 pour une journée paysage assumée.' },
-  { q: 'Faut-il un 4×4 pour rouler d’Agadir à Marrakech ?', a: 'Non. L’A7 est une autoroute revêtue et n’importe quelle voiture ordinaire la parcourt sans souci. Un 4×4 ne vaut le coup que si vous comptez quitter les axes principaux pour les pistes de l’Atlas ou le désert au-delà. Comparez les locations sur EconomyBookings, prix vérifiés en juin 2026.' },
+  { q: "Quelle est la distance entre Marrakech et Agadir ?", a: "Environ 250 kilomètres par l'autoroute A7, à parcourir en trois heures environ. Par la route de montagne du Tizi n'Test, le trajet est plus long et peut s'étendre à cinq ou six heures avec les arrêts." },
+  { q: "Combien coûte le péage de l'autoroute ?", a: "Environ 100 MAD par sens pour une voiture particulière. Gardez des dirhams en petites coupures et vérifiez le mode de paiement à chaque barrière." },
+  { q: "Est-il dangereux de rouler de nuit ?", a: "Pas sur l'autoroute, qui est bien entretenue. Sur les nationales et surtout en montagne, la nuit multiplie les difficultés : routes sans éclairage, virages, animaux, véhicules mal éclairés. Partez de façon à arriver avant la tombée du jour." },
+  { q: "Peut-on prendre la route du Tizi n'Test avec une citadine ?", a: "Oui, par beau temps : c'est une route goudronnée, très sinueuse, culminant à plus de 2 000 mètres. Évitez-la après de fortes pluies ou de la neige, et par mauvaise visibilité. Vérifiez les conditions avant de partir et faites le plein avant de monter." },
+  { q: "Que voir entre Marrakech et Agadir ?", a: "Par l'autoroute, peu de choses : c'est une route de transit. Par la montagne, la mosquée almohade de Tinmel, les villages du Haut Atlas et des paysages spectaculaires. Une escale à Taroudant, la « petite Marrakech » aux remparts ocre, vaut le détour." },
+  { q: "Une voiture de location peut-elle être rendue à Agadir ?", a: "Certains loueurs proposent la restitution dans une autre ville, avec un supplément. Vérifiez à la réservation, car c'est une condition qu'on découvre rarement au comptoir." },
 ];
 ---
-<GuideLayout keywords="Route Marrakech En Voiture Agadir, que faire à Agadir, attractions Agadir" 
-  lang={lang}
-  title="Guide Route Marrakech En Voiture Agadir 2026 | Astuces & Incontournables"
-  description="Planifiez votre visite à Route Marrakech En Voiture à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
-  eyebrow="Conduire · Agadir – Marrakech"
-  h1="Agadir – Marrakech en voiture : la route A7"
-  lede="L’autoroute A7 fait de ces ~233 km trois heures faciles, une deux fois deux voies moderne et à péage, pas le trajet stressant que certains imaginent. Voici l’itinéraire, le péage, où s’arrêter, la petite route panoramique et les quelques règles qui rendent tout fluide."
+<GuideLayout
+  keywords="route Marrakech Agadir, autoroute A7, Tizi n'Test, Tinmel, Taroudant"
+  title={"Route Marrakech - Agadir : autoroute et étapes"}
+  description={"Marrakech - Agadir en voiture : autoroute A7, péage, durée, radars, étapes, et l'itinéraire de montagne par le Tizi n'Test et la mosquée de Tinmel."}
+  eyebrow={"Interville · Route Marrakech → Agadir"}
+  h1={"Marrakech - Agadir en voiture"}
+  lede={"L'autoroute fait le trajet en trois heures, la montagne en cinq ou six. Deux routes, deux voyages : voici laquelle choisir, ce qu'elle coûte et où s'arrêter."}
   breadcrumbs={breadcrumbs}
-  heroImage={photos['marrakech']}
+  heroImage={photos["marrakech-car-rental"]}
   toc={toc}
   faqs={faqs}
-  updated="juin 2026"
-  cta={{ heading: 'Louez une Voiture à l\'Aéroport d\'Agadir', text: 'Comparez les meilleures offres de location de voitures des agences de confiance directement à l\'aéroport.', provider: 'car', label: 'Comparer les prix' }}
+  updated={PRICES_CHECKED}
+  cta={{ heading: "Comparer les loueurs du RAK", text: "Restitution à Agadir, caution, carburant : comparez avant de réserver.", provider: "discovercars", label: "Comparer les prix de location" }}
 >
-  <p>
-    Conduire d’Agadir à Marrakech a l’air intimidant et ne l’est pas. L’A7, l’autoroute Marrakech – Agadir, est une voie rapide moderne à péage qui transforme les 233 km en un trajet détendu de trois heures, et
-    c’est sans conteste le plus facile des longs parcours de cette partie du Maroc. Le but de cette page est
-    de vous dire ce qui vous attend sur la route elle-même : le péage, où s’arrêter, l’alternative
-    panoramique et la poignée de règles à connaître. S’il vous manque encore un véhicule, voyez
-    <a href={L('/agadir-airport-car-rental/')}>la location de voiture à l’AGA</a> ; et si vous hésitez entre
-    la voiture, le car ou un transfert, la
-    <a href={L('/agadir-to-marrakech-transport/')}>comparaison complète des transports</a> détaille chaque
-    option.
-  </p>
+<h2 id="itineraires">Deux itinéraires</h2>
+<div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Itinéraire</th><th>Distance</th><th>Durée</th><th>Caractère</th></tr></thead>
+    <tbody>
+      <tr class="row-highlight"><td><strong>Autoroute A7</strong></td><td class="num">≈ 250 km</td><td>≈ 3 h</td><td>Rapide, monotone, à péage</td></tr>
+      <tr><td><strong>Tizi n'Test (par Taroudant)</strong></td><td class="num">≈ 300 km</td><td>5 à 6 h</td><td>Spectaculaire, montagne, sinueux</td></tr>
+    </tbody>
+  </table>
+</div>
 
-  <h2 id="a7">L’autoroute A7</h2>
-  <p>
-    Depuis Agadir, vous rejoignez l’A7 et filez vers le nord-est, montant en douceur loin de la côte et de
-    la plaine du Souss vers les contreforts de l’Atlas autour d’Imi n’Tanoute, puis redescendant dans la
-    plaine du Haouz à l’approche de Marrakech. C’est une deux fois deux voies sur presque tout le parcours,
-    bien revêtue et clairement signalée : il n’y a guère à penser au-delà de respecter la limite. Trois
-    heures sans arrêt sont réalistes ; avec un café et un plein, prévoyez trois heures et demie de porte à
-    porte.
-  </p>
+<h2 id="autoroute">L'autoroute A7</h2>
+<p>
+  C'est le choix évident si vous voulez arriver : deux fois deux voies, une chaussée en bon état, peu de
+  circulation en dehors des week-ends et des départs en vacances. Le péage coûte environ 100 MAD par sens.
+  Le paysage est celui d'un plateau aride, puis des contreforts de l'Atlas, et les aires de service
+  sont espacées mais fournies. Vous y roulerez à 120 km/h maximum, avec des radars réguliers.
+</p>
 
-  <h2 id="peage">Le péage et son coût</h2>
+<h2 id="montagne">Par le Tizi n'Test</h2>
+<p>
+  La route de montagne, en direction de Taroudant, est l'une des plus belles du Maroc. Elle franchit le
+  col du Tizi n'Test à plus de 2 000 mètres, en lacets serrés, avec des vues sur les vallées du Haut
+  Atlas. Sur le parcours, la mosquée almohade de Tinmel, du XII<sup>e</sup> siècle, mérite un arrêt.
+</p>
+<div class="callout">
+  <span class="callout-label">À ne pas faire</span>
   <p>
-    L’A7 est une route à péage. Vous prenez un ticket à la borne d’entrée et payez en espèces à la barrière
-    de sortie : gardez donc des billets et quelques pièces en dirhams à portée de main plutôt qu’enfouis
-    dans un sac. Le péage est modeste pour la distance parcourue, et le marché est clair : vous payez une
-    route rapide, sûre et bien entretenue plutôt que d’avancer péniblement sur la vieille route. Préparez
-    l’appoint avant la barrière et l’arrêt dure quelques secondes.
+    Ne l'empruntez pas de nuit, ni par mauvais temps, ni si vous êtes pressé. La route est étroite,
+    avec des à-pics sans glissière par endroits. Faites le plein avant de monter, et prévoyez de quoi
+    manger : les points de ravitaillement sont rares.
   </p>
+</div>
 
-  <h2 id="carburant">Carburant et aires de repos</h2>
-  <p>
-    Faites le plein avant de quitter Agadir pour ne pas surveiller la jauge, et vous trouverez des aires de
-    service en chemin, le secteur d’Imi n’Tanoute, à mi-parcours, est l’endroit naturel pour faire une
-    pause, avec carburant, toilettes et café. Adoptez l’approche la plus juste pour le carburant avec une
-    location : plein-à-plein, vous la prenez pleine et la rendez pleine, ce qui évite les frais gonflés du
-    « on refait le plein ». Les distances entre stations sont confortables sur l’autoroute elle-même, mais
-    ne laissez pas le réservoir descendre trop bas si vous êtes tenté par les petites routes.
-  </p>
+<h2 id="pratique">Carburant, radars, contrôles</h2>
+<ul>
+  <li><strong>Carburant :</strong> gasoil majoritaire ; stations fréquentes sur l'autoroute, rares en montagne.</li>
+  <li><strong>Radars :</strong> nombreux, notamment aux entrées d'agglomération où la limite chute.</li>
+  <li><strong>Contrôles :</strong> gendarmerie courtoise, permis, contrat et carte grise à présenter.</li>
+  <li><strong>Péage :</strong> en dirhams, gardez de la monnaie.</li>
+</ul>
+<p>
+  Tout est détaillé sur <a href={L('/conduire-au-maroc/')}>conduire au Maroc</a>.
+</p>
 
-  <h2 id="n8">L’alternative panoramique N8</h2>
-  <p>
-    La vieille route, la N8, suit grosso modo le même axe et c’est le choix paysage, à travers les
-    contreforts, le pays de l’argan et les petits villages plutôt que la plaine rapide. Elle est vraiment
-    plus jolie, mais plus lente, plus étroite, plus chargée de trafic local, de camions et de l’animal
-    occasionnel, et plus fatigante à conduire. Ne la prenez que si vous avez réservé le temps et voulez
-    faire du trajet une fin en soi ; pour arriver, l’A7 gagne à chaque fois. Beaucoup font l’A7 à l’aller et
-    la N8 au retour pour avoir les deux.
-  </p>
+<h2 id="etapes">Étapes possibles</h2>
+<ul>
+  <li><strong>Taroudant :</strong> une ville fortifiée aux remparts ocre, surnommée la « petite Marrakech », avec ses souks calmes.</li>
+  <li><strong>Tinmel :</strong> la mosquée almohade sur la route du col, dans un cadre spectaculaire.</li>
+  <li><strong>Essaouira :</strong> un détour côté Atlantique, voyez <a href={L('/excursion-marrakech-essaouira/')}>Marrakech - Essaouira</a>.</li>
+</ul>
 
-  <h2 id="conseils">Conseils de conduite</h2>
-  <p>
-    Quelques détails rendent ce trajet indolore. On roule à droite. Les limites sont d’environ 120 km/h sur
-    autoroute, 100 sur route ouverte et 40–60 en agglomération, et les radars sont fréquents, tenez-vous à
-    la vitesse affichée, les amendes se paient sur place. Attendez-vous à des contrôles de gendarmerie,
-    surtout aux entrées de ville : ralentissez, soyez courtois, et gardez à portée votre permis, les papiers
-    du véhicule et votre passeport. Ayez des espèces pour les péages, évitez si possible les tronçons non
-    éclairés de nuit, et ne collez pas les camions dans les montées. Le
-    <a href={L('/renting-car-morocco-guide/')}>guide de location de voiture au Maroc</a> traite en détail
-    les papiers, la caution et l’assurance.
-  </p>
-  <div class="disclosure-inline">
-    Certains liens de cette page sont des liens d’affiliation : réservez via eux et nous pouvons percevoir
-    une petite commission, sans surcoût pour vous. <a href={L('/affiliate-disclosure/')}>Comment ça
-    marche</a>.
-  </div>
-
-  <div class="callout">
-    <span class="callout-label">Pour la boîte à gants</span>
-    L’A7 jusqu’au bout, des dirhams en espèces pour les péages, plein-à-plein pour le carburant, papiers et
-    passeport à portée pour les contrôles, et un œil sur le compteur pour les radars. Trois heures faciles.
-  </div>
+<h2 id="location">Louer et restituer</h2>
+<p>
+  Si vous louez à Marrakech pour rendre à Agadir, vérifiez que le loueur accepte la restitution en
+  ville différente et quel supplément s'applique. Notre
+  <a href={L('/louer-voiture-marrakech-guide/')}>guide de la location</a> détaille les conditions, et
+  <a href={L('/marrakech-agadir-transport/')}>Marrakech - Agadir</a> compare la route aux autres options.
+</p>
 </GuideLayout>

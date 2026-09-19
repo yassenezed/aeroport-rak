@@ -2,82 +2,87 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
 import { getLocalizedPath } from '../i18n';
+import { site } from '../data/site';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 ---
-<BaseLayout keywords="Politique Confidentialite Agadir, que faire à Agadir, attractions Agadir" 
-  lang={lang}
+<BaseLayout
+  title={"Politique de confidentialité et cookies | AirportRAK"}
+  description={"Données collectées par AirportRAK, outils tiers (audience, affiliation, widgets de réservation), vos droits RGPD et comment nous contacter."}
   noindex={true}
-  title="Guide Politique Confidentialite Agadir 2026 | Astuces & Incontournables"
-  description="Planifiez votre visite à Politique Confidentialite à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
 >
   <section class="hero">
     <div class="container hero-inner">
-      <Breadcrumbs items={[{ name: 'Accueil', href: L('/') }, { name: 'Politique de confidentialité', href: L('/privacy-policy/') }]} />
-      <span class="eyebrow">Mentions légales</span>
+      <Breadcrumbs items={[{ name: 'Accueil', href: L('/') }, { name: "Confidentialité", href: L("/politique-confidentialite/") }]} />
+      <span class="eyebrow">Légal</span>
       <h1>Politique de confidentialité</h1>
-      <p class="lede">En bref : nous collectons le moins possible, nous ne vendons pas vos données, et nous utilisons des cookies pour l’analyse d’audience et le suivi d’affiliation. Voici le détail.</p>
+      <p class="lede">Ce que le site collecte, pourquoi, avec quels outils tiers, et comment exercer vos droits.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
       <article class="prose">
-        <p>
-          AirportAGA est un guide de voyage indépendant consacré à l’aéroport Agadir Al Massira. Cette
-          politique explique quelles données nous recueillons lorsque vous utilisez le site et comment
-          nous les traitons. Nous voulons rester simples et honnêtes, en langage clair.
-        </p>
+<h2>Qui est responsable du traitement ?</h2>
+<p>
+  Le responsable du traitement est l'éditeur du site AirportRAK, joignable à l'adresse
+  <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>.
+</p>
 
-        <h2>Ce que nous collectons</h2>
-        <p>
-          Nous ne vous demandons pas de créer un compte et ne recueillons aucune donnée personnelle, sauf
-          si vous choisissez de nous écrire. Les données collectées automatiquement sont celles que voit
-          tout site web : type de navigateur, localisation approximative, pages visitées et provenance, utilisées de façon agrégée pour comprendre ce qui est utile et corriger ce qui ne l’est pas.
-        </p>
+<h2>Ce que nous collectons</h2>
+<p>
+  AirportRAK ne demande ni compte, ni inscription, ni paiement, et ne vend aucun produit directement. Nous ne
+  collectons donc pas de données d'identité de notre propre initiative. Certaines données sont toutefois
+  traitées par les outils décrits ci-dessous, lorsque vous naviguez sur le site.
+</p>
 
-        <h2>Cookies et analyse d’audience</h2>
-        <p>
-          Nous utilisons un outil d’analyse pour mesurer le trafic et améliorer le guide. Cela peut
-          déposer des cookies ou recourir à une technologie similaire pour compter les visites et
-          comprendre, de façon agrégée, l’usage du site. Nous ne nous en servons pas pour établir des
-          profils publicitaires. Vous pouvez bloquer ou supprimer les cookies dans votre navigateur à tout
-          moment ; le site continuera de fonctionner.
-        </p>
+<h2>Les outils tiers utilisés</h2>
+<div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Outil</th><th>Finalité</th><th>Données concernées</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Mesure d'audience</strong></td><td>Comprendre quelles pages sont lues, améliorer le contenu</td><td>Pages vues, type d'appareil, pays</td></tr>
+      <tr><td><strong>Affiliation (Travelpayouts)</strong></td><td>Attribuer les réservations effectuées via nos liens</td><td>Identifiant de clic, page d'origine</td></tr>
+      <tr><td><strong>Widgets de réservation</strong></td><td>Afficher les vols, hôtels et transferts d'un partenaire</td><td>Traités par le partenaire, selon sa propre politique</td></tr>
+      <tr><td><strong>Polices Google Fonts</strong></td><td>Afficher la typographie du site</td><td>Adresse IP, transmise à Google lors du chargement</td></tr>
+      <tr><td><strong>Widget de vols en direct</strong></td><td>Afficher les arrivées et départs</td><td>Traités par le fournisseur du widget</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>
+  Ces prestataires peuvent déposer des cookies ou des traceurs. Lorsque vous cliquez sur un lien
+  d'affiliation ou utilisez un widget de réservation, vous quittez notre site ou interagissez avec un
+  service tiers, soumis à sa propre politique de confidentialité.
+</p>
 
-        <h2>Cookies d’affiliation</h2>
-        <p>
-          Certains liens d’AirportAGA sont des liens d’affiliation vers des partenaires de transfert, de
-          location, d’hôtels, de vols et d’excursions. En cliquant, le partenaire peut déposer un cookie
-          afin de, si vous réservez ensuite, nous attribuer une petite commission, sans surcoût pour
-          vous. Ce cookie est déposé et géré par le partenaire selon sa propre politique de
-          confidentialité, pas la nôtre. Voyez notre
-          <a href={L('/affiliate-disclosure/')}>divulgation d’affiliation</a> pour le détail.
-        </p>
+<h2>Cookies et consentement</h2>
+<p>
+  Les cookies de mesure d'audience et d'affiliation ne sont pas strictement nécessaires au fonctionnement du
+  site. Vous pouvez à tout moment les refuser ou les supprimer dans les réglages de votre navigateur, et
+  bloquer les traceurs avec une extension dédiée.
+</p>
 
-        <h2>Ce que nous ne faisons pas</h2>
-        <p>
-          <strong>Nous ne vendons, ne louons ni n’échangeons vos données personnelles.</strong> Nous
-          n’exploitons pas notre propre régie publicitaire et ne partageons pas vos informations, hormis
-          ce qui est nécessaire aux fonctions d’analyse et d’affiliation décrites ci-dessus, ou lorsque la
-          loi l’exige.
-        </p>
+<h2>Vos droits</h2>
+<p>
+  Conformément au règlement général sur la protection des données (RGPD), vous disposez d'un droit
+  d'accès, de rectification, d'effacement, d'opposition, de limitation et de portabilité de vos données,
+  ainsi que du droit de retirer votre consentement à tout moment. Pour les exercer, écrivez-nous à
+  l'adresse ci-dessus. Vous pouvez aussi saisir la CNIL (cnil.fr) si vous estimez que vos droits ne sont
+  pas respectés.
+</p>
 
-        <h2>Vos choix</h2>
-        <p>
-          Vous pouvez gérer les cookies depuis votre navigateur, et la plupart permettent une navigation
-          privée. Si vous nous avez écrit et souhaitez que nous supprimions votre message et vos
-          coordonnées, ou si vous avez une question sur vos données, demandez-nous simplement.
-        </p>
+<h2>Durée de conservation</h2>
+<p>
+  Les données de mesure d'audience sont conservées pour une durée limitée par l'outil concerné. Les
+  échanges par e-mail sont conservés le temps nécessaire au traitement de votre demande.
+</p>
 
-        <h2>Contact</h2>
-        <p>
-          Pour toute demande ou question relative à la confidentialité, écrivez à
-          <a href="mailto:hello@airportaga.com">hello@airportaga.com</a> ou utilisez notre
-          <a href={L('/contact/')}>page de contact</a>. Nous pouvons mettre à jour cette politique de
-          temps à autre ; la version en vigueur se trouve toujours ici.
-        </p>
+<h2>Mises à jour</h2>
+<p>
+  Cette politique peut évoluer lorsque nous ajoutons ou retirons un outil. La date de dernière mise à
+  jour est celle de la version en ligne. Pour comprendre comment le site est financé, voyez
+  <a href={L('/divulgation-affiliation/')}>divulgation d'affiliation</a>.
+</p>
       </article>
     </div>
   </section>

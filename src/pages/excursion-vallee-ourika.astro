@@ -2,123 +2,131 @@
 import GuideLayout from '../layouts/GuideLayout.astro';
 import { getLocalizedPath } from '../i18n';
 import { photos } from '../data/images';
+import { PRICES_CHECKED } from '../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: 'Surf à Taghazout', href: L('/surfing-taghazout-guide/') },
+  { name: "Excursions", href: L("/que-faire-marrakech/") },
+  { name: "Vallée de l'Ourika", href: L("/excursion-vallee-ourika/") },
 ];
+
 const toc = [
-  { label: 'Le décor', id: 'decor' },
-  { label: 'Les spots de surf', id: 'spots' },
-  { label: 'Saisons et houle', id: 'saisons' },
-  { label: 'Les surf camps', id: 'camps' },
-  { label: 'Cours et débutants', id: 'cours' },
-  { label: 'Y arriver', id: 'arriver' },
+  { label: "Le trajet et l'itinéraire", id: "trajet" },
+  { label: "Ce qu'on y voit", id: "voir" },
+  { label: "Les cascades de Setti Fatma", id: "cascades" },
+  { label: "Quand y aller, et le risque de crue", id: "quand" },
+  { label: "Y aller : taxi, tour ou voiture", id: "transport" },
+  { label: "Budget", id: "budget" },
 ];
+
 const faqs = [
-  { q: 'Taghazout convient-elle aux débutants ?', a: 'Oui, et c’est une grande raison de sa popularité. Les beach breaks sableux de Crocro, Hash Point, Panorama et, tout près, Tamraght et Banana Beach sont indulgents et parfaits pour apprendre, tandis que les fameux points (Anchor Point, Killer Point) sont à réserver aux surfeurs sûrs d’eux. La plupart des camps font débuter sur les plages plus douces et ne vous emmènent aux points qu’une fois prêt.' },
-  { q: 'Quelle est la meilleure période pour surfer à Taghazout ?', a: 'La saison court grosso modo de septembre à avril, quand les houles de l’Atlantique Nord réveillent les points. Octobre–novembre et mars sont des créneaux sûrs, vagues régulières, eau assez douce et moins de monde qu’en plein hiver. L’été est petit et surtout bon pour les vrais débutants. L’eau reste fraîche toute l’année : la combinaison 3/2 est la norme.' },
-  { q: 'À quelle distance Taghazout est-elle de l’aéroport d’Agadir ?', a: 'Environ 48 km, soit 50 à 65 minutes de route vers le nord en longeant la côte. Ni train ni bus pratique : c’est un grand taxi, un transfert réservé ou une voiture de location. Le transfert réservé est le choix simple, car beaucoup d’adresses de surf camps ne sont pas signalées, voyez notre page de transfert aéroport–Taghazout pour les prix.' },
-  { q: 'Dois-je apporter ma propre planche ?', a: 'Non. Chaque surf camp et les boutiques de location de Taghazout et Tamraght louent planches et combinaisons à la journée ou à la semaine, et les cours incluent toujours le matériel. Apporter la vôtre n’a de sens que si vous tenez à votre planche et acceptez de payer les frais de housse de surf en avion.' },
+  { q: "Combien de temps faut-il pour aller dans l'Ourika depuis Marrakech ?", a: "Environ une heure à une heure quinze pour rejoindre Setti Fatma, le bout de la route, à une soixantaine de kilomètres. Les premiers villages sont à quarante minutes. Comptez une journée complète avec les arrêts, en partant vers 8 h 30 et en rentrant en fin d'après-midi." },
+  { q: "Quand a lieu le marché de l'Ourika ?", a: "Le lundi matin, à Tnine Ourika, un village de la vallée. C'est un marché rural authentique, fréquenté par les habitants des montagnes, où l'on trouve légumes, épices, ustensiles et animaux. La circulation est dense ce jour-là : partez tôt." },
+  { q: "Les cascades de Setti Fatma sont-elles faciles d'accès ?", a: "La première est accessible en une vingtaine de minutes de marche facile, avec de nombreux guides sur place ; les suivantes demandent d'escalader des rochers, souvent glissants, et une bonne condition physique. En cas de pluie ou de crue, l'ascension est déconseillée. Des chaussures fermées à semelle accrocheuse s'imposent." },
+  { q: "L'Ourika est-elle dangereuse ?", a: "La rivière peut monter très vite lors d'orages en montagne, et des crues meurtrières se sont produites par le passé. Consultez la météo, évitez les tables installées dans le lit de la rivière si le ciel se couvre, et suivez les consignes des guides locaux. Par temps stable, la vallée ne pose pas de difficulté." },
+  { q: "Faut-il un guide pour la vallée de l'Ourika ?", a: "Pas pour la route et les villages, que l'on visite librement. Pour les cascades, un guide local est utile, souvent proposé sur place à un tarif modeste, et pour une randonnée plus longue un guide agréé de montagne est recommandé." },
+  { q: "Peut-on combiner l'Ourika avec le désert d'Agafay ?", a: "Ce serait une journée très dense, avec deux directions opposées. Mieux vaut consacrer une journée à chacune : l'Ourika le matin en montagne, l'Agafay une autre fois pour le coucher du soleil." },
 ];
 ---
-<GuideLayout keywords="Guide Surf Taghazout Agadir, que faire à Agadir, attractions Agadir" 
-  lang={lang}
-  title="Guide Guide Surf Taghazout Agadir 2026 | Astuces & Incontournables"
-  description="Planifiez votre visite à Guide Surf Taghazout à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
-  eyebrow="Maroc · Côte du surf"
-  h1="Le surf à Taghazout : les spots, les saisons et les camps"
-  lede="À 40 minutes au nord d’Agadir, Taghazout est la capitale marocaine du surf, des droites de classe mondiale, des beach breaks accueillants pour apprendre et une saison qui dure tout l’automne et l’hiver. Voici où surfer, quand, et comment tout organiser."
+<GuideLayout
+  keywords="vallée Ourika, Setti Fatma, excursion Ourika Marrakech, marché Tnine Ourika"
+  title={"Vallée de l'Ourika depuis Marrakech : guide 2026"}
+  description={"Vallée de l'Ourika en une journée : trajet, marché du lundi, jardin Anima, villages berbères, cascades de Setti Fatma, saison et risques de crue."}
+  eyebrow={"Excursions · Vallée de l'Ourika"}
+  h1={"Vallée de l'Ourika depuis Marrakech"}
+  lede={"À une heure de la ville, la vallée offre de la fraîcheur, des villages berbères et des cascades. C'est l'excursion la plus simple du Haut Atlas — à condition de la faire au bon moment."}
   breadcrumbs={breadcrumbs}
-  heroImage={photos['taghazout']}
+  heroImage={photos["ourika-valley"]}
   toc={toc}
   faqs={faqs}
-  updated="juin 2026"
-  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+  updated={PRICES_CHECKED}
+  cta={{ heading: "Un chauffeur pour la journée", text: "Une voiture avec chauffeur permet de partir à l'heure de votre choix, de vous arrêter où vous voulez et de rentrer avant la nuit.", provider: "transfer", label: "Voir les prix des transferts" }}
 >
+<h2 id="trajet">Le trajet et l'itinéraire</h2>
+<p>
+  On quitte Marrakech par le sud-est, en direction de l'Atlas. Les premiers kilomètres traversent la plaine,
+  puis la route s'élève le long de la rivière Ourika, dans un paysage de terrasses rouges, de villages en
+  pisé et de champs. La route est goudronnée, étroite par endroits, et très fréquentée le week-end, quand
+  les habitants montent chercher la fraîcheur.
+</p>
+<div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Étape</th><th>Distance depuis Marrakech</th><th>À voir</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Jardin Anima</strong></td><td>≈ 30 km</td><td>Jardin d'artiste, sculptures, calme</td></tr>
+      <tr><td><strong>Tnine Ourika</strong></td><td>≈ 35 km</td><td>Marché du lundi, coopératives</td></tr>
+      <tr><td><strong>Villages berbères</strong></td><td>40 à 55 km</td><td>Maisons de pisé, visites chez l'habitant</td></tr>
+      <tr class="row-highlight"><td><strong>Setti Fatma</strong></td><td>≈ 60 km</td><td>Bout de la route, cascades, restaurants</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="voir">Ce qu'on y voit</h2>
+<p>
+  <strong>Les villages et les coopératives</strong> : plusieurs coopératives de femmes produisent huile
+  d'argan, savon et safran, avec des démonstrations. Une visite chez l'habitant, autour d'un thé, est
+  souvent proposée. Choisissez selon l'ambiance, sans vous sentir obligé d'acheter.
+</p>
+<p>
+  <strong>Le jardin Anima</strong> : un jardin d'artiste, soigné, à mi-chemin, qui offre une pause
+  paisible avant la montagne. Convient aux familles.
+</p>
+<p>
+  <strong>Les tables au bord de l'eau</strong> : de nombreux restaurants installent tapis et tables sur
+  les rochers, au-dessus de la rivière. Un tajine et une salade y sont agréables, à un prix raisonnable.
+  Par temps instable, préférez une terrasse en hauteur, pas dans le lit de la rivière.
+</p>
+
+<h2 id="cascades">Les cascades de Setti Fatma</h2>
+<p>
+  Au bout de la route, sept cascades s'étagent dans la montagne. La première est accessible par un
+  sentier d'environ vingt minutes, avec des passages sur les rochers. Les suivantes exigent d'escalader,
+  parfois en s'aidant des mains, sur des roches humides. Un guide local se trouve sur place pour quelques
+  dizaines de dirhams et rend la progression nettement plus sûre.
+</p>
+<div class="callout">
+  <span class="callout-label">Ce qu'il faut savoir</span>
   <p>
-    Taghazout était un paisible village de pêcheurs jusqu’à ce que les surfeurs découvrent ses points dans
-    les années 1960 et 70, et c’est depuis le cœur du surf marocain. Ce qui la rend unique, c’est la
-    diversité concentrée sur un court tronçon de côte : de longues droites bien déroulantes qui attirent
-    des surfeurs confirmés du monde entier, et des beach breaks sableux et doux à quelques minutes, idéaux
-    pour votre première semaine sur une planche. La saison traverse l’hiver européen, l’eau ne devient
-    jamais vraiment froide, et l’ambiance est café-et-rack-à-planches plutôt que ville de fête.
+    N'y allez pas en sandales et évitez les cascades supérieures si vous avez des enfants ou le
+    vertige. Le niveau d'eau varie fortement : au printemps, la fonte des neiges rend la vallée
+    superbe, mais les passages sont plus délicats.
   </p>
+</div>
 
-  <h2 id="decor">Le décor</h2>
-  <p>
-    « Taghazout » comme destination de surf, c’est en réalité l’ensemble des spots entre Tamraght et Aourir
-    au sud et le village de Taghazout et Imsouane au nord. La plupart logent à Taghazout même ou dans la
-    plus tranquille Tamraght, toutes deux bordées de surf camps, de boutiques de location et de spots à
-    petit-déjeuner. Les vagues sont proches les unes des autres : un van du camp ou une courte marche vous
-    mène là où ça marche le matin, et le bon spot change selon la direction de la houle, la marée et le
-    vent, d’où l’importance de la connaissance locale.
-  </p>
+<h2 id="quand">Quand y aller, et le risque de crue</h2>
+<ul>
+  <li><strong>Printemps :</strong> le meilleur moment — vert, eau abondante, températures douces.</li>
+  <li><strong>Été :</strong> un refuge contre la chaleur de la ville, avec 5 à 8 °C de moins. Beaucoup de monde le week-end.</li>
+  <li><strong>Hiver :</strong> sommets enneigés, air frais. Voyez <a href={L('/marrakech-en-hiver/')}>Marrakech en hiver</a>.</li>
+  <li><strong>Après un orage :</strong> à éviter. La rivière peut gonfler rapidement, et des crues se sont produites par le passé.</li>
+</ul>
 
-  <h2 id="spots">Les spots de surf</h2>
-  <p>
-    Du sud au nord, voici les noms que vous entendrez :
-  </p>
-  <ul>
-    <li><strong>Anchor Point</strong>, la légende : une longue droite rapide qui tient une taille sérieuse en hiver. Surfeurs confirmés uniquement, et c’est bondé quand ça marche.</li>
-    <li><strong>Killer Point</strong>, une droite puissante plus au nord, baptisée d’après les orques parfois aperçues au large. Spot de gros jours, pour les forts.</li>
-    <li><strong>La Source</strong>, une droite sur fond rocheux juste au sud de Killer, nommée d’après la source d’eau douce ; marche sur une bonne houle.</li>
-    <li><strong>Panorama</strong>, un setup plage/reef plus accueillant tout près de Taghazout, prisé des intermédiaires et spot de cours fréquent quand c’est petit.</li>
-    <li><strong>Imsouane</strong>, à une heure environ au nord, « La Baie » offre l’une des vagues les plus longues et les plus douces du pays, parfaite pour progresser en longboard et pour les intermédiaires. Voyez notre page de <a href={L('/agadir-airport-to-imsouane/')}>transfert aéroport–Imsouane</a>.</li>
-    <li><strong>Les spots de Tamraght</strong>. Crocro, Banana Beach et les plages sableuses d’ici sont la salle de classe quotidienne des débutants. Lisez la page de <a href={L('/agadir-airport-to-taghazout/')}>transfert vers Taghazout</a> pour tout rejoindre.</li>
-  </ul>
+<h2 id="transport">Y aller : taxi, tour ou voiture</h2>
+<div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Option</th><th>Prix indicatif</th><th>Avantage</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Excursion en groupe</strong></td><td class="num">250–450 MAD / pers.</td><td>Simple, guide inclus, horaires imposés</td></tr>
+      <tr><td><strong>Grand taxi ou chauffeur privé</strong></td><td class="num">400–650 MAD la voiture</td><td>Horaire libre, arrêts à la carte</td></tr>
+      <tr><td><strong>Voiture de location</strong></td><td class="num">dès 25 € / jour</td><td>Liberté, route facile en citadine</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>
+  La route est entièrement goudronnée, et une citadine suffit : voyez
+  <a href={L('/location-4x4-aeroport-marrakech/')}>faut-il un 4x4 ?</a> et
+  <a href={L('/conduire-au-maroc/')}>conduire au Maroc</a> pour les conseils de conduite en montagne. Les
+  tarifs taxi sont détaillés dans notre
+  <a href={L('/taxi-aeroport-marrakech/prix/')}>grille des prix</a>.
+</p>
 
-  <h2 id="saisons">Saisons et houle</h2>
-  <p>
-    Le moteur, c’est l’Atlantique Nord. De septembre à avril, les dépressions au large envoient la houle
-    sur les points : voilà la saison. Le cœur de l’hiver (décembre–février) apporte les vagues les plus
-    grosses et les plus régulières, et la foule qui va avec sur les spots célèbres. Les ailes de saison, octobre, novembre et mars, sont le créneau idéal pour la plupart : du solide sans le chaos de la haute
-    saison. L’été est petit et doux, parfait pour les vrais débutants mais calme pour les autres. L’eau
-    reste fraîche toute l’année : emportez ou louez une combinaison 3/2.
-  </p>
-
-  <h2 id="camps">Les surf camps</h2>
-  <p>
-    Taghazout et Tamraght vivent au rythme des surf camps, des formules réunissant lit, petit-déjeuner,
-    location de planche et de combinaison, sessions guidées quotidiennes vers le spot adapté à votre
-    niveau, et souvent yoga et transfert aéroport. Cela va de la maison sociale pour routards au camp
-    boutique soigné. Réserver un camp est la façon la plus simple de surfer ici pour une première fois : le
-    guidage retire le casse-tête du « quel spot, quand ». Pour où loger et ce que couvrent les camps, voyez
-    notre guide des <a href={L('/taghazout-surf-camps/')}>surf camps de Taghazout</a>.
-  </p>
-
-  <h2 id="cours">Cours et débutants</h2>
-  <p>
-    Si vous n’avez jamais surfé, vous êtes au bon endroit pour commencer. Les cours se donnent sur les
-    plages sableuses et indulgentes autour de Tamraght et Panorama, avec moniteurs diplômés, planches et
-    combinaisons fournies. Un stage de deux ou trois jours met la plupart des gens debout sur un mousse ;
-    une semaine vous fait prendre des vagues vertes. Restez à l’écart des points rocheux tant qu’un moniteur
-    ne vous dit pas que vous êtes prêt, ils ne pardonnent pas et sont bondés.
-  </p>
-
-  <h2 id="arriver">Y arriver depuis l’aéroport</h2>
-  <p>
-    Taghazout est à environ 48 km au nord de l’aéroport Agadir Al Massira, 50 à 65 minutes de route le
-    long de la côte. Ni train ni bus pratique, et beaucoup d’adresses de camps ne sont pas signalées : un
-    transfert réservé qui trouve votre porte est l’option sans douleur ; un grand taxi ou une location
-    marchent aussi. Prix complets et détail du trajet sur la page
-    <a href={L('/agadir-airport-to-taghazout/')}>aéroport d’Agadir vers Taghazout</a>, avec
-    <a href={L('/agadir-airport-to-imsouane/')}>Imsouane</a> traité à part.
-  </p>
-
-  <div class="disclosure-inline">
-    Certains liens de cette page sont des liens d’affiliation : si vous réservez via eux, nous pouvons
-    percevoir une petite commission, sans surcoût pour vous. Cela ne change jamais les prix affichés ni nos
-    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça marche</a>.
-  </div>
-
-  <div class="callout">
-    <span class="callout-label">Le plan du débutant</span>
-    Venez en octobre–novembre ou en mars · installez-vous à Taghazout ou Tamraght · réservez un camp ou un
-    stage de cours · louez planche et combinaison sur place · et laissez les guides choisir le spot. Les
-    points seront encore là quand vous serez prêt.
-  </div>
+<h2 id="budget">Budget</h2>
+<p>
+  Une journée en excursion de groupe coûte 250 à 450 MAD par personne, déjeuner en plus (80 à 150 MAD).
+  En voiture privée, comptez 400 à 650 MAD pour la course, plus le repas. Le poste qui grimpe est le
+  guide pour les cascades, à quelques dizaines de dirhams. Pour d'autres idées autour de la ville, voyez
+  <a href={L('/que-faire-marrakech/')}>que faire à Marrakech</a>.
+</p>
 </GuideLayout>

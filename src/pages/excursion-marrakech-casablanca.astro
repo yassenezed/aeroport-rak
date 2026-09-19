@@ -2,117 +2,115 @@
 import GuideLayout from '../layouts/GuideLayout.astro';
 import { getLocalizedPath } from '../i18n';
 import { photos } from '../data/images';
+import { PRICES_CHECKED } from '../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: 'Excursion Agadir – Essaouira', href: L('/agadir-to-essaouira-day-trip/') },
+  { name: "Excursions", href: L("/que-faire-marrakech/") },
+  { name: "Casablanca", href: L("/excursion-marrakech-casablanca/") },
 ];
+
 const toc = [
-  { label: 'Vaut-elle une journée ?', id: 'vaut-elle' },
-  { label: 'Distance et durée', id: 'distance' },
-  { label: 'Comment y aller', id: 'comment' },
-  { label: 'Que faire à Essaouira', id: 'faire' },
-  { label: 'Les arrêts argan en chemin', id: 'argan' },
-  { label: 'Un plan de journée réaliste', id: 'plan' },
+  { label: "Train, voiture ou bus", id: "moyens" },
+  { label: "Une journée à Casablanca", id: "journee" },
+  { label: "La mosquée Hassan II", id: "hassan-ii" },
+  { label: "Prendre un vol à Casablanca", id: "aeroport" },
+  { label: "Notre avis", id: "avis" },
 ];
+
 const faqs = [
-  { q: 'Peut-on faire Essaouira en une journée depuis Agadir ?', a: 'Oui, et beaucoup le font. C’est environ 175 km et 2h30 à 3h dans chaque sens par la route côtière, soit cinq à six heures de conduite en plus de votre temps sur place. Cela tient comme une longue journée si vous partez vers 8 h, mais vous rentrerez tard. Si vous pouvez vous offrir une nuit, Essaouira récompense bien plus un séjour qu’un après-midi expédié.' },
-  { q: 'Combien de temps dure la route Agadir – Essaouira ?', a: 'Environ 2h30 à 3h dans un sens pour les 175 km, selon la circulation à la sortie d’Agadir et le nombre d’arrêts photo dans le pays de l’argan au nord de Taghazout. La route est goudronnée et facile, surtout à une voie par sens en longeant l’Atlantique.' },
-  { q: 'Y a-t-il un bus d’Agadir à Essaouira ?', a: 'Oui. Supratours et CTM assurent des cars le long de la côte pour un tarif modique, en environ trois heures. C’est l’option la moins chère, mais l’horaire fixe rend le retour dans la journée serré : le bus convient mieux à ceux qui dorment sur place qu’aux excursionnistes.' },
-  { q: 'Pour quoi Essaouira est-elle connue ?', a: 'Une médina fortifiée classée à l’UNESCO, un port de pêche en activité avec ses barques bleues, le vent qui lui a valu le surnom de « ville des alizés » (et en a fait un aimant à kitesurf), et le pays de l’argan tout autour. Elle paraît plus douce et plus bohème que Marrakech, facile à arpenter, avec l’air marin et les remparts plutôt que la chaleur et le tumulte.' },
+  { q: "Combien de temps dure le train Marrakech - Casablanca ?", a: "Entre 2 h 40 et 3 h 20 selon le train, avec un départ environ toutes les une à deux heures de la gare de Marrakech, à Guéliz. Un billet en 2ᵉ classe coûte en général autour de 100 MAD, davantage en 1ʳᵉ classe. Réservez sur le site ou l'application de l'ONCF." },
+  { q: "Existe-t-il une ligne à grande vitesse vers Marrakech ?", a: "Le TGV Al Boraq relie Tanger à Casablanca, mais il ne va pas encore jusqu'à Marrakech : une extension jusqu'à Marrakech est en cours de construction, avec une mise en service annoncée pour la fin de la décennie. Les trains actuels sont des lignes classiques." },
+  { q: "Peut-on visiter Casablanca en une journée depuis Marrakech ?", a: "Techniquement oui, mais c'est une journée de transport : cinq à six heures de route ou de train pour trois ou quatre heures sur place. La visite guidée de la mosquée Hassan II et un déjeuner sur la Corniche occupent la journée." },
+  { q: "Peut-on visiter la mosquée Hassan II sans être musulman ?", a: "Oui, c'est l'un des rares grands édifices religieux ouverts aux non-musulmans, uniquement en visite guidée payante, à des horaires précis. Habillez-vous de façon couvrante et prévoyez de quitter vos chaussures. Vérifiez les horaires avant de venir, car ils changent en période de prière." },
+  { q: "Comment aller de Marrakech à l'aéroport de Casablanca ?", a: "En train jusqu'à Casa-Voyageurs, puis en train jusqu'à l'aéroport Mohammed V, à une trentaine de kilomètres du centre. Le trajet complet dépasse quatre heures : prévoyez une marge très large avant votre vol, et vérifiez les correspondances sur oncf-voyages.ma." },
+  { q: "Vaut-il mieux passer par Casablanca ou voler directement depuis Marrakech ?", a: "Pour un voyageur français, le vol direct depuis Marrakech est presque toujours plus simple : pas de correspondance, pas de transfert de quatre heures. Casablanca ne s'impose que si aucune ligne directe n'existe pour votre destination." },
 ];
 ---
-<GuideLayout keywords="Excursion Essaouira Agadir, que faire à Agadir, attractions Agadir" 
-  lang={lang}
-  title="Guide Excursion Essaouira Agadir 2026 | Astuces & Incontournables"
-  description="Planifiez votre visite à Excursion Essaouira à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
-  eyebrow="Excursions · Depuis Agadir"
-  h1="Agadir – Essaouira : l’excursion, bien faite"
-  lede="Essaouira est la plus belle longue excursion depuis Agadir, un port fortifié classé à l’UNESCO, avec l’air marin, les barques bleues et le pays de l’argan en chemin. Voici la vraie distance, comment y aller, et comment organiser la journée pour qu’elle ne soit pas que de la route."
+<GuideLayout
+  keywords="Marrakech Casablanca train, mosquée Hassan II, aéroport Casablanca Mohammed V, excursion Casablanca"
+  title={"Marrakech - Casablanca : train, route et visite"}
+  description={"De Marrakech à Casablanca : train ONCF en 2 h 40 à 3 h 20, autoroute, mosquée Hassan II, et comment rejoindre l'aéroport Mohammed V."}
+  eyebrow={"Excursions · Casablanca"}
+  h1={"Marrakech - Casablanca"}
+  lede={"Casablanca est la capitale économique du Maroc, pas sa capitale touristique. On y va pour la mosquée Hassan II, une ville différente de Marrakech, ou pour un vol — et alors la question de la correspondance devient centrale."}
   breadcrumbs={breadcrumbs}
-  heroImage={photos['essaouira']}
+  heroImage={photos["casablanca"]}
   toc={toc}
   faqs={faqs}
-  updated="juin 2026"
-  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+  updated={PRICES_CHECKED}
+  cta={{ heading: "Un vol direct depuis Marrakech", text: "Comparez les vols directs avant de vous engager dans un trajet de quatre heures jusqu'à Casablanca.", provider: "flight", label: "Rechercher un vol" }}
 >
+<h2 id="moyens">Train, voiture ou bus</h2>
+<div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Moyen</th><th>Durée</th><th>Prix indicatif</th><th>À savoir</th></tr></thead>
+    <tbody>
+      <tr class="row-highlight"><td><strong>Train ONCF</strong></td><td>2 h 40 – 3 h 20</td><td class="num">≈ 100 MAD (2ᵉ cl.)</td><td>Départs fréquents, gare de Guéliz</td></tr>
+      <tr><td><strong>Autocar</strong></td><td>3 h – 3 h 30</td><td class="num">Économique</td><td>Plus lent, moins lisible</td></tr>
+      <tr><td><strong>Voiture (autoroute A7)</strong></td><td>2 h 30 – 3 h</td><td class="num">Location + péage</td><td>Route excellente, stationnement en ville difficile</td></tr>
+      <tr><td><strong>Transfert privé</strong></td><td>2 h 30 – 3 h</td><td class="num">Sur devis</td><td>Le plus simple avec des bagages</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>
+  Le train est la solution la plus pratique : rapide, ponctuel en général et peu cher. La gare de
+  Marrakech se trouve à Guéliz, à quelques kilomètres de l'aéroport : voyez
+  <a href={L('/guide-aeroport-marrakech/aller-a-gueliz/')}>aller à Guéliz</a>. Vérifiez les horaires
+  avant de partir, car l'ONCF adapte son plan de transport pendant les travaux de la future ligne à grande
+  vitesse.
+</p>
+
+<h2 id="journee">Une journée à Casablanca</h2>
+<p>
+  Casablanca est une métropole de plusieurs millions d'habitants, moderne et étendue, plus proche d'une
+  grande ville européenne que d'une carte postale. Les points d'intérêt se concentrent en quelques
+  endroits : le quartier art déco du centre-ville, la mosquée Hassan II, la Corniche d'Aïn Diab au bord
+  de l'océan et le quartier des Habous, à l'architecture néo-mauresque.
+</p>
+<div class="callout">
+  <span class="callout-label">Notre avis honnête</span>
   <p>
-    Essaouira se trouve à environ 175 km au nord d’Agadir, en remontant la côte atlantique, et c’est
-    l’excursion dont on parle le plus une fois rentré. Elle est l’opposé d’Agadir, dans le bon sens : là où
-    Agadir est moderne et tracée au cordeau, Essaouira est une petite médina fortifiée qu’on traverse à
-    pied, avec un port de pêche en activité, des remparts que l’Atlantique vient battre, et une atmosphère
-    lente, iodée, un brin bohème. Le hic, c’est la distance, c’est un vrai trajet, pas un saut de puce, alors mieux vaut être honnête sur la journée avant de s’engager.
+    Casablanca ne mérite pas une journée entière depuis Marrakech sauf si vous avez déjà vu l'essentiel
+    de Marrakech, et vous voulez un contraste. Pour un séjour de moins d'une semaine, mieux vaut
+    <a href={L('/excursion-marrakech-essaouira/')}>Essaouira</a> ou l'
+    <a href={L('/excursion-vallee-ourika/')}>Ourika</a>.
   </p>
+</div>
 
-  <h2 id="vaut-elle">Vaut-elle une journée ?</h2>
-  <p>
-    Oui, en connaissance de cause. Essaouira est vraiment charmante et très différente de l’ambiance
-    station balnéaire d’Agadir : le contraste à lui seul justifie le voyage. Mais la route fait 2h30 à 3h
-    dans chaque sens, soit cinq à six heures en voiture pour peut-être quatre ou cinq heures sur place.
-    Partez tôt, vers 8 h, et cela fonctionne bien. Si votre programme permet une seule nuit, prenez-la :
-    Essaouira au crépuscule et tôt le matin, une fois les excursionnistes repartis, c’est la version qui
-    vaut le coup d’œil.
-  </p>
+<h2 id="hassan-ii">La mosquée Hassan II</h2>
+<p>
+  C'est la raison principale de venir. Achevée en 1993, sur l'océan, elle possède l'un des plus hauts
+  minarets du monde, plus de 200 mètres, et une salle de prière pouvant accueillir plusieurs milliers de
+  fidèles, avec un toit ouvrant. Les non-musulmans peuvent la visiter, en visite guidée payante et à des
+  horaires précis. Vérifiez les horaires du jour avant de vous déplacer, et habillez-vous de façon
+  couvrante.
+</p>
 
-  <h2 id="distance">Distance et durée</h2>
-  <p>
-    Comptez environ 175 km et 2h30 à 3h dans un sens. La route est goudronnée sur tout le parcours et
-    facile à conduire, surtout à une voie par sens en suivant la côte, grimpant à travers les collines
-    d’arganiers au nord de Taghazout avant de redescendre vers la mer. Prévoyez du rab pour la sortie lente
-    d’Agadir et pour les arrêts photo que vous voudrez forcément faire au milieu des arganiers. Il n’y a pas
-    d’autoroute à péage sur cette route, contrairement au trajet vers Marrakech.
-  </p>
+<h2 id="aeroport">Prendre un vol à Casablanca</h2>
+<p>
+  C'est le cas de figure où l'on se retrouve à rejoindre Casablanca : un vol qui part de Mohammed V
+  (CMN), l'aéroport le plus important du pays. L'aéroport se situe à une trentaine de kilomètres du
+  centre-ville, relié par un train navette qui rejoint la gare Casa-Voyageurs en trente à quarante
+  minutes.
+</p>
+<ol>
+  <li>Train Marrakech → Casa-Voyageurs : environ trois heures.</li>
+  <li>Correspondance vers l'aéroport : environ trente-cinq minutes de trajet.</li>
+  <li>Marge avant le vol : deux heures et demie à trois heures, comme pour tout vol international.</li>
+</ol>
+<p>
+  Soit un minimum de six heures et demie entre votre départ de Marrakech et le décollage. C'est pourquoi
+  le vol direct depuis Marrakech est, la plupart du temps, la meilleure option : voyez
+  <a href={L('/vols-marrakech/')}>vols pour Marrakech</a>.
+</p>
 
-  <h2 id="comment">Comment y aller</h2>
-  <ul>
-    <li><strong>Excursion guidée</strong>, le choix facile : quelqu’un conduit, l’arrêt à la coopérative d’argan et la balade dans la médina sont inclus, et vous évitez le casse-tête du stationnement à Essaouira.</li>
-    <li><strong>Chauffeur privé ou transfert</strong>, plus souple qu’une excursion et bien pour les familles ; vous fixez le rythme et les arrêts. Voyez notre page de <a href={L('/agadir-airport-to-essaouira/')}>transfert Agadir – Essaouira</a> pour le coût du trajet.</li>
-    <li><strong>Voiture de location</strong>, parfait si vous êtes à l’aise pour conduire au Maroc ; garez-vous hors des remparts (l’intérieur est piéton) sur l’un des parkings signalés.</li>
-    <li><strong>Bus Supratours / CTM</strong>, de loin le moins cher, environ trois heures, mais l’horaire rend le retour dans la journée serré.</li>
-  </ul>
-  <div class="disclosure-inline">
-    Certains liens de cette page sont des liens d’affiliation : réservez via eux et nous pouvons percevoir
-    une petite commission, sans surcoût pour vous. <a href={L('/affiliate-disclosure/')}>Comment ça
-    marche</a>.
-  </div>
-
-  <h2 id="faire">Que faire à Essaouira</h2>
-  <p>
-    Commencez par le port. Les barques de bois bleues, les mouettes et la criée du matin sont l’image de
-    carte postale, et il y a là des grillades où l’on vous cuit le poisson devant vous. De là, parcourez la
-    Skala de la Ville, les remparts marins bordés de vieux canons de bronze, où Game of Thrones a tourné
-    Astapor, puis perdez-vous une heure dans la médina, bien plus paisible à arpenter que celle de
-    Marrakech. Essaouira est aussi une ville d’artisanat : marqueterie de thuya et longue tradition de
-    musique gnaoua. Et le vent qui en fait la « ville des alizés » a transformé la longue plage en repaire
-    de kitesurf et de planche à voile.
-  </p>
-
-  <h2 id="argan">Les arrêts argan en chemin</h2>
-  <p>
-    Les collines entre Agadir et Essaouira sont le cœur du pays de l’argan, l’un des rares endroits au
-    monde où pousse l’arganier. Vous passerez devant des coopératives de femmes qui pressent l’huile
-    d’argan à la main, et elles font un arrêt qui vaut le détour pour voir le procédé et acheter de l’huile
-    à un prix juste (cosmétique pour la peau et les cheveux, ou la version culinaire plus typée). Vous
-    apercevrez peut-être les fameuses chèvres perchées dans les arganiers ; là où la scène paraît montée
-    pour le pourboire, passez votre chemin sans remords.
-  </p>
-
-  <h2 id="plan">Un plan de journée réaliste</h2>
-  <p>
-    Quittez Agadir vers 8 h. Arrêt à une coopérative d’argan en milieu de matinée, arrivée à Essaouira vers
-    11 h. Le port et la Skala avant le déjeuner, du poisson grillé ou un café dans la médina, puis flânerie
-    dans les souks et sur les remparts l’après-midi. Visez un départ retour vers 16 h – 16 h 30 pour être
-    rentré pour le dîner. Si vous préférez ne pas surveiller l’heure toute la journée, c’est exactement le
-    genre de voyage qu’une nuit sur place transforme, et pour plus d’idées près du camp de base, voyez
-    <a href={L('/things-to-do-agadir/')}>que faire à Agadir</a>.
-  </p>
-
-  <div class="callout">
-    <span class="callout-label">La liste de l’excursionniste</span>
-    Partez vers 8 h · un arrêt argan, pas trois · garez-vous hors des remparts · poisson grillé au port
-    pour le déjeuner · et entamez le retour vers 16 h 30.
-  </div>
+<h2 id="avis">Notre avis</h2>
+<p>
+  Casablanca est un excellent complément à un séjour long, une escale utile ou une ville à découvrir pour
+  son architecture. Ce n'est pas une excursion à la journée depuis Marrakech. Si vous cherchez une
+  évasion, choisissez plutôt la montagne ou l'océan.
+</p>
 </GuideLayout>

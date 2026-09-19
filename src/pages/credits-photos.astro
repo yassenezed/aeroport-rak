@@ -2,49 +2,36 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
 import { getLocalizedPath } from '../i18n';
-import { photoCredits } from '../data/images';
+import { site } from '../data/site';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
-const clean = (t: string) => t.replace(/^File:/, '').replace(/\.[a-zA-Z]+$/, '').replace(/_/g, ' ');
+const L = (p: string) => getLocalizedPath(p);
 ---
-<BaseLayout keywords="Credits Photos Agadir, que faire à Agadir, attractions Agadir" 
-  lang={lang}
-  title="Guide Credits Photos Agadir 2026 | Astuces & Incontournables"
-  description="Planifiez votre visite à Credits Photos à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+<BaseLayout
+  title={"Crédits photos | AirportRAK"}
+  description={"Origine et droits des photographies du site AirportRAK."}
   noindex={true}
 >
   <section class="hero">
     <div class="container hero-inner">
-      <Breadcrumbs items={[{ name: 'Accueil', href: L('/') }, { name: 'Crédits photos', href: L('/photo-credits/') }]} />
-      <span class="eyebrow">Crédits</span>
+      <Breadcrumbs items={[{ name: 'Accueil', href: L('/') }, { name: "Crédits photos", href: L("/credits-photos/") }]} />
+      <span class="eyebrow">Légal</span>
       <h1>Crédits photos</h1>
-      <p class="lede">Les photographies de lieux de ce site proviennent de Wikimedia Commons sous licences Creative Commons. Attribution complète ci-dessous, avec nos remerciements aux photographes.</p>
+      <p class="lede">Les photographies du site et leurs droits.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div class="content-col">
-        <ul class="credits-list">
-          {photoCredits.map((c) => (
-            <li>
-              <strong>{clean(c.title)}</strong>
-              {c.artist && <>, par {c.artist}</>}
-              {' · '}
-              {c.licenseurl ? <a href={c.licenseurl} rel="nofollow">{c.license}</a> : c.license}
-              {' · '}
-              <a href={c.descurl} rel="nofollow">via Wikimedia Commons</a>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <article class="prose">
+<p>
+  Les photographies présentes sur AirportRAK appartiennent à l'éditeur du site ou sont utilisées avec
+  l'autorisation de leurs auteurs. Toute reproduction sans accord préalable est interdite.
+</p>
+<p>
+  Si vous pensez qu'une image est utilisée sans autorisation, ou si vous souhaitez en proposer une, écrivez-nous
+  via la page <a href={L('/contact/')}>contact</a> : nous la retirerons ou nous vous créditerons rapidement.
+</p>
+      </article>
     </div>
   </section>
 </BaseLayout>
-
-<style>
-  .credits-list { list-style: none; padding: 0; }
-  .credits-list li { padding: 0.85rem 0; border-bottom: 1px solid var(--line); font-size: 0.95rem; color: var(--ink-2); }
-  .credits-list li:last-child { border-bottom: none; }
-</style>

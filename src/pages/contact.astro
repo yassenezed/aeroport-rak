@@ -2,65 +2,63 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
 import { getLocalizedPath } from '../i18n';
+import { site } from '../data/site';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 ---
-<BaseLayout keywords="Contact Agadir, que faire à Agadir, attractions Agadir" 
-  lang={lang}
-  title="Guide Contact Agadir 2026 | Astuces & Incontournables"
-  description="Planifiez votre visite à Contact à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+<BaseLayout
+  title={"Contact | AirportRAK"}
+  description={"Écrire à AirportRAK : question, correction, suggestion ou partenariat. Et ce que nous ne pouvons pas faire : vols, bagages, réservations de transferts."}
 >
   <section class="hero">
     <div class="container hero-inner">
-      <Breadcrumbs items={[{ name: 'Accueil', href: L('/') }, { name: 'Contact', href: L('/contact/') }]} />
+      <Breadcrumbs items={[{ name: 'Accueil', href: L('/') }, { name: "Contact", href: L("/contact/") }]} />
       <span class="eyebrow">Nous écrire</span>
       <h1>Nous contacter</h1>
-      <p class="lede">Une question sur l’arrivée ou les déplacements à Agadir, un prix qui a bougé, une correction ? Nous lisons tout. Voici comment nous joindre, et ce que nous pouvons réellement faire.</p>
+      <p class="lede">Une question sur l'arrivée à Marrakech, un prix qui a bougé, une correction ? Nous lisons tout. Voici comment nous joindre, et ce que nous pouvons réellement faire.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
       <article class="prose">
-        <p>
-          Le meilleur moyen de nous joindre est l’e-mail :
-          <a href="mailto:hello@airportaga.com">hello@airportaga.com</a>. Nous sommes une petite équipe
-          indépendante, alors laissez-nous un peu de temps pour répondre, mais nous lisons chaque message.
-        </p>
+<p>
+  Le meilleur moyen de nous joindre est l'e-mail :
+  <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>. Laissez-nous un peu de temps pour
+  répondre, mais nous lisons chaque message.
+</p>
 
-        <h2>Ce que nous pouvons faire</h2>
-        <ul>
-          <li>Répondre aux questions sur l’arrivée et les déplacements à Agadir, transferts, taxis, location, les routes sur la côte.</li>
-          <li>Prendre en compte vos corrections : un prix qui a changé, un détail qui a évolué, un lien cassé. Cela aide vraiment, et nous mettons le guide à jour.</li>
-          <li>Recueillir vos retours sur le site, ou un sujet sur l’AGA et la côte du Souss que vous aimeriez voir traité.</li>
-          <li>Traiter les demandes de partenariat et de presse.</li>
-        </ul>
+<h2>Ce que nous pouvons faire</h2>
+<ul>
+  <li>Répondre aux questions sur l'arrivée et les déplacements à Marrakech : transferts, taxis, bus 19, location, riads.</li>
+  <li>Prendre en compte vos corrections : un tarif qui a changé, un horaire dépassé, un lien cassé. Cela nous aide vraiment, et nous mettons le site à jour.</li>
+  <li>Recueillir vos retours, ou un sujet sur Marrakech et l'Atlas que vous aimeriez voir traité.</li>
+  <li>Traiter les demandes de partenariat et de presse.</li>
+</ul>
 
-        <h2>Ce que nous ne pouvons pas faire</h2>
-        <p>
-          Un point important à clarifier : <strong>nous ne sommes ni l’aéroport Agadir Al Massira, ni une
-          compagnie aérienne, ni une société de taxis ou de transferts.</strong> AirportAGA est un guide
-          indépendant. Cela signifie que nous ne pouvons pas :
-        </p>
-        <ul>
-          <li>Enregistrer, modifier ou rembourser un vol, ni répondre sur votre réservation précise, contactez votre compagnie.</li>
-          <li>Retrouver des bagages perdus, gérer l’exploitation de l’aéroport, ni traiter la sûreté et l’immigration, contactez l’aéroport ou votre compagnie.</li>
-          <li>Gérer ou modifier une réservation de transfert, de location ou d’hôtel faite auprès d’un prestataire, contactez directement cette société, avec les coordonnées de votre confirmation.</li>
-        </ul>
-        <p>
-          Pour tout ce qui touche à une réservation effectuée, l’opérateur indiqué sur votre e-mail de
-          confirmation est le bon interlocuteur (et le plus rapide).
-        </p>
+<h2>Ce que nous ne pouvons pas faire</h2>
+<p>
+  Un point important : <strong>nous ne sommes ni l'aéroport Marrakech Ménara, ni une compagnie aérienne, ni
+  une société de taxis, de transferts ou de location.</strong> AirportRAK est un guide. Nous ne pouvons donc
+  pas :
+</p>
+<ul>
+  <li>enregistrer, modifier ou rembourser un vol : contactez votre compagnie ;</li>
+  <li>retrouver des bagages perdus ou traiter la sûreté et l'immigration : contactez l'aéroport ou votre compagnie ;</li>
+  <li>gérer une réservation de transfert, de location ou d'hôtel faite auprès d'un prestataire : contactez directement cette société, avec les coordonnées de votre confirmation.</li>
+</ul>
+<p>
+  Pour toute réservation effectuée, l'opérateur indiqué dans votre e-mail de confirmation est le bon
+  interlocuteur, et le plus rapide. Pour un vol retardé ou annulé, voyez
+  <a href={L('/indemnisation-vol/')}>vos droits</a>.
+</p>
 
-        <h2>Un mot sur les prix</h2>
-        <p>
-          Les chiffres du site sont documentés et datés, mais les tarifs varient avec le carburant, la
-          saison et la demande, confirmez toujours le prix en direct auprès de l’opérateur avant de
-          réserver. Plus de détails sur notre fonctionnement dans la
-          <a href={L('/affiliate-disclosure/')}>divulgation d’affiliation</a> et la page
-          <a href={L('/about/')}>à propos</a>.
-        </p>
+<h2>Un mot sur les prix</h2>
+<p>
+  Les chiffres du site sont datés, mais les tarifs varient avec le carburant, la saison et la demande :
+  confirmez toujours le prix auprès de l'opérateur avant de réserver. Plus de détails sur notre
+  fonctionnement dans <a href={L('/a-propos/')}>à propos</a>.
+</p>
       </article>
     </div>
   </section>

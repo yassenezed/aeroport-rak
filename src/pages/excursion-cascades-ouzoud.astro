@@ -1,137 +1,111 @@
 ---
-import HotelLayout from '../layouts/HotelLayout.astro';
-import AffiliateLink from '../components/affiliate/AffiliateLink.astro';
+import GuideLayout from '../layouts/GuideLayout.astro';
 import { getLocalizedPath } from '../i18n';
 import { photos } from '../data/images';
+import { PRICES_CHECKED } from '../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: 'Où dormir', href: L('/where-to-stay-agadir/') },
-  { name: 'Surf camps de Taghazout', href: L('/taghazout-surf-camps/') },
+  { name: "Excursions", href: L("/que-faire-marrakech/") },
+  { name: "Cascades d'Ouzoud", href: L("/excursion-cascades-ouzoud/") },
 ];
-const facts = [
-  { label: 'Semaine en camp', value: '250 €', sub: 'dès' },
-  { label: 'Aéroport → Taghazout', value: '48 km' },
-  { label: 'Temps de trajet', value: '50–65', sub: 'min' },
-  { label: 'Pension + repas', value: 'La plupart', sub: 'des camps' },
+
+const toc = [
+  { label: "Ce qu'est Ouzoud", id: "cascades" },
+  { label: "Le trajet", id: "trajet" },
+  { label: "Sur place", id: "sur-place" },
+  { label: "Les singes", id: "singes" },
+  { label: "Quand y aller", id: "quand" },
+  { label: "Journée ou nuit sur place", id: "nuit" },
 ];
+
 const faqs = [
-  { q: "Que comprend un surf camp à Taghazout ?", a: "Une semaine type regroupe le lit (dortoir ou chambre privée), quelques repas, en général le petit-déjeuner et quelques dîners, et le volet surf : prêt de planche et combinaison, sessions guidées ou cours quotidiens par niveau, et le transport vers le spot adapté à la marée. Le yoga, la prise en charge à l'aéroport et un dîner de bienvenue sont des options fréquentes. Le contenu exact varie beaucoup : lisez le forfait ligne par ligne avant de réserver." },
-  { q: "Combien coûte un surf camp à Taghazout ?", a: "Environ 250 à 450 € la semaine avec le lit, la planche et quelques repas, tarifs vérifiés en juin 2026, dortoirs et semaines d'intersaison en bas de fourchette, chambres privées et semaines de pointe plus haut. Les formules débutant avec cours quotidiens coûtent plus qu'un « surf and stay » où vous n'avez qu'un lit et la location de matériel. Les vols et la plupart des déjeuners sont en général en supplément." },
-  { q: "Faut-il réserver un surf camp ou un appartement en gestion libre ?", a: "Un camp si vous voulez le côté social, le coaching quotidien et zéro organisation, planche, transport vers les spots et une bande déjà formée, tout est réglé. Un appartement si vous surfez en autonomie, voulez cuisiner, ou voyagez en couple ou en groupe et préférez votre propre espace en réservant les cours à la carte. Taghazout et Tamraght ont les deux en abondance." },
-  { q: "Les surf camps de Taghazout conviennent-ils aux débutants ?", a: "Oui, c'est l'une des meilleures zones débutant du Maroc. La côte compte des beach breaks doux comme Crocodile et Panoramas près de Tamraght pour apprendre, à côté des points célèbres (Anchor Point, Killer) pour quand vous progressez. La plupart des camps répartissent les élèves par niveau et donnent les cours sur les vagues tranquilles, donc les débutants ne sont pas lâchés sur les reefs musclés." },
+  { q: "À quelle distance sont les cascades d'Ouzoud de Marrakech ?", a: "Environ 150 kilomètres, soit deux heures trente à trois heures de route selon le trafic et l'état de la chaussée. C'est nettement plus loin que l'Ourika : prévoyez une journée longue, de 8 h à 19 h, ou une nuit sur place." },
+  { q: "Quelle est la hauteur des cascades d'Ouzoud ?", a: "Environ 110 mètres, ce qui les place parmi les plus hautes d'Afrique du Nord. Elles s'écoulent en plusieurs paliers dans un canyon aux parois ocre, au milieu d'oliviers et de moulins à eau." },
+  { q: "Quelle est la meilleure saison pour Ouzoud ?", a: "Le printemps, de mars à mai, quand le débit est le plus fort et la végétation verte. Le reste de l'année, les chutes demeurent belles ; en été, on peut se baigner dans les vasques en contrebas, et l'hiver est frais et calme." },
+  { q: "Peut-on nourrir les singes d'Ouzoud ?", a: "Mieux vaut s'abstenir. Les macaques de Barbarie, qui vivent librement autour des chutes, sont habitués aux visiteurs, mais leur comportement peut devenir insistant. Ne montrez pas de nourriture, ne sortez pas votre téléphone à portée de main, et ne les touchez pas." },
+  { q: "Y a-t-il des bus directs pour Ouzoud ?", a: "Des lignes desservent la région d'Azilal depuis Marrakech, mais rejoindre Ouzoud sans voiture est lent et peu pratique. Les visiteurs choisissent en général une excursion organisée, un chauffeur privé ou une voiture de location." },
+  { q: "Faut-il dormir à Ouzoud ?", a: "C'est fortement conseillé si vous n'avez qu'une journée : les six heures de route aller-retour laissent peu de temps sur place. Plusieurs hébergements se trouvent près des chutes, avec des dîners sur les terrasses et un calme qui contraste avec la journée." },
 ];
 ---
-<HotelLayout
-  lang={lang}
-  title="Surf camps de Taghazout : ce qui est inclus et comment réserver (2026) | AirportAGA"
-  description="Un guide direct des surf camps de Taghazout, ce qu'une semaine en camp inclut vraiment, camp vs appartement en gestion libre, vrais prix 2026, et la question adresse-et-transfert qui piège les nouveaux venus depuis l'aéroport d'Agadir."
-  eyebrow="Où dormir · Côte de surf"
-  h1="Les surf camps de Taghazout"
-  lede="Taghazout est la capitale marocaine du surf camp, un village détendu égrené le long des point breaks, à 45–60 minutes de l'aéroport d'Agadir en remontant la côte. Voici ce qu'une semaine en camp inclut vraiment, quand un appartement vaut mieux qu'un camp, et comment rejoindre un logement qui n'a souvent pas d'adresse."
+<GuideLayout
+  keywords="cascades Ouzoud, Ouzoud Marrakech excursion, singes Ouzoud, Azilal"
+  title={"Cascades d'Ouzoud depuis Marrakech : guide 2026"}
+  description={"Cascades d'Ouzoud depuis Marrakech : 110 m de chute, 2 h 30 de route, saison de l'eau, macaques, balade en barque et nuit sur place."}
+  eyebrow={"Excursions · Cascades d'Ouzoud"}
+  h1={"Cascades d'Ouzoud depuis Marrakech"}
+  lede={"Cent dix mètres de chute, des macaques, des champs d'oliviers et une bonne quinzaine de kilomètres de pistes au bout de la route. Ouzoud est loin, mais c'est l'une des plus belles excursions du pays."}
   breadcrumbs={breadcrumbs}
-  facts={facts}
-  priceFrom={250}
-  heroImage={photos['taghazout']}
-  heroCtaLabel="Trouver un séjour surf à Taghazout"
+  heroImage={photos["ouzoud-falls"]}
+  toc={toc}
   faqs={faqs}
-  cta={{ heading: 'Trouvez votre séjour surf à Taghazout', text: 'Comparez surf camps, maisons d\'hôtes et appartements à Taghazout et Tamraght, annulation gratuite sur la plupart des réservations.', provider: 'booking', label: 'Chercher un séjour à Taghazout' }}
+  updated={PRICES_CHECKED}
+  cta={{ heading: "Un chauffeur pour la journée", text: "Une voiture privée évite les horaires de groupe et permet de rester plus longtemps sur place : le trajet est long, autant le faire à votre rythme.", provider: "transfer", label: "Voir les prix des transferts" }}
 >
-  <p>
-    Si vous avez atterri à Agadir pour les vagues, c'est en réalité à Taghazout que vous allez, un
-    petit village de surf sur la côte dont toute l'économie tourne autour des point breaks qui se
-    déroulent en face. La plupart des gens logent en surf camp : lit, planche et sessions quotidiennes
-    dans un seul forfait. Mais « surf camp » recouvre tout, de l'auberge sociale avec cours à
-    l'appartement en gestion libre réservé à part, et l'écart compte. Voici comment ça marche, ce que ça
-    coûte, et le détail du transfert qui piège les nouveaux venus.
-  </p>
+<h2 id="cascades">Ce qu'est Ouzoud</h2>
+<p>
+  Dans l'Atlas, près du village de Tanaghmeilt, la rivière El Abid se jette d'une falaise de
+  110 mètres en plusieurs cascades, dans un canyon d'un rouge profond. L'ensemble est entouré d'oliviers,
+  de moulins à eau traditionnels et de sentiers qui descendent jusqu'aux vasques. C'est un site naturel
+  spectaculaire, très fréquenté le week-end et les jours fériés, mais qui garde sa force.
+</p>
 
-  <h2 id="what-included">Ce qu'inclut un surf camp</h2>
+<h2 id="trajet">Le trajet</h2>
+<p>
+  Comptez 150 kilomètres et deux heures trente à trois heures de route depuis Marrakech, par les nationales
+  en direction d'Azilal. La chaussée est correcte, avec des portions de montagne et
+  des villages qui font chuter la vitesse. Une citadine convient. Pour l'organisation, voyez
+  <a href={L('/location-voiture-aeroport-marrakech/')}>la location</a> et
+  <a href={L('/conduire-au-maroc/')}>conduire au Maroc</a>.
+</p>
+<div class="callout">
+  <span class="callout-label">Une excursion longue</span>
   <p>
-    Une semaine de camp classique regroupe le lit et le surf en un seul prix. Le forfait type ressemble
-    à ça :
+    Six heures de route pour trois ou quatre heures sur place : c'est faisable, mais dense. Partir à
+    7 h 30 et rentrer vers 19 h est un maximum raisonnable. Beaucoup préfèrent dormir sur place et
+    profiter des chutes au petit matin, avant l'arrivée des groupes.
   </p>
-  <ul>
-    <li><strong>L'hébergement</strong>, un lit en dortoir ou une chambre privée, souvent dans un camp à l'esprit maison d'hôtes avec terrasse partagée.</li>
-    <li><strong>Quelques repas</strong>, en général le petit-déjeuner et quelques dîners de groupe ; les déjeuners à la plage sont souvent à votre charge.</li>
-    <li><strong>Le volet surf</strong>, prêt de planche et combinaison, sessions guidées ou cours quotidiens par niveau, et le transport vers le spot adapté à la marée et à la houle du jour.</li>
-    <li><strong>Les extras fréquents</strong>, yoga, dîner de bienvenue, photos de votre session, et prise en charge à l'aéroport (à prendre si on vous la propose).</li>
-  </ul>
-  <p>
-    Le contenu réel varie beaucoup d'un camp à l'autre, alors lisez le forfait ligne par ligne, un tarif
-    « surf and stay » bon marché peut n'être qu'un lit et la location de matériel, les cours facturés en
-    plus.
-  </p>
+</div>
 
-  <h2 id="board-vs-apartment">Camp vs appartement en gestion libre</h2>
-  <p>
-    Le grand choix, c'est de vouloir tout organisé ou son propre espace. Un camp vous donne le côté
-    social, le coaching quotidien, le transport vers les spots et une bande déjà formée, idéal si vous
-    êtes seul, débutant, ou voulez juste arriver et surfer. Un appartement en gestion libre à Taghazout
-    ou Tamraght convient aux surfeurs autonomes, aux couples et aux groupes qui préfèrent cuisiner,
-    garder leurs propres horaires et réserver les cours à la carte. Les deux se trouvent facilement le
-    long de cette portion de côte.
-  </p>
-  <div class="grid grid-2" style="margin-top:1.5rem">
-    <div class="card">
-      <h3>Surf camp</h3>
-      <p class="small text-muted">Social, coaché, zéro organisation.</p>
-      <p>Lit, planche, transport vers les spots et sessions quotidiennes en un seul forfait, avec une bande intégrée. Parfait pour les voyageurs solo, les débutants et tous ceux qui veulent que tout soit réglé. Dès 250 € environ la semaine.</p>
-      <AffiliateLink provider="booking" sub="taghazout-surf-camps-camp" class="btn btn-primary btn-block">Comparer les séjours surf</AffiliateLink>
-    </div>
-    <div class="card">
-      <h3>Appartement en gestion libre</h3>
-      <p class="small text-muted">Autonome, vos propres horaires.</p>
-      <p>Votre propre logement à Taghazout ou Tamraght, on cuisine soi-même, on réserve les cours à part. Parfait pour les surfeurs confirmés, les couples et les groupes qui veulent de l'espace. À associer à des cours réservés le jour même.</p>
-      <AffiliateLink provider="booking" sub="taghazout-surf-camps-apartment" class="btn btn-primary btn-block">Trouver des appartements</AffiliateLink>
-    </div>
-  </div>
+<h2 id="sur-place">Sur place</h2>
+<ul>
+  <li><strong>Le sentier du haut :</strong> par la rive, avec des points de vue sur la chute et des restaurants aux terrasses. Facile.</li>
+  <li><strong>La descente :</strong> vingt à trente minutes de marche sur un chemin de pierre, avec des marches irrégulières. Chaussures fermées obligatoires.</li>
+  <li><strong>La balade en barque :</strong> de petites embarcations approchent le pied de la chute pour quelques dizaines de dirhams. Bruyant, humide, très photographié.</li>
+  <li><strong>Les vasques :</strong> en été, on peut se baigner dans l'eau en contrebas, à distance des chutes.</li>
+  <li><strong>Les restaurants :</strong> en surplomb ou au bord de l'eau ; convenez du prix avant de commander.</li>
+</ul>
 
-  <h2 id="lessons">Réserver les cours à part</h2>
-  <p>
-    Si vous prenez un appartement plutôt qu'un camp complet, vous pouvez quand même avoir du coaching en
-    réservant cours de surf et sessions guidées comme des activités, pratique quand un seul du couple
-    surfe, ou pour une simple journée d'initiation. Des plateformes comme
-    <AffiliateLink provider="getyourguide" sub="taghazout-surf-camps-lessons" class="text-link">GetYourGuide proposent des cours de surf et des journées surf en groupe à Taghazout</AffiliateLink>
-    que vous bloquez avant de partir, ce qui vaut mieux que de chercher sur la plage en plein décalage
-    horaire le premier jour.
-  </p>
+<h2 id="singes">Les singes</h2>
+<p>
+  Les macaques de Barbarie vivent librement autour du site et font partie de l'attraction. Ils sont
+  habitués aux visiteurs et peuvent devenir insistants. Quelques règles : ne les nourrissez pas, ne
+  leur montrez pas de nourriture, gardez téléphone et lunettes à l'abri, et ne les touchez pas — comme
+  tout animal sauvage, ils peuvent mordre ou griffer, et le risque de rage impose de consulter en cas de
+  blessure.
+</p>
 
-  <h2 id="address">Le problème de l'adresse et du transfert</h2>
-  <p>
-    C'est le détail qui piège les nouveaux venus. Les camps et appartements de Taghazout et Tamraght
-    n'ont presque jamais de vrai numéro de rue, juste un nom, un point de repère et un point de
-    localisation. Un grand taxi pris à la station de l'aéroport peut hausser les épaules devant une
-    adresse non signalée, tourner dans le village, puis renoncer ou facturer un supplément. Les
-    solutions : prenez la prise en charge à l'aéroport du camp s'il en propose une, ou réservez un
-    transfert privé où vous transmettez le point WhatsApp au moment du paiement. Enregistrez ce point
-    hors ligne avant de partir. Notre route <a href={L('/agadir-airport-to-taghazout/')}>aéroport vers
-    Taghazout</a> détaille les prix, le temps de trajet et la circulation de la route côtière ; si vous
-    êtes un peu plus près, voyez <a href={L('/agadir-airport-to-tamraght-aourir/')}>l'aéroport vers
-    Tamraght et Aourir</a>.
-  </p>
+<h2 id="quand">Quand y aller</h2>
+<div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Saison</th><th>Débit</th><th>Ambiance</th></tr></thead>
+    <tbody>
+      <tr class="row-highlight"><td><strong>Mars – mai</strong></td><td>Fort</td><td>Vert, spectaculaire, températures douces</td></tr>
+      <tr><td><strong>Juin – septembre</strong></td><td>Moyen</td><td>Chaud, baignade possible, foule le week-end</td></tr>
+      <tr><td><strong>Octobre – novembre</strong></td><td>Moyen</td><td>Calme, lumière dorée</td></tr>
+      <tr><td><strong>Décembre – février</strong></td><td>Variable</td><td>Frais, peu de monde, sentiers humides</td></tr>
+    </tbody>
+  </table>
+</div>
 
-  <div class="callout">
-    <span class="callout-label">Conseil local</span>
-    Taghazout fonctionne au liquide, les petits-déjeuners du camp, la boulangerie, l'homme qui surveille
-    la voiture. Retirez des dirhams à un distributeur de l'aéroport avant de monter sur la côte, et
-    prenez une SIM ou eSIM pour pouvoir envoyer à votre chauffeur le point du logement et consulter le
-    bulletin surf avant même d'avoir quitté les arrivées.
-  </div>
-
-  <div class="disclosure-inline">
-    Certains liens ici sont des liens d'affiliation : si vous réservez un séjour, un transfert ou un
-    cours via ces liens, nous pouvons percevoir une petite commission, sans surcoût pour vous. Cela ne
-    change ni les prix affichés ni nos recommandations.
-    <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
-  </div>
-
-  <p>
-    Envie des vagues elles-mêmes ? Lisez notre <a href={L('/surfing-taghazout-guide/')}>guide du surf à
-    Taghazout</a> pour les spots par niveau et par saison. Vous organisez le trajet ? Commencez par la
-    route <a href={L('/agadir-airport-to-taghazout/')}>aéroport vers Taghazout</a>.
-  </p>
-</HotelLayout>
+<h2 id="nuit">Journée ou nuit sur place</h2>
+<p>
+  Une journée depuis Marrakech se fait, mais la nuit sur place change l'expérience : les hébergements
+  proches des chutes proposent des dîners en terrasse, un calme complet et un accès aux sentiers avant
+  les groupes. Notre page <a href={L('/que-faire-marrakech/')}>que faire à Marrakech</a> compare avec les
+  autres excursions, et <a href={L('/excursion-vallee-ourika/')}>l'Ourika</a> est l'alternative plus
+  proche si vous n'avez qu'une demi-journée.
+</p>
+</GuideLayout>

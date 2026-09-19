@@ -1,77 +1,141 @@
 ---
-import { Image } from 'astro:assets';
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
-import FaqSection from '../components/ui/FaqSection.astro';
+import GuideLayout from '../layouts/GuideLayout.astro';
 import { getLocalizedPath } from '../i18n';
 import { photos } from '../data/images';
+import { PRICES_CHECKED } from '../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
-const title = "Guide Indemnisation Vol Agadir 2026 | Astuces & Incontournables";
-const description = "Planifiez votre visite à Indemnisation Vol à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!";
+const breadcrumbs = [
+  { name: 'Accueil', href: L('/') },
+  { name: "Vol retardé ou annulé", href: L("/indemnisation-vol/") },
+];
+
+const toc = [
+  { label: "Quand la réglementation s'applique", id: "champ" },
+  { label: "Les montants", id: "montants" },
+  { label: "Les cas ouvrant droit", id: "cas" },
+  { label: "Ce qui exclut l'indemnisation", id: "exclusions" },
+  { label: "Vos droits immédiats", id: "assistance" },
+  { label: "La marche à suivre", id: "demarche" },
+];
 
 const faqs = [
-  { q: 'Combien puis-je toucher pour un vol retardé à Agadir ?', a: 'Selon le règlement européen EU261, les vols entre l\'Europe et le Maroc retardés de plus de 3 heures peuvent vous donner droit à une indemnisation allant de 400€ à 600€, selon la distance.' },
-  { q: 'Puis-je être indemnisé si mon vol a été annulé à cause de la météo ?', a: 'Non, les conditions météorologiques extrêmes sont considérées comme des "circonstances extraordinaires". Les compagnies ne sont pas tenues de vous indemniser, mais doivent vous proposer un remboursement ou un vol alternatif.' },
-  { q: 'Jusqu\'à quand puis-je réclamer mon indemnisation ?', a: 'Généralement, vous pouvez réclamer pour des vols retardés ou annulés au cours des 3 dernières années (jusqu\'à 5 ans en France).' }
+  { q: "Ai-je droit à une indemnisation si mon vol Marrakech - Paris est en retard ?", a: "Cela dépend de la compagnie. Le règlement européen 261/2004 s'applique aux vols au départ d'un aéroport de l'Union européenne, quelle que soit la compagnie, et aux vols vers l'Union européenne opérés par une compagnie européenne. Un vol Marrakech - Paris opéré par une compagnie européenne — Air France, Ryanair, easyJet, Transavia — est couvert ; par Royal Air Maroc, il ne l'est pas." },
+  { q: "À partir de quel retard puis-je être indemnisé ?", a: "À partir de trois heures de retard à l'arrivée à destination finale, sauf circonstances extraordinaires. Ce n'est pas le retard au décollage qui compte, mais l'heure d'arrivée effective." },
+  { q: "Combien puis-je obtenir ?", a: "250 € jusqu'à 1 500 km, 400 € entre 1 500 et 3 500 km, 600 € au-delà. Un vol Paris - Marrakech (environ 2 000 km) se situe dans la tranche des 400 €. Le montant est fixe par passager et ne dépend pas du prix du billet." },
+  { q: "La météo ou une grève exclut-elle l'indemnisation ?", a: "Les circonstances extraordinaires — conditions météorologiques incompatibles avec le vol, grève du contrôle aérien, risque de sécurité — exonèrent la compagnie du paiement de l'indemnité. Une panne technique ou une grève interne à la compagnie n'en font en général pas partie. En cas de doute, faites examiner votre dossier." },
+  { q: "Puis-je réclamer moi-même ou passer par une société ?", a: "Vous pouvez adresser directement une réclamation écrite à la compagnie, gratuitement. Des sociétés spécialisées proposent de gérer votre dossier contre une commission, généralement un pourcentage de l'indemnité obtenue. Le choix dépend de votre temps et de la complexité du dossier." },
+  { q: "Quel est le délai pour réclamer ?", a: "Il varie selon le pays : en France, la prescription est de cinq ans. Conservez votre carte d'embarquement, votre billet, les messages de la compagnie et une preuve de l'heure d'arrivée réelle." },
 ];
 ---
-<BaseLayout keywords="Indemnisation Vol Agadir, que faire à Agadir, attractions Agadir"  title={title} description={description} lang={lang}>
-  <section class="hero home-hero hero--photo">
-    <div class="hero-bg"><Image src={photos['agadir-bay']} alt="Indemnisation vol Aeroport Agadir Al Massira annulation" widths={[768, 1280, 1920]} sizes="100vw" loading="eager" fetchpriority="high" /></div>
-    <div class="container hero-inner">
-      <Breadcrumbs items={[{ name: 'Accueil', href: L('/') }, { name: 'Indemnisation Vol', href: L('/flight-compensation/') }]} />
-      <span class="eyebrow">Droits des Passagers</span>
-      <h1 style="color:white; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Vol Retardé à Agadir ?</h1>
-      <p class="lede" style="color:white; text-shadow: 0 1px 3px rgba(0,0,0,0.5);">Obtenez jusqu'à 600€ d'indemnisation à l'Aéroport Agadir Al Massira</p>
-    </div>
-  </section>
+<GuideLayout
+  keywords="indemnisation vol, règlement 261, vol retardé Marrakech, vol annulé, droits passagers"
+  title={"Vol retardé ou annulé : vos droits et indemnités"}
+  description={"Vol retardé, annulé ou surbooké à Marrakech : quand le règlement 261/2004 s'applique, indemnités de 250 à 600 €, exclusions et démarches."}
+  eyebrow={"Pratique · Vol retardé ou annulé"}
+  h1={"Vol retardé ou annulé : vos droits"}
+  lede={"Le règlement européen 261/2004 protège les passagers, mais pas tous les vols. Voici quand il s'applique aux vols de et vers Marrakech, ce que vous pouvez réclamer, et la marche à suivre."}
+  breadcrumbs={breadcrumbs}
+  heroImage={photos["rak-terminal"]}
+  toc={toc}
+  faqs={faqs}
+  updated={PRICES_CHECKED}
+  cta={{ heading: "Retard ou annulation : que faire ?", text: "Passez à la marche à suivre : documents à conserver et démarches.", provider: "#demarche", label: "Voir la marche à suivre" }}
+>
+<h2 id="champ">Quand la réglementation s'applique</h2>
+<p>
+  Le règlement européen (CE) n° 261/2004 fixe les droits des passagers en cas de retard important,
+  d'annulation ou de refus d'embarquement. Il s'applique dans deux situations :
+</p>
+<ul>
+  <li>un vol <strong>au départ d'un aéroport de l'Union européenne</strong>, quelle que soit la compagnie, y compris marocaine ;</li>
+  <li>un vol <strong>à destination de l'Union européenne</strong>, à condition d'être opéré par une compagnie de l'Union.</li>
+</ul>
+<div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Vol</th><th>Compagnie</th><th>Couvert ?</th></tr></thead>
+    <tbody>
+      <tr><td>Paris → Marrakech</td><td>Toute compagnie</td><td><strong>Oui</strong> (départ de l'UE)</td></tr>
+      <tr><td>Marrakech → Paris</td><td>Ryanair, easyJet, Transavia, Air France</td><td><strong>Oui</strong> (compagnie européenne)</td></tr>
+      <tr><td>Marrakech → Paris</td><td>Royal Air Maroc, Air Arabia Maroc</td><td>Non (compagnie non européenne)</td></tr>
+      <tr><td>Marrakech → Londres</td><td>Compagnie britannique</td><td>Règlement britannique équivalent (UK 261)</td></tr>
+    </tbody>
+  </table>
+</div>
+<p class="small text-muted">
+  Le règlement fait l'objet d'un projet de révision au niveau européen. Les règles décrites s'appliquent
+  tant qu'il n'est pas modifié : vérifiez l'état du droit au moment de votre réclamation.
+</p>
 
-  <section class="section">
-    <div class="container">
-      <article class="prose">
-        <h2>Connaissez vos droits à l'Aéroport Agadir Al Massira</h2>
-        <p>Un vol en retard ou annulé peut facilement gâcher le début ou la fin de vos vacances marocaines. Que vous soyez coincé à <strong>l'Aéroport Agadir Al Massira</strong> en attendant de rentrer en Europe, ou que vous soyez arrivé à Agadir avec des heures de retard, vous avez peut-être légalement droit à une indemnisation financière.</p>
-        <p>De nombreux vols vers Agadir étant opérés par des compagnies européennes (comme Ryanair, easyJet, ou Transavia), ils relèvent du strict <strong>règlement européen EU261</strong>. Cela signifie que si votre vol a plus de 3 heures de retard, ou est annulé, vous pourriez réclamer jusqu'à <strong>600€ par passager</strong>.</p>
-        
-        <div class="widget-container" style="margin: 2rem 0; text-align: center; background: #fff; padding: 1rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-          <h3 style="margin-bottom: 1rem;">Vérifiez votre éligibilité instantanément</h3>
-          <p class="small text-muted" style="margin-bottom:1rem;">Entrez les détails de votre vol ci-dessous pour voir si la compagnie vous doit de l'argent.</p>
-          <!-- French Widget -->
-                    <div class="widget-wrap">
-            <iframe
-              class="tpemd-iframe"
-              srcdoc='<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;padding:0;font-family:system-ui,sans-serif;overflow:hidden}</style></head><body><script async src="https://tpemd.com/content?trs=554574&amp;shmarker=697149&amp;lang=fr&amp;powered_by=true&amp;campaign_id=120&amp;promo_id=8679" charset="utf-8"><\/script><script>new MutationObserver(function(){document.documentElement.style.height="auto";window.parent.postMessage({tpemdHeight:document.body.scrollHeight},"*")}).observe(document.body,{childList:true,subtree:true,attributes:true})<\/script></body></html>'
-              style="width:100%;border:none;min-height:200px;overflow:hidden;"
-              loading="lazy"
-              title="Transfer booking widget"
-            ></iframe>
-          </div>
-        </div>
+<h2 id="montants">Les montants</h2>
+<div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Distance du vol</th><th>Indemnité par passager</th></tr></thead>
+    <tbody>
+      <tr><td>Jusqu'à 1 500 km</td><td class="num">250 €</td></tr>
+      <tr class="row-highlight"><td>De 1 500 à 3 500 km (dont Paris - Marrakech, ≈ 2 000 km)</td><td class="num">400 €</td></tr>
+      <tr><td>Plus de 3 500 km</td><td class="num">600 €</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>
+  Le montant est forfaitaire : il ne dépend pas du prix du billet, et il est dû par passager.
+  Vous pouvez dans certains cas obtenir une somme réduite si la compagnie vous propose un réacheminement
+  qui limite le retard.
+</p>
 
-        <h2>Quand avez-vous droit à une indemnisation ?</h2>
-        <p>Vous avez de très fortes chances d'être indemnisé si votre perturbation à <em>l'Aéroport Agadir Al Massira</em> répond à ces critères :</p>
-        <ul>
-          <li><strong>Retards :</strong> Votre vol est arrivé à sa destination finale avec plus de 3 heures de retard.</li>
-          <li><strong>Annulations :</strong> La compagnie aérienne a annulé votre vol moins de 14 jours avant le départ.</li>
-          <li><strong>Refus d'embarquement :</strong> On vous a refusé l'accès à bord en raison d'un surbooking (surréservation).</li>
-          <li><strong>Faute de la compagnie :</strong> La perturbation a été causée par la compagnie (ex: problème technique, manque d'équipage), et non par des "circonstances extraordinaires" comme le mauvais temps ou une grève des contrôleurs aériens.</li>
-        </ul>
+<h2 id="cas">Les cas ouvrant droit</h2>
+<ul>
+  <li><strong>Retard d'au moins trois heures</strong> à l'arrivée à destination finale.</li>
+  <li><strong>Annulation</strong> notifiée moins de quatorze jours avant le départ, sans réacheminement satisfaisant.</li>
+  <li><strong>Refus d'embarquement</strong> à cause d'une surréservation, lorsque vous vous êtes présenté à temps.</li>
+</ul>
 
-        <h2>Pas de victoire, pas de frais</h2>
-        <p>Réclamer une indemnisation directement auprès des compagnies aériennes peut être un processus long et frustrant, ces dernières ignorant souvent les demandes ou inventant des excuses. En utilisant le service juridique spécialisé ci-dessus, des experts se battront en votre nom. Ils fonctionnent sur la base du "no win, no fee" : vous ne payez une commission que s'ils réussissent à récupérer votre argent.</p>
+<h2 id="exclusions">Ce qui exclut l'indemnisation</h2>
+<p>
+  La compagnie n'est pas tenue de payer lorsqu'elle démontre des <strong>circonstances extraordinaires</strong>
+  qu'elle n'aurait pu éviter, même en prenant toutes les mesures raisonnables. C'est le cas notamment :
+</p>
+<ul>
+  <li>des <strong>conditions météorologiques</strong> incompatibles avec l'exploitation du vol ;</li>
+  <li>d'une <strong>grève du contrôle aérien</strong> ou de l'aéroport, extérieure à la compagnie ;</li>
+  <li>d'un <strong>risque de sécurité</strong> ou d'une décision des autorités ;</li>
+  <li>d'un événement imprévisible, non lié à l'exploitation normale.</li>
+</ul>
+<p>
+  Une panne technique ordinaire ou une grève du personnel de la compagnie ne sont en général pas
+  considérées comme extraordinaires, mais chaque dossier est apprécié individuellement.
+</p>
 
-        <p>Vous avez besoin de plus d'informations sur l'aéroport en attendant ? Consultez notre <a href={L('/agadir-airport-guide/')}>Guide complet de l'Aéroport d'Agadir</a> ou parcourez les horaires sur notre page de <a href={L('/flights-to-agadir/')}>Vols vers Agadir</a>.</p>
-      </article>
-    </div>
-  </section>
-  
-  <section class="section section-alt">
-    <div class="container container-narrow">
-      <h2 style="margin-bottom:1rem">FAQ - Indemnisation de Vol</h2>
-      <FaqSection faqs={faqs} />
-    </div>
-  </section>
-</BaseLayout>
+<h2 id="assistance">Vos droits immédiats</h2>
+<p>
+  Indépendamment de l'indemnité, la compagnie doit vous prendre en charge en cas de retard ou d'annulation :
+  repas et rafraîchissements, deux appels téléphoniques ou messages, et l'hébergement avec transfert si
+  l'attente est longue. En cas d'annulation, vous pouvez choisir entre le remboursement de votre billet et
+  un réacheminement. Conservez vos justificatifs de dépenses raisonnables si la compagnie ne vous prend
+  pas en charge.
+</p>
+
+<h2 id="demarche">La marche à suivre</h2>
+<ol>
+  <li><strong>Conservez tous vos documents :</strong> billet, carte d'embarquement, échanges avec la compagnie, reçus.</li>
+  <li><strong>Notez l'heure réelle d'arrivée</strong>, avec une photo de l'affichage ou une capture d'un suivi de vol.</li>
+  <li><strong>Demandez par écrit la raison du retard</strong> ou de l'annulation à la compagnie.</li>
+  <li><strong>Adressez une réclamation</strong> en précisant le règlement 261/2004 et le montant demandé.</li>
+  <li><strong>Sans réponse sous deux mois,</strong> saisissez l'organisme national compétent ou un médiateur.</li>
+</ol>
+<div class="callout">
+  <span class="callout-label">Deux façons de procéder</span>
+  <p>
+    Vous pouvez faire la démarche vous-même, gratuitement, en adressant une réclamation écrite à la
+    compagnie. Des sociétés spécialisées peuvent aussi s'en charger contre une commission prélevée sur
+    l'indemnité, ce qui convient si vous voulez éviter la démarche ou si votre dossier est contesté.
+  </p>
+</div>
+<p>
+  Pour préparer votre départ et éviter les mauvaises surprises, voyez
+  <a href={L('/guide-aeroport-marrakech/departs/')}>départs du RAK</a> et
+  <a href={L('/vols-marrakech/')}>vols pour Marrakech</a>.
+</p>
+</GuideLayout>

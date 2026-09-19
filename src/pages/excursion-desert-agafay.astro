@@ -2,111 +2,107 @@
 import GuideLayout from '../layouts/GuideLayout.astro';
 import { getLocalizedPath } from '../i18n';
 import { photos } from '../data/images';
+import { PRICES_CHECKED } from '../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: 'Surf à Imsouane', href: L('/imsouane-surf-guide/') },
+  { name: "Excursions", href: L("/que-faire-marrakech/") },
+  { name: "Désert d'Agafay", href: L("/excursion-desert-agafay/") },
 ];
+
 const toc = [
-  { label: 'Le village', id: 'village' },
-  { label: 'La Baie', id: 'la-baie' },
-  { label: 'Cathedral Point', id: 'cathedral' },
-  { label: 'Pour quel niveau', id: 'niveau' },
-  { label: 'Quand venir', id: 'quand' },
-  { label: 'Comment y aller', id: 'acces' },
+  { label: "Ce qu'est Agafay (et ce qu'il n'est pas)", id: "agafay" },
+  { label: "Trois façons d'y aller", id: "formules" },
+  { label: "Le dîner et la nuit en camp", id: "camp" },
+  { label: "Le froid", id: "froid" },
+  { label: "Quad, buggy, dromadaire", id: "activites" },
+  { label: "Budget", id: "budget" },
 ];
+
 const faqs = [
-  { q: "Pourquoi Imsouane est célèbre pour le surf ?", a: "Pour sa vague de la Baie : l'une des plus longues vagues de droite du Maroc, et d'Afrique. Elle déroule lentement et longtemps, ce qui en fait un terrain de jeu rêvé pour le longboard et pour la progression, on enchaîne des rides interminables dans une eau relativement abritée. C'est ce qui attire surfeurs et écoles du monde entier." },
-  { q: "Imsouane convient-il aux débutants ?", a: "Oui, et c'est une partie de son charme. La vague de la Baie est douce, longue et régulière, idéale pour apprendre et progresser sans la puissance des spots plus exposés. Les écoles locales proposent cours et locations. Cathedral Point, l'autre spot, est en revanche plus engagé et réservé aux surfeurs confirmés." },
-  { q: "À quelle distance d'Agadir se trouve Imsouane ?", a: "Imsouane est à environ 2 h 30 à 3 h de route au nord d'Agadir, au-delà de Taghazout, en remontant la côte vers Essaouira. Il n'y a pas de transport en commun pratique : on y va en voiture de location ou en transfert réservé. Beaucoup en font une étape de plusieurs jours plutôt qu'un aller-retour à la journée." },
-  { q: "Quelle est la meilleure saison de surf à Imsouane ?", a: "L'automne et l'hiver apportent les houles atlantiques les plus régulières et les vagues les plus consistantes, comme sur toute la côte. La Baie reste surfable une bonne partie de l'année grâce à sa configuration abritée, ce qui la rend accessible même hors des grosses houles. Prévoyez une combinaison : l'eau est fraîche toute l'année." },
+  { q: "Où se trouve le désert d'Agafay ?", a: "À environ 35 à 45 kilomètres au sud-ouest de Marrakech, soit quarante minutes à une heure de route, sur un plateau de cailloux et de collines argileuses, au pied de l'Atlas. C'est l'un des déserts les plus accessibles du Maroc depuis une grande ville." },
+  { q: "Y a-t-il des dunes de sable à Agafay ?", a: "Non. C'est un désert de pierres, aux reliefs doux, pas un erg. Les grandes dunes se trouvent à Merzouga ou à Zagora, à plusieurs heures de route. Agafay convient pour un coucher de soleil, une nuit et des activités ; ceux qui veulent des dunes doivent prévoir un voyage plus long." },
+  { q: "Combien coûte un dîner dans le désert d'Agafay ?", a: "Une formule coucher de soleil avec dîner, animations et transfert se situe en général entre 500 et 900 MAD par personne. Une nuit en tente de luxe peut aller de 1 500 à plus de 5 000 MAD selon le camp. Demandez ce qui est inclus : transfert, boissons, activités." },
+  { q: "Fait-il froid la nuit à Agafay ?", a: "Oui, nettement, de novembre à mars : la nuit peut descendre autour de 5 °C, parfois moins, et même en été l'air se rafraîchit vite après le coucher du soleil. Emportez une veste chaude, quelle que soit la saison." },
+  { q: "Peut-on aller à Agafay sans voiture ?", a: "Oui : la plupart des formules incluent un transfert depuis Marrakech, et les grands taxis assurent la liaison à un prix négocié. Sur place, la dernière portion se fait sur une piste courte. Un chauffeur privé est plus simple qu'une voiture de location." },
+  { q: "Faut-il réserver à l'avance ?", a: "Oui, en particulier pour les nuits en camp, qui se remplissent tôt de février à mai et à l'automne. Pour un dîner, un jour ou deux suffisent hors haute saison." },
 ];
 ---
-<GuideLayout keywords="Surf Imsouane Agadir, que faire à Agadir, attractions Agadir" 
-  lang={lang}
-  title="Guide Surf Imsouane Agadir 2026 | Astuces & Incontournables"
-  description="Planifiez votre visite à Surf Imsouane à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
-  eyebrow="Surf · Imsouane"
-  h1="Surf à Imsouane : la Baie"
-  lede="Un village de pêcheurs au nord de la côte, et l'une des plus longues vagues de droite du Maroc. Imsouane est le rêve du longboarder et l'école idéale pour progresser. Voici ce qui rend ce spot à part."
+<GuideLayout
+  keywords="désert Agafay, Agafay Marrakech, dîner désert Marrakech, camp Agafay, quad Agafay"
+  title={"Désert d'Agafay depuis Marrakech : dîner, nuit, quad"}
+  description={"Désert d'Agafay à 40 minutes de Marrakech : coucher de soleil, dîner, nuit en camp, quad. Ce qui le distingue du Sahara, prix et froid."}
+  eyebrow={"Excursions · Désert d'Agafay"}
+  h1={"Désert d'Agafay depuis Marrakech"}
+  lede={"Un désert de cailloux et de collines douces à 40 minutes de la ville, un coucher de soleil sur l'Atlas et un ciel étoilé. Ce n'est pas le Sahara, et c'est justement son intérêt — à condition de savoir à quoi s'attendre."}
   breadcrumbs={breadcrumbs}
-  heroImage={photos['taghazout']}
+  heroImage={photos["agafay-desert"]}
   toc={toc}
   faqs={faqs}
-  updated="juin 2026"
-  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+  updated={PRICES_CHECKED}
+  cta={{ heading: "Un chauffeur aller-retour", text: "Un transfert privé jusqu'au camp évite de conduire de nuit sur la piste : c'est le plus simple pour une soirée en désert.", provider: "transfer", label: "Voir les prix des transferts" }}
 >
+<h2 id="agafay">Ce qu'est Agafay (et ce qu'il n'est pas)</h2>
+<p>
+  Agafay est un plateau semi-aride au pied du Haut Atlas : cailloux ocre, collines douces, quelques arbustes
+  et, au loin, les sommets. On l'appelle « désert » par commodité, et il en a l'aridité et la lumière.
+  Ce qu'il n'a pas, ce sont les grandes dunes de sable — pour cela, il faut partir vers Merzouga ou Zagora,
+  à plusieurs heures de route. Avec cette précision, Agafay tient ses promesses : des couleurs superbes
+  au crépuscule, un silence profond et un ciel plein d'étoiles.
+</p>
+
+<h2 id="formules">Trois façons d'y aller</h2>
+<div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Formule</th><th>Durée</th><th>Prix indicatif</th><th>Pour qui</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Coucher de soleil + dîner</strong></td><td>4 à 5 h</td><td class="num">500–900 MAD</td><td>Le plus courant, sans nuit sur place</td></tr>
+      <tr><td><strong>Journée avec activités</strong></td><td>6 à 8 h</td><td class="num">600–1 200 MAD</td><td>Quad, buggy, dromadaire, déjeuner</td></tr>
+      <tr class="row-highlight"><td><strong>Nuit en camp</strong></td><td>Nuit complète</td><td class="num">1 500–5 000+ MAD</td><td>Étoiles, calme, expérience complète</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="camp">Le dîner et la nuit en camp</h2>
+<p>
+  Le programme type : arrivée en fin d'après-midi, thé à la menthe, coucher de soleil depuis une
+  terrasse ou à dos de dromadaire, puis dîner sous tente avec musique berbère ou gnaoua. Les camps
+  vont de la simple tente commune aux suites climatisées avec piscine. Renseignez-vous sur la
+  configuration, car l'écart de prestation et de prix est considérable.
+</p>
+<div class="callout">
+  <span class="callout-label">Lire les avis récents</span>
   <p>
-    Sur la côte atlantique au nord d'Agadir, Imsouane fait figure de spot mythique chez les surfeurs.
-    Longtemps simple village de pêcheurs, il doit sa réputation à une vague hors norme : la Baie. Voici
-    pourquoi tant de surfeurs y posent leurs planches, et ce qu'il faut savoir avant de venir.
+    La qualité varie fortement d'un camp à l'autre. Regardez les avis des six derniers mois, la
+    présence d'un vrai chauffage l'hiver, la taille du groupe et la distance à la ville. Un camp sur
+    une piste isolée est plus dépaysant, mais plus long d'accès.
   </p>
+</div>
 
-  <h2 id="village">Le village</h2>
-  <p>
-    Imsouane reste un petit port de pêche au rythme lent : barques colorées, étals de poisson, quelques cafés
-    et chambres d'hôtes simples accrochés à la falaise. L'ambiance est décontractée, loin de l'effervescence
-    de certains spots, c'est précisément ce que beaucoup viennent chercher. On y reste volontiers plusieurs
-    jours, entre deux sessions, sans jamais courir.
-  </p>
+<h2 id="froid">Le froid</h2>
+<p>
+  C'est l'erreur des visiteurs : le désert refroidit vite. De novembre à mars, les nuits tombent autour de
+  5 °C ; au printemps et à l'automne, elles sont fraîches ; même en été, l'air se rafraîchit nettement
+  après le coucher du soleil. Emportez une veste chaude, un pull et des chaussures fermées, et
+  demandez à votre camp si les tentes sont chauffées.
+</p>
 
-  <h2 id="la-baie">La Baie</h2>
-  <p>
-    La star, c'est « la Baie » : l'une des plus longues vagues de droite du Maroc, et d'Afrique. Elle se
-    forme dans une anse abritée, déroule lentement et longtemps, et offre des rides d'une durée rare, de quoi
-    parcourir des dizaines de mètres sur une seule vague. C'est un paradis pour le longboard et un terrain
-    idéal pour la progression : la vague pardonne, on a le temps de manœuvrer, on enchaîne sans la violence
-    des spots exposés.
-  </p>
+<h2 id="activites">Quad, buggy, dromadaire</h2>
+<p>
+  Les pistes se prêtent aux sorties en quad ou en buggy, encadrées par un guide, et aux balades en
+  dromadaire au coucher du soleil. Détails, prix et règles de sécurité sur
+  <a href={L('/balade-chameau-quad-marrakech/')}>chameau, quad et buggy</a>. Certains camps proposent aussi
+  un vol en montgolfière à l'aube, à réserver à l'avance.
+</p>
 
-  <h2 id="cathedral">Cathedral Point</h2>
-  <p>
-    À l'opposé de la Baie, Imsouane compte un second spot, Cathedral Point, bien plus engagé : une droite
-    plus puissante et plus creuse, sur fond rocheux, réservée aux surfeurs confirmés. C'est l'envers du
-    décor tranquille de la Baie, utile à connaître pour ne pas s'y aventurer par erreur. Débutants et
-    longboarders restent sur la Baie ; les confirmés en quête de plus de puissance regardent du côté de
-    Cathedral.
-  </p>
-
-  <h2 id="niveau">Pour quel niveau</h2>
-  <p>
-    C'est l'un des rares grands spots marocains aussi accueillant pour les débutants. La Baie, douce et
-    longue, est parfaite pour apprendre et engranger des heures de glisse, avec écoles et locations sur place.
-    Les intermédiaires y peaufinent leurs trajectoires et leur longboard ; les confirmés trouvent du
-    challenge à Cathedral. Peu de spots couvrent un tel éventail au même endroit. Pour situer Imsouane dans
-    la côte, voyez notre <a href={L('/surfing-taghazout-guide/')}>guide du surf à Taghazout</a>.
-  </p>
-
-  <h2 id="quand">Quand venir</h2>
-  <p>
-    L'automne et l'hiver apportent les houles les plus régulières et les vagues les plus consistantes, comme
-    sur toute la côte atlantique. Mais grâce à sa configuration abritée, la Baie reste surfable une bonne
-    partie de l'année, même hors des grosses houles : c'est ce qui la rend si fiable pour la progression.
-    Prévoyez une combinaison en toute saison, l'Atlantique restant frais.
-  </p>
-
-  <h2 id="acces">Comment y aller</h2>
-  <p>
-    Imsouane est à environ 2 h 30 à 3 h au nord d'Agadir, au-delà de Taghazout, en remontant la côte vers
-    Essaouira. Il n'y a pas de transport en commun pratique : on y va en voiture de location ou en transfert
-    réservé, et beaucoup en font une étape de quelques jours plutôt qu'un aller-retour. Notre page
-    <a href={L('/agadir-airport-to-imsouane/')}>transfert aéroport-Imsouane</a> donne les prix et les détails
-    du trajet.
-  </p>
-
-  <div class="disclosure-inline">
-    Certains liens de cette page sont des liens d'affiliation : si vous réservez via eux, nous pouvons
-    percevoir une petite commission, sans surcoût pour vous. Cela ne change jamais les prix affichés ni nos
-    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
-  </div>
-
-  <div class="callout">
-    <span class="callout-label">Imsouane en bref</span>
-    Village de pêcheurs paisible à ~2 h 30–3 h au nord d'Agadir · la Baie : l'une des plus longues vagues de
-    droite du Maroc, idéale longboard et débutants · Cathedral Point pour les confirmés · combinaison
-    indispensable · accès en voiture ou transfert.
-  </div>
+<h2 id="budget">Budget</h2>
+<p>
+  Le poste principal est l'hébergement en camp, qui va de quelques centaines à plusieurs milliers de
+  dirhams. Un dîner avec transfert reste à un tarif raisonnable. La route se fait en voiture privée
+  (400 à 500 MAD la course) ou avec un tour organisé, comme le montre notre
+  <a href={L('/taxi-aeroport-marrakech/prix/')}>grille des prix</a>. Pour composer un séjour complet,
+  consultez <a href={L('/que-faire-marrakech/')}>que faire à Marrakech</a>.
+</p>
 </GuideLayout>

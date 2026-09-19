@@ -2,58 +2,66 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
 import { getLocalizedPath } from '../i18n';
+import { site } from '../data/site';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 ---
-<BaseLayout keywords="Divulgation Affiliation Agadir, que faire à Agadir, attractions Agadir" 
-  lang={lang}
-  title="Guide Divulgation Affiliation Agadir 2026 | Astuces & Incontournables"
-  description="Planifiez votre visite à Divulgation Affiliation à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
+<BaseLayout
+  title={"Divulgation d'affiliation | AirportRAK"}
+  description={"Comment AirportRAK est financé : commissions d'affiliation sur transferts, vols, hébergements et locations, sans surcoût pour vous. Nos règles d'indépendance."}
 >
   <section class="hero">
     <div class="container hero-inner">
-      <Breadcrumbs items={[{ name: 'Accueil', href: L('/') }, { name: "Divulgation d'affiliation", href: L('/affiliate-disclosure/') }]} />
+      <Breadcrumbs items={[{ name: 'Accueil', href: L('/') }, { name: "Divulgation d'affiliation", href: L("/divulgation-affiliation/") }]} />
       <span class="eyebrow">Transparence</span>
       <h1>Divulgation d'affiliation</h1>
-      <p class="lede">En bref : certains liens de ce site nous rapportent une commission. Cela ne vous coûte jamais plus cher et ne décide jamais de nos recommandations.</p>
+      <p class="lede">AirportRAK est gratuit et se finance par des commissions. Voici lesquelles, sur quels liens, et ce que cela change — ou ne change pas — à ce que nous écrivons.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
       <article class="prose">
-        <p>
-          AirportAGA est un guide indépendant de l'aéroport Agadir Al Massira. Nous ne sommes ni
-          l'autorité aéroportuaire, ni une compagnie aérienne, ni une société de taxis ou de location,
-          et nous ne vendons ni trajets ni chambres. Pour garder le site gratuit et financer le travail
-          de recherche, nous utilisons des <strong>liens d'affiliation</strong>.
-        </p>
-        <p>
-          Lorsque vous cliquez sur certains liens, vers des transporteurs comme Private Transfer et Welcome
-          Pickups, vers EconomyBookings pour la location, ou vers nos partenaires hôtels et vols, et que
-          vous réservez ensuite, nous pouvons percevoir une petite commission de ce partenaire. Vous
-          payez exactement le même prix qu'en passant directement par lui ; la commission provient de
-          sa marge, pas de votre poche.
-        </p>
-        <p>
-          Ces liens d'affiliation portent l'attribut <code>rel="sponsored nofollow"</code> pour les
-          moteurs de recherche et s'ouvrent dans un nouvel onglet.
-        </p>
-        <h2>Ce que cela change, et ne change pas</h2>
-        <ul>
-          <li><strong>Cela ne change pas le prix que vous payez.</strong> Jamais.</li>
-          <li><strong>Cela ne change pas nos recommandations.</strong> Nos prix, distances et conseils « quelle option choisir » reposent sur ce qui fonctionne vraiment à l'AGA, pas sur qui paie le plus. Quand un grand taxi ou une voiture de location est plus malin qu'un transfert réservé, nous le disons.</li>
-          <li><strong>Cela permet de faire vivre le site,</strong> donc de vérifier les tarifs, mettre à jour les grilles de prix et écrire des guides locaux réellement utiles plutôt que du remplissage.</li>
-        </ul>
-        <h2>Prix et exactitude</h2>
-        <p>
-          Tarifs et distances sont vérifiés et datés, mais ils varient avec le carburant, la saison et
-          la demande. Considérez chaque chiffre comme un repère bien documenté, pas un devis :
-          confirmez toujours le prix en direct auprès de l'opérateur avant de réserver ou de monter
-          dans une voiture.
-        </p>
-        <p>Une question ? <a href={L('/contact/')}>Écrivez-nous</a>, nous expliquons volontiers le fonctionnement.</p>
+<h2>En une phrase</h2>
+<p>
+  Certains liens et widgets du site sont des <strong>liens d'affiliation</strong> : si vous réservez via
+  eux, nous pouvons percevoir une commission de la part du prestataire, <strong>sans aucun surcoût pour
+  vous</strong>. Le prix que vous payez est le même que si vous réserviez directement.
+</p>
+
+<h2>Sur quoi porte l'affiliation</h2>
+<ul>
+  <li><strong>Transferts aéroport</strong> : le widget de réservation de la page <a href={L('/reserver-transfert/')}>réserver un transfert</a>.</li>
+  <li><strong>Vols et hébergements</strong> : le moteur de recherche présent sur l'accueil et les pages vols.</li>
+  <li><strong>Location de voiture</strong> : les comparateurs vers lesquels renvoient nos pages location.</li>
+  <li><strong>Autres services</strong> : eSIM, indemnisation de vol ou excursions, lorsque nous renvoyons vers un partenaire.</li>
+</ul>
+<p>
+  Ces services fonctionnent notamment via la plateforme d'affiliation Travelpayouts et ses partenaires.
+</p>
+
+<h2>Ce que cela change à notre contenu</h2>
+<p>
+  Notre indépendance éditoriale repose sur quelques règles simples :
+</p>
+<ul>
+  <li>Nous <strong>recommandons ce qui convient au voyageur</strong>, y compris quand cela ne rapporte rien : le taxi de la station, le bus 19 ou la marche.</li>
+  <li>Nous indiquons <strong>les limites</strong> de chaque option, même de celles que nous vendons.</li>
+  <li>Nous <strong>datons nos prix</strong> et nous les corrigeons quand ils changent.</li>
+  <li>Nos notes d'hébergements sont <strong>éditoriales</strong> et signalées comme telles.</li>
+</ul>
+
+<h2>Ce que nous ne faisons pas</h2>
+<p>
+  Nous ne vendons pas nous-mêmes de billets, de transferts ni de locations : ce sont des prestataires tiers
+  qui traitent votre réservation et le paiement. Pour toute question sur une réservation, adressez-vous à eux.
+</p>
+
+<h2>Une question ?</h2>
+<p>
+  Écrivez-nous via la page <a href={L('/contact/')}>contact</a>, et lisez <a href={L('/a-propos/')}>à
+  propos</a> pour comprendre comment nous travaillons.
+</p>
       </article>
     </div>
   </section>

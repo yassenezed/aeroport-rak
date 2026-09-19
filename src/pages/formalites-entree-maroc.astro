@@ -2,112 +2,114 @@
 import GuideLayout from '../layouts/GuideLayout.astro';
 import { getLocalizedPath } from '../i18n';
 import { photos } from '../data/images';
+import { PRICES_CHECKED } from '../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: 'Formalités d\'entrée au Maroc', href: L('/morocco-entry-requirements/') },
+  { name: "Formalités d'entrée", href: L("/formalites-entree-maroc/") },
 ];
+
 const toc = [
-  { label: 'Visa : qui en a besoin', id: 'visa' },
-  { label: 'Le passeport', id: 'passeport' },
-  { label: 'Billet retour et hébergement', id: 'retour' },
-  { label: 'À l\'arrivée à l\'AGA', id: 'arrivee' },
-  { label: 'L\'argent : le dirham', id: 'argent' },
-  { label: 'Vérifier les sources officielles', id: 'sources' },
+  { label: "Le passeport", id: "passeport" },
+  { label: "Le visa", id: "visa" },
+  { label: "Voyager avec des enfants", id: "mineurs" },
+  { label: "À l'arrivée : la fiche de police", id: "fiche" },
+  { label: "Douane et argent", id: "douane" },
+  { label: "Santé et objets interdits", id: "sante" },
 ];
+
 const faqs = [
-  { q: "Faut-il un visa pour aller au Maroc ?", a: "Pour la plupart des ressortissants européens et de l'UE, non : l'entrée se fait sans visa pour un séjour touristique jusqu'à 90 jours. D'autres nationalités peuvent avoir besoin d'un visa ou d'une autorisation : votre situation dépend de votre passeport, et les règles évoluent. Vérifiez toujours auprès des sources officielles avant de partir." },
-  { q: "Quelle validité de passeport pour entrer au Maroc ?", a: "Un passeport en cours de validité est exigé. Il est vivement conseillé qu'il soit valide encore au moins six mois après la date d'entrée, comme souvent sur les long-courriers : certaines compagnies l'imposent à l'embarquement. Assurez-vous aussi d'avoir une page libre pour le tampon." },
-  { q: "Doit-on présenter un billet retour à l'arrivée au Maroc ?", a: "Un billet de sortie (retour ou continuation) peut être demandé, à l'embarquement comme à l'immigration, pour prouver que vous repartez dans les délais du séjour touristique. Ce n'est pas systématique, mais voyagez avec une réservation à présenter en cas de question, ainsi que l'adresse de votre hébergement." },
-  { q: "Peut-on emporter des dirhams au Maroc ?", a: "Non : le dirham est une monnaie fermée, qu'on ne peut ni acheter ni emporter facilement avant d'arriver. Le plus simple est de retirer aux distributeurs dès l'aéroport, en préférant une vraie banque à un guichet de change isolé. Prévoyez de quoi payer la course et votre première journée en liquide." },
+  { q: "Ma carte d'identité suffit-elle pour aller au Maroc ?", a: "Non. Un ressortissant français doit présenter un passeport en cours de validité, même pour un court séjour. La carte nationale d'identité n'est pas acceptée pour entrer au Maroc." },
+  { q: "Combien de temps mon passeport doit-il rester valide ?", a: "Il doit couvrir toute la durée du séjour. Par précaution, visez au moins six mois de validité restante : plusieurs compagnies exigent ce délai à l'embarquement, et refusent les passagers dont le passeport expire plus tôt." },
+  { q: "Ai-je besoin d'un visa ?", a: "Non pour un séjour touristique de moins de 90 jours si vous êtes ressortissant de l'Union européenne, du Royaume-Uni, des États-Unis et de nombreux autres pays. Les conditions peuvent évoluer : vérifiez sur le site officiel du ministère des Affaires étrangères de votre pays avant de partir." },
+  { q: "Un mineur peut-il voyager seul ?", a: "Un mineur français voyageant sans ses parents doit présenter une autorisation de sortie du territoire complétée et signée, une copie de la pièce d'identité du parent signataire, et son propre passeport. Chaque enfant a besoin de son propre passeport, y compris les bébés." },
+  { q: "Peut-on rapporter ou emporter des dirhams ?", a: "L'importation et l'exportation de dirhams sont strictement limitées, voire interdites au-delà d'un faible montant : ne comptez pas en rapporter. Les devises étrangères en grosse quantité doivent être déclarées au-delà d'un seuil élevé. Retirez des dirhams à l'arrivée et dépensez-les avant de repartir." },
+  { q: "Que faire de mes médicaments ?", a: "Emportez-les dans leur emballage d'origine avec l'ordonnance, pour ceux qui contiennent des substances contrôlées ou en cas de traitement long. Les stupéfiants sont strictement illégaux, y compris le cannabis, et les sanctions sont réelles." },
 ];
 ---
-<GuideLayout keywords="Formalites Entree Maroc Agadir, que faire à Agadir, attractions Agadir" 
-  lang={lang}
-  title="Guide Formalites Entree Maroc Agadir 2026 | Astuces & Incontournables"
-  description="Planifiez votre visite à Formalites Entree Maroc à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
-  eyebrow="Maroc · Formalités"
-  h1="Formalités d'entrée au Maroc"
-  lede="Bonne nouvelle pour la plupart des visiteurs européens : entrer au Maroc est simple. Voici l'essentiel à vérifier avant de prendre l'avion pour Agadir, visa, passeport, billet retour et argent."
+<GuideLayout
+  keywords="formalités Maroc, passeport Maroc, visa Maroc, douane Maroc, fiche de police"
+  title={"Formalités d'entrée au Maroc : passeport et visa"}
+  description={"Entrer au Maroc depuis la France : passeport obligatoire (pas la carte d'identité), pas de visa pour 90 jours, fiche de police, mineurs et douane."}
+  eyebrow={"Pratique · Formalités"}
+  h1={"Formalités d'entrée au Maroc"}
+  lede={"Un passeport valide, et c'est presque tout : pas de visa pour un séjour touristique de moins de 90 jours. Voici le détail pour les voyageurs français, et les points qui provoquent un refus d'embarquement."}
   breadcrumbs={breadcrumbs}
-  heroImage={photos['agadir-marina']}
+  heroImage={photos["rak-arrivals"]}
   toc={toc}
   faqs={faqs}
-  updated="juin 2026"
-  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+  updated={PRICES_CHECKED}
+  cta={{ heading: "Réservez votre transfert d'arrivée", text: "Formalités réglées, il reste à rejoindre la médina : prix fixe, chauffeur qui suit votre vol.", provider: "transfer", label: "Voir les prix des transferts" }}
 >
+<h2 id="passeport">Le passeport</h2>
+<p>
+  C'est le document obligatoire, sans alternative pour un Français : le <strong>passeport en cours de
+  validité</strong>, valable pendant toute la durée du séjour. La carte nationale d'identité n'est pas
+  acceptée à la frontière marocaine, même valide.
+</p>
+<div class="callout">
+  <span class="callout-label">Le piège de la validité</span>
   <p>
-    Avant un vol pour Agadir, mieux vaut régler les formalités l'esprit tranquille. Pour la plupart des
-    voyageurs européens, elles sont légères, mais quelques points méritent une vérification, et les règles
-    peuvent évoluer, d'où l'importance de confirmer auprès des sources officielles. Voici le tour d'horizon.
+    Le règlement marocain exige que le passeport couvre le séjour, mais beaucoup de compagnies appliquent
+    une règle plus stricte : six mois de validité restante à l'entrée. Vérifiez la date d'expiration au
+    moment de réserver votre vol, pas la veille. Un renouvellement prend plusieurs semaines.
   </p>
+</div>
 
-  <h2 id="visa">Visa : qui en a besoin</h2>
-  <p>
-    La plupart des ressortissants de l'Union européenne et de nombreux pays européens entrent au Maroc
-    <strong>sans visa</strong> pour un séjour touristique pouvant aller jusqu'à 90 jours. C'est le cas le
-    plus courant pour les visiteurs d'Agadir. D'autres nationalités peuvent en revanche devoir solliciter un
-    visa ou une autorisation préalable : tout dépend de votre passeport. Si vous n'êtes pas certain de votre
-    situation, ne devinez pas, vérifiez auprès des autorités marocaines ou de votre ambassade.
-  </p>
+<h2 id="visa">Le visa</h2>
+<p>
+  Aucun visa n'est requis pour un séjour touristique de <strong>moins de 90 jours</strong> pour les
+  ressortissants de l'Union européenne, et de nombreux autres pays. Au-delà, ou pour un séjour autre que
+  touristique, une démarche spécifique est nécessaire. Ces règles peuvent évoluer : consultez, avant de
+  partir, les conseils aux voyageurs du ministère des Affaires étrangères de votre pays.
+</p>
 
-  <h2 id="passeport">Le passeport</h2>
-  <p>
-    Il faut un passeport en cours de validité. La consigne prudente, largement appliquée, est qu'il soit
-    valide encore au moins six mois après la date d'entrée : certaines compagnies aériennes la contrôlent à
-    l'embarquement, indépendamment des règles d'immigration. Vérifiez aussi qu'il reste une page libre pour
-    le tampon d'entrée. Une carte d'identité ne suffit pas pour ce voyage : c'est bien le passeport qui fait
-    foi.
-  </p>
+<h2 id="mineurs">Voyager avec des enfants</h2>
+<ul>
+  <li><strong>Chaque enfant</strong> a son propre passeport, bébé compris.</li>
+  <li><strong>Mineur voyageant sans ses parents</strong> (français) : autorisation de sortie du territoire, copie de la pièce d'identité du parent signataire, passeport.</li>
+  <li><strong>Parent seul avec enfant</strong> : gardez un justificatif de l'autorité parentale et, si possible, un courrier de l'autre parent.</li>
+</ul>
+<p>
+  Pour le voyage lui-même, voyez <a href={L('/marrakech-en-famille/')}>Marrakech en famille</a>.
+</p>
 
-  <h2 id="retour">Billet retour et hébergement</h2>
-  <p>
-    Un billet de sortie, retour ou continuation, peut être demandé, à l'embarquement comme au contrôle de
-    l'immigration, pour attester que vous quittez le pays dans les délais du séjour touristique. Ce n'est pas
-    systématique, mais gardez votre réservation accessible. Préparez aussi l'adresse de votre hébergement
-    (hôtel, riad, appartement) : c'est l'information la plus fréquemment demandée à l'arrivée.
-  </p>
+<h2 id="fiche">À l'arrivée : la fiche de police</h2>
+<p>
+  Une fiche d'entrée vous sera demandée au contrôle des passeports. Elle est souvent distribuée à bord :
+  remplissez-la pendant le vol, avec l'adresse complète de votre hébergement. Sans elle, vous devrez la
+  remplir sur place et vous replacer dans la file. Le parcours complet est décrit sur
+  <a href={L('/guide-aeroport-marrakech/arrivees/')}>arrivées au RAK</a>.
+</p>
 
-  <h2 id="arrivee">À l'arrivée à l'AGA</h2>
-  <p>
-    À Agadir Al Massira, le passage est en général rapide : terminal unique, contrôle des passeports rarement
-    embouteillé, sauf si deux charters du soir se posent ensemble. Un passeport valide suffit pour la plupart
-    des nationalités en séjour touristique, sans formulaire exotique à remplir. Pour le déroulé précis, des
-    tapis à bagages à la sortie, voyez notre page <a href={L('/agadir-airport-guide/arrivals/')}>arrivées à
-    l'aéroport d'Agadir</a>.
-  </p>
+<h2 id="douane">Douane et argent</h2>
+<div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Sujet</th><th>Ce qu'il faut savoir</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Dirhams</strong></td><td>Import et export limités, voire interdits : retirez à l'arrivée, dépensez avant le départ</td></tr>
+      <tr><td><strong>Devises</strong></td><td>Déclaration obligatoire au-delà d'un seuil élevé</td></tr>
+      <tr><td><strong>Alcool, tabac</strong></td><td>Franchises limitées pour les adultes</td></tr>
+      <tr><td><strong>Objets de valeur</strong></td><td>Ordinateur, appareil photo : effets personnels, sans formalité en général</td></tr>
+      <tr><td><strong>Drones</strong></td><td>Interdits sans autorisation, confiscation possible</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>
+  Le détail du change et des retraits est sur <a href={L('/guide-aeroport-marrakech/services/')}>services de l'aéroport</a>.
+</p>
 
-  <h2 id="argent">L'argent : le dirham</h2>
-  <p>
-    Le dirham marocain est une monnaie fermée : on ne peut ni l'acheter ni l'emporter facilement avant
-    d'arriver. La méthode la plus simple est donc de retirer aux distributeurs dès le hall d'arrivée, en
-    préférant une machine d'une vraie banque à un guichet de change isolé, dont les taux sont moins bons.
-    Prévoyez de quoi régler la course vers la ville et votre première journée, la côte, surtout, fonctionne
-    largement au liquide.
-  </p>
-
-  <h2 id="sources">Vérifier les sources officielles</h2>
-  <p>
-    Les règles d'entrée évoluent, et ce qui est vrai aujourd'hui peut changer. Considérez cette page comme un
-    point de départ, pas comme une référence administrative : avant de partir, confirmez les conditions de
-    visa, de passeport et de billet retour applicables à votre nationalité auprès des autorités consulaires
-    marocaines ou de votre ministère des Affaires étrangères. C'est l'affaire de quelques minutes, et ça
-    évite toute mauvaise surprise à l'aéroport.
-  </p>
-
-  <div class="disclosure-inline">
-    Certains liens de cette page sont des liens d'affiliation : si vous réservez via eux, nous pouvons
-    percevoir une petite commission, sans surcoût pour vous. Cela ne change jamais les prix affichés ni nos
-    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
-  </div>
-
-  <div class="callout">
-    <span class="callout-label">Avant l'embarquement</span>
-    Vérifier ses conditions de visa selon sa nationalité · passeport valide (6 mois conseillés, une page
-    libre) · réservation de retour et adresse d'hébergement sous la main · prévoir de retirer des dirhams à
-    l'arrivée. En cas de doute, confirmer auprès des sources officielles.
-  </div>
+<h2 id="sante">Santé et objets interdits</h2>
+<ul>
+  <li><strong>Vaccins :</strong> aucun n'est obligatoire pour entrer ; les vaccins de routine à jour sont recommandés.</li>
+  <li><strong>Médicaments :</strong> dans leur emballage d'origine, avec l'ordonnance.</li>
+  <li><strong>Stupéfiants :</strong> illégaux, y compris le cannabis. Les propositions de rue sont un piège.</li>
+  <li><strong>Assurance :</strong> vérifiez que votre carte bancaire ou votre contrat couvre les frais médicaux à l'étranger.</li>
+</ul>
+<p>
+  Pour la sécurité sur place, voyez <a href={L('/securite-marrakech/')}>sécurité à Marrakech</a>, et pour
+  rester connecté, <a href={L('/esim-maroc/')}>eSIM Maroc</a>.
+</p>
 </GuideLayout>

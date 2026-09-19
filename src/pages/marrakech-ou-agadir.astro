@@ -2,109 +2,116 @@
 import GuideLayout from '../layouts/GuideLayout.astro';
 import { getLocalizedPath } from '../i18n';
 import { photos } from '../data/images';
+import { PRICES_CHECKED } from '../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: 'Agadir ou Marrakech', href: L('/agadir-vs-marrakech/') },
+  { name: "Marrakech ou Agadir", href: L("/marrakech-ou-agadir/") },
 ];
+
 const toc = [
-  { label: 'En une phrase', id: 'resume' },
-  { label: 'Agadir : plage et détente', id: 'agadir' },
-  { label: 'Marrakech : médina et culture', id: 'marrakech' },
-  { label: 'Le climat', id: 'climat' },
-  { label: 'Faut-il vraiment choisir ?', id: 'les-deux' },
-  { label: 'Pour qui chaque ville', id: 'pour-qui' },
+  { label: "En un coup d'œil", id: "tableau" },
+  { label: "Le caractère de chaque ville", id: "caractere" },
+  { label: "Le climat", id: "climat" },
+  { label: "Le budget", id: "budget" },
+  { label: "Avec des enfants", id: "enfants" },
+  { label: "Faire les deux", id: "deux" },
 ];
+
 const faqs = [
-  { q: "Agadir ou Marrakech, laquelle choisir ?", a: "Pour une plage, du soleil presque toute l'année et un rythme tranquille, c'est Agadir. Pour une médina labyrinthique, l'effervescence des souks, l'architecture et une plongée culturelle, c'est Marrakech. Les deux sont très différentes : le choix dépend de ce que vous cherchez, pas de laquelle est « la meilleure »." },
-  { q: "Peut-on combiner Agadir et Marrakech sur un même séjour ?", a: "Tout à fait, et beaucoup le font. Environ 235 km séparent les deux villes, soit à peu près 3 heures par l'autoroute A7, ou 3 h 30 à 4 h en bus Supratours ou CTM. Quelques jours de plage à Agadir puis deux ou trois nuits dans la médina de Marrakech forment un itinéraire classique et équilibré." },
-  { q: "Agadir est-elle ennuyeuse comparée à Marrakech ?", a: "Agadir est plus calme et plus balnéaire : reconstruite après le séisme de 1960, elle a peu de vieux monuments. Mais entre la grande plage, le Souk El Had, la Kasbah par téléphérique et les excursions vers Paradise Valley et la côte du surf, on tient facilement une semaine. Elle vise la détente, là où Marrakech vise l'intensité." },
-  { q: "Quelle ville est la mieux pour une première fois au Maroc ?", a: "Pour un premier voyage axé culture, dépaysement et photos, Marrakech marque davantage. Pour des vacances reposantes au soleil, en famille ou en couple, Agadir est plus douce et plus simple à vivre. L'idéal, si le temps le permet, reste de goûter aux deux." },
+  { q: "Marrakech ou Agadir pour une première fois au Maroc ?", a: "Marrakech, si vous voulez découvrir le pays : médina, souks, cuisine, architecture. Agadir, si vous voulez avant tout du soleil, de la plage et de la détente dans un cadre moderne. Beaucoup de voyageurs commencent par Marrakech, plus dépaysante." },
+  { q: "Où fait-il le plus chaud en été ?", a: "À Marrakech, où les maximales dépassent régulièrement 38 °C en juillet et août. Agadir, sur l'Atlantique, reste nettement plus fraîche, autour de 27 à 30 °C, grâce à la brise océane." },
+  { q: "Quelle ville est la moins chère ?", a: "Le coût de la vie est comparable. L'écart se joue sur l'hébergement et les activités : Marrakech propose un choix immense à tous les prix, Agadir des hôtels de plage en formule tout compris. Les vols vers Marrakech sont en général plus concurrentiels et donc plus abordables." },
+  { q: "Quelle ville pour des enfants ?", a: "Agadir est plus simple : plage, bains, hôtels-clubs, rues larges. Marrakech est un voyage plus riche mais plus exigeant, avec la chaleur, la foule et la médina. Voyez notre page Marrakech en famille pour adapter le rythme." },
+  { q: "Peut-on visiter les deux en un séjour ?", a: "Oui, c'est même un excellent format : trois à quatre nuits à Marrakech puis trois à quatre à Agadir, reliées par trois heures de route. Voyez la page Marrakech - Agadir pour le trajet." },
+  { q: "Quelle destination en hiver ?", a: "Les deux sont agréables : Marrakech est plus fraîche la nuit, avec des riads non chauffés ; Agadir reste douce, avec 20 °C environ en journée, et convient mieux à la baignade et aux séjours de plage." },
 ];
 ---
-<GuideLayout keywords="Ou Marrakech Agadir, que faire à Agadir, attractions Agadir" 
-  lang={lang}
-  title="Guide Ou Marrakech Agadir 2026 | Astuces & Incontournables"
-  description="Planifiez votre visite à Ou Marrakech à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
-  eyebrow="Maroc · Comparatif"
-  h1="Agadir ou Marrakech : laquelle choisir ?"
-  lede="Deux villes, deux mondes : le soleil et le sable d'Agadir face au tourbillon de la médina de Marrakech. Voici le comparatif honnête pour trancher, ou, mieux, pour combiner les deux."
+<GuideLayout
+  keywords="Marrakech ou Agadir, comparatif Marrakech Agadir, où partir Maroc"
+  title={"Marrakech ou Agadir : quelle destination choisir ?"}
+  description={"Marrakech ou Agadir ? Médina et culture contre plage et surf : climat, budget, enfants, hiver, été. Notre comparatif et l'option des deux villes."}
+  eyebrow={"Comparatif · Marrakech ou Agadir"}
+  h1={"Marrakech ou Agadir ?"}
+  lede={"Deux villes, deux voyages : la ville impériale, ses souks et son désert, ou une station balnéaire moderne au bord de l'Atlantique. Voici comment trancher selon ce que vous cherchez, et comment faire les deux."}
   breadcrumbs={breadcrumbs}
-  heroImage={photos['marrakech']}
+  heroImage={photos["marrakech-koutoubia"]}
   toc={toc}
   faqs={faqs}
-  updated="juin 2026"
-  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+  updated={PRICES_CHECKED}
+  cta={{ heading: "Comparez les vols vers Marrakech", text: "Comparer les vols directs et choisir vos dates, avant de vous décider sur la ville.", provider: "flight", label: "Rechercher un vol" }}
 >
+<h2 id="tableau">En un coup d'œil</h2>
+<div class="table-wrap">
+  <table class="data">
+    <thead><tr><th></th><th>Marrakech</th><th>Agadir</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Le voyage</strong></td><td>Culture, médina, souks, gastronomie</td><td>Plage, soleil, détente, surf à proximité</td></tr>
+      <tr><td><strong>L'ambiance</strong></td><td>Intense, dense, sollicitante</td><td>Calme, aérée, moderne</td></tr>
+      <tr><td><strong>Été</strong></td><td>Très chaud, 38 °C et plus</td><td>Tempéré, 27–30 °C</td></tr>
+      <tr><td><strong>Hiver</strong></td><td>Doux le jour, frais la nuit</td><td>Doux, 20 °C environ</td></tr>
+      <tr><td><strong>Plage</strong></td><td>Aucune (Essaouira à 2 h 30)</td><td>Grande plage urbaine</td></tr>
+      <tr><td><strong>Hébergement type</strong></td><td>Riads, hôtels, resorts</td><td>Hôtels de plage, tout compris</td></tr>
+      <tr><td><strong>Durée idéale</strong></td><td>3 à 5 jours</td><td>4 à 7 jours</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="caractere">Le caractère de chaque ville</h2>
+<p>
+  <strong>Marrakech</strong> est une ville-spectacle. On y vient pour la médina classée à l'UNESCO, la place
+  Jemaa el-Fna, la cuisine et l'artisanat, avec l'Atlas à portée de main. C'est une destination
+  stimulante, parfois fatigante, qui se mérite : sollicitations, ruelles labyrinthiques, chaleur. Le
+  détail est dans notre <a href={L('/guide-voyage-marrakech/')}>guide de voyage</a>.
+</p>
+<p>
+  <strong>Agadir</strong> est une station balnéaire moderne, reconstruite après le séisme de 1960, avec une
+  grande plage, une promenade, des hôtels de bord de mer et un climat tempéré presque toute l'année. C'est
+  la destination du repos et du surf sur la côte voisine, moins dépaysante en ville, mais nettement plus
+  facile. Ce qu'on ne trouve pas à Agadir : une médina historique.
+</p>
+
+<h2 id="climat">Le climat</h2>
+<p>
+  C'est le critère décisif en été : Marrakech dépasse régulièrement 38 °C en juillet et août, quand
+  Agadir profite de la brise atlantique, autour de 27 à 30 °C. L'hiver, la situation s'inverse
+  partiellement : Marrakech est fraîche la nuit et ses riads sont rarement chauffés, alors qu'Agadir reste
+  douce et se prête aux baignades. Notre page
+  <a href={L('/quand-partir-marrakech/')}>quand partir à Marrakech</a> donne le détail mensuel.
+</p>
+
+<h2 id="budget">Le budget</h2>
+<p>
+  Le coût de la vie est proche. Ce qui change, c'est l'offre : Marrakech propose tout, du petit riad au
+  palace, et des activités à tous les prix ; Agadir s'organise autour d'hôtels de plage, souvent en
+  formule tout compris. Côté transport, les vols vers Marrakech sont souvent plus nombreux et
+  moins chers : voyez <a href={L('/vols-marrakech/pas-chers/')}>vols pas chers</a>.
+</p>
+
+<h2 id="enfants">Avec des enfants</h2>
+<p>
+  Agadir est nettement plus simple : plage aménagée, hôtels avec clubs enfants, rues larges. Marrakech est
+  un voyage plus riche mais plus exigeant, où le rythme doit s'adapter à la chaleur et à la foule.
+  Les familles réussissent très bien Marrakech, à condition de choisir un hôtel avec piscine et de limiter
+  les visites en pleine journée : voyez <a href={L('/marrakech-en-famille/')}>Marrakech en famille</a>.
+</p>
+
+<h2 id="deux">Faire les deux</h2>
+<div class="callout">
+  <span class="callout-label">Le format que nous recommandons</span>
   <p>
-    C'est l'éternelle question pour un séjour dans le sud du Maroc. Agadir et Marrakech sont à environ
-    235 km l'une de l'autre, mais à des années-lumière en matière d'ambiance. Plutôt que de désigner une
-    « gagnante », regardons ce que chacune offre vraiment, vous saurez vite laquelle vous ressemble.
+    Trois à quatre nuits à Marrakech, puis trois à quatre à Agadir ou à Essaouira, reliées par trois
+    heures de route. Vous voyez la ville impériale et vous terminez les vacances au bord de l'océan, avec
+    la médina derrière vous et le sable devant.
   </p>
-
-  <h2 id="resume">En une phrase</h2>
-  <p>
-    Agadir, c'est la plage, le soleil et le rythme lent ; Marrakech, c'est la médina, les souks, la culture
-    et l'intensité. Si vous hésitez encore après ces deux mots-clés, la suite détaille pourquoi.
-  </p>
-
-  <h2 id="agadir">Agadir : plage et détente</h2>
-  <p>
-    Agadir est une station balnéaire dans l'âme : un croissant de sable de six kilomètres, une longue
-    promenade, des hôtels en bord de mer et un soleil quasi permanent. La ville, reconstruite après le
-    séisme de 1960, n'a pas de vieille médina à arpenter, son charme est ailleurs, dans la baignade, le
-    surf de la côte nord, le Souk El Had, la Kasbah desservie par téléphérique et les escapades nature toutes
-    proches. C'est le choix de la détente, des vacances en famille et du soleil sans effort. Voyez
-    <a href={L('/things-to-do-agadir/')}>que faire à Agadir</a> pour le détail.
-  </p>
-
-  <h2 id="marrakech">Marrakech : médina et culture</h2>
-  <p>
-    Marrakech joue dans un autre registre : une médina classée, des souks à perte de vue, la place
-    Jemaa el-Fna le soir, des riads cachés derrière des portes anonymes, des palais et des jardins. C'est
-    intense, dense, parfois fatigant, et inoubliable. On y vient pour l'immersion, l'artisanat,
-    l'architecture et l'atmosphère, pas pour la plage. C'est la ville qui marque le plus une première
-    découverte du Maroc, à condition d'aimer le mouvement et la foule.
-  </p>
-
-  <h2 id="climat">Le climat</h2>
-  <p>
-    Agadir bénéficie d'un climat océanique très doux : autour de 20–22 °C même en plein hiver, des étés
-    tempérés par la brise atlantique, rarement étouffants. Marrakech, à l'intérieur des terres, connaît des
-    étés brûlants, bien au-delà de 40 °C en juillet-août, et des nuits d'hiver fraîches. Pour fuir le froid
-    européen au soleil sans la canicule, Agadir a une vraie longueur d'avance ; au printemps et à l'automne,
-    les deux sont agréables.
-  </p>
-
-  <h2 id="les-deux">Faut-il vraiment choisir ?</h2>
-  <p>
-    Honnêtement, non. Les deux villes se combinent très bien : quelques jours de plage à Agadir, puis deux
-    ou trois nuits dans la médina de Marrakech, c'est l'itinéraire que suivent beaucoup de voyageurs. Le
-    trajet prend environ 3 heures en voiture par l'A7, ou 3 h 30 à 4 h en bus Supratours ou CTM, il n'y a
-    pas de train. Notre page <a href={L('/agadir-to-marrakech-transport/')}>Agadir – Marrakech : comment
-    s'y rendre</a> compare toutes les options.
-  </p>
-
-  <h2 id="pour-qui">Pour qui chaque ville</h2>
-  <p>
-    Agadir convient aux familles, aux amateurs de plage et de surf, à ceux qui veulent du soleil reposant et
-    un séjour facile à vivre. Marrakech parle aux curieux de culture, aux photographes, aux amateurs de
-    souks et de riads, à ceux qui acceptent l'intensité contre le dépaysement. Et si vous avez le temps :
-    faites les deux, dans cet ordre, en gardant Marrakech pour la fin comme un bouquet final.
-  </p>
-
-  <div class="disclosure-inline">
-    Certains liens de cette page sont des liens d'affiliation : si vous réservez via eux, nous pouvons
-    percevoir une petite commission, sans surcoût pour vous. Cela ne change jamais les prix affichés ni nos
-    recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
-  </div>
-
-  <div class="callout">
-    <span class="callout-label">Le verdict express</span>
-    Soleil, plage, détente, famille → Agadir · médina, souks, culture, intensité → Marrakech · du temps
-    devant vous → les deux, à 235 km d'écart.
-  </div>
+</div>
+<p>
+  Le trajet est détaillé sur <a href={L('/marrakech-agadir-transport/')}>Marrakech - Agadir : bus, voiture et
+  transfert</a>, et l'itinéraire en voiture sur
+  <a href={L('/route-marrakech-agadir-en-voiture/')}>Marrakech → Agadir en voiture</a>. Si l'océan vous
+  tente mais que vous voulez une ville plus petite, voyez
+  <a href={L('/excursion-marrakech-essaouira/')}>Essaouira</a>.
+</p>
 </GuideLayout>
