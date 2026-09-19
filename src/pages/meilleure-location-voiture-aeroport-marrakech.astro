@@ -21,11 +21,11 @@ const facts = [
 ];
 
 const compare = [
-  { name: 'Europcar', type: 'International', deposit: 'Moyenne', fuel: 'Plein → plein', pour: 'Semaine complète, familles, monospaces', href: '/location-voiture/europcar-aeroport-marrakech/' },
-  { name: 'Hertz', type: 'International', deposit: 'Élevée', fuel: 'Plein → plein', pour: 'Longs itinéraires, voyage d\'affaires', href: '/location-voiture/hertz-aeroport-marrakech/' },
-  { name: 'Sixt', type: 'International', deposit: 'La plus élevée', fuel: 'Plein → plein', pour: 'Véhicules récents, SUV, Ouarzazate', href: '/location-voiture/sixt-aeroport-marrakech/' },
-  { name: 'Avis / Budget', type: 'International', deposit: 'Moyenne', fuel: 'À vérifier au tarif', pour: 'Alternative si les autres sont complets', href: null },
-  { name: 'Agences marocaines', type: 'Locale', deposit: 'Très variable', fuel: 'À lire de près', pour: 'Petit budget, usage urbain et court', href: null },
+  { name: 'Europcar', type: 'International', deposit: 'Moyenne', fuel: 'Plein → plein', pour: 'Semaine complète, familles, monospaces' },
+  { name: 'Hertz', type: 'International', deposit: 'Élevée', fuel: 'Plein → plein', pour: 'Longs itinéraires, voyage d\'affaires' },
+  { name: 'Sixt', type: 'International', deposit: 'La plus élevée', fuel: 'Plein → plein', pour: 'Véhicules récents, SUV, Ouarzazate' },
+  { name: 'Avis / Budget', type: 'International', deposit: 'Moyenne', fuel: 'À vérifier au tarif', pour: 'Alternative si les autres sont complets' },
+  { name: 'Agences marocaines', type: 'Locale', deposit: 'Très variable', fuel: 'À lire de près', pour: 'Petit budget, usage urbain et court' },
 ];
 
 const faqs = [
@@ -82,7 +82,7 @@ const faqs = [
   <div class="table-wrap">
     <table class="data">
       <thead>
-        <tr><th>Agence</th><th>Type</th><th>Caution</th><th>Carburant</th><th>Idéale pour</th><th>Fiche</th></tr>
+        <tr><th>Agence</th><th>Type</th><th>Caution</th><th>Carburant</th><th>Idéale pour</th></tr>
       </thead>
       <tbody>
         {compare.map((c, i) => (
@@ -92,7 +92,6 @@ const faqs = [
             <td>{c.deposit}</td>
             <td>{c.fuel}</td>
             <td>{c.pour}</td>
-            <td>{c.href ? <a href={L(c.href)}>Voir</a> : <span class="text-muted">—</span>}</td>
           </tr>
         ))}
       </tbody>

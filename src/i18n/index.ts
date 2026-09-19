@@ -36,19 +36,12 @@ const pathMappings: Record<string, PathEntry> = {
 
   // ── Comparatifs et avis ──
   '/meilleur-transfert-aeroport-marrakech/': { fr: '/meilleur-transfert-aeroport-marrakech/' },
-  '/avis-kiwitaxi-marrakech/': { fr: '/avis-kiwitaxi-marrakech/' },
-  '/avis-welcome-pickups-marrakech/': { fr: '/avis-welcome-pickups-marrakech/' },
-  '/avis-intui-travel-marrakech/': { fr: '/avis-intui-travel-marrakech/' },
-  '/kiwitaxi-vs-welcome-pickups/': { fr: '/kiwitaxi-vs-welcome-pickups/' },
 
   // ── Location de voiture ──
   '/location-voiture-aeroport-marrakech/': { fr: '/location-voiture-aeroport-marrakech/' },
   '/location-voiture-aeroport-marrakech/pas-cher/': { fr: '/location-voiture-aeroport-marrakech/pas-cher/' },
   '/location-4x4-aeroport-marrakech/': { fr: '/location-4x4-aeroport-marrakech/' },
   '/meilleure-location-voiture-aeroport-marrakech/': { fr: '/meilleure-location-voiture-aeroport-marrakech/' },
-  '/location-voiture/hertz-aeroport-marrakech/': { fr: '/location-voiture/hertz-aeroport-marrakech/' },
-  '/location-voiture/europcar-aeroport-marrakech/': { fr: '/location-voiture/europcar-aeroport-marrakech/' },
-  '/location-voiture/sixt-aeroport-marrakech/': { fr: '/location-voiture/sixt-aeroport-marrakech/' },
   '/louer-voiture-marrakech-guide/': { fr: '/louer-voiture-marrakech-guide/' },
   '/conduire-au-maroc/': { fr: '/conduire-au-maroc/' },
 

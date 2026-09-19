@@ -20,11 +20,11 @@ const facts = [
 ];
 
 const desks = [
-  { name: 'Hertz', type: 'International', href: '/location-voiture/hertz-aeroport-marrakech/' },
-  { name: 'Europcar', type: 'International', href: '/location-voiture/europcar-aeroport-marrakech/' },
-  { name: 'Sixt', type: 'International', href: '/location-voiture/sixt-aeroport-marrakech/' },
-  { name: 'Avis, Budget', type: 'International', href: null },
-  { name: 'Agences marocaines', type: 'Locales', href: null },
+  { name: 'Hertz', type: 'International' },
+  { name: 'Europcar', type: 'International' },
+  { name: 'Sixt', type: 'International' },
+  { name: 'Avis, Budget', type: 'International' },
+  { name: 'Agences marocaines', type: 'Locales' },
 ];
 
 const faqs = [
@@ -92,14 +92,13 @@ const faqs = [
   <div class="table-wrap">
     <table class="data">
       <thead>
-        <tr><th>Agence</th><th>Type</th><th>Notre fiche</th></tr>
+        <tr><th>Agence</th><th>Type</th></tr>
       </thead>
       <tbody>
         {desks.map((d) => (
           <tr>
             <td><strong>{d.name}</strong></td>
             <td>{d.type}</td>
-            <td>{d.href ? <a href={L(d.href)}>Voir la fiche</a> : <span class="text-muted">—</span>}</td>
           </tr>
         ))}
       </tbody>
