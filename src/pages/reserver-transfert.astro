@@ -1,672 +1,289 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import TransferWidget from '../components/affiliate/TransferWidget.astro';
 import Icon from '../components/ui/Icon.astro';
-import { useTranslations } from '../i18n';
+import { getLocalizedPath } from '../i18n';
+import { airport, PRICES_CHECKED } from '../data/airport';
 
-const t = useTranslations('en');
-const title = "Transfert Aéroport Agadir 2026 | Fiable & Prix Fixe";
-const description = "Pré-réservez votre transfert à l'Aéroport d'Agadir pour une arrivée sans stress. Chauffeurs professionnels et prix fixes. Réservez dès maintenant!";
+const L = (p: string) => getLocalizedPath(p);
 
-const characteristics = [
-  {
-    icon: 'check',
-    title: "Tarifs garantis", desc: "Le prix affiché est le prix que vous payez. Pas de suppléments de nuit ni de négociation à la station." },
-  {
-    icon: 'clock',
-    title: "Suivi du vol", desc: "Si votre vol est retardé, le chauffeur ajuste l'heure de prise en charge automatiquement sans frais." },
-  {
-    icon: 'map-pin',
-    title: "Service Porte-à-Porte", desc: "Faites-vous déposer exactement à votre hôtel ou riad, même si l'adresse est difficile à trouver." },
-  {
-    icon: 'shield',
-    title: "Opérateurs de confiance", desc: "Les trajets sont assurés par des prestataires locaux vérifiés avec des chauffeurs professionnels." }
+const title = "Réserver un transfert aéroport Marrakech : prix fixe et dépose à votre riad | AirportRAK";
+const description = "Réservez votre transfert depuis l'aéroport Marrakech Ménara : prix fixe par véhicule, suivi du numéro de vol, chauffeur qui attend avec votre nom et dépose à la porte la plus proche de votre riad.";
+
+const garanties = [
+  { icon: 'check', titre: 'Prix fixe par véhicule', desc: `Le montant affiché est celui que vous payez. Pas de barème de nuit, pas de discussion au rang de taxis à une heure du matin.` },
+  { icon: 'clock', titre: 'Suivi du numéro de vol', desc: "Un retard d'avion décale automatiquement la prise en charge. C'est la principale raison de réserver plutôt que d'improviser." },
+  { icon: 'map-pin', titre: 'Dépose à la bonne porte', desc: "Aucune voiture n'entre dans la médina. Indiquez le nom de votre riad et sa porte : le chauffeur s'arrête au plus près." },
+  { icon: 'shield', titre: 'Opérateurs vérifiés', desc: 'Les trajets sont assurés par des transporteurs locaux agréés, avec chauffeurs professionnels et véhicules assurés.' },
 ];
 
-const scenarios = [
-  {
-    tag: "Solo & Couples", title: "Confort Compact", desc: "Berlines standard pour 2-3 passagers avec bagages pour un trajet rapide vers la ville." },
-  {
-    tag: "Familles", title: "Espace pour respirer", desc: "Minivans offrant un espace généreux pour les poussettes et sièges auto pré-demandés." },
-  {
-    tag: "Surfeurs & Groupes", title: "Idéal pour le matériel", desc: "Grands minibus conçus pour accueillir des planches de surf et des groupes vers Taghazout." }
+const vehicules = [
+  { tag: 'Solo & couples', titre: 'Berline', desc: '1 à 3 passagers, deux valises. Le format standard vers la médina, Guéliz ou l\'Hivernage.' },
+  { tag: 'Familles', titre: 'Monospace', desc: 'Jusqu\'à 6 passagers, sièges enfants sur demande, vrai volume de coffre pour les poussettes.' },
+  { tag: 'Groupes & désert', titre: 'Minibus', desc: 'À partir de 7 passagers. À réserver tôt : c\'est la catégorie qui manque en haute saison.' },
+];
+
+const etapes = [
+  { n: 1, titre: 'Indiquez votre destination', desc: 'Le nom exact de votre riad, hôtel ou camp, avec la porte de la médina si vous en avez une.' },
+  { n: 2, titre: 'Choisissez le véhicule', desc: 'Selon le nombre de passagers et le volume de bagages, sièges enfants compris.' },
+  { n: 3, titre: 'Retrouvez votre chauffeur', desc: 'Il attend dans le hall des arrivées, après la douane, avec une pancarte à votre nom.' },
 ];
 
 const faqs = [
   {
-    q: 'Comment puis-je trouver mon chauffeur à l\'aéroport d\'Agadir ?',
-    a: 'Après avoir récupéré vos bagages et passé la douane, dirigez-vous vers le hall principal des arrivées. Votre chauffeur vous y attendra avec une pancarte à votre nom. La zone d\'arrivée à AGA est assez petite, ils sont donc faciles à repérer.'
+    q: "Comment retrouver mon chauffeur à l'aéroport de Marrakech ?",
+    a: "Il vous attend dans le hall des arrivées, après la douane, avec une pancarte portant votre nom. La zone est compacte et se balaie du regard. Les personnes qui vous abordent avant ce point ne sont pas votre chauffeur : avancez jusqu'au hall."
   },
   {
-    q: 'Que se passe-t-il si mon vol est retardé ?',
-    a: 'Lors de la réservation, vous fournissez votre numéro de vol. Le prestataire de transport suit votre vol en temps réel et ajuste automatiquement l\'heure de prise en charge, garantissant que votre chauffeur sera là à votre atterrissage sans frais d\'attente supplémentaires.'
+    q: "Que se passe-t-il si mon vol est en retard ?",
+    a: "Vous renseignez votre numéro de vol à la réservation, et l'opérateur suit l'horaire réel. La prise en charge est décalée automatiquement, sans frais d'attente. C'est le principal avantage face à un taxi pris sur place."
   },
   {
-    q: 'Des sièges enfants sont-ils disponibles ?',
-    a: 'Oui, la plupart des options de véhicules vous permettent d\'ajouter des sièges enfants ou des rehausseurs lors du processus de paiement. Assurez-vous de sélectionner la bonne taille pour votre enfant avant de finaliser la réservation.'
+    q: "Le chauffeur peut-il me déposer devant mon riad ?",
+    a: "Dans la médina, non : les derbs sont trop étroits et plusieurs accès sont fermés à la circulation. La dépose se fait à la porte la plus proche, puis 3 à 10 minutes à pied. Demandez à votre riad d'envoyer un porteur avec charrette, c'est gratuit ou coûte un pourboire de 20 à 30 MAD."
   },
   {
-    q: 'Puis-je annuler si mes plans changent ?',
-    a: 'Les conditions de réservation dépendent du véhicule et du prestataire que vous choisissez. De nombreuses options offrent une annulation gratuite jusqu\'à 24 heures avant votre prise en charge prévue. Veuillez consulter la politique d\'annulation exacte affichée dans le widget avant de payer.'
-  }
+    q: "Les sièges enfants sont-ils disponibles ?",
+    a: "Oui, à demander au moment de la réservation, siège bébé ou rehausseur selon l'âge. C'est indispensable à Marrakech : aucun taxi de l'aéroport n'en propose, ce qui rend le transfert réservé la seule option conforme avec de jeunes enfants."
+  },
+  {
+    q: "Peut-on annuler ou modifier ?",
+    a: "La plupart des tarifs autorisent l'annulation gratuite jusqu'à 24 heures avant la prise en charge, et le paiement différé. Vérifiez la politique exacte affichée dans le récapitulatif avant de valider, elle varie selon le véhicule et l'opérateur."
+  },
+  {
+    q: "Un transfert est-il plus cher qu'un taxi ?",
+    a: `En journée et à deux personnes, le taxi au tarif affiché (${airport.taxiFare.dayMad[0]}–${airport.taxiFare.dayMad[1]} MAD) reste légèrement moins cher. L'écart s'annule la nuit, quand le barème passe à ${airport.taxiFare.nightMad[0]}–${airport.taxiFare.nightMad[1]} MAD, et s'inverse à partir de quatre passagers, quand il faut deux petits taxis.`
+  },
 ];
 ---
-
-<BaseLayout keywords="Transfert aéroport Agadir, taxi aéroport Agadir, transfert privé Agadir"  title={title} description={description} lang="fr" hideStickyTransfer={true}>
-  
-  <!-- DISTINCTIVE HERO -->
-  <section class="bt-hero">
-    <img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?q=80&w=2070&auto=format&fit=crop" alt="Agadir Airport Transfer - Private vehicle" class="bt-hero-img" />
-    <div class="bt-hero-overlay"></div>
-    <div class="bt-hero-pattern"></div>
-    <div class="container bt-hero-container">
-      <div class="bt-hero-content">
-        <span class="bt-eyebrow">Agadir Al Massira (AGA)</span>
-        <h1 class="bt-title">Réservez votre trajet avant d'atterrir.</h1>
-        <p class="bt-subtitle">Évitez les files d'attente. Comparez les chauffeurs de confiance et arrivez sereinement à destination.</p>
-        
-        <div class="bt-route-indicator">
-          <div class="bt-route-point">
-            <span class="bt-route-label">Aéroport AGA</span>
-            <div class="bt-dot bt-dot-start"></div>
-          </div>
-          <div class="bt-line"></div>
-          <div class="bt-route-point">
-            <span class="bt-route-label bt-route-dest">Votre Hôtel</span>
-            <div class="bt-dot bt-dot-end"></div>
-          </div>
-        </div>
+<BaseLayout
+  title={title}
+  description={description}
+  keywords="transfert aéroport Marrakech, réserver transfert Marrakech, navette aéroport Marrakech Ménara"
+  hideStickyTransfer={true}
+>
+  <!-- Hero -->
+  <section class="bk-hero">
+    <div class="container">
+      <div class="hero-rule"><span></span><span></span><span></span></div>
+      <span class="bk-eyebrow">Marrakech Ménara · {airport.code}</span>
+      <h1>Réservez votre trajet avant d'atterrir</h1>
+      <p class="bk-lede">
+        Prix fixe par véhicule, chauffeur qui suit votre vol, dépose à la porte la plus proche de votre
+        riad. Les {airport.distanceToCityKm} kilomètres qui séparent le terminal de la médina se règlent
+        en deux minutes, maintenant.
+      </p>
+      <div class="bk-route">
+        <span class="bk-route-point">Aéroport {airport.code}</span>
+        <span class="bk-route-line"></span>
+        <span class="bk-route-point bk-route-dest">Votre riad ou hôtel</span>
       </div>
     </div>
   </section>
 
-  <section class="bt-widget-section" id="booking-widget">
+  <!-- Widget -->
+  <section class="bk-widget-section" id="reservation">
     <div class="container">
-      <div class="bt-widget-card">
-        <h2 class="bt-widget-title">Où allez-vous ?</h2>
-        <p class="bt-widget-desc">Entrez votre destination pour voir les prix fixes.</p>
-        
-        <div class="bt-widget-container">
-                    <div class="widget-wrap">
-            <iframe
-              class="tpemd-iframe"
-              srcdoc='<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;padding:0;font-family:system-ui,sans-serif;overflow:hidden}</style></head><body><script async src="https://tpemd.com/content?currency=EUR&amp;trs=554574&amp;shmarker=697149&amp;locale=fr&amp;from=Al%20Massira%20Airport%20Agadir&amp;to=Agadir&amp;country=Morocco&amp;powered_by=true&amp;transfer_options_limit=10&amp;transfer_options=MCR&amp;disable_currency_selector=true&amp;hide_form_extras=true&amp;hide_external_links=true&amp;campaign_id=1&amp;promo_id=3879" charset="utf-8"><\/script><script>new MutationObserver(function(){document.documentElement.style.height="auto";window.parent.postMessage({tpemdHeight:document.body.scrollHeight},"*")}).observe(document.body,{childList:true,subtree:true,attributes:true})<\/script></body></html>'
-              style="width:100%;border:none;min-height:200px;overflow:hidden;"
-              loading="lazy"
-              title="Transfer booking widget"
-            ></iframe>
-          </div>
-        </div>
-        
-        <p class="bt-affiliate-note">
+      <div class="bk-widget-card">
+        <h2>Où allez-vous ?</h2>
+        <p class="text-muted">Indiquez votre destination pour voir les disponibilités et les prix fixes.</p>
+        <TransferWidget title="Réservation de transfert aéroport Marrakech" />
+        <p class="bk-note">
           <Icon name="info" size={14} />
-          <span>Les réservations sont traitées en toute sécurité par KiwiTaxi. Nous pouvons percevoir une petite commission sans frais supplémentaires pour vous.</span>
+          <span>Réservations traitées par notre partenaire. Nous pouvons percevoir une commission, sans surcoût pour vous.</span>
         </p>
       </div>
-
-      <div class="bt-seo-text">
-        <p>Vous cherchez un <strong>transfert aéroport Agadir</strong> fiable ? Que vous ayez besoin d'une navette directe vers votre hôtel, d'un van spacieux pour votre matériel de surf, ou d'une alternative rapide au <a href="/fr/taxi-aeroport-agadir/">taxi aéroport Agadir</a>, la réservation anticipée de votre trajet vous garantit un prix fixe et une arrivée sans stress à Agadir Al Massira (AGA).</p>
-      </div>
+      <p class="bk-seo">
+        Vous cherchez un <strong>transfert depuis l'aéroport de Marrakech</strong> vers la médina, Guéliz,
+        l'Hivernage, la Palmeraie ou un camp du désert d'Agafay ? Le prix est fixé avant le départ et le
+        chauffeur suit votre numéro de vol. Pour comparer avec les autres options, voyez le
+        <a href={L('/taxi-aeroport-marrakech/')}>taxi de l'aéroport</a>, le
+        <a href={L('/transfert-aeroport-marrakech/')}>panorama des transferts</a> ou notre comparatif
+        <a href={L('/meilleur-transfert-aeroport-marrakech/')}>quel transfert choisir</a>.
+      </p>
     </div>
   </section>
 
-  <!-- ORIGINAL TRANSFER CHARACTERISTICS -->
-  <section class="bt-benefits">
+  <!-- Garanties -->
+  <section class="section section-alt">
     <div class="container">
-      <h2 class="bt-section-title">Pourquoi réserver votre transfert aéroport Agadir à l'avance ?</h2>
-      <div class="bt-grid-4">
-        {characteristics.map(c => (
-          <div class="bt-benefit-card">
-            <div class="bt-benefit-icon"><Icon name={c.icon} size={24} /></div>
-            <h3 class="bt-benefit-title">{c.title}</h3>
-            <p class="bt-benefit-desc">{c.desc}</p>
+      <span class="eyebrow">Ce que vous réservez</span>
+      <h2>Quatre choses qu'un taxi ne vous donne pas</h2>
+      <div class="grid grid-4" style="margin-top:1.75rem">
+        {garanties.map((g) => (
+          <div class="card">
+            <div class="bk-icon"><Icon name={g.icon} size={22} /></div>
+            <h3>{g.titre}</h3>
+            <p class="small text-muted">{g.desc}</p>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- SIMPLE BOOKING JOURNEY -->
-  <section class="bt-journey">
-    <div class="container">
-      <div class="bt-journey-inner">
-        <h2 class="bt-section-title">Comment ça marche</h2>
-        <div class="bt-steps">
-          <div class="bt-step">
-            <div class="bt-step-num">1</div>
-            <div class="bt-step-text">
-              <h4>Trouvez votre itinéraire</h4>
-              <p>Entrez le nom de votre hôtel ci-dessus.</p>
+  <!-- Étapes -->
+  <section class="section">
+    <div class="container container-narrow">
+      <span class="eyebrow">Comment ça marche</span>
+      <h2>Trois étapes</h2>
+      <ol class="bk-steps">
+        {etapes.map((e) => (
+          <li>
+            <span class="bk-step-num">{e.n}</span>
+            <div>
+              <h3>{e.titre}</h3>
+              <p class="small text-muted">{e.desc}</p>
             </div>
-          </div>
-          <div class="bt-step-divider"></div>
-          <div class="bt-step">
-            <div class="bt-step-num">2</div>
-            <div class="bt-step-text">
-              <h4>Choisissez votre voiture</h4>
-              <p>Sélectionnez un véhicule adapté à votre groupe.</p>
-            </div>
-          </div>
-          <div class="bt-step-divider"></div>
-          <div class="bt-step">
-            <div class="bt-step-num">3</div>
-            <div class="bt-step-text">
-              <h4>Rencontrez le chauffeur</h4>
-              <p>Repérez votre chauffeur avec une pancarte à votre nom.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+          </li>
+        ))}
+      </ol>
     </div>
   </section>
 
-  <!-- TRAVEL-SCENARIO SECTION -->
-  <section class="bt-scenarios">
+  <!-- Véhicules -->
+  <section class="section section-alt">
     <div class="container">
-      <h2 class="bt-section-title">Des véhicules pour chaque voyage</h2>
-      <p class="bt-section-subtitle">Du voyageur solo aux grands groupes de surf.</p>
-      
-      <div class="bt-grid-3">
-        {scenarios.map(s => (
-          <div class="bt-scenario-card">
-            <span class="bt-scenario-tag">{s.tag}</span>
-            <h3 class="bt-scenario-title">{s.title}</h3>
-            <p class="bt-scenario-desc">{s.desc}</p>
+      <span class="eyebrow">Choisir son véhicule</span>
+      <h2>Trois formats, selon le groupe et les bagages</h2>
+      <div class="grid grid-3" style="margin-top:1.75rem">
+        {vehicules.map((v) => (
+          <div class="card">
+            <span class="chip">{v.tag}</span>
+            <h3 style="margin-top:0.75rem">{v.titre}</h3>
+            <p class="small text-muted">{v.desc}</p>
           </div>
         ))}
       </div>
+      <div class="callout" style="margin-top:2rem">
+        <span class="callout-label">Le détail qui compte à Marrakech</span>
+        <p>
+          Un petit taxi de l'aéroport n'accepte que <strong>trois passagers</strong> et ne propose pas de
+          siège enfant. À quatre, ou avec un bébé, le transfert réservé n'est pas un luxe : c'est la
+          seule option qui règle le problème en un seul véhicule.
+        </p>
+      </div>
     </div>
   </section>
 
-  <!-- PRACTICAL BOOKING NOTES & FAQ -->
-  <section class="bt-practical">
+  <!-- Avant de réserver + FAQ -->
+  <section class="section">
     <div class="container">
-      <div class="bt-split-layout">
-        
-        <div class="bt-practical-notes">
-          <h2>Avant de réserver</h2>
-          <ul class="bt-checklist">
-            <li>
-              <Icon name="check" size={18} />
-              <span><strong>Préparez votre numéro de vol.</strong></span>
-            </li>
-            <li>
-              <Icon name="check" size={18} />
-              <span><strong>Comptez vos bagages (prévoyez pour le surf).</strong></span>
-            </li>
-            <li>
-              <Icon name="check" size={18} />
-              <span><strong>Utilisez l'adresse exacte du riad.</strong></span>
-            </li>
-            <li>
-              <Icon name="check" size={18} />
-              <span><strong>Vérifiez les conditions d'annulation.</strong></span>
-            </li>
+      <div class="grid grid-2" style="gap:3rem">
+        <div>
+          <h2>Avant de valider</h2>
+          <ul class="bk-check">
+            <li><Icon name="check" size={17} /><span><strong>Votre numéro de vol</strong> : c'est lui qui déclenche le suivi du retard.</span></li>
+            <li><Icon name="check" size={17} /><span><strong>La porte de la médina</strong> la plus proche de votre riad, obtenue auprès du riad.</span></li>
+            <li><Icon name="check" size={17} /><span><strong>Le nombre de valises</strong> : un monospace pour quatre grandes valises, pas une berline.</span></li>
+            <li><Icon name="check" size={17} /><span><strong>Les sièges enfants</strong>, à cocher à la réservation et non sur place.</span></li>
+            <li><Icon name="check" size={17} /><span><strong>La politique d'annulation</strong> affichée dans le récapitulatif.</span></li>
           </ul>
         </div>
-
-        <div class="bt-faq">
-          <h2>Foire Aux Questions</h2>
-          <div class="bt-faq-accordion">
-            {faqs.map((faq) => (
-              <details class="bt-faq-item">
-                <summary>
-                  <span class="bt-faq-q">{faq.q}</span>
-                  <Icon name="chevron-down" size={18} class="bt-faq-icon" />
-                </summary>
-                <div class="bt-faq-a">
-                  <p>{faq.a}</p>
-                </div>
+        <div>
+          <h2>Questions fréquentes</h2>
+          <div class="faq-list">
+            {faqs.map((f) => (
+              <details class="faq-item">
+                <summary>{f.q}</summary>
+                <div class="faq-body"><p>{f.a}</p></div>
               </details>
             ))}
           </div>
         </div>
-        
       </div>
     </div>
   </section>
 
-  <!-- FINAL BOOKING PROMPT -->
-  <section class="bt-final-cta">
+  <!-- CTA final -->
+  <section class="section">
     <div class="container">
-      <div class="bt-final-card">
-        <h2>Prêt pour une arrivée sans stress ?</h2>
-        <p>Réservez maintenant et commencez bien votre voyage.</p>
-        <a href="#booking-widget" class="btn btn-primary bt-scroll-btn">Rechercher un transfert</a>
+      <div class="cta-band">
+        <h2>Deux minutes maintenant, une arrivée sereine plus tard</h2>
+        <p>Prix fixe, suivi du vol, dépose à la bonne porte. Tarifs vérifiés en {PRICES_CHECKED}.</p>
+        <a href="#reservation" class="btn btn-primary btn-lg btn-arrow">Voir les prix des transferts</a>
       </div>
     </div>
   </section>
 
   <style>
-    /* Hero */
-    .bt-hero {
-      position: relative;
-      background-color: var(--cream-2);
-      padding: 5rem 0 7rem 0;
-      overflow: hidden;
-      border-bottom: 1px solid var(--line);
-    }
-    .bt-hero-img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100% !important;
-      object-fit: cover;
-      z-index: 0;
-    }
-    .bt-hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, rgba(246,247,234,0.85), rgba(246,247,234,0.95));
-      z-index: 1;
-    }
-    .bt-hero-pattern {
-      position: absolute;
-      inset: 0;
-      opacity: 0.4;
-      background-image: radial-gradient(var(--line-2) 2px, transparent 2px);
-      background-size: 24px 24px;
-      z-index: 2;
-    }
-    .bt-hero-container {
-      position: relative;
-      z-index: 3;
+    .bk-hero {
+      background: var(--ink);
+      color: #fff;
+      padding-block: clamp(2.75rem, 6vw, 4.5rem) clamp(5rem, 9vw, 7rem);
       text-align: center;
-      max-width: 800px;
     }
-    .bt-eyebrow {
+    .bk-hero .hero-rule { margin-inline: auto; }
+    .bk-eyebrow {
       display: inline-block;
-      background: var(--surface);
-      color: var(--green-dark);
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      padding: 0.4rem 0.8rem;
-      border-radius: var(--r-pill);
-      border: 1px solid var(--line);
-      margin-bottom: 1.5rem;
+      font-family: var(--font-body); font-weight: 700;
+      font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--saffron); margin-bottom: 1rem;
     }
-    .bt-title {
-      font-size: clamp(2.2rem, 5vw, 3.5rem);
-      margin-bottom: 1.25rem;
-      color: var(--ink);
+    .bk-hero h1 { color: #fff; max-width: 22ch; margin-inline: auto; }
+    .bk-lede {
+      font-size: 1.12rem; line-height: 1.65;
+      color: rgba(255,255,255,0.82);
+      max-width: 60ch; margin: 1.1rem auto 0;
     }
-    .bt-subtitle {
-      font-size: 1.15rem;
-      color: var(--ink-2);
-      max-width: 650px;
-      margin: 0 auto 3rem auto;
+    .bk-route {
+      display: flex; align-items: center; justify-content: center; gap: 1rem;
+      margin-top: 2rem; flex-wrap: wrap;
     }
-    
-    .bt-route-indicator {
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 2rem;
-      opacity: 0.8;
+    .bk-route-point {
+      font-family: var(--font-body); font-weight: 700; font-size: 0.78rem;
+      letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.65);
     }
-    .bt-route-point {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .bt-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-    }
-    .bt-dot-start { background-color: var(--ink); }
-    .bt-dot-end { background-color: var(--green); }
-    .bt-line {
-      flex: 0 1 120px;
-      height: 2px;
-      margin-bottom: 5px;
-      background: repeating-linear-gradient(90deg, var(--ink-3) 0, var(--ink-3) 4px, transparent 4px, transparent 8px);
-    }
-    .bt-route-label {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--ink-2);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    .bt-route-dest { color: var(--green-dark); }
-
-    /* Widget Section */
-    .bt-widget-section {
-      margin-top: -4rem;
-      position: relative;
-      z-index: 10;
-      margin-bottom: 5rem;
-    }
-    .bt-widget-card {
-      background: var(--surface);
-      border-radius: var(--r-xl);
-      padding: 2.5rem;
-      box-shadow: var(--shadow-lg);
-      border: 1px solid var(--line);
-      text-align: center;
-    }
-    .bt-seo-text {
-      max-width: 800px;
-      margin: 2rem auto 0 auto;
-      text-align: center;
-      font-size: 0.95rem;
-      color: var(--ink-2);
-      line-height: 1.6;
-    }
-    .bt-seo-text a {
-      color: var(--primary);
-      text-decoration: underline;
-    }
-    .bt-widget-title {
-      font-size: 1.75rem;
-      margin-bottom: 0.5rem;
-    }
-    .bt-widget-desc {
-      color: var(--ink-2);
-      margin-bottom: 2rem;
-    }
-    
-    .bt-widget-container {
-      background: transparent;
-      min-height: 280px;
-      display: block;
-      margin-bottom: 1.5rem;
-      overflow: visible;
-      width: 100%;
-    }
-    .bt-widget-placeholder {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      color: var(--ink-3);
-    }
-    .bt-spinner {
-      width: 32px;
-      height: 32px;
-      border: 3px solid var(--line);
-      border-top-color: var(--green);
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .bt-disclosure { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.7; }
-
-    .bt-affiliate-note {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      font-size: 0.85rem;
-      color: var(--ink-3);
-      margin: 0;
+    .bk-route-dest { color: var(--saffron); }
+    .bk-route-line {
+      width: 90px; height: 2px;
+      background: repeating-linear-gradient(90deg, rgba(255,255,255,0.4) 0 4px, transparent 4px 8px);
     }
 
-    /* Common Section Styles */
-    .bt-section-title {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 3rem;
-    }
-    .bt-section-subtitle {
-      text-align: center;
-      color: var(--ink-2);
-      margin: -2rem auto 3rem auto;
-      max-width: 600px;
-    }
-
-    /* Benefits */
-    .bt-benefits {
-      padding: 4rem 0;
-      background: var(--surface);
-    }
-    .bt-grid-4 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 2rem;
-    }
-    .bt-benefit-card {
-      text-align: center;
-    }
-    .bt-benefit-icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 56px;
-      height: 56px;
-      background: var(--green-soft);
-      color: var(--green-dark);
-      border-radius: var(--r-md);
-      margin-bottom: 1.25rem;
-    }
-    .bt-benefit-title {
-      font-size: 1.15rem;
-      margin-bottom: 0.75rem;
-    }
-    .bt-benefit-desc {
-      font-size: 0.95rem;
-      color: var(--ink-2);
-    }
-
-    /* Journey */
-    .bt-journey {
-      padding: 5rem 0;
-      background: var(--cream);
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-    .bt-journey-inner {
+    .bk-widget-section { margin-top: clamp(-5rem, -7vw, -3.5rem); position: relative; z-index: 5; }
+    .bk-widget-card {
       background: var(--surface);
       border: 1px solid var(--line);
-      border-radius: var(--r-xl);
-      padding: 3.5rem 2rem;
-      box-shadow: var(--shadow-sm);
-    }
-    .bt-steps {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 1rem;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .bt-step {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 1rem;
-    }
-    .bt-step-num {
-      width: 40px;
-      height: 40px;
-      background: var(--orange-soft);
-      color: var(--orange-dark);
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 1.2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      border: 2px solid var(--surface);
-      box-shadow: 0 0 0 4px var(--orange-soft);
-    }
-    .bt-step-text h4 { margin-bottom: 0.5rem; }
-    .bt-step-text p { font-size: 0.9rem; color: var(--ink-2); margin: 0; }
-    
-    .bt-step-divider {
-      flex: 0 1 80px;
-      height: 2px;
-      background: var(--line);
-      margin-top: 20px;
-    }
-
-    /* Scenarios */
-    .bt-scenarios {
-      padding: 5rem 0;
-      background: var(--surface);
-    }
-    .bt-grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
-    .bt-scenario-card {
-      background: var(--cream);
-      border: 1px solid var(--line);
+      border-top: 3px solid var(--saffron);
       border-radius: var(--r-lg);
-      padding: 2rem;
-      transition: transform var(--transition);
-    }
-    .bt-scenario-card:hover { transform: translateY(-4px); }
-    .bt-scenario-tag {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--ink-3);
-      border: 1px solid var(--line-2);
-      padding: 0.3rem 0.6rem;
-      border-radius: var(--r-sm);
-      margin-bottom: 1rem;
-      background: var(--surface);
-    }
-    .bt-scenario-title { margin-bottom: 0.75rem; }
-    .bt-scenario-desc { font-size: 0.95rem; color: var(--ink-2); margin: 0; }
-
-    /* Practical & FAQ */
-    .bt-practical {
-      padding: 5rem 0;
-      background: var(--cream);
-      border-top: 1px solid var(--line);
-    }
-    .bt-split-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-    }
-    .bt-practical-notes h2, .bt-faq h2 {
-      font-size: 1.75rem;
-      margin-bottom: 2rem;
-    }
-    .bt-checklist {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-    }
-    .bt-checklist li {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      margin: 0;
-    }
-    .bt-checklist li :global(svg) {
-      color: var(--green);
-      flex-shrink: 0;
-      margin-top: 4px;
-    }
-    .bt-checklist span {
-      font-size: 0.95rem;
-      color: var(--ink-2);
-    }
-    .bt-checklist strong {
-      color: var(--ink);
-    }
-
-    .bt-faq-accordion {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-    .bt-faq-item {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--r-md);
-      overflow: hidden;
-    }
-    .bt-faq-item summary {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.25rem;
-      font-family: var(--font-display);
-      font-weight: 600;
-      color: var(--ink);
-      cursor: pointer;
-      list-style: none;
-    }
-    .bt-faq-item summary::-webkit-details-marker { display: none; }
-    .bt-faq-q { padding-right: 1rem; }
-    .bt-faq-icon { color: var(--ink-3); transition: transform 0.2s; }
-    .bt-faq-item[open] .bt-faq-icon { transform: rotate(180deg); }
-    .bt-faq-a {
-      padding: 0 1.25rem 1.25rem 1.25rem;
-      font-size: 0.95rem;
-      color: var(--ink-2);
-    }
-    .bt-faq-a p:last-child { margin: 0; }
-
-    /* Final CTA */
-    .bt-final-cta {
-      padding: 4rem 0 6rem 0;
-      background: var(--surface);
-    }
-    .bt-final-card {
-      background: var(--green-dark);
-      color: #fff;
-      border-radius: var(--r-xl);
-      padding: 3.5rem 2rem;
+      box-shadow: var(--shadow-lg);
+      padding: clamp(1.5rem, 3vw, 2.5rem);
       text-align: center;
-      box-shadow: var(--shadow-md);
     }
-    .bt-final-card h2 {
-      color: #fff;
-      margin-bottom: 1rem;
+    .bk-widget-card h2 { margin-bottom: 0.4rem; }
+    .bk-note {
+      display: flex; align-items: center; justify-content: center; gap: 0.45rem;
+      font-size: 0.82rem; color: var(--ink-3); margin: 1.25rem 0 0;
     }
-    .bt-final-card p {
-      color: rgba(255,255,255,0.9);
-      margin-bottom: 2rem;
-      font-size: 1.1rem;
-    }
-    .bt-scroll-btn {
-      display: inline-flex;
-      background: var(--yellow);
-      color: var(--ink);
-      padding: 0.8rem 1.8rem;
-      border-radius: var(--r-pill);
-      font-weight: 700;
-      text-decoration: none;
-      transition: transform var(--transition), box-shadow var(--transition);
-    }
-    .bt-scroll-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-sm);
-      color: var(--ink);
+    .bk-note :global(svg) { flex: none; }
+    .bk-seo {
+      max-width: var(--measure-wide); margin: 2rem auto 0;
+      text-align: center; font-size: 0.95rem; color: var(--ink-2);
     }
 
-    /* Responsive */
-    @media (max-width: 900px) {
-      .bt-split-layout { grid-template-columns: 1fr; gap: 3rem; }
-      .bt-steps { flex-direction: column; align-items: stretch; gap: 2rem; }
-      .bt-step { flex-direction: row; text-align: left; }
-      .bt-step-divider { display: none; }
+    .bk-icon {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 44px; height: 44px; margin-bottom: 0.9rem;
+      background: var(--blue-soft); color: var(--blue-dark);
+      border-radius: var(--r-md);
     }
-    @media (max-width: 600px) {
-      .bt-hero { padding: 4rem 0 6rem 0; }
-      .bt-widget-card { padding: 1.5rem; }
-      .bt-affiliate-note { flex-direction: column; text-align: center; }
-      .bt-route-indicator { display: none; }
+
+    .bk-steps { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; gap: 1.25rem; }
+    .bk-steps li { display: flex; gap: 1rem; align-items: flex-start; margin: 0; }
+    .bk-step-num {
+      flex: none; display: grid; place-items: center;
+      width: 34px; height: 34px;
+      background: var(--saffron); color: #2a1e08;
+      font-family: var(--font-body); font-weight: 700;
+      border-radius: var(--r-sm);
+    }
+    .bk-steps h3 { font-size: 1.08rem; margin-bottom: 0.2rem; }
+
+    .bk-check { list-style: none; padding: 0; margin: 1.25rem 0 0; display: grid; gap: 0.9rem; }
+    .bk-check li { display: flex; gap: 0.7rem; align-items: flex-start; margin: 0; font-size: 0.95rem; color: var(--ink-2); }
+    .bk-check :global(svg) { flex: none; margin-top: 3px; color: var(--blue); }
+
+    @media (max-width: 560px) {
+      .bk-route-line { display: none; }
     }
   </style>
 
@@ -676,10 +293,7 @@ const faqs = [
     "mainEntity": faqs.map(f => ({
       "@type": "Question",
       "name": f.q,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": f.a
-      }
+      "acceptedAnswer": { "@type": "Answer", "text": f.a }
     }))
   })} />
 </BaseLayout>

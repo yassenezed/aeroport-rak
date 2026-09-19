@@ -15,7 +15,7 @@ const facts = [
   { label: 'Aéroport → médina', value: `${airport.distanceToCityKm} km` },
   { label: 'Durée réelle', value: `${airport.driveToCityMin.min}–${airport.driveToCityMin.max}`, sub: 'min' },
   { label: 'Train / VTC', value: 'Aucun', sub: 'au RAK' },
-  { label: 'Transfert réservé', value: '12 €', sub: 'dès' },
+  { label: 'Transfert réservé', value: '27 €', sub: 'dès' },
 ];
 
 const faqs = [
@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     q: "Combien coûte un transfert depuis l'aéroport de Marrakech ?",
-    a: "Un transfert privé réservé vers la médina, Guéliz ou l'Hivernage démarre autour de 12 € par véhicule, suivi du vol et sièges-auto inclus selon les prestataires. Pour la Palmeraie ou un camp du désert, comptez plutôt 18 à 35 €. Sur les longues distances, Essaouira tourne autour de 95 €. Ces prix s'entendent par voiture et non par personne : à trois ou quatre, ils deviennent souvent plus intéressants que le taxi."
+    a: "Un transfert privé réservé vers la médina, Guéliz ou l'Hivernage démarre à 27 € par véhicule, jusqu'à 7 passagers, suivi du vol et sièges-auto inclus selon les prestataires. Pour la Palmeraie ou un camp du désert, comptez plutôt 18 à 35 €. Sur les longues distances, Essaouira tourne autour de 95 €. Ces prix s'entendent par voiture et non par personne : à trois ou quatre, ils deviennent souvent plus intéressants que le taxi."
   },
   {
     q: "Peut-on réserver un transfert et payer plus tard ?",
@@ -48,7 +48,7 @@ const faqs = [
 const options = [
   {
     nom: 'Transfert privé réservé',
-    prix: 'dès 12 € / véhicule',
+    prix: 'dès 27 € / véhicule',
     pour: 'Vols de nuit, riads en médina, familles, groupes',
     contre: 'À réserver avant de partir',
   },
@@ -80,7 +80,7 @@ const options = [
   lede="Six kilomètres séparent Ménara de Jemaa el-Fna : le trajet est court, c'est la dernière centaine de mètres qui pose problème, puisque aucune voiture n'entre dans les ruelles de la médina. Voici les quatre façons de sortir du terminal, ce qu'elles coûtent réellement, et laquelle correspond à votre vol."
   breadcrumbs={breadcrumbs}
   facts={facts}
-  priceFrom={12}
+  priceFrom={27}
   heroImage={photos['marrakech-airport-transfer']}
   heroProvider="transfer"
   heroCtaLabel="Comparer les prix des transferts"
@@ -160,7 +160,7 @@ const options = [
     monospaces partent vite.
   </p>
   <p>
-    Comptez environ 12 € vers la médina, Guéliz ou l'Hivernage, davantage pour la Palmeraie et les camps
+    Comptez 27 € vers la médina, Guéliz ou l'Hivernage, davantage pour la Palmeraie et les camps
     du désert. Nous détaillons les opérateurs dans nos avis
     {' '}<a href={L('/avis-kiwitaxi-marrakech/')}>Kiwitaxi</a>,
     {' '}<a href={L('/avis-welcome-pickups-marrakech/')}>Welcome Pickups</a> et

@@ -1,88 +1,147 @@
 ---
 import TransferLayout from '../layouts/TransferLayout.astro';
-import TransferOptions from '../components/affiliate/TransferOptions.astro';
 import { getLocalizedPath } from '../i18n';
 import { photos } from '../data/images';
+import { airport, PRICES_CHECKED } from '../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: 'Transferts', href: L('/agadir-airport-transfers/') },
-  { name: 'Meilleur transfert', href: L('/best-agadir-airport-transfer/') },
+  { name: 'Transferts & taxi', href: L('/transfert-aeroport-marrakech/') },
+  { name: 'Quel transfert choisir', href: L('/meilleur-transfert-aeroport-marrakech/') },
 ];
+
 const facts = [
-  { label: 'Transfert privé dès', value: '~20 €' },
-  { label: 'Transfert VIP dès', value: '~35 €' },
-  { label: 'Destination surf populaire', value: 'Taghazout (~30 €)' },
-  { label: 'Annulation', value: 'Gratuite jusqu\'à 24h' },
+  { label: 'Transfert privé', value: '27 €', sub: 'dès, par véhicule' },
+  { label: 'Taxi affiché', value: `${airport.taxiFare.dayMad[0]}–${airport.taxiFare.dayMad[1]}`, sub: 'MAD le jour' },
+  { label: `Bus ${airport.bus.line}`, value: `${airport.bus.oneWayMad}`, sub: 'MAD / personne' },
+  { label: 'Critère n°1', value: 'Votre heure', sub: "d'atterrissage" },
 ];
+
+const scenarios = [
+  { cas: 'Couple, arrivée en journée, hôtel à Guéliz', reco: 'Taxi au rang', pourquoi: 'Nettement moins cher à deux : 9 à 14 € contre 27 €, dépose à la réception' },
+  { cas: 'Couple, arrivée après 22 h, riad en médina', reco: 'Transfert réservé', pourquoi: 'Barème de nuit du taxi, ruelles sombres, porteur à coordonner' },
+  { cas: 'Famille de 4 ou 5 avec valises', reco: 'Transfert réservé', pourquoi: 'Un petit taxi ne prend que 3 passagers : deux voitures sinon' },
+  { cas: 'Deux voyageurs en bagage cabine, riad près de la place', reco: `Bus ${airport.bus.line}`, pourquoi: `${airport.bus.oneWayMad} MAD, dépose à Jemaa el-Fna, environ ${airport.bus.rideMin} min` },
+  { cas: 'Séjour avec Ourika, Essaouira, Atlas', reco: 'Voiture de location', pourquoi: 'Rentable dès deux ou trois excursions, liberté horaire' },
+  { cas: 'Groupe de 6 et plus, camp du désert', reco: 'Minibus réservé', pourquoi: 'Disponibilité à sécuriser, pistes en fin de parcours' },
+];
+
 const faqs = [
-  { q: "Quelle est la meilleure façon de rejoindre son hôtel depuis l'aéroport d'Agadir ?", a: "Pour la plupart des voyageurs, un transfert privé réservé à l'avance est le plus simple : prix fixe bloqué à la réservation, chauffeur vous attendant aux arrivées avec une pancarte, et aucune négociation sur place." },
-  { q: "Un transfert privé est-il préférable au taxi de la station ?", a: "Oui. Les grands taxis de l'aéroport ne fonctionnent pas au compteur et les prix annoncés au départ peuvent être élevés. Réserver en ligne garantit un véhicule moderne et climatisé, le suivi de votre vol en cas de retard, et un prix fixe sans surprise." },
-  { q: "Peut-on payer son transfert en ligne avec annulation gratuite ?", a: "Oui, la majorité des réservations de transfert en ligne s'effectuent à tarif fixe avec annulation gratuite jusqu'à 24 heures avant la prise en charge." },
-  { q: "Comment le chauffeur vous accueille-t-il à l'aéroport ?", a: "Le chauffeur suit votre vol en temps réel. Dès votre sortie de la zone des bagages et douanes dans le hall principal des arrivées, votre chauffeur vous attend avec un panneau à votre nom." },
+  {
+    q: "Quel est le meilleur transfert depuis l'aéroport de Marrakech ?",
+    a: `Il n'y en a pas un seul : trois variables décident. Votre heure d'atterrissage — après 21 h, le transfert réservé prend l'avantage sur le taxi passé au barème de nuit. Votre nombre de passagers — à quatre, un petit taxi ne suffit plus. Et votre quartier — un riad en médina demande de connaître la porte, ce qu'un chauffeur réservé sait à l'avance. En journée, à deux, vers Guéliz, le taxi au tarif affiché (${airport.taxiFare.dayMad[0]}–${airport.taxiFare.dayMad[1]} MAD) reste imbattable.`
+  },
+  {
+    q: "Transfert privé ou taxi : lequel est le moins cher ?",
+    a: "Cela dépend entièrement du nombre de passagers. À deux en journée, le taxi gagne nettement : 100 à 150 MAD, soit 9 à 14 €, contre 27 € pour un transfert. À quatre, il faut deux petits taxis (200 à 300 MAD, soit 18 à 28 €) et l'écart disparaît. À quatre de nuit, deux taxis coûtent 300 à 480 MAD, soit 28 à 44 €, et le transfert à 27 € devient le moins cher. Au-delà de quatre passagers, le forfait unique jusqu'à sept places rend le transfert imbattable."
+  },
+  {
+    q: "Les transferts partagés valent-ils le coup à Marrakech ?",
+    a: "Rarement. Ils supposent d'attendre les autres passagers, puis d'enchaîner plusieurs déposes en médina — là où chaque arrêt implique une porte différente. Vu l'écart de prix modeste avec un transfert privé sur un trajet de six kilomètres, le privé est presque toujours le meilleur arbitrage ici."
+  },
+  {
+    q: "Comment être sûr que le chauffeur attendra en cas de retard ?",
+    a: "Donnez votre numéro de vol à la réservation, et non seulement une heure. Les opérateurs sérieux suivent le vol et ajustent la prise en charge automatiquement, retard inclus, sans surcoût. C'est la principale valeur d'un transfert réservé face à un taxi pris sur place."
+  },
+  {
+    q: "Faut-il réserver longtemps à l'avance ?",
+    a: `Quelques jours suffisent pour un véhicule standard. Réservez plusieurs semaines avant pour un monospace, un minibus ou une arrivée en période de pointe — février, Pâques, vacances scolaires — car c'est la disponibilité des grands véhicules qui manque en premier. Repères vérifiés en ${PRICES_CHECKED}.`
+  },
 ];
 ---
 <TransferLayout
-  lang={lang}
-  title="Meilleur transfert aéroport Agadir 2026 : Privé, VIP & Économique | AirportAGA"
-  description="Comparez les options de transferts depuis l'aéroport Agadir Al Massira (AGA) : berlines privées, minivans VIP et transports économiques."
-  eyebrow="Aéroport d'Agadir · Transferts"
-  h1="Le meilleur transfert aéroport Agadir selon votre voyage"
-  lede="Il n'y a pas un transfert unique pour tout le monde, il y a le meilleur choix pour votre trajet. Comparez nos options privées, VIP et économiques sur les tarifs, la couverture et le confort à l'arrivée."
+  title="Quel transfert choisir à l'aéroport de Marrakech ? (2026) | AirportRAK"
+  description="Transfert privé, taxi au tarif affiché, bus 19 ou location : le comparatif honnête selon votre heure d'atterrissage, votre nombre de passagers et votre quartier, avec six scénarios concrets."
+  eyebrow="Aéroport Marrakech Ménara · Comparatif"
+  h1="Quel transfert choisir à l'aéroport de Marrakech"
+  lede="La bonne réponse dépend de trois choses seulement : l'heure où vous vous posez, combien vous êtes, et où vous dormez. Voici la grille de décision, et six situations réelles avec notre recommandation."
   breadcrumbs={breadcrumbs}
   facts={facts}
-  priceFrom={20}
-  heroImage={photos['agadir-marina']}
+  priceFrom={27}
+  heroImage={photos['marrakech-airport-transfer']}
   heroProvider="transfer"
   heroCtaLabel="Voir les prix des transferts"
+  secondaryHref="/taxi-aeroport-marrakech/prix/"
+  secondaryLabel="Comparer avec les tarifs taxi"
   faqs={faqs}
-  cta={{ heading: 'Réservez votre transfert au meilleur prix', text: 'Bloquez votre tarif fixe à l\'avance avec suivi de vol et annulation gratuite sur la plupart des trajets.', provider: 'transfer', label: 'Voir les tarifs' }}
+  cta={{ heading: 'Le bon choix pour votre vol', text: "Prix fixe par véhicule, suivi du numéro de vol et dépose à la porte la plus proche de votre riad : la formule qui couvre le plus de cas de figure à Marrakech.", provider: 'transfer', label: 'Voir les prix des transferts' }}
 >
   <p>
-    Les transferts réservés au départ de l'aéroport Agadir Al Massira (AGA) desservent le centre-ville d'Agadir, la côte surf (Taghazout, Tamraght, Imsouane) ainsi que l'intérieur des terres (Taroudant, Marrakech).
+    Les comparatifs de transfert se trompent souvent de question. À Marrakech, aucune option n'est
+    meilleure dans l'absolu : le taxi est excellent dans un cas précis, le bus imbattable dans un autre,
+    et le transfert réservé s'impose dès que deux facteurs se cumulent. Voici comment trancher en une
+    minute.
   </p>
 
-  <h2 id="tableau">Comparatif rapide des options</h2>
+  <h2>Les trois variables qui décident</h2>
+  <ol>
+    <li>
+      <strong>L'heure d'atterrissage.</strong> Avant 20 h, toutes les options sont ouvertes et le taxi est le moins cher à deux. Après, le
+      bus s'arrête vers {airport.bus.lastDeparture}, le taxi passe au barème de nuit
+      ({airport.taxiFare.nightMad[0]}–{airport.taxiFare.nightMad[1]} MAD) et la médina devient
+      difficile à parcourir. Le transfert réservé prend alors l'avantage.
+    </li>
+    <li>
+      <strong>Le nombre de passagers.</strong> Un petit taxi accepte <strong>trois personnes</strong>.
+      À quatre, il faut un grand taxi ou deux voitures — et l'économie disparaît.
+    </li>
+    <li>
+      <strong>Le quartier.</strong> Guéliz, l'Hivernage et l'Agdal se desservent porte à porte. La
+      médina impose une dépose à un bab : savoir lequel est un avantage décisif, et c'est une
+      information que seul un transfert réservé intègre à l'avance.
+    </li>
+  </ol>
+
+  <h2>Six situations, six recommandations</h2>
   <div class="table-wrap">
     <table class="data">
       <thead>
-        <tr><th>Option</th><th>Transfert Privé Standard</th><th>Transfert VIP Executive</th><th>Économique / Partagé</th></tr>
+        <tr><th>Votre situation</th><th>Notre choix</th><th>Pourquoi</th></tr>
       </thead>
       <tbody>
-        <tr class="row-highlight"><td>Tarif dès (vers centre d'Agadir)</td><td class="num">~20 €</td><td class="num">~35–45 €</td><td class="num">~15–18 €</td></tr>
-        <tr><td>Couverture côte du Souss</td><td>Très large (Ville, Taghazout, Taroudant)</td><td>Ville &amp; complexes hôteliers</td><td>Axes principaux</td></tr>
-        <tr><td>Accueil aux arrivées</td><td>Chauffeur avec pancarte nominative</td><td>Accueil personnalisé &amp; aide bagages</td><td>Point de rendez-vous standard</td></tr>
-        <tr><td>Suivi du vol en direct</td><td>Inclus</td><td>Inclus (proactif)</td><td>Selon réservation</td></tr>
-        <tr><td>Annulation gratuite</td><td>Jusqu'à 24h avant le départ</td><td>Jusqu'à 24h avant le départ</td><td>Selon conditions</td></tr>
-        <tr><td>Recommandé pour</td><td>Familles, couples, surfeurs</td><td>Voyages d'affaires &amp; séjour VIP</td><td>Voyageurs en solo</td></tr>
+        {scenarios.map((s, i) => (
+          <tr class:list={[{ 'row-highlight': i === 1 }]}>
+            <td>{s.cas}</td>
+            <td><strong>{s.reco}</strong></td>
+            <td>{s.pourquoi}</td>
+          </tr>
+        ))}
       </tbody>
     </table>
   </div>
 
-  <h2 id="prive">Transfert Privé. La valeur sûre</h2>
+  <h2>Ce qui distingue vraiment les opérateurs</h2>
   <p>
-    Pour la grande majorité des arrivées à l'aéroport AGA, le transfert privé est le choix optimal. Vous bénéficiez d'une berline ou d'un minivan privé avec chauffeur dédié, dès 20 € vers Agadir centre ou ~30 € vers Taghazout. Votre chauffeur suit votre vol et vous dépose directement devant votre hôtel ou résidence.
+    Entre plateformes de réservation, l'écart de prix sur un trajet de six kilomètres est faible. Trois
+    critères comptent davantage : le <strong>suivi du numéro de vol</strong>, qui absorbe un retard sans
+    frais ; la <strong>politique d'annulation</strong>, idéalement gratuite jusqu'à 24 h avant ; et la
+    <strong>précision de la dépose</strong>, c'est-à-dire la capacité à traiter « riad X, Bab Laksour »
+    comme une adresse et non comme une approximation.
   </p>
-
-  <h2 id="vip">Transfert VIP Executive. Le confort absolu</h2>
   <p>
-    Pour un voyage d'affaires ou un confort haut de gamme, choisissez le transfert VIP avec véhicules premium (Mercedes Classe E, V-Class). Accueil personnalisé avec nom, prise en charge immédiate des bagages et conduite haut de gamme.
+    Nous avons détaillé chacun dans nos avis
+    {' '}<a href={L('/avis-kiwitaxi-marrakech/')}>Kiwitaxi</a>,
+    {' '}<a href={L('/avis-welcome-pickups-marrakech/')}>Welcome Pickups</a> et
+    {' '}<a href={L('/avis-intui-travel-marrakech/')}>Intui Travel</a>, avec une comparaison directe sur
+    {' '}<a href={L('/kiwitaxi-vs-welcome-pickups/')}>Kiwitaxi vs Welcome Pickups</a>.
   </p>
-
-  <h3 id="reserver">Réserver votre transfert en ligne</h3>
-  <TransferOptions
-    sub="meilleur-transfert-aeroport-agadir"
-    options={[
-      { provider: 'transfer', highlight: true, badge: 'Le plus populaire', pitch: 'Transfert privé porte-à-porte à tarif fixe, suivi du vol et annulation gratuite jusqu\'à 24h avant la course.', label: 'Voir les tarifs des transferts' },
-      { provider: 'transfer-vip', badge: 'Service VIP', pitch: 'Véhicules Mercedes récents, accueil personnalisé aux arrivées et service classe affaires.', label: 'Réserver un transfert VIP' },
-    ]}
-  />
 
   <div class="callout">
-    <span class="callout-label">En résumé</span>
-    Réservez votre transfert privé en ligne pour bénéficier d'un tarif fixe garanti, du suivi de votre vol et d'une arrivée fluide. Découvrez toutes nos liaisons sur le <a href={L('/agadir-airport-transfers/')}>hub des transferts</a>.
+    <span class="callout-label">Le réflexe à garder</span>
+    <p>
+      Quelle que soit l'option retenue, demandez à votre hébergement <strong>la porte la plus proche</strong>
+      et, s'il s'agit d'un riad, <strong>un porteur avec charrette</strong>. Ces deux informations
+      améliorent davantage votre arrivée que le choix du moyen de transport lui-même.
+    </p>
   </div>
+
+  <h2>Et si vous voulez simplement le plus simple ?</h2>
+  <p>
+    Réservez un transfert privé. Ce n'est pas l'option la moins chère en journée, mais c'est celle qui
+    couvre le plus grand nombre de cas de figure à Marrakech : prix connu, chauffeur qui attend,
+    bonne porte. Les autres options sont détaillées sur
+    {' '}<a href={L('/transfert-aeroport-marrakech/')}>transferts aéroport Marrakech</a>.
+  </p>
 </TransferLayout>

@@ -1,125 +1,138 @@
 ---
 import RouteLayout from '../layouts/RouteLayout.astro';
-import TransferOptions from '../components/affiliate/TransferOptions.astro';
 import { getLocalizedPath } from '../i18n';
 import { photos } from '../data/images';
+import { airport, PRICES_CHECKED } from '../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: 'Transferts', href: L('/agadir-airport-transfers/') },
-  { name: 'Vers le centre-ville', href: L('/agadir-airport-to-agadir/') },
+  { name: 'Transferts & taxi', href: L('/transfert-aeroport-marrakech/') },
+  { name: 'Aéroport → Médina', href: L('/transfert-aeroport-marrakech-medina/') },
 ];
+
 const facts = [
-  { label: 'Distance', value: '22 km' },
-  { label: 'Durée', value: '25–40', sub: 'min' },
-  { label: 'Transfert réservé', value: '20 €', sub: 'dès' },
-  { label: 'Grand taxi', value: '200–250', sub: 'MAD' },
+  { label: 'Distance', value: `${airport.distanceToCityKm} km` },
+  { label: 'Durée', value: `${airport.driveToCityMin.min}–${airport.driveToCityMin.max}`, sub: 'min' },
+  { label: 'Transfert privé', value: '27 €', sub: 'dès' },
+  { label: 'Taxi (jour)', value: `${airport.taxiFare.dayMad[0]}–${airport.taxiFare.dayMad[1]}`, sub: 'MAD' },
 ];
+
 const faqs = [
-  { q: "Comment rejoindre le centre-ville depuis l'aéroport d'Agadir ?", a: "Par la route. Pas de train, mais ALSA fait désormais rouler une navette économique vers le centre d'Agadir (autour de 50 MAD, à peu près toutes les heures en journée, environ 50 minutes) si vous voyagez léger et allez au centre. Pour un hôtel, une arrivée du soir ou une destination hors du centre, vous réservez un transfert privé qui vous attend à l'arrivée, ou vous prenez un grand taxi à la station juste devant les portes. Le centre d'Agadir est à environ 22 km, soit 25 à 40 minutes selon l'emplacement de votre hôtel et l'heure." },
-  { q: "Combien coûte un taxi de l'aéroport d'Agadir au centre-ville ?", a: "Un grand taxi à la station revient à environ 200–250 MAD (20–23 €) en journée et 300–350 MAD la nuit, convenez le prix avant de charger les bagages, car le compteur n'est presque jamais utilisé pour la course aéroport. Un transfert privé réservé jusqu'à l'hôtel démarre autour de 20 €, prix fixé à l'avance. Prix vérifiés en juin 2026." },
-  { q: "Y a-t-il un bus entre l'aéroport d'Agadir et la ville ?", a: "Oui, vers le centre d'Agadir. ALSA fait rouler une navette d'aéroport (autour de 50 MAD, à peu près toutes les heures en journée, environ 50 minutes), et il existe un trajet local moins cher via la ligne 37 jusqu'à Inezgane puis la ligne 98 vers la ville. Les deux ne desservent que le centre, de jour, pas la porte de votre hôtel ni la côte ; avec des bagages ou un vol du soir, la plupart des gens prennent donc encore un taxi ou un transfert réservé pour les 22 km vers le centre." },
-  { q: "Peut-on utiliser Uber ou Careem à l'aéroport d'Agadir ?", a: "Non. Ni Uber ni Careem ne fonctionnent à Agadir : vous ne trouverez aucune prise en charge VTC au terminal. Vos deux vraies options sont la station de grands taxis ou un transfert organisé avant le départ." },
-  { q: "Combien de temps pour rejoindre la plage d'Agadir ?", a: "Comptez 25 à 40 minutes jusqu'au front de mer, à la marina et au quartier hôtelier de Founty. L'aéroport est au sud-est de la ville, près de Temsia, et la route rejoint le centre par l'axe principal ; le trafic de fin d'après-midi en bordure de ville ajoute parfois dix minutes, sans plus." },
+  {
+    q: "Combien coûte un transfert de l'aéroport de Marrakech à la médina ?",
+    a: `Un transfert privé réservé démarre à 27 € par véhicule, jusqu'à 7 passagers, suivi du vol inclus chez la plupart des opérateurs. Un taxi pris au rang coûte ${airport.taxiFare.dayMad[0]} à ${airport.taxiFare.dayMad[1]} MAD en journée et ${airport.taxiFare.nightMad[0]} à ${airport.taxiFare.nightMad[1]} MAD la nuit, pour la voiture entière. Le bus ${airport.bus.line} dépose à Jemaa el-Fna pour ${airport.bus.oneWayMad} MAD.`
+  },
+  {
+    q: "Combien de temps dure le trajet ?",
+    a: `${airport.driveToCityMin.min} à ${airport.driveToCityMin.max} minutes de route pour ${airport.distanceToCityKm} km, selon la circulation et la porte visée. Ajoutez 3 à 10 minutes de marche depuis la porte jusqu'à votre riad : c'est cette portion, et non la route, qui fait varier l'expérience.`
+  },
+  {
+    q: "Le chauffeur peut-il aller jusqu'au riad ?",
+    a: "Non. Les derbs de la médina sont trop étroits et plusieurs accès sont fermés à la circulation. La dépose se fait obligatoirement à une porte. Le bon chauffeur est celui qui s'arrête à la <em>bonne</em> porte : demandez-la à votre riad et transmettez-la à la réservation."
+  },
+  {
+    q: "Quelle porte pour quel secteur de la médina ?",
+    a: "Bab Doukkala pour le nord-ouest (Dar el Bacha, Mouassine), Bab Laksour pour les abords de Jemaa el-Fna et Riad Zitoun, Bab Agnaou pour la Kasbah et les tombeaux saadiens, Bab el Khemis pour le nord-est. Votre riad vous donnera la bonne en une phrase."
+  },
+  {
+    q: "Et pour les bagages dans les ruelles ?",
+    a: "Demandez un porteur avec charrette à votre riad en annonçant votre heure d'arrivée. Presque tous le font, gratuitement ou pour 20 à 30 MAD de pourboire. C'est le meilleur investissement de tout le trajet, surtout de nuit."
+  },
+  {
+    q: "Ce trajet est-il praticable avec de jeunes enfants ?",
+    a: "Oui, mais anticipez : la marche finale se fait sur des pavés irréguliers, difficilement en poussette. Avec des enfants en bas âge, beaucoup de familles préfèrent un hôtel de Guéliz ou de l'Hivernage, où la voiture dépose devant la réception."
+  },
 ];
 ---
 <RouteLayout
-  lang={lang}
-  title="Transfert aéroport Agadir – centre-ville : taxi et prix (2026) | AirportAGA"
-  description="Comment rejoindre le centre d'Agadir, la plage et la marina depuis l'aéroport Al Massira : distance, durée, prix réels taxi et transfert 2026, la navette ALSA de ville, et pourquoi il n'y a ni train ni Uber."
-  eyebrow="Trajets depuis l'AGA · Ville et plage"
-  h1="Transfert aéroport Agadir → centre-ville"
-  lede="Le centre d'Agadir, la plage et la marina sont à environ 22 km de l'aéroport, un trajet de 25 à 40 minutes. Voici le prix exact, comment fonctionne la station de grands taxis, et comment éviter la négociation si vous préférez arriver à votre nom sur une pancarte."
+  title="Transfert aéroport de Marrakech → Médina : prix, durée et la bonne porte (2026) | AirportRAK"
+  description="Le trajet le plus demandé du RAK : 6 km jusqu'à la médina, 15 à 30 minutes, prix du transfert et du taxi, la porte à indiquer selon votre riad et le porteur à réserver pour les bagages."
+  eyebrow="Trajet · Aéroport → Médina"
+  h1="Aéroport de Marrakech → Médina"
+  lede="Six kilomètres, un quart d'heure de route, puis quelques minutes à pied : c'est le trajet le plus court et le plus fréquent du RAK, et celui où une seule information — le nom de votre porte — fait toute la différence."
   breadcrumbs={breadcrumbs}
   facts={facts}
-  priceFrom={20}
-  heroImage={photos['agadir-marina']}
+  priceFrom={27}
+  heroImage={photos['marrakech-medina']}
   heroProvider="transfer"
-  heroCtaLabel="Voir les prix vers Agadir"
+  heroCtaLabel="Réserver ce trajet"
   faqs={faqs}
-  cta={{ heading: 'Arrivez à votre nom sur une pancarte', text: 'Réservez une voiture à prix fixe vers votre hôtel de plage, la marina ou un appartement à Founty, vol suivi, aucune négociation à la station, annulation gratuite sur la plupart des réservations.', provider: 'transfer', label: 'Réserver votre transfert Agadir' }}
+  cta={{ heading: 'Dépose à la bonne porte', text: "Indiquez le nom de votre riad et sa porte à la réservation : le chauffeur s'arrête au plus près, à prix fixe, même sur un vol de nuit.", provider: 'transfer', label: 'Voir les prix des transferts' }}
 >
   <p>
-    Pour la plupart des arrivées à Agadir Al Massira, l'aéroport n'est que le dernier obstacle avant la
-    plage. Le terminal se situe à environ 22 km au sud-est de la ville, près de Temsia : rejoindre
-    votre hôtel sur le front de mer, autour de la marina ou dans le quartier de Founty se résume à un
-    court trajet, 25 à 40 minutes, pas davantage. Pas de train ; il y a bien une navette ALSA vers le
-    centre d'Agadir (autour de 50 MAD, en journée seulement), mais pour un transfert d'hôtel, une arrivée
-    tardive ou une destination hors du centre, tout se joue entre le taxi et le transfert réservé d'avance.
+    C'est le trajet que la majorité des visiteurs de Marrakech effectuent en premier, et celui qui
+    surprend le plus. Non pas par sa durée — il est court — mais parce qu'il ne se termine pas devant
+    votre porte. Les {airport.distanceToCityKm} kilomètres se font en voiture ; les cent derniers mètres
+    se font à pied.
   </p>
 
-  <h2 id="options">Vos options depuis l'aéroport</h2>
-  <p>
-    Trois façons de gagner le centre ; le bon choix dépend surtout de votre envie de négocier ou de
-    payer un prix fixe et de marcher droit vers une voiture qui attend :
-  </p>
-  <ul>
-    <li><strong>Grand taxi à la station</strong>, les grandes berlines s'alignent juste devant l'arrivée. Pour le centre, comptez 200–250 MAD en journée ; convenez le tarif par la fenêtre avant de monter.</li>
-    <li><strong>Transfert privé réservé</strong>, un chauffeur vous attend à l'intérieur avec votre nom, le prix est fixé avant le départ, et il vous dépose à la porte de l'hôtel. Dès 20 €, à peine plus qu'un taxi de jour une fois négocié.</li>
-    <li><strong>Voiture de location</strong>, intéressante uniquement si vous prévoyez des excursions sur la côte ou vers Taroudant ; pour une semaine plage en centre-ville, c'est plus de contraintes qu'autre chose.</li>
-  </ul>
+  <h2>Le trajet, étape par étape</h2>
+  <ol>
+    <li>Sortie du hall des arrivées, direction le rang de taxis ou la pancarte à votre nom.</li>
+    <li>{airport.driveToCityMin.min} à {airport.driveToCityMin.max} minutes de route par l'avenue Mohammed VI puis les boulevards qui longent les remparts.</li>
+    <li>Arrêt à la porte (bab) la plus proche de votre riad.</li>
+    <li>3 à 10 minutes à pied dans les derbs, idéalement avec un porteur.</li>
+  </ol>
 
-  <div class="widget-wrap">
-    <iframe
-      class="tpemd-iframe"
-      srcdoc='<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;padding:0;font-family:system-ui,sans-serif;overflow:hidden}</style></head><body><script async src="https://tpemd.com/content?currency=EUR&trs=554574&shmarker=697149&locale=fr&from=al%20massira%20airport&to=agadir&country=Morocco&powered_by=true&transfer_options_limit=10&transfer_options=MCR&disable_currency_selector=true&hide_form_extras=true&hide_external_links=true&campaign_id=1&promo_id=3879" charset="utf-8"><\/script><script>new MutationObserver(function(){document.documentElement.style.height="auto";window.parent.postMessage({tpemdHeight:document.body.scrollHeight},"*")}).observe(document.body,{childList:true,subtree:true,attributes:true})<\/script></body></html>'
-      style="width:100%;border:none;min-height:200px;overflow:hidden;"
-      loading="lazy"
-      title="Transfer booking widget"
-    ></iframe>
+  <h2>Les trois façons de le faire</h2>
+  <div class="table-wrap">
+    <table class="data">
+      <thead>
+        <tr><th>Option</th><th>Prix</th><th>Avantage</th><th>Limite</th></tr>
+      </thead>
+      <tbody>
+        <tr class="row-highlight">
+          <td><strong>Transfert privé réservé</strong></td>
+          <td class="num">dès 27 € / véhicule</td>
+          <td>Suivi du vol, bonne porte, prix fixe</td>
+          <td>À réserver avant de partir</td>
+        </tr>
+        <tr>
+          <td><strong>Taxi au rang</strong></td>
+          <td class="num">{airport.taxiFare.dayMad[0]}–{airport.taxiFare.dayMad[1]} MAD le jour</td>
+          <td>Immédiat, sans préparation</td>
+          <td>3 passagers max, tarif à confirmer, porte au choix du chauffeur</td>
+        </tr>
+        <tr>
+          <td><strong>Bus {airport.bus.line}</strong></td>
+          <td class="num">{airport.bus.oneWayMad} MAD / personne</td>
+          <td>Le moins cher, dépose à Jemaa el-Fna</td>
+          <td>Rien après {airport.bus.lastDeparture}, puis marche sans guide</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
-  <h2 id="taxi">Comment fonctionne la station de grands taxis</h2>
+  <h2>La bonne porte : l'information qui change tout</h2>
   <p>
-    La station de grands taxis est le rituel d'arrivée par défaut, et tout se passe bien une fois les
-    règles connues. Pas de compteur sur la course aéroport, le tarif se négocie, alors annoncez votre
-    hôtel et convenez d'un prix avant de mettre les bagages dans le coffre. Environ 200–250 MAD pour le
-    centre en journée, jusqu'à 300–350 MAD tard le soir. Prévoyez de la petite monnaie : les chauffeurs
-    rendent rarement sur un billet de 200 dirhams, et quelques pièces sont utiles pour celui qui aide
-    aux bagages. Tout le détail des tarifs et l'absence d'Uber figurent dans le
-    <a href={L('/agadir-airport-taxi/')}>guide des taxis de l'aéroport</a>.
-  </p>
-
-  <h3 id="reserver">Réserver un transfert vers Agadir</h3>
-  <TransferOptions
-    sub="aeroport-agadir-ville"
-    options={[
-      { provider: 'transfer', highlight: true, badge: 'Meilleur rapport', pitch: 'Une voiture à prix fixe vers votre hôtel de plage ou appartement à la marina, dès 20 €, avec suivi du vol et annulation gratuite jusqu\'à 24 h, souvent pas plus cher qu\'un taxi négocié de jour.', label: 'Voir les prix des transferts' },
-      { provider: 'transfer-vip', badge: 'Accueil personnalisé', pitch: 'Un chauffeur nommé, anglophone, qui vous accueille à l\'arrivée, l\'option la plus sereine pour un premier voyage ou une arrivée tardive sans envie de négocier.', label: 'Réserver un transfert VIP' },
-    ]}
-  />
-
-  <h2 id="quartier">À quel endroit d'Agadir allez-vous ?</h2>
-  <p>
-    « Agadir » recouvre beaucoup de terrain pour un chauffeur. La grande plage et la promenade, la
-    marina à l'extrémité nord et le quartier hôtelier de Founty sont tous à 25–40 minutes de l'aéroport,
-    au même tarif. Si vous ne savez pas dans quel coin se trouve votre hôtel, notre
-    <a href={L('/where-to-stay-agadir/')}>guide où dormir</a> détaille les quartiers, et la
-    <a href={L('/agadir-airport-hotels/')}>page des hôtels près de l'aéroport</a> couvre les rares
-    adresses utiles si vous avez un vol au lever du jour.
+    Les remparts de la médina sont percés de nombreuses portes, et être déposé à la mauvaise oblige à
+    traverser une partie du labyrinthe à pied. Demandez à votre riad la porte de référence et
+    transmettez-la telle quelle. Le tableau complet des portes et des secteurs qu'elles desservent est
+    sur notre page <a href={L('/guide-aeroport-marrakech/aller-a-la-medina/')}>aller à la médina</a>.
   </p>
 
   <div class="callout">
-    <span class="callout-label">Conseil local</span>
-    Retirez des espèces et prenez une SIM dans le hall d'arrivée avant de quitter le terminal. La
-    station de grands taxis veut des dirhams, pas des euros, et les distributeurs à l'intérieur offrent
-    un meilleur taux que les bureaux de change de la plage. Une SIM active permet aussi de partager la
-    localisation de l'hôtel au chauffeur si l'adresse est floue.
+    <span class="callout-label">Message type à envoyer la veille</span>
+    <p>
+      « Bonjour, nous arrivons le [date] par le vol [numéro], atterrissage à [heure]. Quelle porte
+      indiquer au chauffeur, et pouvez-vous prévoir quelqu'un avec une charrette pour les bagages ? »
+    </p>
   </div>
 
+  <h2>Arriver de nuit</h2>
   <p>
-    Vous voulez le pas-à-pas de l'après-atterrissage, file de passeports, livraison des bagages, où
-    attendent les chauffeurs ? Lisez le
-    <a href={L('/agadir-airport-guide/arrivals/')}>guide des arrivées</a>. Vous allez ailleurs d'abord ?
-    Voyez tout le <a href={L('/agadir-airport-transfers/')}>hub des transferts</a>, ou filez vers la
-    côte du surf avec le trajet <a href={L('/agadir-airport-to-taghazout/')}>aéroport → Taghazout</a>.
+    Une part importante des vols se pose après 21 h. À cette heure, le bus ne circule plus, le taxi
+    passe à {airport.taxiFare.nightMad[0]}–{airport.taxiFare.nightMad[1]} MAD, et la médina, peu
+    éclairée, se lit beaucoup moins facilement. C'est le scénario où le transfert réservé avec porteur
+    annoncé fait la plus grande différence. Marrakech reste une ville sûre la nuit — voyez
+    {' '}<a href={L('/securite-marrakech/')}>sécurité à Marrakech</a> — mais s'y repérer demande de la
+    lumière.
   </p>
 
-  <div class="disclosure-inline">
-    Certains liens ici sont des liens d'affiliation, réservez via ces liens et nous pouvons percevoir
-    une petite commission, sans surcoût pour vous. <a href={L('/affiliate-disclosure/')}>Comment ça fonctionne</a>.
-  </div>
+  <p class="small text-muted">
+    Tarifs vérifiés en {PRICES_CHECKED}, par véhicule sauf le bus. Comparez les options sur
+    {' '}<a href={L('/meilleur-transfert-aeroport-marrakech/')}>quel transfert choisir</a>.
+  </p>
 </RouteLayout>
