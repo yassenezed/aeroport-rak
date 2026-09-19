@@ -2,102 +2,147 @@
 import GuideLayout from '../layouts/GuideLayout.astro';
 import { getLocalizedPath } from '../i18n';
 import { photos } from '../data/images';
+import { PRICES_CHECKED } from '../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: 'Quand partir à Agadir', href: L('/agadir-weather-when-to-visit/') },
+  { name: "Quand partir", href: L("/quand-partir-marrakech/") },
 ];
+
 const toc = [
-  { label: 'Le climat en bref', id: 'climat' },
-  { label: 'Saison par saison', id: 'saisons' },
-  { label: 'La meilleure période', id: 'meilleure' },
-  { label: 'Surf ou soleil', id: 'surf-soleil' },
-  { label: 'La mer et les bagages', id: 'mer' },
+  { label: "Le climat en un coup d'œil", id: "climat" },
+  { label: "Le meilleur moment", id: "meilleur" },
+  { label: "L'été : la chaleur", id: "ete" },
+  { label: "L'hiver : frais mais lumineux", id: "hiver" },
+  { label: "Ramadan et événements", id: "ramadan" },
+  { label: "Calendrier des prix", id: "prix" },
+  { label: "Que mettre dans la valise", id: "valise" },
 ];
+
 const faqs = [
-  { q: 'Quel temps fait-il à Agadir ?', a: 'Doux et ensoleillé une grande partie de l’année. Agadir se niche dans une baie atlantique abritée, avec des étés chauds et secs et des hivers cléments, environ 20–22°C l’après-midi en janvier, autour de 27–28°C en été, et très peu de pluie. L’Atlantique garde la côte plus fraîche et plus venteuse que l’intérieur brûlant, ce qui en fait justement une destination de soleil hivernal.' },
-  { q: 'Quelle est la meilleure période pour visiter Agadir ?', a: 'Le printemps (avril–juin) et l’automne (septembre–octobre) sont le créneau idéal : chaud, ensoleillé et pas trop fréquenté. L’hiver (novembre–mars) est la saison classique du soleil d’hiver, doux, sec et lumineux, même si la mer est fraîche. Le plein été est chaud mais adouci par la brise marine. Choisissez selon votre envie : confort plage, surf ou soleil d’hiver pas cher.' },
-  { q: 'La mer est-elle assez chaude pour se baigner à Agadir ?', a: 'On peut se baigner, mais elle n’est jamais tiède, c’est l’Atlantique, pas la Méditerranée. La température de l’eau va d’environ 17–18°C en hiver à 21–22°C en fin d’été. Beaucoup se baignent toute l’année, mais l’entrée reste fraîche. Les surfeurs portent une combinaison 3/2 toute la saison.' },
-  { q: 'Pleut-il beaucoup à Agadir ?', a: 'Très peu. Agadir ne compte qu’une poignée de jours de pluie par an, presque tous entre novembre et mars, et il s’agit le plus souvent d’averses brèves plutôt que de déluges. Les étés sont quasiment secs. Cette régularité fait une bonne part du charme.' },
+  { q: "Quel est le meilleur mois pour visiter Marrakech ?", a: "Mars, avril, octobre et novembre offrent le meilleur compromis : 22 à 28 °C en journée, des nuits douces, un ciel presque toujours dégagé et des tarifs intermédiaires. Avril et mai sont splendides mais déjà plus chers ; novembre est plus calme et plus abordable." },
+  { q: "Quelle température fait-il à Marrakech en été ?", a: "En juillet et août, les maximales tournent autour de 37 à 40 °C et dépassent régulièrement 42 °C lors des vagues de chaleur, avec des nuits à 20-22 °C. La médina se visite tôt le matin ou en fin d'après-midi ; le reste du temps, on s'abrite près d'une piscine." },
+  { q: "Fait-il froid à Marrakech en hiver ?", a: "Les journées restent douces, autour de 18 à 20 °C au soleil, mais les nuits sont fraîches, parfois proches de 5 °C, et les riads sont rarement chauffés. Emportez des couches chaudes et demandez un chauffage d'appoint. La neige couvre les sommets de l'Atlas, visibles depuis les terrasses." },
+  { q: "Pleut-il beaucoup à Marrakech ?", a: "Peu : la ville reçoit environ 250 mm de pluie par an, surtout de novembre à mars, avec quelques averses franches par mois. Les journées entièrement pluvieuses sont rares, et le beau temps revient vite." },
+  { q: "Faut-il éviter le ramadan pour visiter Marrakech ?", a: "Ce n'est pas nécessaire, mais le rythme change : les restaurants ouvrent plus tard, certains commerces ferment en journée, et la vie s'anime après la rupture du jeûne, la nuit tombée. Les visites restent possibles ; prévoyez de manger discrètement en public. Le mois glisse d'une dizaine de jours par an et devrait débuter vers février 2027." },
+  { q: "Quand les vols et les hôtels sont-ils les moins chers ?", a: "Juillet-août, en raison de la chaleur, et janvier hors vacances. Les tarifs grimpent en février, à Pâques, aux ponts de mai et pour les fêtes de fin d'année. Voyez notre page vols pas chers pour la méthode de recherche." },
 ];
 ---
-<GuideLayout keywords="Quand Partir Agadir, que faire à Agadir, attractions Agadir" 
-  lang={lang}
-  title="Guide Quand Partir Agadir 2026 | Astuces & Incontournables"
-  description="Planifiez votre visite à Quand Partir à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
-  eyebrow="Agadir · Météo"
-  h1="Météo d’Agadir et meilleure période pour partir"
-  lede="Agadir est douce, sèche et ensoleillée presque toute l’année, d’où l’afflux des charters de soleil hivernal et des surfeurs. Voici le climat saison par saison, la meilleure période selon votre voyage, et ce qu’il faut vraiment emporter."
+<GuideLayout
+  keywords="météo Marrakech, quand partir Marrakech, climat Marrakech mois, ramadan Marrakech"
+  title={"Quand partir à Marrakech ? Météo mois par mois, saisons et prix (2026) | AirportRAK"}
+  description={"Le meilleur moment pour aller à Marrakech : températures mois par mois, pluie, chaleur d'été, hiver frais, ramadan, festivals et calendrier des prix des vols et des hôtels."}
+  eyebrow={"Marrakech · Climat"}
+  h1={"Quand partir à Marrakech ?"}
+  lede={"Marrakech se visite toute l'année, mais pas de la même façon : agréable au printemps et à l'automne, fraîche l'hiver, écrasante en juillet et août. Voici le calendrier mois par mois, croisé avec les prix."}
   breadcrumbs={breadcrumbs}
-  heroImage={photos['best-time-to-visit-agadir']}
+  heroImage={photos["marrakech-weather"]}
   toc={toc}
   faqs={faqs}
-  updated="juin 2026"
-
-  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+  updated={PRICES_CHECKED}
+  cta={{ heading: "Réservez avant la haute saison", text: "Février, Pâques et fin d'année partent tôt. Comparez les vols pour verrouiller vos dates.", provider: "flight", label: "Rechercher un vol" }}
 >
-  <p>
-    Agadir doit toute son économie touristique à sa météo. Blottie dans une baie abritée de l’Atlantique,
-    elle connaît des étés chauds et secs, des hivers exceptionnellement doux et très peu de pluie, ce
-    soleil régulier qui remplit les charters d’hiver venus de l’Europe du Nord grise. L’Atlantique est
-    l’autre moitié de l’histoire : le même courant frais et la même brise qui rendent la côte agréable en
-    été gardent la mer vive et alimentent la saison de surf. Voici le détail au fil de l’année.
-  </p>
+<h2 id="climat">Le climat en un coup d'œil</h2>
+<p>
+  Marrakech est une ville de plaine, à environ 450 mètres d'altitude, au pied du Haut Atlas : un climat
+  semi-aride, très ensoleillé, avec des étés brûlants et des hivers doux le jour et frais la nuit. La
+  pluie est rare, concentrée de novembre à mars. Les températures ci-dessous sont des ordres de
+  grandeur moyens.
+</p>
+<div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Mois</th><th>Max. (°C)</th><th>Min. (°C)</th><th>Ce qu'il faut savoir</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Janvier</strong></td><td class="num">18</td><td class="num">6</td><td>Nuits fraîches, neige sur l'Atlas, prix bas hors vacances</td></tr>
+      <tr><td><strong>Février</strong></td><td class="num">20</td><td class="num">7</td><td>Vacances scolaires, ciel clair, prix élevés</td></tr>
+      <tr class="row-highlight"><td><strong>Mars</strong></td><td class="num">23</td><td class="num">9</td><td>Très agréable, floraisons, tarifs intermédiaires</td></tr>
+      <tr class="row-highlight"><td><strong>Avril</strong></td><td class="num">26</td><td class="num">12</td><td>Presque parfait, Pâques est cher</td></tr>
+      <tr><td><strong>Mai</strong></td><td class="num">29</td><td class="num">15</td><td>Belles journées, chaleur qui s'installe</td></tr>
+      <tr><td><strong>Juin</strong></td><td class="num">33</td><td class="num">18</td><td>Déjà chaud, moins de monde</td></tr>
+      <tr><td><strong>Juillet</strong></td><td class="num">38</td><td class="num">21</td><td>Chaleur intense, prix les plus bas</td></tr>
+      <tr><td><strong>Août</strong></td><td class="num">38</td><td class="num">21</td><td>Idem, nuits chaudes</td></tr>
+      <tr><td><strong>Septembre</strong></td><td class="num">33</td><td class="num">18</td><td>La chaleur retombe, bon compromis</td></tr>
+      <tr class="row-highlight"><td><strong>Octobre</strong></td><td class="num">28</td><td class="num">14</td><td>Très agréable, ciel dégagé</td></tr>
+      <tr class="row-highlight"><td><strong>Novembre</strong></td><td class="num">22</td><td class="num">10</td><td>Doux, calme, tarifs modérés</td></tr>
+      <tr><td><strong>Décembre</strong></td><td class="num">18</td><td class="num">6</td><td>Frais, lumière superbe, fin d'année chère</td></tr>
+    </tbody>
+  </table>
+</div>
+<p class="small text-muted">Températures moyennes indicatives ; les extrêmes peuvent s'en écarter de plusieurs degrés.</p>
 
-  <h2 id="climat">Le climat en bref</h2>
-  <p>
-    Doux, lumineux et sec. En hiver, l’après-midi tourne autour de 20–22°C avec des soirées fraîches ; en
-    été, le mercure atteint 27–28°C sur la côte (et bien plus juste à l’intérieur). La pluie est rare, quelques jours, presque tous entre novembre et mars, et l’humidité faible. Le trait marquant est la
-    brise marine de l’après-midi venue de l’Atlantique, qui casse la chaleur estivale et explique pourquoi
-    la côte d’Agadir reste agréable quand l’intérieur, vers Taroudant, cuit.
-  </p>
+<h2 id="meilleur">Le meilleur moment</h2>
+<p>
+  <strong>Mars-avril et octobre-novembre</strong> réunissent tout : des journées à 22-28 °C idéales pour
+  marcher dans la médina, des nuits douces pour dîner en terrasse, et un ciel presque toujours bleu.
+  Mai et septembre sont de bonnes alternatives, un peu plus chauds. Si votre séjour comprend une
+  excursion à l'Ourika ou une randonnée en montagne, ces mois sont aussi ceux où les sentiers sont les
+  plus praticables.
+</p>
 
-  <h2 id="saisons">Saison par saison</h2>
-  <ul>
-    <li><strong>Hiver (nov.–mars)</strong>, la saison du soleil d’hiver. Doux, sec et ensoleillé pour des standards européens, maximales autour de 20–22°C, nuits fraîches. Idéal pour visiter et lézarder ; la mer est fraîche mais les spots tournent à plein pour les surfeurs.</li>
-    <li><strong>Printemps (avr.–juin)</strong>, sans doute la meilleure période polyvalente. Chaud, ensoleillé, confortable pour la plage, et pas encore au pic de foule ni de chaleur.</li>
-    <li><strong>Été (juil.–août)</strong>, chaud et fréquenté, mais la brise marine garde la côte plus supportable que l’intérieur. Pleine saison des vacances en famille ; la mer est au plus chaud.</li>
-    <li><strong>Automne (sept.–oct.)</strong>, mer chaude, temps stable et foule qui s’éclaircit. Excellent pour la plage comme pour le début de la saison de surf.</li>
-  </ul>
+<h2 id="ete">L'été : la chaleur, sans détour</h2>
+<p>
+  De juin à septembre, la chaleur devient le sujet numéro un. En juillet et août, on frôle
+  régulièrement 40 °C, avec des pointes bien au-delà lors des vagues de chaleur. La ville s'adapte : les
+  ruelles de la médina restent fraîches le matin, les commerçants ferment parfois l'après-midi, et la vie
+  reprend après 18 h.
+</p>
+<ul>
+  <li>Visitez <strong>de 8 h à 11 h</strong> et à partir de <strong>17 h</strong>.</li>
+  <li>Réservez un hébergement avec <strong>piscine et climatisation</strong> — le bassin d'un riad rafraîchit mais ne permet pas de nager.</li>
+  <li>Buvez plus que vous ne le pensez, et protégez la tête.</li>
+</ul>
+<p>
+  La contrepartie : les prix sont les plus bas de l'année, les sites sont moins fréquentés, et les
+  hôtels de l'<a href={L('/ou-dormir-marrakech/')}>Hivernage et de la Palmeraie</a> proposent leurs
+  meilleurs tarifs.
+</p>
 
-  <h2 id="meilleure">La meilleure période</h2>
-  <p>
-    Il n’y a pas de mauvaise période, seulement la bonne pour votre voyage. Pour le confort général,
-    venez au printemps (avril–juin) ou au début de l’automne (septembre–octobre) : chaud, ensoleillé,
-    foule gérable. Pour du soleil fiable et bon marché quand il fait froid chez vous, la fenêtre
-    novembre–mars est toute la raison d’être d’Agadir, mais ne comptez pas nager longtemps. Pour les
-    familles qui veulent la mer la plus chaude et l’animation des plages, le plein été fait l’affaire, la
-    brise rendant la côte plus agréable que les chiffres ne le laissent croire. Quoi qu’il en soit, cela
-    se prépare en réglant vos <a href={L('/flights-to-agadir/')}>vols pour Agadir</a>, les prix varient
-    fort selon la saison.
-  </p>
+<h2 id="hiver">L'hiver : frais mais lumineux</h2>
+<p>
+  De décembre à février, les après-midi sont doux au soleil (18 à 20 °C) et le ciel est superbe, avec les
+  sommets enneigés de l'Atlas en toile de fond. Mais le soir tombe tôt, dès 18 h, et la fraîcheur
+  s'installe : les riads, conçus pour la chaleur, ne sont pas chauffés et le carrelage garde le froid.
+  Voyez notre page <a href={L('/marrakech-en-hiver/')}>Marrakech en hiver</a> pour s'y préparer.
+</p>
 
-  <h2 id="surf-soleil">Surf ou soleil</h2>
-  <p>
-    Les deux grandes raisons de venir tirent dans des sens un peu opposés. Les amateurs de bronzage et
-    les familles veulent le temps chaud et stable de la fin du printemps au début de l’automne, quand la
-    mer est la plus douce. Les surfeurs veulent l’autre bout de l’année : les houles atlantiques qui
-    arrivent de septembre à avril sont ce qui réveille les spots sur la côte. Elles se recoupent aux
-    mi-saisons, octobre et mars offrent à la fois des journées chaudes et des vagues surfables. Si vous
-    venez pour les vagues, lisez le <a href={L('/surfing-taghazout-guide/')}>guide du surf à Taghazout</a>.
-  </p>
+<h2 id="ramadan">Ramadan et événements</h2>
+<p>
+  Le ramadan se déplace d'une dizaine de jours chaque année ; la prochaine édition devrait débuter vers
+  février 2027. En journée, une partie des restaurants ferme ou ouvre tard, l'alcool est plus difficile
+  à trouver et le rythme ralentit ; à la tombée de la nuit, la ville s'anime autour de la rupture du
+  jeûne, et l'ambiance est particulière. Mangez et buvez discrètement dans les lieux publics.
+</p>
+<p>
+  Parmi les rendez-vous de l'année : le Marathon de Marrakech en janvier, le Festival international du
+  film à la fin de l'automne, et diverses manifestations culturelles et musicales tout au long de l'année.
+  Vérifiez les dates avant de réserver, car elles varient.
+</p>
 
-  <h2 id="mer">La mer et que mettre dans la valise</h2>
-  <p>
-    Ici l’Atlantique se baigne mais ne se réchauffe jamais vraiment, environ 17–18°C en hiver, jusqu’à
-    21–22°C en fin d’été. L’entrée reste toujours vive. Préparez-vous au soleil et à la brise : couches
-    légères, maillot, crème solaire et une veste ou un pull léger pour les soirées fraîches, même en été.
-    En hiver, prévoyez plus chaud pour la nuit. Les surfeurs tablent sur une combinaison 3/2 toute
-    l’année, facile à louer sur la côte.
-  </p>
+<h2 id="prix">Calendrier des prix</h2>
+<div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Période</th><th>Vols et hôtels</th><th>Notre avis</th></tr></thead>
+    <tbody>
+      <tr><td>Juillet – août</td><td>Les plus bas</td><td>Pour ceux qui supportent la chaleur</td></tr>
+      <tr><td>Janvier (hors vacances)</td><td>Bas</td><td>Frais, calme, bonne affaire</td></tr>
+      <tr><td>Mars, mai, octobre, novembre</td><td>Moyens</td><td>Le meilleur rapport confort-prix</td></tr>
+      <tr><td>Février, avril (Pâques), mai (ponts)</td><td>Élevés</td><td>Belle météo, à réserver tôt</td></tr>
+      <tr><td>Fin décembre</td><td>Les plus élevés</td><td>Réservez plusieurs mois avant</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>
+  Pour la méthode de recherche des billets, voyez
+  <a href={L('/vols-marrakech/pas-chers/')}>vols pas chers pour Marrakech</a>.
+</p>
 
-  <div class="callout">
-    <span class="callout-label">Le verdict express</span>
-    Meilleure période globale : avril–juin ou septembre–octobre. Soleil le moins cher : novembre–mars
-    (mer fraîche). Baignade la plus chaude : juillet–août. Meilleur compromis surf-et-soleil : octobre et
-    mars.
-  </div>
+<h2 id="valise">Que mettre dans la valise</h2>
+<ul>
+  <li><strong>Toute l'année :</strong> lunettes de soleil, crème solaire, chaussures fermées confortables, une tenue couvrant épaules et genoux.</li>
+  <li><strong>Été :</strong> tissus légers en fibres naturelles, chapeau, gourde.</li>
+  <li><strong>Hiver :</strong> pull, veste, chaussettes chaudes : les soirées et les riads sont frais.</li>
+  <li><strong>Atlas :</strong> une couche supplémentaire, même l'été, dès que l'on monte.</li>
+</ul>
 </GuideLayout>

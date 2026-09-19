@@ -1,94 +1,120 @@
 ---
 import GuideLayout from '../layouts/GuideLayout.astro';
 import { getLocalizedPath } from '../i18n';
-import { PRICES_CHECKED } from '../data/airport';
 import { photos } from '../data/images';
+import { PRICES_CHECKED } from '../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: 'Guide de voyage Agadir', href: L('/agadir-travel-guide/') },
-  { name: 'Balade en chameau et Quad', href: L('/agadir-camel-ride-quad/') },
+  { name: "Chameau, quad et buggy", href: L("/balade-chameau-quad-marrakech/") },
 ];
 
 const toc = [
-  { label: 'Chameau vs Quad', id: 'camel-vs-quad' },
-  { label: 'Où se déroulent les circuits ?', id: 'locations' },
-  { label: 'Ce qu\'il faut porter et apporter', id: 'what-to-bring' },
-  { label: 'Prix et Réservation', id: 'prices' },
+  { label: "La Palmeraie : dromadaire", id: "palmeraie" },
+  { label: "Agafay : quad et buggy", id: "agafay" },
+  { label: "Combien ça coûte", id: "prix" },
+  { label: "Choisir un opérateur", id: "operateur" },
+  { label: "Sécurité", id: "securite" },
+  { label: "Bien s'équiper", id: "equipement" },
 ];
 
 const faqs = [
-  { q: 'Est-ce sûr pour les enfants ?', a: 'Oui, les balades en chameau sont très lentes et sûres pour les enfants de tous âges. Pour le quad, les enfants de moins de 16 ans doivent généralement monter en tant que passager avec un conducteur adulte, plutôt que de conduire leur propre quad.' },
-  { q: 'Ai-je besoin d\'un permis de conduire pour le quad ?', a: 'Non. Les quads utilisés pour ces excursions sont entièrement automatiques et bridés à des vitesses sûres. Vous recevrez un briefing complet sur la sécurité et une séance d\'entraînement avant de partir. Aucun permis n\'est requis.' },
-  { q: 'Allons-nous rouler sur la plage ?', a: 'En général, non. Pour protéger les principales plages touristiques et les baigneurs, les quads et les chameaux sont limités à des zones spécifiques. La plupart des excursions traversent les forêts d\'eucalyptus, les dunes de sable et les villages berbères ruraux juste à l\'extérieur de la ville.' },
-  { q: 'Puis-je faire les deux en une journée ?', a: 'Absolument. De nombreux voyagistes proposent des forfaits "combinés" où vous passez 2 heures sur un quad puis passez à une randonnée à dos de chameau de 2 heures, se terminant souvent par une pause thé à la menthe traditionnelle.' },
+  { q: "Combien de temps dure une balade en dromadaire à Marrakech ?", a: "Entre 30 minutes et 1 h 30 dans la Palmeraie, en général suivie d'un thé à la menthe. Les formules de coucher de soleil sont les plus prisées et se réservent à l'avance en haute saison." },
+  { q: "Quelle différence entre quad et buggy ?", a: "Le quad se conduit debout sur un véhicule à guidon, avec une prise en main sportive ; le buggy est une petite voiture à arceaux, à deux ou quatre places, plus stable et souvent préféré par les couples ou les familles. Les deux se font sur les pistes du désert d'Agafay, encadrés par un guide." },
+  { q: "Quel est l'âge minimum pour conduire un quad ?", a: "Cela varie selon l'opérateur, généralement autour de 16 ans pour conduire seul, parfois moins pour les modèles enfants ou en passager. Les mineurs doivent être accompagnés. Vérifiez les conditions à la réservation et fuyez ceux qui n'en posent aucune." },
+  { q: "Faut-il un permis pour le quad ou le buggy ?", a: "Un permis de conduire est demandé pour le buggy chez la plupart des opérateurs, et souvent pour le quad. Emportez-le. Certains opérateurs acceptent le quad sans permis avec une prise en main, ce qui doit vous alerter si aucune consigne de sécurité n'est donnée." },
+  { q: "Ces activités sont-elles dangereuses ?", a: "Pas si l'équipement est en bon état, si le guide est sérieux et si vous respectez les consignes. Le risque vient des opérateurs qui font l'économie de casques, d'assurance ou de briefing. Choisissez sur les avis récents, et exigez casque, foulard et briefing avant de partir." },
+  { q: "Quelle est la meilleure heure pour ces sorties ?", a: "En fin d'après-midi, pour la lumière et la chaleur moins forte, avec coucher de soleil sur les pistes. En été, évitez le milieu de la journée : 40 °C et poussière sur un quad, c'est éprouvant." },
 ];
 ---
-
-<GuideLayout keywords="Balade Chameau Quad Agadir, que faire à Agadir, attractions Agadir" 
-  lang={lang}
-  title="Guide Balade Chameau Quad Agadir 2026 | Astuces & Incontournables"
-  description="Planifiez votre visite à Balade Chameau Quad à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
-  eyebrow="Excursions & Aventure"
-  h1="Balade en chameau et Quad à Agadir : Le guide complet"
-  lede="Si vous souhaitez faire une pause de la plage, les paysages ruraux entourant Agadir offrent un terrain de jeu parfait pour l'aventure. Des paisibles randonnées à dos de chameau au coucher du soleil à travers les forêts d'eucalyptus jusqu'aux montées d'adrénaline en quad dans les dunes, voici tout ce que vous devez savoir pour réserver une excursion."
+<GuideLayout
+  keywords="chameau Marrakech, quad Agafay, buggy Marrakech, balade Palmeraie, activités désert"
+  title={"Chameau, quad et buggy à Marrakech : Palmeraie et Agafay, prix et sécurité (2026) | AirportRAK"}
+  description={"Balade en dromadaire dans la Palmeraie, quad et buggy dans le désert d'Agafay : durées, prix indicatifs, choisir un opérateur, sécurité, âge minimum, horaires et pièges à éviter."}
+  eyebrow={"Marrakech · Activités"}
+  h1={"Chameau, quad et buggy à Marrakech"}
+  lede={"La Palmeraie pour la balade tranquille, Agafay pour la poussière et l'adrénaline. Voici ce que recouvrent ces sorties, ce qu'elles coûtent, et comment choisir un opérateur qui prend la sécurité au sérieux."}
   breadcrumbs={breadcrumbs}
-  heroImage={photos['souss-coast']}
+  heroImage={photos["camel-quad-marrakech"]}
   toc={toc}
   faqs={faqs}
   updated={PRICES_CHECKED}
-  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+  cta={{ heading: "Réservez une sortie avec un opérateur fiable", text: "Comparez les formules avec pick-up depuis votre hôtel, casque, assurance et prix affichés d'avance.", provider: "guide", label: "Voir les activités" }}
 >
-  <p>
-    Alors qu'Agadir est célèbre pour son immense plage de sable et ses hôtels de villégiature, la véritable aventure marocaine commence à quelques kilomètres seulement des limites de la ville. La région du Souss se caractérise par des dunes de sable arides, des réserves d'arganiers et des villages ruraux traditionnels — qui se prêtent parfaitement à l'exploration à dos de chameau ou en quad.
-  </p>
-  <p>
-    Ces excursions d'une demi-journée sont incroyablement populaires, très abordables et offrent un contraste saisissant avec la zone touristique moderne d'Agadir.
-  </p>
+<h2 id="palmeraie">La Palmeraie : le dromadaire, tranquille</h2>
+<p>
+  Au nord-est de la ville, la Palmeraie aligne des centaines de milliers de palmiers, des resorts et des
+  villas. Les balades en dromadaire y durent de 30 minutes à une heure et demie, à une allure lente, sur
+  des sentiers entre les palmiers. C'est une activité facile, sans âge minimal exigeant, particulièrement
+  adaptée aux familles. La formule du coucher de soleil, avec un thé à la menthe au retour, est la plus
+  prisée.
+</p>
 
-  <h2 id="camel-vs-quad">Balades en Chameau vs Quad : Que choisir ?</h2>
-  <p>
-    Le choix dépend finalement du rythme que vous préférez.
-  </p>
-  <p>
-    <strong>Balades en chameau :</strong> Une randonnée à dos de chameau est lente, paisible et rythmée. C'est une expérience marocaine emblématique et offre beaucoup de temps pour prendre des photos et s'imprégner du paysage. C'est vivement recommandé pour les familles avec de jeunes enfants ou toute personne à la recherche d'un après-midi relaxant. Le coucher du soleil est le meilleur moment pour y aller.
-  </p>
-  <p>
-    <strong>Quad et Buggys :</strong> Si vous préférez la vitesse et l'adrénaline, louer un quad (ATV) ou un buggy des dunes est la voie à suivre. Vous couvrirez beaucoup plus de terrain, éclaboussant dans la boue, naviguant sur des pistes sablonneuses et soulevant la poussière. C'est plus bruyant, plus salissant et immensément amusant.
-  </p>
+<h2 id="agafay">Agafay : quad et buggy dans le désert</h2>
+<p>
+  À une quarantaine de kilomètres au sud-ouest, le plateau d'Agafay est un désert de cailloux et de
+  collines douces, sans dunes, mais aux couleurs superbes au crépuscule, avec l'Atlas en toile de fond.
+  C'est le terrain de jeu des quads et des buggys. Une sortie comprend généralement le transfert depuis
+  l'hôtel, un briefing, deux ou trois heures de piste, et un thé sous une tente. Voyez
+  <a href={L('/excursion-desert-agafay/')}>désert d'Agafay</a> pour combiner avec un dîner ou une nuit en
+  camp.
+</p>
+<div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Activité</th><th>Lieu</th><th>Durée</th><th>Effort</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Dromadaire</strong></td><td>Palmeraie</td><td>30 min – 1 h 30</td><td>Aucun</td></tr>
+      <tr><td><strong>Buggy</strong></td><td>Agafay</td><td>2 – 3 h</td><td>Modéré, voiture stable</td></tr>
+      <tr><td><strong>Quad</strong></td><td>Agafay ou Palmeraie</td><td>1 h – 3 h</td><td>Physique, poussière</td></tr>
+      <tr><td><strong>Dromadaire au coucher du soleil</strong></td><td>Agafay</td><td>1 h + dîner</td><td>Aucun</td></tr>
+    </tbody>
+  </table>
+</div>
 
-  <h2 id="locations">Où se déroulent les excursions ?</h2>
-  <p>
-    Pour des raisons de sécurité et d'environnement, les excursions ne sont pas autorisées sur la plage touristique principale d'Agadir. Au lieu de cela, les voyagistes viendront vous chercher à votre hôtel et vous conduiront environ 15 à 20 minutes en dehors de la ville jusqu'aux points de départ.
-  </p>
-  <p>
-    La plupart des itinéraires vous font traverser la <strong>forêt d'eucalyptus de Bensergao</strong>, jusqu'aux <strong>dunes de sable pré-sahariennes</strong>, et le long des rives du fleuve Souss, où vous pourrez apercevoir des flamants roses migrateurs. Vous traverserez également de petits villages berbères, et presque toutes les excursions incluent un arrêt dans une maison locale pour un thé à la menthe traditionnel et des biscuits marocains.
-  </p>
+<h2 id="prix">Combien ça coûte</h2>
+<p>
+  Les prix varient beaucoup selon la formule, la durée, le nombre de personnes et l'inclusion du
+  transfert. À titre indicatif : une balade en dromadaire se situe en général entre 150 et 400 MAD par
+  personne, une sortie de quad ou de buggy de deux à trois heures entre 400 et 900 MAD selon le véhicule
+  et le nombre de passagers. Les formules avec dîner en désert ajoutent quelques centaines de dirhams.
+  Demandez toujours ce qui est inclus : transfert, casque, assurance, boissons.
+</p>
 
-  <h2 id="what-to-bring">Ce qu'il faut porter et apporter</h2>
+<h2 id="operateur">Choisir un opérateur</h2>
+<div class="callout">
+  <span class="callout-label">Les trois questions à poser</span>
   <p>
-    Selon l'activité choisie, des vêtements appropriés rendront l'expérience beaucoup plus confortable.
+    Quel équipement est fourni, avec quelle assurance ? Combien de participants par guide ? Le prix
+    comprend-il le transfert ? Un opérateur sérieux répond sans hésiter, propose un briefing et affiche
+    des avis récents.
   </p>
-  <ul>
-    <li>
-      <strong>Pour les balades en chameau :</strong> Portez des pantalons longs pour éviter que les poils rêches du chameau n'irritent vos jambes. Des chaussures fermées sont recommandées, et les lunettes de soleil et la crème solaire sont essentielles.
-    </li>
-    <li>
-      <strong>Pour le Quad :</strong> Vous allez <em>forcément</em> vous salir et prendre la poussière. Portez des vêtements que vous ne craignez pas de salir. Le voyagiste fournira un casque et des lunettes de protection, mais un bandana ou une écharpe pour couvrir votre bouche et votre nez est vivement recommandé pour éviter d'avaler la poussière. Les chaussures fermées sont obligatoires.
-    </li>
-  </ul>
+</div>
+<ul>
+  <li><strong>Évitez</strong> les rabatteurs de rue et de médina, qui prennent une commission et vous emmènent chez le moins regardant.</li>
+  <li><strong>Préférez</strong> une réservation en amont, par un hébergement ou une plateforme avec avis.</li>
+  <li><strong>Vérifiez</strong> l'état des véhicules avant de monter : freins, pneus, casques propres.</li>
+</ul>
 
-  <h2 id="prices">Prix et Réservation</h2>
-  <p>
-    Ces excursions sont proposées à des prix très raisonnables par rapport aux destinations européennes.
-  </p>
-  <p>
-    Une <strong>balade en chameau</strong> standard de 2 heures coûte généralement entre 20 € et 25 € par personne. Une session de <strong>quad</strong> de 2 heures coûte environ 35 € à 45 € pour un seul conducteur (les passagers sont généralement moins chers).
-  </p>
-  <p>
-    <strong>Les forfaits combinés</strong> (2 heures de quad + 2 heures de chameau) offrent le meilleur rapport qualité-prix et coûtent généralement entre 55 € et 65 €. Nous vous recommandons vivement de les réserver en ligne à l'avance pour vous assurer que la prise en charge à l'hôtel soit organisée sans problème.
-  </p>
+<h2 id="securite">Sécurité</h2>
+<p>
+  Le casque est obligatoire, et non négociable. Portez des vêtements longs, des chaussures fermées et un
+  foulard ou un masque contre la poussière. Respectez le rythme du guide et ne quittez pas le groupe.
+  Vérifiez que votre assurance voyage couvre ces activités : beaucoup de contrats les excluent ou exigent
+  une option sport. Pour l'ensemble des précautions en ville, voyez
+  <a href={L('/securite-marrakech/')}>sécurité à Marrakech</a>.
+</p>
+
+<h2 id="equipement">Bien s'équiper</h2>
+<ul>
+  <li>Pantalon léger, manches longues, chaussures fermées.</li>
+  <li>Lunettes de soleil ou de protection, chapeau ou casquette pour la balade à dos de dromadaire.</li>
+  <li>Foulard ou cheich contre la poussière, surtout à quad.</li>
+  <li>Crème solaire, eau, permis de conduire, une pièce d'identité.</li>
+</ul>
+<p>
+  Pour construire une journée complète, voyez
+  <a href={L('/que-faire-marrakech/')}>que faire à Marrakech</a>.
+</p>
 </GuideLayout>

@@ -2,109 +2,123 @@
 import GuideLayout from '../layouts/GuideLayout.astro';
 import { getLocalizedPath } from '../i18n';
 import { photos } from '../data/images';
+import { PRICES_CHECKED } from '../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: 'Où manger à Agadir', href: L('/best-restaurants-agadir/') },
+  { name: "Où manger", href: L("/restaurants-marrakech/") },
 ];
+
 const toc = [
-  { label: 'Le port de pêche (fruits de mer)', id: 'port' },
-  { label: 'La Marina (chic et vue mer)', id: 'marina' },
-  { label: 'Le centre-ville et Talborjt', id: 'centre' },
-  { label: 'Le front de mer (touristique)', id: 'plage' },
-  { label: 'Plats marocains à goûter', id: 'plats' },
+  { label: "Les plats à goûter", id: "plats" },
+  { label: "Les quartiers pour manger", id: "quartiers" },
+  { label: "Les prix", id: "prix" },
+  { label: "Bien choisir", id: "choisir" },
+  { label: "Boire", id: "boire" },
+  { label: "Ramadan et horaires", id: "ramadan" },
 ];
+
 const faqs = [
-  { q: 'Où manger le meilleur poisson à Agadir ?', a: 'Le port de pêche (les gargotes du port) est l\'endroit le plus authentique et le moins cher pour manger du poisson frais grillé. Choisissez votre poisson sur l\'étal, négociez légèrement le prix et installez-vous sur des bancs. Pour une expérience plus chic, les restaurants de la Marina proposent d\'excellents fruits de mer avec vue.' },
-  { q: 'Combien coûte un repas au restaurant à Agadir ?', a: 'Dans un quartier populaire comme Talborjt, un tajine ou un couscous coûte environ 40 à 60 MAD (4-6 €). Sur le front de mer touristique, comptez entre 100 et 200 MAD (10-20 €) pour un plat principal. Les restaurants haut de gamme de la Marina ou des hôtels facturent des prix européens, souvent autour de 200 à 400 MAD (20-40 €).' },
-  { q: 'Peut-on boire de l\'alcool dans les restaurants à Agadir ?', a: 'Seuls les établissements possédant une licence vendent de l\'alcool. On les trouve principalement sur le front de mer, à la Marina, et dans les hôtels. Les petits restaurants traditionnels du centre (Talborjt) et du port n\'en servent pas.' },
-  { q: 'Faut-il laisser un pourboire au restaurant au Maroc ?', a: 'Oui, c\'est la coutume. Dans les cafés ou petits restos, laissez quelques dirhams (5-10 MAD). Dans les restaurants plus touristiques ou haut de gamme, un pourboire de 10 % de l\'addition est apprécié si le service était bon.' },
+  { q: "Quel est le plat typique de Marrakech ?", a: "La tanjia : de la viande de bœuf ou d'agneau cuite lentement dans une jarre en terre, autrefois déposée dans les braises des hammams. C'est la spécialité de la ville, souvent servie en portions généreuses. À goûter aussi, le tajine, la pastilla — feuilleté sucré-salé au pigeon ou au poulet — et le méchoui d'agneau." },
+  { q: "Combien coûte un repas à Marrakech ?", a: "Un repas de rue ou dans une gargote se paie autour de 30 à 60 MAD ; un restaurant moyen en médina ou à Guéliz entre 120 et 250 MAD par personne ; une table plus haut de gamme dépasse 300 MAD. Les terrasses touristiques de la place et des souks se situent en général dans le haut de la fourchette." },
+  { q: "L'eau et les glaçons sont-ils sûrs ?", a: "Buvez de l'eau en bouteille scellée. Dans les restaurants sérieux et les hôtels, les glaçons sont en général faits avec de l'eau filtrée ; ceux des stands de rue sont moins sûrs. Préférez les plats cuits à la commande et les fruits que vous épluchez vous-même." },
+  { q: "Trouve-t-on de l'alcool dans les restaurants ?", a: "Dans les hôtels, certains restaurants de Guéliz et de l'Hivernage, et quelques adresses de la médina possédant une licence. Beaucoup de restaurants de médina n'en servent pas : renseignez-vous avant de réserver si c'est important." },
+  { q: "Faut-il laisser un pourboire ?", a: "Oui, c'est l'usage : 10 % environ dans les restaurants où l'on est servi à table, quelques dirhams dans un café ou pour un serveur de stand. Vérifiez que le service n'est pas déjà compté sur l'addition." },
+  { q: "Quel plat le vendredi ?", a: "Le couscous. C'est la tradition familiale du jour de prière, et beaucoup de restaurants le proposent en spécialité du vendredi. Il est servi avec sept légumes, de la viande et du bouillon." },
 ];
 ---
-<GuideLayout keywords="Restaurants Agadir, que faire à Agadir, attractions Agadir" 
-  lang={lang}
-  title="Guide Restaurants Agadir 2026 | Astuces & Incontournables"
-  description="Planifiez votre visite à Restaurants à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
-  eyebrow="Agadir · Gastronomie"
-  h1="Où manger à Agadir : Les bons coins"
-  lede="Agadir est le premier port de pêche du Maroc, ce qui en fait un paradis pour les fruits de mer, mais la ville offre aussi une excellente cuisine traditionnelle si l'on sait où chercher. Des grillades enfumées du port aux tables chics de la Marina, voici comment bien manger à Agadir."
+<GuideLayout
+  keywords="restaurants Marrakech, tanjia, cuisine marocaine, terrasses médina, manger Marrakech"
+  title={"Où manger à Marrakech : plats à goûter, quartiers, prix et pièges (2026) | AirportRAK"}
+  description={"Manger à Marrakech : tanjia, tajine, pastilla, mechoui, harira, stands de Jemaa el-Fna, terrasses de la médina, restaurants de Guéliz. Prix, hygiène, alcool, ramadan et réflexes pour bien choisir."}
+  eyebrow={"Marrakech · Gastronomie"}
+  h1={"Où manger à Marrakech"}
+  lede={"Des stands de rue à quelques dirhams aux tables de palace, Marrakech mange à tous les prix. Voici ce qu'il faut goûter, où le trouver, et comment éviter les restaurants pensés pour les groupes."}
   breadcrumbs={breadcrumbs}
-  heroImage={photos['agadir-marina']}
+  heroImage={photos["restaurants-marrakech"]}
   toc={toc}
   faqs={faqs}
-  updated="Juin 2026"
-  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+  updated={PRICES_CHECKED}
+  cta={{ heading: "Un cours de cuisine pour comprendre", text: "Une demi-journée du marché aux fourneaux : la meilleure façon d'apprivoiser la cuisine marocaine.", provider: "guide", label: "Voir les activités" }}
 >
-  <p>
-    Savoir où manger à Agadir fait toute la différence entre un séjour standard de station balnéaire et une
-    véritable expérience marocaine. La règle d'or est simple : plus vous vous éloignez du sable, plus les
-    prix baissent et plus la cuisine gagne en authenticité. Mais chaque quartier a son charme, que vous
-    cherchiez un dîner romantique au coucher du soleil ou un déjeuner sur le pouce à quelques dirhams.
-  </p>
+<h2 id="plats">Les plats à goûter</h2>
+<div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Plat</th><th>Ce que c'est</th><th>Où</th></tr></thead>
+    <tbody>
+      <tr class="row-highlight"><td><strong>Tanjia</strong></td><td>Viande cuite des heures dans une jarre en terre, spécialité marrakchie</td><td>Restaurants traditionnels, gargotes</td></tr>
+      <tr><td><strong>Tajine</strong></td><td>Ragoût mijoté à l'étouffée : poulet-citron, agneau-pruneaux, kefta-œuf</td><td>Partout</td></tr>
+      <tr><td><strong>Pastilla</strong></td><td>Feuilleté sucré-salé au pigeon ou au poulet, cannelle et sucre glace</td><td>Restaurants de médina</td></tr>
+      <tr><td><strong>Méchoui</strong></td><td>Agneau rôti, à la découpe, souvent servi avec du cumin</td><td>Échoppes spécialisées</td></tr>
+      <tr><td><strong>Couscous</strong></td><td>Semoule, sept légumes, viande ; plat du vendredi</td><td>Le vendredi surtout</td></tr>
+      <tr><td><strong>Harira</strong></td><td>Soupe de tomates, lentilles et pois chiches ; rupture du jeûne</td><td>Stands, cafés, ramadan</td></tr>
+      <tr><td><strong>Msemen, baghrir</strong></td><td>Crêpes feuilletées ou à mille trous, avec miel et beurre</td><td>Petit-déjeuner</td></tr>
+      <tr><td><strong>Thé à la menthe</strong></td><td>Thé vert, menthe, sucre : le rituel d'hospitalité</td><td>Partout, gratuit chez les hôtes</td></tr>
+    </tbody>
+  </table>
+</div>
 
-  <h2 id="port">Le port de pêche (L'authentique)</h2>
-  <p>
-    Agadir abrite le plus grand port de pêche aux sardines du monde. Juste à côté de l'entrée du port, vous
-    trouverez une rangée de petites gargotes numérotées. C'est bruyant, rempli de fumée, un peu insistant,
-    mais c'est là qu'on mange <strong>le poisson le plus frais de la ville</strong>.
-  </p>
-  <p>
-    Le fonctionnement : pointez du doigt les dorades, calamars, crevettes ou soles sur l'étal de glace.
-    Demandez le prix, asseyez-vous sur une table couverte de papier, et attendez qu'on vous serve les fruits
-    de mer grillés avec une salade marocaine, du pain frais et des frites. C'est l'expérience locale par
-    excellence, parfaite pour le déjeuner.
-  </p>
+<h2 id="quartiers">Les quartiers pour manger</h2>
+<h3>Jemaa el-Fna : l'expérience</h3>
+<p>
+  Les stands du soir sont un rite d'initiation : brochettes, merguez, poisson frit, escargots, soupes.
+  Convient pour un dîner rapide et vivant, moins pour un repas tranquille. Lisez nos conseils sur
+  <a href={L('/jemaa-el-fna/')}>la place</a> avant de vous asseoir.
+</p>
+<h3>La médina : les terrasses et les cours</h3>
+<p>
+  De nombreux restaurants sont installés dans des riads, avec cour ombragée ou terrasse sur les toits.
+  Le cadre est souvent plus travaillé que l'assiette : lisez les avis récents. Réservez pour le
+  coucher du soleil, quand les terrasses se remplissent.
+</p>
+<h3>Guéliz : la vie quotidienne</h3>
+<p>
+  Restaurants de quartier fréquentés par les Marrakchis, cuisine internationale, bistrots et
+  pâtisseries. C'est là qu'on trouve le plus d'options avec alcool et des cartes plus variées.
+</p>
+<h3>L'Hivernage et la Palmeraie : la table d'hôtel</h3>
+<p>
+  Restaurants gastronomiques et tables de palace, avec des prix dans un autre registre. À privilégier
+  pour une soirée particulière.
+</p>
 
-  <h2 id="marina">La Marina (Chic et vue mer)</h2>
-  <p>
-    À l'extrémité nord de la plage, la Marina est le quartier huppé d'Agadir. Les yachts y sont amarrés,
-    l'architecture est soignée, et les restaurants sont alignés face à l'eau. C'est l'endroit idéal pour un
-    <strong>dîner élégant ou pour manger des sushis et des fruits de mer raffinés</strong>.
-  </p>
-  <p>
-    Les prix ici sont similaires à ceux de l'Europe. Vous y trouverez d'excellents restaurants de poisson
-    comme <em>Pure Passion</em>, des cafés chics pour le petit-déjeuner, et des établissements servant
-    de l'alcool (bières locales et vins marocains) en terrasse. Idéal au coucher du soleil.
-  </p>
+<h2 id="prix">Les prix, sans détour</h2>
+<ul>
+  <li><strong>Stand ou gargote :</strong> 30 à 60 MAD.</li>
+  <li><strong>Restaurant moyen, médina ou Guéliz :</strong> 120 à 250 MAD par personne.</li>
+  <li><strong>Table haut de gamme :</strong> au-delà de 300 MAD par personne.</li>
+  <li><strong>Jus d'orange pressé, café, thé :</strong> quelques dirhams à quelques dizaines selon l'emplacement — la vue se paie.</li>
+</ul>
 
-  <h2 id="centre">Le centre-ville et Talborjt (Local et pas cher)</h2>
+<h2 id="choisir">Bien choisir</h2>
+<div class="callout">
+  <span class="callout-label">Quatre critères simples</span>
   <p>
-    Si vous cherchez la véritable cuisine marocaine de tous les jours (tajines, couscous, harira, pastilla),
-    fuyez le front de mer et dirigez-vous vers le quartier de <strong>Talborjt</strong> ou le <strong>Nouveau
-    Talborjt</strong>, à 15 minutes de marche de la plage.
+    Regardez qui mange : des Marrakchis, c'est bon signe. Méfiez-vous des rabatteurs qui vous
+    interpellent à l'entrée d'une ruelle. Demandez la carte avec les prix avant de vous asseoir. Et
+    évitez les restaurants qui n'affichent que des menus de groupe.
   </p>
-  <p>
-    Autour de la place Lahcen Tamri, une myriade de petits restaurants servent des plats copieux pour une
-    fraction du prix de la zone touristique. Un tajine de poulet au citron ou de bœuf aux pruneaux vous
-    coûtera autour de 50 MAD (5 €). C'est simple, délicieux, fréquenté par les locaux, et l'alcool n'y est pas
-    servi. Un incontournable pour les petits budgets.
-  </p>
+</div>
+<p>
+  Côté hygiène : préférez ce qui est cuit à la commande, évitez les salades crues lavées à l'eau du
+  robinet si votre estomac est fragile, et ne vous laissez pas presser. Voyez aussi notre page
+  <a href={L('/securite-marrakech/')}>sécurité et santé</a>.
+</p>
 
-  <h2 id="plage">Le front de mer (Touristique et pratique)</h2>
-  <p>
-    La corniche pavée qui longe la plage sur plusieurs kilomètres est bordée de restaurants, de pizzerias,
-    de glaciers et de pubs. C'est <strong>pratique, sûr, et très animé le soir</strong>. 
-  </p>
-  <p>
-    On y sert de tout : cuisine internationale, pizzas, tapas, et plats marocains standardisés. Beaucoup
-    d'établissements proposent de l'alcool et des concerts le soir. Si la qualité gastronomique n'y est pas
-    toujours exceptionnelle, l'emplacement face à l'océan compense largement. Lisez les menus affichés à
-    l'extérieur, car les prix varient énormément d'un établissement à l'autre.
-  </p>
+<h2 id="boire">Boire</h2>
+<p>
+  Le thé à la menthe est offert par les hôtes et se boit brûlant, trois verres selon la tradition. Les
+  jus frais — orange, avocat, grenade — sont excellents et bon marché. L'alcool se boit dans les
+  hôtels, certains restaurants et les bars licenciés de Guéliz et de l'Hivernage, jamais dans la rue.
+</p>
 
-  <h2 id="plats">Plats marocains à goûter absolument</h2>
-  <ul>
-    <li><strong>Le Tajine de poisson :</strong> Spécialité de la région du Souss, souvent préparé avec du congre, des tomates, des poivrons et du charme charmoula.</li>
-    <li><strong>La Pastilla :</strong> Un feuilleté sucré-salé, traditionnellement farci au pigeon (ou poulet) et aux amandes, saupoudré de sucre glace et de cannelle. Il existe aussi une excellente variante aux fruits de mer.</li>
-    <li><strong>Le Couscous du vendredi :</strong> Plat national par excellence, traditionnellement consommé le vendredi midi. À commander de préférence ce jour-là pour une fraîcheur optimale.</li>
-    <li><strong>L'Amlou :</strong> La "pâte à tartiner" berbère, servie au petit-déjeuner. Un mélange d'huile d'argan torréfiée, d'amandes pilées et de miel. Délicieux sur du pain chaud.</li>
-  </ul>
-
-  <div class="callout">
-    <span class="callout-label">L'astuce restauration</span>
-    Le couscous se mange traditionnellement le vendredi midi au Maroc. Beaucoup de petits restaurants locaux n'en préparent que ce jour-là. C'est le moment idéal pour en commander un, il sera frais et authentique.
-  </div>
+<h2 id="ramadan">Ramadan et horaires</h2>
+<p>
+  Pendant le ramadan, beaucoup de restaurants ferment en journée ou ouvrent tard ; après la rupture du
+  jeûne, la ville se remplit et les stands de harira, de dattes et de pâtisseries battent leur plein.
+  Les horaires courants : déjeuner de 12 h 30 à 15 h, dîner à partir de 19 h 30, jusqu'à 23 h ou plus dans
+  les zones animées. Voyez <a href={L('/quand-partir-marrakech/')}>quand partir</a> pour les dates.
+</p>
 </GuideLayout>

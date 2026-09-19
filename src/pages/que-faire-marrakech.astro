@@ -2,126 +2,136 @@
 import GuideLayout from '../layouts/GuideLayout.astro';
 import { getLocalizedPath } from '../i18n';
 import { photos } from '../data/images';
+import { PRICES_CHECKED } from '../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: 'Que faire à Agadir', href: L('/things-to-do-agadir/') },
+  { name: "Que faire à Marrakech", href: L("/que-faire-marrakech/") },
 ];
+
 const toc = [
-  { label: 'La plage et la promenade', id: 'plage' },
-  { label: 'La marina', id: 'marina' },
-  { label: 'Souk El Had', id: 'souk' },
-  { label: 'La Kasbah et le téléphérique', id: 'kasbah' },
-  { label: 'Paradise Valley', id: 'paradise-valley' },
-  { label: 'Crocoparc', id: 'crocoparc' },
-  { label: 'Excursions', id: 'excursions' },
+  { label: "Les incontournables", id: "incontournables" },
+  { label: "Jardins et musées", id: "jardins" },
+  { label: "Expériences", id: "experiences" },
+  { label: "Autour de Marrakech", id: "autour" },
+  { label: "Trois parcours", id: "parcours" },
+  { label: "Budget", id: "budget" },
 ];
+
 const faqs = [
-  { q: 'Que faire à Agadir en dehors de la plage ?', a: 'De quoi remplir plusieurs jours. Le Souk El Had est l’un des plus grands marchés du Maroc ; la Kasbah reconstruite, sur la colline qui domine la ville, est désormais accessible par téléphérique et offre une vue superbe sur la baie ; la marina est agréable le soir pour une promenade et du poisson grillé. Ajoutez Crocoparc pour les familles et des excursions vers Paradise Valley, Taghazout et Taroudant, et vous ne manquerez pas d’occupations.' },
-  { q: 'Le Souk El Had vaut-il le détour ?', a: 'Oui, c’est un vrai marché, pas un bazar à touristes. Des milliers d’étals, derrière des murs et des portes, vendent épices, huile d’argan, olives, vêtements, céramiques et articles du quotidien. Allez-y le matin, marchandez sans excès, gardez votre sac fermé dans la foule, et notez qu’il ferme le lundi.' },
-  { q: 'Comment aller à Paradise Valley depuis Agadir ?', a: 'Paradise Valley est à environ une heure au nord-est, sur la route d’Imouzzer. La plupart des visiteurs y vont en excursion guidée à la demi-journée, en voiture de location ou avec un chauffeur : il n’y a pas de transport en commun pratique. Évitez le plein été pour trouver de l’eau dans les vasques, et partez tôt pour devancer la foule et la chaleur.' },
-  { q: 'Le téléphérique d’Agadir vaut-il le coup ?', a: 'Le téléphérique qui monte à la Kasbah / Oufella est une courte montée panoramique avec une vue large sur la baie et l’inscription « Dieu, Patrie, Roi » à flanc de colline, et il évite la grimpette. C’est une visite courte plutôt qu’une demi-journée : associez-le au souk ou à la plage. La Kasbah elle-même n’est plus que ruines, c’est la vue qui compte.' },
+  { q: "Combien de jours faut-il à Marrakech ?", a: "Trois jours pleins permettent de voir l'essentiel de la médina, un jardin et un musée, plus une demi-journée d'excursion ou de hammam. Avec cinq jours, ajoutez l'Ourika ou Essaouira et une soirée dans le désert d'Agafay. Pour un week-end de deux jours, concentrez-vous sur la médina et Jemaa el-Fna." },
+  { q: "Quelle est l'activité à ne pas manquer à Marrakech ?", a: "Le coucher du soleil sur Jemaa el-Fna depuis une terrasse, suivi de la place la nuit tombée. Ensuite, selon les goûts : la madrasa Ben Youssef pour l'architecture, le jardin Majorelle pour la couleur, et une soirée dans le désert d'Agafay pour le contraste." },
+  { q: "Combien coûte la montgolfière au-dessus de Marrakech ?", a: "Comptez plusieurs milliers de dirhams par personne, ce qui place l'activité dans les expériences les plus chères du séjour. Le vol part à l'aube, prend environ une heure et comprend en général le transfert et un petit déjeuner. Réservez tôt en haute saison et vérifiez les conditions météo et l'assurance de l'opérateur." },
+  { q: "Quel budget par jour prévoir pour les activités ?", a: "De 30 à 50 € par personne pour une journée mêlant deux monuments, un déjeuner en médina et un taxi, jusqu'à plus de 150 € avec une excursion en désert ou en montgolfière. La médina se visite pour peu d'argent : ce sont les expériences hors ville qui font grimper la note." },
+  { q: "Marrakech se visite-t-elle sans guide ?", a: "Oui, à condition de préparer son parcours et d'accepter de se perdre un peu. Un guide agréé est utile pour les souks, la première demi-journée et les sites où le contexte change tout. Choisissez-en un avec badge officiel et fixez le tarif avant." },
+  { q: "Que faire à Marrakech quand il pleut ou qu'il fait très chaud ?", a: "Visitez les musées et les monuments couverts : musée YSL, musée de Marrakech, madrasa, Maison de la photographie. Faites un hammam, un cours de cuisine ou un atelier d'artisanat, ou passez l'après-midi près d'une piscine. Ces activités se prêtent à toutes les météos." },
 ];
 ---
-<GuideLayout keywords="Que Faire Agadir, que faire à Agadir, attractions Agadir" 
-  lang={lang}
-  title="Guide Que Faire Agadir 2026 | Astuces & Incontournables"
-  description="Planifiez votre visite à Que Faire à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
-  eyebrow="Agadir · Que faire"
-  h1="Que faire à Agadir"
-  lede="Au-delà de la plage, Agadir compte un immense marché, une Kasbah perchée désormais accessible par téléphérique et quelques-unes des plus belles excursions du Maroc à deux pas. Voici ce qui vaut vraiment votre temps, et ce qu’on peut zapper."
+<GuideLayout
+  keywords="que faire à Marrakech, visiter Marrakech, activités Marrakech, montgolfière Marrakech"
+  title={"Que faire à Marrakech : 15 idées classées par temps et par budget (2026) | AirportRAK"}
+  description={"Que faire à Marrakech en 1, 2 ou 3 jours : monuments, jardins, souks, hammam, cours de cuisine, montgolfière, désert d'Agafay, excursions. Durées, tarifs indicatifs et parcours cohérents."}
+  eyebrow={"Marrakech · Activités"}
+  h1={"Que faire à Marrakech"}
+  lede={"Trop d'idées, pas assez de jours : voici les quinze à retenir, avec leur durée réelle, un budget indicatif et trois parcours cohérents pour ne pas traverser la ville dix fois."}
   breadcrumbs={breadcrumbs}
-  heroImage={photos['agadir-marina']}
+  heroImage={photos["things-to-do-marrakech"]}
   toc={toc}
   faqs={faqs}
-  updated="juin 2026"
-  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+  updated={PRICES_CHECKED}
+  cta={{ heading: "Réservez une visite guidée", text: "Un guide agréé pour la médina et les souks évite les détours et les faux guides, à un prix fixé d'avance.", provider: "guide", label: "Voir les visites guidées" }}
 >
-  <p>
-    La plage est l’attraction phare d’Agadir, mais en faisant de la ville un camp de base, on tient
-    facilement une semaine d’activités. Le centre reconstruit est pauvre en monuments anciens, héritage du séisme de 1960, donc les vrais plaisirs sont le long front de mer, un marché tentaculaire,
-    un fort perché désormais relié par téléphérique, et la nature sauvage à quelques minutes de route.
-    Voici le panorama honnête, à peu près dans l’ordre où on les découvre.
-  </p>
+<h2 id="incontournables">Les incontournables de la médina</h2>
+<div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Site ou activité</th><th>Durée</th><th>Budget indicatif</th><th>Pourquoi</th></tr></thead>
+    <tbody>
+      <tr class="row-highlight"><td><strong>Jemaa el-Fna</strong></td><td>2 h (17 h – 20 h)</td><td>Gratuit</td><td>Le spectacle permanent de la ville</td></tr>
+      <tr><td><strong>Madrasa Ben Youssef</strong></td><td>45 min</td><td>≈ 50 MAD</td><td>Le plus beau décor saadien</td></tr>
+      <tr><td><strong>Palais de la Bahia</strong></td><td>1 h</td><td>≈ 100 MAD</td><td>Cours, jardins, plafonds peints</td></tr>
+      <tr><td><strong>Tombeaux saadiens</strong></td><td>30 min</td><td>≈ 100 MAD</td><td>Salle aux douze colonnes</td></tr>
+      <tr><td><strong>Palais El Badi</strong></td><td>1 h</td><td>Modéré</td><td>Ruines à ciel ouvert, cigognes</td></tr>
+      <tr><td><strong>Les souks</strong></td><td>2 à 3 h</td><td>Gratuit (hors achats)</td><td>Le commerce marrakchi, par corporation</td></tr>
+      <tr><td><strong>Koutoubia (extérieur et jardins)</strong></td><td>30 min</td><td>Gratuit</td><td>Le repère de la ville, minaret de 77 m</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>
+  Détail des monuments et conseils d'orientation sur <a href={L('/medina-marrakech/')}>la médina</a> et
+  <a href={L('/jemaa-el-fna/')}>Jemaa el-Fna</a>. Pour les souks, voyez
+  <a href={L('/shopping-souvenirs-marrakech/')}>souks et shopping</a>.
+</p>
 
-  <h2 id="plage">La plage et la promenade</h2>
-  <p>
-    Le croissant de sable de six kilomètres est la raison d’être d’Agadir comme station balnéaire. La
-    pente est douce, l’eau propre, et la promenade pavée longe toute la baie devant les cafés, les beach
-    clubs et les hôtels. Les matinées sont calmes ; l’après-midi amène une brise atlantique bienvenue en
-    été et vive en hiver. Balades à dos de chameau, jet-skis et parties de foot improvisées font partie
-    du décor. La baignade est vraiment agréable, sachez seulement que l’océan reste plus frais que la
-    Méditerranée toute l’année.
-  </p>
+<h2 id="jardins">Jardins et musées</h2>
+<ul>
+  <li><strong>Jardin Majorelle</strong> (≈ 170 MAD, 1 h à 1 h 30) : le bleu Majorelle, les cactus, la villa devenue musée berbère. Réservez en ligne et arrivez à l'ouverture, la file peut être longue.</li>
+  <li><strong>Musée Yves Saint Laurent</strong> (≈ 140 MAD, 1 h) : couturier lié à la ville, exposition soignée, bâtiment contemporain à deux pas de Majorelle.</li>
+  <li><strong>Jardins de la Ménara</strong> (gratuit ou faible coût) : un bassin et un pavillon adossés à l'Atlas, à côté de l'aéroport, très prisés au coucher du soleil.</li>
+  <li><strong>Le Jardin Secret et le musée de Marrakech</strong> : deux visites calmes en plein cœur de la médina.</li>
+  <li><strong>La Maison de la photographie</strong> : un musée d'archives sur le Maroc ancien, avec une terrasse.</li>
+</ul>
 
-  <h2 id="marina">La marina</h2>
-  <p>
-    À l’extrémité nord de la plage, la marina est le visage le plus récent et le plus soigné d’Agadir, bâtiments blancs, yachts à quai et une enfilade de restaurants au mieux de leur forme au coucher du
-    soleil. Belle promenade du soir et valeur sûre pour le poisson grillé, même si les prix grimpent par
-    rapport aux ruelles. N’y cherchez pas l’ambiance du vieux Maroc ; attendez-vous à un front de mer
-    propre et facile.
-  </p>
+<h2 id="experiences">Expériences</h2>
+<h3>Le hammam</h3>
+<p>
+  Une institution. Le hammam traditionnel de quartier coûte quelques dizaines de dirhams ; un hammam de
+  spa avec gommage au savon noir et massage se situe en général entre 300 et 700 MAD. Choisissez
+  selon l'ambiance recherchée : authentique ou raffinée, mais toujours avec une serviette et de la
+  patience.
+</p>
+<h3>Un cours de cuisine</h3>
+<p>
+  Une demi-journée, du marché aux fourneaux, autour du tajine, du couscous ou de la pastilla. C'est
+  l'une des meilleures façons de comprendre la gastronomie du pays. Vérifiez la taille du groupe et
+  le prix, généralement autour de 400 à 700 MAD par personne.
+</p>
+<h3>La montgolfière</h3>
+<p>
+  Un vol à l'aube au-dessus de la Palmeraie ou de la plaine, avec l'Atlas en toile de fond. C'est
+  l'expérience la plus chère du séjour, se comptant en milliers de dirhams : à réserver à l'avance, auprès
+  d'un opérateur dont l'assurance et la sécurité sont claires.
+</p>
+<h3>Chameau, quad, buggy</h3>
+<p>
+  Les balades en dromadaire dans la Palmeraie et les sorties en quad ou en buggy dans le désert
+  d'Agafay se font en demi-journée, souvent avec un dîner. Voyez
+  <a href={L('/balade-chameau-quad-marrakech/')}>chameau, quad et buggy</a>.
+</p>
 
-  <h2 id="souk">Souk El Had</h2>
-  <p>
-    C’est l’expérience « vrai Maroc » à ne pas manquer en ville. Le Souk El Had est l’un des plus grands
-    marchés du pays, des milliers d’étals derrière des murs et des portes, répartis grosso modo entre
-    épices, huile d’argan, olives, fruits et légumes, vêtements, céramiques et bazar du quotidien.
-    Allez-y le matin, marchandez sans vous échauffer, et gardez vos affaires fermées dans les allées
-    bondées. Fermé le lundi. Même sans rien acheter, c’est le coin le plus vivant d’Agadir.
-  </p>
+<h2 id="autour">Autour de Marrakech</h2>
+<ul>
+  <li><strong><a href={L('/excursion-vallee-ourika/')}>La vallée de l'Ourika</a></strong> — une journée en montagne, à une heure de la ville.</li>
+  <li><strong><a href={L('/excursion-desert-agafay/')}>Le désert d'Agafay</a></strong> — un désert de pierres, un dîner, une nuit en camp.</li>
+  <li><strong><a href={L('/excursion-cascades-ouzoud/')}>Les cascades d'Ouzoud</a></strong> — 110 mètres de chute, à environ 150 km.</li>
+  <li><strong><a href={L('/excursion-marrakech-essaouira/')}>Essaouira</a></strong> — la ville des alizés, à deux heures et demie.</li>
+</ul>
 
-  <h2 id="kasbah">La Kasbah et le téléphérique</h2>
-  <p>
-    Sur la colline qui domine la ville se dressent les ruines d’Agadir Oufella, l’ancienne Kasbah, avec
-    la célèbre inscription à flanc de coteau, « Dieu, Patrie, Roi », éclairée la nuit. Le fort lui-même
-    n’est plus que ruines, rasé par le séisme, mais la vue sur la baie est la plus belle de la ville. Le
-    nouveau téléphérique vous y hisse en quelques minutes panoramiques et évite la montée, avec un petit
-    belvédère au sommet. La visite est courte, associez-la à la plage ou au souk plutôt que d’y consacrer
-    une demi-journée.
-  </p>
+<h2 id="parcours">Trois parcours cohérents</h2>
+<h3>Deux jours</h3>
+<p>
+  <strong>Jour 1 :</strong> Ben Youssef le matin, souks, déjeuner en terrasse, Bahia l'après-midi,
+  Jemaa el-Fna au coucher du soleil. <strong>Jour 2 :</strong> Majorelle et YSL à l'ouverture,
+  déjeuner à Guéliz, Ménara en fin de journée.
+</p>
+<h3>Trois jours</h3>
+<p>
+  Ajoutez une demi-journée de hammam ou de cours de cuisine, et une sortie en soirée dans le désert
+  d'Agafay.
+</p>
+<h3>Cinq jours</h3>
+<p>
+  Trois jours dans la ville, une journée dans l'Ourika ou à Ouzoud, une journée à Essaouira — ou
+  l'inverse. Une voiture n'est utile que si vous enchaînez plusieurs excursions ; sinon, un chauffeur à
+  la journée suffit.
+</p>
 
-  <h2 id="paradise-valley">Paradise Valley</h2>
-  <p>
-    À une heure au nord-est, sur la route d’Imouzzer, Paradise Valley est une gorge bordée de palmiers
-    avec des vasques naturelles où l’on se baigne et saute des rochers. C’est l’escapade classique d’une
-    demi-journée depuis Agadir, partez tôt pour devancer la foule et la chaleur, et visez le printemps
-    ou l’après-pluie quand les vasques sont pleines (le plein été peut les laisser à sec). La plupart des
-    visiteurs viennent en excursion guidée, en location ou avec un chauffeur ; pas de transport en commun
-    utile.
-  </p>
-
-  <h2 id="crocoparc">Crocoparc</h2>
-  <p>
-    À quelques kilomètres sur la route de Marrakech, Crocoparc est un parc paysager construit autour de
-    quelques centaines de crocodiles du Nil, avec jardins botaniques et allées ombragées. C’est clairement
-    une demi-journée en famille, facile, bien tenue et appréciée des plus jeunes, plutôt qu’un
-    incontournable. Sans enfants, on peut tranquillement le sauter.
-  </p>
-
-  <h2 id="excursions">Excursions depuis Agadir</h2>
-  <p>
-    Le meilleur d’Agadir est souvent à une route de distance. Taghazout et la côte du surf sont à
-    40 minutes au nord, même les non-surfeurs aiment l’ambiance café décontractée ; commencez par le
-    <a href={L('/surfing-taghazout-guide/')}>guide du surf à Taghazout</a>. Taroudant, la « petite
-    Marrakech » fortifiée, fait une belle journée à l’intérieur des terres. Le port bleu et blanc
-    d’Essaouira est un trajet plus long mais récompensé sur la côte. Pour savoir où loger entre deux
-    sorties, voyez <a href={L('/where-to-stay-agadir/')}>où dormir à Agadir</a>.
-  </p>
-
-  <div class="disclosure-inline">
-    Certains liens de cette page sont des liens d’affiliation : si vous réservez une excursion via eux,
-    nous pouvons percevoir une petite commission, sans surcoût pour vous. Cela ne change jamais les prix
-    affichés ni nos recommandations. <a href={L('/affiliate-disclosure/')}>Comment ça marche</a>.
-  </div>
-
-  <div class="callout">
-    <span class="callout-label">Une première journée bien remplie</span>
-    Plage et promenade le matin · Souk El Had avant le déjeuner (sauf lundi) · le téléphérique jusqu’à la
-    Kasbah pour le coucher du soleil sur la baie. Gardez Paradise Valley et la côte du surf pour une
-    journée avec une voiture.
-  </div>
+<h2 id="budget">Budget</h2>
+<p>
+  La ville elle-même est bon marché : un repas simple en médina, un taxi, l'entrée d'un monument. Ce
+  qui pèse, ce sont les expériences hors la ville — montgolfière, désert, excursions guidées. Nous
+  conseillons de fixer la dépense principale du séjour et de garder le reste simple. Pour les prix des
+  transports, voyez <a href={L('/se-deplacer-marrakech/')}>se déplacer à Marrakech</a>.
+</p>
 </GuideLayout>

@@ -1,97 +1,123 @@
 ---
 import GuideLayout from '../layouts/GuideLayout.astro';
 import { getLocalizedPath } from '../i18n';
-import { PRICES_CHECKED } from '../data/airport';
 import { photos } from '../data/images';
+import { PRICES_CHECKED } from '../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: 'Guide de voyage Agadir', href: L('/agadir-travel-guide/') },
-  { name: 'Shopping à Agadir', href: L('/shopping-in-agadir/') },
+  { name: "Souks et shopping", href: L("/shopping-souvenirs-marrakech/") },
 ];
 
 const toc = [
-  { label: 'Le Souk El Had', id: 'souk-el-had' },
-  { label: 'Que ramener d\'Agadir', id: 'what-to-buy' },
-  { label: 'Prix fixe vs Marchandage', id: 'bargaining' },
-  { label: 'Supermarchés & Centres commerciaux', id: 'modern-shopping' },
+  { label: "Le souk, mode d'emploi", id: "souk" },
+  { label: "Que rapporter", id: "quoi" },
+  { label: "Négocier", id: "negocier" },
+  { label: "Boutiques à prix fixe", id: "prix-fixe" },
+  { label: "Emballer et transporter", id: "retour" },
+  { label: "Pièges", id: "pieges" },
 ];
 
 const faqs = [
-  { q: 'L\'huile d\'argan est-elle moins chère à Agadir ?', a: 'Oui, la vallée du Souss autour d\'Agadir est le seul endroit au monde où l\'arganier pousse naturellement. Cependant, vous devez l\'acheter auprès de coopératives réputées pour vous assurer qu\'elle est 100 % pure.' },
-  { q: 'Dois-je marchander ?', a: 'Dans le souk et la médina, oui. Le marchandage est la norme. En revanche, dans les boutiques modernes, les coopératives et les supermarchés comme Carrefour ou Marjane, les prix sont fixes.' },
-  { q: 'Puis-je payer par carte bancaire ?', a: 'Dans les grands supermarchés et les boutiques haut de gamme, oui. Dans le souk, vous aurez besoin d\'espèces (dirhams marocains). Ayez toujours de petites coupures pour faciliter les négociations.' },
-  { q: 'Qu\'est-ce que le Amlou ?', a: 'Le Amlou est une délicieuse pâte à tartiner traditionnelle marocaine, à base d\'amandes grillées, d\'huile d\'argan et de miel. On la sert souvent au petit-déjeuner et c\'est un excellent souvenir.' },
+  { q: "Comment négocier dans les souks de Marrakech ?", a: "Ne pas payer le premier prix, qui est un prix d'ouverture souvent trois à quatre fois supérieur à la valeur réelle. Une méthode simple : proposer environ le tiers, monter par petits paliers, et savoir partir sans colère. Négocier est un jeu de politesse, pas un affrontement. Ne proposez jamais un prix que vous n'êtes pas prêt à payer." },
+  { q: "Que faut-il acheter à Marrakech ?", a: "Les classiques qui valent le voyage : babouches en cuir, poufs et sacs en cuir, lanternes en laiton ou en fer forgé, poteries et zellige, tapis berbères, huile d'argan pure, épices, savon noir. Achetez ce qui vous plaît et que vous saurez rapporter, plutôt que ce que « tout le monde achète »." },
+  { q: "Comment reconnaître une vraie huile d'argan ?", a: "Méfiez-vous des flacons vendus à bas prix dans les souks touristiques. La vraie huile d'argan cosmétique est chère, produite par pression à froid, conditionnée dans du verre foncé. Les coopératives de femmes, comme celles que l'on croise sur la route d'Essaouira, offrent une traçabilité plus fiable qu'une boutique de médina." },
+  { q: "Peut-on payer par carte dans les souks ?", a: "Rarement, sauf dans les boutiques plus grandes. Prévoyez des espèces en dirhams et fractionnez vos coupures. Les distributeurs se trouvent à l'entrée de la médina et à Guéliz." },
+  { q: "Y a-t-il des boutiques à prix fixes ?", a: "Oui. L'Ensemble artisanal, complexe public à prix affichés près de la Koutoubia, permet de repérer les prix justes de chaque article avant d'aller négocier dans les souks. Quelques boutiques de créateurs à Guéliz et dans la médina pratiquent aussi des prix fixes." },
+  { q: "Que puis-je rapporter en avion ?", a: "Attention aux liquides : huile d'argan, eau de fleur d'oranger, cosmétiques dépassent presque toujours les 100 ml autorisés en cabine et doivent aller en soute. Les lanternes et tapis pèsent lourd : pensez au poids autorisé. Pour les objets volumineux, la plupart des boutiques proposent un envoi par transporteur." },
 ];
 ---
-
-<GuideLayout keywords="Shopping Souvenirs Agadir, que faire à Agadir, attractions Agadir" 
-  lang={lang}
-  title="Guide Shopping Souvenirs Agadir 2026 | Astuces & Incontournables"
-  description="Planifiez votre visite à Shopping Souvenirs à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
-  eyebrow="Shopping & Culture"
-  h1="Shopping à Agadir : Le guide ultime des souvenirs"
-  lede="De l'huile d'argan pure pressée à quelques kilomètres de la ville aux épices éclatantes en passant par le cuir artisanal, Agadir est un endroit fantastique pour faire du shopping. Voici votre guide sur ce qu'il faut acheter, où le trouver et comment marchander comme un local."
+<GuideLayout
+  keywords="souks Marrakech, quoi acheter Marrakech, négocier souk, babouches, tapis, huile d'argan"
+  title={"Shopping à Marrakech : souks, quoi acheter, comment négocier (2026) | AirportRAK"}
+  description={"Acheter à Marrakech : souks et corporations, tapis, babouches, lanternes, huile d'argan, épices, cuir, poterie. Prix repères, méthode de négociation, boutiques à prix fixe et douane au retour."}
+  eyebrow={"Marrakech · Souks et artisanat"}
+  h1={"Shopping et souvenirs à Marrakech"}
+  lede={"Les souks de Marrakech sont l'un des plus grands marchés d'artisanat du monde arabe. On y trouve tout, à condition de savoir négocier, distinguer l'artisan du revendeur, et rester patient."}
   breadcrumbs={breadcrumbs}
-  heroImage={photos['taroudant']}
+  heroImage={photos["souks-marrakech"]}
   toc={toc}
   faqs={faqs}
   updated={PRICES_CHECKED}
-  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+  cta={{ heading: "Un guide pour les souks", text: "Un guide agréé vous évite le faux guide, connaît les prix justes et vous emmène chez les artisans plutôt que chez les revendeurs.", provider: "guide", label: "Voir les visites guidées" }}
 >
-  <p>
-    Agadir est peut-être une station balnéaire moderne, mais cela reste l'un des meilleurs endroits au Maroc pour acheter des produits locaux authentiques. La région environnante du Souss est le cœur agricole du pays, ce qui signifie que les épices, les huiles et le miel y sont souvent moins chers et plus frais qu'à Marrakech.
-  </p>
-  <p>
-    Que vous cherchiez un magnet pour frigo bon marché ou un tapis berbère tissé à la main, voici ce qu'il faut savoir sur le shopping à Agadir.
-  </p>
+<h2 id="souk">Le souk, mode d'emploi</h2>
+<p>
+  Au nord de Jemaa el-Fna, les souks s'étendent sur plusieurs hectares de ruelles couvertes, organisées par
+  corporation : les forgerons, les teinturiers, les cordonniers, les vendeurs d'épices. Chacun a son
+  quartier, ses odeurs et son bruit. Se perdre y est presque inévitable, et pas désagréable si l'on
+  garde en tête que la place est toujours au sud.
+</p>
+<div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Secteur</th><th>Ce qu'on y trouve</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Souk Semmarine</strong></td><td>L'artère principale : tissus, babouches, maroquinerie, souvenirs</td></tr>
+      <tr><td><strong>Rahba Kedima (place des Épices)</strong></td><td>Épices, herbes médicinales, savon noir, tapis</td></tr>
+      <tr><td><strong>Souk Haddadine</strong></td><td>Forgerons : lanternes en fer forgé, ferronnerie</td></tr>
+      <tr><td><strong>Souk des Teinturiers</strong></td><td>Laines et soies teintes séchant au-dessus des ruelles</td></tr>
+      <tr><td><strong>Souk Chouari</strong></td><td>Travail du bois : cèdre, thuya, marqueterie</td></tr>
+    </tbody>
+  </table>
+</div>
 
-  <h2 id="souk-el-had">Souk El Had : Le centre de tout</h2>
-  <p>
-    On ne peut pas parler de shopping à Agadir sans mentionner le <strong><a href={L('/souk-el-had-agadir/')}>Souk El Had</a></strong>. C'est le plus grand marché couvert d'Afrique, comptant plus de 6 000 stands. 
-  </p>
-  <p>
-    Contrairement au dédale confus de la médina de Marrakech, le Souk El Had est organisé en zones spécifiques (épices, vêtements, meubles, produits frais) et dispose de larges allées couvertes. Il est ouvert tous les jours sauf le lundi. Si vous n'avez le temps de faire du shopping qu'à un seul endroit, allez-y.
-  </p>
+<h2 id="quoi">Que rapporter</h2>
+<ul>
+  <li><strong>Babouches en cuir :</strong> de 100 à 250 MAD pour une paire correcte, davantage pour du cuir de qualité et des broderies. Vérifiez les coutures et la semelle.</li>
+  <li><strong>Lanternes :</strong> laiton ou fer forgé, de 150 à 800 MAD selon la taille et le travail. À emballer avec soin.</li>
+  <li><strong>Tapis berbères :</strong> les plus coûteux, à comparer en plusieurs boutiques ; la laine et la densité de nœuds font la valeur. Comptez des milliers de dirhams pour une pièce authentique.</li>
+  <li><strong>Poufs en cuir :</strong> souvent vendus vides et pliés, ce qui les rend faciles à transporter.</li>
+  <li><strong>Huile d'argan, savon noir, épices :</strong> à acheter de préférence en coopérative, avec des échantillons.</li>
+  <li><strong>Poterie, zellige, tadelakt :</strong> beau et lourd : pensez à l'envoi.</li>
+</ul>
 
-  <h2 id="what-to-buy">Que ramener d'Agadir</h2>
+<h2 id="negocier">Négocier</h2>
+<div class="callout">
+  <span class="callout-label">La méthode en quatre temps</span>
   <p>
-    Bien que l'on trouve les souvenirs marocains classiques (poufs en cuir, céramiques colorées et théières en argent), Agadir est célèbre pour quelques spécialités régionales :
+    Regardez sans montrer votre enthousiasme. Demandez le prix, et proposez environ le tiers. Montez par
+    petits paliers, en souriant, en buvant le thé si on vous l'offre. Si l'écart reste trop important,
+    remerciez et partez : c'est souvent à ce moment que le vrai prix apparaît.
   </p>
-  <ul>
-    <li>
-      <strong>L'huile d'Argan :</strong> Agadir est la capitale de l'huile d'argan. Vous pouvez acheter à la fois l'huile cosmétique (pour la peau et les cheveux) et l'huile culinaire (torréfiée, pour la cuisine). Achetez-la dans des coopératives certifiées plutôt que sur un stand au hasard dans le souk pour garantir sa pureté.
-    </li>
-    <li>
-      <strong>Le Amlou :</strong> Parfois surnommé le "Nutella marocain", c'est une pâte riche et sucrée à base d'amandes pilées, d'huile d'argan et de miel. C'est totalement addictif.
-    </li>
-    <li>
-      <strong>Le Safran et les épices :</strong> Taliouine, la capitale africaine du safran, se trouve juste à l'est d'Agadir. Vous pouvez acheter du safran d'excellente qualité, du cumin et le célèbre mélange d'épices <em>Ras el Hanout</em> à très bon prix dans le souk.
-    </li>
-    <li>
-      <strong>Les bijoux en argent :</strong> La ville voisine de Tiznit est la capitale marocaine de l'argent. De nombreuses boutiques à Agadir vendent de superbes colliers et de lourds bracelets berbères en argent, provenant directement des artisans de Tiznit.
-    </li>
-  </ul>
+</div>
+<p>
+  Trois principes : ne discutez que d'un article que vous voulez vraiment, ne proposez pas de prix que
+  vous n'accepteriez pas de payer, et considérez la négociation comme une conversation, pas comme un
+  combat. Un vendeur qui a passé vingt minutes avec vous mérite le respect, même si vous n'achetez pas.
+</p>
 
-  <h2 id="bargaining">Prix fixe vs Marchandage</h2>
-  <p>
-    Le shopping au Maroc implique deux expériences distinctes : les prix fixes et le marchandage.
-  </p>
-  <p>
-    Dans la <strong>Marina</strong> et les boutiques modernes du quartier de <strong>Talborjt</strong>, les prix sont fixes. Vous regardez l'étiquette et vous payez ce montant. La même règle s'applique aux coopératives de femmes pour l'huile d'argan.
-  </p>
-  <p>
-    Au <strong>Souk El Had</strong> ou dans la nouvelle <strong>Médina d'Agadir</strong>, on s'attend à ce que vous marchandiez. En règle générale, pour les articles non-alimentaires (comme les sacs en cuir, les tapis ou les lampes), le prix initial du vendeur sera le double ou le triple de ce qu'il attend réellement. Souriez, soyez poli, proposez la moitié du prix de départ, et négociez à partir de là. Si le prix reste trop élevé, partez poliment : on vous rappellera souvent avec une meilleure offre.
-  </p>
+<h2 id="prix-fixe">Boutiques à prix fixe : votre étalon</h2>
+<p>
+  Avant de vous lancer dans les souks, passez par l'<strong>Ensemble artisanal</strong>, près de la
+  Koutoubia : un complexe public où les prix sont affichés. Il ne propose pas le choix ni le charme des
+  souks, mais il fournit un point de référence précieux pour savoir si l'on vous demande le double ou
+  le triple. Quelques boutiques de créateurs, à Guéliz et dans la médina, pratiquent aussi des prix
+  fixes.
+</p>
 
-  <h2 id="modern-shopping">Supermarchés et Centres commerciaux</h2>
-  <p>
-    Si vous voulez faire une pause loin du souk, Agadir dispose d'options de shopping modernes. On y trouve un grand hypermarché <strong>Carrefour</strong> et un <strong>Marjane</strong>. Ce sont en fait d'excellents endroits pour acheter de l'huile d'argan culinaire, des épices et du thé marocain à des prix locaux garantis, sans avoir besoin de marchander.
-  </p>
-  <p>
-    Pour les marques de vêtements internationales (Zara, LC Waikiki, Decathlon), rendez-vous au centre commercial <strong>Agadir City Center</strong> ou dans les boutiques le long de la Marina.
-  </p>
+<h2 id="retour">Emballer et transporter</h2>
+<ul>
+  <li><strong>Liquides :</strong> argan, fleur d'oranger et cosmétiques dépassent la limite de 100 ml en cabine : ils voyagent en soute, dans un sac fermé.</li>
+  <li><strong>Poids :</strong> lanternes, poteries et tapis pèsent vite ; vérifiez votre franchise de bagage.</li>
+  <li><strong>Envois :</strong> la plupart des boutiques expédient à l'international. Demandez un devis écrit et le numéro de suivi.</li>
+  <li><strong>Douane :</strong> gardez vos factures pour les achats de valeur.</li>
+</ul>
+<p>
+  Notre page <a href={L('/vols-marrakech/pas-chers/')}>vols pas chers</a> détaille l'impact du bagage
+  en soute sur le prix d'un billet low cost.
+</p>
+
+<h2 id="pieges">Pièges à éviter</h2>
+<ul>
+  <li><strong>Le faux guide « gratuit »</strong> qui vous emmène chez un cousin : il touche une commission sur ce que vous achetez.</li>
+  <li><strong>Le prix « spécial aujourd'hui »</strong> : il n'y a pas de tarif du jour, seulement des négociations.</li>
+  <li><strong>Le tapis « antique »</strong> vendu comme une pièce de collection : demandez toujours un certificat, et méfiez-vous des affirmations.</li>
+  <li><strong>L'huile d'argan bon marché</strong> : si le prix paraît trop beau, c'est qu'elle est coupée.</li>
+</ul>
+<p>
+  Pour l'ensemble des réflexes de prudence, voyez
+  <a href={L('/securite-marrakech/')}>sécurité à Marrakech</a>.
+</p>
 </GuideLayout>
