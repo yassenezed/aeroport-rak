@@ -2,116 +2,138 @@
 import GuideLayout from '../layouts/GuideLayout.astro';
 import { getLocalizedPath } from '../i18n';
 import { photos } from '../data/images';
+import { PRICES_CHECKED } from '../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: 'Agadir est-elle sûre ?', href: L('/is-agadir-safe/') },
+  { name: "Sécurité", href: L("/securite-marrakech/") },
 ];
+
 const toc = [
-  { label: 'La réponse courte', id: 'court' },
-  { label: 'Délinquance et arnaques', id: 'delinquance' },
-  { label: 'Taxis et déplacements', id: 'taxis' },
-  { label: 'Femmes voyageuses', id: 'femmes' },
-  { label: 'Santé et eau', id: 'sante' },
-  { label: 'Plages et mer', id: 'plages' },
+  { label: "Le niveau de risque réel", id: "risque" },
+  { label: "Les arnaques classiques", id: "arnaques" },
+  { label: "Les voyageuses seules", id: "femmes" },
+  { label: "Taxis, argent, effets personnels", id: "pratique" },
+  { label: "Santé, eau, chaleur", id: "sante" },
+  { label: "Ce qui est interdit ou mal vu", id: "regles" },
+  { label: "Numéros d'urgence", id: "urgences" },
 ];
+
 const faqs = [
-  { q: 'Agadir est-elle sûre pour les touristes ?', a: 'Oui. Agadir est l’une des villes les plus calmes et détendues du Maroc, habituée aux visiteurs internationaux. La violence contre les touristes est rare. Les vrais risques sont mineurs, pickpockets dans la foule, prix gonflés, vendeurs insistants, et se gèrent avec le bon sens qu’on appliquerait dans n’importe quelle ville balnéaire animée. Prenez des précautions normales et votre séjour sera tranquille.' },
-  { q: 'Agadir est-elle sûre pour les femmes voyageant seules ?', a: 'En général oui, avec la vigilance habituelle. Les voyageuses trouvent Agadir plus détendue que Marrakech, et les zones touristiques comme la promenade sont confortables. Vous pourrez recevoir quelques regards ou remarques ; s’habiller sobrement hors de la plage, marcher d’un pas assuré et éviter les rues désertes tard le soir réduisent les désagréments. Beaucoup de femmes voyagent seules ici sans souci.' },
-  { q: 'Les taxis sont-ils sûrs à Agadir ?', a: 'Oui, mais convenez du prix d’abord. Les petits taxis orange conviennent aux courtes courses en ville, demandez le compteur ou fixez le tarif avant de partir. Les grands taxis couvrent les trajets plus longs et la course de l’aéroport ; ils se négocient, jamais au compteur. Pas d’Uber ni de Careem. Convenir du prix avant de monter est la meilleure habitude pour éviter les abus.' },
-  { q: 'Peut-on boire l’eau du robinet à Agadir ?', a: 'Tenez-vous-en à l’eau en bouteille. L’eau du robinet d’Agadir est chlorée et généralement jugée sûre pour se brosser les dents et se laver, mais la plupart des visiteurs boivent en bouteille pour éviter les maux de ventre dus à une autre composition minérale. L’eau en bouteille est bon marché et partout. Soyez un peu prudent avec les glaçons et les crudités non épluchées les premiers jours.' },
+  { q: "Marrakech est-elle dangereuse pour un touriste ?", a: "Non, les violences envers les visiteurs sont rares et les zones touristiques sont très surveillées, y compris par une brigade dédiée. Les risques réels sont la petite délinquance — vol à la tire ou à l'arraché dans les foules —, les arnaques et l'insistance des rabatteurs. Ces désagréments se gèrent avec des réflexes simples." },
+  { q: "Une femme seule peut-elle voyager à Marrakech ?", a: "Oui, de nombreuses voyageuses le font. Attendez-vous à des remarques et à de l'insistance, surtout dans la médina : ignorer, marcher d'un pas assuré et ne pas engager la conversation suffit généralement. Une tenue couvrant épaules et genoux réduit les sollicitations. Le soir, préférez les grands axes éclairés et les taxis ou transferts réservés." },
+  { q: "Peut-on boire l'eau du robinet ?", a: "Mieux vaut l'éviter et boire de l'eau en bouteille scellée, y compris pour se brosser les dents si votre estomac est sensible. Les glaçons des hôtels sont généralement sûrs ; ceux des stands de rue, moins. La déshydratation guette bien plus souvent que la gastro : buvez régulièrement." },
+  { q: "Que faire en cas de vol ou de perte de documents ?", a: "Déclarez-le au commissariat le plus proche : le procès-verbal est indispensable pour votre assurance et pour un duplicata de passeport auprès de votre consulat. Gardez une copie numérique de vos papiers séparée des originaux." },
+  { q: "Le séisme de 2023 a-t-il affecté Marrakech ?", a: "Le séisme du 8 septembre 2023 avait son épicentre dans le Haut Atlas, et les villages de montagne ont été les plus durement touchés. Marrakech a subi des dégâts limités, notamment sur certaines maisons de la médina et sur des éléments des remparts. La vie touristique a repris ; vérifiez toutefois l'ouverture et les horaires des monuments avant de venir." },
+  { q: "Peut-on consommer de l'alcool à Marrakech ?", a: "Oui dans les hôtels, certains restaurants et les bars licenciés, principalement à Guéliz et à l'Hivernage. Boire dans la rue ou dans un lieu public est interdit. Pendant le ramadan, la vente et la consommation sont plus restreintes dans la journée." },
 ];
 ---
-<GuideLayout keywords="Securite Agadir, que faire à Agadir, attractions Agadir" 
-  lang={lang}
-  title="Guide Securite Agadir 2026 | Astuces & Incontournables"
-  description="Planifiez votre visite à Securite à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
-  eyebrow="Agadir · Sécurité"
-  h1="Agadir est-elle sûre ? Un guide honnête"
-  lede="Agadir est l’une des villes les plus calmes et les plus accueillantes du Maroc, et la grande majorité des visiteurs y passent un séjour sans le moindre souci. Voici un regard direct, sans alarmisme, sur les vrais risques, délinquance, taxis, conseils aux femmes, santé et mer, et comment les gérer."
+<GuideLayout
+  keywords="Marrakech sécurité, arnaques Marrakech, femme seule Marrakech, numéro urgence Maroc"
+  title={"Marrakech est-elle sûre ? Arnaques, santé, femmes seules et numéros utiles (2026) | AirportRAK"}
+  description={"Marrakech est-elle une ville sûre pour un touriste ? Petite délinquance, arnaques classiques, voyageuses seules, taxis, eau et santé, séisme de 2023, règles à respecter et numéros d'urgence."}
+  eyebrow={"Marrakech · Sécurité"}
+  h1={"Marrakech est-elle une ville sûre ?"}
+  lede={"Oui, dans l'ensemble : des millions de touristes la visitent chaque année sans incident. Les désagréments sont surtout de l'ordre de l'insistance et de la petite arnaque. Voici lesquels, et comment les éviter."}
   breadcrumbs={breadcrumbs}
-  heroImage={photos['agadir-marina']}
+  heroImage={photos["marrakech-safe"]}
   toc={toc}
   faqs={faqs}
-  updated="juin 2026"
-
-  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+  updated={PRICES_CHECKED}
+  cta={{ heading: "Arriver sans stress", text: "Un transfert réservé, avec chauffeur nommé et prix fixe, supprime le moment de l'arrivée où l'on est le plus exposé aux sollicitations.", provider: "transfer", label: "Voir les prix des transferts" }}
 >
-  <p>
-    Agadir est un point d’atterrissage rassurant pour un premier voyage au Maroc. C’est une station
-    balnéaire moderne tournée vers le tourisme international, nettement plus posée que la surcharge
-    sensorielle de la médina de Marrakech, et les risques réels sont mineurs et gérables. Ce n’est pas une
-    raison pour débrancher son cerveau, c’est une ville animée et le bon sens du voyageur s’applique, mais
-    le constat honnête est que l’immense majorité des visiteurs vont et viennent sans aucun problème. Voici
-    le détail, secteur par secteur.
-  </p>
+<h2 id="risque">Le niveau de risque réel</h2>
+<p>
+  Marrakech accueille chaque année plusieurs millions de visiteurs, et l'immense majorité repart avec
+  de bons souvenirs. Les zones touristiques sont surveillées, la brigade touristique est visible, et les
+  agressions graves contre des visiteurs sont exceptionnelles. Ce qui gâche parfois un séjour est d'un
+  autre ordre : l'insistance des rabatteurs, la petite arnaque et le vol à la tire dans la foule.
+</p>
+<p>
+  Rappelons aussi le contexte : la région a été touchée par le séisme du 8 septembre 2023, dont
+  l'épicentre se situait dans le Haut Atlas. Marrakech a subi des dégâts limités, et les principaux
+  monuments sont de nouveau accessibles ; vérifiez néanmoins les horaires avant de planifier une visite.
+</p>
 
-  <h2 id="court">La réponse courte</h2>
+<h2 id="arnaques">Les arnaques classiques</h2>
+<div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Arnaque</th><th>Comment ça se passe</th><th>Réponse</th></tr></thead>
+    <tbody>
+      <tr><td><strong>« C'est fermé »</strong></td><td>Quelqu'un vous annonce que le souk, la tannerie ou votre riad est fermé et propose de vous guider</td><td>Un refus poli, et vérifier sur place</td></tr>
+      <tr><td><strong>Le faux guide</strong></td><td>Un « étudiant » vous accompagne gratuitement, puis réclame un tarif élevé</td><td>Dire non dès le début, ou convenir du prix avant</td></tr>
+      <tr><td><strong>Le henné</strong></td><td>Une main saisie, un dessin tracé, un paiement exigé</td><td>Garder les mains à l'abri</td></tr>
+      <tr><td><strong>Le taxi sans compteur</strong></td><td>Un tarif annoncé sans rapport avec la distance</td><td>Exiger le compteur ou fixer le prix avant</td></tr>
+      <tr><td><strong>La photo</strong></td><td>Un animal ou un costume, puis un tarif après coup</td><td>Convenir du prix avant, ou refuser</td></tr>
+      <tr><td><strong>Le prix « du jour »</strong></td><td>En souk, un prix d'ouverture très supérieur à la valeur</td><td>Négocier, comparer, savoir partir</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="callout">
+  <span class="callout-label">La règle qui vaut pour tout</span>
   <p>
-    Oui, Agadir est sûre pour le voyageur ordinaire. La violence contre les touristes est rare ; ce qu’il
-    faut vraiment surveiller relève du menu, pickpockets opportunistes dans la foule, un vendeur ou un
-    « guide » non officiel un peu insistant, ou un prix touriste si vous ne fixez pas le tarif d’abord.
-    Appliquez la même prudence que dans n’importe quelle station balnéaire animée et vous ne devriez avoir
-    aucun ennui.
+    Quelqu'un qui vous aborde sans que vous l'ayez sollicité cherche presque toujours à vous vendre
+    quelque chose. Un sourire, un « non, merci » sans vous arrêter, et vous continuez. Vous ne devez à
+    personne une conversation.
   </p>
+</div>
 
-  <h2 id="delinquance">Délinquance et arnaques</h2>
-  <p>
-    Le principal risque est le petit vol dans les endroits bondés, le Souk El Had, la portion animée de la
-    promenade, les taxis pleins. Gardez téléphone et portefeuille dans une poche avant ou un sac fermé,
-    n’exhibez ni argent ni appareils coûteux, et confiez votre passeport au coffre de l’hôtel. Les
-    « arnaques » sont bénignes pour des standards de grande ville : prix gonflé, quelqu’un qui vous oriente
-    vers une boutique précise, ou un guide auto-proclamé qui s’accroche à vous. Un « non merci » poli mais
-    ferme et le fait de poursuivre votre chemin règlent presque tout. Ayez de petites coupures pour ne pas
-    dépendre de la monnaie rendue.
-  </p>
+<h2 id="femmes">Les voyageuses seules</h2>
+<p>
+  Marrakech se visite en solo, et beaucoup de voyageuses le font régulièrement. La réalité à connaître :
+  les remarques dans la rue sont fréquentes et l'insistance plus marquée dans la médina que dans les
+  quartiers modernes. Quelques réflexes aident : une tenue couvrant épaules et genoux, un regard
+  décidé, pas de discussion avec ceux qui accostent, et la possibilité de vous réfugier dans un café ou
+  une boutique en cas de gêne. Le soir, un transfert réservé ou un petit taxi valent mieux qu'une marche
+  dans une ruelle isolée.
+</p>
 
-  <h2 id="taxis">Taxis et déplacements</h2>
-  <p>
-    Pas d’Uber ni de Careem à Agadir : ce sont les taxis ou vos jambes. Les petits taxis orange assurent
-    les courtes courses en ville, demandez le compteur, ou convenez d’un prix avant de monter. Les grands
-    taxis couvrent les trajets plus longs et l’aéroport ; ils se négocient toujours, jamais au compteur,
-    alors réglez le tarif avant que le coffre ne s’ouvre. Cette seule habitude, fixer le prix d’abord, évite presque toutes les mésaventures de taxi. Pour la course de l’aéroport, un transfert réservé
-    supprime tout marchandage ; voyez le <a href={L('/agadir-airport-transfers/')}>récapitulatif des
-    transferts</a> pour les options et les prix justes.
-  </p>
+<h2 id="pratique">Taxis, argent, effets personnels</h2>
+<ul>
+  <li><strong>Sac :</strong> porté devant vous dans la foule, fermé, avec le téléphone rangé. Les vols à l'arraché à scooter existent, rares mais réels.</li>
+  <li><strong>Argent :</strong> ne sortez pas de grosses coupures dans la rue. Séparez les espèces entre plusieurs poches.</li>
+  <li><strong>Taxis :</strong> compteur ou prix fixé avant de partir. Voir <a href={L('/se-deplacer-marrakech/')}>se déplacer à Marrakech</a>.</li>
+  <li><strong>Riad :</strong> laissez votre passeport dans le coffre du riad, gardez une photo dans votre téléphone.</li>
+  <li><strong>Assurance :</strong> vérifiez que votre carte bancaire ou votre contrat couvre le vol et les frais médicaux.</li>
+</ul>
 
-  <h2 id="femmes">Femmes voyageuses</h2>
-  <p>
-    Les voyageuses trouvent en général Agadir détendue et facile, plus que les villes à médina. Vous
-    pourrez recevoir quelques regards, remarques ou un vendeur insistant, c’est le plus souvent verbal et
-    cela s’estompe quand on l’ignore. S’habiller sobrement loin de la plage et des hôtels, marcher d’un pas
-    décidé, rester dans les zones éclairées et animées après la tombée de la nuit et utiliser un transport
-    réservé tard le soir réduisent tous les désagréments. Beaucoup de femmes voyagent ici seules en toute
-    tranquillité ; c’est la vigilance habituelle, pas la peur, le bon réglage.
-  </p>
+<h2 id="sante">Santé, eau, chaleur</h2>
+<p>
+  <strong>L'eau :</strong> en bouteille scellée. <strong>La nourriture :</strong> préférez ce qui est cuit
+  à la commande. <strong>La chaleur :</strong> en été, les températures dépassent fréquemment 38 °C et
+  peuvent atteindre 45 °C ; hydratez-vous, couvrez-vous la tête et évitez la médina entre midi et 16 h.
+  <strong>Les animaux errants :</strong> ne caressez pas les chats et les chiens de rue, et consultez sans
+  tarder en cas de morsure ou de griffure.
+</p>
+<p>
+  Emportez une trousse minimale : antidiarrhéique, sels de réhydratation, désinfectant, crème solaire,
+  antimoustiques. Les pharmacies sont nombreuses et bien fournies, y compris à l'aéroport.
+</p>
 
-  <h2 id="sante">Santé et eau</h2>
-  <p>
-    Aucun vaccin particulier n’est requis pour un séjour touristique classique, au-delà d’être à jour de
-    ceux de routine, vérifiez avec un centre de vaccination selon votre situation. Buvez de l’eau en
-    bouteille plutôt que du robinet (le robinet est chloré et convient pour se brosser les dents), allez-y
-    doucement sur les glaçons et les crudités non épluchées les premiers jours, et emportez vos médicaments
-    personnels, de la crème solaire et une petite trousse contre les maux de ventre. Les pharmacies sont
-    nombreuses et bien achalandées. Une assurance voyage couvrant les soins médicaux est sensée.
-  </p>
+<h2 id="regles">Ce qui est interdit ou mal vu</h2>
+<ul>
+  <li><strong>Les stupéfiants :</strong> illégaux, y compris le cannabis, malgré des propositions insistantes dans la rue et en médina. Les sanctions sont réelles.</li>
+  <li><strong>Les drones :</strong> interdits sans autorisation, et confisqués à l'aéroport.</li>
+  <li><strong>Photographier</strong> bâtiments officiels, forces de l'ordre et militaires est proscrit.</li>
+  <li><strong>L'alcool :</strong> en lieux licenciés seulement, jamais dans la rue.</li>
+  <li><strong>Le ramadan :</strong> mangez et buvez discrètement en journée dans les lieux publics, par respect.</li>
+</ul>
 
-  <h2 id="plages">Plages et mer</h2>
-  <p>
-    La plage principale d’Agadir est surveillée en saison et généralement sûre pour la baignade, mais c’est
-    l’Atlantique ouvert, il peut y avoir des courants et des vagues de bord, alors baignez-vous là où il y
-    a du monde, respectez les drapeaux et gardez un œil rapproché sur les enfants. Ne laissez pas d’objets
-    de valeur sans surveillance sur le sable. L’eau est fraîche toute l’année. Pour la vue d’ensemble du
-    voyage, voyez le <a href={L('/agadir-travel-guide/')}>guide de voyage d’Agadir</a>.
-  </p>
-
-  <div class="callout">
-    <span class="callout-label">La règle des cinq secondes</span>
-    Convenez du prix des taxis d’abord · gardez vos objets de valeur fermés et hors de vue dans la foule ·
-    buvez de l’eau en bouteille · prenez un transport réservé tard le soir · et répondez aux vendeurs
-    insistants par un « non merci » tranquille. Faites cela et Agadir est un endroit facile et accueillant.
-  </div>
+<h2 id="urgences">Numéros d'urgence</h2>
+<div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Service</th><th>Numéro</th></tr></thead>
+    <tbody>
+      <tr><td>Police</td><td class="num">19</td></tr>
+      <tr><td>Gendarmerie royale (hors agglomération)</td><td class="num">177</td></tr>
+      <tr><td>Protection civile, pompiers, ambulance</td><td class="num">15</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>
+  Enregistrez ces numéros et l'adresse de votre consulat avant le départ. Pour rester joignable dès
+  l'atterrissage, une <a href={L('/esim-maroc/')}>eSIM marocaine</a> est la solution la plus simple.
+</p>
 </GuideLayout>

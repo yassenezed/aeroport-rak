@@ -2,112 +2,141 @@
 import GuideLayout from '../layouts/GuideLayout.astro';
 import { getLocalizedPath } from '../i18n';
 import { photos } from '../data/images';
+import { PRICES_CHECKED } from '../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: 'Se déplacer à Agadir', href: L('/getting-around-agadir/') },
+  { name: "Se déplacer à Marrakech", href: L("/se-deplacer-marrakech/") },
 ];
+
 const toc = [
-  { label: 'Les Petits Taxis (urbains)', id: 'petit-taxi' },
-  { label: 'Les Grands Taxis (régionaux)', id: 'grand-taxi' },
-  { label: 'Les bus urbains (Alsa)', id: 'bus' },
-  { label: 'Le transport touristique (VTC)', id: 'vtc' },
-  { label: 'La location de voiture', id: 'location' },
+  { label: "À pied", id: "pied" },
+  { label: "Le petit taxi", id: "petit-taxi" },
+  { label: "Le grand taxi", id: "grand-taxi" },
+  { label: "Bus et transports publics", id: "bus" },
+  { label: "Applications de VTC", id: "vtc" },
+  { label: "Calèches, scooters, vélos", id: "autres" },
+  { label: "Et la voiture ?", id: "voiture" },
 ];
+
 const faqs = [
-  { q: 'Y a-t-il Uber ou Careem à Agadir ?', a: 'Non, les applications comme Uber, Bolt ou Careem ne fonctionnent pas à Agadir (et sont illégales ou bloquées dans la majorité du Maroc). Les alternatives sont les taxis traditionnels ou les sociétés de transfert touristique privé (VTC locaux).' },
-  { q: 'Combien coûte un Petit Taxi à Agadir ?', a: 'La prise en charge commence à environ 2 MAD (le soir 3 MAD). Une course moyenne dans le centre (par exemple, de la plage au Souk El Had) vous coûtera entre 10 et 20 MAD (1 à 2 €). Exigez toujours que le chauffeur allume le compteur.' },
-  { q: 'Comment aller de l\'aéroport d\'Agadir au centre-ville ?', a: 'Les Petits Taxis ne sont pas autorisés à l\'aéroport. Vous devez prendre un Grand Taxi (220 MAD tarif fixe officiel), le bus de l\'aéroport (L-AE, 50 MAD), ou réserver un transfert privé à l\'avance (recommandé pour éviter l\'attente et les négociations).' },
-  { q: 'Peut-on aller à Taghazout en taxi depuis Agadir ?', a: 'Les Petits Taxis rouges d\'Agadir ne peuvent pas sortir de la ville. Pour aller à Taghazout, vous devez prendre un Grand Taxi (partagé ou privatisé) depuis le centre d\'Agadir (place Batoire), le bus Alsa numéro 32 ou 33, ou réserver un transfert privé.' },
+  { q: "Combien coûte un petit taxi à Marrakech ?", a: "Une course courte en centre-ville revient en général à 15 à 30 MAD, une traversée plus longue à 30 à 50 MAD, avec une majoration d'environ 50 % la nuit, à partir de 20 ou 21 h selon la saison. Le compteur est censé être utilisé, mais il est rarement enclenché avec les touristes : demandez-le en montant, ou fixez le prix avant de partir." },
+  { q: "Un petit taxi peut-il aller dans la médina ?", a: "Non, il vous dépose à une porte ou sur une place accessible, comme Jemaa el-Fna ou les abords de la Koutoubia. Les derbs sont trop étroits pour les voitures. Indiquez à votre chauffeur la porte la plus proche de votre riad, pas seulement son nom." },
+  { q: "Combien de passagers dans un petit taxi ?", a: "Trois au maximum, bagages compris. À quatre, il faut deux voitures ou un grand taxi. C'est la source de malentendus la plus fréquente avec les familles." },
+  { q: "Peut-on utiliser Uber, Careem ou inDrive à Marrakech ?", a: "Uber est revenu à Marrakech fin novembre 2025 avec des transporteurs touristiques agréés, et Careem comme inDrive fonctionnent dans une zone juridique encore floue. La disponibilité reste irrégulière, et les taxis s'opposent à ces services, surtout à l'aéroport et aux abords des gares. En ville, vous pouvez essayer, en vérifiant que le véhicule correspond à l'écran ; ne bâtissez pas un trajet important dessus." },
+  { q: "Comment se repérer dans la médina ?", a: "Prenez la Koutoubia comme repère : son minaret de 77 mètres se voit de loin. Téléchargez une carte hors ligne avant de partir, car le GPS dérape dans les derbs, et repérez la porte de votre riad. Si quelqu'un vous dit que « c'est fermé » et propose de vous guider, méfiez-vous : c'est presque toujours une manœuvre pour vous emmener dans une boutique." },
+  { q: "Le bus est-il une bonne option à Marrakech ?", a: "Le réseau urbain existe et coûte quelques dirhams, mais il est saturé aux heures de pointe et peu lisible pour un visiteur. Seul le bus 19 vers l'aéroport présente un vrai intérêt touristique. Pour le reste, le petit taxi est plus simple et reste peu cher." },
 ];
 ---
-<GuideLayout keywords="Se Deplacer Agadir, que faire à Agadir, attractions Agadir" 
-  lang={lang}
-  title="Guide Se Deplacer Agadir 2026 | Astuces & Incontournables"
-  description="Planifiez votre visite à Se Deplacer à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
-  eyebrow="Agadir · Transport"
-  h1="Comment se déplacer à Agadir : Le guide complet"
-  lede="Agadir est une ville étendue. Si vous pouvez longer la plage à pied, vous aurez besoin de transport pour aller au Souk El Had, à la Médina, ou pour explorer Taghazout et la Vallée du Paradis. Des Petits Taxis rouges aux VTC locaux, voici comment vous déplacer sans vous faire arnaquer."
+<GuideLayout
+  keywords="taxi Marrakech, se déplacer Marrakech, petit taxi compteur, bus 19, calèche Marrakech"
+  title={"Se déplacer à Marrakech : taxis, bus, à pied, calèche et applications (2026) | AirportRAK"}
+  description={"Comment circuler à Marrakech : petit taxi et compteur, grand taxi, bus, marche dans la médina, calèches, scooters et applications de VTC. Tarifs en dirhams et pièges à connaître."}
+  eyebrow={"Marrakech · Transports"}
+  h1={"Se déplacer à Marrakech"}
+  lede={"La ville se parcourt à pied dans la médina, en petit taxi dès qu'on en sort, et presque jamais en voiture. Voici les tarifs réels, les pièges classiques et l'ordre dans lequel utiliser chaque moyen."}
   breadcrumbs={breadcrumbs}
-  heroImage={photos['getting-around-agadir']}
+  heroImage={photos["getting-around-marrakech"]}
   toc={toc}
   faqs={faqs}
-  updated="Juin 2026"
-  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+  updated={PRICES_CHECKED}
+  cta={{ heading: "Le trajet de l'aéroport se règle à l'avance", text: "Pour l'arrivée, un transfert à 27 € par véhicule (jusqu'à sept passagers) vous évite de découvrir les règles de la ville à minuit.", provider: "transfer", label: "Voir les prix des transferts" }}
 >
-  <p>
-    Le système de transport au Maroc a ses propres règles. Uber n'existe pas, les taxis sont divisés en 
-    deux couleurs (et deux fonctions bien distinctes), et les bus peuvent être chaotiques pour les 
-    non-initiés. Une fois que vous comprenez le fonctionnement des "Petits" et des "Grands" taxis, se 
-    déplacer à Agadir devient incroyablement bon marché et facile.
-  </p>
+<h2 id="pied">À pied : le mode par défaut dans la médina</h2>
+<p>
+  Dans la médina, tout se fait à pied, et c'est un plaisir à condition d'accepter de se perdre un peu.
+  Les distances sont courtes — de Jemaa el-Fna à la madrasa Ben Youssef, quinze minutes suffisent — mais
+  les ruelles se ressemblent, se croisent et s'interrompent. Trois précautions : un plan hors ligne
+  téléchargé avant le départ, la Koutoubia comme repère lointain, et la porte de votre riad notée sur
+  votre téléphone.
+</p>
+<p>
+  Marchez tôt le matin ou en fin d'après-midi. Entre midi et 16 h, en été, la chaleur transforme la
+  médina en four, et les commerçants eux-mêmes ralentissent. Prévoyez de l'eau, un chapeau et des
+  chaussures fermées : les pavés sont irréguliers et les caniveaux ouverts.
+</p>
 
-  <h2 id="petit-taxi">Les Petits Taxis (Pour le centre-ville)</h2>
+<h2 id="petit-taxi">Le petit taxi : l'outil du quotidien</h2>
+<p>
+  Les petits taxis beiges quadrillent la ville et se hèlent dans la rue ou aux stations de Jemaa el-Fna,
+  de la Koutoubia et des grandes places. Ils prennent <strong>trois passagers au maximum</strong> et
+  restent cantonnés à l'agglomération.
+</p>
+<div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Trajet type</th><th>Prix indicatif</th></tr></thead>
+    <tbody>
+      <tr><td>Course courte en centre-ville</td><td class="num">15–30 MAD</td></tr>
+      <tr><td>Traversée plus longue (médina → Guéliz, médina → Majorelle)</td><td class="num">30–50 MAD</td></tr>
+      <tr><td>Majoration de nuit (à partir de 20–21 h)</td><td class="num">+ 50 %</td></tr>
+      <tr><td>Aéroport ↔ médina, tarif affiché</td><td class="num">100–150 MAD</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="callout">
+  <span class="callout-label">Le compteur</span>
   <p>
-    À Agadir, les Petits Taxis sont <strong>peints en rouge</strong> (ils sont orange à Marrakech, bleus à 
-    Essaouira). Ce sont généralement des Dacia Logan ou Sandero.
+    Il est censé fonctionner, mais rarement avec les visiteurs. Dites « compteur, s'il vous plaît » en
+    montant. Si le chauffeur refuse ou « n'a pas de monnaie », fixez le prix <em>avant</em> de partir,
+    dans la fourchette ci-dessus, ou descendez et prenez la voiture suivante.
   </p>
-  <ul>
-    <li><strong>Règle d'or :</strong> Ils ne sont autorisés à circuler <em>que dans les limites de la 
-    ville</em> d'Agadir (ils ne peuvent pas aller à l'aéroport ni à Taghazout).</li>
-    <li><strong>Capacité :</strong> 3 passagers maximum. C'est la loi. Si vous êtes 4, vous devrez prendre deux Petits Taxis ou un Grand Taxi.</li>
-    <li><strong>Tarifs :</strong> Ils fonctionnent au compteur. La prise en charge est de ~2 MAD (3 MAD après 20h). Une course moyenne coûte entre 10 et 20 MAD (1 à 2 €). <em>Demandez toujours au chauffeur d'allumer le compteur (le "mètre"). S'il refuse, sortez et prenez le suivant.</em></li>
-    <li><strong>Partage :</strong> Il est courant que le chauffeur s'arrête pour prendre d'autres clients en chemin si la direction est la même. Chacun paiera sa course au compteur.</li>
-  </ul>
+</div>
 
-  <h2 id="grand-taxi">Les Grands Taxis (Pour sortir de la ville)</h2>
-  <p>
-    Les Grands Taxis (souvent des Dacia Lodgy ou de vieilles Mercedes) sont de couleur crème ou jaune avec
-    une bande bleue. Eux ont l'autorisation de <strong>sortir de la ville</strong>.
-  </p>
-  <ul>
-    <li><strong>Fonctionnement partagé :</strong> Traditionnellement, ils partent de stations fixes (comme la station Batoire) quand les 6 places sont pleines. Vous payez à la place (ex: Agadir-Taghazout coûte environ 15 MAD/place).</li>
-    <li><strong>Fonctionnement privatisé ("Korsa") :</strong> Vous pouvez payer pour l'ensemble du taxi (les 6 places) pour partir immédiatement ou aller à une destination spécifique (ex: l'aéroport). Le prix se négocie ferme avant de monter (pas de compteur).</li>
-  </ul>
-  <p>Pour aller de <a href={L('/agadir-airport-to-taghazout/')}>l'aéroport à Taghazout</a> ou pour des trajets interurbains, c'est l'option locale par excellence.</p>
+<h2 id="grand-taxi">Le grand taxi : pour sortir de la ville</h2>
+<p>
+  Plus vastes, les grands taxis prennent jusqu'à six passagers et assurent les liaisons hors de
+  l'agglomération : l'Ourika, Imlil, le désert d'Agafay, Essaouira. Le prix se négocie intégralement,
+  pour la voiture entière, et dépend de la distance, de la saison et du retour à vide. Notre
+  <a href={L('/taxi-aeroport-marrakech/prix/')}>grille des prix</a> donne les ordres de grandeur, et une
+  journée d'excursion avec chauffeur se compare aux offres de
+  <a href={L('/guide-touristique/')}>guide et excursions</a>.
+</p>
 
-  <h2 id="bus">Les bus urbains (Alsa)</h2>
-  <p>
-    La compagnie Alsa gère les bus urbains d'Agadir. C'est le moyen le moins cher de se déplacer 
-    (environ 4 à 5 MAD le ticket, acheté auprès du chauffeur).
-  </p>
-  <p>
-    Les bus sont très utilisés par les locaux pour aller travailler ou se rendre à la plage, ils peuvent 
-    donc être bondés. Les lignes les plus utiles pour les touristes sont la <strong>ligne 32 et la 
-    ligne 33</strong>, qui partent du centre d'Agadir et remontent la côte jusqu'à Tamraght et Taghazout.
-  </p>
-  <p>Depuis 2024, une ligne de bus spéciale aéroport (la ligne L-AE) relie également l'aéroport au centre-ville pour 50 MAD.</p>
+<h2 id="bus">Bus et transports publics</h2>
+<p>
+  Marrakech dispose d'un réseau de bus urbains qui coûtent quelques dirhams, mais ils sont saturés aux
+  heures de pointe et difficiles à décrypter pour un visiteur. Le seul qui compte vraiment est le bus
+  19, qui relie l'aéroport à Jemaa el-Fna — détaillé sur
+  <a href={L('/transfert-aeroport-marrakech/')}>transferts aéroport Marrakech</a>. La ville n'a pas de
+  métro, et le train ne dessert que les liaisons vers Casablanca, Rabat, Fès et Tanger, depuis la gare
+  de Guéliz.
+</p>
 
-  <h2 id="vtc">Le transport touristique et VTC</h2>
-  <p>
-    Comme les applications internationales type Uber sont bloquées au Maroc, la seule façon de bénéficier 
-    d'un service "porte à porte" avec chauffeur privé à prix fixe (sans compteur truqué ni négociation 
-    éprouvante) est de réserver un <strong>Transport Touristique Privé</strong>.
-  </p>
-  <p>
-    Ces véhicules (berlines ou minivans confortables) ont une plaque d'immatriculation spéciale et sont
-    autorisés à opérer partout. C'est l'option recommandée pour vos transferts depuis <a href={L('/agadir-airport-transfers/')}>l'aéroport d'Agadir</a>,
-    ou si vous êtes un groupe de 4 à 8 personnes (qui ne rentre pas dans un Petit Taxi). Vous devez les 
-    réserver à l'avance par internet ou via votre hôtel.
-  </p>
+<h2 id="vtc">Applications de VTC : à essayer, pas à parier</h2>
+<p>
+  Le paysage a changé : Uber a repris ses activités à Marrakech le 27 novembre 2025, uniquement avec des
+  transporteurs touristiques agréés, tandis que Careem et inDrive fonctionnent dans une zone juridique
+  encore floue, les autorités ayant annoncé un cadre réglementaire à venir. Concrètement, la
+  disponibilité varie d'un jour à l'autre, et les taxis s'opposent à ces services, ce qui pose surtout
+  problème aux abords de l'aéroport et des gares.
+</p>
+<p>
+  En ville, vous pouvez essayer : vérifiez que la plaque et le chauffeur correspondent à l'écran, et
+  convenez d'un point de rendez-vous précis, car la médina complique la géolocalisation. Ne construisez
+  pas un trajet important dessus, notamment celui de l'arrivée ou du retour vers l'aéroport.
+</p>
 
-  <h2 id="location">La location de voiture</h2>
-  <p>
-    Si vous prévoyez d'explorer la région (Parc National de Souss-Massa, Taroudant, Taghazout, Imsouane), 
-    <a href={L('/renting-car-morocco-guide/')}>louer une voiture</a> est de loin la meilleure option.
-  </p>
-  <p>
-    Les routes autour d'Agadir sont en excellent état, droites et très peu fréquentées par rapport 
-    à Casablanca ou Marrakech. Le stationnement est facile dans la zone touristique (des gardiens 
-    de parking en gilet jaune s'en occupent pour 2 à 5 MAD). Comptez à partir de 25 € / jour pour une 
-    citadine.
-  </p>
+<h2 id="autres">Calèches, scooters et vélos</h2>
+<p>
+  <strong>Les calèches</strong> stationnent près de Jemaa el-Fna et de la Koutoubia. Le tarif se fixe
+  avant de monter et pour une durée précise ; elles font une promenade agréable autour des remparts en
+  fin de journée. Regardez l'état des chevaux : c'est un bon critère pour choisir un cocher.
+</p>
+<p>
+  <strong>Scooters et vélos</strong> se louent à Guéliz et dans certains quartiers. La circulation
+  marrakchie repose sur des priorités négociées au regard ; si vous n'êtes pas à l'aise, préférez le
+  vélo dans la Palmeraie ou sur les grands boulevards. Casque, assurance et état des freins se vérifient
+  avant de partir.
+</p>
 
-  <div class="callout">
-    <span class="callout-label">L'arnaque à éviter</span>
-    À la sortie des hôtels ou au Souk El Had, certains chauffeurs de Petits Taxis "oublient" d'allumer le compteur et demandent 50 MAD à l'arrivée (le quintuple du prix normal). Répétez "Khdem l'compteur, afak" (Allumez le compteur, s'il vous plaît) avant que la voiture ne démarre.
-  </div>
+<h2 id="voiture">Et la voiture ?</h2>
+<p>
+  Pour Marrakech seule, c'est un handicap : la médina est interdite aux véhicules, le stationnement près
+  des remparts est difficile et les petits taxis coûtent quelques dirhams. La location devient
+  intéressante pour l'Ourika, Essaouira ou l'Atlas — voyez
+  <a href={L('/location-voiture-aeroport-marrakech/')}>la location au RAK</a>. Pour les règles de
+  circulation locales, <a href={L('/conduire-au-maroc/')}>conduire au Maroc</a>.
+</p>
 </GuideLayout>

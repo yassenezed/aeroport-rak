@@ -2,113 +2,143 @@
 import GuideLayout from '../layouts/GuideLayout.astro';
 import { getLocalizedPath } from '../i18n';
 import { photos } from '../data/images';
+import { PRICES_CHECKED } from '../data/airport';
 
-const lang = 'fr';
-const L = (p: string) => getLocalizedPath(p, lang);
+const L = (p: string) => getLocalizedPath(p);
 
 const breadcrumbs = [
   { name: 'Accueil', href: L('/') },
-  { name: 'La Médina d\'Agadir', href: L('/agadir-medina/') },
+  { name: "La médina", href: L("/medina-marrakech/") },
 ];
+
 const toc = [
-  { label: 'L\'histoire de la Médina Polizzi', id: 'histoire' },
-  { label: 'Ce qu\'on y trouve aujourd\'hui', id: 'visite' },
-  { label: 'Prix d\'entrée et horaires', id: 'infos' },
-  { label: 'Comment s\'y rendre', id: 'transport' },
-  { label: 'La Médina vaut-elle le coup ?', id: 'avis' },
+  { label: "Ce qu'est la médina", id: "histoire" },
+  { label: "Les quartiers", id: "quartiers" },
+  { label: "Les monuments à voir", id: "monuments" },
+  { label: "Quand la visiter", id: "quand" },
+  { label: "S'orienter sans se faire guider", id: "orientation" },
+  { label: "Dormir en médina", id: "dormir" },
+  { label: "Bonnes manières", id: "manieres" },
 ];
+
 const faqs = [
-  { q: 'Où se trouve la vieille Médina d\'Agadir ?', a: 'L\'ancienne Médina d\'Agadir (la Kasbah d\'Oufella) a été détruite par le tremblement de terre de 1960. Ce que l\'on appelle aujourd\'hui "La Médina d\'Agadir" est une reconstruction artistique située dans le quartier de Bensergao, à environ 5 kilomètres du centre-ville et de la plage.' },
-  { q: 'Qui a construit la nouvelle Médina d\'Agadir ?', a: 'Elle a été imaginée et construite par Coco Polizzi, un artisan décorateur d\'origine italienne né à Rabat. En 1992, il a décidé de recréer une médina traditionnelle marocaine en utilisant les techniques de construction ancestrales (terre crue, bois, pierre).' },
-  { q: 'Combien coûte l\'entrée à la Médina d\'Agadir ?', a: 'Le tarif d\'entrée est généralement de 40 MAD (environ 4 €) par adulte. Une partie du prix inclut parfois une boisson gratuite. Prévoyez des espèces, car les cartes bancaires ne sont pas toujours acceptées au guichet.' },
-  { q: 'La Médina d\'Agadir est-elle un attrape-touriste ?', a: 'Oui et non. C\'est indéniablement une construction récente destinée aux visiteurs, et non un lieu d\'habitation historique. Cependant, l\'architecture est magnifique, le travail artisanal de Coco Polizzi est impressionnant, et le lieu est très photogénique. C\'est un bel endroit pour se promener, même si certains estiment que cela manque d\'âme.' },
+  { q: "Que voir dans la médina de Marrakech en une journée ?", a: "Un parcours cohérent : le matin, la madrasa Ben Youssef et le musée de Marrakech, puis les souks au nord de Jemaa el-Fna ; l'après-midi, le palais de la Bahia et les Tombeaux saadiens au sud, avant de finir sur la place au coucher du soleil. Comptez six à sept heures avec une pause à l'ombre, et n'essayez pas de tout voir." },
+  { q: "Quels sont les tarifs d'entrée des monuments de Marrakech ?", a: "À titre indicatif : environ 100 MAD pour le palais de la Bahia et pour les Tombeaux saadiens, 50 MAD pour la madrasa Ben Youssef, 140 MAD pour le musée Yves Saint Laurent et 170 MAD pour le jardin Majorelle, qui reste hors de la médina. Ces montants évoluent : vérifiez-les avant de partir." },
+  { q: "La médina est-elle dangereuse ?", a: "Non, elle est même très fréquentée jusqu'à tard le soir. Les désagréments sont ceux d'une grande ville touristique : petits vols à l'arraché, faux guides et insistance des commerçants. Voyez notre page sécurité pour les réflexes qui les évitent." },
+  { q: "Peut-on visiter la médina avec un enfant en poussette ?", a: "C'est difficile. Les pavés sont irréguliers, les ruelles étroites, et les deux-roues passent vite. Un porte-bébé est bien plus pratique. Pour les familles avec de jeunes enfants, un hôtel de Guéliz ou de l'Hivernage simplifie tout." },
+  { q: "Comment ne pas se perdre dans la médina ?", a: "Repérez la Koutoubia, téléchargez une carte hors ligne, gardez sous la main la porte et l'adresse de votre riad écrites en arabe, et demandez votre chemin à un commerçant plutôt qu'à quelqu'un qui vous accoste dans la rue. Et acceptez qu'une partie du charme tienne à ces détours." },
+  { q: "Quelle est la meilleure saison pour visiter la médina ?", a: "Mars à mai et septembre à novembre, quand les journées sont douces. En juillet et août, la chaleur dépasse régulièrement 38 °C : visitez tôt le matin ou en fin de journée, et gardez l'après-midi pour la piscine." },
 ];
 ---
-<GuideLayout keywords="Medina Agadir, que faire à Agadir, attractions Agadir" 
-  lang={lang}
-  title="Guide Medina Agadir 2026 | Astuces & Incontournables"
-  description="Planifiez votre visite à Medina à Agadir. Découvrez des astuces locales, le meilleur moment pour y aller et à quoi vous attendre. Réservez un guide local!"
-  eyebrow="Agadir · Culture"
-  h1="La Médina d'Agadir : Un chef-d'œuvre ressuscité"
-  lede="Agadir a perdu sa ville historique en 1960. Trente ans plus tard, un homme a décidé de la reconstruire. La Médina d'Agadir, souvent appelée Médina Polizzi, est une merveille architecturale moderne qui rend hommage à l'artisanat marocain. Voici ce qu'il faut savoir avant de la visiter."
+<GuideLayout
+  keywords="médina Marrakech, visiter la médina, Bahia, Ben Youssef, Tombeaux saadiens, souks"
+  title={"La médina de Marrakech : quartiers, monuments, souks et conseils de visite (2026) | AirportRAK"}
+  description={"Visiter la médina de Marrakech : histoire et remparts, quartiers, madrasa Ben Youssef, palais de la Bahia, Tombeaux saadiens, Koutoubia, horaires, tarifs d'entrée et façon de ne pas s'y perdre."}
+  eyebrow={"Marrakech · Médina"}
+  h1={"La médina de Marrakech"}
+  lede={"Neuf siècles d'histoire derrière des remparts ocre, un labyrinthe de ruelles où l'on se perd volontiers, et une vingtaine de sites à visiter. Voici comment l'aborder sans s'épuiser ni se faire piloter."}
   breadcrumbs={breadcrumbs}
-  heroImage={photos['agadir-marina']}
+  heroImage={photos["marrakech-medina"]}
   toc={toc}
   faqs={faqs}
-  updated="Juin 2026"
-  cta={{ heading: 'Réservez un Guide Local Privé', text: 'Évitez les pièges à touristes. Laissez nos experts locaux vous montrer le vrai Agadir.', provider: 'guide', label: 'Voir les options' }}
+  updated={PRICES_CHECKED}
+  cta={{ heading: "Trouvez un riad à la bonne porte", text: "Un riad proche d'un grand bab s'atteint en trois minutes de marche, contre dix pour un derb profond. Comparez nos sélections.", provider: "hotel", label: "Voir où dormir" }}
 >
-  <p>
-    Contrairement à Marrakech ou Fès, Agadir ne possède pas de cœur historique grouillant de vie. Le
-    tremblement de terre de 1960 a tout emporté. Cependant, si vous cherchez l'atmosphère de
-    l'architecture traditionnelle marocaine, de ses ruelles ombragées et de son artisanat, <strong>La Médina
-    d'Agadir</strong> est l'endroit où aller. Ce n'est pas un monument antique, mais c'est une œuvre d'art 
-    à ciel ouvert qui mérite d'être explorée.
-  </p>
+<h2 id="histoire">Ce qu'est la médina</h2>
+<p>
+  Fondée à la fin du XI<sup>e</sup> siècle par les Almoravides, Marrakech doit à ses remparts de terre
+  ocre le surnom de « ville rouge ». Ces murailles, longues d'une vingtaine de kilomètres et ponctuées
+  de portes monumentales, enferment encore aujourd'hui un tissu urbain médiéval, classé par l'UNESCO
+  depuis 1985. On y vit, on y travaille, on y dort : ce n'est pas un musée, mais un quartier habité de
+  plusieurs dizaines de milliers de personnes, avec ses écoles, ses fours à pain et ses mosquées.
+</p>
+<p>
+  Le cœur battant s'appelle Jemaa el-Fna, la grande place. Au nord, les souks ; au sud, la Kasbah et les
+  palais ; à l'ouest, les quartiers de riads. Le minaret de la Koutoubia, haut de 77 mètres, veille sur
+  l'ensemble.
+</p>
 
-  <h2 id="histoire">L'histoire de la Médina Polizzi</h2>
-  <p>
-    En 1992, l'architecte et décorateur <strong>Coco Polizzi</strong> (d'origine italienne, né au Maroc)
-    décide de rendre à Agadir un peu de son âme perdue. Il acquiert un terrain dans la forêt d'eucalyptus 
-    de Bensergao et commence à construire une médina idéale.
-  </p>
-  <p>
-    La particularité de ce projet est l'utilisation exclusive de <strong>matériaux et de techniques 
-    traditionnels</strong> : pierre de Taza, terre pisé, bois sculpé, zelliges (mosaïques). Il aura fallu 
-    des années pour que des maîtres artisans venus de tout le Maroc érigent cette reconstitution 
-    s'étendant sur plus de 4 hectares.
-  </p>
+<h2 id="quartiers">Les quartiers</h2>
+<div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Quartier</th><th>Caractère</th><th>Porte de référence</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Autour de Jemaa el-Fna</strong></td><td>Animé, touristique, bruyant</td><td>Bab Laksour</td></tr>
+      <tr><td><strong>Mouassine et Dar el Bacha</strong></td><td>Riads, boutiques d'artisans, jardins secrets</td><td>Bab Doukkala</td></tr>
+      <tr><td><strong>Souks et Ben Youssef</strong></td><td>Commerce dense, madrasa, tanneries au loin</td><td>Bab Debbagh</td></tr>
+      <tr><td><strong>Kasbah</strong></td><td>Palais, tombeaux saadiens, plus calme</td><td>Bab Agnaou</td></tr>
+      <tr><td><strong>Mellah</strong></td><td>Ancien quartier juif, marché aux épices, cimetière</td><td>Bab Berrima</td></tr>
+      <tr><td><strong>Riad Zitoun</strong></td><td>Résidentiel et animé, proche de la place</td><td>Bab Laksour</td></tr>
+    </tbody>
+  </table>
+</div>
 
-  <h2 id="visite">Ce qu'on y trouve aujourd'hui</h2>
+<h2 id="monuments">Les monuments à voir</h2>
+<h3>La madrasa Ben Youssef</h3>
+<p>
+  Ancienne école coranique, l'un des plus beaux exemples de décor saadien : cour à bassin, zellige,
+  plâtre sculpté et bois de cèdre. Elle est petite : comptez 45 minutes, et arrivez à l'ouverture pour
+  la voir sans foule. Entrée autour de 50 MAD.
+</p>
+<h3>Le palais de la Bahia</h3>
+<p>
+  Construit à la fin du XIX<sup>e</sup> siècle pour un grand vizir, avec des cours, des jardins et des
+  plafonds peints. Un lieu qu'on parcourt lentement, sans se presser. Entrée d'environ 100 MAD.
+</p>
+<h3>Les Tombeaux saadiens</h3>
+<p>
+  Un ensemble funéraire du XVI<sup>e</sup> siècle, muré puis redécouvert au début du XX<sup>e</sup>. La
+  salle aux douze colonnes est la pièce maîtresse. La file d'attente peut être longue en pleine saison :
+  venez à l'ouverture. Entrée autour de 100 MAD.
+</p>
+<h3>Le palais El Badi et la Koutoubia</h3>
+<p>
+  Les ruines du palais El Badi, à ciel ouvert, offrent une vue sur les cigognes qui nichent sur les
+  remparts. La Koutoubia, mosquée du XII<sup>e</sup> siècle, ne se visite pas de l'intérieur si vous
+  n'êtes pas musulman, mais ses jardins et son minaret se contemplent librement.
+</p>
+<div class="callout">
+  <span class="callout-label">Combiner, ne pas tout faire</span>
   <p>
-    En franchissant les lourdes portes en bois, vous pénétrez dans un dédale de ruelles pavées, de 
-    placettes et de passages voûtés. Le lieu est extrêmement calme, bien loin de l'agitation du <a href={L('/souk-el-had-agadir/')}>Souk El Had</a>.
+    Trois monuments par jour, c'est un maximum raisonnable. Associez un site du nord (Ben Youssef,
+    souks) et un site du sud (Bahia, Tombeaux saadiens) plutôt que de traverser la ville plusieurs fois.
   </p>
-  <ul>
-    <li><strong>L'architecture :</strong> C'est la principale attraction. Les murs de terre cuite, les balcons en bois et les détails géométriques sont un paradis pour les photographes.</li>
-    <li><strong>Les artisans :</strong> La Médina abrite plusieurs ateliers où vous pouvez observer (et acheter) le travail de ferronniers, de menuisiers, de potiers et de bijoutiers.</li>
-    <li><strong>Le café :</strong> Un charmant café mauresque se trouve à l'intérieur, idéal pour déguster un thé à la menthe avec des pâtisseries dans un cadre idyllique.</li>
-  </ul>
+</div>
 
-  <h2 id="infos">Prix d'entrée et horaires</h2>
-  <p>
-    L'entrée à la Médina d'Agadir n'est pas gratuite, car il s'agit d'un projet privé visant à financer 
-    l'entretien du lieu et des artisans.
-  </p>
-  <ul>
-    <li><strong>Tarif adulte :</strong> Environ 40 Dirhams (4 €). Il arrive que l'entrée inclue une consommation gratuite (thé ou boisson) au café, bien que cette politique change souvent.</li>
-    <li><strong>Horaires :</strong> Généralement ouverte tous les jours de 9h00 à 18h00 ou 19h00 (selon la saison).</li>
-  </ul>
-  <p>
-    <em>Conseil :</em> Prévoyez de l'argent liquide pour l'entrée et pour vos éventuels achats dans les boutiques artisanales.
-  </p>
+<h2 id="quand">Quand la visiter</h2>
+<p>
+  La médina se visite tôt : de 8 h à 11 h, les ruelles sont calmes, la lumière est belle et les sites
+  ouvrent. Entre 12 h et 16 h, en été, on s'abrite. Le soir, la ville change de visage : les souks
+  ferment progressivement, les lampes s'allument et Jemaa el-Fna prend le relais — voyez notre page sur
+  <a href={L('/jemaa-el-fna/')}>la place Jemaa el-Fna</a>. Le vendredi, jour de prière collective, certains
+  commerces ouvrent tard.
+</p>
 
-  <h2 id="transport">Comment s'y rendre</h2>
-  <p>
-    La Médina Polizzi est située à l'extérieur du centre touristique, dans le quartier de Bensergao, à 
-    environ 5 à 6 kilomètres de la plage d'Agadir.
-  </p>
-  <ul>
-    <li><strong>En Petit Taxi :</strong> C'est le moyen le plus simple. Depuis la zone touristique, la course coûtera environ 20 à 30 MAD. Précisez bien au chauffeur "Médina Polizzi" ou "Nouvelle Médina" pour ne pas être confondu avec la Kasbah d'Oufella.</li>
-    <li><strong>En voiture de location :</strong> Il y a un grand parking devant l'entrée.</li>
-    <li><strong>En visite guidée :</strong> La Médina est incluse dans la quasi-totalité des excursions d'une demi-journée "City Tour" organisées au départ des hôtels.</li>
-  </ul>
+<h2 id="orientation">S'orienter sans se faire guider</h2>
+<p>
+  Trois repères : la Koutoubia au sud-ouest, Jemaa el-Fna au centre, et les portes des remparts.
+  Téléchargez une carte hors ligne, car le GPS dérape entre les murs. Et méfiez-vous du « c'est fermé,
+  suivez-moi » : une personne qui vous aborde pour vous dire que votre destination est fermée vous
+  emmène presque toujours vers une boutique. Un refus poli et un sourire suffisent.
+</p>
+<p>
+  Si vous préférez un guide, choisissez-en un agréé, avec un badge officiel et un tarif convenu à
+  l'avance : voyez <a href={L('/guide-touristique/')}>guide et excursions</a>.
+</p>
 
-  <h2 id="avis">La Médina vaut-elle le coup ? (Notre avis)</h2>
-  <p>
-    Si vous vous attendez à la vie frénétique, aux odeurs d'épices et au chaos authentique des médinas de
-    Marrakech ou de Fès, vous serez déçu. La Médina d'Agadir ressemble davantage à un 
-    <strong>musée d'architecture en plein air</strong>. Elle est propre, silencieuse, et certains 
-    diront "sans âme" car personne n'y habite réellement.
-  </p>
-  <p>
-    Cependant, si vous souhaitez admirer de près le savoir-faire de l'artisanat marocain, prendre de 
-    superbes photos dans des décors de terre cuite, et fuir l'agitation de la plage le temps d'une heure 
-    ou deux, <strong>c'est une visite hautement recommandée</strong>.
-  </p>
+<h2 id="dormir">Dormir en médina</h2>
+<p>
+  C'est l'expérience du riad : patio, terrasse, calme derrière une porte cloutée. Avec une contrainte
+  d'arrivée — dépose à une porte et marche — que nous détaillons dans
+  <a href={L('/guide-aeroport-marrakech/aller-a-la-medina/')}>aller à la médina</a> et
+  <a href={L('/riads-medina-marrakech/')}>riads dans la médina</a>.
+</p>
 
-  <div class="callout">
-    <span class="callout-label">L'astuce photo</span>
-    Venez en fin de journée (vers 16h-17h). La lumière rasante du soleil sur les murs de terre ocre donne une atmosphère magique à la Médina, parfaite pour vos photos.
-  </div>
+<h2 id="manieres">Bonnes manières</h2>
+<ul>
+  <li><strong>Tenue :</strong> épaules et genoux couverts, par respect plus que par obligation, surtout dans les quartiers résidentiels et près des mosquées.</li>
+  <li><strong>Photos :</strong> demandez avant de photographier une personne ; beaucoup de commerçants refusent, certains réclament un pourboire.</li>
+  <li><strong>Deux-roues :</strong> les scooters passent vite dans les derbs : longez le mur et écoutez le « balak ! » (attention).</li>
+  <li><strong>Mosquées :</strong> fermées aux non-musulmans, à l'exception de rares édifices ouverts à la visite.</li>
+</ul>
 </GuideLayout>
