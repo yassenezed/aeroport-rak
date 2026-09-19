@@ -14,14 +14,14 @@ const breadcrumbs = [
 const facts = [
   { label: 'Aéroport → médina', value: `${airport.distanceToCityKm} km` },
   { label: 'Durée réelle', value: `${airport.driveToCityMin.min}–${airport.driveToCityMin.max}`, sub: 'min' },
-  { label: 'Train / VTC', value: 'Aucun', sub: 'au RAK' },
+  { label: 'Train', value: 'Aucun', sub: 'jusqu\'au RAK' },
   { label: 'Transfert réservé', value: '27 €', sub: 'dès' },
 ];
 
 const faqs = [
   {
     q: "Quel est le meilleur moyen d'aller de l'aéroport de Marrakech au centre ?",
-    a: `Cela dépend surtout de trois choses : l'heure d'atterrissage, votre quartier et vos bagages. Pour un hôtel de Guéliz ou de l'Hivernage en pleine journée, le taxi de la station suffit et reste rapide. Pour un riad au fond de la médina, un transfert réservé change la donne : le chauffeur connaît la bonne porte et vous n'entamez pas le séjour par une négociation. Pour deux personnes en sac à dos, le bus ${airport.bus.line} à ${airport.bus.oneWayMad} MAD est imbattable. Il n'y a ni train ni VTC au RAK : ces trois options, plus la location de voiture, sont tout ce qui existe.`
+    a: `Cela dépend surtout de trois choses : l'heure d'atterrissage, votre quartier et vos bagages. Pour un hôtel de Guéliz ou de l'Hivernage en pleine journée, le taxi de la station suffit et reste rapide. Pour un riad au fond de la médina, un transfert réservé change la donne : le chauffeur connaît la bonne porte et vous n'entamez pas le séjour par une négociation. Pour deux personnes en sac à dos, le bus ${airport.bus.line} à ${airport.bus.oneWayMad} MAD est imbattable. Il n'y a pas de train jusqu'au RAK, et les applications de VTC ne sont pas fiables pour une arrivée : ces options, plus la location de voiture, sont celles sur lesquelles vous pouvez compter.`
   },
   {
     q: "Y a-t-il un train entre l'aéroport de Marrakech et la ville ?",
@@ -36,8 +36,8 @@ const faqs = [
     a: "Oui, chez la plupart des opérateurs : la réservation bloque le tarif, le paiement intervient plus tard et l'annulation reste gratuite jusqu'à 24 h avant la prise en charge dans la majorité des cas. C'est le réflexe utile pour un vol du soir, un premier voyage au Maroc ou un groupe chargé, car la disponibilité des grands véhicules est la première chose qui manque en haute saison."
   },
   {
-    q: "Uber, Careem ou inDrive fonctionnent-ils à Marrakech ?",
-    a: "Non. Aucune application de VTC n'opère légalement à Marrakech, et surtout pas au départ de l'aéroport, où la desserte est réservée aux taxis agréés. Les mentions que vous croiserez dans de vieux forums ne sont plus d'actualité. Vos options porte-à-porte sont donc le taxi de la station et le transfert réservé à l'avance."
+    q: "Peut-on utiliser Uber, Careem ou inDrive à Marrakech ?",
+    a: "Ne comptez pas dessus pour votre arrivée. Uber est revenu à Marrakech fin novembre 2025, mais uniquement avec des transporteurs touristiques agréés, et sa disponibilité reste irrégulière ; Careem et inDrive fonctionnent dans une zone juridique encore floue, les autorités annonçant un cadre réglementaire à venir. Les taxis, eux, s'opposent farouchement à ces services, et la prise en charge devant les terminaux est le point de friction principal. Pour l'aéroport, les options fiables restent le rang de taxis officiel et le transfert réservé ; les applications peuvent dépanner en ville, en vérifiant que le véhicule et le chauffeur correspondent à l'écran."
   },
   {
     q: "Le chauffeur peut-il me déposer devant mon riad dans la médina ?",
@@ -99,7 +99,7 @@ const options = [
     désert.
   </p>
   <p>
-    Il n'y a ici ni train, ni Uber, ni Careem, ni inDrive. Le choix se résume à quatre options réelles :
+    Il n'y a ici ni train, et les applications de VTC ne sont pas une base fiable pour une arrivée. Le choix se résume à quatre options réelles :
     un transfert réservé, un taxi pris à la station, le bus {airport.bus.line}, ou une voiture de
     location. Tous les tarifs de cette page ont été vérifiés en {PRICES_CHECKED} et s'entendent par
     véhicule, sauf mention contraire.
