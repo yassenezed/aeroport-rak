@@ -1,0 +1,69 @@
+---
+// Index du blog : liste tous les articles publiés dans la langue courante.
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
+import { useTranslations, pathFor, type Locale } from '../i18n';
+import { site } from '../data/site';
+import { articleKeys, getArticle } from '../copy';
+import type { LocalizedPage } from '../copy/types';
+
+interface Props { locale: Locale; page: LocalizedPage; noindex?: boolean }
+const { locale, page, noindex = false } = Astro.props;
+const t = useTranslations(locale);
+
+const crumbs = [
+  { name: t('nav.home'), href: pathFor('home', locale) },
+  { name: page.h1, href: pathFor('blogIndex', locale) },
+];
+
+const posts = articleKeys
+  .map((key) => ({ key, art: getArticle(key, locale) }))
+  .filter((p) => p.art)
+  .sort((a, b) => (b.art!.date ?? '').localeCompare(a.art!.date ?? ''));
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: `${site.url}${c.href}` })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: posts.map((p, i) => ({
+      '@type': 'ListItem', position: i + 1, name: p.art!.h1, url: `${site.url}${pathFor(p.key, locale)}`,
+    })),
+  },
+];
+---
+<BaseLayout locale={locale} routeKey="blogIndex" title={page.title} description={page.description} schema={schema} noindex={noindex}>
+  <section class="hero hero--small">
+    <div class="container hero__inner">
+      <Breadcrumbs items={crumbs} />
+      {page.eyebrow && <span class="eyebrow">{page.eyebrow}</span>}
+      <h1>{page.h1}</h1>
+      <p class="lede">{page.lede}</p>
+    </div>
+  </section>
+
+  {page.body && (
+    <section class="section-block section-block--tight">
+      <div class="container container--narrow"><div class="prose" set:html={page.body} /></div>
+    </section>
+  )}
+
+  <section class="section-block">
+    <div class="container">
+      <div class="card-grid card-grid--blog">
+        {posts.map(({ key, art }) => (
+          <a class="card" href={pathFor(key, locale)}>
+            {art!.eyebrow && <span class="card__tag">{art!.eyebrow}</span>}
+            <h2>{art!.h1}</h2>
+            <p>{art!.excerpt ?? art!.description}</p>
+            <span class="card__link">{t('common.readMore')} →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

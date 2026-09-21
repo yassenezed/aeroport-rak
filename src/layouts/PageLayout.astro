@@ -1,0 +1,130 @@
+---
+// Gabarit de page courant, calqué sur la structure d'aeroportcmn.com :
+// hero--small, bandeau de chiffres, blocs de contenu, FAQ, CTA sombre.
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
+import FlightWidget from '../components/ui/FlightWidget.astro';
+import FlightSearchWidget from '../components/affiliate/FlightSearchWidget.astro';
+import TransferWidget from '../components/affiliate/TransferWidget.astro';
+import { useTranslations, pathFor, type Locale, type RouteKey } from '../i18n';
+import { site } from '../data/site';
+import type { LocalizedPage } from '../copy/types';
+
+interface Props {
+  locale: Locale;
+  routeKey: RouteKey | string;
+  page: LocalizedPage;
+  ogType?: 'website' | 'article';
+  extraSchema?: object[];
+  noindex?: boolean;
+  crumbs?: { name: string; key: string }[];
+}
+const { locale, routeKey, page, ogType = 'website', extraSchema = [], crumbs = [], noindex = false } = Astro.props;
+const t = useTranslations(locale);
+const path = pathFor(routeKey, locale);
+
+const breadcrumbItems = [
+  { name: t('nav.home'), href: pathFor('home', locale) },
+  ...crumbs.map((c) => ({ name: c.name, href: pathFor(c.key, locale) })),
+  { name: page.h1, href: path },
+];
+
+const schema: object[] = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: breadcrumbItems.map((c, i) => ({
+      '@type': 'ListItem', position: i + 1, name: c.name, item: `${site.url}${c.href}`,
+    })),
+  },
+  ...extraSchema,
+];
+if (page.faqs?.length) {
+  schema.push({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: page.faqs.map((f) => ({
+      '@type': 'Question', name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  });
+}
+---
+<BaseLayout
+  locale={locale}
+  routeKey={routeKey}
+  title={page.title}
+  description={page.description}
+  ogType={ogType}
+  schema={schema}
+  noindex={noindex}
+>
+  <section class="hero hero--small">
+    <div class="container hero__inner">
+      <Breadcrumbs items={breadcrumbItems} />
+      {page.eyebrow && <span class="eyebrow">{page.eyebrow}</span>}
+      <h1>{page.h1}</h1>
+      <p class="lede">{page.lede}</p>
+    </div>
+  </section>
+
+  {page.facts && page.facts.length > 0 && (
+    <section class="facts-band">
+      <div class="container">
+        <div class="facts">
+          {page.facts.map((f) => (
+            <div class="fact">
+              <span class="fact-label">{f.label}</span>
+              <span class="fact-value">{f.value}{f.sub && <small> {f.sub}</small>}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {page.widget && (
+    <section class="section-block section-block--widget">
+      <div class="container">
+        {page.widget === 'flights-arrivals' && <FlightWidget type="arrivals" lang={locale} />}
+        {page.widget === 'flights-departures' && <FlightWidget type="departures" lang={locale} />}
+        {page.widget === 'flight-search' && <FlightSearchWidget />}
+        {page.widget === 'transfer' && <TransferWidget />}
+      </div>
+    </section>
+  )}
+
+  <section class="section-block">
+    <div class="container">
+      <article class="prose" set:html={page.body} />
+    </div>
+  </section>
+
+  {page.faqs && page.faqs.length > 0 && (
+    <section class="section-block section-block--alt">
+      <div class="container container--narrow">
+        <h2 class="section-block__title">{t('common.faq')}</h2>
+        <div class="faq-list">
+          {page.faqs.map((f) => (
+            <details class="faq-item">
+              <summary>{f.q}</summary>
+              <div class="faq-body"><p>{f.a}</p></div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {page.cta && (
+    <section class="section-block">
+      <div class="container">
+        <div class="cta-dark-bg">
+          <h2>{page.cta.heading}</h2>
+          {page.cta.text && <p>{page.cta.text}</p>}
+          <a class="btn btn--primary btn--lg" href={page.cta.href ?? pathFor('bookTransfer', locale)}>{page.cta.label}</a>
+        </div>
+      </div>
+    </section>
+  )}
+</BaseLayout>

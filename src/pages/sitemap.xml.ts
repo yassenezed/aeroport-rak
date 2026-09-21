@@ -1,21 +1,52 @@
+// Sitemap complet : une entrée par URL, avec les alternatives hreflang.
+// Les routes sans contenu et les locales non encore traduites sont exclues,
+// puisqu'elles sont servies en noindex.
 import type { APIRoute } from 'astro';
-import { allPaths, defaultLang } from '../i18n';
+import { allRoutes, alternatesFor, DEFAULT_LOCALE, ROUTES, type Locale } from '../i18n';
+import { pages, articles, hotels } from '../copy';
 import { site } from '../data/site';
 
-const NOINDEX = new Set(['/politique-confidentialite/', '/credits-photos/', '/divulgation-affiliation/']);
+function registryFor(kind: string) {
+  return kind === 'hotel' ? hotels : kind === 'blog' ? articles : pages;
+}
 
-export const GET: APIRoute = () => {
-  const lastmod = new Date().toISOString().split('T')[0];
+/** Vrai si cette route est réellement traduite dans cette locale. */
+function isIndexable(key: string, kind: string, locale: Locale): boolean {
+  const content = registryFor(kind)[key] as Record<string, unknown> | undefined;
+  return Boolean(content && content[locale]);
+}
 
-  const urls = allPaths()
-    .filter((p) => p[defaultLang] && !NOINDEX.has(p.canonical))
-    .map((p) => `  <url><loc>${site.url}${p[defaultLang]}</loc><lastmod>${lastmod}</lastmod></url>`)
-    .join('\n');
+function priorityFor(key: string, locale: Locale): string {
+  if (key === 'home') return locale === DEFAULT_LOCALE ? '1.0' : '0.9';
+  if (['arrivals', 'departures', 'transfers', 'bookTransfer', 'carRental'].includes(key)) return '0.9';
+  if (['privacy', 'terms', 'disclosure', 'contact', 'about'].includes(key)) return '0.3';
+  return '0.7';
+}
+
+export const GET: APIRoute = async () => {
+  const entries = allRoutes().filter(({ key, kind, locale }) => isIndexable(key, kind, locale));
+
+  const urls = entries.map(({ key, locale, path }) => {
+    const alts = alternatesFor(key)
+      .filter((a) => isIndexable(key, ROUTES[key].kind, a.locale))
+      .map((a) => `    <xhtml:link rel="alternate" hreflang="${a.locale}" href="${site.url}${a.path}"/>`)
+      .join('\n');
+    const xDefault = `    <xhtml:link rel="alternate" hreflang="x-default" href="${site.url}${alternatesFor(key)[0].path}"/>`;
+    return `  <url>
+    <loc>${site.url}${path}</loc>
+${alts}
+${xDefault}
+    <changefreq>weekly</changefreq>
+    <priority>${priorityFor(key, locale)}</priority>
+  </url>`;
+  });
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls}
-</urlset>`;
-
-  return new Response(xml, { headers: { 'Content-Type': 'application/xml' } });
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+${urls.join('\n')}
+</urlset>
+`;
+  return new Response(xml, { headers: { 'Content-Type': 'application/xml; charset=utf-8' } });
 };
+
+export const prerender = true;

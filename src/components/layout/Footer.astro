@@ -1,97 +1,66 @@
 ---
-import { useTranslations, getLocalizedPath, defaultLang, type Lang } from '../../i18n';
-import Icon from '../ui/Icon.astro';
-import { airport, PRICES_CHECKED } from '../../data/airport';
+// Footer calqué sur celui d'aeroportcmn.com : bloc marque + trois colonnes
+// (à l'aéroport / se déplacer / à propos) + barre légale.
+import { useTranslations, pathFor, type Locale } from '../../i18n';
+import { site } from '../../data/site';
 
-interface Props { lang?: Lang; }
-const { lang = defaultLang } = Astro.props;
-const t = useTranslations(lang);
-const year = 2026;
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+const P = (key: string) => pathFor(key, locale);
+const year = new Date().getFullYear();
 
-// Repères de prix : la question que tout le monde se pose en atterrissant.
-const benchmarks = [
-  { label: 'Taxi aéroport → médina, journée', value: `${airport.taxiFare.dayMad[0]}–${airport.taxiFare.dayMad[1]} MAD` },
-  { label: 'Taxi aéroport → médina, nuit', value: `${airport.taxiFare.nightMad[0]}–${airport.taxiFare.nightMad[1]} MAD` },
-  { label: 'Bus 19 vers Jemaa el-Fna', value: `${airport.bus.oneWayMad} MAD` },
-  { label: 'Transfert privé réservé', value: 'dès 27 €' },
-];
-
-// Regroupement volontairement différent du menu principal : ici par question
-// posée (« combien ça coûte », « où je dors », « avant de partir »).
 const columns = [
   {
-    heading: 'Sortir de l\'aéroport',
+    title: t('footer.airport'),
     links: [
-      ['/guide-aeroport-marrakech/', 'Guide de l\'aéroport RAK'],
-      ['/reserver-transfert/', 'Réserver un transfert'],
-      ['/taxi-aeroport-marrakech/prix/', 'Grille des prix taxi'],
-      ['/transfert-aeroport-marrakech-medina/', 'Aéroport → Médina'],
-      ['/guide-aeroport-marrakech/parking/', 'Parking du terminal'],
-      ['/location-voiture-aeroport-marrakech/', 'Louer une voiture'],
+      ['arrivals', t('nav.arrivals')],
+      ['departures', t('nav.departures')],
+      ['flights', t('nav.flights')],
+      ['destinations', t('nav.destinations')],
+      ['airportGuide', t('nav.airportGuide')],
     ],
   },
   {
-    heading: 'Séjourner à Marrakech',
+    title: t('footer.getAround'),
     links: [
-      ['/ou-dormir-marrakech/', 'Quel quartier pour dormir'],
-      ['/riads-medina-marrakech/', 'Riads dans la médina'],
-      ['/que-faire-marrakech/', 'Que faire à Marrakech'],
-      ['/restaurants-marrakech/', 'Où manger'],
-      ['/excursion-vallee-ourika/', 'Excursion dans l\'Ourika'],
-      ['/se-deplacer-marrakech/', 'Se déplacer en ville'],
+      ['transfers', t('nav.transfers')],
+      ['bookTransfer', t('nav.bookTransfer')],
+      ['carRental', t('nav.carRental')],
+      ['parking', t('nav.parking')],
+      ['hotels', t('nav.hotels')],
     ],
   },
   {
-    heading: 'Avant de partir',
+    title: t('footer.about'),
     links: [
-      ['/vols-marrakech/', 'Vols vers Marrakech'],
-      ['/quand-partir-marrakech/', 'Quand partir'],
-      ['/formalites-entree-maroc/', 'Formalités d\'entrée'],
-      ['/esim-maroc/', 'eSIM Maroc'],
-      ['/securite-marrakech/', 'Sécurité sur place'],
-      ['/indemnisation-vol/', 'Vol retardé ou annulé'],
+      ['about', t('footer.about')],
+      ['contact', t('legal.contact')],
+      ['blogIndex', t('nav.blog')],
+      ['disclosure', t('legal.disclosure')],
+      ['privacy', t('legal.privacy')],
     ],
   },
-];
-
-const legalLinks = [
-  ['/a-propos/', t('footer.aboutLink')],
-  ['/contact/', t('footer.contactLink')],
-  ['/divulgation-affiliation/', t('footer.disclosureLink')],
-  ['/politique-confidentialite/', t('footer.privacyLink')],
-  ['/credits-photos/', 'Crédits photos'],
 ];
 ---
 
 <footer class="site-footer">
   <div class="container">
-    <!-- Repères de prix : utile, et propre à AirportRAK -->
-    <div class="footer-benchmarks">
-      <span class="fb-title">Repères de prix <em>· vérifiés {PRICES_CHECKED}</em></span>
-      <ul>
-        {benchmarks.map((b) => (
-          <li><span class="fb-label">{b.label}</span><span class="fb-value">{b.value}</span></li>
-        ))}
-      </ul>
-    </div>
-
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href={getLocalizedPath('/', lang)} class="footer-logo" aria-label="AirportRAK, accueil"><img src="/logo.png" alt="AirportRAK, Marrakech Airport" width="1000" height="187" loading="lazy" /></a>
-        <p class="footer-tagline">{t('footer.tagline')}</p>
-        <p class="footer-disclosure">
-          <Icon name="info" size={15} />
-          <span>{t('footer.disclosureShort')}</span>
-        </p>
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <a href={P('home')} class="site-footer__logo" aria-label="AirportRAK">
+          <img src="/logo.png" alt="AirportRAK" width="1000" height="187" loading="lazy" />
+        </a>
+        <p class="site-footer__tagline">{t('footer.tagline')}</p>
       </div>
 
-      <div class="footer-cols">
+      <div class="site-footer__cols">
         {columns.map((col) => (
-          <div class="footer-col">
-            <h3>{col.heading}</h3>
+          <div class="site-footer__col">
+            <h3>{col.title}</h3>
             <ul>
-              {col.links.map(([href, label]) => (
-                <li><a href={getLocalizedPath(href, lang)}>{label}</a></li>
+              {col.links.map(([key, label]) => (
+                <li><a href={P(key as string)}>{label}</a></li>
               ))}
             </ul>
           </div>
@@ -99,89 +68,17 @@ const legalLinks = [
       </div>
     </div>
 
-    <div class="footer-bottom">
-      <span>© {year} {t('site.name')}. {t('footer.rights')}</span>
-      <nav class="footer-legal" aria-label="Liens légaux">
-        {legalLinks.map(([href, label]) => (
-          <a href={getLocalizedPath(href, lang)}>{label}</a>
-        ))}
+    <p class="site-footer__disclosure">{t('footer.disclosure')}</p>
+
+    <div class="site-footer__bottom">
+      <span>© {year} {site.name}. {t('footer.rights')}</span>
+      <nav class="site-footer__legal" aria-label="Legal">
+        <a href={P('privacy')}>{t('legal.privacy')}</a>
+        <a href={P('terms')}>{t('legal.terms')}</a>
+        <a href={P('disclosure')}>{t('legal.disclosure')}</a>
+        <a href={P('contact')}>{t('legal.contact')}</a>
       </nav>
-      <span class="footer-iata">Marrakech Ménara · {airport.code} · {airport.icao}</span>
+      <span class="site-footer__iata">Marrakech Ménara · RAK · GMMX</span>
     </div>
   </div>
 </footer>
-
-<style>
-  .site-footer {
-    background: var(--ink);
-    color: rgba(255,255,255,0.72);
-    padding-block: 0 1.75rem;
-    margin-top: 4rem;
-  }
-
-  /* ── Bandeau repères de prix ── */
-  .footer-benchmarks {
-    background: rgba(255,255,255,0.04);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    border-top: 3px solid var(--saffron);
-    padding: 1.4rem 0 1.5rem;
-    margin-bottom: 2.75rem;
-  }
-  .fb-title {
-    display: block;
-    font-family: var(--font-body); font-weight: 700;
-    font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--saffron); margin-bottom: 1rem;
-  }
-  .fb-title em { font-style: normal; color: rgba(255,255,255,0.45); letter-spacing: 0.08em; }
-  .footer-benchmarks ul {
-    list-style: none; padding: 0; margin: 0;
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem 2rem;
-  }
-  .footer-benchmarks li { margin: 0; display: flex; flex-direction: column; gap: 0.15rem; }
-  .fb-label { font-size: 0.82rem; color: rgba(255,255,255,0.55); }
-  .fb-value { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; color: #fff; }
-
-  .footer-top { display: grid; grid-template-columns: 1fr 2.1fr; gap: 3rem; }
-  .footer-logo { display: inline-block; }
-  .footer-logo img { height: 52px; width: auto; display: block; }
-  .footer-tagline { margin-top: 0.85rem; font-size: 0.89rem; line-height: 1.65; color: rgba(255,255,255,0.6); max-width: 42ch; }
-  .footer-disclosure {
-    display: flex; gap: 0.5rem; align-items: flex-start;
-    font-size: 0.8rem; line-height: 1.55; color: rgba(255,255,255,0.45);
-    margin: 0; max-width: 44ch;
-  }
-  .footer-disclosure :global(svg) { flex: none; margin-top: 3px; color: var(--saffron); }
-
-  .footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; }
-  .footer-col h3 {
-    font-family: var(--font-body); font-size: 0.7rem; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.14em; color: #fff;
-    padding-bottom: 0.6rem; margin-bottom: 0.85rem;
-    border-bottom: 1px solid rgba(255,255,255,0.12);
-  }
-  .footer-col ul { list-style: none; padding: 0; margin: 0; }
-  .footer-col li { margin-bottom: 0.45rem; }
-  .footer-col a { color: rgba(255,255,255,0.68); text-decoration: none; font-size: 0.89rem; }
-  .footer-col a:hover { color: var(--saffron); }
-
-  .footer-bottom {
-    display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.75rem 1.5rem;
-    margin-top: 2.75rem; padding-top: 1.35rem;
-    border-top: 1px solid rgba(255,255,255,0.12);
-    font-size: 0.8rem; color: rgba(255,255,255,0.4);
-  }
-  .footer-legal { display: flex; flex-wrap: wrap; gap: 0.35rem 1rem; }
-  .footer-legal a { color: rgba(255,255,255,0.5); text-decoration: none; }
-  .footer-legal a:hover { color: var(--saffron); }
-  .footer-iata { font-variant-numeric: tabular-nums; }
-
-  @media (max-width: 900px) {
-    .footer-top { grid-template-columns: 1fr; gap: 2.25rem; }
-    .footer-cols { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (max-width: 520px) {
-    .footer-cols { grid-template-columns: 1fr; }
-    .footer-bottom { flex-direction: column; align-items: flex-start; }
-  }
-</style>

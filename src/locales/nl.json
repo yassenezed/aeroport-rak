@@ -1,0 +1,58 @@
+{
+  "nav": {
+    "home": "Home",
+    "arrivals": "Aankomsten",
+    "departures": "Vertrek",
+    "destinations": "Bestemmingen",
+    "services": "Diensten",
+    "flights": "Vluchten",
+    "esim": "eSIM Marokko",
+    "compensation": "Vluchtcompensatie",
+    "tourGuide": "Reisgids",
+    "transfers": "Transfers",
+    "bookTransfer": "Transfer boeken",
+    "carRental": "Autohuur",
+    "carBudget": "Voordelig",
+    "carLuxury": "Prestige en comfort",
+    "carMinivan": "Grote minibussen",
+    "carEasy": "Makkelijk rijden",
+    "parking": "Parkeren",
+    "hotels": "Hotels",
+    "airportGuide": "Luchthavengids",
+    "blog": "Blog",
+    "menu": "Menu",
+    "language": "Taal"
+  },
+  "site": {
+    "disclaimer": "Niet-officiële website. Niet verbonden aan de luchthaven Marrakech Menara."
+  },
+  "footer": {
+    "airport": "Op de luchthaven",
+    "getAround": "Vervoer",
+    "about": "Over ons",
+    "tagline": "Onafhankelijke gids voor de luchthaven Marrakech Menara (RAK): aankomst, vertrek, transfers, parkeren en hotels.",
+    "rights": "Alle rechten voorbehouden.",
+    "disclosure": "Sommige links zijn affiliatelinks. Boeken via deze links kan ons een commissie opleveren, zonder extra kosten voor u."
+  },
+  "common": {
+    "readMore": "Lees meer",
+    "faq": "Veelgestelde vragen",
+    "updated": "Bijgewerkt",
+    "backHome": "Terug naar home",
+    "onThisPage": "Op deze pagina",
+    "allArticles": "Alle artikelen",
+    "localTime": "Lokale tijd",
+    "airportCode": "Luchthavencode",
+    "distanceCity": "Afstand tot centrum",
+    "editorialScore": "redactiescore",
+    "verdict": "Ons oordeel",
+    "pros": "Sterke punten",
+    "cons": "Goed om te weten"
+  },
+  "legal": {
+    "privacy": "Privacy",
+    "terms": "Gebruiksvoorwaarden",
+    "disclosure": "Affiliate-verklaring",
+    "contact": "Contact"
+  }
+}

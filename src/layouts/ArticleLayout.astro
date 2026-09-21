@@ -1,0 +1,138 @@
+---
+// Article de blog : même charpente que PageLayout, avec date, schéma Article
+// et suggestions de lecture.
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
+import { useTranslations, pathFor, type Locale } from '../i18n';
+import { site } from '../data/site';
+import { articles, getArticle } from '../copy';
+import type { LocalizedArticle } from '../copy/types';
+
+interface Props { locale: Locale; routeKey: string; page: LocalizedArticle; noindex?: boolean }
+const { locale, routeKey, page, noindex = false } = Astro.props;
+const t = useTranslations(locale);
+const path = pathFor(routeKey, locale);
+
+const dateFmt = page.date
+  ? new Intl.DateTimeFormat(locale === 'ar' ? 'ar-MA' : locale, { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(page.date))
+  : null;
+
+const crumbs = [
+  { name: t('nav.home'), href: pathFor('home', locale) },
+  { name: t('nav.blog'), href: pathFor('blogIndex', locale) },
+  { name: page.h1, href: path },
+];
+
+const related = Object.keys(articles)
+  .filter((k) => k !== routeKey && k !== 'blogIndex')
+  .slice(0, 12)
+  .map((k) => ({ key: k, art: getArticle(k, locale) }))
+  .filter((r) => r.art)
+  .slice(0, 3);
+
+const schema: object[] = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: `${site.url}${c.href}` })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: page.h1,
+    description: page.description,
+    inLanguage: locale,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${site.url}${path}` },
+    ...(page.date ? { datePublished: page.date, dateModified: page.date } : {}),
+    author: { '@type': 'Organization', name: site.name, url: site.url },
+    publisher: { '@type': 'Organization', name: site.name, url: site.url, logo: { '@type': 'ImageObject', url: `${site.url}/logo.png` } },
+  },
+];
+if (page.faqs?.length) {
+  schema.push({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: page.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  });
+}
+---
+<BaseLayout locale={locale} routeKey={routeKey} title={page.title} description={page.description} ogType="article" schema={schema} noindex={noindex}>
+  <article>
+    <section class="hero hero--small hero--article">
+      <div class="container container--narrow hero__inner">
+        <Breadcrumbs items={crumbs} />
+        {page.eyebrow && <span class="eyebrow">{page.eyebrow}</span>}
+        <h1>{page.h1}</h1>
+        <p class="lede">{page.lede}</p>
+        {dateFmt && <p class="article-meta">{t('common.updated')} · <time datetime={page.date}>{dateFmt}</time></p>}
+      </div>
+    </section>
+
+    {page.facts && page.facts.length > 0 && (
+      <section class="facts-band">
+        <div class="container container--narrow">
+          <div class="facts">
+            {page.facts.map((f) => (
+              <div class="fact">
+                <span class="fact-label">{f.label}</span>
+                <span class="fact-value">{f.value}{f.sub && <small> {f.sub}</small>}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <section class="section-block">
+      <div class="container container--narrow">
+        <div class="prose" set:html={page.body} />
+      </div>
+    </section>
+
+    {page.faqs && page.faqs.length > 0 && (
+      <section class="section-block section-block--alt">
+        <div class="container container--narrow">
+          <h2 class="section-block__title">{t('common.faq')}</h2>
+          <div class="faq-list">
+            {page.faqs.map((f) => (
+              <details class="faq-item">
+                <summary>{f.q}</summary>
+                <div class="faq-body"><p>{f.a}</p></div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    {page.cta && (
+      <section class="section-block">
+        <div class="container container--narrow">
+          <div class="cta-dark-bg">
+            <h2>{page.cta.heading}</h2>
+            {page.cta.text && <p>{page.cta.text}</p>}
+            <a class="btn btn--primary btn--lg" href={page.cta.href ?? pathFor('bookTransfer', locale)}>{page.cta.label}</a>
+          </div>
+        </div>
+      </section>
+    )}
+
+    {related.length > 0 && (
+      <section class="section-block section-block--alt">
+        <div class="container">
+          <h2 class="section-block__title">{t('common.readMore')}</h2>
+          <div class="card-grid">
+            {related.map(({ key, art }) => (
+              <a class="card" href={pathFor(key, locale)}>
+                <h3>{art!.h1}</h3>
+                <p>{art!.excerpt ?? art!.description}</p>
+                <span class="card__link">{t('common.readMore')} →</span>
+              </a>
+            ))}
+          </div>
+          <p class="center"><a class="btn btn--ghost" href={pathFor('blogIndex', locale)}>{t('common.allArticles')}</a></p>
+        </div>
+      </section>
+    )}
+  </article>
+</BaseLayout>

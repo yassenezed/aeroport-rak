@@ -1,0 +1,50 @@
+---
+// Route unique : génère les 283 URL du site à partir de la table de routes.
+import PageLayout from '../layouts/PageLayout.astro';
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import HotelLayout from '../layouts/HotelLayout.astro';
+import HomePage from '../layouts/HomePage.astro';
+import BlogIndex from '../layouts/BlogIndex.astro';
+import { allRoutes, type Locale, type RouteKind } from '../i18n';
+import { getPage, getArticle, getHotel, hasContent } from '../copy';
+
+export async function getStaticPaths() {
+  // Les routes sans module de contenu ne sont pas encore émises : cela évite
+  // de publier une URL vide pendant la montée en charge éditoriale.
+  return allRoutes()
+    .filter(({ key, kind }) => hasContent(key, kind))
+    .map(({ key, locale, path, kind }) => ({
+      // Astro attend un slug sans barres obliques encadrantes ; la racine vaut undefined.
+      params: { slug: path.replace(/^\/|\/$/g, '') || undefined },
+      props: { routeKey: key, locale, kind },
+    }));
+}
+
+const { routeKey, locale, kind } = Astro.props as {
+  routeKey: string;
+  locale: Locale;
+  kind: RouteKind;
+};
+
+const resolved = kind === 'hotel' ? getHotel(routeKey, locale)
+  : kind === 'blog' ? getArticle(routeKey, locale)
+  : getPage(routeKey, locale);
+
+if (!resolved) {
+  throw new Error(`Contenu manquant pour la route « ${routeKey} » (${locale}).`);
+}
+const page = resolved.content;
+// Tant qu'une locale n'est pas traduite, on sert le français mais hors index.
+const noindex = !resolved.translated;
+---
+{routeKey === 'home' ? (
+  <HomePage locale={locale} page={page} noindex={noindex} />
+) : routeKey === 'blogIndex' ? (
+  <BlogIndex locale={locale} page={page} noindex={noindex} />
+) : kind === 'hotel' ? (
+  <HotelLayout locale={locale} routeKey={routeKey} page={page as any} noindex={noindex} />
+) : kind === 'blog' ? (
+  <ArticleLayout locale={locale} routeKey={routeKey} page={page as any} noindex={noindex} />
+) : (
+  <PageLayout locale={locale} routeKey={routeKey} page={page} noindex={noindex} />
+)}

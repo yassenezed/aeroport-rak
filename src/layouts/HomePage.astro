@@ -1,0 +1,129 @@
+---
+// Accueil : hero premium avec carte widget, accès rapides, blocs de contenu.
+import BaseLayout from './BaseLayout.astro';
+import TransferWidget from '../components/affiliate/TransferWidget.astro';
+import { useTranslations, pathFor, type Locale } from '../i18n';
+import { site } from '../data/site';
+import { airport } from '../data/airport';
+import type { LocalizedPage } from '../copy/types';
+
+interface Props { locale: Locale; page: LocalizedPage; noindex?: boolean }
+const { locale, page, noindex = false } = Astro.props;
+const t = useTranslations(locale);
+
+const quickLinks = [
+  { key: 'arrivals', label: t('nav.arrivals') },
+  { key: 'departures', label: t('nav.departures') },
+  { key: 'transfers', label: t('nav.transfers') },
+  { key: 'carRental', label: t('nav.carRental') },
+  { key: 'parking', label: t('nav.parking') },
+  { key: 'hotels', label: t('nav.hotels') },
+];
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: site.name,
+    url: site.url,
+    inLanguage: locale,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Airport',
+    name: 'Aéroport de Marrakech Ménara',
+    iataCode: 'RAK',
+    icaoCode: 'GMMX',
+    address: { '@type': 'PostalAddress', addressLocality: 'Marrakech', addressCountry: 'MA' },
+    geo: { '@type': 'GeoCoordinates', latitude: 31.6069, longitude: -8.0363 },
+    url: site.url,
+  },
+];
+if (page.faqs?.length) {
+  schema.push({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: page.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  } as any);
+}
+---
+<BaseLayout locale={locale} routeKey="home" title={page.title} description={page.description} schema={schema} bodyClass="is-home" noindex={noindex}>
+  <section class="hero hero--premium">
+    <div class="container hero-premium__grid">
+      <div class="hero-premium__text">
+        {page.eyebrow && <span class="eyebrow">{page.eyebrow}</span>}
+        <h1>{page.h1}</h1>
+        <p class="lede">{page.lede}</p>
+        <div class="hero-premium__actions">
+          <a class="btn btn--primary btn--lg" href={pathFor('bookTransfer', locale)}>{t('nav.bookTransfer')}</a>
+          <a class="btn btn--ghost btn--lg" href={pathFor('arrivals', locale)}>{t('nav.arrivals')}</a>
+        </div>
+        <ul class="hero-premium__meta">
+          <li><span>{t('common.airportCode')}</span><strong>RAK · GMMX</strong></li>
+          <li><span>{t('common.distanceCity')}</span><strong>{airport.distanceToCityKm} km</strong></li>
+          <li><span>{t('common.localTime')}</span><strong>UTC+1</strong></li>
+        </ul>
+      </div>
+      <div class="hero-premium__card">
+        <TransferWidget title="Réservation de transfert aéroport Marrakech" />
+      </div>
+    </div>
+  </section>
+
+  <nav class="quicklinks" aria-label={t('nav.menu')}>
+    <div class="container quicklinks__row">
+      {quickLinks.map((l) => (
+        <a class="quicklink" href={pathFor(l.key, locale)}>{l.label}</a>
+      ))}
+    </div>
+  </nav>
+
+  {page.facts && page.facts.length > 0 && (
+    <section class="facts-band">
+      <div class="container">
+        <div class="facts">
+          {page.facts.map((f) => (
+            <div class="fact">
+              <span class="fact-label">{f.label}</span>
+              <span class="fact-value">{f.value}{f.sub && <small> {f.sub}</small>}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="section-block">
+    <div class="container">
+      <div class="prose" set:html={page.body} />
+    </div>
+  </section>
+
+  {page.faqs && page.faqs.length > 0 && (
+    <section class="section-block section-block--alt">
+      <div class="container container--narrow">
+        <h2 class="section-block__title">{t('common.faq')}</h2>
+        <div class="faq-list">
+          {page.faqs.map((f) => (
+            <details class="faq-item">
+              <summary>{f.q}</summary>
+              <div class="faq-body"><p>{f.a}</p></div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {page.cta && (
+    <section class="section-block">
+      <div class="container">
+        <div class="cta-dark-bg">
+          <h2>{page.cta.heading}</h2>
+          {page.cta.text && <p>{page.cta.text}</p>}
+          <a class="btn btn--primary btn--lg" href={page.cta.href ?? pathFor('bookTransfer', locale)}>{page.cta.label}</a>
+        </div>
+      </div>
+    </section>
+  )}
+</BaseLayout>

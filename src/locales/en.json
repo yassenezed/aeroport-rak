@@ -1,0 +1,58 @@
+{
+  "nav": {
+    "home": "Home",
+    "arrivals": "Arrivals",
+    "departures": "Departures",
+    "destinations": "Destinations",
+    "services": "Services",
+    "flights": "Flights",
+    "esim": "Morocco eSIM",
+    "compensation": "Flight compensation",
+    "tourGuide": "Tour guide",
+    "transfers": "Transfers",
+    "bookTransfer": "Book a transfer",
+    "carRental": "Car rental",
+    "carBudget": "Budget",
+    "carLuxury": "Prestige & comfort",
+    "carMinivan": "Large minivans",
+    "carEasy": "Easy drive",
+    "parking": "Parking",
+    "hotels": "Hotels",
+    "airportGuide": "Airport guide",
+    "blog": "Blog",
+    "menu": "Menu",
+    "language": "Language"
+  },
+  "site": {
+    "disclaimer": "Unofficial website. Not affiliated with Marrakech Menara Airport."
+  },
+  "footer": {
+    "airport": "At the airport",
+    "getAround": "Getting around",
+    "about": "About",
+    "tagline": "Independent guide to Marrakech Menara Airport (RAK): arrivals, departures, transfers, parking and hotels.",
+    "rights": "All rights reserved.",
+    "disclosure": "Some links are affiliate links. Booking through them may earn us a commission, at no extra cost to you."
+  },
+  "common": {
+    "readMore": "Read more",
+    "faq": "Frequently asked questions",
+    "updated": "Updated",
+    "backHome": "Back to home",
+    "onThisPage": "On this page",
+    "allArticles": "All articles",
+    "localTime": "Local time",
+    "airportCode": "Airport code",
+    "distanceCity": "Distance to city",
+    "editorialScore": "editorial score",
+    "verdict": "Our verdict",
+    "pros": "What we like",
+    "cons": "Worth knowing before you book"
+  },
+  "legal": {
+    "privacy": "Privacy",
+    "terms": "Terms of use",
+    "disclosure": "Affiliate disclosure",
+    "contact": "Contact"
+  }
+}

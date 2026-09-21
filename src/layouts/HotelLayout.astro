@@ -1,11 +1,136 @@
 ---
-import MoneyLayout from './MoneyLayout.astro';
-const props = Astro.props as any;
+// Fiche hôtel : avis éditorial, points forts et réserves, schéma Hotel + Review.
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
+import { useTranslations, pathFor, type Locale } from '../i18n';
+import { site } from '../data/site';
+import type { LocalizedHotel } from '../copy/types';
+
+interface Props { locale: Locale; routeKey: string; page: LocalizedHotel; noindex?: boolean }
+const { locale, routeKey, page, noindex = false } = Astro.props;
+const t = useTranslations(locale);
+const path = pathFor(routeKey, locale);
+
+const crumbs = [
+  { name: t('nav.home'), href: pathFor('home', locale) },
+  { name: t('nav.hotels'), href: pathFor('hotels', locale) },
+  { name: page.h1, href: path },
+];
+
+const schema: object[] = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: `${site.url}${c.href}` })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Hotel',
+    name: page.h1,
+    description: page.description,
+    address: { '@type': 'PostalAddress', addressLocality: 'Marrakech', addressCountry: 'MA' },
+    ...(page.priceRange ? { priceRange: page.priceRange } : {}),
+    ...(page.rating ? {
+      review: {
+        '@type': 'Review',
+        reviewRating: { '@type': 'Rating', ratingValue: page.rating, bestRating: 5 },
+        author: { '@type': 'Organization', name: site.name },
+        ...(page.verdict ? { reviewBody: page.verdict } : {}),
+      },
+    } : {}),
+  },
+];
+if (page.faqs?.length) {
+  schema.push({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: page.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  });
+}
 ---
-<MoneyLayout
-  {...props}
-  heroProvider={props.heroProvider ?? 'booking'}
-  cta={props.cta ?? { heading: 'Trouvez où dormir à Marrakech', text: 'Comparez riads de la médina, hôtels de Guéliz et resorts de la Palmeraie, annulation gratuite sur la plupart des chambres.', provider: 'booking', label: 'Voir les hébergements' }}
->
-  <slot />
-</MoneyLayout>
+<BaseLayout locale={locale} routeKey={routeKey} title={page.title} description={page.description} schema={schema} noindex={noindex}>
+  <section class="hero hero--small hero--hotel">
+    <div class="container hero__inner">
+      <Breadcrumbs items={crumbs} />
+      {page.eyebrow && <span class="eyebrow">{page.eyebrow}</span>}
+      <h1>{page.h1}</h1>
+      <p class="lede">{page.lede}</p>
+      <div class="hotel-meta">
+        {page.stars && <span class="chip">{page.stars}</span>}
+        {page.area && <span class="chip">{page.area}</span>}
+        {page.priceRange && <span class="chip">{page.priceRange}</span>}
+        {page.rating && (
+          <span class="chip chip--score">
+            <strong>{page.rating.toFixed(1)}</strong>/5 · {page.ratingLabel ?? t('common.editorialScore')}
+          </span>
+        )}
+      </div>
+    </div>
+  </section>
+
+  {page.verdict && (
+    <section class="section-block section-block--tight">
+      <div class="container">
+        <div class="callout callout--verdict">
+          <h2>{t('common.verdict')}</h2>
+          <p>{page.verdict}</p>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="section-block">
+    <div class="container">
+      <div class="prose" set:html={page.body} />
+    </div>
+  </section>
+
+  {(page.pros?.length || page.cons?.length) && (
+    <section class="section-block section-block--alt">
+      <div class="container">
+        <div class="proscons">
+          {page.pros?.length && (
+            <div class="proscons__col proscons__col--pro">
+              <h2>{t('common.pros')}</h2>
+              <ul>{page.pros.map((p) => <li>{p}</li>)}</ul>
+            </div>
+          )}
+          {page.cons?.length && (
+            <div class="proscons__col proscons__col--con">
+              <h2>{t('common.cons')}</h2>
+              <ul>{page.cons.map((c) => <li>{c}</li>)}</ul>
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {page.faqs && page.faqs.length > 0 && (
+    <section class="section-block">
+      <div class="container container--narrow">
+        <h2 class="section-block__title">{t('common.faq')}</h2>
+        <div class="faq-list">
+          {page.faqs.map((f) => (
+            <details class="faq-item">
+              <summary>{f.q}</summary>
+              <div class="faq-body"><p>{f.a}</p></div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {page.cta && (
+    <section class="section-block section-block--alt">
+      <div class="container">
+        <div class="cta-dark-bg">
+          <h2>{page.cta.heading}</h2>
+          {page.cta.text && <p>{page.cta.text}</p>}
+          <a class="btn btn--primary btn--lg" href={page.cta.href ?? pathFor('bookTransfer', locale)}>{page.cta.label}</a>
+        </div>
+      </div>
+    </section>
+  )}
+</BaseLayout>
