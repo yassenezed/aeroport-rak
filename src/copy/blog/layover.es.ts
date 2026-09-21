@@ -1,0 +1,62 @@
+import type { LocalizedArticle } from '../types';
+
+export default {
+  title: 'Escala en Marrakech: qué hacer según el tiempo',
+  description: 'Escala en el aeropuerto de Marrakech: cuánto se tarda en salir, qué ver en 4, 6 o 10 horas, consigna de equipajes y volver a tiempo al vuelo.',
+  eyebrow: 'Aeropuerto',
+  h1: 'Escala en Marrakech: ¿salir o quedarse?',
+  lede: "Seis kilómetros separan la terminal de Jemaa el-Fna, lo que hace que una escala en Marrakech se preste especialmente bien a una salida. Queda calcular bien, porque lo que falla es la vuelta, no la ida.",
+  excerpt: 'Cuatro, seis o diez horas de escala: lo que puede ver razonablemente de Marrakech y el cálculo de tiempo que no hay que fallar.',
+  date: '2026-09-09',
+  body: `
+<h2>El cálculo, ante todo</h2>
+<p>No razone nunca en «duración de la escala», sino en <strong>tiempo útil en la ciudad</strong>. Hay que restar, por orden: la salida de la terminal (30 a 60 minutos, policía y equipajes incluidos), el trayecto de ida (15 a 30 minutos), el de vuelta (lo mismo) y, sobre todo, la <strong>presentación a facturación dos horas antes del vuelo</strong>, tres en temporada alta.</p>
+<div class="table-wrap">
+<table class="data">
+<thead><tr><th>Escala</th><th>Tiempo útil en la ciudad</th><th>Qué es realista</th></tr></thead>
+<tbody>
+<tr><td><strong>Menos de 4 h</strong></td><td class="num">0</td><td>Quedarse en la terminal</td></tr>
+<tr><td><strong>5 a 6 h</strong></td><td class="num">1 h 30 – 2 h</td><td>Jemaa el-Fna y la Koutoubia, nada más</td></tr>
+<tr class="row-highlight"><td><strong>7 a 9 h</strong></td><td class="num">3 h – 4 h 30</td><td>Plaza, zocos, un monumento, una comida</td></tr>
+<tr><td><strong>10 h y más</strong></td><td class="num">5 h+</td><td>Medina completa, jardines Majorelle, hammam</td></tr>
+</tbody>
+</table>
+</div>
+<p>Dos matices importantes. Si no sale de la zona internacional y su equipaje está facturado hasta el destino final, <strong>no tiene que pasar la policía</strong>: compruébelo con su aerolínea, lo cambia todo. Y si su escala cae de noche, salir tiene poco interés: la medina cierra y se aplica la tarifa nocturna a los taxis.</p>
+
+<h2>Cinco o seis horas: la versión corta</h2>
+<p>Taxi hasta Jemaa el-Fna, una hora en la plaza y en los primeros pasajes de los zocos, un té en una terraza con vistas, la Koutoubia desde fuera y vuelta. Es breve pero real: habrá visto lo que define la identidad de la ciudad.</p>
+<p>No intente añadir un monumento: las entradas, las colas y los paseos consumen exactamente el tiempo que le falta.</p>
+
+<h2>Siete a nueve horas: la versión razonable</h2>
+<p>Da para añadir <strong>un</strong> monumento —el palacio de la Bahía o la madraza Ben Youssef son los más accesibles desde la plaza— y una comida de verdad. Mantenga el ritmo y fíjese una hora de salida firme, escrita, que respete aunque esté cómodamente instalado.</p>
+
+<h2>Diez horas o más</h2>
+<p>La medina se visita correctamente, con los zocos, un monumento, una comida y eventualmente los jardines Majorelle, en el barrio de Guéliz, más cerca del aeropuerto que la medina, lo cual resulta práctico para terminar el día. Un hammam es planteable, pero reserve: los buenos horarios se agotan rápido.</p>
+<div class="callout">
+<span class="callout-label">Lo que hay que resolver antes de salir</span>
+<p>Deje su equipaje en la consigna de la terminal en lugar de arrastrarlo. Retire dirhams y fracciónelos en billetes pequeños. Active una conexión, eSIM o SIM local. Y acuerde un horario de vuelta con su conductor si ha reservado un traslado de ida y vuelta: eso es lo que asegura el vuelo.</p>
+</div>
+
+<h2>Quedarse en la terminal</h2>
+<p>Por debajo de cuatro horas, o de noche, es la única opción razonable. El RAK dispone de cafeterías y tiendas, y el acceso a una sala VIP transforma una espera de varias horas: vea nuestro artículo sobre las <a href="/es/blog/marrakech-airport-vip-lounges/">salas VIP del aeropuerto</a>. Por encima de seis horas de espera nocturna, un hotel cercano al aeropuerto suele salir más barato que una sala seguida de una noche en blanco.</p>
+`,
+  faqs: [
+    {
+      q: '¿Se puede salir del aeropuerto durante una escala en Marrakech?',
+      a: "Sí, si tiene derecho de entrada en el país, lo que ocurre sin visado para los ciudadanos de la Unión Europea, Suiza, Reino Unido, Canadá y Estados Unidos. Calcule de 30 a 60 minutos para salir de la terminal y luego de 15 a 30 minutos hasta el centro.",
+    },
+    {
+      q: '¿Cuánta escala hace falta para visitar Marrakech?',
+      a: "Al menos cinco o seis horas para una salida útil, que le dejará de una a dos horas en la ciudad. Por debajo de cuatro horas, quédese en la terminal: la salida, los trayectos y la presentación dos horas antes del vuelo consumen todo el tiempo disponible.",
+    },
+    {
+      q: '¿Hay consigna de equipajes en el aeropuerto de Marrakech?',
+      a: "Sí, un servicio de consigna permite dejar equipaje por el día. Es lo primero que hay que hacer si sale a la ciudad: arrastrar una maleta por los zocos no tiene ningún sentido.",
+    },
+    {
+      q: '¿Qué ver en una escala de seis horas en Marrakech?',
+      a: "Jemaa el-Fna, los primeros pasajes de los zocos, un té en una terraza y la Koutoubia vista desde fuera. No añada un monumento: las entradas, las colas y los paseos consumen precisamente el tiempo que necesitaría para la vuelta.",
+    },
+  ],
+} satisfies LocalizedArticle;
