@@ -542,7 +542,7 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
 
 @media (max-width: 900px) {
   .hero-premium__grid { grid-template-columns: 1fr; }
-  .hero-premium__card { order: -1; }
+  .hero-premium__card { max-height: 480px; }
 }
 @media (max-width: 560px) {
   .hero-premium__meta { grid-template-columns: repeat(2, auto); gap: 1rem; }
