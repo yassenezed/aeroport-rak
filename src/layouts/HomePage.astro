@@ -59,9 +59,9 @@ if (page.faqs?.length) {
           <a class="btn btn--ghost btn--lg" href={pathFor('arrivals', locale)}>{t('nav.arrivals')}</a>
         </div>
         <ul class="hero-premium__meta">
-          <li><span>{t('common.airportCode')}</span><strong>RAK · GMMX</strong></li>
-          <li><span>{t('common.distanceCity')}</span><strong>{airport.distanceToCityKm} km</strong></li>
-          <li><span>{t('common.localTime')}</span><strong>UTC+1</strong></li>
+          <li><span>{t('common.airportCode')}</span><strong dir="ltr">RAK · GMMX</strong></li>
+          <li><span>{t('common.distanceCity')}</span><strong dir="ltr">{airport.distanceToCityKm} km</strong></li>
+          <li><span>{t('common.localTime')}</span><strong dir="ltr">UTC+1</strong></li>
         </ul>
       </div>
       <div class="hero-premium__card">
@@ -85,7 +85,7 @@ if (page.faqs?.length) {
           {page.facts.map((f) => (
             <div class="fact">
               <span class="fact-label">{f.label}</span>
-              <span class="fact-value">{f.value}{f.sub && <small> {f.sub}</small>}</span>
+              <span class="fact-value" dir="auto">{f.value}{f.sub && <small> {f.sub}</small>}</span>
             </div>
           ))}
         </div>

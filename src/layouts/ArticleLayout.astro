@@ -75,7 +75,7 @@ if (page.faqs?.length) {
             {page.facts.map((f) => (
               <div class="fact">
                 <span class="fact-label">{f.label}</span>
-                <span class="fact-value">{f.value}{f.sub && <small> {f.sub}</small>}</span>
+                <span class="fact-value" dir="auto">{f.value}{f.sub && <small> {f.sub}</small>}</span>
               </div>
             ))}
           </div>

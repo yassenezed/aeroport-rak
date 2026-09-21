@@ -449,7 +449,7 @@ table.data .num { font-variant-numeric: tabular-nums; font-weight: 700; }
   display: grid;
   grid-template-columns: 1.02fr 0.98fr;
   gap: clamp(1.75rem, 4vw, 3.5rem);
-  align-items: center;
+  align-items: start;
   padding-block: clamp(2.25rem, 5vw, 4rem);
 }
 .hero--premium h1 { color: #fff; margin-bottom: 1rem; }
@@ -472,7 +472,13 @@ table.data .num { font-variant-numeric: tabular-nums; font-weight: 700; }
 .hero-premium__card {
   background: var(--surface); border-radius: var(--r-xl); padding: 1.25rem;
   box-shadow: var(--shadow-lg); border-top: 3px solid var(--blue);
+  /* Une fois les résultats chargés, le widget s'allonge sur des milliers de
+     pixels : on le contient dans la carte pour que le hero garde sa forme. */
+  max-height: 560px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
+.hero-premium__text { padding-top: clamp(0rem, 2vw, 1.5rem); }
 
 /* ── Accès rapides sous le hero ── */
 .quicklinks { background: var(--surface); border-bottom: 1px solid var(--line); }
