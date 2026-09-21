@@ -3,7 +3,7 @@ import { site } from '../../data/site';
 
 export default {
   fr: {
-    title: 'Contact — AirportRAK',
+    title: 'Nous contacter — AirportRAK',
     description: "Contacter AirportRAK : correction d'une information sur l'aéroport de Marrakech, signalement d'un tarif périmé ou demande professionnelle.",
     eyebrow: 'AirportRAK',
     h1: 'Nous contacter',

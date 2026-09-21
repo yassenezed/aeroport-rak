@@ -6,22 +6,40 @@ import type { PageContent, ArticleContent, HotelContent, LocalizedPage, Localize
 
 type Mod<T> = { default: T };
 
+// Deux conventions de nommage cohabitent :
+//   <cle>.ts          → l'objet complet, indexé par locale (le français y vit) ;
+//   <cle>.<locale>.ts → une seule locale, fusionnée dans l'objet ci-dessus.
+// La seconde permet d'ajouter une traduction sans retoucher le fichier source.
 const pageMods = import.meta.glob<Mod<PageContent>>('./pages/*.ts', { eager: true });
 const blogMods = import.meta.glob<Mod<ArticleContent>>('./blog/*.ts', { eager: true });
 const hotelMods = import.meta.glob<Mod<HotelContent>>('./hotels/*.ts', { eager: true });
 
-function index<T>(mods: Record<string, Mod<T>>): Record<string, T> {
+const LOCALE_SUFFIX = /\.(fr|en|es|de|nl|ar)$/;
+
+function index<T extends Record<string, unknown>>(mods: Record<string, Mod<T>>): Record<string, T> {
   const out: Record<string, T> = {};
+  const overlays: [string, Locale, unknown][] = [];
+
   for (const [path, mod] of Object.entries(mods)) {
-    const key = path.split('/').pop()!.replace(/\.ts$/, '');
-    out[key] = mod.default;
+    const base = path.split('/').pop()!.replace(/\.ts$/, '');
+    const suffix = base.match(LOCALE_SUFFIX);
+    if (suffix) {
+      overlays.push([base.replace(LOCALE_SUFFIX, ''), suffix[1] as Locale, mod.default]);
+    } else {
+      out[base] = { ...mod.default };
+    }
+  }
+
+  for (const [key, locale, content] of overlays) {
+    if (!out[key]) continue;
+    (out[key] as Record<string, unknown>)[locale] = content;
   }
   return out;
 }
 
-export const pages = index(pageMods);
-export const articles = index(blogMods);
-export const hotels = index(hotelMods);
+export const pages = index(pageMods as Record<string, Mod<Record<string, unknown>>>) as Record<string, PageContent>;
+export const articles = index(blogMods as Record<string, Mod<Record<string, unknown>>>) as Record<string, ArticleContent>;
+export const hotels = index(hotelMods as Record<string, Mod<Record<string, unknown>>>) as Record<string, HotelContent>;
 
 export interface Resolved<T> {
   content: T;
