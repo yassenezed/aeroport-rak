@@ -5,7 +5,7 @@ export default {
     title: "Arrivées aéroport Marrakech-Ménara (RAK) : vols en direct",
     description: "Arrivées à l'aéroport de Marrakech-Ménara en direct : horaires et statut des vols, retards, police, bagages, puis taxi ou transfert vers la ville.",
     eyebrow: "Tableau en direct · heure locale",
-    h1: "Arrivées à l'aéroport de Marrakech-Ménara",
+    h1: "Arrivées aéroport Marrakech-Ménara",
     lede: "Suivez en temps réel les vols à l'arrivée à l'aéroport de Marrakech-Ménara (RAK) : heure prévue, heure estimée, retards et atterrissages. En dessous, tout ce qui se passe entre la passerelle et le trottoir, et comment rejoindre la ville.",
     widget: 'flights-arrivals',
     highlights: [
@@ -14,20 +14,20 @@ export default {
       { icon: 'map-pin', value: "Terminal 1 & 2", label: "Terminaux d'arrivée" },
     ],
     steps: {
-      heading: "De l'avion à la sortie : les 4 étapes de l'arrivée",
+      heading: "Arrivée à l'aéroport de Marrakech-Ménara : les 4 étapes",
       intro: "Le parcours est le même au terminal 1 et au terminal 2. Ce qui change, c'est l'affluence : un vol posé à 22 h n'a rien à voir avec un vol de 14 h.",
       items: [
-        { icon: 'passport', title: 'Police des frontières', text: "Passeport et fiche d'entrée, distribuée à bord. Pas de visa pour les touristes de l'UE, de Suisse, du Royaume-Uni et du Canada (90 jours). 15 à 40 minutes selon l'heure." },
+        { icon: 'passport', title: 'Police des frontières à Marrakech-Ménara', text: "Passeport et fiche d'entrée, distribuée à bord. Pas de visa pour les touristes de l'UE, de Suisse, du Royaume-Uni et du Canada (90 jours). 15 à 40 minutes selon l'heure." },
         { icon: 'luggage', title: 'Livraison des bagages', text: "Les tapis sont juste après le contrôle. Le numéro du tapis s'affiche sur les écrans ; comptez 20 à 30 minutes sur les vols du soir." },
         { icon: 'shield-check', title: 'Douane', text: "Passage en général fluide, avec contrôles par sondage. Les espèces ne se déclarent qu'au-delà de 100 000 MAD. Drones et talkies-walkies sont retenus." },
-        { icon: 'door', title: 'Hall des arrivées', text: "Distributeurs, change, cartes SIM et loueurs de voitures, puis la sortie vers la station de taxis, les chauffeurs et les parkings." },
+        { icon: 'door', title: "Hall des arrivées de l'aéroport", text: "Distributeurs, change, cartes SIM et loueurs de voitures, puis la sortie vers la station de taxis, les chauffeurs et les parkings." },
       ],
     },
     services: {
-      heading: "Après l'atterrissage : rejoindre Marrakech",
+      heading: "Depuis l'aéroport de Marrakech-Ménara : rejoindre la ville",
       intro: "Les solutions pour quitter l'aéroport de Marrakech-Ménara et bien démarrer le séjour, avec les prix vérifiés.",
       items: [
-        { icon: 'van', key: 'bookTransfer', title: 'Transfert privé', text: "Chauffeur à votre nom, vol suivi, prix fixe par véhicule dès 27 €.", cta: 'Réserver' },
+        { icon: 'van', key: 'bookTransfer', title: "Transfert privé depuis l'aéroport", text: "Chauffeur à votre nom, vol suivi, prix fixe par véhicule dès 27 €.", cta: 'Réserver' },
         { icon: 'car', key: 'transfers', title: 'Taxi et bus 19', text: "Tarifs officiels du taxi de jour et de nuit, horaires du bus 19.", cta: 'Voir les tarifs' },
         { icon: 'tag', key: 'carRental', title: 'Location de voiture', text: "Comptoirs dans le hall des arrivées, caution et pièges du contrat.", cta: 'Comparer' },
         { icon: 'sim', key: 'esim', title: 'eSIM Maroc', text: "Internet dès l'atterrissage pour joindre votre chauffeur.", cta: "Choisir une eSIM" },
@@ -36,7 +36,7 @@ export default {
       ],
     },
     body: `
-<h2>Comment lire le tableau des arrivées de l'aéroport de Marrakech</h2>
+<h2>Comment lire le tableau des arrivées de l'aéroport de Marrakech-Ménara</h2>
 <p>Le tableau ci-dessus affiche les vols à l'arrivée à l'aéroport de Marrakech-Ménara, toutes compagnies confondues. Les horaires sont en <strong>heure locale de Marrakech</strong>, et non en heure de votre ville de départ : c'est la première source de confusion quand on vient chercher quelqu'un.</p>
 <ul>
 <li><strong>Prévu</strong> : l'heure programmée par la compagnie. Elle ne bouge pas, même en cas de retard.</li>
@@ -50,7 +50,7 @@ export default {
 <p>L'aéroport de Marrakech-Ménara reçoit ses vols par vagues. Une première vague arrive en fin de matinée et en début d'après-midi, avec les vols partis tôt d'Europe. Mais le vrai pic se situe <strong>entre 20 h et minuit</strong>, quand les compagnies low cost enchaînent les atterrissages depuis la France, l'Espagne, l'Italie, la Belgique ou le Royaume-Uni. Plusieurs avions se posent alors dans la même demi-heure, et la file de la police des frontières s'allonge.</p>
 <p>Si vous avez le choix, un vol qui atterrit entre 13 h et 17 h vous fera gagner une demi-heure à la sortie. Si vous arrivez le soir, le service de <a href="/blog/fast-track-aeroport-marrakech/">fast track à l'aéroport de Marrakech</a> permet de passer les contrôles par une file dédiée.</p>
 
-<h2>Compagnies et provenances des vols à l'arrivée</h2>
+<h2>Compagnies et provenances des vols à l'aéroport de Marrakech-Ménara</h2>
 <p>La plupart des vols qui arrivent à Marrakech viennent d'Europe. On retrouve sur le tableau, selon la saison, <strong>Ryanair</strong>, <strong>easyJet</strong>, <strong>Transavia</strong>, <strong>Royal Air Maroc</strong>, <strong>Air France</strong>, <strong>Vueling</strong>, <strong>TUI fly</strong>, <strong>Jet2</strong>, <strong>Wizz Air</strong> ou encore <strong>Discover Airlines</strong>.</p>
 <ul>
 <li><strong>France</strong> : Paris (Orly, Charles-de-Gaulle, Beauvais), Lyon, Marseille, Nice, Toulouse, Bordeaux, Nantes, Lille.</li>
@@ -64,10 +64,10 @@ export default {
 <h2>Formalités d'entrée : passeport, visa et fiche de police</h2>
 <p>Les ressortissants de l'Union européenne, de la Suisse, du Royaume-Uni, du Canada et des États-Unis entrent au Maroc <strong>sans visa pour un séjour touristique de 90 jours</strong>, avec un passeport valable pendant toute la durée du séjour. La fiche d'entrée est distribuée à bord : remplissez-la pendant le vol, avec l'adresse de votre hébergement, pour ne pas quitter la file au dernier moment. Les enfants voyageant avec un seul parent doivent pouvoir présenter une autorisation de l'autre parent.</p>
 
-<h2>Retirer de l'argent avant de sortir</h2>
+<h2>Retirer de l'argent à l'aéroport de Marrakech</h2>
 <p>C'est l'étape à ne pas sauter. Les taxis n'acceptent pas la carte et le dirham ne s'achète pas hors du Maroc : le hall des arrivées est donc votre premier point de change. Les distributeurs y fonctionnent bien, mais délivrent volontiers des billets de 200 MAD. Retirez de quoi couvrir le trajet et les premiers jours, puis faites de la monnaie au café du terminal : des coupures de 50 et 100 MAD évitent la discussion sur la monnaie dans le taxi. Tous les conseils sont dans notre guide <a href="/blog/argent-maroc/">argent et change au Maroc</a>.</p>
 
-<h2>Sortir du hall : taxi, transfert ou bus 19</h2>
+<h2>Quitter l'aéroport de Marrakech-Ménara : taxi, transfert ou bus 19</h2>
 <p>Vous serez abordé avant même d'atteindre la porte. C'est rarement agressif, mais mieux vaut l'anticiper : la station officielle de taxis se trouve devant la sortie, et son panneau affiche les tarifs par zone. Toute proposition faite <em>à l'intérieur</em> du terminal sort de ce cadre.</p>
 <div class="table-wrap">
 <table class="data">
@@ -81,7 +81,7 @@ export default {
 </div>
 <p>Pour un hôtel de Guéliz ou de l'Hivernage en journée, le taxi suffit : annoncez le montant affiché avant d'ouvrir le coffre (voir nos <a href="/blog/taxi-marrakech/">conseils taxi à Marrakech</a>). Pour un riad en médina, un vol après 21 h ou un groupe de quatre et plus, le <a href="/reserver-transfert/">transfert réservé</a> règle d'avance le prix, le véhicule et la porte de dépose. Tous les détails sur la page <a href="/transferts/">transferts depuis l'aéroport</a>.</p>
 
-<h2>Attendre un proche à l'arrivée</h2>
+<h2>Attendre un proche à l'aéroport de Marrakech</h2>
 <p>Vous venez chercher quelqu'un à l'aéroport de Marrakech ? Suivez le vol sur le tableau des arrivées et partez de chez vous en fonction de l'heure <em>estimée</em>, pas de l'heure prévue. Seuls les passagers entrent dans la zone des bagages : l'attente se fait dans le hall public, face aux portes de sortie. Prévoyez d'arriver 20 à 30 minutes après l'atterrissage. En voiture, le dépose-minute est réservé aux arrêts courts ; pour attendre, garez-vous au <a href="/parkings/">parking de l'aéroport</a>, à quelques minutes à pied du terminal.</p>
 
 <div class="callout">
@@ -92,7 +92,7 @@ export default {
 <h2>Arriver de nuit à Marrakech</h2>
 <p>Une grande partie des vols low cost se pose entre 21 h et 1 h du matin. Trois conséquences pratiques : le taxi passe au tarif de nuit, soit 150 à 240 MAD ; le bus 19 ne circule plus après 23 h 30 ; et les ruelles de la médina, peu éclairées, se prêtent mal à la recherche d'un riad avec une valise. Si votre vol atterrit tard, la réservation d'un transfert n'est pas un luxe : le chauffeur suit le numéro de vol et attend en cas de retard.</p>
 
-<h2>Vol retardé, annulé ou dérouté</h2>
+<h2>Vol retardé, annulé ou dérouté à l'aéroport de Marrakech-Ménara</h2>
 <p>Si votre vol arrive à Marrakech avec plus de trois heures de retard, vous pouvez avoir droit à une indemnisation au titre du règlement européen 261/2004 : il couvre tous les vols au départ de l'Union européenne, quelle que soit la compagnie. Pour un trajet de 1 500 à 3 500 km, comme Paris–Marrakech, le montant est de <strong>400 € par passager</strong>. Vérifiez vos droits sur notre page <a href="/indemnisation-vol/">indemnisation de vol</a>. L'aéroport est exploité par l'<a href="https://www.onda.ma/" target="_blank" rel="noopener">Office national des aéroports (ONDA)</a>, qui publie aussi les informations officielles sur les vols.</p>
 <p>Pour tout savoir sur les terminaux, les services et le plan du terminal, consultez notre <a href="/guide-aeroport/">guide de l'aéroport de Marrakech</a>.</p>
 `,

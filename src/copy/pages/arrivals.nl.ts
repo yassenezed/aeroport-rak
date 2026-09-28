@@ -4,7 +4,7 @@ export default {
   title: "Aankomsten luchthaven Marrakech-Menara (RAK): live vluchten",
   description: "Live aankomsten op luchthaven Marrakech-Menara: vluchttijden en status, vertragingen, paspoortcontrole, bagage, en daarna taxi of transfer naar de stad.",
   eyebrow: "Live bord · lokale tijd",
-  h1: "Aankomsten op luchthaven Marrakech-Menara",
+  h1: "Aankomsten luchthaven Marrakech-Menara",
   lede: "Volg de aankomsten op luchthaven Marrakech-Menara (RAK) in realtime: geplande tijd, verwachte tijd, vertragingen en landingen. Daaronder alles wat er gebeurt tussen de slurf en de stoeprand, en hoe u in de stad komt.",
   widget: 'flights-arrivals',
   highlights: [
@@ -13,20 +13,20 @@ export default {
     { icon: 'map-pin', value: "Terminal 1 & 2", label: "Aankomstterminals" },
   ],
   steps: {
-    heading: "Van vliegtuig tot uitgang: de 4 stappen van de aankomst",
+    heading: "Aankomst op luchthaven Marrakech-Menara: de 4 stappen",
     intro: "De route is dezelfde in terminal 1 en terminal 2. Wat verandert, is de drukte: een vlucht die om 22 uur landt, is iets heel anders dan een vlucht van 14 uur.",
     items: [
-      { icon: 'passport', title: "Paspoortcontrole", text: "Paspoort en inreisformulier, dat aan boord wordt uitgedeeld. Geen visum voor toeristen uit de EU, Zwitserland, het VK, de VS en Canada (90 dagen). 15 tot 40 minuten, afhankelijk van het uur." },
+      { icon: 'passport', title: "Paspoortcontrole op Marrakech-Menara", text: "Paspoort en inreisformulier, dat aan boord wordt uitgedeeld. Geen visum voor toeristen uit de EU, Zwitserland, het VK, de VS en Canada (90 dagen). 15 tot 40 minuten, afhankelijk van het uur." },
       { icon: 'luggage', title: "Bagageafhandeling", text: "De banden liggen direct na de controle. Het bandnummer staat op de schermen; reken op 20 tot 30 minuten bij avondvluchten." },
       { icon: 'shield-check', title: "Douane", text: "Meestal vlot, met steekproeven. Contant geld hoeft pas boven 100.000 MAD aangegeven te worden. Drones en portofoons worden ingehouden." },
-      { icon: 'door', title: "Aankomsthal", text: "Geldautomaten, wisselkantoren, simkaarten en autoverhuurbalies, daarna de uitgang naar de taxistandplaats, de chauffeurs en de parkeerterreinen." },
+      { icon: 'door', title: "Aankomsthal van de luchthaven", text: "Geldautomaten, wisselkantoren, simkaarten en autoverhuurbalies, daarna de uitgang naar de taxistandplaats, de chauffeurs en de parkeerterreinen." },
     ],
   },
   services: {
-    heading: "Na de landing: naar Marrakech",
+    heading: "Van luchthaven Marrakech-Menara naar de stad",
     intro: "Zo verlaat u luchthaven Marrakech-Menara en begint u goed aan uw verblijf, met gecontroleerde prijzen.",
     items: [
-      { icon: 'van', key: 'bookTransfer', title: "Privétransfer", text: "Chauffeur met naambord, vlucht gevolgd, vaste prijs per voertuig vanaf € 27.", cta: "Boeken" },
+      { icon: 'van', key: 'bookTransfer', title: "Privétransfer vanaf de luchthaven", text: "Chauffeur met naambord, vlucht gevolgd, vaste prijs per voertuig vanaf € 27.", cta: "Boeken" },
       { icon: 'car', key: 'transfers', title: "Taxi en bus 19", text: "Officiële taxitarieven overdag en 's nachts, dienstregeling van bus 19.", cta: "Tarieven bekijken" },
       { icon: 'tag', key: 'carRental', title: "Autohuur", text: "Balies in de aankomsthal, borg en valkuilen in het contract.", cta: "Vergelijken" },
       { icon: 'sim', key: 'esim', title: "eSIM Marokko", text: "Internet vanaf de landing om uw chauffeur te bereiken.", cta: "eSIM kiezen" },
@@ -35,7 +35,7 @@ export default {
     ],
   },
   body: `
-<h2>Zo leest u het aankomstenbord van luchthaven Marrakech</h2>
+<h2>Zo leest u het aankomstenbord van luchthaven Marrakech-Menara</h2>
 <p>Het bord hierboven toont alle aankomende vluchten op luchthaven Marrakech-Menara, van alle maatschappijen. De tijden staan in <strong>lokale tijd van Marrakech</strong>, niet in de tijd van uw vertrekstad: dat is de grootste bron van verwarring als u iemand komt ophalen.</p>
 <ul>
 <li><strong>Gepland</strong>: de tijd die de maatschappij heeft vastgelegd. Die verandert niet, ook niet bij vertraging.</li>
@@ -49,7 +49,7 @@ export default {
 <p>Luchthaven Marrakech-Menara ontvangt zijn vluchten in golven. Een eerste golf landt laat in de ochtend en vroeg in de middag, met vluchten die vroeg uit Europa vertrokken. De echte piek ligt echter <strong>tussen 20 uur en middernacht</strong>, wanneer prijsvechters na elkaar landen uit Nederland, België, Frankrijk, Spanje en het Verenigd Koninkrijk. Dan komen meerdere toestellen binnen hetzelfde halfuur aan en groeit de rij bij de paspoortcontrole.</p>
 <p>Als u kunt kiezen, levert een vlucht die tussen 13 en 17 uur landt een halfuur winst op bij de uitgang. Komt u 's avonds aan, dan brengt de <a href="/nl/blog/fast-track-marrakech-airport/">fast track op luchthaven Marrakech</a> u via een aparte rij door de controles.</p>
 
-<h2>Maatschappijen en herkomst van de aankomende vluchten</h2>
+<h2>Maatschappijen en herkomst van vluchten naar luchthaven Marrakech-Menara</h2>
 <p>De meeste vluchten naar Marrakech komen uit Europa. Afhankelijk van het seizoen ziet u op het bord onder meer <strong>Transavia</strong>, <strong>Ryanair</strong>, <strong>TUI fly</strong>, <strong>easyJet</strong>, <strong>Royal Air Maroc</strong>, <strong>Corendon</strong>, <strong>Wizz Air</strong>, <strong>Vueling</strong> en <strong>Air France</strong>.</p>
 <ul>
 <li><strong>Nederland en België</strong>: Amsterdam, Eindhoven, Rotterdam, Brussel, Charleroi.</li>
@@ -62,10 +62,10 @@ export default {
 <h2>Inreisformaliteiten: paspoort, visum en inreisformulier</h2>
 <p>Burgers van de EU, Zwitserland, het VK, de VS en Canada reizen Marokko <strong>zonder visum in voor een toeristisch verblijf tot 90 dagen</strong>, met een paspoort dat geldig is voor de hele duur van het verblijf. Een identiteitskaart volstaat niet. Het inreisformulier wordt aan boord uitgedeeld: vul het tijdens de vlucht in met het adres van uw accommodatie, zodat u niet op het laatste moment uit de rij hoeft. Kinderen die met één ouder reizen, nemen best een toestemmingsverklaring van de andere ouder mee.</p>
 
-<h2>Neem geld op voordat u naar buiten gaat</h2>
+<h2>Geld opnemen op luchthaven Marrakech</h2>
 <p>Deze stap mag u niet overslaan. Taxi's accepteren geen kaart en dirhams zijn buiten Marokko niet te koop: de aankomsthal is dus uw eerste wisselpunt. De automaten werken goed, maar geven vaak biljetten van 200 MAD. Neem genoeg op voor de rit en de eerste dagen en wissel een biljet in het café van de terminal: met briefjes van 50 en 100 MAD voorkomt u gedoe over wisselgeld in de taxi. Alle tips staan in onze gids over <a href="/nl/blog/money-in-morocco/">geld en wisselen in Marokko</a>.</p>
 
-<h2>De hal uit: taxi, transfer of bus 19</h2>
+<h2>Van luchthaven Marrakech-Menara weg: taxi, transfer of bus 19</h2>
 <p>U wordt al aangesproken voordat u de deur bereikt. Dat is zelden opdringerig, maar het is goed om erop voorbereid te zijn: de officiële taxistandplaats ligt direct voor de uitgang, en het bord daar toont de tarieven per zone. Elk aanbod <em>binnen</em> de terminal valt buiten dat kader.</p>
 <div class="table-wrap">
 <table class="data">
@@ -79,7 +79,7 @@ export default {
 </div>
 <p>Voor een hotel in Gueliz of het Hivernage volstaat overdag de taxi: spreek het aangegeven tarief af voordat de kofferbak opengaat (zie onze <a href="/nl/blog/taxi-tips-marrakech/">taxitips voor Marrakech</a>). Voor een riad in de medina, een vlucht na 21 uur of een groep van vier of meer legt de <a href="/nl/book-transfer/">geboekte transfer</a> vooraf de prijs, het voertuig en de afzetpoort vast. Alle details op de pagina <a href="/nl/transfers/">transfers vanaf de luchthaven</a>.</p>
 
-<h2>Iemand ophalen bij aankomst</h2>
+<h2>Iemand ophalen op luchthaven Marrakech</h2>
 <p>Haalt u iemand op op luchthaven Marrakech? Volg de vlucht op het aankomstenbord en vertrek op basis van de <em>verwachte</em> tijd, niet de geplande. Alleen passagiers komen in de bagagezone: u wacht in de openbare hal, tegenover de uitgangsdeuren. Kom 20 tot 30 minuten na de landing aan. Met de auto is de kiss-and-ride-zone alleen voor korte stops; om te wachten gebruikt u het <a href="/nl/parking/">parkeerterrein van de luchthaven</a>, op enkele minuten lopen van de terminal.</p>
 
 <div class="callout">
@@ -90,7 +90,7 @@ export default {
 <h2>'s Nachts aankomen in Marrakech</h2>
 <p>Een groot deel van de prijsvechters landt tussen 21 en 1 uur. Drie praktische gevolgen: de taxi rijdt tegen het nachttarief van 150 tot 240 MAD; bus 19 rijdt na 23.30 uur niet meer; en de slecht verlichte steegjes van de medina zijn geen plek om met een koffer een riad te zoeken. Landt uw vlucht laat, dan is een geboekte transfer geen luxe: de chauffeur volgt het vluchtnummer en wacht bij vertraging.</p>
 
-<h2>Vertraagde, geannuleerde of omgeleide vlucht</h2>
+<h2>Vertraagde, geannuleerde of omgeleide vlucht naar Marrakech-Menara</h2>
 <p>Komt uw vlucht meer dan drie uur te laat aan in Marrakech, dan hebt u mogelijk recht op compensatie volgens de Europese verordening 261/2004: die geldt voor alle vluchten die vertrekken vanuit de Europese Unie, ongeacht de maatschappij. Voor een traject van 1.500 tot 3.500 km, zoals Amsterdam–Marrakech, bedraagt het bedrag <strong>€ 400 per passagier</strong>. Controleer uw rechten op onze pagina <a href="/nl/flight-compensation/">vluchtcompensatie</a>. De luchthaven wordt beheerd door het <a href="https://www.onda.ma/" target="_blank" rel="noopener">Office National des Aéroports (ONDA)</a>, dat ook de officiële vluchtinformatie publiceert.</p>
 <p>Alles over de terminals, de voorzieningen en de plattegrond leest u in onze <a href="/nl/airport-guide/">gids voor luchthaven Marrakech</a>.</p>
 `,

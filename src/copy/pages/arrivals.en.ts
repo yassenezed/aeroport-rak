@@ -4,7 +4,7 @@ export default {
   title: "Marrakech Airport Arrivals (RAK): live flight board",
   description: "Live arrivals at Marrakech Menara Airport: flight times and status, delays, passport control, baggage, then taxi or transfer into the city.",
   eyebrow: "Live board · local time",
-  h1: "Marrakech Menara Airport arrivals",
+  h1: "Marrakech Menara Airport Arrivals",
   lede: "Track arrivals at Marrakech Menara Airport (RAK) in real time: scheduled time, estimated time, delays and landings. Below, everything that happens between the jet bridge and the kerb, and how to get into the city.",
   widget: 'flights-arrivals',
   highlights: [
@@ -13,20 +13,20 @@ export default {
     { icon: 'map-pin', value: "Terminal 1 & 2", label: "Arrival terminals" },
   ],
   steps: {
-    heading: "From plane to exit: the 4 steps of arriving",
+    heading: "Arriving at Marrakech Menara Airport: the 4 steps",
     intro: "The route is the same at Terminal 1 and Terminal 2. What changes is the crowd: a flight landing at 10 pm is nothing like one at 2 pm.",
     items: [
-      { icon: 'passport', title: 'Passport control', text: "Passport and entry card, handed out on board. No visa for tourists from the EU, UK, US, Canada or Switzerland (90 days). 15 to 40 minutes depending on the hour." },
+      { icon: 'passport', title: 'Passport control at Marrakech Menara', text: "Passport and entry card, handed out on board. No visa for tourists from the EU, UK, US, Canada or Switzerland (90 days). 15 to 40 minutes depending on the hour." },
       { icon: 'luggage', title: 'Baggage reclaim', text: "The belts are just after passport control. The belt number shows on the screens; allow 20 to 30 minutes on evening flights." },
       { icon: 'shield-check', title: 'Customs', text: "Usually smooth, with random checks. Cash only needs declaring above MAD 100,000. Drones and walkie-talkies are held." },
-      { icon: 'door', title: 'Arrivals hall', text: "ATMs, exchange desks, SIM cards and car hire counters, then the exit to the taxi rank, drivers and car parks." },
+      { icon: 'door', title: 'Airport arrivals hall', text: "ATMs, exchange desks, SIM cards and car hire counters, then the exit to the taxi rank, drivers and car parks." },
     ],
   },
   services: {
-    heading: "After landing: getting into Marrakech",
+    heading: "From Marrakech Menara Airport to the city",
     intro: "The ways to leave Marrakech Menara Airport and start your stay well, with checked prices.",
     items: [
-      { icon: 'van', key: 'bookTransfer', title: 'Private transfer', text: "Driver with your name, flight tracked, fixed price per vehicle from €27.", cta: 'Book' },
+      { icon: 'van', key: 'bookTransfer', title: 'Private airport transfer', text: "Driver with your name, flight tracked, fixed price per vehicle from €27.", cta: 'Book' },
       { icon: 'car', key: 'transfers', title: 'Taxi and bus 19', text: "Official day and night taxi fares, bus 19 timetable.", cta: 'See fares' },
       { icon: 'tag', key: 'carRental', title: 'Car hire', text: "Counters in the arrivals hall, deposit and contract traps.", cta: 'Compare' },
       { icon: 'sim', key: 'esim', title: 'Morocco eSIM', text: "Data from the moment you land, to reach your driver.", cta: 'Choose an eSIM' },
@@ -35,7 +35,7 @@ export default {
     ],
   },
   body: `
-<h2>How to read the Marrakech airport arrivals board</h2>
+<h2>How to read the Marrakech Menara Airport arrivals board</h2>
 <p>The board above shows all arriving flights at Marrakech Menara Airport, across every airline. Times are in <strong>Marrakech local time</strong>, not the time in the departure city: that is the most common source of confusion when you are picking someone up.</p>
 <ul>
 <li><strong>Scheduled</strong>: the time set by the airline. It does not change, even if the flight is late.</li>
@@ -49,7 +49,7 @@ export default {
 <p>Marrakech Menara Airport receives its flights in waves. A first wave lands late morning and early afternoon, with flights that left Europe early. But the real peak is <strong>between 8 pm and midnight</strong>, when low-cost airlines land one after another from the UK, France, Spain, Italy and Belgium. Several aircraft then arrive within the same half hour, and the passport control queue grows.</p>
 <p>If you have the choice, a flight landing between 1 pm and 5 pm will save you half an hour at the exit. If you arrive in the evening, the <a href="/en/blog/fast-track-marrakech-airport/">Marrakech airport fast track</a> service lets you clear the controls through a dedicated lane.</p>
 
-<h2>Airlines and origins of arriving flights</h2>
+<h2>Airlines and origins of flights to Marrakech Menara Airport</h2>
 <p>Most flights arriving in Marrakech come from Europe. Depending on the season, the board shows <strong>Ryanair</strong>, <strong>easyJet</strong>, <strong>Jet2</strong>, <strong>Transavia</strong>, <strong>Royal Air Maroc</strong>, <strong>British Airways</strong>, <strong>Vueling</strong>, <strong>TUI</strong>, <strong>Wizz Air</strong> and <strong>Air France</strong>, among others.</p>
 <ul>
 <li><strong>UK and Ireland</strong>: London (Gatwick, Stansted, Luton, Heathrow), Manchester, Bristol, Birmingham, Edinburgh, Dublin.</li>
@@ -62,10 +62,10 @@ export default {
 <h2>Entry formalities: passport, visa and entry card</h2>
 <p>Citizens of the EU, the UK, the US, Canada and Switzerland enter Morocco <strong>without a visa for a tourist stay of up to 90 days</strong>, with a passport valid for the whole stay. The entry card is handed out on board: fill it in during the flight, with the address of your accommodation, so you do not have to leave the queue at the last minute. Children travelling with only one parent should carry consent from the other parent.</p>
 
-<h2>Withdraw cash before you leave the hall</h2>
+<h2>Withdrawing cash at Marrakech airport</h2>
 <p>This is the step not to skip. Taxis do not take cards and dirhams cannot be bought outside Morocco, so the arrivals hall is your first exchange point. The ATMs work well but tend to dispense MAD 200 notes. Take out enough for the ride and the first few days, then break a note at the terminal café: MAD 50 and 100 notes avoid arguments about change in the taxi. All the tips are in our guide to <a href="/en/blog/money-in-morocco/">money and exchange in Morocco</a>.</p>
 
-<h2>Leaving the hall: taxi, transfer or bus 19</h2>
+<h2>Leaving Marrakech Menara Airport: taxi, transfer or bus 19</h2>
 <p>You will be approached before you even reach the door. It is rarely aggressive, but worth anticipating: the official taxi rank is right outside the exit, and its board shows fares by zone. Any offer made <em>inside</em> the terminal is outside that system.</p>
 <div class="table-wrap">
 <table class="data">
@@ -79,7 +79,7 @@ export default {
 </div>
 <p>For a hotel in Gueliz or the Hivernage by day, a taxi is fine: agree the posted fare before the boot opens (see our <a href="/en/blog/taxi-tips-marrakech/">Marrakech taxi tips</a>). For a medina riad, a flight after 9 pm or a group of four or more, a <a href="/en/book-transfer/">pre-booked transfer</a> settles the price, the vehicle and the drop-off gate in advance. Full details on the <a href="/en/transfers/">airport transfers</a> page.</p>
 
-<h2>Meeting someone at arrivals</h2>
+<h2>Meeting someone at Marrakech airport</h2>
 <p>Picking someone up at Marrakech airport? Follow the flight on the arrivals board and leave home based on the <em>estimated</em> time, not the scheduled one. Only passengers enter the baggage area: you wait in the public hall, facing the exit doors. Plan to arrive 20 to 30 minutes after landing. By car, the drop-off zone is for short stops only; to wait, use the <a href="/en/parking/">airport car park</a>, a few minutes' walk from the terminal.</p>
 
 <div class="callout">
@@ -90,7 +90,7 @@ export default {
 <h2>Arriving in Marrakech at night</h2>
 <p>A large share of low-cost flights land between 9 pm and 1 am. Three practical consequences: taxis switch to the night fare, MAD 150 to 240; bus 19 stops running after 11.30 pm; and the dimly lit medina lanes are no place to hunt for a riad with a suitcase. If your flight lands late, a pre-booked transfer is not a luxury: the driver tracks the flight number and waits if you are delayed.</p>
 
-<h2>Delayed, cancelled or diverted flight</h2>
+<h2>Delayed, cancelled or diverted flight to Marrakech Menara Airport</h2>
 <p>If your flight reaches Marrakech more than three hours late, you may be entitled to compensation under EU Regulation 261/2004 (or its UK equivalent): it covers every flight departing the EU or the UK, whatever the airline. For a 1,500 to 3,500 km journey, such as London–Marrakech, the amount is <strong>€400 (or £350) per passenger</strong>. Check your rights on our <a href="/en/flight-compensation/">flight compensation</a> page. The airport is run by the <a href="https://www.onda.ma/" target="_blank" rel="noopener">Office National des Aéroports (ONDA)</a>, which also publishes official flight information.</p>
 <p>For terminals, services and the terminal layout, see our <a href="/en/airport-guide/">Marrakech airport guide</a>.</p>
 `,

@@ -931,10 +931,10 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
 @media (max-width: 560px) { .steps-grid { grid-template-columns: 1fr; } }
 
 /* ---------- Cartes d'infos en direct (heure, météo, terminal) ---------- */
-.info-cards-band { position: relative; z-index: 1; margin-top: -32px; padding-bottom: 8px; }
+.info-cards-band { padding-top: clamp(1.5rem, 3vw, 2rem); }
 .info-cards { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .info-card { display: flex; align-items: center; gap: 20px; background: var(--surface); border: 1px solid var(--line-2); border-radius: var(--r-xl); padding: 28px 24px; box-shadow: var(--shadow-md); }
-.info-card__icon { flex: none; display: grid; place-items: center; width: 52px; height: 52px; border-radius: var(--r-lg); background: var(--blue-dark); color: #fff; }
+.info-card__icon { flex: none; display: grid; place-items: center; width: 52px; height: 52px; border-radius: var(--r-lg); background: var(--ink); color: var(--saffron); }
 .info-card__label { display: block; color: var(--ink-3); font-size: .95rem; margin-bottom: 4px; }
 .info-card__value { display: block; color: var(--ink); font-size: 1.3rem; font-weight: 700; line-height: 1.25; }
-@media (max-width: 860px) { .info-cards { grid-template-columns: 1fr; gap: 12px; } .info-card { padding: 18px 20px; } .info-cards-band { margin-top: -24px; } }
+@media (max-width: 860px) { .info-cards { grid-template-columns: 1fr; gap: 12px; } .info-card { padding: 18px 20px; } }

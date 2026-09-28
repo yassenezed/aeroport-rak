@@ -4,7 +4,7 @@ export default {
   title: "Ankunft Flughafen Marrakesch-Menara (RAK): Live-Flüge",
   description: "Ankünfte am Flughafen Marrakesch-Menara live: Flugzeiten und Status, Verspätungen, Passkontrolle, Gepäck, dann Taxi oder Transfer in die Stadt.",
   eyebrow: "Live-Anzeige · Ortszeit",
-  h1: "Ankünfte am Flughafen Marrakesch-Menara",
+  h1: "Ankunft Flughafen Marrakesch-Menara",
   lede: "Verfolgen Sie die Ankünfte am Flughafen Marrakesch-Menara (RAK) in Echtzeit: planmäßige Zeit, erwartete Zeit, Verspätungen und Landungen. Darunter alles, was zwischen Fluggastbrücke und Bordstein passiert, und wie Sie in die Stadt kommen.",
   widget: 'flights-arrivals',
   highlights: [
@@ -13,20 +13,20 @@ export default {
     { icon: 'map-pin', value: "Terminal 1 & 2", label: "Ankunftsterminals" },
   ],
   steps: {
-    heading: "Vom Flugzeug zum Ausgang: die 4 Schritte der Ankunft",
+    heading: "Ankunft am Flughafen Marrakesch-Menara: die 4 Schritte",
     intro: "Der Weg ist in Terminal 1 und Terminal 2 derselbe. Was sich ändert, ist der Andrang: Ein Flug, der um 22 Uhr landet, ist etwas ganz anderes als einer um 14 Uhr.",
     items: [
-      { icon: 'passport', title: 'Passkontrolle', text: "Reisepass und Einreisekarte, die an Bord verteilt wird. Kein Visum für Touristen aus der EU, der Schweiz, Großbritannien, den USA und Kanada (90 Tage). 15 bis 40 Minuten je nach Uhrzeit." },
+      { icon: 'passport', title: 'Passkontrolle in Marrakesch-Menara', text: "Reisepass und Einreisekarte, die an Bord verteilt wird. Kein Visum für Touristen aus der EU, der Schweiz, Großbritannien, den USA und Kanada (90 Tage). 15 bis 40 Minuten je nach Uhrzeit." },
       { icon: 'luggage', title: 'Gepäckausgabe', text: "Die Bänder liegen direkt nach der Kontrolle. Die Bandnummer steht auf den Bildschirmen; rechnen Sie bei Abendflügen mit 20 bis 30 Minuten." },
       { icon: 'shield-check', title: 'Zoll', text: "Meist zügig, mit Stichproben. Bargeld muss erst ab 100.000 MAD angemeldet werden. Drohnen und Funkgeräte werden einbehalten." },
-      { icon: 'door', title: 'Ankunftshalle', text: "Geldautomaten, Wechselstuben, SIM-Karten und Mietwagenschalter, dann der Ausgang zum Taxistand, zu den Fahrern und Parkplätzen." },
+      { icon: 'door', title: 'Ankunftshalle des Flughafens', text: "Geldautomaten, Wechselstuben, SIM-Karten und Mietwagenschalter, dann der Ausgang zum Taxistand, zu den Fahrern und Parkplätzen." },
     ],
   },
   services: {
-    heading: "Nach der Landung: nach Marrakesch kommen",
+    heading: "Vom Flughafen Marrakesch-Menara in die Stadt",
     intro: "So verlassen Sie den Flughafen Marrakesch-Menara und starten gut in den Aufenthalt – mit geprüften Preisen.",
     items: [
-      { icon: 'van', key: 'bookTransfer', title: 'Privattransfer', text: "Fahrer mit Namensschild, Flugverfolgung, Festpreis pro Fahrzeug ab 27 €.", cta: 'Buchen' },
+      { icon: 'van', key: 'bookTransfer', title: 'Privattransfer ab Flughafen', text: "Fahrer mit Namensschild, Flugverfolgung, Festpreis pro Fahrzeug ab 27 €.", cta: 'Buchen' },
       { icon: 'car', key: 'transfers', title: 'Taxi und Bus 19', text: "Offizielle Taxitarife tagsüber und nachts, Fahrplan des Busses 19.", cta: 'Tarife ansehen' },
       { icon: 'tag', key: 'carRental', title: 'Mietwagen', text: "Schalter in der Ankunftshalle, Kaution und Vertragsfallen.", cta: 'Vergleichen' },
       { icon: 'sim', key: 'esim', title: 'eSIM Marokko', text: "Internet ab der Landung, um Ihren Fahrer zu erreichen.", cta: 'eSIM wählen' },
@@ -35,7 +35,7 @@ export default {
     ],
   },
   body: `
-<h2>So lesen Sie die Ankunftstafel des Flughafens Marrakesch</h2>
+<h2>So lesen Sie die Ankunftstafel des Flughafens Marrakesch-Menara</h2>
 <p>Die Tafel oben zeigt alle ankommenden Flüge am Flughafen Marrakesch-Menara, über alle Airlines hinweg. Die Zeiten sind in <strong>Ortszeit Marrakesch</strong> angegeben, nicht in der Zeit Ihres Abflugortes: Das ist die häufigste Quelle für Verwirrung, wenn man jemanden abholt.</p>
 <ul>
 <li><strong>Geplant</strong>: die von der Airline festgelegte Zeit. Sie ändert sich nicht, auch nicht bei Verspätung.</li>
@@ -49,7 +49,7 @@ export default {
 <p>Der Flughafen Marrakesch-Menara empfängt seine Flüge in Wellen. Eine erste Welle landet am späten Vormittag und frühen Nachmittag mit Flügen, die früh in Europa gestartet sind. Die eigentliche Spitze liegt aber <strong>zwischen 20 Uhr und Mitternacht</strong>, wenn Billigflieger aus Deutschland, Frankreich, Spanien, Italien und Großbritannien im Minutentakt landen. Dann kommen mehrere Maschinen in derselben halben Stunde an, und die Schlange an der Passkontrolle wächst.</p>
 <p>Wenn Sie die Wahl haben, spart Ihnen ein Flug mit Landung zwischen 13 und 17 Uhr eine halbe Stunde am Ausgang. Kommen Sie abends an, bringt Sie der <a href="/de/blog/fast-track-marrakech-airport/">Fast-Track-Service am Flughafen Marrakesch</a> über eine eigene Spur durch die Kontrollen.</p>
 
-<h2>Airlines und Herkunft der ankommenden Flüge</h2>
+<h2>Airlines und Herkunft der Flüge zum Flughafen Marrakesch-Menara</h2>
 <p>Die meisten Flüge nach Marrakesch kommen aus Europa. Je nach Saison stehen auf der Tafel unter anderem <strong>Ryanair</strong>, <strong>Discover Airlines</strong>, <strong>Eurowings</strong>, <strong>Condor</strong>, <strong>easyJet</strong>, <strong>TUI fly</strong>, <strong>Royal Air Maroc</strong>, <strong>Transavia</strong>, <strong>Wizz Air</strong> und <strong>Air France</strong>.</p>
 <ul>
 <li><strong>Deutschland, Österreich, Schweiz</strong>: Frankfurt, München, Berlin, Düsseldorf, Köln/Bonn, Hamburg, Wien, Zürich, Genf, Basel.</li>
@@ -62,10 +62,10 @@ export default {
 <h2>Einreise: Reisepass, Visum und Einreisekarte</h2>
 <p>Staatsangehörige der EU, der Schweiz, Großbritanniens, der USA und Kanadas reisen <strong>für touristische Aufenthalte bis zu 90 Tagen ohne Visum</strong> nach Marokko ein, mit einem Reisepass, der für den gesamten Aufenthalt gültig ist. Ein Personalausweis reicht nicht. Die Einreisekarte wird an Bord verteilt: Füllen Sie sie während des Fluges mit der Adresse Ihrer Unterkunft aus, damit Sie nicht in letzter Minute die Schlange verlassen müssen. Kinder, die mit nur einem Elternteil reisen, sollten eine Einverständniserklärung des anderen Elternteils dabeihaben.</p>
 
-<h2>Geld abheben, bevor Sie hinausgehen</h2>
+<h2>Geld abheben am Flughafen Marrakesch</h2>
 <p>Diesen Schritt sollten Sie nicht auslassen. Taxis nehmen keine Karten, und Dirham gibt es außerhalb Marokkos nicht zu kaufen: Die Ankunftshalle ist Ihre erste Wechselstelle. Die Automaten funktionieren gut, geben aber gern 200-MAD-Scheine aus. Heben Sie genug für die Fahrt und die ersten Tage ab und wechseln Sie einen Schein im Terminal-Café: Mit 50- und 100-MAD-Scheinen vermeiden Sie Diskussionen über Wechselgeld im Taxi. Alle Tipps finden Sie in unserem Ratgeber <a href="/de/blog/money-in-morocco/">Geld und Umtausch in Marokko</a>.</p>
 
-<h2>Raus aus der Halle: Taxi, Transfer oder Bus 19</h2>
+<h2>Vom Flughafen Marrakesch-Menara weg: Taxi, Transfer oder Bus 19</h2>
 <p>Sie werden angesprochen, bevor Sie die Tür erreichen. Das ist selten aufdringlich, aber man sollte darauf vorbereitet sein: Der offizielle Taxistand liegt direkt vor dem Ausgang, und seine Tafel zeigt die Tarife nach Zone. Jedes Angebot <em>innerhalb</em> des Terminals liegt außerhalb dieses Rahmens.</p>
 <div class="table-wrap">
 <table class="data">
@@ -79,7 +79,7 @@ export default {
 </div>
 <p>Für ein Hotel in Gueliz oder im Hivernage reicht tagsüber das Taxi: Vereinbaren Sie den ausgehängten Preis, bevor der Kofferraum aufgeht (siehe unsere <a href="/de/blog/taxi-tips-marrakech/">Taxi-Tipps für Marrakesch</a>). Für ein Riad in der Medina, einen Flug nach 21 Uhr oder eine Gruppe ab vier Personen legt der <a href="/de/book-transfer/">gebuchte Transfer</a> Preis, Fahrzeug und Absetztor im Voraus fest. Alle Details auf der Seite <a href="/de/transfers/">Transfers vom Flughafen</a>.</p>
 
-<h2>Jemanden bei der Ankunft abholen</h2>
+<h2>Jemanden am Flughafen Marrakesch abholen</h2>
 <p>Sie holen jemanden am Flughafen Marrakesch ab? Verfolgen Sie den Flug auf der Ankunftstafel und fahren Sie nach der <em>erwarteten</em> Zeit los, nicht nach der geplanten. Nur Passagiere betreten den Gepäckbereich: Gewartet wird in der öffentlichen Halle gegenüber den Ausgangstüren. Planen Sie, 20 bis 30 Minuten nach der Landung da zu sein. Mit dem Auto ist die Kurzhaltezone nur zum Ein- und Aussteigen gedacht; zum Warten nutzen Sie den <a href="/de/parking/">Flughafenparkplatz</a>, wenige Gehminuten vom Terminal entfernt.</p>
 
 <div class="callout">
@@ -90,7 +90,7 @@ export default {
 <h2>Nachts in Marrakesch ankommen</h2>
 <p>Ein großer Teil der Billigflüge landet zwischen 21 und 1 Uhr. Drei praktische Folgen: Das Taxi fährt zum Nachttarif von 150 bis 240 MAD; der Bus 19 verkehrt nach 23:30 Uhr nicht mehr; und die schwach beleuchteten Gassen der Medina sind kein Ort, um mit dem Koffer ein Riad zu suchen. Landet Ihr Flug spät, ist ein gebuchter Transfer kein Luxus: Der Fahrer verfolgt die Flugnummer und wartet bei Verspätung.</p>
 
-<h2>Verspäteter, annullierter oder umgeleiteter Flug</h2>
+<h2>Verspäteter, annullierter oder umgeleiteter Flug nach Marrakesch-Menara</h2>
 <p>Erreicht Ihr Flug Marrakesch mit mehr als drei Stunden Verspätung, haben Sie möglicherweise Anspruch auf eine Entschädigung nach der EU-Verordnung 261/2004: Sie gilt für alle Flüge ab der Europäischen Union, unabhängig von der Airline. Für eine Strecke von 1.500 bis 3.500 km wie Frankfurt–Marrakesch beträgt der Betrag <strong>400 € pro Passagier</strong>. Prüfen Sie Ihre Rechte auf unserer Seite <a href="/de/flight-compensation/">Flugentschädigung</a>. Betrieben wird der Flughafen vom <a href="https://www.onda.ma/" target="_blank" rel="noopener">Office National des Aéroports (ONDA)</a>, das auch die offiziellen Fluginformationen veröffentlicht.</p>
 <p>Alles zu Terminals, Services und Terminalplan finden Sie in unserem <a href="/de/airport-guide/">Ratgeber zum Flughafen Marrakesch</a>.</p>
 `,
