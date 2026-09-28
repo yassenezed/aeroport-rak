@@ -8,14 +8,15 @@ import { transferWidgetSrc } from '../../data/affiliate';
 interface Props {
   /** Destination pré-remplie, ex. "Essaouira". Par défaut : Marrakech. */
   to?: string;
+  locale?: string;
   title?: string;
 }
 
-const { to, title = 'Widget de réservation de transfert' } = Astro.props;
+const { to, locale = 'fr', title = 'Widget de réservation de transfert' } = Astro.props;
 
 const src = to
-  ? transferWidgetSrc().replace(/([?&])to=[^&]*/, (_m, sep) => `${sep}to=${encodeURIComponent(to)}`)
-  : transferWidgetSrc();
+  ? transferWidgetSrc(locale).replace(/([?&])to=[^&]*/, (_m, sep) => `${sep}to=${encodeURIComponent(to)}`)
+  : transferWidgetSrc(locale);
 
 const srcdoc = `<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;padding:0;font-family:system-ui,sans-serif;overflow:hidden}</style></head><body><script async src="${src.replace(/&/g, '&amp;')}" charset="utf-8"><\/script><script>new MutationObserver(function(){document.documentElement.style.height="auto";window.parent.postMessage({tpemdHeight:document.body.scrollHeight},"*")}).observe(document.body,{childList:true,subtree:true,attributes:true})<\/script></body></html>`;
 ---

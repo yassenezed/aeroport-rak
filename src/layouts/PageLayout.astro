@@ -89,7 +89,7 @@ if (page.faqs?.length) {
         {page.widget === 'flights-arrivals' && <FlightWidget type="arrivals" lang={locale} />}
         {page.widget === 'flights-departures' && <FlightWidget type="departures" lang={locale} />}
         {page.widget === 'flight-search' && <FlightSearchWidget locale={locale} />}
-        {page.widget === 'transfer' && <TransferWidget />}
+        {page.widget === 'transfer' && <TransferWidget locale={locale} />}
       </div>
     </section>
   )}

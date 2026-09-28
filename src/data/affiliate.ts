@@ -38,13 +38,13 @@ export const travelpayouts = {
 };
 
 /** URL du widget transferts (à insérer dans un iframe srcdoc). */
-export function transferWidgetSrc(): string {
+export function transferWidgetSrc(locale = 'fr'): string {
   const t = travelpayouts;
   const p = new URLSearchParams({
     currency: 'EUR',
     trs: t.trs,
     shmarker: t.marker,
-    locale: 'fr',
+    locale,
     from: t.transfer.from,
     to: t.transfer.to,
     country: t.transfer.country,
