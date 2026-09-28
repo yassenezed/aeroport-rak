@@ -61,13 +61,16 @@ export function transferWidgetSrc(): string {
 }
 
 /** URL du widget vols + hôtels. */
-export function flightWidgetSrc(): string {
+// Langues proposées par le formulaire Travelpayouts ; l'arabe retombe sur l'anglais.
+const FLIGHT_WIDGET_LOCALES = ['fr', 'en', 'es', 'de', 'nl'];
+
+export function flightWidgetSrc(locale = 'fr'): string {
   const t = travelpayouts;
   const p = new URLSearchParams({
     currency: 'eur',
     trs: t.trs,
     shmarker: t.marker,
-    locale: 'fr',
+    locale: FLIGHT_WIDGET_LOCALES.includes(locale) ? locale : 'en',
     origin: t.flights.origin,
     destination: t.flights.destination,
     stops: 'any',

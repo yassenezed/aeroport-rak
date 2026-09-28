@@ -88,7 +88,7 @@ if (page.faqs?.length) {
       <div class="container">
         {page.widget === 'flights-arrivals' && <FlightWidget type="arrivals" lang={locale} />}
         {page.widget === 'flights-departures' && <FlightWidget type="departures" lang={locale} />}
-        {page.widget === 'flight-search' && <FlightSearchWidget />}
+        {page.widget === 'flight-search' && <FlightSearchWidget locale={locale} />}
         {page.widget === 'transfer' && <TransferWidget />}
       </div>
     </section>

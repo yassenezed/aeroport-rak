@@ -25,7 +25,12 @@ export const airport = {
   },
   passengers2024: 9_300_000,
   runwayM: 3100,
-  elevationM: 471
+  elevationM: 471,
+  // Décalage du Maroc par rapport à UTC, en heures. Fixé ici plutôt que lu
+  // dans le fuseau Africa/Casablanca des navigateurs, dont les données
+  // étaient en retard sur le changement d'heure (ils affichaient +1).
+  // À ajuster si le Maroc change à nouveau d'heure légale.
+  utcOffsetHours: 0
 };
 
 export const PRICES_CHECKED = "septembre 2026";

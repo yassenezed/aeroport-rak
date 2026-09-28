@@ -3,6 +3,8 @@
 // barre d'accès rapides, grille de services, puis le contenu éditorial.
 import BaseLayout from './BaseLayout.astro';
 import Icon from '../components/ui/Icon.astro';
+import FlightSearchWidget from '../components/affiliate/FlightSearchWidget.astro';
+import { airport } from '../data/airport';
 import { useTranslations, pathFor, type Locale } from '../i18n';
 import { site } from '../data/site';
 import type { LocalizedPage } from '../copy/types';
@@ -10,15 +12,6 @@ import type { LocalizedPage } from '../copy/types';
 interface Props { locale: Locale; page: LocalizedPage; noindex?: boolean }
 const { locale, page, noindex = false } = Astro.props;
 const t = useTranslations(locale);
-
-const quickLinks = [
-  { key: 'arrivals', label: t('nav.arrivals') },
-  { key: 'departures', label: t('nav.departures') },
-  { key: 'transfers', label: t('nav.transfers') },
-  { key: 'carRental', label: t('nav.carRental') },
-  { key: 'parking', label: t('nav.parking') },
-  { key: 'hotels', label: t('nav.hotels') },
-];
 
 const schema: object[] = [
   { '@context': 'https://schema.org', '@type': 'WebSite', name: site.name, url: site.url, inLanguage: locale },
@@ -41,7 +34,6 @@ if (page.faqs?.length) {
     mainEntity: page.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
   });
 }
-const dateLocale = locale === 'ar' ? 'ar-MA' : locale;
 ---
 <BaseLayout locale={locale} routeKey="home" title={page.title} description={page.description} schema={schema} bodyClass="is-home" noindex={noindex}>
   <section class="hero hero--home">
@@ -64,7 +56,7 @@ const dateLocale = locale === 'ar' ? 'ar-MA' : locale;
           <Icon name="clock" size={26} />
           <div>
             <span class="stat-card__label">{t('common.localTime')}</span>
-            <strong class="stat-card__value" dir="ltr" data-rak-clock data-locale={dateLocale}>--:--</strong>
+            <strong class="stat-card__value" dir="ltr" data-rak-clock data-offset={airport.utcOffsetHours}>--:--</strong>
           </div>
         </li>
         <li class="stat-card">
@@ -85,13 +77,11 @@ const dateLocale = locale === 'ar' ? 'ar-MA' : locale;
     </div>
   </section>
 
-  <nav class="home-tabs" aria-label={t('nav.menu')}>
+  <section class="home-flights">
     <div class="container">
-      <ul class="home-tabs__row">
-        {quickLinks.map((l) => <li><a href={pathFor(l.key, locale)}>{l.label}</a></li>)}
-      </ul>
+      <FlightSearchWidget locale={locale} />
     </div>
-  </nav>
+  </section>
 
   {page.services && (
     <section class="section-block home-services">
@@ -165,15 +155,16 @@ const dateLocale = locale === 'ar' ? 'ar-MA' : locale;
 
   <script is:inline>
     (function () {
-      // Heure locale de Marrakech, mise à jour chaque minute.
+      // Heure locale de Marrakech : UTC + décalage fixé dans src/data/airport.ts.
       var el = document.querySelector('[data-rak-clock]');
       if (el) {
-        var fmt;
-        try {
-          fmt = new Intl.DateTimeFormat(el.dataset.locale || 'fr', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'Africa/Casablanca' });
-        } catch (e) { fmt = null; }
-        var tick = function () { if (fmt) el.textContent = fmt.format(new Date()); };
-        tick(); setInterval(tick, 30000);
+        var offset = parseFloat(el.dataset.offset || '0') * 3600000;
+        var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+        var tick = function () {
+          var d = new Date(Date.now() + offset);
+          el.textContent = pad(d.getUTCHours()) + ':' + pad(d.getUTCMinutes());
+        };
+        tick(); setInterval(tick, 15000);
       }
       // Température actuelle à l'aéroport (Open-Meteo, sans clé ni cookie).
       var w = document.querySelector('[data-rak-weather]');

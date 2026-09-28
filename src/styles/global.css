@@ -861,3 +861,7 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
   .home-tabs__row { justify-content: flex-start; flex-wrap: nowrap; overflow-x: auto; }
   .home-tabs__row a { white-space: nowrap; }
 }
+
+/* Formulaire de recherche de vols sous le hero de l'accueil */
+.home-flights { background: var(--paper); padding-block: clamp(1.5rem, 3vw, 2.25rem) 0; }
+.home-flights .flight-search-widget { border: 1px solid var(--line); border-top: 3px solid var(--blue); border-radius: var(--r-xl); box-shadow: var(--shadow-md); }

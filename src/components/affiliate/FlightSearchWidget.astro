@@ -3,7 +3,9 @@
 // Identifiants dans src/data/affiliate.ts.
 import { flightWidgetSrc } from '../../data/affiliate';
 
-const src = flightWidgetSrc();
+interface Props { locale?: string }
+const { locale = 'fr' } = Astro.props;
+const src = flightWidgetSrc(locale);
 ---
 
 <div class="flight-search-widget">
