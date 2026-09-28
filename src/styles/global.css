@@ -898,3 +898,9 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
 .home-stat__label { font-size: 0.88rem; font-weight: 600; }
 @media (max-width: 860px) { .home-stats__grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 420px) { .home-stat { padding: 1.1rem; } .home-stat__value { font-size: 1.7rem; } }
+
+/* Pas de marge au-dessus du premier titre d'un bloc de texte */
+.prose > h2:first-child, .prose > h3:first-child { margin-top: 0; }
+/* Accueil : le texte suit directement les chiffres clés */
+.home-stats { padding-bottom: clamp(1.25rem, 2.5vw, 2rem); }
+.home-body { padding-top: clamp(1rem, 2vw, 1.5rem); }
