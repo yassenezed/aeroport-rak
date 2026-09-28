@@ -1,12 +1,12 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Flughafen Marrakesch Menara (RAK): der Praxisguide',
-  description: 'Guide zum Flughafen Marrakesch Menara: Flüge in Echtzeit, Transfers in die Medina, Taxis, Bus 19, Parken, Mietwagen und Hotels.',
+  title: "Flughafen Marrakesch (RAK): Flüge, Transfers, Infos",
+  description: "Flughafen Marrakesch Menara: Ankünfte und Abflüge live, Taxi und Transfer in die Medina, Bus 19, Parken, Mietwagen, Services und Hotels in der Nähe.",
   eyebrow: "Unabhängiger Guide · Stand 2026",
   h1: "Flughafen Marrakesch",
   h1Accent: "Menara · Marokko",
-  lede: "Sechs Kilometer trennen das Terminal von Djemaa el-Fna. Die Fahrt ist kurz: Es sind die letzten hundert Meter, in denen kein Auto in die Medina fährt, die über Ihre Ankunft entscheiden. Flüge in Echtzeit, geprüfte Preise und die richtige Option für Ihre Landezeit.",
+  lede: "Der komplette Guide zum Flughafen Marrakesch Menara (RAK): Ankünfte und Abflüge in Echtzeit, geprüfte Preise für Taxis und Transfers, Bus 19, Parkplätze, Mietwagen und Hotels. Alles Wissenswerte, bevor Sie in Marrakesch landen.",
   services: {
     heading: "Services am Flughafen Marrakesch Menara",
     intro: "Mit einem Klick alles Wichtige für Ihren Weg durch den Flughafen Marrakesch: Flüge, Transfers, Parken, Mietwagen und Hotels.",
@@ -29,62 +29,67 @@ export default {
     { label: "Passagiere 2024", value: "9,3", sub: "Millionen" },
   ],
   body: `
-<h2>Was Sie vor der Landung wissen sollten</h2>
-<p>Marrakesch Menara ist einer der wenigen internationalen Flughäfen, die kaum sechs Kilometer von einer historischen Altstadt entfernt liegen. Der RAK überschritt <strong>2024 die Marke von 9,3 Millionen Passagieren</strong> und bündelt einen Großteil seiner Ankünfte am Abend, wenn die europäischen Billigflieger nacheinander landen. Konkret heißt das: eine volle Ankunftshalle zwischen 20 Uhr und Mitternacht, eine wachsende Taxischlange und eine Verhandlung genau dann, wenn man am wenigsten Lust darauf hat.</p>
-<p>Drei örtliche Gegebenheiten sollte man vor dem Abflug kennen. Es fährt keine Bahn zum Terminal: Der ONCF-Bahnhof liegt in Guéliz, einige Kilometer entfernt. Die Medina lässt sich nicht mit dem Auto durchqueren: Ihr Fahrer hält an einem Tor (<em>Bab</em>), den Rest gehen Sie zu Fuß. Und Fahrdienst-Apps sind für eine Ankunft keine verlässliche Grundlage: Uber ist Ende November 2025 nach Marrakesch zurückgekehrt, allerdings nur über lizenzierte Touristikunternehmen und mit unregelmäßiger Verfügbarkeit.</p>
+<h2>Der Flughafen Marrakesch Menara im Überblick</h2>
+<p>Der <strong>Flughafen Marrakesch Menara</strong> (IATA-Code <strong>RAK</strong>, ICAO-Code GMMX) ist nach Casablanca Mohammed V der zweitgrößte Flughafen Marokkos. 2024 zählte er mehr als <strong>9,3 Millionen Passagiere</strong>, getragen von einem dichten Netz an Direktflügen nach Europa. Betrieben vom Office National Des Aéroports (ONDA), ist er das Tor zu Marrakesch, zum Hohen Atlas, zum Ourika-Tal, zur Agafay-Wüste und zur Küste von Essaouira.</p>
+<p>Die Besonderheit: Der Flughafen Marrakesch liegt <strong>nur 6 km vom Stadtzentrum</strong> und vom Platz Djemaa el-Fna entfernt. Die Fahrt dauert je nach Uhrzeit 15 bis 30 Minuten. Die eigentliche Schwierigkeit ist nicht die Entfernung, sondern die letzten Meter: Kein Auto fährt in die Medina, man muss wissen, an welchem Tor man aussteigt.</p>
 
-<h2>Das Terminal verlassen: vier Optionen, mehr nicht</h2>
+<h2>Wo liegt der Flughafen Marrakesch?</h2>
+<p>Der Flughafen liegt im Südwesten der Stadt im Viertel Menara, neben den berühmten Gärten, die ihm seinen Namen geben. Er befindet sich auf 471 Metern Höhe und hat eine einzige, 3.100 Meter lange Start- und Landebahn. Vom Terminal erreichen Sie Guéliz und das Hivernage in wenigen Minuten und die Tore der Medina – Bab Jdid, Bab Laksour, Bab Doukkala oder Bab Agnaou – in einer Viertelstunde.</p>
+
+<h2>Die Terminals des Flughafens Marrakesch</h2>
+<p>Der Flughafen Marrakesch Menara arbeitet mit <strong>zwei angrenzenden Terminals</strong>, T1 und T2, die zu Fuß verbunden sind. T1, erkennbar an seiner großen weißen geometrischen Fassade, fertigt die meisten internationalen Flüge ab; T2 übernimmt den restlichen Verkehr und einen Teil der Inlandsflüge. Die Aufteilung wechselt je nach Airline und Saison: Prüfen Sie immer Ihre Bordkarte. Unser <a href="/de/airport-guide/">vollständiger Flughafen-Guide</a> erklärt Plan, Formalitäten und Wartezeiten.</p>
+
+<h2>Ankünfte und Abflüge am Flughafen Marrakesch</h2>
+<p>Die Flüge verfolgen Sie live auf unseren Seiten <a href="/de/arrivals/">Ankünfte</a> und <a href="/de/departures/">Abflüge</a>. Gut zu wissen: Der Flughafen Marrakesch bündelt viele Ankünfte am Abend zwischen 20 Uhr und Mitternacht, wenn europäische Billigflüge dicht hintereinander landen. Bei der Ankunft rechnen Sie mit <strong>30 bis 60 Minuten</strong> vom Flugzeug bis zum Ausgang; beim Abflug seien Sie <strong>2 Stunden vorher</strong> für einen Flug nach Europa da, in der Hochsaison 3 Stunden, denn die Passkontrolle ist der Hauptengpass.</p>
+
+<h2>Vom Flughafen Marrakesch ins Stadtzentrum</h2>
+<p>Es gibt keine Bahn zum Flughafen. Sie haben vier Möglichkeiten:</p>
 <div class="table-wrap">
 <table class="data">
-<thead><tr><th>Option</th><th>Preis</th><th>Ideal für</th><th>Der Haken</th></tr></thead>
+<thead><tr><th>Verkehrsmittel</th><th>Preis</th><th>Dauer</th><th>Für wen</th></tr></thead>
 <tbody>
-<tr class="row-highlight"><td><strong>Vorgebuchter Privattransfer</strong></td><td class="num">ab 27 € / Fahrzeug</td><td>Nachtflüge, Riads in der Medina, Familien</td><td>Muss vor der Reise gebucht werden</td></tr>
-<tr><td><strong>Taxi am Stand</strong></td><td class="num">100–150 MAD tagsüber</td><td>Losfahren ohne Vorbereitung</td><td>Preis vor dem Einladen bestätigen, im Petit Taxi max. 3 Personen</td></tr>
-<tr><td><strong>Bus 19 (ALSA)</strong></td><td class="num">30 MAD / Person</td><td>Kleines Budget, leichtes Gepäck, Ankunft am Tag</td><td>Nichts nach 23:30 Uhr, hält nur an Djemaa el-Fna</td></tr>
-<tr><td><strong>Mietwagen</strong></td><td class="num">ab 25 € / Tag</td><td>Atlas, Ourika, Essaouira, Rundreise</td><td>Hinderlich, wenn Sie die Medina nicht verlassen</td></tr>
+<tr class="row-highlight"><td><strong>Privattransfer</strong></td><td class="num">ab 27 € / Fahrzeug</td><td class="num">15–30 Min.</td><td>Riad in der Medina, Nachtankunft, Familien</td></tr>
+<tr><td><strong>Offizielles Taxi</strong></td><td class="num">100–150 MAD tagsüber</td><td class="num">15–30 Min.</td><td>Hotel in Guéliz oder im Hivernage, tagsüber</td></tr>
+<tr><td><strong>Bus 19 (ALSA)</strong></td><td class="num">30 MAD / Person</td><td class="num">≈ 20 Min.</td><td>Kleines Budget, leichtes Gepäck, vor 23:30 Uhr</td></tr>
+<tr><td><strong>Mietwagen</strong></td><td class="num">ab 25 € / Tag</td><td class="num">15–30 Min.</td><td>Ausflüge in den Atlas oder nach Essaouira</td></tr>
 </tbody>
 </table>
 </div>
-<p>Tagsüber gewinnt fast immer das Taxi, zu zweit, zu einem Hotel in Guéliz oder im Hivernage: 100 bis 150 MAD, also 9 bis 14 €, schwer zu unterbieten. Nachts und in der Gruppe kehrt sich das Verhältnis um. Nach Einbruch der Dunkelheit steigt der offizielle Tarif auf 150–240 MAD, und einer vierköpfigen Familie mit Koffern werden meist zwei Petits Taxis angeboten – die Rechnung verdoppelt sich. Der vorgebuchte Transfer zu 27 € pro Fahrzeug für bis zu sieben Personen ist dann die günstigste und zugleich entspannteste Lösung.</p>
+<p>Die Taxis am Flughafen Marrakesch berechnen Tarife, die auf einer Tafel am Taxistand stehen: 100 bis 150 MAD tagsüber in die Medina, nach Guéliz und ins Hivernage, 150 bis 240 MAD nachts. Ein Petit Taxi nimmt nur drei Fahrgäste mit. Ab vier Personen oder nach 21 Uhr ist ein <a href="/de/book-transfer/">gebuchter Transfer</a> oft günstiger und einfacher. Alle Details auf unserer Seite <a href="/de/transfers/">Transfers vom Flughafen</a>.</p>
+
+<h2>Services am Flughafen Marrakesch Menara</h2>
+<ul>
+<li><strong>Geldautomaten und Wechselstuben</strong> in der Ankunftshalle: Dirham gibt es außerhalb Marokkos nicht, heben Sie vor dem Hinausgehen ab.</li>
+<li><strong>SIM-Karten</strong> von Maroc Telecom, Orange und inwi in der Ankunftshalle, oder eine <a href="/de/morocco-esim/">eSIM</a>, die Sie vor dem Abflug aktivieren.</li>
+<li><strong>Kostenloses WLAN</strong>, Gepäckaufbewahrung, Cafés und Duty-free-Shops.</li>
+<li><strong>VIP-Lounges</strong> gegen Einzelzahlung im Abflugbereich.</li>
+<li><strong>Mietwagenschalter</strong> in der Ankunftshalle.</li>
+</ul>
+<p>Mehr dazu auf der Seite <a href="/de/services/">Services am Flughafen</a>.</p>
+
+<h2>Parken am Flughafen Marrakesch</h2>
+<p>Die Parkplätze des Flughafens Marrakesch liegen gegenüber den Terminals. Kurzes Absetzen unter 30 Minuten ist kostenlos oder symbolisch, eine Stunde kostet etwa 20 MAD, ein Tag 70 bis 80 MAD. Für eine Woche rechnen Sie mit 450 bis 550 MAD: Ab drei oder vier Tagen kommt eine Hin- und Rückfahrt mit Taxi oder Transfer oft günstiger. Siehe die <a href="/de/parking/">Parktarife</a>.</p>
+
+<h2>Mietwagen am Flughafen Marrakesch</h2>
+<p>Internationale und marokkanische Vermieter haben Schalter in der Ankunftshalle. Ein Kleinwagen kostet 25 bis 35 € pro Tag, bei einer Kaution von 5.000 bis 15.000 MAD auf einer Kreditkarte. Ein Auto lohnt sich nur, um Marrakesch zu verlassen: Atlas, Ourika, Essaouira oder Ouarzazate. Unsere Seite <a href="/de/car-rental/">Mietwagen</a> erklärt die Fallen im Vertrag.</p>
+
+<h2>Hotels in der Nähe des Flughafens Marrakesch</h2>
+<p>Dank seiner Lage ist der Flughafen 10 Minuten von den großen Hotels des Hivernage und 20 Minuten von den Riads der Medina entfernt. Bei später Ankunft oder sehr frühem Abflug erspart ein Hotel im Hivernage die Fahrt quer durch die Stadt. Sehen Sie unsere Auswahl <a href="/de/hotels/">Wo in Marrakesch übernachten</a>.</p>
+
 <div class="callout">
-<span class="callout-label">Der Satz für den Taxistand</span>
-<p>„Medina, Bab Doukkala – das sind 100 Dirham, wie auf der Tafel?“ Das Tor benennen, die offizielle Anzeige zitieren und den Betrag bestätigen, bevor der Kofferraum aufgeht: Damit erledigen sich fast alle Missverständnisse. Lehnt ein Fahrer ab, akzeptiert der nächste – es gibt immer eine Schlange.</p>
+<span class="callout-label">Der Tipp für eine entspannte Ankunft</span>
+<p>Fragen Sie Ihr Riad nach dem genauen Namen des Medina-Tors, an dem Sie aussteigen sollen, und nennen Sie Ihre Ankunftszeit: Die meisten schicken einen Gepäckträger mit Karren. Genau das macht um Mitternacht mit Koffer den Unterschied.</p>
 </div>
-
-<h2>Der eigentliche Punkt: das Absetzen an den Medina-Toren</h2>
-<p>Die <em>Derbs</em> sind für ein Auto zu eng, und mehrere Zugänge sind für den Verkehr gesperrt. Je nach Viertel setzt man Sie an Bab Doukkala, Bab Laksour, Bab Agnaou oder Bab el Khemis ab, und Sie gehen drei bis zehn Minuten zu Fuß. Die gute Praxis passt in eine Zeile: Fragen Sie Ihr Riad nach dem genauen Namen des Tors und nennen Sie Ihre Ankunftszeit. Die meisten schicken einen Gepäckträger mit Karren, kostenlos oder für ein paar Dirham – das erspart Ihnen, um ein Uhr nachts einen Koffer über Kopfsteinpflaster zu ziehen.</p>
-
-<h2>Bargeld, Karten und kleine Scheine</h2>
-<p>Besorgen Sie sich Dirham, bevor Sie die Halle verlassen. Taxis nehmen so gut wie nie Karten, und Wechselgeld ist oft knapp. Die Geldautomaten in der Ankunft funktionieren gut, geben aber gern 200-MAD-Scheine aus, mit denen kein Fahrer eine 100-MAD-Fahrt herausgeben kann. Heben Sie ab und wechseln Sie im Café oder Shop des Terminals in 50er- und 100er-Scheine.</p>
-
-<h2>Und am Abflugtag</h2>
-<p>Seien Sie <strong>zwei Stunden vor einem Schengen-Flug und drei Stunden in der Hochsaison</strong> am Flughafen: Die Passkontrolle bei der Ausreise ist der Engpass des RAK, besonders zwischen 6 und 9 Uhr und am späten Nachmittag. Buchen Sie die Rückfahrt am Vortag über Ihr Riad oder als Transfer – ein Taxi um 5 Uhr morgens in der Medina zu finden, ist alles andere als selbstverständlich.</p>
 `,
   faqs: [
-    {
-      q: 'Wie kommt man am besten vom Flughafen Marrakesch ins Zentrum?',
-      a: "Das hängt von drei Dingen ab: Landezeit, Viertel und Gepäck. Für ein Hotel in Guéliz oder im Hivernage tagsüber genügt das Taxi am Stand für 100–150 MAD pro Wagen. Für ein Riad tief in der Medina oder einen Nachtflug ändert ein vorgebuchter Transfer alles: Der Fahrer kennt das richtige Tor und der Preis steht fest. Zu zweit mit Rucksack ist der Bus 19 für 30 MAD unschlagbar.",
-    },
-    {
-      q: 'Gibt es eine Bahn zwischen Flughafen Marrakesch und Stadt?',
-      a: "Nein, keine Bahnstrecke führt zum Terminal. Marrakesch hat einen ONCF-Bahnhof im Viertel Guéliz mit Zügen nach Casablanca, Rabat, Fès und Tanger, dorthin müssen Sie aber zuerst mit Taxi, Transfer oder Bus 19 gelangen. Ist Ihr Flug nur eine Etappe zu einer anderen marokkanischen Stadt, planen Sie dieses Teilstück und großzügig Zeit ein.",
-    },
-    {
-      q: 'Wie lange dauert es vom RAK nach Djemaa el-Fna?',
-      a: "Fünfzehn Minuten außerhalb der Stoßzeiten und bis zu dreißig Minuten am späten Nachmittag oder während des Ramadan, für sechs Kilometer. Der Bus 19 braucht rund zwanzig Minuten inklusive Halte und hält direkt am Platz.",
-    },
-    {
-      q: 'Kann man in Marrakesch Uber oder inDrive nutzen?',
-      a: "Verlassen Sie sich für Ihre Ankunft nicht darauf. Uber ist Ende November 2025 nach Marrakesch zurückgekehrt, jedoch nur mit lizenzierten Touristikunternehmen und mit unregelmäßiger Verfügbarkeit; Careem und inDrive bewegen sich in einer rechtlich noch unklaren Zone. Die Abholung vor den Terminals bleibt der Hauptkonflikt mit den Taxis. Für den Flughafen sind der offizielle Taxistand und der gebuchte Transfer die verlässlichen Optionen.",
-    },
-    {
-      q: 'Wie früh sollte man am Flughafen Marrakesch sein?',
-      a: "Zwei Stunden vor einem Schengen-Flug, drei in der Hochsaison oder mit aufgegebenem Gepäck. Die Passkontrolle bei der Ausreise ist der Engpass des RAK, vor allem zwischen 6 und 9 Uhr.",
-    },
+    { q: "Wie lautet der Code des Flughafens Marrakesch?", a: "Der IATA-Code des Flughafens Marrakesch Menara ist RAK – er steht auf Ihrem Ticket. Der ICAO-Code lautet GMMX. Nicht verwechseln mit CMN, dem Flughafen Casablanca, 240 km entfernt." },
+    { q: "Wie weit ist der Flughafen Marrakesch vom Stadtzentrum entfernt?", a: "Der Flughafen Marrakesch Menara liegt etwa 6 km vom Platz Djemaa el-Fna und der Medina entfernt, je nach Uhrzeit 15 bis 30 Minuten Fahrt. Guéliz und das Hivernage erreichen Sie in 10 bis 20 Minuten." },
+    { q: "Was kostet ein Taxi vom Flughafen Marrakesch in die Medina?", a: "Die am Taxistand ausgewiesenen Tarife liegen bei etwa 100 bis 150 MAD tagsüber und 150 bis 240 MAD nachts, für den ganzen Wagen. Ein Petit Taxi nimmt höchstens drei Fahrgäste mit; darüber hinaus planen Sie ein Grand Taxi oder einen Privattransfer ein." },
+    { q: "Gibt es einen Bus zwischen Flughafen Marrakesch und Zentrum?", a: "Ja, der Bus 19 von ALSA verbindet den Flughafen für 30 MAD einfach mit Djemaa el-Fna, mit einer Abfahrt etwa alle 30 Minuten zwischen 6 und 23:30 Uhr. Die Fahrt dauert rund zwanzig Minuten." },
+    { q: "Wie viele Terminals hat der Flughafen Marrakesch Menara?", a: "Zwei angrenzende Terminals, T1 und T2, zu Fuß verbunden. T1 fertigt die meisten internationalen Flüge ab. Prüfen Sie das auf Ihrer Bordkarte angegebene Terminal." },
+    { q: "Wann sollte man für einen Flug am Flughafen Marrakesch sein?", a: "Zwei Stunden vor einem Flug nach Europa, drei Stunden in der Hochsaison oder mit aufgegebenem Gepäck. Die Passkontrolle bei der Ausreise ist die längste Warteschlange, vor allem zwischen 6 und 9 Uhr." },
+    { q: "Gibt es WLAN am Flughafen Marrakesch?", a: "Ja, in den Terminals gibt es kostenloses WLAN. Zu Stoßzeiten ist es unzuverlässig: Um einen Fahrer sicher zu erreichen, ist eine eSIM oder lokale SIM-Karte besser." },
+    { q: "Kann man am Flughafen Marrakesch Geld abheben?", a: "Ja, Geldautomaten und Wechselstuben finden Sie in der Ankunftshalle. Heben Sie vor dem Hinausgehen ab: Taxis nehmen keine Karten, und Dirham gibt es außerhalb Marokkos nicht." },
   ],
-  cta: {
-    heading: 'Klären Sie Ihre Ankunft, bevor Sie einsteigen',
-    text: "Fester Preis pro Fahrzeug, ein Fahrer mit Ihrem Namen, Flugverfolgung und kostenlose Stornierung bei den meisten Buchungen. Bis zu sieben Passagiere zum gleichen Tarif.",
-    label: 'Transferpreise ansehen',
-  },
+  cta: { heading: "Ihre Ankunft am Flughafen Marrakesch, vorab geregelt", text: "Fester Preis pro Fahrzeug, ein Fahrer, der mit Ihrem Namen wartet, Flugverfolgung und kostenlose Stornierung bei den meisten Buchungen.", label: "Transfer buchen" },
 } satisfies LocalizedPage;

@@ -55,5 +55,15 @@
     "terms": "شروط الاستخدام",
     "disclosure": "إفصاح الشراكة",
     "contact": "اتصل بنا"
+  },
+  "trust": {
+    "heading": "لماذا تثق بنا",
+    "independentTitle": "دليل مستقل",
+    "independentText": "معلومات محايدة تُحدَّث بانتظام.",
+    "transparencyTitle": "الشفافية",
+    "transparencyText": "قد يحتوي هذا الموقع على روابط تسويق بالعمولة.",
+    "learnMore": "اعرف المزيد",
+    "verifiedTitle": "محتوى موثّق",
+    "verifiedText": "أدلة مبنية على تجارب حقيقية."
   }
 }

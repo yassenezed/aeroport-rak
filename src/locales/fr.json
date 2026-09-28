@@ -55,5 +55,15 @@
     "terms": "Conditions d'utilisation",
     "disclosure": "Divulgation d'affiliation",
     "contact": "Contact"
+  },
+  "trust": {
+    "heading": "Pourquoi nous faire confiance",
+    "independentTitle": "Guide indépendant",
+    "independentText": "Informations impartiales, mises à jour régulièrement.",
+    "transparencyTitle": "Transparence",
+    "transparencyText": "Ce site peut contenir des liens affiliés.",
+    "learnMore": "En savoir plus",
+    "verifiedTitle": "Contenu vérifié",
+    "verifiedText": "Guides basés sur des expériences réelles."
   }
 }

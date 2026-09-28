@@ -55,5 +55,15 @@
     "terms": "Terms of use",
     "disclosure": "Affiliate disclosure",
     "contact": "Contact"
+  },
+  "trust": {
+    "heading": "Why trust us",
+    "independentTitle": "Independent guide",
+    "independentText": "Impartial information, updated regularly.",
+    "transparencyTitle": "Transparency",
+    "transparencyText": "This site may contain affiliate links.",
+    "learnMore": "Learn more",
+    "verifiedTitle": "Verified content",
+    "verifiedText": "Guides based on real experience."
   }
 }

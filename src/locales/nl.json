@@ -55,5 +55,15 @@
     "terms": "Gebruiksvoorwaarden",
     "disclosure": "Affiliate-verklaring",
     "contact": "Contact"
+  },
+  "trust": {
+    "heading": "Waarom ons vertrouwen",
+    "independentTitle": "Onafhankelijke gids",
+    "independentText": "Onpartijdige informatie, regelmatig bijgewerkt.",
+    "transparencyTitle": "Transparantie",
+    "transparencyText": "Deze site kan affiliate-links bevatten.",
+    "learnMore": "Meer informatie",
+    "verifiedTitle": "Geverifieerde inhoud",
+    "verifiedText": "Gidsen gebaseerd op echte ervaringen."
   }
 }

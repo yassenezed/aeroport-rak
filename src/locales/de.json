@@ -55,5 +55,15 @@
     "terms": "Nutzungsbedingungen",
     "disclosure": "Affiliate-Offenlegung",
     "contact": "Kontakt"
+  },
+  "trust": {
+    "heading": "Warum Sie uns vertrauen können",
+    "independentTitle": "Unabhängiger Ratgeber",
+    "independentText": "Unparteiische Informationen, regelmäßig aktualisiert.",
+    "transparencyTitle": "Transparenz",
+    "transparencyText": "Diese Website kann Affiliate-Links enthalten.",
+    "learnMore": "Mehr erfahren",
+    "verifiedTitle": "Geprüfte Inhalte",
+    "verifiedText": "Ratgeber auf Basis echter Erfahrungen."
   }
 }

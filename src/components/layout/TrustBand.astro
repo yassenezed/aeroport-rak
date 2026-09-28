@@ -1,0 +1,29 @@
+---
+import Icon from '../ui/Icon.astro';
+import { useTranslations, pathFor, type Locale } from '../../i18n';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+const items = [
+  { icon: 'shield-check', title: t('trust.independentTitle'), text: t('trust.independentText') },
+  { icon: 'dollar-circle', title: t('trust.transparencyTitle'), text: t('trust.transparencyText'), link: pathFor('disclosure', locale) },
+  { icon: 'book', title: t('trust.verifiedTitle'), text: t('trust.verifiedText') },
+];
+---
+<section class="trust-band" aria-label={t('trust.heading')}>
+  <ul class="container trust-band__grid">
+    {items.map((it) => (
+      <li class="trust-card">
+        <span class="trust-card__icon"><Icon name={it.icon} size={22} /></span>
+        <div>
+          <p class="trust-card__title">{it.title}</p>
+          <p class="trust-card__text">
+            {it.text}
+            {it.link && <> <a href={it.link}>{t('trust.learnMore')}</a></>}
+          </p>
+        </div>
+      </li>
+    ))}
+  </ul>
+</section>
