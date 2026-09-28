@@ -28,11 +28,12 @@ export const travelpayouts = {
     country: 'Morocco',
   },
 
-  /** Widget de recherche vols + hôtels. */
+  /** Widget de recherche vols + hôtels (Aviasales, promo 7879). */
   flights: {
-    promoId: '3414',
-    campaignId: '111',
-    origin: 'PAR',
+    trs: '579106',
+    promoId: '7879',
+    campaignId: '100',
+    searchUrl: 'www.aviasales.com/search',
     destination: 'RAK',
   },
 };
@@ -61,25 +62,32 @@ export function transferWidgetSrc(locale = 'fr'): string {
 }
 
 /** URL du widget vols + hôtels. */
-// Langues proposées par le formulaire Travelpayouts ; l'arabe retombe sur l'anglais.
+// Langues prises en charge par le formulaire Aviasales ; l'arabe retombe sur l'anglais.
 const FLIGHT_WIDGET_LOCALES = ['fr', 'en', 'es', 'de', 'nl'];
 
 export function flightWidgetSrc(locale = 'fr'): string {
   const t = travelpayouts;
   const p = new URLSearchParams({
     currency: 'eur',
-    trs: t.trs,
+    trs: t.flights.trs,
     shmarker: t.marker,
-    locale: FLIGHT_WIDGET_LOCALES.includes(locale) ? locale : 'en',
-    origin: t.flights.origin,
-    destination: t.flights.destination,
-    stops: 'any',
     show_hotels: 'true',
     powered_by: 'true',
-    border_radius: '0',
-    plain: 'true',
+    locale: FLIGHT_WIDGET_LOCALES.includes(locale) ? locale : 'en',
+    searchUrl: t.flights.searchUrl,
+    destination: t.flights.destination,
+    // Charte AirportRAK : bleu Majorelle, safran, indigo.
+    primary_override: '#3F4BB8',
     color_button: '#3F4BB8',
-    color_button_text: '#ffffff',
+    color_icons: '#E9A13B',
+    dark: '#15172B',
+    light: '#FFFFFF',
+    secondary: '#FFFFFF',
+    special: '#DDE1EC',
+    color_focused: '#3F4BB8',
+    border_radius: '8',
+    // Sans cadre propre : le conteneur du site fait déjà office de carte.
+    plain: 'true',
     promo_id: t.flights.promoId,
     campaign_id: t.flights.campaignId,
   });
