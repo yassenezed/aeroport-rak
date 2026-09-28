@@ -3,14 +3,30 @@ import type { LocalizedPage } from '../types';
 export default {
   title: 'Aeropuerto de Marrakech Menara (RAK): guía práctica',
   description: 'Guía del aeropuerto de Marrakech Menara: vuelos en directo, traslados a la medina, taxis, autobús 19, parkings, alquiler de coches y hoteles.',
-  eyebrow: 'Marrakech Menara · RAK · GMMX',
-  h1: 'Aeropuerto de Marrakech Menara',
+  eyebrow: "Guía independiente · actualizada 2026",
+  h1: "Aeropuerto de Marrakech",
+  h1Accent: "Menara · Marruecos",
   lede: "Seis kilómetros separan la terminal de Jemaa el-Fna. El trayecto es corto: son los últimos cien metros, donde ningún coche entra en la medina, los que deciden cómo será su llegada. Vuelos en directo, tarifas comprobadas y la mejor opción según su hora de aterrizaje.",
+  services: {
+    heading: "Servicios del aeropuerto de Marrakech Menara",
+    intro: "Acceda en un clic a lo esencial para su paso por el aeropuerto de Marrakech: vuelos, traslados, parkings, alquiler de coches y hoteles.",
+    items: [
+      { icon: "plane-landing", key: "arrivals", title: "Llegadas", text: "Los vuelos que aterrizan en el aeropuerto de Marrakech, en tiempo real.", cta: "Ver llegadas" },
+      { icon: "plane-takeoff", key: "departures", title: "Salidas", text: "Siga los vuelos que salen del RAK y prepare el control de pasaportes.", cta: "Ver salidas" },
+      { icon: "van", key: "transfers", title: "Traslados", text: "Taxi, autobús 19 o traslado privado: cómo llegar a la medina.", cta: "Comparar opciones" },
+      { icon: "car", key: "carRental", title: "Alquiler de coches", text: "Alquilar en el aeropuerto de Marrakech: precios reales, fianza y trampas.", cta: "Comparar precios" },
+      { icon: "parking", key: "parking", title: "Parkings", text: "Tarifas del parking del aeropuerto por hora, día y semana.", cta: "Ver tarifas" },
+      { icon: "building", key: "hotels", title: "Hoteles", text: "Dónde dormir en Marrakech: medina, Guéliz o Hivernage.", cta: "Buscar hotel" },
+      { icon: "plane", key: "flights", title: "Vuelos baratos", text: "Aerolíneas, temporadas y precios de los vuelos a Marrakech.", cta: "Buscar vuelo" },
+      { icon: "sim", key: "esim", title: "eSIM Marruecos", text: "Conectado desde el aterrizaje, sin colas en el mostrador.", cta: "Ver ofertas" },
+      { icon: "map", key: "airportGuide", title: "Guía del aeropuerto", text: "Terminales, formalidades, esperas y consejos prácticos.", cta: "Leer la guía" },
+    ],
+  },
   facts: [
-    { label: 'Código de aeropuerto', value: 'RAK', sub: '· GMMX' },
-    { label: 'Distancia a la medina', value: '6', sub: 'km' },
-    { label: 'Trayecto en coche', value: '15–30', sub: 'min' },
-    { label: 'Pasajeros 2024', value: '9,3', sub: 'millones' },
+    { label: "Distancia a la medina", value: "6", sub: "km" },
+    { label: "Trayecto en coche", value: "15–30", sub: "min" },
+    { label: "Terminales", value: "2", sub: "T1 · T2" },
+    { label: "Pasajeros 2024", value: "9,3", sub: "millones" },
   ],
   body: `
 <h2>Lo que conviene saber antes de aterrizar</h2>

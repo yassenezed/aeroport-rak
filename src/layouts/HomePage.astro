@@ -1,10 +1,10 @@
 ---
-// Accueil : hero premium avec carte widget, accès rapides, blocs de contenu.
+// Accueil : hero avec cartes d'infos en direct (heure, météo, code IATA),
+// barre d'accès rapides, grille de services, puis le contenu éditorial.
 import BaseLayout from './BaseLayout.astro';
-import TransferWidget from '../components/affiliate/TransferWidget.astro';
+import Icon from '../components/ui/Icon.astro';
 import { useTranslations, pathFor, type Locale } from '../i18n';
 import { site } from '../data/site';
-import { airport } from '../data/airport';
 import type { LocalizedPage } from '../copy/types';
 
 interface Props { locale: Locale; page: LocalizedPage; noindex?: boolean }
@@ -20,18 +20,13 @@ const quickLinks = [
   { key: 'hotels', label: t('nav.hotels') },
 ];
 
-const schema = [
-  {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: site.name,
-    url: site.url,
-    inLanguage: locale,
-  },
+const schema: object[] = [
+  { '@context': 'https://schema.org', '@type': 'WebSite', name: site.name, url: site.url, inLanguage: locale },
   {
     '@context': 'https://schema.org',
     '@type': 'Airport',
     name: 'Aéroport de Marrakech Ménara',
+    alternateName: ['Marrakech Menara Airport', 'RAK'],
     iataCode: 'RAK',
     icaoCode: 'GMMX',
     address: { '@type': 'PostalAddress', addressLocality: 'Marrakech', addressCountry: 'MA' },
@@ -44,42 +39,83 @@ if (page.faqs?.length) {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: page.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
-  } as any);
+  });
 }
+const dateLocale = locale === 'ar' ? 'ar-MA' : locale;
 ---
 <BaseLayout locale={locale} routeKey="home" title={page.title} description={page.description} schema={schema} bodyClass="is-home" noindex={noindex}>
-  <section class="hero hero--premium">
-    <div class="container hero-premium__grid">
-      <div class="hero-premium__text">
-        {page.eyebrow && <span class="eyebrow">{page.eyebrow}</span>}
-        <h1>{page.h1}</h1>
+  <section class="hero hero--home">
+    <div class="container hero-home__grid">
+      <div class="hero-home__text">
+        {page.eyebrow && <span class="hero-home__badge"><span class="hero-home__dot" aria-hidden="true"></span>{page.eyebrow}</span>}
+        <h1>
+          {page.h1}
+          {page.h1Accent && <span class="hero-home__accent">{page.h1Accent}</span>}
+        </h1>
         <p class="lede">{page.lede}</p>
-        <div class="hero-premium__actions">
-          <a class="btn btn--primary btn--lg" href={pathFor('bookTransfer', locale)}>{t('nav.bookTransfer')}</a>
-          <a class="btn btn--ghost btn--lg" href={pathFor('arrivals', locale)}>{t('nav.arrivals')}</a>
+        <div class="hero-home__actions">
+          <a class="btn btn--primary btn--lg" href={pathFor('arrivals', locale)}>{page.services?.items.find((i) => i.key === 'arrivals')?.cta ?? t('nav.arrivals')}</a>
+          <a class="btn btn--ghost btn--lg" href={pathFor('bookTransfer', locale)}>{t('nav.bookTransfer')}</a>
         </div>
-        <ul class="hero-premium__meta">
-          <li><span>{t('common.airportCode')}</span><strong dir="ltr">RAK · GMMX</strong></li>
-          <li><span>{t('common.distanceCity')}</span><strong dir="ltr">{airport.distanceToCityKm} km</strong></li>
-          <li><span>{t('common.localTime')}</span><strong dir="ltr">UTC+1</strong></li>
-        </ul>
       </div>
-      <div class="hero-premium__card">
-        <TransferWidget title="Réservation de transfert aéroport Marrakech" />
-      </div>
+
+      <ul class="hero-home__stats" aria-label="Marrakech Ménara">
+        <li class="stat-card">
+          <Icon name="clock" size={26} />
+          <div>
+            <span class="stat-card__label">{t('common.localTime')}</span>
+            <strong class="stat-card__value" dir="ltr" data-rak-clock data-locale={dateLocale}>--:--</strong>
+          </div>
+        </li>
+        <li class="stat-card">
+          <Icon name="cloud" size={26} />
+          <div>
+            <span class="stat-card__label">{t('common.weather')}</span>
+            <strong class="stat-card__value" dir="ltr" data-rak-weather>— °C</strong>
+          </div>
+        </li>
+        <li class="stat-card">
+          <Icon name="tag" size={26} />
+          <div>
+            <span class="stat-card__label">{t('common.airportCode')}</span>
+            <strong class="stat-card__value" dir="ltr">RAK · GMMX</strong>
+          </div>
+        </li>
+      </ul>
     </div>
   </section>
 
-  <nav class="quicklinks" aria-label={t('nav.menu')}>
-    <div class="container quicklinks__row">
-      {quickLinks.map((l) => (
-        <a class="quicklink" href={pathFor(l.key, locale)}>{l.label}</a>
-      ))}
+  <nav class="home-tabs" aria-label={t('nav.menu')}>
+    <div class="container">
+      <ul class="home-tabs__row">
+        {quickLinks.map((l) => <li><a href={pathFor(l.key, locale)}>{l.label}</a></li>)}
+      </ul>
     </div>
   </nav>
 
+  {page.services && (
+    <section class="section-block home-services">
+      <div class="container">
+        <header class="home-services__head">
+          <h2>{page.services.heading}</h2>
+          <p>{page.services.intro}</p>
+        </header>
+        <div class="service-grid">
+          {page.services.items.map((s) => (
+            <a class="service-card" href={pathFor(s.key, locale)}>
+              <span class="service-card__icon"><Icon name={s.icon} size={26} /></span>
+              <h3>{s.title}</h3>
+              <p>{s.text}</p>
+              <span class="service-card__cta">{s.cta} <span aria-hidden="true">{locale === 'ar' ? '←' : '→'}</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
   {page.facts && page.facts.length > 0 && (
-    <section class="facts-band">
+    <section class="section-block section-block--tight">
       <div class="container">
         <div class="facts">
           {page.facts.map((f) => (
@@ -126,4 +162,31 @@ if (page.faqs?.length) {
       </div>
     </section>
   )}
+
+  <script is:inline>
+    (function () {
+      // Heure locale de Marrakech, mise à jour chaque minute.
+      var el = document.querySelector('[data-rak-clock]');
+      if (el) {
+        var fmt;
+        try {
+          fmt = new Intl.DateTimeFormat(el.dataset.locale || 'fr', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'Africa/Casablanca' });
+        } catch (e) { fmt = null; }
+        var tick = function () { if (fmt) el.textContent = fmt.format(new Date()); };
+        tick(); setInterval(tick, 30000);
+      }
+      // Température actuelle à l'aéroport (Open-Meteo, sans clé ni cookie).
+      var w = document.querySelector('[data-rak-weather]');
+      if (w && window.fetch) {
+        fetch('https://api.open-meteo.com/v1/forecast?latitude=31.607&longitude=-8.036&current=temperature_2m&timezone=Africa%2FCasablanca')
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (d) {
+            if (d && d.current && typeof d.current.temperature_2m === 'number') {
+              w.textContent = Math.round(d.current.temperature_2m) + ' °C';
+            }
+          })
+          .catch(function () {});
+      }
+    })();
+  </script>
 </BaseLayout>

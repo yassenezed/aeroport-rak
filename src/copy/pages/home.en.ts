@@ -3,14 +3,30 @@ import type { LocalizedPage } from '../types';
 export default {
   title: 'Marrakech Menara Airport (RAK): the practical guide',
   description: 'Guide to Marrakech Menara Airport: live flights, transfers to the medina, taxis, bus 19, parking, car hire and hotels, with checked prices.',
-  eyebrow: 'Marrakech Menara · RAK · GMMX',
-  h1: 'Marrakech Menara Airport',
+  eyebrow: "Independent guide · updated 2026",
+  h1: "Marrakech Airport",
+  h1Accent: "Menara · Morocco",
   lede: "Six kilometres separate the terminal from Jemaa el-Fna. The drive is short: it is the last hundred metres, where no car enters the medina, that decide how your arrival goes. Live flights, checked fares, and the right way into town for your landing time.",
+  services: {
+    heading: "Marrakech Menara Airport services",
+    intro: "One click to everything you need for your trip through Marrakech Airport: flights, transfers, parking, car hire and hotels.",
+    items: [
+      { icon: "plane-landing", key: "arrivals", title: "Arrivals", text: "Flights landing at Marrakech Menara Airport, in real time.", cta: "See arrivals" },
+      { icon: "plane-takeoff", key: "departures", title: "Departures", text: "Track flights leaving RAK and plan for passport control.", cta: "See departures" },
+      { icon: "van", key: "transfers", title: "Transfers", text: "Taxi, bus 19 or private transfer: how to reach the medina.", cta: "Compare options" },
+      { icon: "car", key: "carRental", title: "Car hire", text: "Hiring at Marrakech Airport: real prices, deposit and traps.", cta: "Compare prices" },
+      { icon: "parking", key: "parking", title: "Parking", text: "Marrakech Airport parking rates by the hour, day and week.", cta: "See rates" },
+      { icon: "building", key: "hotels", title: "Hotels", text: "Where to stay in Marrakech: medina, Gueliz or Hivernage.", cta: "Find a hotel" },
+      { icon: "plane", key: "flights", title: "Cheap flights", text: "Airlines, seasons and fares for flights to Marrakech.", cta: "Search flights" },
+      { icon: "sim", key: "esim", title: "Morocco eSIM", text: "Online the moment you land, no counter queue.", cta: "See plans" },
+      { icon: "map", key: "airportGuide", title: "Airport guide", text: "Terminals, formalities, waiting times and practical tips.", cta: "Read the guide" },
+    ],
+  },
   facts: [
-    { label: 'Airport code', value: 'RAK', sub: '· GMMX' },
-    { label: 'Distance to medina', value: '6', sub: 'km' },
-    { label: 'Drive time', value: '15–30', sub: 'min' },
-    { label: 'Passengers 2024', value: '9.3', sub: 'million' },
+    { label: "Distance to medina", value: "6", sub: "km" },
+    { label: "Drive time", value: "15–30", sub: "min" },
+    { label: "Terminals", value: "2", sub: "T1 · T2" },
+    { label: "Passengers 2024", value: "9.3", sub: "million" },
   ],
   body: `
 <h2>What to know before you land</h2>

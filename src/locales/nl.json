@@ -47,7 +47,8 @@
     "editorialScore": "redactiescore",
     "verdict": "Ons oordeel",
     "pros": "Sterke punten",
-    "cons": "Goed om te weten"
+    "cons": "Goed om te weten",
+    "weather": "Weer in Marrakech"
   },
   "legal": {
     "privacy": "Privacy",

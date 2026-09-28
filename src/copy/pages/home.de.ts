@@ -3,14 +3,30 @@ import type { LocalizedPage } from '../types';
 export default {
   title: 'Flughafen Marrakesch Menara (RAK): der Praxisguide',
   description: 'Guide zum Flughafen Marrakesch Menara: Flüge in Echtzeit, Transfers in die Medina, Taxis, Bus 19, Parken, Mietwagen und Hotels.',
-  eyebrow: 'Marrakesch Menara · RAK · GMMX',
-  h1: 'Flughafen Marrakesch Menara',
+  eyebrow: "Unabhängiger Guide · Stand 2026",
+  h1: "Flughafen Marrakesch",
+  h1Accent: "Menara · Marokko",
   lede: "Sechs Kilometer trennen das Terminal von Djemaa el-Fna. Die Fahrt ist kurz: Es sind die letzten hundert Meter, in denen kein Auto in die Medina fährt, die über Ihre Ankunft entscheiden. Flüge in Echtzeit, geprüfte Preise und die richtige Option für Ihre Landezeit.",
+  services: {
+    heading: "Services am Flughafen Marrakesch Menara",
+    intro: "Mit einem Klick alles Wichtige für Ihren Weg durch den Flughafen Marrakesch: Flüge, Transfers, Parken, Mietwagen und Hotels.",
+    items: [
+      { icon: "plane-landing", key: "arrivals", title: "Ankünfte", text: "Die Flüge, die am Flughafen Marrakesch landen, in Echtzeit.", cta: "Ankünfte ansehen" },
+      { icon: "plane-takeoff", key: "departures", title: "Abflüge", text: "Verfolgen Sie Abflüge ab RAK und planen Sie die Passkontrolle.", cta: "Abflüge ansehen" },
+      { icon: "van", key: "transfers", title: "Transfers", text: "Taxi, Bus 19 oder Privattransfer: so kommen Sie in die Medina.", cta: "Optionen vergleichen" },
+      { icon: "car", key: "carRental", title: "Mietwagen", text: "Mieten am Flughafen Marrakesch: echte Preise, Kaution, Fallen.", cta: "Preise vergleichen" },
+      { icon: "parking", key: "parking", title: "Parken", text: "Parktarife am Flughafen pro Stunde, Tag und Woche.", cta: "Tarife ansehen" },
+      { icon: "building", key: "hotels", title: "Hotels", text: "Wo in Marrakesch übernachten: Medina, Guéliz oder Hivernage.", cta: "Hotel finden" },
+      { icon: "plane", key: "flights", title: "Günstige Flüge", text: "Airlines, Saisons und Preise für Flüge nach Marrakesch.", cta: "Flug suchen" },
+      { icon: "sim", key: "esim", title: "eSIM Marokko", text: "Online ab der Landung, ohne Schlange am Schalter.", cta: "Angebote ansehen" },
+      { icon: "map", key: "airportGuide", title: "Flughafen-Guide", text: "Terminals, Formalitäten, Wartezeiten und Praxistipps.", cta: "Guide lesen" },
+    ],
+  },
   facts: [
-    { label: 'Flughafencode', value: 'RAK', sub: '· GMMX' },
-    { label: 'Entfernung Medina', value: '6', sub: 'km' },
-    { label: 'Fahrzeit', value: '15–30', sub: 'Min.' },
-    { label: 'Passagiere 2024', value: '9,3', sub: 'Millionen' },
+    { label: "Entfernung Medina", value: "6", sub: "km" },
+    { label: "Fahrzeit", value: "15–30", sub: "Min." },
+    { label: "Terminals", value: "2", sub: "T1 · T2" },
+    { label: "Passagiere 2024", value: "9,3", sub: "Millionen" },
   ],
   body: `
 <h2>Was Sie vor der Landung wissen sollten</h2>

@@ -25,6 +25,7 @@ export default {
 <li><strong>Buchungswidgets</strong> (Flüge, Transfers): Sie nutzen Affiliate-Tracking-Cookies, um eine eventuelle Buchung unserer Website zuzuordnen.</li>
 <li><strong>Fluganzeigen</strong>: von einem Anbieter für Fluginformationen bereitgestellt und in einem isolierten Rahmen angezeigt.</li>
 <li><strong>Reichweitenmessung</strong>: aggregierte Besuchsstatistiken.</li>
+<li><strong>Wetter</strong>: Die Temperatur auf der Startseite stammt von Open-Meteo, ohne Cookie; übertragen wird nur Ihre IP-Adresse, wie bei jedem Seitenaufruf.</li>
 </ul>
 <p>Sie können diese Cookies in den Browsereinstellungen blockieren oder löschen. Die Website bleibt ohne sie vollständig lesbar; lediglich die Buchungswidgets funktionieren dann womöglich nicht korrekt.</p>
 

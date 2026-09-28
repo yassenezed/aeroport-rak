@@ -20,6 +20,14 @@ export interface LocalizedPage {
   cta?: { heading: string; text?: string; label: string; href?: string };
   /** Bandeau de chiffres clés sous le hero. */
   facts?: { label: string; value: string; sub?: string }[];
+  /** Accueil : seconde ligne du H1, mise en couleur. */
+  h1Accent?: string;
+  /** Accueil : grille de cartes de services (icône, titre, texte, lien). */
+  services?: {
+    heading: string;
+    intro: string;
+    items: { icon: string; key: string; title: string; text: string; cta: string }[];
+  };
 }
 
 export type PageContent = Partial<Record<Locale, LocalizedPage>>;

@@ -26,6 +26,7 @@ export default {
 <li><strong>Widgets de réservation</strong> (vols, transferts) : ils utilisent des cookies de suivi d'affiliation pour attribuer une éventuelle réservation à notre site.</li>
 <li><strong>Tableaux de vols</strong> : fournis par un prestataire d'information aérienne, affichés dans un cadre isolé.</li>
 <li><strong>Mesure d'audience</strong> : statistiques agrégées de fréquentation.</li>
+<li><strong>Météo</strong> : la température affichée sur l'accueil est obtenue auprès d'Open-Meteo, sans cookie ; seule votre adresse IP transite, comme pour tout chargement de page.</li>
 </ul>
 <p>Vous pouvez bloquer ou supprimer ces cookies depuis les réglages de votre navigateur. Le site reste entièrement consultable sans eux ; seuls les widgets de réservation peuvent cesser de fonctionner correctement.</p>
 

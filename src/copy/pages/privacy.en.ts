@@ -25,6 +25,7 @@ export default {
 <li><strong>Booking widgets</strong> (flights, transfers): they use affiliate tracking cookies to attribute any booking to our site.</li>
 <li><strong>Flight boards</strong>: supplied by an air-information provider and displayed in an isolated frame.</li>
 <li><strong>Analytics</strong>: aggregated traffic statistics.</li>
+<li><strong>Weather</strong>: the temperature on the home page comes from Open-Meteo, with no cookie; only your IP address is transmitted, as with any page load.</li>
 </ul>
 <p>You can block or delete these cookies from your browser settings. The site remains fully readable without them; only the booking widgets may stop working correctly.</p>
 

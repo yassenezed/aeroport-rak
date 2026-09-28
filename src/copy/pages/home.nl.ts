@@ -3,14 +3,30 @@ import type { LocalizedPage } from '../types';
 export default {
   title: "Luchthaven Marrakech Menara (RAK): de praktische gids",
   description: "Gids voor luchthaven Marrakech Menara: live vluchten, transfers naar de medina, taxi's, bus 19, parkeren, autohuur en hotels, met gecontroleerde prijzen.",
-  eyebrow: "Marrakech Menara · RAK · GMMX",
-  h1: "Luchthaven Marrakech Menara",
+  eyebrow: "Onafhankelijke gids · bijgewerkt 2026",
+  h1: "Luchthaven Marrakech",
+  h1Accent: "Menara · Marokko",
   lede: "Zes kilometer scheiden de terminal van Djemaa el-Fna. De rit is kort: het zijn de laatste honderd meter, waar geen auto de medina in komt, die bepalen hoe uw aankomst verloopt. Live vluchten, gecontroleerde tarieven en de juiste optie voor uw landingstijd.",
+  services: {
+    heading: "Voorzieningen op luchthaven Marrakech Menara",
+    intro: "Met één klik alles wat u nodig hebt op luchthaven Marrakech: vluchten, transfers, parkeren, autohuur en hotels.",
+    items: [
+      { icon: "plane-landing", key: "arrivals", title: "Aankomsten", text: "De vluchten die op luchthaven Marrakech landen, live.", cta: "Aankomsten bekijken" },
+      { icon: "plane-takeoff", key: "departures", title: "Vertrek", text: "Volg de vluchten vanaf de RAK en plan de paspoortcontrole.", cta: "Vertrek bekijken" },
+      { icon: "van", key: "transfers", title: "Transfers", text: "Taxi, bus 19 of privétransfer: zo komt u in de medina.", cta: "Opties vergelijken" },
+      { icon: "car", key: "carRental", title: "Autohuur", text: "Huren op luchthaven Marrakech: echte prijzen, borg en valkuilen.", cta: "Prijzen vergelijken" },
+      { icon: "parking", key: "parking", title: "Parkeren", text: "Parkeertarieven op de luchthaven per uur, dag en week.", cta: "Tarieven bekijken" },
+      { icon: "building", key: "hotels", title: "Hotels", text: "Waar slapen in Marrakech: medina, Guéliz of Hivernage.", cta: "Hotel vinden" },
+      { icon: "plane", key: "flights", title: "Goedkope vluchten", text: "Maatschappijen, seizoenen en prijzen van vluchten naar Marrakech.", cta: "Vlucht zoeken" },
+      { icon: "sim", key: "esim", title: "eSIM Marokko", text: "Online vanaf de landing, zonder rij aan de balie.", cta: "Bundels bekijken" },
+      { icon: "map", key: "airportGuide", title: "Luchthavengids", text: "Terminals, formaliteiten, wachttijden en praktische tips.", cta: "Gids lezen" },
+    ],
+  },
   facts: [
-    { label: 'Luchthavencode', value: 'RAK', sub: '· GMMX' },
-    { label: 'Afstand medina', value: '6', sub: 'km' },
-    { label: 'Rijtijd', value: '15–30', sub: 'min' },
-    { label: 'Passagiers 2024', value: '9,3', sub: 'miljoen' },
+    { label: "Afstand medina", value: "6", sub: "km" },
+    { label: "Rijtijd", value: "15–30", sub: "min" },
+    { label: "Terminals", value: "2", sub: "T1 · T2" },
+    { label: "Passagiers 2024", value: "9,3", sub: "miljoen" },
   ],
   body: `
 <h2>Wat u vóór de landing moet weten</h2>

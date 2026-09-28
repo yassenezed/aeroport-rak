@@ -25,6 +25,7 @@ export default {
 <li><strong>Boekingswidgets</strong> (vluchten, transfers): ze gebruiken affiliatecookies om een eventuele boeking aan onze site toe te schrijven.</li>
 <li><strong>Vluchtborden</strong>: geleverd door een aanbieder van vluchtinformatie en getoond in een afgeschermd kader.</li>
 <li><strong>Statistieken</strong>: geaggregeerde bezoekcijfers.</li>
+<li><strong>Weer</strong>: de temperatuur op de homepage komt van Open-Meteo, zonder cookie; alleen uw IP-adres wordt doorgegeven, zoals bij elke paginalading.</li>
 </ul>
 <p>U kunt deze cookies blokkeren of verwijderen via de instellingen van uw browser. De site blijft zonder ze volledig leesbaar; alleen de boekingswidgets werken dan mogelijk niet goed.</p>
 
