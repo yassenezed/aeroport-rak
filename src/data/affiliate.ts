@@ -65,16 +65,28 @@ export function transferWidgetSrc(locale = 'fr'): string {
 // Langues prises en charge par le formulaire Aviasales ; l'arabe retombe sur l'anglais.
 const FLIGHT_WIDGET_LOCALES = ['fr', 'en', 'es', 'de', 'nl'];
 
+// Ville de départ et devise pré-remplies selon le marché de chaque langue.
+const FLIGHT_MARKETS: Record<string, { origin: string; currency: string }> = {
+  fr: { origin: 'PAR', currency: 'eur' }, // Paris
+  en: { origin: 'LON', currency: 'gbp' }, // Londres
+  es: { origin: 'MAD', currency: 'eur' }, // Madrid
+  de: { origin: 'FRA', currency: 'eur' }, // Francfort
+  nl: { origin: 'AMS', currency: 'eur' }, // Amsterdam
+  ar: { origin: 'RUH', currency: 'usd' }, // Riyad
+};
+
 export function flightWidgetSrc(locale = 'fr'): string {
   const t = travelpayouts;
+  const market = FLIGHT_MARKETS[locale] ?? FLIGHT_MARKETS.fr;
   const p = new URLSearchParams({
-    currency: 'eur',
+    currency: market.currency,
     trs: t.flights.trs,
     shmarker: t.marker,
     show_hotels: 'true',
     powered_by: 'true',
     locale: FLIGHT_WIDGET_LOCALES.includes(locale) ? locale : 'en',
     searchUrl: t.flights.searchUrl,
+    origin: market.origin,
     destination: t.flights.destination,
     // Charte AirportRAK : bleu Majorelle, safran, indigo.
     primary_override: '#3F4BB8',
