@@ -16,10 +16,10 @@ export default {
         { icon: 'plane-landing', key: 'arrivals', title: 'Arrivées', text: "Les vols qui atterrissent à l'aéroport de Marrakech-Ménara, en temps réel.", cta: 'Voir les arrivées' },
         { icon: 'plane-takeoff', key: 'departures', title: 'Départs', text: 'Suivez les vols au départ de RAK et préparez votre passage au contrôle.', cta: 'Voir les départs' },
         { icon: 'van', key: 'transfers', title: 'Transferts', text: "Taxi, bus 19 ou transfert privé : comment rejoindre la médina depuis l'aéroport.", cta: 'Comparer les options' },
-        { icon: 'car', key: 'carRental', title: 'Location de voiture', text: "Louer à l'aéroport de Marrakech : prix réels, caution et pièges à éviter.", cta: 'Comparer les prix' },
-        { icon: 'parking', key: 'parking', title: 'Parkings', text: "Tarifs du parking de l'aéroport Marrakech, à l'heure, au jour et à la semaine.", cta: 'Voir les tarifs' },
+        { icon: 'car', key: 'carRental', title: 'Location de voiture', text: "Louer à l'aéroport : prix réels, caution et pièges à éviter.", cta: 'Comparer les prix' },
+        { icon: 'parking', key: 'parking', title: 'Parkings', text: "Tarifs du parking de l'aéroport, à l'heure, au jour et à la semaine.", cta: 'Voir les tarifs' },
         { icon: 'building', key: 'hotels', title: 'Hôtels', text: 'Où dormir à Marrakech selon votre quartier : médina, Guéliz, Hivernage.', cta: 'Trouver un hôtel' },
-        { icon: 'plane', key: 'flights', title: 'Vols pas chers', text: "Compagnies, saisons et prix des vols vers l'aéroport de Marrakech.", cta: 'Chercher un vol' },
+        { icon: 'plane', key: 'flights', title: 'Vols pas chers', text: "Compagnies, saisons et prix des vols vers l'aéroport.", cta: 'Chercher un vol' },
         { icon: 'sim', key: 'esim', title: 'eSIM Maroc', text: "Soyez connecté dès l'atterrissage, sans file au comptoir.", cta: 'Voir les offres' },
         { icon: 'map', key: 'airportGuide', title: "Guide de l'aéroport", text: 'Terminaux, formalités, temps d\'attente et conseils pratiques.', cta: 'Lire le guide' },
       ],
@@ -37,15 +37,15 @@ export default {
 
 <p>Pour ne pas confondre les codes RAK et GMMX, lisez notre article sur le <a href="/blog/code-aeroport-marrakech/">code de l'aéroport de Marrakech</a>. Pour l'historique et les données techniques de la plateforme, consultez la <a href="https://fr.wikipedia.org/wiki/A%C3%A9roport_de_Marrakech-M%C3%A9nara" target="_blank" rel="noopener">page Wikipédia de l'aéroport de Marrakech-Ménara</a>.</p>
 
-<h2>Où se trouve l'aéroport de Marrakech ?</h2>
+<h2>Où se trouve l'aéroport ?</h2>
 <p>L'aéroport est implanté au sud-ouest de la ville, dans le quartier de la Ménara, à côté des célèbres jardins qui lui ont donné son nom. Il se trouve à 471 mètres d'altitude et dispose d'une piste unique de 3 100 mètres. Depuis l'aérogare, on rejoint en quelques minutes Guéliz et l'Hivernage, et en un quart d'heure les portes de la médina : Bab Jdid, Bab Laksour, Bab Doukkala ou Bab Agnaou.</p>
 
-<h2>Les terminaux de l'aéroport Marrakech</h2>
-<p>L'aéroport de Marrakech-Ménara fonctionne avec <strong>deux terminaux contigus</strong>, T1 et T2, reliés à pied. Le T1, reconnaissable à sa grande façade géométrique blanche, accueille la majorité des vols internationaux ; le T2 absorbe le reste du trafic et une partie des vols intérieurs. La répartition change selon la compagnie et la saison : vérifiez toujours votre carte d'embarquement. Consultez notre <a href="/guide-aeroport/">guide complet de l'aéroport</a> pour le plan, les formalités et les temps d'attente.</p>
-<figure class="prose-figure"><picture><source type="image/webp" srcset="/images/aeroport-marrakech-menara-terminal-800.webp 800w, /images/aeroport-marrakech-menara-terminal-1400.webp 1400w" sizes="(max-width: 860px) 100vw, 760px"><img src="/images/aeroport-marrakech-menara-terminal-1200.jpg" alt="Entrée du terminal de l'aéroport de Marrakech-Ménara : dôme de verre et façade ajourée à motifs géométriques" width="1200" height="794" loading="lazy" decoding="async"></picture><figcaption>Le dôme de verre et la façade ajourée du terminal de l'aéroport de Marrakech-Ménara.</figcaption></figure>
+<h2>Terminal 1 et terminal 2</h2>
+<p>L'aéroport fonctionne avec <strong>deux terminaux contigus</strong>, T1 et T2, reliés à pied. Le T1, reconnaissable à sa grande façade géométrique blanche, accueille la majorité des vols internationaux ; le T2 absorbe le reste du trafic et une partie des vols intérieurs. La répartition change selon la compagnie et la saison : vérifiez toujours votre carte d'embarquement. Consultez notre <a href="/guide-aeroport/">guide complet de l'aéroport</a> pour le plan, les formalités et les temps d'attente.</p>
+<figure class="prose-figure"><picture><source type="image/webp" srcset="/images/aeroport-marrakech-menara-terminal-800.webp 800w, /images/aeroport-marrakech-menara-terminal-1400.webp 1400w" sizes="(max-width: 860px) 100vw, 760px"><img src="/images/aeroport-marrakech-menara-terminal-1200.jpg" alt="Entrée du terminal de l'aéroport de Marrakech-Ménara : dôme de verre et façade ajourée à motifs géométriques" width="1200" height="794" loading="lazy" decoding="async"></picture><figcaption>Le dôme de verre et la façade ajourée du terminal 1.</figcaption></figure>
 
-<h2>Arrivées et départs à l'aéroport de Marrakech</h2>
-<p>Les vols sont suivis en direct sur nos pages <a href="/arrivees/">arrivées</a> et <a href="/departs/">départs</a>. Bon à savoir : l'aéroport Marrakech concentre une grande partie de ses arrivées le soir, entre 20 h et minuit, quand les vols low cost européens se posent en série. À l'arrivée, comptez <strong>30 à 60 minutes</strong> entre l'avion et la sortie ; au départ, présentez-vous <strong>2 heures avant</strong> un vol vers l'Europe, 3 heures en haute saison, car le contrôle des passeports est le principal point d'attente.</p>
+<h2>Arrivées et départs</h2>
+<p>Les vols sont suivis en direct sur nos pages <a href="/arrivees/">arrivées</a> et <a href="/departs/">départs</a>. Bon à savoir : l'aéroport concentre une grande partie de ses arrivées le soir, entre 20 h et minuit, quand les vols low cost européens se posent en série. À l'arrivée, comptez <strong>30 à 60 minutes</strong> entre l'avion et la sortie ; au départ, présentez-vous <strong>2 heures avant</strong> un vol vers l'Europe, 3 heures en haute saison, car le contrôle des passeports est le principal point d'attente.</p>
 
 <h2>Comment aller de l'aéroport Marrakech au centre-ville ?</h2>
 <p>Il n'existe pas de train vers l'aéroport. Quatre solutions s'offrent à vous :</p>
@@ -60,9 +60,9 @@ export default {
 </tbody>
 </table>
 </div>
-<p>Le taxi de l'aéroport de Marrakech applique des tarifs affichés sur un panneau à la station : 100 à 150 MAD en journée vers la médina, Guéliz et l'Hivernage, 150 à 240 MAD la nuit. Un petit taxi ne prend que trois passagers. À partir de quatre personnes, ou après 21 h, le <a href="/reserver-transfert/">transfert réservé</a> devient souvent moins cher et plus simple. Tous les détails sur notre page <a href="/transferts/">transferts depuis l'aéroport</a>, et le pas-à-pas dans notre guide <a href="/blog/rak-centre-ville/">de l'aéroport RAK au centre-ville</a>.</p>
+<p>Le taxi de l'aéroport applique des tarifs affichés sur un panneau à la station : 100 à 150 MAD en journée vers la médina, Guéliz et l'Hivernage, 150 à 240 MAD la nuit. Un petit taxi ne prend que trois passagers. À partir de quatre personnes, ou après 21 h, le <a href="/reserver-transfert/">transfert réservé</a> devient souvent moins cher et plus simple. Tous les détails sur notre page <a href="/transferts/">transferts depuis l'aéroport</a>, et le pas-à-pas dans notre guide <a href="/blog/rak-centre-ville/">de l'aéroport RAK au centre-ville</a>.</p>
 
-<h2>Services disponibles à l'aéroport de Marrakech-Ménara</h2>
+<h2>Services disponibles dans le terminal</h2>
 <ul>
 <li><strong>Distributeurs et bureaux de change</strong> dans le hall des arrivées : le dirham ne s'achète pas hors du Maroc, retirez avant de sortir.</li>
 <li><strong>Cartes SIM</strong> Maroc Telecom, Orange et inwi au hall des arrivées, ou <a href="/esim-maroc/">eSIM</a> à activer avant le départ.</li>
@@ -72,13 +72,13 @@ export default {
 </ul>
 <p>Retrouvez le détail sur la page <a href="/services/">services de l'aéroport</a>.</p>
 
-<h2>Parking de l'aéroport de Marrakech</h2>
-<p>Les parkings de l'aéroport Marrakech se trouvent face aux terminaux. La dépose de moins de 30 minutes est gratuite ou symbolique, l'heure coûte environ 20 MAD et la journée 70 à 80 MAD. Pour une semaine, comptez 450 à 550 MAD : au-delà de trois ou quatre jours, un aller-retour en taxi ou en transfert revient souvent moins cher. Voir les <a href="/parkings/">tarifs des parkings</a>.</p>
+<h2>Se garer à l'aéroport</h2>
+<p>Les parkings de l'aéroport se trouvent face aux terminaux. La dépose de moins de 30 minutes est gratuite ou symbolique, l'heure coûte environ 20 MAD et la journée 70 à 80 MAD. Pour une semaine, comptez 450 à 550 MAD : au-delà de trois ou quatre jours, un aller-retour en taxi ou en transfert revient souvent moins cher. Voir les <a href="/parkings/">tarifs des parkings</a>.</p>
 
-<h2>Location de voiture à l'aéroport Marrakech</h2>
+<h2>Louer une voiture sur place</h2>
 <p>Les loueurs internationaux et marocains sont présents dans le hall des arrivées. Une petite voiture coûte 25 à 35 € par jour, avec une caution de 5 000 à 15 000 MAD bloquée sur une carte de crédit. Une voiture n'est utile que pour sortir de Marrakech : Atlas, Ourika, Essaouira ou Ouarzazate. Notre page <a href="/location-voiture/">location de voiture</a> détaille les pièges du contrat.</p>
 
-<h2>Hôtels près de l'aéroport de Marrakech</h2>
+<h2>Où dormir près de l'aéroport</h2>
 <p>Grâce à sa position, l'aéroport est à 10 minutes des grands hôtels de l'Hivernage et à 20 minutes des riads de la médina. Pour une arrivée tardive ou un vol très matinal, un hôtel à l'Hivernage évite de traverser la ville. Consultez notre sélection <a href="/hotels/">où dormir à Marrakech</a>.</p>
 
 <div class="callout">
@@ -88,7 +88,7 @@ export default {
 `,
     faqs: [
       { q: "Quel est le code de l'aéroport de Marrakech ?", a: "Le code IATA de l'aéroport de Marrakech-Ménara est RAK, celui qui figure sur votre billet. Son code OACI est GMMX. Attention à ne pas confondre avec CMN, l'aéroport de Casablanca, situé à 240 km." },
-      { q: "À quelle distance se trouve l'aéroport de Marrakech du centre-ville ?", a: "L'aéroport de Marrakech-Ménara est à environ 6 km de la place Jemaa el-Fna et de la médina, soit 15 à 30 minutes de route selon l'heure. Guéliz et l'Hivernage sont à 10 à 20 minutes." },
+      { q: "À quelle distance se trouve l'aéroport de Marrakech du centre-ville ?", a: "Il est à environ 6 km de la place Jemaa el-Fna et de la médina, soit 15 à 30 minutes de route selon l'heure. Guéliz et l'Hivernage sont à 10 à 20 minutes." },
       { q: "Combien coûte un taxi de l'aéroport de Marrakech à la médina ?", a: "Les tarifs affichés à la station de taxis sont d'environ 100 à 150 MAD en journée et 150 à 240 MAD la nuit, pour la voiture entière. Un petit taxi accepte trois passagers maximum ; au-delà, prévoyez un grand taxi ou un transfert privé." },
       { q: "Y a-t-il un bus entre l'aéroport de Marrakech et le centre ?", a: "Oui, le bus 19 d'ALSA relie l'aéroport à Jemaa el-Fna pour 30 MAD l'aller, avec un départ environ toutes les 30 minutes entre 6 h et 23 h 30. Le trajet dure une vingtaine de minutes." },
       { q: "Combien de terminaux compte l'aéroport de Marrakech-Ménara ?", a: "Deux terminaux contigus, T1 et T2, reliés à pied. Le T1 accueille la majorité des vols internationaux. Vérifiez le terminal indiqué sur votre carte d'embarquement." },
@@ -97,7 +97,7 @@ export default {
       { q: "Peut-on retirer de l'argent à l'aéroport de Marrakech ?", a: "Oui, des distributeurs et bureaux de change se trouvent dans le hall des arrivées. Retirez avant de sortir : les taxis n'acceptent pas la carte et le dirham ne s'achète pas hors du Maroc." },
     ],
     cta: {
-      heading: "Votre arrivée à l'aéroport de Marrakech, réglée d'avance",
+      heading: "Votre arrivée à Marrakech, réglée d'avance",
       text: "Prix fixe par véhicule, chauffeur qui vous attend avec votre nom, suivi du vol et annulation gratuite sur la plupart des réservations.",
       label: 'Réserver un transfert',
     },

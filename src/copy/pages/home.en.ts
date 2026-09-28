@@ -36,15 +36,15 @@ export default {
 
 <p>To avoid mixing up the RAK and GMMX codes, read our article on the <a href="/en/blog/marrakech-airport-code/">Marrakech airport code</a>. For the history and technical data of the airport, see the <a href="https://en.wikipedia.org/wiki/Marrakesh_Menara_Airport" target="_blank" rel="noopener">Wikipedia page on Marrakesh Menara Airport</a>.</p>
 
-<h2>Where is Marrakech airport?</h2>
+<h2>Where is the airport?</h2>
 <p>The airport lies south-west of the city, in the Menara district, next to the famous gardens that give it its name. It sits at 471 metres above sea level with a single 3,100-metre runway. From the terminal you reach Gueliz and Hivernage in minutes, and the medina gates — Bab Jdid, Bab Laksour, Bab Doukkala or Bab Agnaou — in about a quarter of an hour.</p>
 
-<h2>Marrakech airport terminals</h2>
-<p>Marrakech Menara Airport runs <strong>two adjoining terminals</strong>, T1 and T2, linked on foot. T1, recognisable by its large white geometric façade, handles most international flights; T2 takes the rest of the traffic and part of the domestic flights. The split changes with airline and season, so always check your boarding pass. See our <a href="/en/airport-guide/">full airport guide</a> for layout, formalities and waiting times.</p>
-<figure class="prose-figure"><picture><source type="image/webp" srcset="/images/aeroport-marrakech-menara-terminal-800.webp 800w, /images/aeroport-marrakech-menara-terminal-1400.webp 1400w" sizes="(max-width: 860px) 100vw, 760px"><img src="/images/aeroport-marrakech-menara-terminal-1200.jpg" alt="Terminal entrance at Marrakech Menara Airport: glass dome and perforated geometric façade" width="1200" height="794" loading="lazy" decoding="async"></picture><figcaption>The glass dome and perforated façade of the Marrakech Menara Airport terminal.</figcaption></figure>
+<h2>Terminal 1 and Terminal 2</h2>
+<p>The airport runs <strong>two adjoining terminals</strong>, T1 and T2, linked on foot. T1, recognisable by its large white geometric façade, handles most international flights; T2 takes the rest of the traffic and part of the domestic flights. The split changes with airline and season, so always check your boarding pass. See our <a href="/en/airport-guide/">full airport guide</a> for layout, formalities and waiting times.</p>
+<figure class="prose-figure"><picture><source type="image/webp" srcset="/images/aeroport-marrakech-menara-terminal-800.webp 800w, /images/aeroport-marrakech-menara-terminal-1400.webp 1400w" sizes="(max-width: 860px) 100vw, 760px"><img src="/images/aeroport-marrakech-menara-terminal-1200.jpg" alt="Terminal entrance at Marrakech Menara Airport: glass dome and perforated geometric façade" width="1200" height="794" loading="lazy" decoding="async"></picture><figcaption>The glass dome and perforated façade of Terminal 1.</figcaption></figure>
 
-<h2>Arrivals and departures at Marrakech airport</h2>
-<p>Flights are tracked live on our <a href="/en/arrivals/">arrivals</a> and <a href="/en/departures/">departures</a> pages. Worth knowing: Marrakech airport concentrates many of its arrivals in the evening, between 8 pm and midnight, when European low-cost flights land in quick succession. On arrival, allow <strong>30 to 60 minutes</strong> from the aircraft to the exit; on departure, arrive <strong>2 hours before</strong> a flight to Europe, 3 hours in high season, as passport control is the main bottleneck.</p>
+<h2>Arrivals and departures</h2>
+<p>Flights are tracked live on our <a href="/en/arrivals/">arrivals</a> and <a href="/en/departures/">departures</a> pages. Worth knowing: the airport concentrates many of its arrivals in the evening, between 8 pm and midnight, when European low-cost flights land in quick succession. On arrival, allow <strong>30 to 60 minutes</strong> from the aircraft to the exit; on departure, arrive <strong>2 hours before</strong> a flight to Europe, 3 hours in high season, as passport control is the main bottleneck.</p>
 
 <h2>How to get from Marrakech airport to the city centre</h2>
 <p>There is no train to the airport. You have four options:</p>
@@ -59,9 +59,9 @@ export default {
 </tbody>
 </table>
 </div>
-<p>Marrakech airport taxis charge fares posted on a board at the rank: MAD 100 to 150 by day to the medina, Gueliz and Hivernage, MAD 150 to 240 at night. A petit taxi takes only three passengers. From four people, or after 9 pm, a <a href="/en/book-transfer/">booked transfer</a> is often cheaper and simpler. Full details on our <a href="/en/transfers/">airport transfers</a> page, and a step-by-step walkthrough in our guide <a href="/en/blog/rak-to-city-center/">from RAK airport to the city centre</a>.</p>
+<p>Airport taxis charge fares posted on a board at the rank: MAD 100 to 150 by day to the medina, Gueliz and Hivernage, MAD 150 to 240 at night. A petit taxi takes only three passengers. From four people, or after 9 pm, a <a href="/en/book-transfer/">booked transfer</a> is often cheaper and simpler. Full details on our <a href="/en/transfers/">airport transfers</a> page, and a step-by-step walkthrough in our guide <a href="/en/blog/rak-to-city-center/">from RAK airport to the city centre</a>.</p>
 
-<h2>Facilities available at Marrakech Menara Airport</h2>
+<h2>Facilities in the terminal</h2>
 <ul>
 <li><strong>ATMs and bureaux de change</strong> in the arrivals hall: dirhams cannot be bought outside Morocco, so withdraw before you leave.</li>
 <li><strong>SIM cards</strong> from Maroc Telecom, Orange and inwi in the arrivals hall, or an <a href="/en/morocco-esim/">eSIM</a> to activate before you fly.</li>
@@ -71,13 +71,13 @@ export default {
 </ul>
 <p>More on our <a href="/en/services/">airport services</a> page.</p>
 
-<h2>Parking at Marrakech airport</h2>
-<p>Marrakech airport car parks sit in front of the terminals. Drop-offs under 30 minutes are free or nominal, an hour costs about MAD 20 and a day MAD 70 to 80. For a week, expect MAD 450 to 550: beyond three or four days, a return trip by taxi or transfer often works out cheaper. See the <a href="/en/parking/">parking rates</a>.</p>
+<h2>Parking at the airport</h2>
+<p>Airport car parks sit in front of the terminals. Drop-offs under 30 minutes are free or nominal, an hour costs about MAD 20 and a day MAD 70 to 80. For a week, expect MAD 450 to 550: beyond three or four days, a return trip by taxi or transfer often works out cheaper. See the <a href="/en/parking/">parking rates</a>.</p>
 
-<h2>Car hire at Marrakech airport</h2>
+<h2>Hiring a car on site</h2>
 <p>International and Moroccan hire companies have desks in the arrivals hall. A small car costs €25 to €35 a day, with a MAD 5,000 to 15,000 deposit held on a credit card. A car is only useful for leaving Marrakech: the Atlas, Ourika, Essaouira or Ouarzazate. Our <a href="/en/car-rental/">car hire</a> page covers the contract traps.</p>
 
-<h2>Hotels near Marrakech airport</h2>
+<h2>Where to stay near the airport</h2>
 <p>Thanks to its location, the airport is 10 minutes from the large Hivernage hotels and 20 minutes from the medina riads. For a late arrival or a very early flight, a Hivernage hotel saves crossing the city. See our selection of <a href="/en/hotels/">where to stay in Marrakech</a>.</p>
 
 <div class="callout">
@@ -87,7 +87,7 @@ export default {
 `,
   faqs: [
     { q: "What is the code for Marrakech airport?", a: "The IATA code for Marrakech Menara Airport is RAK, the one on your ticket. Its ICAO code is GMMX. Do not confuse it with CMN, Casablanca's airport, 240 km away." },
-    { q: "How far is Marrakech airport from the city centre?", a: "Marrakech Menara Airport is about 6 km from Jemaa el-Fna square and the medina, or 15 to 30 minutes by road depending on the time of day. Gueliz and Hivernage are 10 to 20 minutes away." },
+    { q: "How far is Marrakech airport from the city centre?", a: "It is about 6 km from Jemaa el-Fna square and the medina, or 15 to 30 minutes by road depending on the time of day. Gueliz and Hivernage are 10 to 20 minutes away." },
     { q: "How much is a taxi from Marrakech airport to the medina?", a: "The fares posted at the taxi rank are roughly MAD 100 to 150 by day and MAD 150 to 240 at night, for the whole car. A petit taxi takes three passengers at most; beyond that, plan a grand taxi or a private transfer." },
     { q: "Is there a bus between Marrakech airport and the centre?", a: "Yes, ALSA's bus 19 links the airport to Jemaa el-Fna for MAD 30 one way, with a departure roughly every 30 minutes between 6 am and 11.30 pm. The ride takes about twenty minutes." },
     { q: "How many terminals does Marrakech Menara Airport have?", a: "Two adjoining terminals, T1 and T2, linked on foot. T1 handles most international flights. Check the terminal shown on your boarding pass." },
@@ -95,5 +95,5 @@ export default {
     { q: "Is there wi-fi at Marrakech airport?", a: "Yes, free wi-fi is available in the terminals. It is patchy at peak times: to reach a driver reliably, an eSIM or a local SIM card is better." },
     { q: "Can I withdraw cash at Marrakech airport?", a: "Yes, ATMs and bureaux de change are in the arrivals hall. Withdraw before you leave: taxis do not take cards and dirhams cannot be bought outside Morocco." },
   ],
-  cta: { heading: "Your arrival at Marrakech airport, sorted in advance", text: "Fixed price per vehicle, a driver waiting with your name, flight tracking and free cancellation on most bookings.", label: "Book a transfer" },
+  cta: { heading: "Your arrival in Marrakech, sorted in advance", text: "Fixed price per vehicle, a driver waiting with your name, flight tracking and free cancellation on most bookings.", label: "Book a transfer" },
 } satisfies LocalizedPage;
