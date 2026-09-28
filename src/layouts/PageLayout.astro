@@ -126,7 +126,7 @@ if (page.faqs?.length) {
           <h2>{page.steps.heading}</h2>
           {page.steps.intro && <p>{page.steps.intro}</p>}
         </header>
-        <ol class="steps-grid">
+        <ol class="steps-grid" style={`--cols: ${page.steps.items.length}`}>
           {page.steps.items.map((st, i) => (
             <li class="step-card">
               <span class="step-card__icon"><Icon name={st.icon} size={24} /><span class="step-card__num" dir="ltr">{i + 1}</span></span>
