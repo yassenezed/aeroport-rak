@@ -865,3 +865,36 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
 /* Formulaire de recherche de vols sous le hero de l'accueil */
 .home-flights { background: var(--paper); padding-block: clamp(1.5rem, 3vw, 2.25rem) 0; }
 .home-flights .flight-search-widget { border: 1px solid var(--line); border-top: 3px solid var(--blue); border-radius: var(--r-xl); box-shadow: var(--shadow-md); }
+
+/* Chiffres clés : libellé et valeur toujours empilés */
+.fact .fact-label, .fact .fact-value { display: block; }
+
+/* Accueil : tuiles de chiffres clés */
+.home-services { padding-bottom: clamp(1.5rem, 3vw, 2.5rem); }
+.home-stats { padding-block: 0 clamp(2rem, 4vw, 3rem); }
+.home-stats__grid {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+}
+.home-stat {
+  margin: 0; position: relative; overflow: hidden;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 0.35rem;
+  padding: 1.4rem 1.5rem; border-radius: var(--r-xl);
+  background: var(--ink); color: rgba(255, 255, 255, 0.72);
+}
+.home-stat::after {
+  content: ''; position: absolute; inset: auto 0 0 0; height: 3px;
+  background: linear-gradient(90deg, var(--saffron), var(--clay));
+}
+.home-stat__icon {
+  width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center;
+  background: rgba(233, 161, 59, 0.14); color: var(--saffron); margin-bottom: 0.4rem;
+}
+.home-stat__value {
+  font-family: var(--font-display); font-size: clamp(1.9rem, 3vw, 2.4rem); font-weight: 600;
+  line-height: 1; color: #fff; letter-spacing: -0.01em;
+}
+.home-stat__value small { font-family: var(--font-body); font-size: 0.95rem; font-weight: 600; color: var(--saffron); margin-left: 0.35rem; letter-spacing: 0; }
+.home-stat__label { font-size: 0.88rem; font-weight: 600; }
+@media (max-width: 860px) { .home-stats__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 420px) { .home-stat { padding: 1.1rem; } .home-stat__value { font-size: 1.7rem; } }

@@ -105,16 +105,17 @@ if (page.faqs?.length) {
   )}
 
   {page.facts && page.facts.length > 0 && (
-    <section class="section-block section-block--tight">
+    <section class="home-stats">
       <div class="container">
-        <div class="facts">
-          {page.facts.map((f) => (
-            <div class="fact">
-              <span class="fact-label">{f.label}</span>
-              <span class="fact-value" dir="auto">{f.value}{f.sub && <small> {f.sub}</small>}</span>
-            </div>
+        <ul class="home-stats__grid">
+          {page.facts.map((f, i) => (
+            <li class="home-stat">
+              <span class="home-stat__icon"><Icon name={['map-pin', 'clock', 'building', 'users'][i % 4]} size={22} /></span>
+              <span class="home-stat__value" dir="ltr">{f.value}{f.sub && <small>{f.sub}</small>}</span>
+              <span class="home-stat__label">{f.label}</span>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   )}
