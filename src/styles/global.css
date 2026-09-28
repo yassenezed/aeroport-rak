@@ -914,3 +914,8 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
 .trust-card__text { margin: 0; color: var(--ink-2); font-size: .95rem; line-height: 1.5; }
 .trust-card__text a { color: var(--blue); font-weight: 500; }
 @media (max-width: 860px) { .trust-band__grid { grid-template-columns: 1fr; gap: 12px; } .trust-band { padding: 28px 0; } }
+
+/* ---------- Photos dans le contenu éditorial ---------- */
+.prose-figure { margin: 1.5rem 0 1.75rem; }
+.prose-figure img { display: block; width: 100%; height: auto; border-radius: var(--r-xl); background: var(--paper-2); }
+.prose-figure figcaption { margin-top: .5rem; font-size: .875rem; color: var(--ink-3); }
