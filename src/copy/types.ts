@@ -24,7 +24,11 @@ export interface LocalizedPage {
   facts?: { label: string; value: string; sub?: string }[];
   /** Accueil : seconde ligne du H1, mise en couleur. */
   h1Accent?: string;
-  /** Accueil : grille de cartes de services (icône, titre, texte, lien). */
+  /** Tuiles de chiffres clés avec icône, sous le hero ; `live` affiche l'heure ou la météo en direct. */
+  highlights?: { icon: string; value: string; label: string; live?: 'clock' | 'weather' }[];
+  /** Parcours en étapes numérotées avec icône. */
+  steps?: { heading: string; intro?: string; items: { icon: string; title: string; text: string }[] };
+  /** Grille de cartes de services (icône, titre, texte, lien vers une route). */
   services?: {
     heading: string;
     intro: string;

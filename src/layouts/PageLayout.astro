@@ -6,6 +6,8 @@ import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
 import FlightWidget from '../components/ui/FlightWidget.astro';
 import FlightSearchWidget from '../components/affiliate/FlightSearchWidget.astro';
 import TransferWidget from '../components/affiliate/TransferWidget.astro';
+import Icon from '../components/ui/Icon.astro';
+import { airport } from '../data/airport';
 import { useTranslations, pathFor, type Locale, type RouteKey } from '../i18n';
 import { site } from '../data/site';
 import type { LocalizedPage } from '../copy/types';
@@ -22,6 +24,9 @@ interface Props {
 const { locale, routeKey, page, ogType = 'website', extraSchema = [], crumbs = [], noindex = false } = Astro.props;
 const t = useTranslations(locale);
 const path = pathFor(routeKey, locale);
+const weatherLabels = Object.fromEntries(
+  ['clear', 'clearNight', 'partly', 'cloudy', 'fog', 'rain', 'snow', 'showers', 'storm'].map((k) => [k, t(`weatherCodes.${k}`)]),
+);
 
 const breadcrumbItems = [
   { name: t('nav.home'), href: pathFor('home', locale) },
@@ -68,6 +73,26 @@ if (page.faqs?.length) {
     </div>
   </section>
 
+  {page.highlights && page.highlights.length > 0 && (
+    <section class="info-cards-band">
+      <div class="container">
+        <ul class="info-cards">
+          {page.highlights.map((h) => (
+            <li class="info-card">
+              <span class="info-card__icon"><Icon name={h.icon} size={24} /></span>
+              <div>
+                <span class="info-card__label">{h.label}</span>
+                {h.live === 'clock' && <strong class="info-card__value" dir="ltr" data-rak-clock data-offset={airport.utcOffsetHours}>{h.value}</strong>}
+                {h.live === 'weather' && <strong class="info-card__value" dir="auto" data-rak-weather data-labels={JSON.stringify(weatherLabels)}>{h.value}</strong>}
+                {!h.live && <strong class="info-card__value" dir="auto">{h.value}</strong>}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )}
+
   {page.facts && page.facts.length > 0 && (
     <section class="facts-band">
       <div class="container">
@@ -94,6 +119,47 @@ if (page.faqs?.length) {
     </section>
   )}
 
+  {page.steps && (
+    <section class="section-block page-steps">
+      <div class="container">
+        <header class="home-services__head">
+          <h2>{page.steps.heading}</h2>
+          {page.steps.intro && <p>{page.steps.intro}</p>}
+        </header>
+        <ol class="steps-grid">
+          {page.steps.items.map((st, i) => (
+            <li class="step-card">
+              <span class="step-card__icon"><Icon name={st.icon} size={24} /><span class="step-card__num" dir="ltr">{i + 1}</span></span>
+              <h3>{st.title}</h3>
+              <p>{st.text}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  )}
+
+  {page.services && (
+    <section class="section-block section-block--alt home-services">
+      <div class="container">
+        <header class="home-services__head">
+          <h2>{page.services.heading}</h2>
+          <p>{page.services.intro}</p>
+        </header>
+        <div class="service-grid">
+          {page.services.items.map((sv) => (
+            <a class="service-card" href={pathFor(sv.key, locale)}>
+              <span class="service-card__icon"><Icon name={sv.icon} size={26} /></span>
+              <h3>{sv.title}</h3>
+              <p>{sv.text}</p>
+              <span class="service-card__cta">{sv.cta} <span aria-hidden="true">{locale === 'ar' ? '←' : '→'}</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
   <section class="section-block">
     <div class="container">
       <article class="prose" set:html={page.body} />
@@ -103,7 +169,7 @@ if (page.faqs?.length) {
   {page.faqs && page.faqs.length > 0 && (
     <section class="section-block section-block--alt">
       <div class="container container--narrow">
-        <h2 class="section-block__title">{t('common.faq')}</h2>
+        <h2 class="section-block__title">{page.faqHeading ?? t('common.faq')}</h2>
         <div class="faq-list">
           {page.faqs.map((f) => (
             <details class="faq-item">
@@ -126,5 +192,48 @@ if (page.faqs?.length) {
         </div>
       </div>
     </section>
+  )}
+  {page.highlights?.some((h) => h.live) && (
+    <script is:inline>
+      (function () {
+        // Heure locale de Marrakech : UTC + décalage fixé dans src/data/airport.ts.
+        var el = document.querySelector('[data-rak-clock]');
+        if (el) {
+          var offset = parseFloat(el.dataset.offset || '0') * 3600000;
+          var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+          var tick = function () {
+            var d = new Date(Date.now() + offset);
+            el.textContent = pad(d.getUTCHours()) + ':' + pad(d.getUTCMinutes());
+          };
+          tick(); setInterval(tick, 15000);
+        }
+        // Météo actuelle à l'aéroport (Open-Meteo, sans clé ni cookie) : température + ciel (codes WMO).
+        var w = document.querySelector('[data-rak-weather]');
+        if (w && window.fetch) {
+          var L = JSON.parse(w.dataset.labels || '{}');
+          var sky = function (c, day) {
+            if (c === 0) return day ? L.clear : L.clearNight;
+            if (c <= 2) return L.partly;
+            if (c === 3) return L.cloudy;
+            if (c === 45 || c === 48) return L.fog;
+            if (c >= 95) return L.storm;
+            if (c >= 80) return L.showers;
+            if (c >= 71 && c <= 77) return L.snow;
+            if (c >= 51) return L.rain;
+            return '';
+          };
+          fetch('https://api.open-meteo.com/v1/forecast?latitude=31.607&longitude=-8.036&current=temperature_2m,weather_code,is_day&timezone=Africa%2FCasablanca')
+            .then(function (r) { return r.ok ? r.json() : null; })
+            .then(function (d) {
+              var c = d && d.current;
+              if (c && typeof c.temperature_2m === 'number') {
+                var label = sky(c.weather_code, c.is_day === 1);
+                w.textContent = Math.round(c.temperature_2m) + ' °C' + (label ? ' · ' + label : '');
+              }
+            })
+            .catch(function () {});
+        }
+      })();
+    </script>
   )}
 </BaseLayout>

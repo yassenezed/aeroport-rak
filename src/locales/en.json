@@ -66,5 +66,16 @@
     "learnMore": "Learn more",
     "verifiedTitle": "Verified content",
     "verifiedText": "Guides based on real experience."
+  },
+  "weatherCodes": {
+    "clear": "Sunny",
+    "clearNight": "Clear",
+    "partly": "Partly cloudy",
+    "cloudy": "Overcast",
+    "fog": "Fog",
+    "rain": "Rain",
+    "snow": "Snow",
+    "showers": "Showers",
+    "storm": "Thunderstorm"
   }
 }

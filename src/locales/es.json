@@ -66,5 +66,16 @@
     "learnMore": "Más información",
     "verifiedTitle": "Contenido verificado",
     "verifiedText": "Guías basadas en experiencias reales."
+  },
+  "weatherCodes": {
+    "clear": "Soleado",
+    "clearNight": "Despejado",
+    "partly": "Poco nuboso",
+    "cloudy": "Cubierto",
+    "fog": "Niebla",
+    "rain": "Lluvia",
+    "snow": "Nieve",
+    "showers": "Chubascos",
+    "storm": "Tormenta"
   }
 }

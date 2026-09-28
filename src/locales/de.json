@@ -66,5 +66,16 @@
     "learnMore": "Mehr erfahren",
     "verifiedTitle": "Geprüfte Inhalte",
     "verifiedText": "Ratgeber auf Basis echter Erfahrungen."
+  },
+  "weatherCodes": {
+    "clear": "Sonnig",
+    "clearNight": "Klar",
+    "partly": "Leicht bewölkt",
+    "cloudy": "Bedeckt",
+    "fog": "Nebel",
+    "rain": "Regen",
+    "snow": "Schnee",
+    "showers": "Schauer",
+    "storm": "Gewitter"
   }
 }

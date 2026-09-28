@@ -66,5 +66,16 @@
     "learnMore": "Meer informatie",
     "verifiedTitle": "Geverifieerde inhoud",
     "verifiedText": "Gidsen gebaseerd op echte ervaringen."
+  },
+  "weatherCodes": {
+    "clear": "Zonnig",
+    "clearNight": "Helder",
+    "partly": "Licht bewolkt",
+    "cloudy": "Bewolkt",
+    "fog": "Mist",
+    "rain": "Regen",
+    "snow": "Sneeuw",
+    "showers": "Buien",
+    "storm": "Onweer"
   }
 }

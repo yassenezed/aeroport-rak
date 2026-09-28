@@ -919,3 +919,22 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
 .prose-figure { margin: 1.5rem 0 1.75rem; }
 .prose-figure img { display: block; width: 100%; height: auto; border-radius: var(--r-xl); background: var(--paper-2); }
 .prose-figure figcaption { margin-top: .5rem; font-size: .875rem; color: var(--ink-3); }
+
+/* ---------- Pages : tuiles de chiffres, étapes illustrées ---------- */
+.steps-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.step-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-xl); padding: 24px 20px; box-shadow: var(--shadow-sm); }
+.step-card__icon { position: relative; display: grid; place-items: center; width: 52px; height: 52px; border-radius: var(--r-lg); background: var(--blue-soft); color: var(--blue); margin-bottom: 16px; }
+.step-card__num { position: absolute; top: -8px; inset-inline-end: -8px; display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--saffron); color: var(--ink); font-size: .8rem; font-weight: 700; }
+.step-card h3 { font-size: 1.1rem; margin: 0 0 8px; }
+.step-card p { margin: 0; color: var(--ink-2); font-size: .95rem; line-height: 1.55; }
+@media (max-width: 960px) { .steps-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .steps-grid { grid-template-columns: 1fr; } }
+
+/* ---------- Cartes d'infos en direct (heure, météo, terminal) ---------- */
+.info-cards-band { position: relative; z-index: 1; margin-top: -32px; padding-bottom: 8px; }
+.info-cards { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.info-card { display: flex; align-items: center; gap: 20px; background: var(--surface); border: 1px solid var(--line-2); border-radius: var(--r-xl); padding: 28px 24px; box-shadow: var(--shadow-md); }
+.info-card__icon { flex: none; display: grid; place-items: center; width: 52px; height: 52px; border-radius: var(--r-lg); background: var(--blue-dark); color: #fff; }
+.info-card__label { display: block; color: var(--ink-3); font-size: .95rem; margin-bottom: 4px; }
+.info-card__value { display: block; color: var(--ink); font-size: 1.3rem; font-weight: 700; line-height: 1.25; }
+@media (max-width: 860px) { .info-cards { grid-template-columns: 1fr; gap: 12px; } .info-card { padding: 18px 20px; } .info-cards-band { margin-top: -24px; } }

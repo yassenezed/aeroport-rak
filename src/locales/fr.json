@@ -66,5 +66,16 @@
     "learnMore": "En savoir plus",
     "verifiedTitle": "Contenu vérifié",
     "verifiedText": "Guides basés sur des expériences réelles."
+  },
+  "weatherCodes": {
+    "clear": "Ensoleillé",
+    "clearNight": "Dégagé",
+    "partly": "Peu nuageux",
+    "cloudy": "Couvert",
+    "fog": "Brouillard",
+    "rain": "Pluie",
+    "snow": "Neige",
+    "showers": "Averses",
+    "storm": "Orage"
   }
 }

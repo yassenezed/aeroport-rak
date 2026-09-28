@@ -66,5 +66,16 @@
     "learnMore": "اعرف المزيد",
     "verifiedTitle": "محتوى موثّق",
     "verifiedText": "أدلة مبنية على تجارب حقيقية."
+  },
+  "weatherCodes": {
+    "clear": "مشمس",
+    "clearNight": "صافٍ",
+    "partly": "غائم جزئيًا",
+    "cloudy": "غائم",
+    "fog": "ضباب",
+    "rain": "أمطار",
+    "snow": "ثلوج",
+    "showers": "زخات",
+    "storm": "عاصفة رعدية"
   }
 }
