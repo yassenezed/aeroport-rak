@@ -2,10 +2,11 @@ import type { LocalizedPage } from '../types';
 
 export default {
   title: "Marrakech Menara Airport (RAK): flights, transfers, info",
+  faqHeading: "Marrakech Menara Airport: frequently asked questions",
   description: "Marrakech Menara Airport: live arrivals and departures, taxi and transfer to the medina, bus 19, parking, car hire, airport services and nearby hotels.",
   eyebrow: "Independent guide · updated 2026",
-  h1: "Marrakech Airport",
-  h1Accent: "Menara · Morocco",
+  h1: "Marrakech Menara",
+  h1Accent: "Airport",
   lede: "The complete guide to Marrakech Menara Airport (RAK): live arrivals and departures, checked taxi and transfer fares, bus 19, parking, car hire and hotels. Everything worth knowing before you land in Marrakech.",
   services: {
     heading: "Marrakech Menara Airport services",
@@ -30,8 +31,10 @@ export default {
   ],
   body: `
 <h2>Marrakech Menara Airport at a glance</h2>
-<p><strong>Marrakech Menara Airport</strong> (IATA code <strong>RAK</strong>, ICAO code GMMX) is Morocco's second airport after Casablanca Mohammed V. It handled more than <strong>9.3 million passengers in 2024</strong>, driven by a dense network of direct flights to Europe. Run by the Office National Des Aéroports (ONDA), it is the gateway to Marrakech, the High Atlas, the Ourika valley, the Agafay desert and the Essaouira coast.</p>
+<p><strong>Marrakech Menara Airport</strong> (IATA code <strong>RAK</strong>, ICAO code GMMX) is Morocco's second airport after Casablanca Mohammed V. It handled more than <strong>9.3 million passengers in 2024</strong>, driven by a dense network of direct flights to Europe. Run by the <a href="https://www.onda.ma/" target="_blank" rel="noopener">Office National des Aéroports (ONDA)</a>, it is the gateway to Marrakech, the High Atlas, the Ourika valley, the Agafay desert and the Essaouira coast.</p>
 <p>What sets it apart: Marrakech airport sits <strong>just 6 km from the city centre</strong> and Jemaa el-Fna square. The drive takes 15 to 30 minutes depending on the time of day. The real challenge is not the distance but the last few metres: no car enters the medina, so you need to know which gate to be dropped at.</p>
+
+<p>To avoid mixing up the RAK and GMMX codes, read our article on the <a href="/en/blog/marrakech-airport-code/">Marrakech airport code</a>. For the history and technical data of the airport, see the <a href="https://en.wikipedia.org/wiki/Marrakesh_Menara_Airport" target="_blank" rel="noopener">Wikipedia page on Marrakesh Menara Airport</a>.</p>
 
 <h2>Where is Marrakech airport?</h2>
 <p>The airport lies south-west of the city, in the Menara district, next to the famous gardens that give it its name. It sits at 471 metres above sea level with a single 3,100-metre runway. From the terminal you reach Gueliz and Hivernage in minutes, and the medina gates — Bab Jdid, Bab Laksour, Bab Doukkala or Bab Agnaou — in about a quarter of an hour.</p>
@@ -50,14 +53,14 @@ export default {
 <tbody>
 <tr class="row-highlight"><td><strong>Private transfer</strong></td><td class="num">from €27 / vehicle</td><td class="num">15–30 min</td><td>Medina riads, night arrivals, families</td></tr>
 <tr><td><strong>Official taxi</strong></td><td class="num">MAD 100–150 by day</td><td class="num">15–30 min</td><td>Hotels in Gueliz or Hivernage, by day</td></tr>
-<tr><td><strong>Bus 19 (ALSA)</strong></td><td class="num">MAD 30 / person</td><td class="num">≈ 20 min</td><td>Tight budget, light luggage, before 11.30 pm</td></tr>
+<tr><td><strong><a href="/en/blog/bus-19-alsa-marrakech/">Bus 19 (ALSA)</a></strong></td><td class="num">MAD 30 / person</td><td class="num">≈ 20 min</td><td>Tight budget, light luggage, before 11.30 pm</td></tr>
 <tr><td><strong>Hire car</strong></td><td class="num">from €25 / day</td><td class="num">15–30 min</td><td>Trips to the Atlas or Essaouira</td></tr>
 </tbody>
 </table>
 </div>
-<p>Marrakech airport taxis charge fares posted on a board at the rank: MAD 100 to 150 by day to the medina, Gueliz and Hivernage, MAD 150 to 240 at night. A petit taxi takes only three passengers. From four people, or after 9 pm, a <a href="/en/book-transfer/">booked transfer</a> is often cheaper and simpler. Full details on our <a href="/en/transfers/">airport transfers</a> page.</p>
+<p>Marrakech airport taxis charge fares posted on a board at the rank: MAD 100 to 150 by day to the medina, Gueliz and Hivernage, MAD 150 to 240 at night. A petit taxi takes only three passengers. From four people, or after 9 pm, a <a href="/en/book-transfer/">booked transfer</a> is often cheaper and simpler. Full details on our <a href="/en/transfers/">airport transfers</a> page, and a step-by-step walkthrough in our guide <a href="/en/blog/rak-to-city-center/">from RAK airport to the city centre</a>.</p>
 
-<h2>Services at Marrakech Menara Airport</h2>
+<h2>Facilities available at Marrakech Menara Airport</h2>
 <ul>
 <li><strong>ATMs and bureaux de change</strong> in the arrivals hall: dirhams cannot be bought outside Morocco, so withdraw before you leave.</li>
 <li><strong>SIM cards</strong> from Maroc Telecom, Orange and inwi in the arrivals hall, or an <a href="/en/morocco-esim/">eSIM</a> to activate before you fly.</li>

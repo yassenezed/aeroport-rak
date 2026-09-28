@@ -1,14 +1,15 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Luchthaven Marrakech (RAK): vluchten, transfers en info",
-  description: "Luchthaven Marrakech Menara: live aankomsten en vertrek, taxi en transfer naar de medina, bus 19, parkeren, autohuur, voorzieningen en hotels in de buurt.",
+  title: "Luchthaven Marrakech-Menara (RAK): vluchten en transfers",
+  faqHeading: "Veelgestelde vragen over luchthaven Marrakech-Menara",
+  description: "Luchthaven Marrakech-Menara: live aankomsten en vertrek, taxi en transfer naar de medina, bus 19, parkeren, autohuur, voorzieningen en hotels in de buurt.",
   eyebrow: "Onafhankelijke gids · bijgewerkt 2026",
-  h1: "Luchthaven Marrakech",
-  h1Accent: "Menara · Marokko",
-  lede: "De complete gids voor luchthaven Marrakech Menara (RAK): aankomsten en vertrek live, gecontroleerde prijzen voor taxi's en transfers, bus 19, parkeren, autohuur en hotels. Alles wat u moet weten voordat u in Marrakech landt.",
+  h1: "Luchthaven",
+  h1Accent: "Marrakech-Menara",
+  lede: "De complete gids voor luchthaven Marrakech-Menara (RAK): aankomsten en vertrek live, gecontroleerde prijzen voor taxi's en transfers, bus 19, parkeren, autohuur en hotels. Alles wat u moet weten voordat u in Marrakech landt.",
   services: {
-    heading: "Voorzieningen op luchthaven Marrakech Menara",
+    heading: "Voorzieningen op luchthaven Marrakech-Menara",
     intro: "Met één klik alles wat u nodig hebt op luchthaven Marrakech: vluchten, transfers, parkeren, autohuur en hotels.",
     items: [
       { icon: "plane-landing", key: "arrivals", title: "Aankomsten", text: "De vluchten die op luchthaven Marrakech landen, live.", cta: "Aankomsten bekijken" },
@@ -29,15 +30,17 @@ export default {
     { label: "Passagiers 2024", value: "9,3", sub: "miljoen" },
   ],
   body: `
-<h2>Luchthaven Marrakech Menara in het kort</h2>
-<p><strong>Luchthaven Marrakech Menara</strong> (IATA-code <strong>RAK</strong>, ICAO-code GMMX) is na Casablanca Mohammed V de tweede luchthaven van Marokko. In 2024 verwerkte ze ruim <strong>9,3 miljoen passagiers</strong>, dankzij een dicht netwerk van rechtstreekse vluchten naar Europa. De luchthaven wordt beheerd door het Office National Des Aéroports (ONDA) en is de toegangspoort tot Marrakech, de Hoge Atlas, de Ourika-vallei, de woestijn van Agafay en de kust van Essaouira.</p>
+<h2>Luchthaven Marrakech-Menara in het kort</h2>
+<p><strong>Luchthaven Marrakech-Menara</strong> (IATA-code <strong>RAK</strong>, ICAO-code GMMX) is na Casablanca Mohammed V de tweede luchthaven van Marokko. In 2024 verwerkte ze ruim <strong>9,3 miljoen passagiers</strong>, dankzij een dicht netwerk van rechtstreekse vluchten naar Europa. De luchthaven wordt beheerd door het <a href="https://www.onda.ma/" target="_blank" rel="noopener">Office National des Aéroports (ONDA)</a> en is de toegangspoort tot Marrakech, de Hoge Atlas, de Ourika-vallei, de woestijn van Agafay en de kust van Essaouira.</p>
 <p>Het bijzondere: luchthaven Marrakech ligt <strong>slechts 6 km van het centrum</strong> en het plein Djemaa el-Fna. De rit duurt 15 tot 30 minuten, afhankelijk van het tijdstip. De echte uitdaging is niet de afstand, maar de laatste meters: geen auto rijdt de medina in, dus u moet weten bij welke poort u uitstapt.</p>
+
+<p>Om de codes RAK en GMMX niet te verwarren, lees ons artikel over de <a href="/nl/blog/marrakech-airport-code/">code van luchthaven Marrakech</a>. Voor de geschiedenis en technische gegevens van de luchthaven, zie de <a href="https://nl.wikipedia.org/wiki/Internationale_luchthaven_Menara" target="_blank" rel="noopener">Wikipedia-pagina over luchthaven Menara</a>.</p>
 
 <h2>Waar ligt luchthaven Marrakech?</h2>
 <p>De luchthaven ligt ten zuidwesten van de stad, in de wijk Menara, naast de beroemde tuinen waaraan ze haar naam dankt. Ze ligt op 471 meter hoogte en heeft één start- en landingsbaan van 3.100 meter. Vanaf de terminal bent u in enkele minuten in Guéliz en Hivernage, en in een kwartier bij de poorten van de medina: Bab Jdid, Bab Laksour, Bab Doukkala of Bab Agnaou.</p>
 
 <h2>De terminals van luchthaven Marrakech</h2>
-<p>Luchthaven Marrakech Menara werkt met <strong>twee aangrenzende terminals</strong>, T1 en T2, te voet verbonden. T1, herkenbaar aan de grote witte geometrische gevel, verwerkt het merendeel van de internationale vluchten; T2 neemt de rest van het verkeer en een deel van de binnenlandse vluchten voor zijn rekening. De verdeling wisselt per maatschappij en seizoen: controleer altijd uw instapkaart. Bekijk onze <a href="/nl/airport-guide/">complete luchthavengids</a> voor plattegrond, formaliteiten en wachttijden.</p>
+<p>Luchthaven Marrakech-Menara werkt met <strong>twee aangrenzende terminals</strong>, T1 en T2, te voet verbonden. T1, herkenbaar aan de grote witte geometrische gevel, verwerkt het merendeel van de internationale vluchten; T2 neemt de rest van het verkeer en een deel van de binnenlandse vluchten voor zijn rekening. De verdeling wisselt per maatschappij en seizoen: controleer altijd uw instapkaart. Bekijk onze <a href="/nl/airport-guide/">complete luchthavengids</a> voor plattegrond, formaliteiten en wachttijden.</p>
 
 <h2>Aankomsten en vertrek op luchthaven Marrakech</h2>
 <p>De vluchten volgt u live op onze pagina's <a href="/nl/arrivals/">aankomsten</a> en <a href="/nl/departures/">vertrek</a>. Goed om te weten: luchthaven Marrakech concentreert veel aankomsten 's avonds, tussen 20.00 uur en middernacht, wanneer Europese prijsvechters kort na elkaar landen. Bij aankomst rekent u <strong>30 tot 60 minuten</strong> van vliegtuig tot uitgang; bij vertrek bent u er <strong>2 uur vooraf</strong> voor een vlucht naar Europa, 3 uur in het hoogseizoen, want de paspoortcontrole is het grootste knelpunt.</p>
@@ -50,14 +53,14 @@ export default {
 <tbody>
 <tr class="row-highlight"><td><strong>Privétransfer</strong></td><td class="num">vanaf € 27 / voertuig</td><td class="num">15–30 min</td><td>Riad in de medina, nachtelijke aankomst, gezinnen</td></tr>
 <tr><td><strong>Officiële taxi</strong></td><td class="num">100–150 MAD overdag</td><td class="num">15–30 min</td><td>Hotel in Guéliz of Hivernage, overdag</td></tr>
-<tr><td><strong>Bus 19 (ALSA)</strong></td><td class="num">30 MAD / persoon</td><td class="num">≈ 20 min</td><td>Klein budget, lichte bagage, vóór 23.30 uur</td></tr>
+<tr><td><strong><a href="/nl/blog/bus-19-alsa-marrakech/">Bus 19 (ALSA)</a></strong></td><td class="num">30 MAD / persoon</td><td class="num">≈ 20 min</td><td>Klein budget, lichte bagage, vóór 23.30 uur</td></tr>
 <tr><td><strong>Huurauto</strong></td><td class="num">vanaf € 25 / dag</td><td class="num">15–30 min</td><td>Uitstapjes naar de Atlas of Essaouira</td></tr>
 </tbody>
 </table>
 </div>
-<p>De taxi's op luchthaven Marrakech rekenen tarieven die op een bord bij de standplaats staan: 100 tot 150 MAD overdag naar de medina, Guéliz en Hivernage, 150 tot 240 MAD 's nachts. Een petit taxi neemt maar drie passagiers mee. Vanaf vier personen, of na 21.00 uur, is een <a href="/nl/book-transfer/">geboekte transfer</a> vaak goedkoper en eenvoudiger. Alle details op onze pagina <a href="/nl/transfers/">transfers vanaf de luchthaven</a>.</p>
+<p>De taxi's op luchthaven Marrakech rekenen tarieven die op een bord bij de standplaats staan: 100 tot 150 MAD overdag naar de medina, Guéliz en Hivernage, 150 tot 240 MAD 's nachts. Een petit taxi neemt maar drie passagiers mee. Vanaf vier personen, of na 21.00 uur, is een <a href="/nl/book-transfer/">geboekte transfer</a> vaak goedkoper en eenvoudiger. Alle details op onze pagina <a href="/nl/transfers/">transfers vanaf de luchthaven</a>, en het stappenplan in onze gids <a href="/nl/blog/rak-to-city-center/">van luchthaven RAK naar het centrum</a>.</p>
 
-<h2>Voorzieningen op luchthaven Marrakech Menara</h2>
+<h2>Beschikbare voorzieningen op luchthaven Marrakech-Menara</h2>
 <ul>
 <li><strong>Geldautomaten en wisselkantoren</strong> in de aankomsthal: dirham is buiten Marokko niet te koop, neem op voordat u naar buiten gaat.</li>
 <li><strong>Simkaarten</strong> van Maroc Telecom, Orange en inwi in de aankomsthal, of een <a href="/nl/morocco-esim/">eSIM</a> die u vóór vertrek activeert.</li>
@@ -82,11 +85,11 @@ export default {
 </div>
 `,
   faqs: [
-    { q: "Wat is de code van luchthaven Marrakech?", a: "De IATA-code van luchthaven Marrakech Menara is RAK, de code op uw ticket. De ICAO-code is GMMX. Niet verwarren met CMN, de luchthaven van Casablanca, op 240 km." },
-    { q: "Hoe ver ligt luchthaven Marrakech van het centrum?", a: "Luchthaven Marrakech Menara ligt op ongeveer 6 km van het plein Djemaa el-Fna en de medina, dus 15 tot 30 minuten rijden afhankelijk van het tijdstip. Guéliz en Hivernage liggen op 10 tot 20 minuten." },
+    { q: "Wat is de code van luchthaven Marrakech?", a: "De IATA-code van luchthaven Marrakech-Menara is RAK, de code op uw ticket. De ICAO-code is GMMX. Niet verwarren met CMN, de luchthaven van Casablanca, op 240 km." },
+    { q: "Hoe ver ligt luchthaven Marrakech van het centrum?", a: "Luchthaven Marrakech-Menara ligt op ongeveer 6 km van het plein Djemaa el-Fna en de medina, dus 15 tot 30 minuten rijden afhankelijk van het tijdstip. Guéliz en Hivernage liggen op 10 tot 20 minuten." },
     { q: "Wat kost een taxi van luchthaven Marrakech naar de medina?", a: "De tarieven op het bord bij de standplaats zijn ongeveer 100 tot 150 MAD overdag en 150 tot 240 MAD 's nachts, voor de hele auto. Een petit taxi neemt hooguit drie passagiers mee; daarboven plant u een grand taxi of een privétransfer." },
     { q: "Rijdt er een bus tussen luchthaven Marrakech en het centrum?", a: "Ja, bus 19 van ALSA verbindt de luchthaven met Djemaa el-Fna voor 30 MAD enkele reis, met een vertrek ongeveer elk halfuur tussen 6.00 en 23.30 uur. De rit duurt zo'n twintig minuten." },
-    { q: "Hoeveel terminals heeft luchthaven Marrakech Menara?", a: "Twee aangrenzende terminals, T1 en T2, te voet verbonden. T1 verwerkt de meeste internationale vluchten. Controleer de terminal op uw instapkaart." },
+    { q: "Hoeveel terminals heeft luchthaven Marrakech-Menara?", a: "Twee aangrenzende terminals, T1 en T2, te voet verbonden. T1 verwerkt de meeste internationale vluchten. Controleer de terminal op uw instapkaart." },
     { q: "Hoe vroeg moet u op luchthaven Marrakech zijn voor een vlucht?", a: "Twee uur vóór een vlucht naar Europa, drie uur in het hoogseizoen of met ruimbagage. De paspoortcontrole bij vertrek is de langste wachtrij, vooral tussen 6.00 en 9.00 uur." },
     { q: "Is er wifi op luchthaven Marrakech?", a: "Ja, in de terminals is gratis wifi. In de spits is het wisselvallig: om een chauffeur betrouwbaar te bereiken is een eSIM of lokale simkaart beter." },
     { q: "Kun je geld opnemen op luchthaven Marrakech?", a: "Ja, er zijn geldautomaten en wisselkantoren in de aankomsthal. Neem op voordat u naar buiten gaat: taxi's accepteren geen kaart en dirham is buiten Marokko niet te koop." },

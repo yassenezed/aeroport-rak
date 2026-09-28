@@ -14,6 +14,8 @@ export interface LocalizedPage {
   /** Corps de page en HTML : <h2>, <p>, <table class="data">, <div class="callout">… */
   body: string;
   faqs?: Faq[];
+  /** Titre H2 de la FAQ ; par défaut le libellé générique « Questions fréquentes ». */
+  faqHeading?: string;
   /** Widget affiché juste sous le hero. */
   widget?: 'flights-arrivals' | 'flights-departures' | 'flight-search' | 'transfer';
   /** Bandeau d'appel à l'action en bas de page. */

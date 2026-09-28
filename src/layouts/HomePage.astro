@@ -18,13 +18,19 @@ const schema: object[] = [
   {
     '@context': 'https://schema.org',
     '@type': 'Airport',
-    name: 'Aéroport de Marrakech Ménara',
+    name: 'Aéroport de Marrakech-Ménara',
     alternateName: ['Marrakech Menara Airport', 'RAK'],
     iataCode: 'RAK',
     icaoCode: 'GMMX',
     address: { '@type': 'PostalAddress', addressLocality: 'Marrakech', addressCountry: 'MA' },
     geo: { '@type': 'GeoCoordinates', latitude: 31.6069, longitude: -8.0363 },
-    url: site.url,
+    // Entité officielle : pages de référence, pas l'URL de ce guide non officiel.
+    sameAs: [
+      'https://www.onda.ma/',
+      'https://en.wikipedia.org/wiki/Marrakesh_Menara_Airport',
+      'https://fr.wikipedia.org/wiki/A%C3%A9roport_de_Marrakech-M%C3%A9nara',
+      'https://www.wikidata.org/wiki/Q429304',
+    ],
   },
 ];
 if (page.faqs?.length) {
@@ -129,7 +135,7 @@ if (page.faqs?.length) {
   {page.faqs && page.faqs.length > 0 && (
     <section class="section-block section-block--alt">
       <div class="container container--narrow">
-        <h2 class="section-block__title">{t('common.faq')}</h2>
+        <h2 class="section-block__title">{page.faqHeading ?? t('common.faq')}</h2>
         <div class="faq-list">
           {page.faqs.map((f) => (
             <details class="faq-item">
