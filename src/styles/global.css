@@ -553,6 +553,9 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
    En-tête et pied de page
    ========================================================================== */
 
+/* ── Bloc fixé en haut : bandeau de mise en garde + en-tête ── */
+.site-top { position: sticky; top: 0; z-index: 100; }
+
 /* ── Bandeau de mise en garde, collé en haut ── */
 .disclaimer-bar {
   background: #0e1022;
@@ -566,9 +569,7 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
    Fond indigo : il prolonge le bandeau de mise en garde, tient le logo dont
    le lettrage est blanc, et distingue nettement la marque du corps de page. */
 .header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  position: relative;
   background: var(--ink);
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 1px 0 rgba(21, 23, 43, 0.06);
@@ -577,8 +578,8 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
-  min-height: 62px;
+  gap: 1.25rem;
+  min-height: 64px;
 }
 .header__logo { display: flex; align-items: center; flex: none; text-decoration: none; }
 .header__logo img { height: 34px; width: auto; }
@@ -607,11 +608,11 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
 .nav__list {
   display: flex;
   align-items: center;
-  gap: 0.15rem;
+  gap: 0.1rem;
   list-style: none;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: flex-end;
 }
 .nav__list > li { margin: 0; }
@@ -620,8 +621,8 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-  padding: 0.5rem 0.62rem;
-  font-size: 0.87rem;
+  padding: 0.5rem 0.55rem;
+  font-size: 0.86rem;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.82);
   text-decoration: none;
@@ -636,15 +637,17 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
 .nav__link:hover,
 .nav__link[aria-expanded='true'] { color: #fff; border-bottom-color: var(--saffron); }
 .nav__link[aria-current='page'] { color: #fff; border-bottom-color: var(--saffron); }
-.nav__caret { width: 7px; height: 7px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translate(-2px, -2px); transition: transform var(--transition); flex: none; }
-.nav__link[aria-expanded='true'] .nav__caret { transform: rotate(225deg) translate(-2px, -2px); }
+.nav__caret { width: 10px; height: 10px; flex: none; opacity: 0.8; transition: transform var(--transition); }
+.nav__item.is-hover > .nav__link .nav__caret,
+.nav__link[aria-expanded='true'] .nav__caret { transform: rotate(180deg); }
 
 /* ── Sous-menus ── */
 .nav__submenu {
   position: absolute;
-  top: calc(100% + 6px);
+  top: 100%;
   left: 0;
   min-width: 232px;
+  margin-top: 6px;
   background: var(--surface);
   border: 1px solid var(--line);
   border-top: 3px solid var(--blue);
@@ -656,9 +659,13 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
   display: none;
   z-index: 10;
 }
+/* Pont invisible entre le lien et le menu : la souris ne « tombe » pas dans l'espace. */
+.nav__submenu::before { content: ''; position: absolute; left: 0; right: 0; top: -12px; height: 12px; }
 .nav__item--dropdown:hover > .nav__submenu,
+.nav__item.is-hover > .nav__submenu,
 .nav__submenu:hover,
 .nav__link[aria-expanded='true'] + .nav__submenu { display: block; }
+.nav__item.is-hover > .nav__link { color: #fff; border-bottom-color: var(--saffron); }
 .nav__submenu li { margin: 0; }
 .nav__submenu a {
   display: block;
@@ -673,6 +680,7 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
 .nav__submenu a:hover { background: var(--blue-soft); color: var(--blue-dark); }
 
 /* ── Sélecteur de langue ── */
+.nav__item--lang { margin-inline-start: 0.6rem; }
 .nav__item--lang .nav__submenu { left: auto; right: 0; min-width: 168px; }
 .nav__link--lang { border: 1px solid rgba(255, 255, 255, 0.28); border-radius: var(--r-sm); padding-inline: 0.7rem; }
 .nav__lang-code { text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.06em; font-weight: 700; }
@@ -715,7 +723,7 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
 [dir='rtl'] table.data th, [dir='rtl'] table.data td { text-align: right; }
 
 /* ── Navigation repliée sur mobile ── */
-@media (max-width: 1080px) {
+@media (max-width: 1180px) {
   .header__toggle { display: flex; }
   .nav {
     position: absolute;
@@ -749,8 +757,13 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
     padding: 0 0 0.6rem 0.9rem;
     min-width: 0;
   }
-  .nav__item--dropdown:hover > .nav__submenu { display: none; }
+  .nav__item--dropdown:hover > .nav__submenu,
+  .nav__item.is-hover > .nav__submenu { display: none; }
+  .nav__item.is-open > .nav__submenu,
   .nav__link[aria-expanded='true'] + .nav__submenu { display: block; }
+  .nav__submenu { margin-top: 0; }
+  .nav__submenu::before { display: none; }
+  .nav__item--lang { margin-inline-start: 0; }
   .nav__item--lang .nav__submenu { right: auto; }
   .nav__link--lang { border: none; padding-inline: 0; }
 }
