@@ -3,9 +3,9 @@ import { site } from '../../data/site';
 
 export default {
   fr: {
-    title: "Affiliation — AirportRAK, guide aéroport Marrakech-Ménara",
-    description: "Comment AirportRAK, guide de l'aéroport de Marrakech-Ménara, se finance : liens d'affiliation et commissions, sans effet sur vos prix.",
-    eyebrow: 'AirportRAK',
+    title: "Affiliation — AeroportRAK, guide aéroport Marrakech-Ménara",
+    description: "Comment AeroportRAK, guide de l'aéroport de Marrakech-Ménara, se finance : liens d'affiliation et commissions, sans effet sur vos prix.",
+    eyebrow: 'AeroportRAK',
     h1: 'Divulgation d\'affiliation',
     lede: "Ce site est gratuit et financé par des commissions d'affiliation. Voici exactement comment cela fonctionne, ce que cela change pour vous — rien sur le prix — et ce que cela ne change pas dans ce que nous écrivons.",
     body: `

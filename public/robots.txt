@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://airportrak.com/sitemap.xml
+Sitemap: https://aeroportrak.com/sitemap.xml

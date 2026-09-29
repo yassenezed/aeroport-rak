@@ -3,13 +3,13 @@ import { site } from '../../data/site';
 
 export default {
   title: "Gebruiksvoorwaarden — gids luchthaven Marrakech-Menara",
-  description: "Gebruiksvoorwaarden van AirportRAK, onafhankelijke gids voor luchthaven Marrakech-Menara: aansprakelijkheid, rechten en links.",
-  eyebrow: "AirportRAK",
+  description: "Gebruiksvoorwaarden van AeroportRAK, onafhankelijke gids voor luchthaven Marrakech-Menara: aansprakelijkheid, rechten en links.",
+  eyebrow: "AeroportRAK",
   h1: "Gebruiksvoorwaarden",
-  lede: "Wat u van deze site kunt verwachten, en wat niet. Door AirportRAK te gebruiken, aanvaardt u de onderstaande voorwaarden.",
+  lede: "Wat u van deze site kunt verwachten, en wat niet. Door AeroportRAK te gebruiken, aanvaardt u de onderstaande voorwaarden.",
   body: `
 <h2>Aard van de site</h2>
-<p>AirportRAK is een onafhankelijke redactionele publicatie over luchthaven Marrakech Menara. De site wordt <strong>niet geëxploiteerd, gemandateerd of goedgekeurd</strong> door het Office National Des Aéroports, door luchthaven Marrakech Menara of door enige luchtvaartmaatschappij. Ze verkoopt geen vervoersdiensten en is geen reisbureau.</p>
+<p>AeroportRAK is een onafhankelijke redactionele publicatie over luchthaven Marrakech Menara. De site wordt <strong>niet geëxploiteerd, gemandateerd of goedgekeurd</strong> door het Office National Des Aéroports, door luchthaven Marrakech Menara of door enige luchtvaartmaatschappij. Ze verkoopt geen vervoersdiensten en is geen reisbureau.</p>
 
 <h2>Juistheid van de informatie</h2>
 <p>We controleren de gepubliceerde informatie en vermelden de datum van tariefcontroles. Tarieven, dienstregelingen, frequenties en procedures veranderen toch zonder aankondiging: <strong>controleer altijd bij de betreffende aanbieder</strong> voordat u een bindende beslissing neemt, zeker over vluchttijden, inreisformaliteiten of een boeking.</p>

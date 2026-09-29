@@ -3,13 +3,13 @@ import { site } from '../../data/site';
 
 export default {
   title: "Terms of use — Marrakech Menara Airport guide",
-  description: "Terms of use of AirportRAK, the independent Marrakech Menara Airport guide: editorial nature, liability limits and third-party links.",
-  eyebrow: 'AirportRAK',
+  description: "Terms of use of AeroportRAK, the independent Marrakech Menara Airport guide: editorial nature, liability limits and third-party links.",
+  eyebrow: 'AeroportRAK',
   h1: 'Terms of use',
-  lede: "What you can expect from this site, and what you cannot. By using AirportRAK, you accept the terms below.",
+  lede: "What you can expect from this site, and what you cannot. By using AeroportRAK, you accept the terms below.",
   body: `
 <h2>Nature of the site</h2>
-<p>AirportRAK is an independent editorial publication about Marrakech Menara Airport. The site is <strong>not operated, mandated or endorsed</strong> by the Office National Des Aéroports, by Marrakech Menara Airport, or by any airline. It sells no transport service and is not a travel agency.</p>
+<p>AeroportRAK is an independent editorial publication about Marrakech Menara Airport. The site is <strong>not operated, mandated or endorsed</strong> by the Office National Des Aéroports, by Marrakech Menara Airport, or by any airline. It sells no transport service and is not a travel agency.</p>
 
 <h2>Accuracy of information</h2>
 <p>We check what we publish and state the date of fare surveys. Prices, timetables, frequencies and procedures nevertheless change without notice: <strong>always confirm with the operator concerned</strong> before making a binding decision, particularly regarding flight times, entry formalities or a booking.</p>

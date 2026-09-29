@@ -1,9 +1,9 @@
 {
-  "name": "airportrak",
+  "name": "aeroportrak",
   "type": "module",
   "version": "1.0.0",
   "private": true,
-  "description": "AirportRAK.com — guide francophone de l'aéroport Marrakech Ménara (RAK) : transferts, taxis, location de voiture, riads, trajets et voyage.",
+  "description": "AeroportRAK.com — guide francophone de l'aéroport Marrakech Ménara (RAK) : transferts, taxis, location de voiture, riads, trajets et voyage.",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",

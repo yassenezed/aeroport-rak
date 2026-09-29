@@ -2,9 +2,9 @@ import type { LocalizedPage } from '../types';
 import { site } from '../../data/site';
 
 export default {
-  title: "Contacto — AirportRAK, aeropuerto de Marrakech-Menara",
-  description: "Contactar con AirportRAK: corregir una información sobre el aeropuerto de Marrakech-Menara, señalar una tarifa caducada o hacer una consulta profesional.",
-  eyebrow: 'AirportRAK',
+  title: "Contacto — AeroportRAK, aeropuerto de Marrakech-Menara",
+  description: "Contactar con AeroportRAK: corregir una información sobre el aeropuerto de Marrakech-Menara, señalar una tarifa caducada o hacer una consulta profesional.",
+  eyebrow: 'AeroportRAK',
   h1: 'Contactar con nosotros',
   lede: "Una información caducada, una tarifa que ya no corresponde, una precisión que aportar: escríbanos. Leemos todos los mensajes y corregimos las páginas afectadas.",
   body: `
@@ -13,7 +13,7 @@ export default {
 <p>Para señalar un error, indique si es posible <strong>la dirección de la página afectada</strong>, el pasaje en cuestión y lo que observó sobre el terreno, con la fecha. Una foto de un panel de tarifas o de un horario vale más que una explicación larga: es lo que nos permite corregir rápido y con certeza.</p>
 
 <h2>Lo que no podemos hacer</h2>
-<p>AirportRAK es una guía editorial independiente, no un servicio del aeropuerto ni una agencia de viajes. Por tanto no podemos:</p>
+<p>AeroportRAK es una guía editorial independiente, no un servicio del aeropuerto ni una agencia de viajes. Por tanto no podemos:</p>
 <ul>
 <li>modificar, cancelar o localizar una reserva de vuelo, hotel o traslado;</li>
 <li>informar del estado de un equipaje perdido: eso corresponde al mostrador de su aerolínea;</li>

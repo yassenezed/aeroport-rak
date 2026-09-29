@@ -2,9 +2,9 @@ import type { LocalizedPage } from '../types';
 import { site } from '../../data/site';
 
 export default {
-  title: "Afiliación — AirportRAK, aeropuerto de Marrakech-Menara",
-  description: "Cómo se financia AirportRAK, guía del aeropuerto de Marrakech-Menara: enlaces de afiliación y comisiones que no cambian su precio.",
-  eyebrow: 'AirportRAK',
+  title: "Afiliación — AeroportRAK, aeropuerto de Marrakech-Menara",
+  description: "Cómo se financia AeroportRAK, guía del aeropuerto de Marrakech-Menara: enlaces de afiliación y comisiones que no cambian su precio.",
+  eyebrow: 'AeroportRAK',
   h1: 'Divulgación de afiliación',
   lede: "Este sitio es gratuito y se financia con comisiones de afiliación. Así funciona exactamente, esto es lo que cambia para usted —nada en el precio— y esto es lo que no cambia en lo que escribimos.",
   body: `

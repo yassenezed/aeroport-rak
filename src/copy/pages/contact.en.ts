@@ -2,9 +2,9 @@ import type { LocalizedPage } from '../types';
 import { site } from '../../data/site';
 
 export default {
-  title: "Contact — AirportRAK, Marrakech Menara Airport guide",
-  description: "Contact AirportRAK: correct information about Marrakech Menara Airport, report an out-of-date fare, or make a professional enquiry.",
-  eyebrow: 'AirportRAK',
+  title: "Contact — AeroportRAK, Marrakech Menara Airport guide",
+  description: "Contact AeroportRAK: correct information about Marrakech Menara Airport, report an out-of-date fare, or make a professional enquiry.",
+  eyebrow: 'AeroportRAK',
   h1: 'Contact us',
   lede: "Out-of-date information, a fare that no longer matches, a detail to add: write to us. We read every message and correct the pages concerned.",
   body: `
@@ -13,7 +13,7 @@ export default {
 <p>To report an error, please include <strong>the address of the page concerned</strong>, the passage in question and what you observed on site, with the date. A photo of a fare board or a timetable is worth more than a long explanation: it lets us correct quickly and with certainty.</p>
 
 <h2>What we cannot do</h2>
-<p>AirportRAK is an independent editorial guide, not an airport service or a travel agency. We therefore cannot:</p>
+<p>AeroportRAK is an independent editorial guide, not an airport service or a travel agency. We therefore cannot:</p>
 <ul>
 <li>change, cancel or retrieve a flight, hotel or transfer booking;</li>
 <li>tell you the status of a lost bag — that is handled by your airline's desk;</li>

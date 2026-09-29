@@ -2,9 +2,9 @@ import type { LocalizedPage } from '../types';
 import { site } from '../../data/site';
 
 export default {
-  title: "Kontakt — AirportRAK, Flughafen Marrakesch-Menara",
-  description: "AirportRAK kontaktieren: eine Information zum Flughafen Marrakesch-Menara korrigieren, einen veralteten Preis melden oder eine geschäftliche Anfrage stellen.",
-  eyebrow: 'AirportRAK',
+  title: "Kontakt — AeroportRAK, Flughafen Marrakesch-Menara",
+  description: "AeroportRAK kontaktieren: eine Information zum Flughafen Marrakesch-Menara korrigieren, einen veralteten Preis melden oder eine geschäftliche Anfrage stellen.",
+  eyebrow: 'AeroportRAK',
   h1: 'Kontakt',
   lede: "Eine veraltete Information, ein Preis, der nicht mehr stimmt, eine Ergänzung: Schreiben Sie uns. Wir lesen jede Nachricht und korrigieren die betroffenen Seiten.",
   body: `
@@ -13,7 +13,7 @@ export default {
 <p>Nennen Sie bei einer Fehlermeldung möglichst <strong>die Adresse der betroffenen Seite</strong>, die fragliche Stelle und was Sie vor Ort festgestellt haben, mit Datum. Ein Foto einer Preistafel oder eines Fahrplans ist mehr wert als eine lange Erklärung: So können wir schnell und sicher korrigieren.</p>
 
 <h2>Was wir nicht tun können</h2>
-<p>AirportRAK ist ein unabhängiger redaktioneller Guide, kein Flughafenservice und kein Reisebüro. Wir können daher nicht:</p>
+<p>AeroportRAK ist ein unabhängiger redaktioneller Guide, kein Flughafenservice und kein Reisebüro. Wir können daher nicht:</p>
 <ul>
 <li>eine Flug-, Hotel- oder Transferbuchung ändern, stornieren oder auffinden;</li>
 <li>den Status eines verlorenen Gepäckstücks mitteilen – das ist Sache des Schalters Ihrer Airline;</li>

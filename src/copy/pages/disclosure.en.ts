@@ -3,8 +3,8 @@ import { site } from '../../data/site';
 
 export default {
   title: "Affiliate disclosure — Marrakech Menara Airport guide",
-  description: "How AirportRAK, the Marrakech Menara Airport guide, is funded: affiliate links and commissions that change neither your price nor our advice.",
-  eyebrow: 'AirportRAK',
+  description: "How AeroportRAK, the Marrakech Menara Airport guide, is funded: affiliate links and commissions that change neither your price nor our advice.",
+  eyebrow: 'AeroportRAK',
   h1: 'Affiliate disclosure',
   lede: "This site is free and funded by affiliate commissions. Here is exactly how that works, what it means for you — nothing, on price — and what it does not change in what we write.",
   body: `

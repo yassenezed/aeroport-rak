@@ -1,11 +1,11 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "About AirportRAK, the Marrakech Menara Airport guide",
-  description: "Who writes AirportRAK, how information about Marrakech Menara Airport is verified, and how the site is funded.",
-  eyebrow: 'AirportRAK',
-  h1: 'About AirportRAK',
-  lede: "AirportRAK is an independent guide to Marrakech Menara Airport. We do not belong to the airport, we sell no transport, and we publish only what we have been able to verify.",
+  title: "About AeroportRAK, the Marrakech Menara Airport guide",
+  description: "Who writes AeroportRAK, how information about Marrakech Menara Airport is verified, and how the site is funded.",
+  eyebrow: 'AeroportRAK',
+  h1: 'About AeroportRAK',
+  lede: "AeroportRAK is an independent guide to Marrakech Menara Airport. We do not belong to the airport, we sell no transport, and we publish only what we have been able to verify.",
   body: `
 <h2>What this site does</h2>
 <p>RAK handles more than nine million passengers a year, most of them seeing Morocco for the first time. The practical information that matters to them — what a taxi costs, how far a car gets into the medina, when bus 19 stops, how long border police take — is scattered, often out of date, and routinely copied from one site to another without checking.</p>

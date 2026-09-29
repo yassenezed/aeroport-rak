@@ -1,7 +1,7 @@
 import placeholder from '../assets/img/placeholder.png';
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Photothèque AirportRAK.
+// Photothèque AeroportRAK.
 //
 // Chaque clé ci-dessous correspond à une photo attendue dans
 // `src/assets/img/<clé>.jpg`. Tant que le fichier n'est pas fourni, la clé

@@ -3,13 +3,13 @@ import { site } from '../../data/site';
 
 export default {
   title: "Privacy policy — Marrakech Menara Airport guide",
-  description: "How AirportRAK, the Marrakech Menara Airport guide, handles your data: analytics, affiliate links, cookies, third-party widgets and GDPR.",
-  eyebrow: 'AirportRAK',
+  description: "How AeroportRAK, the Marrakech Menara Airport guide, handles your data: analytics, affiliate links, cookies, third-party widgets and GDPR.",
+  eyebrow: 'AeroportRAK',
   h1: 'Privacy policy',
   lede: "What this site collects, why, for how long, and what you can require. In short: no accounts, no tracking forms, and third-party tools limited strictly to analytics and booking.",
   body: `
 <h2>Who handles your data</h2>
-<p>The data controller is the publisher of AirportRAK, reachable at <a href="mailto:${site.contactEmail}">${site.contactEmail}</a>. The site offers no account creation, no personal area and no newsletter.</p>
+<p>The data controller is the publisher of AeroportRAK, reachable at <a href="mailto:${site.contactEmail}">${site.contactEmail}</a>. The site offers no account creation, no personal area and no newsletter.</p>
 
 <h2>What we collect</h2>
 <ul>

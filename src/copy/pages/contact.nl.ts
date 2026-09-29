@@ -2,9 +2,9 @@ import type { LocalizedPage } from '../types';
 import { site } from '../../data/site';
 
 export default {
-  title: "Contact — AirportRAK, luchthaven Marrakech-Menara",
-  description: "Contact met AirportRAK: informatie over luchthaven Marrakech-Menara corrigeren, een verouderd tarief melden of een zakelijke vraag stellen.",
-  eyebrow: "AirportRAK",
+  title: "Contact — AeroportRAK, luchthaven Marrakech-Menara",
+  description: "Contact met AeroportRAK: informatie over luchthaven Marrakech-Menara corrigeren, een verouderd tarief melden of een zakelijke vraag stellen.",
+  eyebrow: "AeroportRAK",
   h1: "Contact",
   lede: "Verouderde informatie, een tarief dat niet meer klopt, een aanvulling: schrijf ons. We lezen elk bericht en corrigeren de betreffende pagina's.",
   body: `
@@ -13,7 +13,7 @@ export default {
 <p>Vermeld bij een foutmelding zo mogelijk <strong>het adres van de betreffende pagina</strong>, de passage in kwestie en wat u ter plaatse hebt vastgesteld, met datum. Een foto van een tarievenbord of dienstregeling zegt meer dan een lange uitleg: zo kunnen we snel en met zekerheid corrigeren.</p>
 
 <h2>Wat we niet kunnen doen</h2>
-<p>AirportRAK is een onafhankelijke redactionele gids, geen luchthavendienst en geen reisbureau. We kunnen dus niet:</p>
+<p>AeroportRAK is een onafhankelijke redactionele gids, geen luchthavendienst en geen reisbureau. We kunnen dus niet:</p>
 <ul>
 <li>een vlucht-, hotel- of transferboeking wijzigen, annuleren of terugvinden;</li>
 <li>de status van verloren bagage doorgeven – dat regelt de balie van uw maatschappij;</li>

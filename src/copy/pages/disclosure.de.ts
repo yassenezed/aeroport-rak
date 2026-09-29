@@ -3,8 +3,8 @@ import { site } from '../../data/site';
 
 export default {
   title: "Affiliate-Offenlegung — Flughafen Marrakesch-Menara",
-  description: "Wie sich AirportRAK, Ratgeber zum Flughafen Marrakesch-Menara, finanziert: Affiliate-Links und Provisionen ohne Einfluss auf Ihren Preis.",
-  eyebrow: 'AirportRAK',
+  description: "Wie sich AeroportRAK, Ratgeber zum Flughafen Marrakesch-Menara, finanziert: Affiliate-Links und Provisionen ohne Einfluss auf Ihren Preis.",
+  eyebrow: 'AeroportRAK',
   h1: 'Affiliate-Offenlegung',
   lede: "Diese Website ist kostenlos und wird über Affiliate-Provisionen finanziert. Hier genau, wie das funktioniert, was es für Sie bedeutet – beim Preis nichts – und was es an unseren Texten nicht ändert.",
   body: `

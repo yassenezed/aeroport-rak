@@ -3,14 +3,14 @@ import { site } from '../../data/site';
 
 export default {
   fr: {
-    title: "Confidentialité — AirportRAK, aéroport Marrakech-Ménara",
-    description: "Comment AirportRAK, guide de l'aéroport de Marrakech-Ménara, traite vos données : audience, affiliation, cookies, widgets tiers et RGPD.",
-    eyebrow: 'AirportRAK',
+    title: "Confidentialité — AeroportRAK, aéroport Marrakech-Ménara",
+    description: "Comment AeroportRAK, guide de l'aéroport de Marrakech-Ménara, traite vos données : audience, affiliation, cookies, widgets tiers et RGPD.",
+    eyebrow: 'AeroportRAK',
     h1: 'Politique de confidentialité',
     lede: "Ce que ce site collecte, pourquoi, pendant combien de temps, et ce que vous pouvez exiger. En résumé : aucun compte, aucun formulaire de suivi, et des outils tiers strictement limités à la mesure d'audience et à la réservation.",
     body: `
 <h2>Qui traite vos données</h2>
-<p>Le responsable du traitement est l'éditeur d'AirportRAK, joignable à l'adresse <a href="mailto:${site.contactEmail}">${site.contactEmail}</a>. Le site ne propose ni création de compte, ni espace personnel, ni newsletter.</p>
+<p>Le responsable du traitement est l'éditeur d'AeroportRAK, joignable à l'adresse <a href="mailto:${site.contactEmail}">${site.contactEmail}</a>. Le site ne propose ni création de compte, ni espace personnel, ni newsletter.</p>
 
 <h2>Ce que nous collectons</h2>
 <ul>

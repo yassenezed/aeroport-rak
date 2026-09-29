@@ -2,14 +2,14 @@ import type { LocalizedPage } from '../types';
 import { site } from '../../data/site';
 
 export default {
-  title: "Privacybeleid — AirportRAK, luchthaven Marrakech-Menara",
-  description: "Hoe AirportRAK, gids voor luchthaven Marrakech-Menara, uw gegevens verwerkt: statistieken, affiliatelinks, cookies en de AVG.",
-  eyebrow: "AirportRAK",
+  title: "Privacybeleid — AeroportRAK, luchthaven Marrakech-Menara",
+  description: "Hoe AeroportRAK, gids voor luchthaven Marrakech-Menara, uw gegevens verwerkt: statistieken, affiliatelinks, cookies en de AVG.",
+  eyebrow: "AeroportRAK",
   h1: "Privacybeleid",
   lede: "Wat deze site verzamelt, waarom, hoe lang en wat u kunt eisen. Kortom: geen accounts, geen volgformulieren en diensten van derden strikt beperkt tot statistieken en boekingen.",
   body: `
 <h2>Wie uw gegevens verwerkt</h2>
-<p>Verwerkingsverantwoordelijke is de uitgever van AirportRAK, bereikbaar via <a href="mailto:${site.contactEmail}">${site.contactEmail}</a>. De site biedt geen accountaanmaak, geen persoonlijke omgeving en geen nieuwsbrief.</p>
+<p>Verwerkingsverantwoordelijke is de uitgever van AeroportRAK, bereikbaar via <a href="mailto:${site.contactEmail}">${site.contactEmail}</a>. De site biedt geen accountaanmaak, geen persoonlijke omgeving en geen nieuwsbrief.</p>
 
 <h2>Wat we verzamelen</h2>
 <ul>

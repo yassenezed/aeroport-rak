@@ -2,7 +2,7 @@
 // Paramètres d'affiliation et de mesure — point unique de configuration.
 //
 // À FOURNIR / CONFIRMER par le propriétaire du site :
-//  - `travelpayouts.trs` (projet AirportRAK, 579106) et `.marker` (compte) :
+//  - `travelpayouts.trs` (projet AeroportRAK, 579106) et `.marker` (compte) :
 //    identifiants Travelpayouts utilisés par tous les widgets et par Drive.
 //  - `travelpayouts.transfer.promoId` / `.campaignId` et `flights.*` :
 //    valeurs affichées dans le code du widget généré côté Travelpayouts.
@@ -15,7 +15,7 @@ export const gaId = '';
 export const travelpayouts = {
   trs: '579106',
   marker: '697149',
-  /** Travelpayouts Drive du projet AirportRAK : chargé en différé après
+  /** Travelpayouts Drive du projet AeroportRAK : chargé en différé après
    *  l'affichage de la page, voir BaseLayout. */
   trackingScript: 'https://emrld.ltd/NTc5MTA2.js?t=579106',
 
@@ -107,7 +107,7 @@ export function flightWidgetSrc(locale = 'fr'): string {
     searchUrl: t.flights.searchUrl,
     origin: market.origin,
     destination: t.flights.destination,
-    // Charte AirportRAK : bleu Majorelle, safran, indigo.
+    // Charte AeroportRAK : bleu Majorelle, safran, indigo.
     primary_override: '#3F4BB8',
     color_button: '#3F4BB8',
     color_icons: '#E9A13B',
@@ -135,7 +135,7 @@ export function esimWidgetSrc(locale = 'fr'): string {
     shmarker: t.marker,
     locale: ESIM_WIDGET_LOCALES.includes(locale) ? locale : 'en',
     powered_by: 'true',
-    // Charte AirportRAK : bleu Majorelle, indigo.
+    // Charte AeroportRAK : bleu Majorelle, indigo.
     color_button: '#3F4BB8',
     color_focused: '#3F4BB8',
     secondary: '#FFFFFF',

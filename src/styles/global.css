@@ -1,5 +1,5 @@
 /* ==========================================================================
-   AirportRAK — design system
+   AeroportRAK — design system
    Palette « Majorelle & safran » : blanc froid · indigo profond · bleu
    Majorelle en CTA · safran en accent · argile pour les mises en avant.
    Typo éditoriale : serif Fraunces en titres, DM Sans en courant.
@@ -417,7 +417,7 @@ table.data .num { font-variant-numeric: tabular-nums; font-weight: 700; }
 
 /* ==========================================================================
    Blocs de page — habillés à la
-   charte AirportRAK (indigo / Majorelle / safran).
+   charte AeroportRAK (indigo / Majorelle / safran).
    ========================================================================== */
 
 /* Alias BEM sur les utilitaires historiques, pour que les deux écritures
@@ -582,7 +582,12 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
   min-height: 64px;
 }
 .header__logo { display: flex; align-items: center; flex: none; text-decoration: none; }
-.header__logo img { height: 34px; width: auto; }
+.header__logo img, .site-footer__logo img { height: 34px; width: auto; }
+.header__logo, .site-footer__logo { gap: 0.55rem; }
+.site-footer__logo { display: inline-flex; align-items: center; text-decoration: none !important; }
+/* Mot-symbole provisoire, en attendant le logo définitif */
+.brand-word { font-family: var(--font-display); font-size: 1.6rem; font-weight: 600; line-height: 1; color: #fff; letter-spacing: -0.01em; white-space: nowrap; }
+.brand-word b { font-family: var(--font-body); font-weight: 800; color: var(--saffron); letter-spacing: 0.01em; }
 
 /* ── Bouton de menu mobile ── */
 .header__toggle {
@@ -691,7 +696,6 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
 .site-footer a { color: rgba(255, 255, 255, 0.82); text-decoration: none; }
 .site-footer a:hover { color: #fff; text-decoration: underline; }
 .site-footer__top { padding-block: clamp(2.25rem, 4.5vw, 3.25rem); display: grid; grid-template-columns: 1.1fr 2fr; gap: clamp(1.75rem, 4vw, 3.5rem); }
-.site-footer__logo img { height: 36px; width: auto; }
 .site-footer__tagline { margin: 1rem 0 0; font-size: 0.9rem; max-width: 38ch; color: rgba(255, 255, 255, 0.66); }
 .site-footer__cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 .site-footer__col h2 { font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--saffron); font-family: var(--font-body); font-weight: 700; margin-bottom: 0.85rem; }

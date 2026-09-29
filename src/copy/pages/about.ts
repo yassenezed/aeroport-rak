@@ -2,11 +2,11 @@ import type { PageContent } from '../types';
 
 export default {
   fr: {
-    title: "À propos d'AirportRAK, guide de l'aéroport Marrakech-Ménara",
-    description: "Qui écrit AirportRAK, comment les informations sur l'aéroport de Marrakech-Ménara sont vérifiées et comment le site est financé.",
-    eyebrow: 'AirportRAK',
-    h1: 'À propos d\'AirportRAK',
-    lede: "AirportRAK est un guide indépendant consacré à l'aéroport de Marrakech Ménara. Nous n'appartenons pas à l'aéroport, nous ne vendons aucun transport, et nous écrivons uniquement ce que nous avons pu vérifier.",
+    title: "À propos d'AeroportRAK, guide de l'aéroport Marrakech-Ménara",
+    description: "Qui écrit AeroportRAK, comment les informations sur l'aéroport de Marrakech-Ménara sont vérifiées et comment le site est financé.",
+    eyebrow: 'AeroportRAK',
+    h1: 'À propos d\'AeroportRAK',
+    lede: "AeroportRAK est un guide indépendant consacré à l'aéroport de Marrakech Ménara. Nous n'appartenons pas à l'aéroport, nous ne vendons aucun transport, et nous écrivons uniquement ce que nous avons pu vérifier.",
     body: `
 <h2>Ce que fait ce site</h2>
 <p>Le RAK accueille plus de neuf millions de passagers par an, dont une majorité découvre le Maroc pour la première fois. Les informations pratiques qui les concernent — combien coûte un taxi, jusqu'où va une voiture dans la médina, à quelle heure s'arrête le bus 19, combien de temps prend la police des frontières — sont dispersées, souvent périmées, et régulièrement recopiées d'un site à l'autre sans vérification.</p>

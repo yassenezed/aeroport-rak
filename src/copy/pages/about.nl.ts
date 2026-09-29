@@ -1,11 +1,11 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Over AirportRAK, gids voor luchthaven Marrakech-Menara",
-  description: "Wie AirportRAK schrijft, hoe informatie over luchthaven Marrakech-Menara wordt gecontroleerd en hoe de site wordt gefinancierd.",
-  eyebrow: "AirportRAK",
-  h1: "Over AirportRAK",
-  lede: "AirportRAK is een onafhankelijke gids over luchthaven Marrakech Menara. We horen niet bij de luchthaven, verkopen geen vervoer en publiceren alleen wat we hebben kunnen controleren.",
+  title: "Over AeroportRAK, gids voor luchthaven Marrakech-Menara",
+  description: "Wie AeroportRAK schrijft, hoe informatie over luchthaven Marrakech-Menara wordt gecontroleerd en hoe de site wordt gefinancierd.",
+  eyebrow: "AeroportRAK",
+  h1: "Over AeroportRAK",
+  lede: "AeroportRAK is een onafhankelijke gids over luchthaven Marrakech Menara. We horen niet bij de luchthaven, verkopen geen vervoer en publiceren alleen wat we hebben kunnen controleren.",
   body: `
 <h2>Wat deze site doet</h2>
 <p>De RAK verwerkt jaarlijks ruim negen miljoen passagiers, van wie de meesten Marokko voor het eerst ontdekken. De praktische informatie die ze nodig hebben – wat een taxi kost, hoe ver een auto de medina in komt, hoe laat bus 19 stopt, hoe lang de grenspolitie duurt – is versnipperd, vaak verouderd en wordt geregeld ongecontroleerd van site naar site gekopieerd.</p>

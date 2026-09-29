@@ -1,11 +1,11 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Über AirportRAK, Ratgeber Flughafen Marrakesch-Menara",
-  description: "Wer AirportRAK schreibt, wie Informationen zum Flughafen Marrakesch-Menara geprüft werden und wie die Website finanziert wird.",
-  eyebrow: 'AirportRAK',
-  h1: 'Über AirportRAK',
-  lede: "AirportRAK ist ein unabhängiger Guide zum Flughafen Marrakesch Menara. Wir gehören nicht zum Flughafen, verkaufen keine Beförderung und veröffentlichen nur, was wir prüfen konnten.",
+  title: "Über AeroportRAK, Ratgeber Flughafen Marrakesch-Menara",
+  description: "Wer AeroportRAK schreibt, wie Informationen zum Flughafen Marrakesch-Menara geprüft werden und wie die Website finanziert wird.",
+  eyebrow: 'AeroportRAK',
+  h1: 'Über AeroportRAK',
+  lede: "AeroportRAK ist ein unabhängiger Guide zum Flughafen Marrakesch Menara. Wir gehören nicht zum Flughafen, verkaufen keine Beförderung und veröffentlichen nur, was wir prüfen konnten.",
   body: `
 <h2>Was diese Website leistet</h2>
 <p>Der RAK fertigt jährlich über neun Millionen Passagiere ab, die meisten davon zum ersten Mal in Marokko. Die praktischen Informationen, die sie brauchen – was ein Taxi kostet, wie weit ein Auto in die Medina kommt, wann der Bus 19 endet, wie lange die Grenzpolizei dauert –, sind verstreut, oft veraltet und werden regelmäßig ungeprüft von Seite zu Seite kopiert.</p>

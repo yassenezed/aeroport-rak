@@ -1,10 +1,10 @@
 import { defineConfig } from 'astro/config';
 
-// AirportRAK — le français vit à la racine avec des slugs français ; en, es,
+// AeroportRAK — le français vit à la racine avec des slugs français ; en, es,
 // de, nl et ar sont servis sous /<lang>/ avec des slugs anglais.
 // Barres obliques finales partout (le format de build est 'directory').
 export default defineConfig({
-  site: 'https://airportrak.com',
+  site: 'https://aeroportrak.com',
   trailingSlash: 'always',
   compressHTML: true,
   i18n: {

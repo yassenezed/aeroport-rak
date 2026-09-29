@@ -4,13 +4,13 @@ import { site } from '../../data/site';
 export default {
   fr: {
     title: "Conditions d'utilisation — guide aéroport Marrakech-Ménara",
-    description: "Conditions d'utilisation d'AirportRAK, guide indépendant de l'aéroport de Marrakech-Ménara : nature du site, responsabilité et liens tiers.",
-    eyebrow: 'AirportRAK',
+    description: "Conditions d'utilisation d'AeroportRAK, guide indépendant de l'aéroport de Marrakech-Ménara : nature du site, responsabilité et liens tiers.",
+    eyebrow: 'AeroportRAK',
     h1: 'Conditions d\'utilisation',
-    lede: "Ce que vous pouvez attendre de ce site, et ce que vous ne pouvez pas en attendre. En consultant AirportRAK, vous acceptez les conditions qui suivent.",
+    lede: "Ce que vous pouvez attendre de ce site, et ce que vous ne pouvez pas en attendre. En consultant AeroportRAK, vous acceptez les conditions qui suivent.",
     body: `
 <h2>Nature du site</h2>
-<p>AirportRAK est une publication éditoriale indépendante consacrée à l'aéroport de Marrakech Ménara. Le site <strong>n'est ni exploité, ni mandaté, ni approuvé</strong> par l'Office National Des Aéroports, par l'aéroport de Marrakech Ménara, ni par aucune compagnie aérienne. Il ne vend aucun service de transport et n'est pas une agence de voyage.</p>
+<p>AeroportRAK est une publication éditoriale indépendante consacrée à l'aéroport de Marrakech Ménara. Le site <strong>n'est ni exploité, ni mandaté, ni approuvé</strong> par l'Office National Des Aéroports, par l'aéroport de Marrakech Ménara, ni par aucune compagnie aérienne. Il ne vend aucun service de transport et n'est pas une agence de voyage.</p>
 
 <h2>Exactitude des informations</h2>
 <p>Nous vérifions les informations publiées et indiquons la date des relevés tarifaires. Les tarifs, horaires, fréquences et procédures évoluent néanmoins sans préavis : <strong>vérifiez toujours auprès de l'opérateur concerné</strong> avant de prendre une décision engageante, en particulier pour un horaire de vol, une formalité d'entrée ou une réservation.</p>

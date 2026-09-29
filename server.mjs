@@ -1,4 +1,4 @@
-// Production static server for AirportRAK (Astro static build → dist/).
+// Production static server for AeroportRAK (Astro static build → dist/).
 // Zero-dependency: serves the prebuilt dist/ folder, binds to Hostinger's PORT.
 // Run:  npm run build  then  npm start
 import { createServer } from 'node:http';
@@ -84,4 +84,4 @@ const server = createServer(async (req, res) => {
   }
 });
 
-server.listen(PORT, HOST, () => console.log(`AirportRAK listening on http://${HOST}:${PORT}`));
+server.listen(PORT, HOST, () => console.log(`AeroportRAK listening on http://${HOST}:${PORT}`));
