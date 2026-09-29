@@ -1,7 +1,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Table des routes — calquée sur l'architecture de aeroportcmn.com.
+// Table des routes du site.
 //
-// Convention reprise telle quelle : le français vit à la racine avec des slugs
+// Convention : le français vit à la racine avec des slugs
 // français, les cinq autres langues vivent sous /<lang>/ avec des slugs anglais
 // (/de/arrivals, /es/arrivals…). Un seul jeu de slugs « intl » sert donc aux
 // cinq locales non francophones.

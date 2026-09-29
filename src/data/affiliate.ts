@@ -2,9 +2,8 @@
 // Paramètres d'affiliation et de mesure — point unique de configuration.
 //
 // À FOURNIR / CONFIRMER par le propriétaire du site :
-//  - `travelpayouts.trs` et `.marker` : identifiants du compte Travelpayouts
-//    (repris du compte existant ; à remplacer si un sous-ID dédié est créé
-//    pour AirportRAK afin de suivre les revenus séparément).
+//  - `travelpayouts.trs` (projet AirportRAK, 579106) et `.marker` (compte) :
+//    identifiants Travelpayouts utilisés par tous les widgets et par Drive.
 //  - `travelpayouts.transfer.promoId` / `.campaignId` et `flights.*` :
 //    valeurs affichées dans le code du widget généré côté Travelpayouts.
 //  - `gaId` : identifiant de mesure GA4 du nouveau domaine (format G-XXXXXXX).
@@ -14,10 +13,10 @@
 export const gaId = '';
 
 export const travelpayouts = {
-  trs: '554574',
+  trs: '579106',
   marker: '697149',
-  /** Travelpayouts Drive (compte 579106, propre à AirportRAK) : chargé en différé
-   *  après l'affichage de la page, voir BaseLayout. */
+  /** Travelpayouts Drive du projet AirportRAK : chargé en différé après
+   *  l'affichage de la page, voir BaseLayout. */
   trackingScript: 'https://emrld.ltd/NTc5MTA2.js?t=579106',
 
   /** Widget de réservation de transferts (iframe). */
@@ -31,7 +30,6 @@ export const travelpayouts = {
 
   /** Widget de recherche vols + hôtels (Aviasales, promo 7879). */
   flights: {
-    trs: '579106',
     promoId: '7879',
     campaignId: '100',
     searchUrl: 'www.aviasales.com/search',
@@ -81,7 +79,7 @@ export function flightWidgetSrc(locale = 'fr'): string {
   const market = FLIGHT_MARKETS[locale] ?? FLIGHT_MARKETS.fr;
   const p = new URLSearchParams({
     currency: market.currency,
-    trs: t.flights.trs,
+    trs: t.trs,
     shmarker: t.marker,
     show_hotels: 'true',
     powered_by: 'true',
