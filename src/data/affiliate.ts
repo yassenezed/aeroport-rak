@@ -16,8 +16,9 @@ export const gaId = '';
 export const travelpayouts = {
   trs: '554574',
   marker: '697149',
-  /** Script de suivi Emerald (t = identifiant partenaire). */
-  trackingScript: 'https://emrld.ltd/NTU0NTc0.js?t=554574',
+  /** Travelpayouts Drive (compte 579106, propre à AirportRAK) : chargé en différé
+   *  après l'affichage de la page, voir BaseLayout. */
+  trackingScript: 'https://emrld.ltd/NTc5MTA2.js?t=579106',
 
   /** Widget de réservation de transferts (iframe). */
   transfer: {

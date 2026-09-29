@@ -99,8 +99,22 @@ const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
   <slot name="head" />
 
   {travelpayouts.trackingScript && (
-    <script is:inline data-noptimize="1" data-cfasync="false" define:vars={{ src: travelpayouts.trackingScript }}>
-      (function () { var s = document.createElement('script'); s.async = 1; s.src = src; document.head.appendChild(s); })();
+    <script is:inline data-noptimize="1" data-cfasync="false" data-no-defer="1" define:vars={{ src: travelpayouts.trackingScript }}>
+      // Travelpayouts Drive : injecté seulement après le chargement complet de la page,
+      // pendant un temps mort du navigateur, pour ne pas peser sur l'affichage.
+      (function () {
+        var inject = function () {
+          var s = document.createElement('script');
+          s.async = true; s.src = src; s.setAttribute('data-cmp-ab', '2');
+          document.head.appendChild(s);
+        };
+        var idle = function () {
+          if ('requestIdleCallback' in window) requestIdleCallback(inject, { timeout: 3000 });
+          else setTimeout(inject, 1500);
+        };
+        if (document.readyState === 'complete') idle();
+        else window.addEventListener('load', idle, { once: true });
+      })();
     </script>
   )}
 </head>
