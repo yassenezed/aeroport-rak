@@ -1,7 +1,7 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Cheap car hire at Marrakech Menara Airport",
+  title: "Cheap car hire at Marrakech Menara Airport: from €25/day",
   description: "Budget car hire at Marrakech Menara Airport: real prices from €25 a day, local versus international agencies, and the traps in a cheap contract.",
   eyebrow: 'Marrakech Menara · Budget',
   h1: 'Budget car hire in Marrakech',

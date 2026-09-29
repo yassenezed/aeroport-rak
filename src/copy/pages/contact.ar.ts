@@ -2,7 +2,7 @@ import type { LocalizedPage } from '../types';
 import { site } from '../../data/site';
 
 export default {
-  title: "اتصل بنا — AirportRAK، مطار مراكش المنارة",
+  title: "اتصل بنا — AirportRAK، الدليل المستقل لمطار مراكش المنارة",
   description: "التواصل مع AirportRAK: تصحيح معلومة عن مطار مراكش المنارة، الإبلاغ عن سعر قديم، أو طلب مهني.",
   eyebrow: "AirportRAK",
   h1: "اتصل بنا",

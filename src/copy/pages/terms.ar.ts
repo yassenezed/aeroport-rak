@@ -2,7 +2,7 @@ import type { LocalizedPage } from '../types';
 import { site } from '../../data/site';
 
 export default {
-  title: "شروط الاستخدام — دليل مطار مراكش المنارة",
+  title: "شروط الاستخدام — AirportRAK، دليل مطار مراكش المنارة",
   description: "شروط استخدام AirportRAK، الدليل المستقل لمطار مراكش المنارة: الطابع التحريري، حدود المسؤولية والروابط الخارجية.",
   eyebrow: "AirportRAK",
   h1: "شروط الاستخدام",

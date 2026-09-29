@@ -1,7 +1,7 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Marrakech Menara Airport guide (RAK)',
+  title: "Marrakech Menara Airport guide (RAK): terminals and tips",
   description: "A full guide to Marrakech Menara Airport: terminals, layout, entry formalities, waiting times, connections and getting into the city.",
   eyebrow: 'Marrakech Menara · Guide',
   h1: 'Marrakech Menara Airport guide',

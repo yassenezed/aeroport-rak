@@ -1,7 +1,7 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Gids luchthaven Marrakech-Menara (RAK)",
+  title: "Gids luchthaven Marrakech-Menara (RAK): terminals en tips",
   description: "Complete gids voor luchthaven Marrakech-Menara: terminals, indeling, inreisformaliteiten, wachttijden, aansluitingen en de weg naar de stad.",
   eyebrow: "Marrakech Menara · Gids",
   h1: "Gids voor luchthaven Marrakech Menara",

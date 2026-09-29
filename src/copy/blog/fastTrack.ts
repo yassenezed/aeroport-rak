@@ -2,7 +2,7 @@ import type { ArticleContent } from '../types';
 
 export default {
   fr: {
-    title: "Fast Track à l'aéroport de Marrakech-Ménara",
+    title: "Fast Track à l'aéroport de Marrakech-Ménara : prix et avis",
     description: "Fast Track à l'aéroport de Marrakech-Ménara : le temps réellement gagné, le prix, quand il se justifie et quand il ne sert à rien.",
     eyebrow: 'Aéroport',
     h1: 'Fast Track à Marrakech : utile ou pas ?',

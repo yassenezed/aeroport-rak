@@ -1,7 +1,7 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "Parkeertarieven luchthaven Marrakech-Menara",
+  title: "Parkeertarieven luchthaven Marrakech-Menara: uur en dag",
   description: "Parkeertarieven van luchthaven Marrakech-Menara: prijzen per uur, dag en week, kiss-and-ride, betalen en goedkopere opties.",
   eyebrow: "Luchthaven",
   h1: "Parkeren op luchthaven Marrakech: de tarieventabel",

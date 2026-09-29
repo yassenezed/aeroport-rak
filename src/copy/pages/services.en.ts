@@ -1,7 +1,7 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Services at Marrakech Menara Airport",
+  title: "Services at Marrakech Menara Airport: wifi, ATMs, lounges",
   description: "Marrakech Menara Airport services: ATMs, currency exchange, SIM and eSIM, wifi, VIP lounges, left luggage, bag wrapping, medical unit and assistance.",
   eyebrow: "Marrakech Menara · Services",
   h1: "Marrakech Menara Airport Services",

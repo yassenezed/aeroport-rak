@@ -1,7 +1,7 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Car hire at Marrakech Menara Airport",
+  title: "Car hire at Marrakech Menara Airport: prices and tips",
   description: "Hiring a car at Marrakech Menara Airport: real prices, deposits, excess, vehicle inspection, driving in Morocco and when a car is useless.",
   eyebrow: 'Marrakech Menara · Car hire',
   h1: 'Hiring a car at Marrakech Airport',

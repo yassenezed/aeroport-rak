@@ -1,7 +1,7 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Mietwagen am Flughafen Marrakesch-Menara",
+  title: "Mietwagen am Flughafen Marrakesch-Menara: Preise und Tipps",
   description: "Mietwagen am Flughafen Marrakesch-Menara: reale Preise, Kaution, Selbstbeteiligung, Fahrzeugübergabe, Autofahren in Marokko und wann sich ein Auto nicht lohnt.",
   eyebrow: 'Marrakesch Menara · Mietwagen',
   h1: 'Einen Mietwagen am Flughafen Marrakesch nehmen',

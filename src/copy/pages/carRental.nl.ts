@@ -1,7 +1,7 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Autohuur op luchthaven Marrakech-Menara",
+  title: "Autohuur op luchthaven Marrakech-Menara: prijzen en tips",
   description: "Een auto huren op luchthaven Marrakech-Menara: echte prijzen, borg, eigen risico, voertuiginspectie, rijden in Marokko en wanneer een auto overbodig is.",
   eyebrow: "Marrakech Menara · Autohuur",
   h1: "Een auto huren op luchthaven Marrakech",

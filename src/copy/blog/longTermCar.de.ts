@@ -1,7 +1,7 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "Langzeitmiete ab Flughafen Marrakesch-Menara",
+  title: "Langzeitmiete ab Flughafen Marrakesch-Menara: Tarife",
   description: "Ein Auto monatlich ab Flughafen Marrakesch-Menara mieten: gestaffelte Tarife, Kurzzeit-Leasing, Versicherung und Alternativen.",
   eyebrow: 'Mietwagen',
   h1: 'Ein Auto monatlich in Marrakesch mieten',

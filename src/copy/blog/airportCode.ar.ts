@@ -1,7 +1,7 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "RAK أو GMMX: رمز مطار مراكش المنارة",
+  title: "RAK أو GMMX: رمز مطار مراكش المنارة وكيف لا تخطئ",
   description: "لماذا يُكتب مطار مراكش المنارة RAK، وما معنى GMMX، وكيف تتجنب الخلط مع مطارات مغربية أخرى عند الحجز.",
   eyebrow: "المطار",
   h1: "RAK وGMMX: رموز مطار مراكش",

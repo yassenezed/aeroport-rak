@@ -2,7 +2,7 @@ import type { PageContent } from '../types';
 
 export default {
   fr: {
-    title: "Services à l'aéroport de Marrakech-Ménara",
+    title: "Services aéroport Marrakech-Ménara : wifi, change, salons",
     description: "Services de l'aéroport de Marrakech-Ménara : distributeurs, change, SIM et eSIM, wifi, salons VIP, consigne, filmage des bagages, santé et assistance PMR.",
     eyebrow: "Marrakech-Ménara · Services",
     h1: "Services aéroport Marrakech-Ménara",

@@ -1,7 +1,7 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Luxury car hire at Marrakech Menara Airport",
+  title: "Luxury car hire at Marrakech Menara Airport: SUVs, sedans",
   description: "Hiring a premium saloon, SUV or convertible at Marrakech Menara Airport: models available, rates, high deposits and the chauffeur alternative.",
   eyebrow: 'Marrakech Menara · Premium',
   h1: 'Luxury car hire in Marrakech',

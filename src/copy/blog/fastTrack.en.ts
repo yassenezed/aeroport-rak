@@ -1,7 +1,7 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "Fast Track at Marrakech Menara Airport",
+  title: "Fast Track at Marrakech Menara Airport: price and review",
   description: "Fast Track at Marrakech Menara Airport: how much time it really saves, what it costs, when it is worth it and when it is useless.",
   eyebrow: 'Airport',
   h1: 'Fast Track in Marrakech: worth it or not?',

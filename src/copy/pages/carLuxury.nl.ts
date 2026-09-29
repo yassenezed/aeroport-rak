@@ -1,7 +1,7 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Luxe huurauto op luchthaven Marrakech-Menara",
+  title: "Luxe huurauto op luchthaven Marrakech-Menara: SUV's",
   description: "Een premium sedan, SUV of cabrio huren op luchthaven Marrakech-Menara: beschikbare modellen, tarieven, hoge borgsommen en het alternatief met chauffeur.",
   eyebrow: "Marrakech Menara · Premium",
   h1: "Een luxe auto huren in Marrakech",

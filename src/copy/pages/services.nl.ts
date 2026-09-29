@@ -1,7 +1,7 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Voorzieningen op luchthaven Marrakech-Menara",
+  title: "Voorzieningen op luchthaven Marrakech-Menara: wifi, geld",
   description: "Voorzieningen op luchthaven Marrakech-Menara: geldautomaten, wisselkantoren, sim en eSIM, wifi, VIP-lounges, bagagedepot, inpakservice en medische hulp.",
   eyebrow: "Marrakech-Menara · Voorzieningen",
   h1: "Voorzieningen luchthaven Marrakech-Menara",

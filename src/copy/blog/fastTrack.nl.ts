@@ -1,7 +1,7 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "Fast Track op luchthaven Marrakech-Menara",
+  title: "Fast Track op luchthaven Marrakech-Menara: prijs en nut",
   description: "Fast Track op luchthaven Marrakech-Menara: hoeveel tijd het scheelt, wat het kost, wanneer het loont en wanneer niet.",
   eyebrow: "Luchthaven",
   h1: "Fast Track in Marrakech: zinvol of niet?",

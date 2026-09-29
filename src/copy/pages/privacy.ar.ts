@@ -2,7 +2,7 @@ import type { LocalizedPage } from '../types';
 import { site } from '../../data/site';
 
 export default {
-  title: "سياسة الخصوصية — دليل مطار مراكش المنارة",
+  title: "سياسة الخصوصية — AirportRAK، دليل مطار مراكش المنارة",
   description: "كيف يعالج AirportRAK، دليل مطار مراكش المنارة، بياناتك: قياس الجمهور، روابط الشراكة، ملفات الارتباط وأدوات الغير.",
   eyebrow: "AirportRAK",
   h1: "سياسة الخصوصية",
