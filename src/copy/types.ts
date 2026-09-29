@@ -17,7 +17,7 @@ export interface LocalizedPage {
   /** Titre H2 de la FAQ ; par défaut le libellé générique « Questions fréquentes ». */
   faqHeading?: string;
   /** Widget affiché juste sous le hero. */
-  widget?: 'flights-arrivals' | 'flights-departures' | 'flight-search' | 'transfer' | 'esim' | 'compensation';
+  widget?: 'flights-arrivals' | 'flights-departures' | 'flight-search' | 'transfer' | 'esim' | 'compensation' | 'tours';
   /** Bandeau d'appel à l'action en bas de page. */
   cta?: { heading: string; text?: string; label: string; href?: string };
   /** Bandeau de chiffres clés sous le hero. */

@@ -1,0 +1,9 @@
+---
+// Widget visites guidées WeGoTrip (Travelpayouts / tpemd). Identifiants dans src/data/affiliate.ts.
+import { toursWidgetSrc } from '../../data/affiliate';
+const src = toursWidgetSrc();
+---
+
+<div class="tours-widget" id="visites">
+  <script async src={src} charset="utf-8" is:inline></script>
+</div>

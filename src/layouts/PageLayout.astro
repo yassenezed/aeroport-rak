@@ -7,6 +7,7 @@ import FlightWidget from '../components/ui/FlightWidget.astro';
 import FlightSearchWidget from '../components/affiliate/FlightSearchWidget.astro';
 import EsimWidget from '../components/affiliate/EsimWidget.astro';
 import CompensationWidget from '../components/affiliate/CompensationWidget.astro';
+import ToursWidget from '../components/affiliate/ToursWidget.astro';
 import TransferWidget from '../components/affiliate/TransferWidget.astro';
 import Icon from '../components/ui/Icon.astro';
 import DestinationsExplorer from '../components/destinations/DestinationsExplorer.astro';
@@ -120,6 +121,7 @@ if (page.faqs?.length) {
         {page.widget === 'transfer' && <TransferWidget locale={locale} />}
         {page.widget === 'esim' && <EsimWidget locale={locale} />}
         {page.widget === 'compensation' && <CompensationWidget locale={locale} />}
+        {page.widget === 'tours' && <ToursWidget />}
       </div>
     </section>
   )}

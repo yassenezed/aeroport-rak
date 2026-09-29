@@ -34,6 +34,14 @@ export const travelpayouts = {
     campaignId: '541',
   },
 
+  /** Widget visites guidées WeGoTrip (promo 4489), ville = Marrakech. */
+  tours: {
+    promoId: '4489',
+    campaignId: '150',
+    cityId: '2542997',
+    count: '3',
+  },
+
   /** Widget indemnisation vol retardé / annulé (promo 8679). */
   compensation: {
     promoId: '8679',
@@ -157,6 +165,24 @@ export function compensationWidgetSrc(locale = 'fr'): string {
     powered_by: 'true',
     campaign_id: t.compensation.campaignId,
     promo_id: t.compensation.promoId,
+  });
+  return `https://tpemd.com/content?${p.toString()}`;
+}
+
+/** URL du widget visites guidées (WeGoTrip). Seul `locale=en` donne le site
+ *  international : toute autre valeur bascule sur wegotrip.ru, d'où l'anglais
+ *  pour toutes les langues du site. Aucun réglage de couleur n'existe. */
+export function toursWidgetSrc(): string {
+  const t = travelpayouts;
+  const p = new URLSearchParams({
+    trs: t.trs,
+    shmarker: t.marker,
+    locale: 'en',
+    city_id: t.tours.cityId,
+    tours: t.tours.count,
+    powered_by: 'true',
+    campaign_id: t.tours.campaignId,
+    promo_id: t.tours.promoId,
   });
   return `https://tpemd.com/content?${p.toString()}`;
 }

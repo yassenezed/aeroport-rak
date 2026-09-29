@@ -1014,3 +1014,4 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
 /* ---------- Widget eSIM ---------- */
 .esim-widget { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); scroll-margin-top: 90px; }
 .compensation-widget { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); scroll-margin-top: 110px; }
+.tours-widget { background: #fff; border-radius: 12px; padding: 1.25rem 1.5rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); overflow: hidden; scroll-margin-top: 110px; }
