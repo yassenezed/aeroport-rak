@@ -28,8 +28,8 @@ export default {
       intro: "Les solutions pour quitter l'aéroport de Marrakech-Ménara et bien démarrer le séjour, avec les prix vérifiés.",
       items: [
         { icon: 'van', key: 'bookTransfer', title: "Transfert privé depuis l'aéroport", text: "Chauffeur à votre nom, vol suivi, prix fixe par véhicule dès 27 €.", cta: 'Réserver' },
-        { icon: 'car', key: 'transfers', title: 'Taxi et bus 19', text: "Tarifs officiels du taxi de jour et de nuit, horaires du bus 19.", cta: 'Voir les tarifs' },
-        { icon: 'tag', key: 'carRental', title: 'Location de voiture', text: "Comptoirs dans le hall des arrivées, caution et pièges du contrat.", cta: 'Comparer' },
+        { icon: 'car', key: 'transfers', title: "Taxi et bus 19 à l'aéroport de Marrakech", text: "Tarifs officiels du taxi de jour et de nuit, horaires du bus 19.", cta: 'Voir les tarifs' },
+        { icon: 'tag', key: 'carRental', title: "Location de voiture à l'aéroport Marrakech-Ménara", text: "Comptoirs dans le hall des arrivées, caution et pièges du contrat.", cta: 'Comparer' },
         { icon: 'sim', key: 'esim', title: 'eSIM Maroc', text: "Internet dès l'atterrissage pour joindre votre chauffeur.", cta: "Choisir une eSIM" },
         { icon: 'wallet', key: 'money', title: 'Argent et change', text: "Distributeurs, bureaux de change et billets à retirer.", cta: 'Lire le guide' },
         { icon: 'alert', key: 'compensation', title: 'Vol retardé', text: "Jusqu'à 400 € d'indemnisation sur la plupart des vols depuis l'Europe.", cta: 'Vérifier mes droits' },

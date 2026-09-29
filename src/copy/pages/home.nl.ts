@@ -14,13 +14,13 @@ export default {
     items: [
       { icon: "plane-landing", key: "arrivals", title: "Aankomsten", text: "De vluchten die op de luchthaven landen, live.", cta: "Aankomsten bekijken" },
       { icon: "plane-takeoff", key: "departures", title: "Vertrek", text: "Volg de vluchten vanaf de RAK en plan de paspoortcontrole.", cta: "Vertrek bekijken" },
-      { icon: "van", key: "transfers", title: "Transfers", text: "Taxi, bus 19 of privétransfer: zo komt u in de medina.", cta: "Opties vergelijken" },
+      { icon: "van", key: "transfers", title: "Transfers vanaf luchthaven Marrakech", text: "Taxi, bus 19 of privétransfer: zo komt u in de medina.", cta: "Opties vergelijken" },
       { icon: "car", key: "carRental", title: "Autohuur", text: "Huren op de luchthaven: echte prijzen, borg en valkuilen.", cta: "Prijzen vergelijken" },
-      { icon: "parking", key: "parking", title: "Parkeren", text: "Parkeertarieven op de luchthaven per uur, dag en week.", cta: "Tarieven bekijken" },
+      { icon: "parking", key: "parking", title: "Parkeren op luchthaven Marrakech", text: "Parkeertarieven op de luchthaven per uur, dag en week.", cta: "Tarieven bekijken" },
       { icon: "building", key: "hotels", title: "Hotels", text: "Waar slapen in Marrakech: medina, Guéliz of Hivernage.", cta: "Hotel vinden" },
       { icon: "plane", key: "flights", title: "Goedkope vluchten", text: "Maatschappijen, seizoenen en prijzen van vluchten naar Marrakech.", cta: "Vlucht zoeken" },
       { icon: "sim", key: "esim", title: "eSIM Marokko", text: "Online vanaf de landing, zonder rij aan de balie.", cta: "Bundels bekijken" },
-      { icon: "map", key: "airportGuide", title: "Luchthavengids", text: "Terminals, formaliteiten, wachttijden en praktische tips.", cta: "Gids lezen" },
+      { icon: "map", key: "airportGuide", title: "Gids luchthaven Marrakech-Menara", text: "Terminals, formaliteiten, wachttijden en praktische tips.", cta: "Gids lezen" },
     ],
   },
   facts: [

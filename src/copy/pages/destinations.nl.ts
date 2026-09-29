@@ -22,8 +22,8 @@ export default {
     heading: "Uw vlucht naar of vanuit Marrakech plannen",
     intro: "Het juiste ticket vinden en alles wat er na de landing op de grond gebeurt.",
     items: [
-      { icon: 'plane', key: 'flights', title: "Vluchten vergelijken", text: "Prijzen van directe vluchten naar Marrakech vanuit uw stad.", cta: "Vlucht zoeken" },
-      { icon: 'building', key: 'hotels', title: "Hotels in Marrakech", text: "Riads, paleishotels en hotels bij de luchthaven.", cta: "Hotels bekijken" },
+      { icon: 'plane', key: 'flights', title: "Vluchten naar luchthaven Marrakech", text: "Prijzen van directe vluchten naar Marrakech vanuit uw stad.", cta: "Vlucht zoeken" },
+      { icon: 'building', key: 'hotels', title: "Hotels bij luchthaven Marrakech-Menara", text: "Riads, paleishotels en hotels bij de luchthaven.", cta: "Hotels bekijken" },
       { icon: 'van', key: 'bookTransfer', title: "Luchthaventransfer", text: "Chauffeur met naambord, vaste prijs per voertuig vanaf € 27.", cta: "Boeken" },
       { icon: 'tag', key: 'carRental', title: "Autohuur", text: "Balies in de terminal, prijzen en valkuilen in het contract.", cta: "Vergelijken" },
       { icon: 'plane-landing', key: 'arrivals', title: "Aankomsten live", text: "Een vlucht volgen die in Marrakech landt.", cta: "Aankomsten bekijken" },
@@ -35,7 +35,7 @@ export default {
 <p>Bijna acht op de tien bestemmingen vanaf luchthaven Marrakech liggen in Europa. Vanuit <strong>Nederland</strong> vliegen Transavia vanaf Amsterdam en Eindhoven, Ryanair vanaf Eindhoven, TUI fly vanaf Rotterdam en easyJet in het seizoen vanaf Amsterdam. Vanuit <strong>België</strong> gaat het vanaf Brussel met Ryanair, Royal Air Maroc, Transavia en TUI fly, en vanaf Charleroi met Ryanair.</p>
 <p><strong>Frankrijk</strong> telt zo'n twintig steden, Parijs alleen al vier luchthavens, gevolgd door het <strong>Verenigd Koninkrijk</strong>, <strong>Spanje</strong>, <strong>Italië</strong> en <strong>Duitsland</strong>. Routes naar Zwitserland en Portugal lopen het hele jaar. De winter, het mildste seizoen in Marrakech, brengt extra vluchten naar Scandinavië, Oostenrijk, Griekenland, Polen en de Baltische staten.</p>
 
-<h2>Binnenlandse vluchten in Marokko vanuit Marrakech</h2>
+<h2>Binnenlandse vluchten vanaf luchthaven Marrakech-Menara</h2>
 <p>Royal Air Maroc verbindt Marrakech met <strong>Casablanca</strong>, <strong>Dakhla</strong> en <strong>Laayoune</strong>. Ryanair vliegt naar <strong>Fez</strong>, <strong>Tanger</strong>, <strong>Tetouan</strong>, <strong>Oujda</strong> en <strong>Errachidia</strong>, vaak voordelig. Naar Agadir, Essaouira of Ouarzazate zijn er geen lijnvluchten: die bereikt u over de weg, zoals de tabel onderaan de pagina laat zien.</p>
 
 <h2>Langeafstandsvluchten: Noord-Amerika en het Midden-Oosten</h2>

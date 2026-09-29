@@ -14,13 +14,13 @@ export default {
     items: [
       { icon: "plane-landing", key: "arrivals", title: "Llegadas", text: "Los vuelos que aterrizan en el aeropuerto, en tiempo real.", cta: "Ver llegadas" },
       { icon: "plane-takeoff", key: "departures", title: "Salidas", text: "Siga los vuelos que salen del RAK y prepare el control de pasaportes.", cta: "Ver salidas" },
-      { icon: "van", key: "transfers", title: "Traslados", text: "Taxi, autobús 19 o traslado privado: cómo llegar a la medina.", cta: "Comparar opciones" },
+      { icon: "van", key: "transfers", title: "Traslados desde el aeropuerto de Marrakech", text: "Taxi, autobús 19 o traslado privado: cómo llegar a la medina.", cta: "Comparar opciones" },
       { icon: "car", key: "carRental", title: "Alquiler de coches", text: "Alquilar en el aeropuerto: precios reales, fianza y trampas.", cta: "Comparar precios" },
-      { icon: "parking", key: "parking", title: "Parkings", text: "Tarifas del parking del aeropuerto por hora, día y semana.", cta: "Ver tarifas" },
+      { icon: "parking", key: "parking", title: "Parking del aeropuerto de Marrakech", text: "Tarifas del parking del aeropuerto por hora, día y semana.", cta: "Ver tarifas" },
       { icon: "building", key: "hotels", title: "Hoteles", text: "Dónde dormir en Marrakech: medina, Guéliz o Hivernage.", cta: "Buscar hotel" },
       { icon: "plane", key: "flights", title: "Vuelos baratos", text: "Aerolíneas, temporadas y precios de los vuelos a Marrakech.", cta: "Buscar vuelo" },
       { icon: "sim", key: "esim", title: "eSIM Marruecos", text: "Conectado desde el aterrizaje, sin colas en el mostrador.", cta: "Ver ofertas" },
-      { icon: "map", key: "airportGuide", title: "Guía del aeropuerto", text: "Terminales, formalidades, esperas y consejos prácticos.", cta: "Leer la guía" },
+      { icon: "map", key: "airportGuide", title: "Guía del aeropuerto de Marrakech-Menara", text: "Terminales, formalidades, esperas y consejos prácticos.", cta: "Leer la guía" },
     ],
   },
   facts: [

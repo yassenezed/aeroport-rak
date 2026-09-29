@@ -27,8 +27,8 @@ export default {
     intro: "Las opciones para salir del aeropuerto de Marrakech-Menara y empezar bien la estancia, con precios comprobados.",
     items: [
       { icon: 'van', key: 'bookTransfer', title: 'Traslado privado desde el aeropuerto', text: "Conductor con su nombre, vuelo seguido, precio fijo por vehículo desde 27 €.", cta: 'Reservar' },
-      { icon: 'car', key: 'transfers', title: 'Taxi y autobús 19', text: "Tarifas oficiales del taxi de día y de noche, horarios del autobús 19.", cta: 'Ver tarifas' },
-      { icon: 'tag', key: 'carRental', title: 'Alquiler de coches', text: "Mostradores en el vestíbulo de llegadas, fianza y trampas del contrato.", cta: 'Comparar' },
+      { icon: 'car', key: 'transfers', title: "Taxi y autobús 19 en el aeropuerto de Marrakech", text: "Tarifas oficiales del taxi de día y de noche, horarios del autobús 19.", cta: 'Ver tarifas' },
+      { icon: 'tag', key: 'carRental', title: "Alquiler de coches en el aeropuerto de Marrakech-Menara", text: "Mostradores en el vestíbulo de llegadas, fianza y trampas del contrato.", cta: 'Comparar' },
       { icon: 'sim', key: 'esim', title: 'eSIM Marruecos', text: "Internet desde el aterrizaje para contactar con su conductor.", cta: 'Elegir una eSIM' },
       { icon: 'wallet', key: 'money', title: 'Dinero y cambio', text: "Cajeros, casas de cambio y qué billetes sacar.", cta: 'Leer la guía' },
       { icon: 'alert', key: 'compensation', title: 'Vuelo retrasado', text: "Hasta 400 € de compensación en la mayoría de vuelos desde Europa.", cta: 'Ver mis derechos' },

@@ -27,8 +27,8 @@ export default {
     intro: "The ways to leave Marrakech Menara Airport and start your stay well, with checked prices.",
     items: [
       { icon: 'van', key: 'bookTransfer', title: 'Private airport transfer', text: "Driver with your name, flight tracked, fixed price per vehicle from €27.", cta: 'Book' },
-      { icon: 'car', key: 'transfers', title: 'Taxi and bus 19', text: "Official day and night taxi fares, bus 19 timetable.", cta: 'See fares' },
-      { icon: 'tag', key: 'carRental', title: 'Car hire', text: "Counters in the arrivals hall, deposit and contract traps.", cta: 'Compare' },
+      { icon: 'car', key: 'transfers', title: "Taxi and bus 19 at Marrakech airport", text: "Official day and night taxi fares, bus 19 timetable.", cta: 'See fares' },
+      { icon: 'tag', key: 'carRental', title: "Car hire at Marrakech Menara Airport", text: "Counters in the arrivals hall, deposit and contract traps.", cta: 'Compare' },
       { icon: 'sim', key: 'esim', title: 'Morocco eSIM', text: "Data from the moment you land, to reach your driver.", cta: 'Choose an eSIM' },
       { icon: 'wallet', key: 'money', title: 'Money and exchange', text: "ATMs, exchange desks and which notes to withdraw.", cta: 'Read the guide' },
       { icon: 'alert', key: 'compensation', title: 'Delayed flight', text: "Up to €400 compensation on most flights from Europe.", cta: 'Check my rights' },

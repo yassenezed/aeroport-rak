@@ -27,8 +27,8 @@ export default {
     intro: "Zo verlaat u luchthaven Marrakech-Menara en begint u goed aan uw verblijf, met gecontroleerde prijzen.",
     items: [
       { icon: 'van', key: 'bookTransfer', title: "Privétransfer vanaf de luchthaven", text: "Chauffeur met naambord, vlucht gevolgd, vaste prijs per voertuig vanaf € 27.", cta: "Boeken" },
-      { icon: 'car', key: 'transfers', title: "Taxi en bus 19", text: "Officiële taxitarieven overdag en 's nachts, dienstregeling van bus 19.", cta: "Tarieven bekijken" },
-      { icon: 'tag', key: 'carRental', title: "Autohuur", text: "Balies in de aankomsthal, borg en valkuilen in het contract.", cta: "Vergelijken" },
+      { icon: 'car', key: 'transfers', title: "Taxi en bus 19 op luchthaven Marrakech", text: "Officiële taxitarieven overdag en 's nachts, dienstregeling van bus 19.", cta: "Tarieven bekijken" },
+      { icon: 'tag', key: 'carRental', title: "Autohuur op luchthaven Marrakech-Menara", text: "Balies in de aankomsthal, borg en valkuilen in het contract.", cta: "Vergelijken" },
       { icon: 'sim', key: 'esim', title: "eSIM Marokko", text: "Internet vanaf de landing om uw chauffeur te bereiken.", cta: "eSIM kiezen" },
       { icon: 'wallet', key: 'money', title: "Geld en wisselen", text: "Geldautomaten, wisselkantoren en welke biljetten u opneemt.", cta: "Gids lezen" },
       { icon: 'alert', key: 'compensation', title: "Vertraagde vlucht", text: "Tot € 400 compensatie op de meeste vluchten uit Europa.", cta: "Rechten checken" },

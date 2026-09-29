@@ -27,8 +27,8 @@ export default {
     intro: "So verlassen Sie den Flughafen Marrakesch-Menara und starten gut in den Aufenthalt – mit geprüften Preisen.",
     items: [
       { icon: 'van', key: 'bookTransfer', title: 'Privattransfer ab Flughafen', text: "Fahrer mit Namensschild, Flugverfolgung, Festpreis pro Fahrzeug ab 27 €.", cta: 'Buchen' },
-      { icon: 'car', key: 'transfers', title: 'Taxi und Bus 19', text: "Offizielle Taxitarife tagsüber und nachts, Fahrplan des Busses 19.", cta: 'Tarife ansehen' },
-      { icon: 'tag', key: 'carRental', title: 'Mietwagen', text: "Schalter in der Ankunftshalle, Kaution und Vertragsfallen.", cta: 'Vergleichen' },
+      { icon: 'car', key: 'transfers', title: "Taxi und Bus 19 am Flughafen Marrakesch", text: "Offizielle Taxitarife tagsüber und nachts, Fahrplan des Busses 19.", cta: 'Tarife ansehen' },
+      { icon: 'tag', key: 'carRental', title: "Mietwagen am Flughafen Marrakesch-Menara", text: "Schalter in der Ankunftshalle, Kaution und Vertragsfallen.", cta: 'Vergleichen' },
       { icon: 'sim', key: 'esim', title: 'eSIM Marokko', text: "Internet ab der Landung, um Ihren Fahrer zu erreichen.", cta: 'eSIM wählen' },
       { icon: 'wallet', key: 'money', title: 'Geld und Umtausch', text: "Geldautomaten, Wechselstuben und welche Scheine Sie abheben.", cta: 'Ratgeber lesen' },
       { icon: 'alert', key: 'compensation', title: 'Verspäteter Flug', text: "Bis zu 400 € Entschädigung bei den meisten Flügen aus Europa.", cta: 'Rechte prüfen' },

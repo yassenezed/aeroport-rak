@@ -22,8 +22,8 @@ export default {
     heading: "Planning your flight to or from Marrakech",
     intro: "Find the right ticket, then everything that happens on the ground once you land.",
     items: [
-      { icon: 'plane', key: 'flights', title: "Compare flights", text: "Prices of direct flights to Marrakech from your city.", cta: "Search flights" },
-      { icon: 'building', key: 'hotels', title: "Hotels in Marrakech", text: "Riads, palaces and hotels near the airport.", cta: "See hotels" },
+      { icon: 'plane', key: 'flights', title: "Flights to Marrakech airport", text: "Prices of direct flights to Marrakech from your city.", cta: "Search flights" },
+      { icon: 'building', key: 'hotels', title: "Hotels near Marrakech Menara Airport", text: "Riads, palaces and hotels near the airport.", cta: "See hotels" },
       { icon: 'van', key: 'bookTransfer', title: "Airport transfer", text: "Driver with your name, fixed price per vehicle from €27.", cta: "Book" },
       { icon: 'tag', key: 'carRental', title: "Car hire", text: "Desks in the terminal, prices and contract traps.", cta: "Compare" },
       { icon: 'plane-landing', key: 'arrivals', title: "Live arrivals", text: "Track a flight landing in Marrakech.", cta: "See arrivals" },
@@ -35,7 +35,7 @@ export default {
 <p>Nearly eight in ten destinations from Marrakech airport are in Europe. The <strong>United Kingdom</strong> is one of the best-connected markets: London is served from five airports (Gatwick, Heathrow, Luton, Stansted and Southend) by British Airways, easyJet, Ryanair, Jet2, TUI and Wizz Air, and there are direct flights from Manchester, Birmingham, Bristol, Liverpool, Newcastle, Leeds-Bradford, Edinburgh, Glasgow and Belfast. Dublin is served by Ryanair and, in winter, Aer Lingus.</p>
 <p><strong>France</strong> has around twenty cities, with Paris served by four airports, followed by <strong>Spain</strong>, <strong>Italy</strong> and <strong>Germany</strong>. Routes to Belgium, the Netherlands, Switzerland and Portugal run all year. Winter, the mildest season in Marrakech, adds flights to Scandinavia, Austria, Greece, Poland and the Baltics.</p>
 
-<h2>Domestic flights in Morocco from Marrakech</h2>
+<h2>Domestic flights from Marrakech Menara Airport</h2>
 <p>Royal Air Maroc links Marrakech with <strong>Casablanca</strong>, <strong>Dakhla</strong> and <strong>Laayoune</strong>. Ryanair flies to <strong>Fez</strong>, <strong>Tangier</strong>, <strong>Tetouan</strong>, <strong>Oujda</strong> and <strong>Errachidia</strong>, often at low fares. There are no scheduled flights to Agadir, Essaouira or Ouarzazate: those are reached by road, as shown in the table at the bottom of the page.</p>
 
 <h2>Long-haul flights: North America and the Middle East</h2>

@@ -17,7 +17,7 @@ export default {
     intro: "The route is the same at Terminal 1 and Terminal 2. Allow 1 to 1.5 hours between the terminal entrance and the gate at peak times.",
     items: [
       { icon: 'shield', title: "Entrance screening", text: "A first bag scan right at the terminal entrance, before the check-in desks. At busy times the queue forms outside." },
-      { icon: 'clipboard', title: "Check-in", text: "Desks usually open 3 hours before international flights and close 45 to 60 minutes before. Bags are dropped at the desk, even if you checked in online." },
+      { icon: 'clipboard', title: "Check-in at Marrakech Menara Airport", text: "Desks usually open 3 hours before international flights and close 45 to 60 minutes before. Bags are dropped at the desk, even if you checked in online." },
       { icon: 'passport', title: "Passport control", text: "The longest step. Passport and entry stamp are checked; you may be asked for an exit card, available on site." },
       { icon: 'shield-check', title: "Security", text: "Liquids limited to 100 ml per container in a clear bag; laptops and tablets out of the bag." },
       { icon: 'plane-takeoff', title: "Departure gate", text: "Duty-free shops, cafés and lounges, then the gate. Boarding usually starts about 45 minutes before take-off." },
@@ -29,8 +29,8 @@ export default {
     items: [
       { icon: 'van', key: 'bookTransfer', title: "Transfer to the airport", text: "Pick-up at your riad or hotel, fixed price even at 5 am.", cta: "Book" },
       { icon: 'car', key: 'transfers', title: "Taxi and bus 19", text: "Taxi fares from the medina and bus 19 times to the airport.", cta: "See fares" },
-      { icon: 'parking', key: 'parking', title: "Parking and drop-off", text: "Hourly and daily rates, and where to drop off a passenger.", cta: "See parking" },
-      { icon: 'star', key: 'vipLounges', title: "VIP lounges", text: "Access, prices and services of the airside lounges.", cta: "Discover" },
+      { icon: 'parking', key: 'parking', title: "Marrakech airport parking", text: "Hourly and daily rates, and where to drop off a passenger.", cta: "See parking" },
+      { icon: 'star', key: 'vipLounges', title: "Marrakech Menara Airport VIP lounges", text: "Access, prices and services of the airside lounges.", cta: "Discover" },
       { icon: 'shield-check', key: 'fastTrack', title: "Fast track", text: "Clear the checks through a dedicated lane at peak times.", cta: "Learn more" },
       { icon: 'alert', key: 'compensation', title: "Delayed or cancelled flight", text: "Your rights and possible compensation depending on the airline.", cta: "Check my rights" },
     ],

@@ -15,13 +15,13 @@ export default {
       items: [
         { icon: 'plane-landing', key: 'arrivals', title: 'Arrivées', text: "Les vols qui atterrissent à l'aéroport de Marrakech-Ménara, en temps réel.", cta: 'Voir les arrivées' },
         { icon: 'plane-takeoff', key: 'departures', title: 'Départs', text: 'Suivez les vols au départ de RAK et préparez votre passage au contrôle.', cta: 'Voir les départs' },
-        { icon: 'van', key: 'transfers', title: 'Transferts', text: "Taxi, bus 19 ou transfert privé : comment rejoindre la médina depuis l'aéroport.", cta: 'Comparer les options' },
+        { icon: 'van', key: 'transfers', title: "Transferts depuis l'aéroport de Marrakech", text: "Taxi, bus 19 ou transfert privé : comment rejoindre la médina depuis l'aéroport.", cta: 'Comparer les options' },
         { icon: 'car', key: 'carRental', title: 'Location de voiture', text: "Louer à l'aéroport : prix réels, caution et pièges à éviter.", cta: 'Comparer les prix' },
-        { icon: 'parking', key: 'parking', title: 'Parkings', text: "Tarifs du parking de l'aéroport, à l'heure, au jour et à la semaine.", cta: 'Voir les tarifs' },
+        { icon: 'parking', key: 'parking', title: "Parking de l'aéroport de Marrakech", text: "Tarifs du parking de l'aéroport, à l'heure, au jour et à la semaine.", cta: 'Voir les tarifs' },
         { icon: 'building', key: 'hotels', title: 'Hôtels', text: 'Où dormir à Marrakech selon votre quartier : médina, Guéliz, Hivernage.', cta: 'Trouver un hôtel' },
         { icon: 'plane', key: 'flights', title: 'Vols pas chers', text: "Compagnies, saisons et prix des vols vers l'aéroport.", cta: 'Chercher un vol' },
         { icon: 'sim', key: 'esim', title: 'eSIM Maroc', text: "Soyez connecté dès l'atterrissage, sans file au comptoir.", cta: 'Voir les offres' },
-        { icon: 'map', key: 'airportGuide', title: "Guide de l'aéroport", text: 'Terminaux, formalités, temps d\'attente et conseils pratiques.', cta: 'Lire le guide' },
+        { icon: 'map', key: 'airportGuide', title: "Guide de l'aéroport Marrakech-Ménara", text: 'Terminaux, formalités, temps d\'attente et conseils pratiques.', cta: 'Lire le guide' },
       ],
     },
     facts: [

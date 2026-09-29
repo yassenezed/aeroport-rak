@@ -17,7 +17,7 @@ export default {
     intro: "El recorrido es el mismo en la terminal 1 y en la terminal 2. Cuente de 1 h a 1 h 30 entre la entrada de la terminal y la puerta de embarque en horas punta.",
     items: [
       { icon: 'shield', title: "Control en la entrada", text: "Un primer escáner de equipaje en la misma entrada de la terminal, antes de los mostradores. En horas punta la cola se forma fuera." },
-      { icon: 'clipboard', title: "Facturación", text: "Mostradores abiertos normalmente 3 h antes de los vuelos internacionales y cerrados 45 a 60 min antes. Las maletas se dejan en el mostrador, aunque haya facturado en línea." },
+      { icon: 'clipboard', title: "Facturación en el aeropuerto de Marrakech-Menara", text: "Mostradores abiertos normalmente 3 h antes de los vuelos internacionales y cerrados 45 a 60 min antes. Las maletas se dejan en el mostrador, aunque haya facturado en línea." },
       { icon: 'passport', title: "Control de pasaportes", text: "La etapa más larga. Se revisan el pasaporte y el sello de entrada; pueden pedirle una tarjeta de salida, disponible allí mismo." },
       { icon: 'shield-check', title: "Seguridad", text: "Líquidos limitados a 100 ml por envase en una bolsa transparente; portátil y tableta fuera de la mochila." },
       { icon: 'plane-takeoff', title: "Puerta de embarque", text: "Tiendas libres de impuestos, cafeterías y salas VIP, y después la puerta. El embarque empieza unos 45 min antes del despegue." },
@@ -29,8 +29,8 @@ export default {
     items: [
       { icon: 'van', key: 'bookTransfer', title: "Traslado al aeropuerto", text: "Recogida en el riad o el hotel, precio fijo incluso a las 5 de la mañana.", cta: "Reservar" },
       { icon: 'car', key: 'transfers', title: "Taxi y autobús 19", text: "Precio del taxi desde la medina y horarios del autobús 19 al aeropuerto.", cta: "Ver tarifas" },
-      { icon: 'parking', key: 'parking', title: "Parking y parada breve", text: "Tarifas por hora y por día, y dónde dejar a un pasajero.", cta: "Ver el parking" },
-      { icon: 'star', key: 'vipLounges', title: "Salas VIP", text: "Acceso, precios y servicios de las salas de la zona de embarque.", cta: "Descubrir" },
+      { icon: 'parking', key: 'parking', title: "Parking del aeropuerto de Marrakech", text: "Tarifas por hora y por día, y dónde dejar a un pasajero.", cta: "Ver el parking" },
+      { icon: 'star', key: 'vipLounges', title: "Salas VIP del aeropuerto de Marrakech-Menara", text: "Acceso, precios y servicios de las salas de la zona de embarque.", cta: "Descubrir" },
       { icon: 'shield-check', key: 'fastTrack', title: "Fast track", text: "Pasar los controles por una fila exclusiva en horas punta.", cta: "Más información" },
       { icon: 'alert', key: 'compensation', title: "Vuelo retrasado o cancelado", text: "Sus derechos y la posible compensación según la compañía.", cta: "Ver mis derechos" },
     ],

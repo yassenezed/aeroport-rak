@@ -22,8 +22,8 @@ export default {
     heading: "Ihren Flug nach oder ab Marrakesch planen",
     intro: "Das richtige Ticket finden und alles, was nach der Landung am Boden passiert.",
     items: [
-      { icon: 'plane', key: 'flights', title: "Flüge vergleichen", text: "Preise für Direktflüge nach Marrakesch ab Ihrer Stadt.", cta: "Flug suchen" },
-      { icon: 'building', key: 'hotels', title: "Hotels in Marrakesch", text: "Riads, Palasthotels und Hotels nahe dem Flughafen.", cta: "Hotels ansehen" },
+      { icon: 'plane', key: 'flights', title: "Flüge zum Flughafen Marrakesch", text: "Preise für Direktflüge nach Marrakesch ab Ihrer Stadt.", cta: "Flug suchen" },
+      { icon: 'building', key: 'hotels', title: "Hotels nahe Flughafen Marrakesch-Menara", text: "Riads, Palasthotels und Hotels nahe dem Flughafen.", cta: "Hotels ansehen" },
       { icon: 'van', key: 'bookTransfer', title: "Flughafentransfer", text: "Fahrer mit Namensschild, Festpreis pro Fahrzeug ab 27 €.", cta: "Buchen" },
       { icon: 'tag', key: 'carRental', title: "Mietwagen", text: "Schalter im Terminal, Preise und Vertragsfallen.", cta: "Vergleichen" },
       { icon: 'plane-landing', key: 'arrivals', title: "Ankünfte live", text: "Einen in Marrakesch landenden Flug verfolgen.", cta: "Ankünfte ansehen" },
@@ -35,7 +35,7 @@ export default {
 <p>Fast acht von zehn Zielen ab dem Flughafen Marrakesch liegen in Europa. Aus <strong>Deutschland</strong> fliegen Discover Airlines ab Frankfurt und München, easyJet ab Hamburg, Ryanair ab Berlin, Köln/Bonn, Frankfurt-Hahn und Weeze, Eurowings saisonal ab Düsseldorf und Transavia saisonal ab Berlin. Aus der <strong>Schweiz</strong> geht es ab Genf, Basel-Mülhausen und Zürich, aus <strong>Österreich</strong> im Winter mit Austrian ab Wien.</p>
 <p><strong>Frankreich</strong> hat rund zwanzig Städte, Paris allein vier Flughäfen, gefolgt von <strong>Großbritannien</strong>, <strong>Spanien</strong> und <strong>Italien</strong>. Verbindungen nach Belgien, in die Niederlande und nach Portugal gibt es ganzjährig. Der Winter, die mildeste Jahreszeit in Marrakesch, bringt zusätzliche Flüge nach Skandinavien, Griechenland, Polen und ins Baltikum.</p>
 
-<h2>Inlandsflüge in Marokko ab Marrakesch</h2>
+<h2>Inlandsflüge ab Flughafen Marrakesch-Menara</h2>
 <p>Royal Air Maroc verbindet Marrakesch mit <strong>Casablanca</strong>, <strong>Dakhla</strong> und <strong>Laâyoune</strong>. Ryanair fliegt nach <strong>Fès</strong>, <strong>Tanger</strong>, <strong>Tétouan</strong>, <strong>Oujda</strong> und <strong>Errachidia</strong>, oft sehr günstig. Nach Agadir, Essaouira oder Ouarzazate gibt es keine Linienflüge: Diese Städte erreichen Sie auf der Straße, siehe Tabelle unten.</p>
 
 <h2>Langstreckenflüge: Nordamerika und Naher Osten</h2>

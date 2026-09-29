@@ -17,7 +17,7 @@ export default {
     intro: "Der Weg ist in Terminal 1 und Terminal 2 derselbe. Rechnen Sie zu Spitzenzeiten mit 1 bis 1,5 Stunden vom Terminaleingang bis zum Gate.",
     items: [
       { icon: 'shield', title: "Kontrolle am Eingang", text: "Ein erster Gepäckscan direkt am Terminaleingang, noch vor den Schaltern. Zu Stoßzeiten bildet sich die Schlange draußen." },
-      { icon: 'clipboard', title: "Check-in", text: "Schalter öffnen meist 3 Stunden vor internationalen Flügen und schließen 45 bis 60 Minuten vorher. Gepäck wird am Schalter abgegeben, auch nach Online-Check-in." },
+      { icon: 'clipboard', title: "Check-in am Flughafen Marrakesch-Menara", text: "Schalter öffnen meist 3 Stunden vor internationalen Flügen und schließen 45 bis 60 Minuten vorher. Gepäck wird am Schalter abgegeben, auch nach Online-Check-in." },
       { icon: 'passport', title: "Passkontrolle", text: "Der längste Schritt. Reisepass und Einreisestempel werden geprüft; eventuell wird eine Ausreisekarte verlangt, die vor Ort ausliegt." },
       { icon: 'shield-check', title: "Sicherheitskontrolle", text: "Flüssigkeiten bis 100 ml pro Behälter in einem durchsichtigen Beutel; Laptop und Tablet aus der Tasche nehmen." },
       { icon: 'plane-takeoff', title: "Abfluggate", text: "Duty-free-Shops, Cafés und Lounges, dann das Gate. Das Boarding beginnt etwa 45 Minuten vor dem Start." },
@@ -29,8 +29,8 @@ export default {
     items: [
       { icon: 'van', key: 'bookTransfer', title: "Transfer zum Flughafen", text: "Abholung am Riad oder Hotel, Festpreis auch um 5 Uhr morgens.", cta: "Buchen" },
       { icon: 'car', key: 'transfers', title: "Taxi und Bus 19", text: "Taxipreise ab der Medina und Fahrzeiten des Busses 19 zum Flughafen.", cta: "Tarife ansehen" },
-      { icon: 'parking', key: 'parking', title: "Parken und Kurzhalt", text: "Stunden- und Tagestarife und wo Sie einen Passagier absetzen.", cta: "Parken ansehen" },
-      { icon: 'star', key: 'vipLounges', title: "VIP-Lounges", text: "Zugang, Preise und Leistungen der Lounges im Abflugbereich.", cta: "Entdecken" },
+      { icon: 'parking', key: 'parking', title: "Parken am Flughafen Marrakesch", text: "Stunden- und Tagestarife und wo Sie einen Passagier absetzen.", cta: "Parken ansehen" },
+      { icon: 'star', key: 'vipLounges', title: "VIP-Lounges am Flughafen Marrakesch-Menara", text: "Zugang, Preise und Leistungen der Lounges im Abflugbereich.", cta: "Entdecken" },
       { icon: 'shield-check', key: 'fastTrack', title: "Fast Track", text: "Zu Spitzenzeiten über eine eigene Spur durch die Kontrollen.", cta: "Mehr erfahren" },
       { icon: 'alert', key: 'compensation', title: "Verspätung oder Annullierung", text: "Ihre Rechte und mögliche Entschädigung je nach Airline.", cta: "Rechte prüfen" },
     ],

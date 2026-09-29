@@ -14,13 +14,13 @@ export default {
     items: [
       { icon: "plane-landing", key: "arrivals", title: "Ankünfte", text: "Die Flüge, die am Flughafen landen, in Echtzeit.", cta: "Ankünfte ansehen" },
       { icon: "plane-takeoff", key: "departures", title: "Abflüge", text: "Verfolgen Sie Abflüge ab RAK und planen Sie die Passkontrolle.", cta: "Abflüge ansehen" },
-      { icon: "van", key: "transfers", title: "Transfers", text: "Taxi, Bus 19 oder Privattransfer: so kommen Sie in die Medina.", cta: "Optionen vergleichen" },
+      { icon: "van", key: "transfers", title: "Transfers vom Flughafen Marrakesch", text: "Taxi, Bus 19 oder Privattransfer: so kommen Sie in die Medina.", cta: "Optionen vergleichen" },
       { icon: "car", key: "carRental", title: "Mietwagen", text: "Mieten am Flughafen: echte Preise, Kaution, Fallen.", cta: "Preise vergleichen" },
-      { icon: "parking", key: "parking", title: "Parken", text: "Parktarife am Flughafen pro Stunde, Tag und Woche.", cta: "Tarife ansehen" },
+      { icon: "parking", key: "parking", title: "Parken am Flughafen Marrakesch", text: "Parktarife am Flughafen pro Stunde, Tag und Woche.", cta: "Tarife ansehen" },
       { icon: "building", key: "hotels", title: "Hotels", text: "Wo in Marrakesch übernachten: Medina, Guéliz oder Hivernage.", cta: "Hotel finden" },
       { icon: "plane", key: "flights", title: "Günstige Flüge", text: "Airlines, Saisons und Preise für Flüge nach Marrakesch.", cta: "Flug suchen" },
       { icon: "sim", key: "esim", title: "eSIM Marokko", text: "Online ab der Landung, ohne Schlange am Schalter.", cta: "Angebote ansehen" },
-      { icon: "map", key: "airportGuide", title: "Flughafen-Guide", text: "Terminals, Formalitäten, Wartezeiten und Praxistipps.", cta: "Guide lesen" },
+      { icon: "map", key: "airportGuide", title: "Ratgeber Flughafen Marrakesch-Menara", text: "Terminals, Formalitäten, Wartezeiten und Praxistipps.", cta: "Guide lesen" },
     ],
   },
   facts: [

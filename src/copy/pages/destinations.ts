@@ -23,8 +23,8 @@ export default {
       heading: "Organiser son vol vers ou depuis Marrakech",
       intro: "Trouver le bon billet, puis tout ce qui se passe au sol une fois arrivé.",
       items: [
-        { icon: 'plane', key: 'flights', title: "Comparer les vols", text: "Prix des vols directs vers Marrakech depuis votre ville.", cta: "Chercher un vol" },
-        { icon: 'building', key: 'hotels', title: "Hôtels à Marrakech", text: "Riads, palaces et hôtels près de l'aéroport.", cta: "Voir les hôtels" },
+        { icon: 'plane', key: 'flights', title: "Vols vers l'aéroport de Marrakech", text: "Prix des vols directs vers Marrakech depuis votre ville.", cta: "Chercher un vol" },
+        { icon: 'building', key: 'hotels', title: "Hôtels près de l'aéroport Marrakech-Ménara", text: "Riads, palaces et hôtels près de l'aéroport.", cta: "Voir les hôtels" },
         { icon: 'van', key: 'bookTransfer', title: "Transfert depuis l'aéroport", text: "Chauffeur à votre nom, prix fixe par véhicule dès 27 €.", cta: "Réserver" },
         { icon: 'tag', key: 'carRental', title: "Location de voiture", text: "Comptoirs au terminal, prix et pièges du contrat.", cta: "Comparer" },
         { icon: 'plane-landing', key: 'arrivals', title: "Arrivées en direct", text: "Suivre un vol qui atterrit à Marrakech.", cta: "Voir les arrivées" },
@@ -36,7 +36,7 @@ export default {
 <p>Près de huit destinations sur dix au départ de l'aéroport de Marrakech sont européennes. <strong>La France arrive en tête</strong> avec une vingtaine de villes : Paris par quatre aéroports (Charles-de-Gaulle, Orly, Beauvais et Vatry), mais aussi Lyon, Marseille, Nice, Toulouse, Bordeaux, Nantes, Lille, Strasbourg, Montpellier, Rennes ou Brest. Le <strong>Royaume-Uni</strong> suit avec Londres (cinq aéroports), Manchester, Birmingham, Bristol, Édimbourg ou Glasgow, puis l'<strong>Espagne</strong>, l'<strong>Italie</strong> et l'<strong>Allemagne</strong>.</p>
 <p>Les lignes vers la Belgique, les Pays-Bas, la Suisse et le Portugal sont assurées toute l'année. L'hiver, la saison la plus douce à Marrakech, ajoute des vols vers la Scandinavie, l'Autriche, la Grèce, la Pologne ou les pays baltes.</p>
 
-<h2>Vols intérieurs au Maroc depuis Marrakech</h2>
+<h2>Vols intérieurs au départ de l'aéroport de Marrakech-Ménara</h2>
 <p>Royal Air Maroc relie Marrakech à <strong>Casablanca</strong>, <strong>Dakhla</strong> et <strong>Laâyoune</strong>. Ryanair assure des vols intérieurs vers <strong>Fès</strong>, <strong>Tanger</strong>, <strong>Tétouan</strong>, <strong>Oujda</strong> et <strong>Errachidia</strong>, souvent à petit prix. Il n'existe pas de vol régulier vers Agadir, Essaouira ou Ouarzazate : ces villes se rejoignent par la route, comme le montre le tableau en bas de page.</p>
 
 <h2>Vols long-courriers : Amérique du Nord et Moyen-Orient</h2>

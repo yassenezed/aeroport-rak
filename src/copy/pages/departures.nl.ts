@@ -17,7 +17,7 @@ export default {
     intro: "De route is dezelfde in terminal 1 en terminal 2. Reken in de spits op 1 tot 1,5 uur tussen de ingang van de terminal en de gate.",
     items: [
       { icon: 'shield', title: "Controle bij de ingang", text: "Een eerste bagagescan meteen bij de ingang van de terminal, nog vóór de incheckbalies. In de spits staat de rij buiten." },
-      { icon: 'clipboard', title: "Inchecken", text: "Balies openen meestal 3 uur voor internationale vluchten en sluiten 45 tot 60 minuten vooraf. Bagage geeft u af aan de balie, ook na online inchecken." },
+      { icon: 'clipboard', title: "Inchecken op luchthaven Marrakech-Menara", text: "Balies openen meestal 3 uur voor internationale vluchten en sluiten 45 tot 60 minuten vooraf. Bagage geeft u af aan de balie, ook na online inchecken." },
       { icon: 'passport', title: "Paspoortcontrole", text: "De langste stap. Paspoort en inreisstempel worden gecontroleerd; mogelijk wordt een vertrekformulier gevraagd, dat ter plaatse ligt." },
       { icon: 'shield-check', title: "Veiligheidscontrole", text: "Vloeistoffen tot 100 ml per verpakking in een doorzichtig zakje; laptop en tablet uit de tas." },
       { icon: 'plane-takeoff', title: "Gate", text: "Taxfreewinkels, cafés en lounges, daarna de gate. Het instappen begint ongeveer 45 minuten voor vertrek." },
@@ -29,8 +29,8 @@ export default {
     items: [
       { icon: 'van', key: 'bookTransfer', title: "Transfer naar de luchthaven", text: "Ophalen bij riad of hotel, vaste prijs, ook om 5 uur 's ochtends.", cta: "Boeken" },
       { icon: 'car', key: 'transfers', title: "Taxi en bus 19", text: "Taxiprijzen vanuit de medina en dienstregeling van bus 19 naar de luchthaven.", cta: "Tarieven bekijken" },
-      { icon: 'parking', key: 'parking', title: "Parkeren en kiss & ride", text: "Tarieven per uur en per dag, en waar u iemand afzet.", cta: "Parkeren bekijken" },
-      { icon: 'star', key: 'vipLounges', title: "VIP-lounges", text: "Toegang, prijzen en voorzieningen van de lounges na de controle.", cta: "Ontdekken" },
+      { icon: 'parking', key: 'parking', title: "Parkeren op luchthaven Marrakech", text: "Tarieven per uur en per dag, en waar u iemand afzet.", cta: "Parkeren bekijken" },
+      { icon: 'star', key: 'vipLounges', title: "VIP-lounges op luchthaven Marrakech-Menara", text: "Toegang, prijzen en voorzieningen van de lounges na de controle.", cta: "Ontdekken" },
       { icon: 'shield-check', key: 'fastTrack', title: "Fast track", text: "In de spits via een aparte rij door de controles.", cta: "Meer weten" },
       { icon: 'alert', key: 'compensation', title: "Vertraging of annulering", text: "Uw rechten en mogelijke compensatie per maatschappij.", cta: "Rechten checken" },
     ],
