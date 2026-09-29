@@ -122,6 +122,33 @@ if (page.faqs?.length) {
 
   {page.destinations && <DestinationsExplorer locale={locale} copy={page.destinations} />}
 
+  {page.cardSections?.map((sec, si) => (
+    <section class={`section-block card-section card-section--${sec.variant}${si % 2 ? ' section-block--alt' : ''}`}>
+      <div class="container">
+        <header class="home-services__head">
+          {sec.eyebrow && <span class="eyebrow">{sec.eyebrow}</span>}
+          <h2>{sec.heading}</h2>
+          {sec.intro && <p>{sec.intro}</p>}
+        </header>
+        <ul class={`card-grid card-grid--${sec.variant}`}>
+          {sec.items.map((it) => (
+            <li class={`feat-card feat-card--${sec.variant}`}>
+              <span class="feat-card__icon"><Icon name={it.icon} size={sec.variant === 'feature' ? 24 : 20} /></span>
+              <div class="feat-card__body">
+                <h3>{it.title}</h3>
+                <p>{it.text}</p>
+                {it.tags && it.tags.length > 0 && (
+                  <ul class="feat-card__tags">{it.tags.map((tg) => <li>{tg}</li>)}</ul>
+                )}
+                {it.link && <a class="feat-card__link" href={pathFor(it.link.key, locale)}>{it.link.label} <span aria-hidden="true">{locale === 'ar' ? '←' : '→'}</span></a>}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  ))}
+
   {page.steps && (
     <section class="section-block page-steps">
       <div class="container">
@@ -168,6 +195,20 @@ if (page.faqs?.length) {
       <article class="prose" set:html={page.body} />
     </div>
   </section>
+
+  {page.spotlight && (
+    <section class="section-block">
+      <div class="container">
+        <aside class="spotlight">
+          <span class="spotlight__icon"><Icon name={page.spotlight.icon} size={26} /></span>
+          <div>
+            <h2>{page.spotlight.heading}</h2>
+            <p set:html={page.spotlight.text} />
+          </div>
+        </aside>
+      </div>
+    </section>
+  )}
 
   {page.faqs && page.faqs.length > 0 && (
     <section class="section-block section-block--alt">

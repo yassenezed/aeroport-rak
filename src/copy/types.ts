@@ -28,6 +28,16 @@ export interface LocalizedPage {
   highlights?: { icon: string; value: string; label: string; live?: 'clock' | 'weather' }[];
   /** Page Destinations : titres des blocs compagnies, tableau et listes par région. */
   destinations?: { airlinesHeading: string; airlinesIntro: string; tableHeading: string; tableIntro: string; regionsHeading: string };
+  /** Blocs de cartes (services, commodités…) : `feature` = grandes cartes avec étiquettes, `compact` = grille dense. */
+  cardSections?: {
+    eyebrow?: string;
+    heading: string;
+    intro?: string;
+    variant: 'feature' | 'compact';
+    items: { icon: string; title: string; text: string; tags?: string[]; link?: { key: string; label: string } }[];
+  }[];
+  /** Encadré mis en avant en fin de page (projets, actualité). */
+  spotlight?: { icon: string; heading: string; text: string };
   /** Parcours en étapes numérotées avec icône. */
   steps?: { heading: string; intro?: string; items: { icon: string; title: string; text: string }[] };
   /** Grille de cartes de services (icône, titre, texte, lien vers une route). */
