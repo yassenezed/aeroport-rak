@@ -32,10 +32,8 @@ const path = pathFor(routeKey, locale);
 const canonical = `${site.url}${path}`;
 const alternates = alternatesFor(routeKey);
 const xDefault = alternates.find((a) => a.locale === DEFAULT_LOCALE)!;
-// Le suffixe de marque n'est ajouté que s'il tient dans la limite affichée par
-// Google (~60 caractères) : au-delà, il serait tronqué et coûterait du sens.
-const withBrand = `${title} | ${site.name}`;
-const fullTitle = title.includes(site.name) ? title : withBrand.length <= 60 ? withBrand : title;
+// Pas de suffixe de marque : le title reste exactement celui défini pour la page.
+const fullTitle = title;
 const ogImageUrl = `${site.url}${ogImage ?? site.defaultOgImage}`;
 const dir = isRtl(locale) ? 'rtl' : 'ltr';
 const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
