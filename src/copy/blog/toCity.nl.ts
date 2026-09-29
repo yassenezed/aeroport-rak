@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "Van luchthaven Marrakech naar het centrum: de opties",
-  description: "Van de luchthaven naar het centrum van Marrakech: taxi, transfer, bus 19 of huurauto, met echte prijzen, reistijden en de medinapoorten.",
+  title: "Van luchthaven Marrakech-Menara naar het centrum: de opties",
+  description: "Van luchthaven Marrakech-Menara naar het centrum: taxi, transfer, bus 19 of huurauto, met echte prijzen, reistijden en medinapoorten.",
   eyebrow: "Onderweg",
   h1: "Van de RAK naar het centrum van Marrakech",
   lede: "Zes kilometer, vier opties en één echte moeilijkheid: de medina is niet met de auto te doorkruisen. Hier wat elke oplossing kost en welke bij uw landingstijd past.",

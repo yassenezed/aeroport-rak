@@ -2,8 +2,8 @@ import type { PageContent } from '../types';
 
 export default {
   fr: {
-    title: 'Location de minivan 7 à 9 places à Marrakech',
-    description: "Louer un monospace ou un minivan à l'aéroport de Marrakech : capacités réelles, bagages, prix, et comparaison avec un van privé avec chauffeur.",
+    title: "Minivan 7 à 9 places à l'aéroport Marrakech-Ménara",
+    description: "Louer un monospace ou un minivan à l'aéroport de Marrakech-Ménara : capacités réelles, bagages, prix, et comparaison avec un van privé avec chauffeur.",
     eyebrow: 'Marrakech Ménara · Grand format',
     h1: 'Louer un minivan à l\'aéroport de Marrakech',
     lede: "À cinq et plus, le problème n'est pas le nombre de sièges : c'est le coffre. Voici ce que contiennent réellement les monospaces disponibles au RAK, ce qu'ils coûtent, et quand un van avec chauffeur revient moins cher.",

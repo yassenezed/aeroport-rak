@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'eSIM Marokko: ab der Landung online',
-  description: 'eSIM für Marokko: wie Sie beim Aussteigen in Marrakesch sofort verbunden sind, im Vergleich zur lokalen SIM-Karte und zum EU-Roaming.',
+  title: "eSIM Marokko: online ab Flughafen Marrakesch-Menara",
+  description: "eSIM für Marokko: sofort online beim Aussteigen am Flughafen Marrakesch-Menara, im Vergleich zur lokalen SIM und zum EU-Roaming.",
   eyebrow: 'Marrakesch Menara · Verbindung',
   h1: 'eSIM Marokko: ab der Landung verbunden',
   lede: "Marokko gehört nicht zur EU-Roamingzone: Ihr Tarif wird dort entweder sehr teuer oder unbrauchbar. Hier die drei Wege, das zu lösen, und derjenige, der Ihnen bei der Ankunft zwanzig Minuten spart.",

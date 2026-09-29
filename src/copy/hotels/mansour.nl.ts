@@ -1,8 +1,8 @@
 import type { LocalizedHotel } from '../types';
 
 export default {
-  title: "Royal Mansour Marrakech: beoordeling en bereikbaarheid",
-  description: "Royal Mansour: privériads in een ommuurd landgoed, uitzonderlijke service en een kwartier rijden van luchthaven Marrakech.",
+  title: "Royal Mansour: vanaf luchthaven Marrakech-Menara",
+  description: "Royal Mansour: privériads in een ommuurd landgoed, uitzonderlijke service en een kwartier rijden van luchthaven Marrakech-Menara.",
   eyebrow: "Marrakech · Hotel",
   h1: "Royal Mansour",
   lede: "Geen kamers, maar privériads van meerdere verdiepingen, samengebracht in een ommuurd landgoed binnen de stadsmuren. Het meest bijzondere adres van Marrakech, en vermoedelijk het duurste.",

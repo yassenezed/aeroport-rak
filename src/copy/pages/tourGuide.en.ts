@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Hiring a guide in Marrakech: is it worth it?',
-  description: 'Hiring a guide in Marrakech: rates, official guides, medina tours, Atlas excursions and the mistakes to avoid from day one.',
+  title: "Hiring a tour guide from Marrakech Menara Airport",
+  description: "Hiring a guide from Marrakech Menara Airport onwards: rates, official guides, medina tours, Atlas excursions and mistakes to avoid.",
   eyebrow: 'Marrakech · Guided tours',
   h1: 'Hiring a guide in Marrakech',
   lede: "Marrakech is a hard city to read on your own on the first day. An official guide, for a well-chosen half day, saves more time and money than it costs — provided you know what you are buying.",

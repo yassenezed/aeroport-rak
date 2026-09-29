@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Wo in Marrakesch übernachten: Viertel, Riads, Hotels',
-  description: 'Die richtige Unterkunft in Marrakesch: Medina, Guéliz, Hivernage oder Palmeraie, Riad oder Hotel, und unsere Bewertungen von fünf Adressen.',
+  title: "Hotels nahe Flughafen Marrakesch-Menara und in der Stadt",
+  description: "Übernachten in Marrakesch, in der Stadt oder nahe Flughafen Marrakesch-Menara: Medina, Guéliz, Hivernage oder Palmeraie, Riad oder Hotel.",
   eyebrow: 'Marrakesch · Unterkunft',
   h1: 'Wo in Marrakesch übernachten',
   lede: "Die Wahl des Viertels zählt mehr als die des Hauses: Sie bestimmt Ihre Fahrzeiten, Ihren Geräuschpegel und die Art, wie Sie die Stadt erleben. So entscheiden Sie – und hier unsere Bewertungen von fünf Adressen.",

@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Automatic car hire in Marrakech',
-  description: 'Hiring an automatic at Marrakech Airport: real availability, the premium, city driving and advice for your first time at the wheel in Morocco.',
+  title: "Automatic car hire at Marrakech Menara Airport",
+  description: "Hiring an automatic at Marrakech Menara Airport: real availability, the premium, city driving and advice for your first time at the wheel in Morocco.",
   eyebrow: 'Marrakech Menara · Easy drive',
   h1: 'Easy-drive hire: automatics in Marrakech',
   lede: "In Morocco, manual is the norm and automatics have to be reserved. If you have never driven here, that choice changes more than you might think — starting with your first hour in traffic.",

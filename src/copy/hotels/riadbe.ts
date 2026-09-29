@@ -2,8 +2,8 @@ import type { HotelContent } from '../types';
 
 export default {
   fr: {
-    title: 'Riad BE Marrakech : avis et accès aéroport',
-    description: "Riad BE : l'expérience médina par Bab Doukkala, l'un des accès les plus simples de Marrakech quand on arrive avec des bagages. Avis, accès et conseils.",
+    title: "Riad BE : avis et accès depuis l'aéroport Marrakech-Ménara",
+    description: "Riad BE, en médina par Bab Doukkala : l'un des accès les plus simples depuis l'aéroport de Marrakech-Ménara avec des bagages. Avis et conseils.",
     eyebrow: 'Marrakech · Riad',
     h1: 'Riad BE',
     lede: "L'expérience de la médina, par la porte la plus commode. Patio, bassin et terrasse, mais à Bab Doukkala : l'un des rares riads où l'arrivée avec des valises ne vire pas à l'expédition.",

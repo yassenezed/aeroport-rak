@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Taxis en Marrakech: tarifas y buenos reflejos',
-  description: 'Taxis en Marrakech: tarifas publicadas en el aeropuerto de día y de noche, petit o grand taxi, taxímetro, pago en efectivo y trampas que evitar.',
+  title: "Taxi en el aeropuerto de Marrakech-Menara: tarifas",
+  description: "Taxis en el aeropuerto de Marrakech-Menara y en la ciudad: tarifas de día y de noche, petit o grand taxi, taxímetro, efectivo y trampas.",
   eyebrow: 'Transportes',
   h1: 'Taxis en Marrakech: tarifas y buenos reflejos',
   lede: "Marrakech publica sus tarifas de taxi en la parada del aeropuerto, y es una buena noticia. Queda saber leerlas, elegir el tamaño de coche adecuado y ponerse de acuerdo antes de que las maletas entren en el maletero.",

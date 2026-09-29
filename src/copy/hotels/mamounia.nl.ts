@@ -1,8 +1,8 @@
 import type { LocalizedHotel } from '../types';
 
 export default {
-  title: "La Mamounia Marrakech: beoordeling en bereikbaarheid",
-  description: "La Mamounia: een eeuw geschiedenis, uitgestrekte tuinen aan de rand van de medina, een kwartier rijden van luchthaven Marrakech.",
+  title: "La Mamounia: vanaf luchthaven Marrakech-Menara",
+  description: "La Mamounia: een eeuw geschiedenis, uitgestrekte tuinen aan de rand van de medina, een kwartier rijden van luchthaven Marrakech-Menara.",
   eyebrow: "Marrakech · Hotel",
   h1: "La Mamounia",
   lede: "Het historische grand hotel van Marrakech, vijf kilometer van de terminal, op het scharnier tussen stadsmuur en stad: de medina te voet, toegang met de auto zonder beperking.",

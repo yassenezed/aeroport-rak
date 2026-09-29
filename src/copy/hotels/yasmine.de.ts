@@ -1,8 +1,8 @@
 import type { LocalizedHotel } from '../types';
 
 export default {
-  title: 'Riad Yasmine Marrakesch: Bewertung und Anfahrt',
-  description: 'Riad Yasmine: der meistfotografierte Innenhof der Medina von Marrakesch, im Maßstab eines Hauses. Anfahrt vom Flughafen, Absetztor und Logistik.',
+  title: "Riad Yasmine: Anfahrt vom Flughafen Marrakesch-Menara",
+  description: "Riad Yasmine, der meistfotografierte Innenhof der Medina: Anfahrt vom Flughafen Marrakesch-Menara, Absetztor und Logistik.",
   eyebrow: 'Marrakesch · Riad',
   h1: 'Riad Yasmine',
   lede: "Der grüne Innenhof der Medina – und die Logistik, die dazugehört. Ein echtes Riad im häuslichen Maßstab, bei dem die Ankunft vorbereitet sein will, weil das Auto an einem Tor hält.",

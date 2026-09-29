@@ -2,8 +2,8 @@ import type { HotelContent } from '../types';
 
 export default {
   fr: {
-    title: 'Es Saadi Marrakech : avis et accès aéroport',
-    description: "Es Saadi : un parc de plusieurs hectares à l'Hivernage, plusieurs catégories d'hébergement et dix minutes seulement depuis l'aéroport de Marrakech.",
+    title: "Es Saadi : avis et accès depuis l'aéroport Marrakech-Ménara",
+    description: "Es Saadi : un parc de plusieurs hectares à l'Hivernage, plusieurs catégories d'hébergement et dix minutes seulement depuis l'aéroport de Marrakech-Ménara.",
     eyebrow: 'Marrakech · Hôtel',
     h1: 'Es Saadi',
     lede: "Un domaine familial de l'Hivernage, à dix minutes du terminal : c'est l'adresse la plus rapide à rejoindre depuis l'aéroport, et l'une des rares à proposer un vrai parc en pleine ville.",

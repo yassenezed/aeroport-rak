@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Del aeropuerto de Marrakech al centro: las opciones',
-  description: 'Llegar al centro de Marrakech desde el aeropuerto: taxi, traslado, autobús 19 o alquiler, con precios reales, duraciones y las puertas de la medina.',
+  title: "Del aeropuerto de Marrakech-Menara al centro: las opciones",
+  description: "Del aeropuerto de Marrakech-Menara al centro: taxi, traslado, autobús 19 o alquiler, con precios reales, duraciones y puertas de la medina.",
   eyebrow: 'Transportes',
   h1: 'Del aeropuerto RAK al centro de Marrakech',
   lede: "Seis kilómetros, cuatro opciones y una sola dificultad real: la medina no se atraviesa en coche. Esto es lo que cuesta cada solución y cuál corresponde a su hora de aterrizaje.",

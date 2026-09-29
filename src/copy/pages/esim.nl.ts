@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "eSIM Marokko: online vanaf de landing",
-  description: "eSIM voor Marokko: hoe u meteen verbonden bent bij het uitstappen in Marrakech, vergeleken met een lokale simkaart en met EU-roaming.",
+  title: "eSIM Marokko: online vanaf luchthaven Marrakech-Menara",
+  description: "eSIM voor Marokko: meteen online bij het uitstappen op luchthaven Marrakech-Menara, vergeleken met een lokale simkaart en roaming.",
   eyebrow: "Marrakech Menara · Verbinding",
   h1: "eSIM Marokko: verbonden vanaf de landing",
   lede: "Marokko valt buiten de Europese roamingzone: uw bundel wordt daar óf heel duur óf onbruikbaar. Hier de drie manieren om dat op te lossen, en de manier die u bij aankomst twintig minuten scheelt.",

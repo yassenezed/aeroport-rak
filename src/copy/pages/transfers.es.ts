@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Traslado aeropuerto de Marrakech: opciones y precios',
-  description: 'Traslado, taxi, autobús 19 o alquiler desde el aeropuerto de Marrakech: tarifas reales en dirhams y euros, puertas de la medina y llegadas nocturnas.',
+  title: "Traslado aeropuerto de Marrakech-Menara: opciones y precios",
+  description: "Traslado, taxi, autobús 19 o alquiler desde el aeropuerto de Marrakech-Menara: tarifas reales en dirhams y euros, puertas de la medina y llegadas nocturnas.",
   eyebrow: 'Marrakech Menara · Traslados',
   h1: 'Traslados desde el aeropuerto de Marrakech',
   lede: "Seis kilómetros hasta Jemaa el-Fna: el trayecto es corto, el problema son los últimos cien metros, ya que ningún coche entra en los callejones de la medina. Aquí están las cuatro formas de salir de la terminal, lo que cuestan de verdad y cuál corresponde a su vuelo.",

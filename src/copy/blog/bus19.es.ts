@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Autobús 19 ALSA: aeropuerto de Marrakech ↔ Jemaa el-Fna',
-  description: 'El autobús 19 entre el aeropuerto de Marrakech y Jemaa el-Fna: tarifa, horarios, frecuencia, duración, dónde cogerlo y cuándo no conviene.',
+  title: "Autobús 19: aeropuerto de Marrakech-Menara ↔ Jemaa el-Fna",
+  description: "El autobús 19 entre el aeropuerto de Marrakech-Menara y Jemaa el-Fna: tarifa, horarios, frecuencia, duración, dónde cogerlo y cuándo no conviene.",
   eyebrow: 'Transportes',
   h1: 'El autobús 19 entre el aeropuerto de Marrakech y el centro',
   lede: "Treinta dirhams para llegar a Jemaa el-Fna: es el transporte más barato desde el RAK y funciona bien, a condición de aterrizar antes de las 23 h y de poder cargar con el equipaje.",

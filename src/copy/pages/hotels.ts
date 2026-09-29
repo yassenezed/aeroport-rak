@@ -2,8 +2,8 @@ import type { PageContent } from '../types';
 
 export default {
   fr: {
-    title: 'Où dormir à Marrakech : quartiers, riads et hôtels',
-    description: "Choisir son hébergement à Marrakech : médina, Guéliz, Hivernage ou Palmeraie, riad ou hôtel, et les adresses que nous avons passées en revue.",
+    title: "Où dormir près de l'aéroport Marrakech-Ménara et en ville",
+    description: "Où dormir à Marrakech, en ville ou près de l'aéroport de Marrakech-Ménara : médina, Guéliz, Hivernage ou Palmeraie, riad ou hôtel.",
     eyebrow: 'Marrakech · Hébergement',
     h1: 'Où dormir à Marrakech',
     lede: "Le choix du quartier compte davantage que celui de l'établissement : il détermine votre temps de trajet, votre niveau de bruit et la façon dont vous vivrez la ville. Voici comment trancher, puis nos avis détaillés sur cinq adresses.",

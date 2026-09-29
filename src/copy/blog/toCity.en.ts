@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Marrakech Airport to the city centre: the options',
-  description: 'Getting to central Marrakech from the airport: taxi, transfer, bus 19 or hire car, with real prices, timings and medina gate drop-offs.',
+  title: "Marrakech Menara Airport to the city centre: the options",
+  description: "Getting from Marrakech Menara Airport to the city centre: taxi, transfer, bus 19 or hire car, with real prices, timings and medina gates.",
   eyebrow: 'Getting around',
   h1: 'From RAK to central Marrakech',
   lede: "Six kilometres, four options, and one real difficulty: the medina cannot be driven through. Here is what each solution costs and which one matches your landing time.",

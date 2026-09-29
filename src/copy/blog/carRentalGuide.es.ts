@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Alquilar un coche en el aeropuerto de Marrakech',
-  description: 'Alquiler de coches en el RAK: categorías y precios, fianza, franquicia, inspección del vehículo, conducir en Marruecos y los errores que salen caros.',
+  title: "Alquilar un coche en el aeropuerto de Marrakech-Menara",
+  description: "Alquilar un coche en el aeropuerto de Marrakech-Menara: categorías, precios, fianza, franquicia, inspección y errores caros en el mostrador.",
   eyebrow: 'Alquiler',
   h1: 'Alquilar un coche en Marrakech: la guía completa',
   lede: "Marruecos es uno de los países donde el alquiler es más barato y uno de aquellos donde el contrato importa más. Esto es lo que pagará realmente y los diez minutos de precaución que evitan el 90 % de los litigios.",

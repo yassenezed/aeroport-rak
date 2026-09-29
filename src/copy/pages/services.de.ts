@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Services am Flughafen Marrakesch Menara',
-  description: 'Services am Flughafen Marrakesch: Geldautomaten, Wechselstuben, SIM-Karten und eSIM, WLAN, Gepäckaufbewahrung, Lounges, Gastronomie und Assistenz.',
+  title: "Services am Flughafen Marrakesch-Menara",
+  description: "Services am Flughafen Marrakesch-Menara: Geldautomaten, Wechselstuben, SIM-Karten und eSIM, WLAN, Gepäckaufbewahrung, Lounges, Gastronomie und Assistenz.",
   eyebrow: 'Marrakesch Menara · Services',
   h1: 'Die Services am Flughafen Marrakesch',
   lede: "Was Sie im Terminal tatsächlich finden, wo es liegt, und die drei Dinge, die Sie klären sollten, bevor Sie die Halle verlassen: Bargeld, Verbindung und Weiterfahrt.",

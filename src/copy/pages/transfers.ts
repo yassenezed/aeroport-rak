@@ -2,8 +2,8 @@ import type { PageContent } from '../types';
 
 export default {
   fr: {
-    title: 'Transfert aéroport Marrakech : prix et options',
-    description: "Transfert, taxi, bus 19 ou location depuis l'aéroport de Marrakech : tarifs réels en MAD et en euros, dépose aux portes de la médina, arrivée de nuit.",
+    title: "Transfert aéroport Marrakech-Ménara : prix et options",
+    description: "Transfert, taxi, bus 19 ou location depuis l'aéroport de Marrakech-Ménara : tarifs réels en MAD et en euros, dépose aux portes de la médina, arrivée de nuit.",
     eyebrow: 'Marrakech Ménara · Transferts',
     h1: 'Transfert depuis l\'aéroport de Marrakech',
     lede: "Six kilomètres jusqu'à Jemaa el-Fna : le trajet est court, c'est la dernière centaine de mètres qui pose problème, puisque aucune voiture n'entre dans les ruelles de la médina. Voici les quatre façons de sortir du terminal, ce qu'elles coûtent réellement, et laquelle correspond à votre vol.",

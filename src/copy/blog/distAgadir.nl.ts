@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "Marrakech → Agadir: afstand, weg en vervoer",
-  description: "Van luchthaven Marrakech naar Agadir: 250 km snelweg, 3 uur rijden, CTM- en Supratours-bussen, privétransfer en huurauto.",
+  title: "Luchthaven Marrakech-Menara → Agadir: afstand en vervoer",
+  description: "Van luchthaven Marrakech-Menara naar Agadir: 250 km snelweg, 3 uur rijden, CTM- en Supratours-bussen, privétransfer en huurauto.",
   eyebrow: "Afstanden",
   h1: "Van luchthaven Marrakech naar Agadir",
   lede: "Tweehonderdvijftig kilometer, drie uur snelweg en een volledige decorwissel: van de rode stad naar de Atlantische Oceaan. Zo maakt u de rit en dit kost hij echt.",

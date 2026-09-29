@@ -2,8 +2,8 @@ import type { PageContent } from '../types';
 
 export default {
   fr: {
-    title: 'Guide touristique à Marrakech : est-ce utile ?',
-    description: "Prendre un guide à Marrakech : tarifs, guides officiels, visites de la médina, excursions dans l'Atlas et les erreurs à éviter dès l'arrivée.",
+    title: "Guide touristique dès l'aéroport Marrakech-Ménara",
+    description: "Prendre un guide dès l'aéroport de Marrakech-Ménara : tarifs, guides officiels, visites de la médina, excursions dans l'Atlas et erreurs à éviter.",
     eyebrow: 'Marrakech · Visites guidées',
     h1: 'Prendre un guide à Marrakech',
     lede: "Marrakech est une ville qui se laisse difficilement lire seul le premier jour. Un guide officiel, sur une demi-journée bien choisie, économise plus de temps et d'argent qu'il n'en coûte — à condition de savoir ce que vous achetez.",

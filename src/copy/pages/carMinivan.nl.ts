@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Busje met 7 tot 9 plaatsen huren in Marrakech",
-  description: "Een busje of minibus huren op luchthaven Marrakech: echte capaciteit, bagage, prijzen en vergelijking met een privébusje met chauffeur.",
+  title: "Busje 7–9 plaatsen op luchthaven Marrakech-Menara",
+  description: "Een busje of minibus huren op luchthaven Marrakech-Menara: echte capaciteit, bagage, prijzen en vergelijking met een privébusje met chauffeur.",
   eyebrow: "Marrakech Menara · Groot formaat",
   h1: "Een busje huren op luchthaven Marrakech",
   lede: "Vanaf vijf personen is het aantal stoelen niet het probleem, maar de kofferbak. Hier wat de busjes op de RAK echt meenemen, wat ze kosten en wanneer een busje met chauffeur goedkoper uitkomt.",

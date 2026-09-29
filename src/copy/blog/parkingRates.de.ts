@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Parktarife am Flughafen Marrakesch',
-  description: 'Parktarife am Flughafen Marrakesch Menara: Preise pro Stunde, Tag und Woche, Kurzhaltezone, Bezahlung und günstigere Alternativen.',
+  title: "Parktarife am Flughafen Marrakesch-Menara",
+  description: "Parktarife am Flughafen Marrakesch-Menara: Preise pro Stunde, Tag und Woche, Kurzhaltezone, Bezahlung und günstigere Alternativen.",
   eyebrow: 'Flughafen',
   h1: 'Parken am Flughafen Marrakesch: die Tariftabelle',
   lede: "Sehr günstig zum Absetzen, vernünftig für einen Tagesausflug, deutlich weniger eindeutig für eine Woche. Hier die Größenordnungen und die Rechnung vor dem Abstellen.",

@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Car hire at Marrakech Airport',
-  description: 'Hiring a car at Marrakech Airport: real prices, deposits, excess, vehicle inspection, driving in Morocco and when a car is useless.',
+  title: "Car hire at Marrakech Menara Airport",
+  description: "Hiring a car at Marrakech Menara Airport: real prices, deposits, excess, vehicle inspection, driving in Morocco and when a car is useless.",
   eyebrow: 'Marrakech Menara · Car hire',
   h1: 'Hiring a car at Marrakech Airport',
   lede: "A car opens up the Atlas, the Ourika, Essaouira and the south. It becomes a liability if you stay in the medina. Here is how to decide, what hire really costs at RAK, and the three lines of the contract that matter.",

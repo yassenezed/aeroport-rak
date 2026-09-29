@@ -2,8 +2,8 @@ import type { PageContent } from '../types';
 
 export default {
   fr: {
-    title: 'Voiture automatique à louer à Marrakech',
-    description: "Louer une boîte automatique à l'aéroport de Marrakech : disponibilité réelle, surcoût, conduite en ville et conseils pour un premier volant au Maroc.",
+    title: "Voiture automatique à l'aéroport Marrakech-Ménara",
+    description: "Louer une boîte automatique à l'aéroport de Marrakech-Ménara : disponibilité réelle, surcoût, conduite en ville et conseils pour un premier volant au Maroc.",
     eyebrow: 'Marrakech Ménara · Conduite facile',
     h1: 'Location à conduite facile : boîte automatique à Marrakech',
     lede: "Au Maroc, la boîte manuelle reste la norme et l'automatique se réserve. Si vous n'avez jamais conduit ici, ce choix change plus de choses que vous ne l'imaginez — à commencer par votre première heure de circulation.",

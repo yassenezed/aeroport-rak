@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Waar slapen in Marrakech: wijken, riads en hotels",
-  description: "Uw verblijf kiezen in Marrakech: medina, Guéliz, Hivernage of Palmeraie, riad of hotel, en onze beoordelingen van vijf adressen.",
+  title: "Slapen bij luchthaven Marrakech-Menara en in de stad",
+  description: "Waar slapen in Marrakech, in de stad of bij luchthaven Marrakech-Menara: medina, Guéliz, Hivernage of Palmeraie, riad of hotel.",
   eyebrow: "Marrakech · Overnachten",
   h1: "Waar slapen in Marrakech",
   lede: "De keuze van de wijk weegt zwaarder dan die van het hotel: ze bepaalt uw reistijden, uw geluidsniveau en hoe u de stad beleeft. Zo kiest u, en dit zijn onze beoordelingen van vijf adressen.",

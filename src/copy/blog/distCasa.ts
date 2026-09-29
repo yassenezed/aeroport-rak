@@ -2,8 +2,8 @@ import type { ArticleContent } from '../types';
 
 export default {
   fr: {
-    title: 'Marrakech → Casablanca : train, bus et route',
-    description: "Aller de l'aéroport de Marrakech à Casablanca : 240 km, autoroute, train ONCF depuis la gare de Guéliz, bus CTM et transfert privé, avec prix et durées.",
+    title: "Aéroport Marrakech-Ménara → Casablanca : train, bus, route",
+    description: "Aller de l'aéroport de Marrakech-Ménara à Casablanca : 240 km, autoroute, train ONCF depuis la gare de Guéliz, bus CTM et transfert privé, avec prix et durées.",
     eyebrow: 'Distances',
     h1: 'De l\'aéroport de Marrakech à Casablanca',
     lede: "Deux cent quarante kilomètres d'autoroute, ou trois heures de train depuis la gare de Guéliz. Le choix dépend surtout d'un détail : aucune ligne ferroviaire ne dessert l'aéroport, il faut d'abord rejoindre la gare.",

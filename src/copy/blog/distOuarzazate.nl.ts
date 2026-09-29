@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "Marrakech → Ouarzazate over de Tichka-pas",
-  description: "Van luchthaven Marrakech naar Ouarzazate: 200 km over de Tichka-pas op 2.260 m, 4 uur rijden, CTM-bussen, transfers en rijtips.",
+  title: "Luchthaven Marrakech-Menara → Ouarzazate via de Tichka",
+  description: "Van luchthaven Marrakech-Menara naar Ouarzazate: 200 km over de Tichka-pas op 2.260 m, 4 uur rijden, CTM-bussen, transfers en rijtips.",
   eyebrow: "Afstanden",
   h1: "Van luchthaven Marrakech naar Ouarzazate",
   lede: "Maar tweehonderd kilometer, en toch vier uur rijden: tussen de twee steden ligt de Tichka-pas, op 2.260 meter. Een van de mooiste routes van Marokko – en een die u niet moet onderschatten.",

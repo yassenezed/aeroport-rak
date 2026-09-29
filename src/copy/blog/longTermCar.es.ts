@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Alquiler de coche de larga duración en Marrakech',
-  description: 'Alquilar un coche por meses en Marrakech: tarifas decrecientes, renting de corta duración, seguro, mantenimiento y alternativas para varias semanas.',
+  title: "Alquiler largo desde el aeropuerto de Marrakech-Menara",
+  description: "Alquilar un coche por meses desde el aeropuerto de Marrakech-Menara: tarifas decrecientes, renting corto, seguro y alternativas.",
   eyebrow: 'Alquiler',
   h1: 'Alquilar un coche por meses en Marrakech',
   lede: "A partir de dos semanas, la lógica del alquiler cambia: las tarifas diarias se desploman, pero las cuestiones de seguro, mantenimiento y kilometraje pasan a ser centrales. Así se negocia correctamente.",

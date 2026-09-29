@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Contratar un guía en Marrakech: ¿merece la pena?',
-  description: 'Contratar un guía en Marrakech: tarifas, guías oficiales, visitas a la medina, excursiones al Atlas y los errores que conviene evitar desde el primer día.',
+  title: "Guía turístico desde el aeropuerto de Marrakech-Menara",
+  description: "Contratar un guía desde el aeropuerto de Marrakech-Menara: tarifas, guías oficiales, medina, excursiones al Atlas y errores que evitar.",
   eyebrow: 'Marrakech · Visitas guiadas',
   h1: 'Contratar un guía en Marrakech',
   lede: "Marrakech es una ciudad difícil de leer solo el primer día. Un guía oficial, en una media jornada bien elegida, ahorra más tiempo y dinero del que cuesta, siempre que sepa qué está comprando.",

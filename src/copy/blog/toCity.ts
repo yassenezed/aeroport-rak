@@ -2,8 +2,8 @@ import type { ArticleContent } from '../types';
 
 export default {
   fr: {
-    title: 'Aéroport de Marrakech au centre-ville : les options',
-    description: "Rejoindre le centre de Marrakech depuis l'aéroport : taxi, transfert, bus 19 ou location, avec prix réels, durées et la dépose aux portes de la médina.",
+    title: "Aéroport Marrakech-Ménara → centre-ville : les options",
+    description: "Rejoindre le centre de Marrakech depuis l'aéroport de Marrakech-Ménara : taxi, transfert, bus 19 ou location, prix réels et portes de la médina.",
     eyebrow: 'Transports',
     h1: 'De l\'aéroport RAK au centre de Marrakech',
     lede: "Six kilomètres, quatre options, et une seule vraie difficulté : la médina ne se traverse pas en voiture. Voici ce que coûte chaque solution et laquelle correspond à votre heure d'atterrissage.",

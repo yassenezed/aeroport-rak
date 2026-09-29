@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Marrakesch → Fès: Zug, Bus, Flug oder Straße?',
-  description: 'Von Marrakesch nach Fès: 530 km, 7 Std. ONCF-Zug ab Guéliz, Bus, Flug über Casablanca oder Straße. Fahrzeiten, Preise und die beste Option.',
+  title: "Flughafen Marrakesch-Menara → Fès: Zug, Bus oder Straße?",
+  description: "Vom Flughafen Marrakesch-Menara nach Fès: 530 km, 7 Std. ONCF-Zug ab Guéliz, Bus, Flug über Casablanca oder Straße. Zeiten und Preise.",
   eyebrow: 'Entfernungen',
   h1: 'Von Marrakesch nach Fès: welche Option',
   lede: "Fünfhundertdreißig Kilometer trennen die beiden Königsstädte: die längste Strecke dieses Ratgebers und die, bei der die Wahl des Verkehrsmittels Ihren Tag am stärksten prägt.",

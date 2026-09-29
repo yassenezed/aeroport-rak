@@ -1,8 +1,8 @@
 import type { LocalizedHotel } from '../types';
 
 export default {
-  title: 'Riad BE Marrakech: reseña y acceso aeropuerto',
-  description: 'Riad BE: la experiencia de la medina por Bab Doukkala, uno de los accesos más cómodos de Marrakech si llega con equipaje. Reseña, acceso y consejos.',
+  title: "Riad BE: reseña y acceso aeropuerto de Marrakech-Menara",
+  description: "Riad BE, en la medina por Bab Doukkala: uno de los accesos más cómodos desde el aeropuerto de Marrakech-Menara con equipaje. Reseña.",
   eyebrow: 'Marrakech · Riad',
   h1: 'Riad BE',
   lede: "La experiencia de la medina, por la puerta más cómoda. Patio, estanque y terraza, pero en Bab Doukkala: uno de los pocos riads donde llegar con maletas no se convierte en una expedición.",

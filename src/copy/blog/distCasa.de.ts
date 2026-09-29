@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Marrakesch → Casablanca: Zug, Bus und Straße',
-  description: 'Vom Flughafen Marrakesch nach Casablanca: 240 km, Autobahn, ONCF-Zug ab Bahnhof Guéliz, CTM-Bus und Privattransfer.',
+  title: "Flughafen Marrakesch-Menara → Casablanca: Zug, Bus, Straße",
+  description: "Vom Flughafen Marrakesch-Menara nach Casablanca: 240 km, Autobahn, ONCF-Zug ab Bahnhof Guéliz, CTM-Bus und Privattransfer.",
   eyebrow: 'Entfernungen',
   h1: 'Vom Flughafen Marrakesch nach Casablanca',
   lede: "Zweihundertvierzig Kilometer Autobahn oder drei Stunden Zug ab Bahnhof Guéliz. Die Wahl hängt vor allem an einem Detail: Keine Bahnlinie erreicht den Flughafen, man muss erst zum Bahnhof.",

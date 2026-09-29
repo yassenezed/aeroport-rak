@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Automatik-Mietwagen in Marrakesch',
-  description: 'Automatikwagen am Flughafen Marrakesch mieten: reale Verfügbarkeit, Aufpreis, Stadtverkehr und Tipps für das erste Mal am Steuer in Marokko.',
+  title: "Automatik-Mietwagen am Flughafen Marrakesch-Menara",
+  description: "Automatikwagen am Flughafen Marrakesch-Menara mieten: reale Verfügbarkeit, Aufpreis, Stadtverkehr und Tipps für das erste Mal am Steuer in Marokko.",
   eyebrow: 'Marrakesch Menara · Einfach fahren',
   h1: 'Einfach fahren: Automatik in Marrakesch',
   lede: "In Marokko ist das Schaltgetriebe die Norm, Automatik muss reserviert werden. Wenn Sie hier noch nie gefahren sind, verändert diese Wahl mehr, als Sie denken – angefangen bei Ihrer ersten Stunde im Verkehr.",

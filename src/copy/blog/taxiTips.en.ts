@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Taxis in Marrakech: fares and how to handle them',
-  description: 'Taxis in Marrakech: airport fares posted by day and night, petit versus grand taxi, meters, paying cash and the traps to avoid.',
+  title: "Taxis at Marrakech Menara Airport: fares and tips",
+  description: "Taxis at Marrakech Menara Airport and in town: posted day and night fares, petit versus grand taxi, meters, cash and traps to avoid.",
   eyebrow: 'Getting around',
   h1: 'Taxis in Marrakech: fares and good habits',
   lede: "Marrakech posts its taxi fares at the airport rank, which is good news. What remains is reading them, choosing the right size of car, and agreeing terms before the bags go in the boot.",

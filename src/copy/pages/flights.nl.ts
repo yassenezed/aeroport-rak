@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Vluchten naar Marrakech (RAK): maatschappijen en seizoenen",
-  description: "Vluchten naar Marrakech: welke maatschappijen de RAK bedienen, de beste boekingsperiodes, bagagevalkuilen bij prijsvechters en binnenlandse aansluitingen.",
+  title: "Vluchten naar luchthaven Marrakech-Menara: maatschappijen",
+  description: "Vluchten naar luchthaven Marrakech-Menara: welke maatschappijen er vliegen, de beste boekingsperiodes, bagage en binnenlandse aansluitingen.",
   eyebrow: "Marrakech Menara · Vluchten",
   h1: "Vluchten naar Marrakech",
   lede: "De RAK is na Casablanca de drukst bediende luchthaven van Marokko, met een dicht netwerk van Europese routes en een uitgesproken seizoen. Vergelijk data en lees daarna wat de eindprijs echt bepaalt.",

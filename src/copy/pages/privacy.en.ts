@@ -2,8 +2,8 @@ import type { LocalizedPage } from '../types';
 import { site } from '../../data/site';
 
 export default {
-  title: 'Privacy policy — AirportRAK',
-  description: 'How AirportRAK handles visitor data: analytics, affiliate links, cookies, third-party widgets and your GDPR rights.',
+  title: "Privacy policy — Marrakech Menara Airport guide",
+  description: "How AirportRAK, the Marrakech Menara Airport guide, handles your data: analytics, affiliate links, cookies, third-party widgets and GDPR.",
   eyebrow: 'AirportRAK',
   h1: 'Privacy policy',
   lede: "What this site collects, why, for how long, and what you can require. In short: no accounts, no tracking forms, and third-party tools limited strictly to analytics and booking.",

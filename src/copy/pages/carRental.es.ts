@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Alquiler de coches en el aeropuerto de Marrakech',
-  description: 'Alquilar un coche en el aeropuerto de Marrakech: precios reales, fianza, franquicia, inspección del vehículo, conducir en Marruecos y cuándo no hace falta.',
+  title: "Alquiler de coches en el aeropuerto de Marrakech-Menara",
+  description: "Alquilar un coche en el aeropuerto de Marrakech-Menara: precios reales, fianza, franquicia, inspección, conducir en Marruecos y cuándo no.",
   eyebrow: 'Marrakech Menara · Alquiler',
   h1: 'Alquilar un coche en el aeropuerto de Marrakech',
   lede: "Un coche abre el Atlas, Ourika, Essaouira y el sur. Se convierte en un lastre si se queda en la medina. Así se decide, esto cuesta realmente un alquiler en el RAK y estas son las tres líneas del contrato que importan.",

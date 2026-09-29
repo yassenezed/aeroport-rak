@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Parkeren op luchthaven Marrakech: tarieven en toegang",
-  description: "Parkeren op luchthaven Marrakech Menara: uur- en dagtarieven, kiss-and-ride, lang parkeren en goedkopere alternatieven.",
+  title: "Parkeren op luchthaven Marrakech-Menara: tarieven en toegang",
+  description: "Parkeren op luchthaven Marrakech-Menara: uur- en dagtarieven, kiss-and-ride, lang parkeren en goedkopere alternatieven.",
   eyebrow: "Marrakech Menara · Parkeren",
   h1: "Parkeren op luchthaven Marrakech",
   lede: "De RAK heeft parkeerterreinen voor de terminals met een getrapt tarief: heel goedkoop om iemand af te zetten, beduidend minder voor een week. Hier wat u betaalt en wanneer u beter niet met de auto komt.",

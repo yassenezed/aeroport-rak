@@ -2,8 +2,8 @@ import type { LocalizedPage } from '../types';
 import { site } from '../../data/site';
 
 export default {
-  title: "شروط الاستخدام — AirportRAK",
-  description: "شروط استخدام AirportRAK: الطابع التحريري للموقع، حدود المسؤولية، الملكية الفكرية والروابط نحو مواقع الغير.",
+  title: "شروط الاستخدام — دليل مطار مراكش المنارة",
+  description: "شروط استخدام AirportRAK، الدليل المستقل لمطار مراكش المنارة: الطابع التحريري، حدود المسؤولية والروابط الخارجية.",
   eyebrow: "AirportRAK",
   h1: "شروط الاستخدام",
   lede: "ما يمكنك أن تنتظره من هذا الموقع وما لا يمكنك. باستخدامك AirportRAK، فإنك تقبل الشروط التالية.",

@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Vom Flughafen Marrakesch ins Zentrum: die Optionen',
-  description: 'Vom Flughafen ins Zentrum von Marrakesch: Taxi, Transfer, Bus 19 oder Mietwagen, mit realen Preisen, Fahrzeiten und den Medina-Toren.',
+  title: "Vom Flughafen Marrakesch-Menara ins Zentrum: die Optionen",
+  description: "Vom Flughafen Marrakesch-Menara ins Zentrum: Taxi, Transfer, Bus 19 oder Mietwagen, mit realen Preisen, Fahrzeiten und Medina-Toren.",
   eyebrow: 'Unterwegs',
   h1: 'Vom RAK ins Zentrum von Marrakesch',
   lede: "Sechs Kilometer, vier Optionen und eine einzige echte Schwierigkeit: Die Medina lässt sich nicht mit dem Auto durchqueren. Hier, was jede Lösung kostet und welche zu Ihrer Landezeit passt.",

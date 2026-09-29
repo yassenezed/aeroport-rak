@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Tarjeta SIM en Marruecos: ¿Maroc Telecom, Orange o inwi?',
-  description: 'Comprar una tarjeta SIM en el aeropuerto de Marrakech: tarifas turísticas de los tres operadores, precios, cobertura en el Atlas y alternativa eSIM.',
+  title: "Tarjeta SIM en el aeropuerto de Marrakech-Menara",
+  description: "Comprar una tarjeta SIM en el aeropuerto de Marrakech-Menara: tarifas turísticas de los tres operadores, precios, cobertura en el Atlas y alternativa eSIM.",
   eyebrow: 'Práctico',
   h1: 'Qué tarjeta SIM elegir en Marruecos',
   lede: "Tres operadores, tarifas turísticas por unas decenas de dirhams y mostradores en la sala de llegadas. Este es el que conviene elegir según su itinerario, y cuándo una eSIM cumple mejor.",

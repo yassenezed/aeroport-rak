@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "Fast Track op luchthaven Marrakech",
-  description: "Fast Track op de RAK: hoeveel tijd het echt scheelt, wat het kost, wanneer het loont en wanneer het helemaal niets oplevert.",
+  title: "Fast Track op luchthaven Marrakech-Menara",
+  description: "Fast Track op luchthaven Marrakech-Menara: hoeveel tijd het scheelt, wat het kost, wanneer het loont en wanneer niet.",
   eyebrow: "Luchthaven",
   h1: "Fast Track in Marrakech: zinvol of niet?",
   lede: "Het knelpunt van de RAK is de paspoortcontrole – bij aankomst én bij vertrek. Een voorrangsdienst pakt precies dat aan, wat hem op sommige tijden zinvol en op andere volkomen nutteloos maakt.",

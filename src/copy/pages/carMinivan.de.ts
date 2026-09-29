@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Van mit 7 bis 9 Plätzen in Marrakesch mieten',
-  description: 'Van oder Kleinbus am Flughafen Marrakesch mieten: reale Kapazität, Gepäck, Preise und Vergleich mit einem Privatvan mit Fahrer.',
+  title: "Van mit 7–9 Plätzen am Flughafen Marrakesch-Menara",
+  description: "Van oder Kleinbus am Flughafen Marrakesch-Menara mieten: reale Kapazität, Gepäck, Preise und Vergleich mit einem Privatvan mit Fahrer.",
   eyebrow: 'Marrakesch Menara · Großraum',
   h1: 'Einen Van am Flughafen Marrakesch mieten',
   lede: "Ab fünf Personen ist nicht die Sitzzahl das Problem, sondern der Kofferraum. Hier, was die am RAK verfügbaren Vans tatsächlich fassen, was sie kosten und wann ein Van mit Fahrer günstiger kommt.",

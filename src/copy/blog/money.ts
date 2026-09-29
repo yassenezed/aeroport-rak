@@ -2,8 +2,8 @@ import type { ArticleContent } from '../types';
 
 export default {
   fr: {
-    title: 'Argent au Maroc : dirham, retraits et budget',
-    description: "Le dirham marocain en pratique : où changer, retraits aux distributeurs de l'aéroport de Marrakech, paiement par carte, pourboires et budget quotidien.",
+    title: "Argent et dirhams à l'aéroport Marrakech-Ménara",
+    description: "Le dirham marocain en pratique : où changer, retraits aux distributeurs de l'aéroport de Marrakech-Ménara, paiement par carte, pourboires et budget quotidien.",
     eyebrow: 'Pratique',
     h1: 'L\'argent au Maroc : ce qu\'il faut savoir avant d\'atterrir',
     lede: "Le dirham ne s'achète pas hors du Maroc et ne s'exporte pas davantage. Cette double règle structure toute la gestion de votre argent sur place — à commencer par le premier retrait, dans le hall des arrivées.",

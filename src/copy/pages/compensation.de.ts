@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Flug verspätet oder annulliert in Marrakesch: Ihre Rechte',
-  description: 'Verspäteter, annullierter oder überbuchter Flug am Flughafen Marrakesch: wann eine Entschädigung greift, welche Beträge und wie Sie den Fall aufbauen.',
+  title: "Flugverspätung am Flughafen Marrakesch-Menara: Ihre Rechte",
+  description: "Verspäteter, annullierter oder überbuchter Flug am Flughafen Marrakesch-Menara: wann eine Entschädigung greift, welche Beträge und wie Sie den Fall aufbauen.",
   eyebrow: 'Marrakesch Menara · Ihre Rechte',
   h1: 'Flug verspätet oder annulliert in Marrakesch: was steht Ihnen zu?',
   lede: "Eine dreistündige Verspätung ab Marrakesch kann 400 € pro Passagier bedeuten – aber nur in bestimmten Fällen. Hier die geltende Regel, die Beträge und die Nachweise, die Sie vor dem Verlassen des Flughafens sammeln sollten.",

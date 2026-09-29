@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Marrakech Airport parking rates',
-  description: 'Parking tariffs at Marrakech Menara: hourly, daily and weekly prices, drop-off zone, payment and cheaper alternatives.',
+  title: "Marrakech Menara Airport parking rates",
+  description: "Marrakech Menara Airport parking tariffs: hourly, daily and weekly prices, drop-off zone, payment and cheaper alternatives.",
   eyebrow: 'Airport',
   h1: 'Marrakech Airport parking: the tariff table',
   lede: "Very cheap for a drop-off, reasonable for a same-day return, markedly less obvious for a week. Here are the orders of magnitude and the sum to do before leaving your car.",

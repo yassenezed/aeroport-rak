@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Günstiger Mietwagen in Marrakesch',
-  description: 'Günstig mieten am Flughafen Marrakesch: reale Preise ab 25 €/Tag, lokale oder internationale Stationen und die Fallstricke billiger Verträge.',
+  title: "Günstiger Mietwagen am Flughafen Marrakesch-Menara",
+  description: "Günstig mieten am Flughafen Marrakesch-Menara: reale Preise ab 25 €/Tag, lokale oder internationale Stationen und die Fallstricke billiger Verträge.",
   eyebrow: 'Marrakesch Menara · Günstig',
   h1: 'Günstiger Mietwagen in Marrakesch',
   lede: "Anzeigen für 12 € pro Tag gibt es, und sie sind nicht falsch – sie sind nur unvollständig. Hier, was ein Kleinwagen in Marokko wirklich kostet und wie Sie wenig zahlen, ohne am Schalter eingeholt zu werden.",

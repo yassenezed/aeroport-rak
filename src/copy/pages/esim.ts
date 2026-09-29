@@ -2,8 +2,8 @@ import type { PageContent } from '../types';
 
 export default {
   fr: {
-    title: 'eSIM Maroc : connecté dès l\'atterrissage',
-    description: "eSIM pour le Maroc : comment être connecté dès la sortie de l'avion à Marrakech, comparaison avec une carte SIM locale et avec le roaming européen.",
+    title: "eSIM Maroc : connecté dès l'aéroport Marrakech-Ménara",
+    description: "eSIM Maroc : être connecté dès la sortie de l'avion à l'aéroport de Marrakech-Ménara, comparée à la carte SIM locale et au roaming.",
     eyebrow: 'Marrakech Ménara · Connexion',
     h1: 'eSIM Maroc : être connecté dès l\'atterrissage',
     lede: "Le Maroc n'est pas dans la zone de roaming européenne : votre forfait y devient soit très cher, soit inutilisable. Voici les trois façons de régler la question, et celle qui vous fera gagner vingt minutes à l'arrivée.",

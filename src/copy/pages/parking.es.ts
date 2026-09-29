@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Parking del aeropuerto de Marrakech: tarifas y acceso',
-  description: 'Parkings del aeropuerto de Marrakech Menara: tarifas por hora y por día, zona de dejada rápida, estancia larga y alternativas más baratas.',
+  title: "Parking del aeropuerto de Marrakech-Menara: tarifas y acceso",
+  description: "Parkings del aeropuerto de Marrakech-Menara: tarifas por hora y por día, zona de dejada rápida, estancia larga y alternativas más baratas.",
   eyebrow: 'Marrakech Menara · Parkings',
   h1: 'Aparcar en el aeropuerto de Marrakech',
   lede: "El RAK dispone de parkings en superficie delante de las terminales, con un baremo progresivo: muy barato para dejar a alguien, bastante menos para una semana. Esto es lo que pagará y cuándo es mejor no venir en coche.",

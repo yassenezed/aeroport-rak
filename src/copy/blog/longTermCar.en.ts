@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Long-term car hire in Marrakech',
-  description: 'Hiring a car by the month in Marrakech: tapered rates, short-term leasing, insurance, servicing and alternatives for a stay of several weeks.',
+  title: "Long-term car hire from Marrakech Menara Airport",
+  description: "Hiring a car by the month from Marrakech Menara Airport: tapered rates, short-term leasing, insurance, servicing and alternatives.",
   eyebrow: 'Car hire',
   h1: 'Hiring a car by the month in Marrakech',
   lede: "Beyond two weeks the logic of hiring changes: daily rates collapse, but insurance, servicing and mileage become the central questions. Here is how to negotiate properly.",

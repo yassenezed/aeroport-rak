@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Voorzieningen op luchthaven Marrakech Menara",
-  description: "Voorzieningen op luchthaven Marrakech: geldautomaten, wisselkantoren, simkaarten en eSIM, wifi, bagagedepot, lounges, eten en assistentie.",
+  title: "Voorzieningen op luchthaven Marrakech-Menara",
+  description: "Voorzieningen op luchthaven Marrakech-Menara: geldautomaten, wisselkantoren, simkaarten en eSIM, wifi, bagagedepot, lounges, eten en assistentie.",
   eyebrow: "Marrakech Menara · Voorzieningen",
   h1: "De voorzieningen van luchthaven Marrakech",
   lede: "Wat u in de terminal echt vindt, waar het zit, en de drie dingen die u moet regelen voordat u de hal verlaat: contant geld, een verbinding en vervoer.",

@@ -2,8 +2,8 @@ import type { PageContent } from '../types';
 
 export default {
   fr: {
-    title: 'Services à l\'aéroport de Marrakech Ménara',
-    description: "Services de l'aéroport de Marrakech : distributeurs, change, cartes SIM et eSIM, wifi, consigne, salons, restauration et assistance aux passagers.",
+    title: "Services à l'aéroport de Marrakech-Ménara",
+    description: "Services de l'aéroport de Marrakech-Ménara : distributeurs, change, cartes SIM et eSIM, wifi, consigne, salons, restauration et assistance aux passagers.",
     eyebrow: 'Marrakech Ménara · Services',
     h1: 'Les services de l\'aéroport de Marrakech',
     lede: "Ce que vous trouverez réellement dans le terminal, où le trouver, et les trois choses à régler avant de sortir du hall : de l'argent liquide, une connexion et un moyen de transport.",

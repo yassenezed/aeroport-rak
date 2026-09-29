@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Marrakech → Essaouira: distancia y transportes',
-  description: 'Ir del aeropuerto de Marrakech a Essaouira: 180 km, 2 h 30 de carretera, precio del autobús CTM y Supratours, traslado privado y alquiler de coche.',
+  title: "Aeropuerto de Marrakech-Menara → Essaouira: cómo llegar",
+  description: "Ir del aeropuerto de Marrakech-Menara a Essaouira: 180 km, 2 h 30 de carretera, precio del autobús CTM y Supratours, traslado privado y alquiler de coche.",
   eyebrow: 'Distancias',
   h1: 'Del aeropuerto de Marrakech a Essaouira',
   lede: "Ciento ochenta kilómetros de carretera recta a través del argán, dos horas y media, y diez grados menos al llegar. Estas son las cuatro formas de hacer el trayecto y lo que cuestan.",

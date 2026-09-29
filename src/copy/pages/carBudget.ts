@@ -2,8 +2,8 @@ import type { PageContent } from '../types';
 
 export default {
   fr: {
-    title: 'Location de voiture pas chère à Marrakech',
-    description: "Louer une voiture économique à l'aéroport de Marrakech : prix réels dès 25 €/jour, agences locales ou internationales, pièges du contrat à bas prix.",
+    title: "Location pas chère à l'aéroport Marrakech-Ménara",
+    description: "Louer une voiture économique à l'aéroport de Marrakech-Ménara : prix réels dès 25 €/jour, agences locales ou internationales, pièges du contrat à bas prix.",
     eyebrow: 'Marrakech Ménara · Économique',
     h1: 'Location de voiture économique à Marrakech',
     lede: "Les annonces à 12 € par jour existent, et elles ne sont pas fausses — elles sont simplement incomplètes. Voici ce que coûte réellement une petite voiture au Maroc, et comment payer peu sans se faire rattraper au comptoir.",

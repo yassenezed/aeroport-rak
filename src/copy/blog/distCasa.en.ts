@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Marrakech → Casablanca: train, coach and road',
-  description: 'Getting from Marrakech Airport to Casablanca: 240 km, motorway, ONCF train from Gueliz station, CTM coach and private transfer.',
+  title: "Marrakech Menara Airport to Casablanca: train, coach, road",
+  description: "Getting from Marrakech Menara Airport to Casablanca: 240 km, motorway, ONCF train from Gueliz station, CTM coach and private transfer.",
   eyebrow: 'Distances',
   h1: 'From Marrakech Airport to Casablanca',
   lede: "Two hundred and forty kilometres of motorway, or three hours by train from Gueliz station. The choice hinges on one detail: no railway serves the airport, so you must first reach the station.",

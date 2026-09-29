@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Coche automático en Marrakech: alquiler fácil',
-  description: 'Alquilar un cambio automático en el aeropuerto de Marrakech: disponibilidad real, sobrecoste, conducción urbana y consejos para el primer volante en Marruecos.',
+  title: "Coche automático en el aeropuerto de Marrakech-Menara",
+  description: "Alquilar un automático en el aeropuerto de Marrakech-Menara: disponibilidad real, sobrecoste, conducción urbana y consejos.",
   eyebrow: 'Marrakech Menara · Conducción fácil',
   h1: 'Alquiler de conducción fácil: cambio automático en Marrakech',
   lede: "En Marruecos el cambio manual es la norma y el automático hay que reservarlo. Si nunca ha conducido aquí, esa elección cambia más cosas de las que imagina, empezando por su primera hora de circulación.",

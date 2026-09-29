@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Aufenthalt in Marrakesch: was tun mit der Zeit',
-  description: 'Zwischenstopp am Flughafen Marrakesch: wie lange das Verlassen dauert, was man in 4, 6 oder 10 Stunden sieht, Gepäckaufbewahrung und pünktliche Rückkehr.',
+  title: "Aufenthalt am Flughafen Marrakesch-Menara: was tun?",
+  description: "Zwischenstopp am Flughafen Marrakesch-Menara: wie lange das Verlassen dauert, was man in 4, 6 oder 10 Stunden sieht, Gepäckaufbewahrung und pünktliche Rückkehr.",
   eyebrow: 'Flughafen',
   h1: 'Zwischenstopp in Marrakesch: raus oder bleiben?',
   lede: "Sechs Kilometer trennen das Terminal von Djemaa el-Fna – ein Zwischenstopp in Marrakesch eignet sich daher ungewöhnlich gut für einen Abstecher. Man muss nur richtig rechnen, denn der Rückweg ist es, an dem es hakt.",

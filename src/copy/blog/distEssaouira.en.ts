@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Marrakech → Essaouira: distance and transport',
-  description: 'Getting from Marrakech Airport to Essaouira: 180 km, 2 h 30 by road, CTM and Supratours fares, private transfer and car hire.',
+  title: "Marrakech Menara Airport to Essaouira: distance, transport",
+  description: "Getting from Marrakech Menara Airport to Essaouira: 180 km, 2 h 30 by road, CTM and Supratours fares, private transfer and car hire.",
   eyebrow: 'Distances',
   h1: 'From Marrakech Airport to Essaouira',
   lede: "A hundred and eighty kilometres of straight road through the argan groves, two and a half hours, and ten degrees cooler on arrival. Here are the four ways to do it and what they cost.",

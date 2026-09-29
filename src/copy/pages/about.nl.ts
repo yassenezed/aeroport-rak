@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Over AirportRAK",
-  description: "Wie AirportRAK schrijft, hoe informatie over luchthaven Marrakech wordt gecontroleerd en hoe de site wordt gefinancierd.",
+  title: "Over AirportRAK, gids voor luchthaven Marrakech-Menara",
+  description: "Wie AirportRAK schrijft, hoe informatie over luchthaven Marrakech-Menara wordt gecontroleerd en hoe de site wordt gefinancierd.",
   eyebrow: "AirportRAK",
   h1: "Over AirportRAK",
   lede: "AirportRAK is een onafhankelijke gids over luchthaven Marrakech Menara. We horen niet bij de luchthaven, verkopen geen vervoer en publiceren alleen wat we hebben kunnen controleren.",

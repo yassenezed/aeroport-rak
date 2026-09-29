@@ -1,7 +1,7 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Marrakech Airport lounges: access and prices',
+  title: "Marrakech Menara Airport lounges: access and prices",
   description: 'Lounges at Marrakech Menara Airport: how to get in, walk-up prices, cards and programmes, and what you actually find inside.',
   eyebrow: 'Airport',
   h1: 'The lounges at Marrakech Airport',

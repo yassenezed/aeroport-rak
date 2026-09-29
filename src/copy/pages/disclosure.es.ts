@@ -2,8 +2,8 @@ import type { LocalizedPage } from '../types';
 import { site } from '../../data/site';
 
 export default {
-  title: 'Divulgación de afiliación — AirportRAK',
-  description: 'Cómo gana dinero AirportRAK: enlaces de afiliación, comisiones y por qué eso no cambia ni el precio que usted paga ni nuestras recomendaciones.',
+  title: "Afiliación — AirportRAK, aeropuerto de Marrakech-Menara",
+  description: "Cómo se financia AirportRAK, guía del aeropuerto de Marrakech-Menara: enlaces de afiliación y comisiones que no cambian su precio.",
   eyebrow: 'AirportRAK',
   h1: 'Divulgación de afiliación',
   lede: "Este sitio es gratuito y se financia con comisiones de afiliación. Así funciona exactamente, esto es lo que cambia para usted —nada en el precio— y esto es lo que no cambia en lo que escribimos.",

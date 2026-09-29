@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Marrakech → Agadir: distancia, carretera y transportes',
-  description: 'Ir del aeropuerto de Marrakech a Agadir: 250 km de autopista, 3 h de trayecto, autobuses CTM y Supratours, traslado privado y alquiler de coche.',
+  title: "Aeropuerto de Marrakech-Menara → Agadir: cómo llegar",
+  description: "Ir del aeropuerto de Marrakech-Menara a Agadir: 250 km de autopista, 3 h de trayecto, autobuses CTM y Supratours, traslado privado y alquiler de coche.",
   eyebrow: 'Distancias',
   h1: 'Del aeropuerto de Marrakech a Agadir',
   lede: "Doscientos cincuenta kilómetros, tres horas por autopista y un cambio completo de decorado: se deja la ciudad roja por el Atlántico. Así se hace el trayecto y esto es lo que cuesta realmente.",

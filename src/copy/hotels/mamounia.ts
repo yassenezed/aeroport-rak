@@ -2,8 +2,8 @@ import type { HotelContent } from '../types';
 
 export default {
   fr: {
-    title: 'La Mamounia Marrakech : avis et accès aéroport',
-    description: 'La Mamounia : un siècle d\'histoire, de vastes jardins aux portes de la médina, à quinze minutes en voiture de l\'aéroport de Marrakech.',
+    title: "La Mamounia : avis et accès aéroport Marrakech-Ménara",
+    description: "La Mamounia : un siècle d'histoire, de vastes jardins aux portes de la médina, à quinze minutes en voiture de l'aéroport de Marrakech-Ménara.",
     eyebrow: 'Marrakech · Hôtel',
     h1: 'La Mamounia',
     lede: "Le grand hôtel historique de Marrakech, à cinq kilomètres du terminal, à la charnière entre les remparts et la ville : la médina à pied, l'accès en voiture sans contrainte.",

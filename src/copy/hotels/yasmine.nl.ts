@@ -1,8 +1,8 @@
 import type { LocalizedHotel } from '../types';
 
 export default {
-  title: "Riad Yasmine Marrakech: beoordeling en bereikbaarheid",
-  description: "Riad Yasmine: de meest gefotografeerde binnenplaats van de medina van Marrakech, op de schaal van een huis. Bereikbaarheid, afzetpoort en logistiek.",
+  title: "Riad Yasmine: vanaf luchthaven Marrakech-Menara",
+  description: "Riad Yasmine, de meest gefotografeerde binnenplaats van de medina: bereikbaarheid vanaf luchthaven Marrakech-Menara en afzetpoort.",
   eyebrow: "Marrakech · Riad",
   h1: "Riad Yasmine",
   lede: "De groene binnenplaats van de medina, en de logistiek die erbij hoort. Een echte riad op huiselijke schaal, waar de aankomst voorbereiding vraagt omdat de auto bij een poort stopt.",

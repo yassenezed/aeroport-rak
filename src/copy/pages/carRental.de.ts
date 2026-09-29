@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Mietwagen am Flughafen Marrakesch',
-  description: 'Mietwagen am Flughafen Marrakesch: reale Preise, Kaution, Selbstbeteiligung, Fahrzeugübergabe, Autofahren in Marokko und wann sich ein Auto nicht lohnt.',
+  title: "Mietwagen am Flughafen Marrakesch-Menara",
+  description: "Mietwagen am Flughafen Marrakesch-Menara: reale Preise, Kaution, Selbstbeteiligung, Fahrzeugübergabe, Autofahren in Marokko und wann sich ein Auto nicht lohnt.",
   eyebrow: 'Marrakesch Menara · Mietwagen',
   h1: 'Einen Mietwagen am Flughafen Marrakesch nehmen',
   lede: "Ein Auto öffnet den Atlas, das Ourika-Tal, Essaouira und den Süden. In der Medina wird es zur Last. So entscheiden Sie, das kostet Mieten am RAK wirklich, und das sind die drei Vertragszeilen, die zählen.",

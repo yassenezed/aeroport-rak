@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Transfer luchthaven Marrakech online boeken",
-  description: "Boek uw privétransfer vanaf luchthaven Marrakech: vaste prijs per voertuig, vluchtvolging, afzetten bij de medinapoorten en gratis annuleren.",
+  title: "Transfer luchthaven Marrakech-Menara online boeken",
+  description: "Boek uw privétransfer vanaf luchthaven Marrakech-Menara: vaste prijs per voertuig, vluchtvolging, afzetten bij de medinapoorten en gratis annuleren.",
   eyebrow: "Marrakech Menara · Boeken",
   h1: "Een transfer vanaf luchthaven Marrakech boeken",
   lede: "Geef uw bestemming en landingstijd op: de prijs verschijnt per voertuig, niet per passagier. Een chauffeur wacht u op bij de uitgang van de aankomsthal met uw naam en zet u af bij de medinapoort het dichtst bij uw riad.",

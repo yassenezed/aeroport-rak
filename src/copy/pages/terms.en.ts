@@ -2,8 +2,8 @@ import type { LocalizedPage } from '../types';
 import { site } from '../../data/site';
 
 export default {
-  title: 'Terms of use — AirportRAK',
-  description: 'AirportRAK terms of use: the editorial nature of the site, limits of liability, intellectual property and links to third parties.',
+  title: "Terms of use — Marrakech Menara Airport guide",
+  description: "Terms of use of AirportRAK, the independent Marrakech Menara Airport guide: editorial nature, liability limits and third-party links.",
   eyebrow: 'AirportRAK',
   h1: 'Terms of use',
   lede: "What you can expect from this site, and what you cannot. By using AirportRAK, you accept the terms below.",

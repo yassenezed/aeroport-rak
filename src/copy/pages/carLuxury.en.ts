@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Luxury car hire in Marrakech',
-  description: 'Hiring a premium saloon, SUV or convertible at Marrakech Airport: models available, rates, high deposits and the chauffeur alternative.',
+  title: "Luxury car hire at Marrakech Menara Airport",
+  description: "Hiring a premium saloon, SUV or convertible at Marrakech Menara Airport: models available, rates, high deposits and the chauffeur alternative.",
   eyebrow: 'Marrakech Menara · Premium',
   h1: 'Luxury car hire in Marrakech',
   lede: "Marrakech is one of the few Moroccan cities where genuine high-end cars are available to hire. Here are the models you will find, what they cost, and the question to settle before signing: drive yourself, or be driven?",

@@ -2,8 +2,8 @@ import type { PageContent } from '../types';
 
 export default {
   fr: {
-    title: 'Vol retardé ou annulé à Marrakech : vos droits',
-    description: "Vol retardé, annulé ou surbooké à l'aéroport de Marrakech : quand l'indemnisation s'applique, quels montants réclamer et comment constituer le dossier.",
+    title: "Vol retardé à l'aéroport Marrakech-Ménara : vos droits",
+    description: "Vol retardé, annulé ou surbooké à l'aéroport de Marrakech-Ménara : quand l'indemnisation s'applique, quels montants réclamer et comment constituer le dossier.",
     eyebrow: 'Marrakech Ménara · Vos droits',
     h1: 'Vol retardé ou annulé à Marrakech : que pouvez-vous réclamer ?',
     lede: "Un retard de trois heures au départ de Marrakech peut ouvrir droit à 400 € par passager — mais seulement dans certains cas. Voici la règle applicable, les montants, et les preuves à rassembler avant de quitter l'aéroport.",

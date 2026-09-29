@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Escala en Marrakech: qué hacer según el tiempo',
-  description: 'Escala en el aeropuerto de Marrakech: cuánto se tarda en salir, qué ver en 4, 6 o 10 horas, consigna de equipajes y volver a tiempo al vuelo.',
+  title: "Escala en el aeropuerto de Marrakech-Menara: qué hacer",
+  description: "Escala en el aeropuerto de Marrakech-Menara: cuánto se tarda en salir, qué ver en 4, 6 o 10 horas, consigna de equipajes y volver a tiempo al vuelo.",
   eyebrow: 'Aeropuerto',
   h1: 'Escala en Marrakech: ¿salir o quedarse?',
   lede: "Seis kilómetros separan la terminal de Jemaa el-Fna, lo que hace que una escala en Marrakech se preste especialmente bien a una salida. Queda calcular bien, porque lo que falla es la vuelta, no la ida.",

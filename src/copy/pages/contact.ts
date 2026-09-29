@@ -3,8 +3,8 @@ import { site } from '../../data/site';
 
 export default {
   fr: {
-    title: 'Nous contacter — AirportRAK',
-    description: "Contacter AirportRAK : correction d'une information sur l'aéroport de Marrakech, signalement d'un tarif périmé ou demande professionnelle.",
+    title: "Contact — AirportRAK, guide de l'aéroport Marrakech-Ménara",
+    description: "Contacter AirportRAK : correction d'une information sur l'aéroport de Marrakech-Ménara, signalement d'un tarif périmé ou demande professionnelle.",
     eyebrow: 'AirportRAK',
     h1: 'Nous contacter',
     lede: "Une information périmée, un tarif qui ne correspond plus, une précision à apporter : écrivez-nous. Nous lisons tous les messages et corrigeons les pages concernées.",

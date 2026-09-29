@@ -2,8 +2,8 @@ import type { LocalizedPage } from '../types';
 import { site } from '../../data/site';
 
 export default {
-  title: "اتصل بنا — AirportRAK",
-  description: "التواصل مع AirportRAK: تصحيح معلومة عن مطار مراكش، الإبلاغ عن سعر قديم، أو طلب مهني.",
+  title: "اتصل بنا — AirportRAK، مطار مراكش المنارة",
+  description: "التواصل مع AirportRAK: تصحيح معلومة عن مطار مراكش المنارة، الإبلاغ عن سعر قديم، أو طلب مهني.",
   eyebrow: "AirportRAK",
   h1: "اتصل بنا",
   lede: "معلومة قديمة، سعر لم يعد مطابقًا، إضافة ضرورية: راسلنا. نقرأ كل الرسائل ونصحح الصفحات المعنية.",

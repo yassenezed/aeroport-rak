@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Tarifas del parking del aeropuerto de Marrakech',
-  description: 'Tarifas del parking de Marrakech Menara: precios por hora, día y semana, zona de dejada rápida, pago y alternativas más baratas.',
+  title: "Tarifas del parking del aeropuerto de Marrakech-Menara",
+  description: "Tarifas del parking del aeropuerto de Marrakech-Menara: precios por hora, día y semana, parada breve, pago y alternativas más baratas.",
   eyebrow: 'Aeropuerto',
   h1: 'Parking del aeropuerto de Marrakech: la tabla de tarifas',
   lede: "Muy barato para dejar a alguien, razonable para una ida y vuelta en el día, bastante menos evidente para una semana. Estos son los órdenes de magnitud y la cuenta que hay que hacer antes de dejar el coche.",

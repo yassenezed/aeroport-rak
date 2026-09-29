@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Autohuur op luchthaven Marrakech",
-  description: "Een auto huren op luchthaven Marrakech: echte prijzen, borg, eigen risico, voertuiginspectie, rijden in Marokko en wanneer een auto overbodig is.",
+  title: "Autohuur op luchthaven Marrakech-Menara",
+  description: "Een auto huren op luchthaven Marrakech-Menara: echte prijzen, borg, eigen risico, voertuiginspectie, rijden in Marokko en wanneer een auto overbodig is.",
   eyebrow: "Marrakech Menara · Autohuur",
   h1: "Een auto huren op luchthaven Marrakech",
   lede: "Een auto opent de Atlas, de Ourika-vallei, Essaouira en het zuiden. In de medina wordt hij een last. Zo beslist u, dit kost huren op de RAK echt, en dit zijn de drie regels in het contract die ertoe doen.",

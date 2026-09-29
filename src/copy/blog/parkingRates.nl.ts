@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "Parkeertarieven luchthaven Marrakech",
-  description: "Parkeertarieven op Marrakech Menara: prijzen per uur, dag en week, kiss-and-ride, betalen en goedkopere alternatieven.",
+  title: "Parkeertarieven luchthaven Marrakech-Menara",
+  description: "Parkeertarieven van luchthaven Marrakech-Menara: prijzen per uur, dag en week, kiss-and-ride, betalen en goedkopere opties.",
   eyebrow: "Luchthaven",
   h1: "Parkeren op luchthaven Marrakech: de tarieventabel",
   lede: "Heel goedkoop om iemand af te zetten, redelijk voor een dagtrip, veel minder vanzelfsprekend voor een week. Hier de ordes van grootte en de rekensom vóór u de auto neerzet.",

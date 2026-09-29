@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Dinero en Marruecos: dirham, cajeros y presupuesto',
-  description: 'El dirham marroquí en la práctica: dónde cambiar, sacar dinero en el aeropuerto de Marrakech, pagar con tarjeta, propinas y presupuesto diario.',
+  title: "Dinero en el aeropuerto de Marrakech-Menara: dírhams",
+  description: "El dirham marroquí en la práctica: dónde cambiar, sacar dinero en el aeropuerto de Marrakech-Menara, pagar con tarjeta, propinas y presupuesto diario.",
   eyebrow: 'Práctico',
   h1: 'El dinero en Marruecos: lo que hay que saber antes de aterrizar',
   lede: "El dirham no se compra fuera de Marruecos y tampoco se exporta. Esa doble regla estructura toda la gestión de su dinero allí, empezando por la primera retirada en la sala de llegadas.",

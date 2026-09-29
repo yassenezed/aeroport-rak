@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "Marrakech → Essaouira: afstand en vervoer",
-  description: "Van luchthaven Marrakech naar Essaouira: 180 km, 2,5 uur rijden, prijzen van CTM- en Supratours-bussen, privétransfer en huurauto.",
+  title: "Luchthaven Marrakech-Menara → Essaouira: afstand, vervoer",
+  description: "Van luchthaven Marrakech-Menara naar Essaouira: 180 km, 2,5 uur rijden, prijzen van CTM- en Supratours-bussen, privétransfer en huurauto.",
   eyebrow: "Afstanden",
   h1: "Van luchthaven Marrakech naar Essaouira",
   lede: "Honderdtachtig kilometer rechte weg door de arganbossen, tweeënhalf uur en tien graden minder bij aankomst. Hier de vier manieren om te reizen en wat ze kosten.",

@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Book a Marrakech Airport transfer online',
-  description: 'Book a private transfer from Marrakech Airport: fixed price per vehicle, flight tracking, medina gate drop-off and free cancellation.',
+  title: "Book a Marrakech Menara Airport transfer online",
+  description: "Book a private transfer from Marrakech Menara Airport: fixed price per vehicle, flight tracking, medina gate drop-off and free cancellation.",
   eyebrow: 'Marrakech Menara · Booking',
   h1: 'Book a transfer from Marrakech Airport',
   lede: "Enter your destination and landing time: the price shows per vehicle, not per passenger. A driver meets you outside arrivals with your name and drops you at the medina gate nearest your riad.",

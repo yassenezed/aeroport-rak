@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Fast Track at Marrakech Airport',
-  description: 'Fast Track at RAK: how much time it really saves, what it costs, when it is worth it and when it is of no use at all.',
+  title: "Fast Track at Marrakech Menara Airport",
+  description: "Fast Track at Marrakech Menara Airport: how much time it really saves, what it costs, when it is worth it and when it is useless.",
   eyebrow: 'Airport',
   h1: 'Fast Track in Marrakech: worth it or not?',
   lede: "RAK's bottleneck is passport control — on arrival as much as on departure. A queue-skip service attacks exactly that, which makes it worthwhile at certain hours and pointless at others.",

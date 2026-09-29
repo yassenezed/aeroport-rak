@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Where to stay in Marrakech: districts, riads and hotels',
-  description: 'Choosing where to stay in Marrakech: medina, Gueliz, Hivernage or Palmeraie, riad or hotel, plus our reviews of five properties.',
+  title: "Where to stay near Marrakech Menara Airport and in town",
+  description: "Where to stay in Marrakech, in town or near Marrakech Menara Airport: medina, Gueliz, Hivernage or Palmeraie, riad or hotel.",
   eyebrow: 'Marrakech · Accommodation',
   h1: 'Where to stay in Marrakech',
   lede: "The district matters more than the property: it decides your travel time, your noise level and the way you experience the city. Here is how to choose, then our detailed reviews of five addresses.",

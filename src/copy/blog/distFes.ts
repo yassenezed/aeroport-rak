@@ -2,8 +2,8 @@ import type { ArticleContent } from '../types';
 
 export default {
   fr: {
-    title: 'Marrakech → Fès : train, bus, avion ou route ?',
-    description: "Aller de Marrakech à Fès : 530 km, train ONCF de 7 h depuis Guéliz, bus, vol via Casablanca ou route. Durées, prix et la meilleure option selon le cas.",
+    title: "Aéroport Marrakech-Ménara → Fès : train, bus ou route ?",
+    description: "De l'aéroport de Marrakech-Ménara à Fès : 530 km, train ONCF de 7 h depuis Guéliz, bus, vol via Casablanca ou route. Durées, prix, meilleur choix.",
     eyebrow: 'Distances',
     h1: 'De Marrakech à Fès : quelle option choisir',
     lede: "Cinq cent trente kilomètres séparent les deux villes impériales : c'est le trajet le plus long de ce guide, et celui où le choix du transport change le plus votre journée.",

@@ -2,7 +2,7 @@ import type { LocalizedPage } from '../types';
 
 export default {
   title: 'Marrakech Menara Airport guide (RAK)',
-  description: 'A full guide to Marrakech Airport: terminals, layout, entry formalities, waiting times, connections and getting into the city.',
+  description: "A full guide to Marrakech Menara Airport: terminals, layout, entry formalities, waiting times, connections and getting into the city.",
   eyebrow: 'Marrakech Menara · Guide',
   h1: 'Marrakech Menara Airport guide',
   lede: "Everything worth knowing about RAK before you set foot in it: how the terminal is laid out, where the queues form, what border police ask for and how long each step really takes.",

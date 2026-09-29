@@ -2,8 +2,8 @@ import type { ArticleContent } from '../types';
 
 export default {
   fr: {
-    title: 'Fast Track à l\'aéroport de Marrakech',
-    description: "Le service Fast Track au RAK : ce qu'il fait réellement gagner, combien il coûte, à quels moments il se justifie et quand il ne sert strictement à rien.",
+    title: "Fast Track à l'aéroport de Marrakech-Ménara",
+    description: "Fast Track à l'aéroport de Marrakech-Ménara : le temps réellement gagné, le prix, quand il se justifie et quand il ne sert à rien.",
     eyebrow: 'Aéroport',
     h1: 'Fast Track à Marrakech : utile ou pas ?',
     lede: "Le point de congestion du RAK, c'est le contrôle des passeports — à l'arrivée comme au départ. Un coupe-file s'y attaque directement, ce qui le rend pertinent à certaines heures et parfaitement inutile à d'autres.",

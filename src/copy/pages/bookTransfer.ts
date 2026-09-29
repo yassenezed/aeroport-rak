@@ -2,8 +2,8 @@ import type { PageContent } from '../types';
 
 export default {
   fr: {
-    title: 'Réserver un transfert aéroport Marrakech en ligne',
-    description: "Réservez votre transfert privé depuis l'aéroport de Marrakech : prix fixe par véhicule, suivi du vol, dépose aux portes de la médina, annulation gratuite.",
+    title: "Réserver un transfert aéroport Marrakech-Ménara en ligne",
+    description: "Réservez votre transfert privé depuis l'aéroport de Marrakech-Ménara : prix fixe par véhicule, vol suivi, dépose en médina, annulation gratuite.",
     eyebrow: 'Marrakech Ménara · Réservation',
     h1: 'Réserver un transfert depuis l\'aéroport de Marrakech',
     lede: "Indiquez votre destination et votre heure d'atterrissage : le prix s'affiche par véhicule, pas par passager. Un chauffeur vous attend à la sortie des arrivées avec votre nom, et vous dépose à la porte de médina la plus proche de votre riad.",

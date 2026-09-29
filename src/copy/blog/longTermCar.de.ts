@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Langzeitmiete eines Autos in Marrakesch',
-  description: 'Ein Auto monatlich in Marrakesch mieten: gestaffelte Tarife, Kurzzeit-Leasing, Versicherung, Wartung und Alternativen für mehrere Wochen.',
+  title: "Langzeitmiete ab Flughafen Marrakesch-Menara",
+  description: "Ein Auto monatlich ab Flughafen Marrakesch-Menara mieten: gestaffelte Tarife, Kurzzeit-Leasing, Versicherung und Alternativen.",
   eyebrow: 'Mietwagen',
   h1: 'Ein Auto monatlich in Marrakesch mieten',
   lede: "Ab zwei Wochen ändert sich die Logik der Miete: Die Tagespreise fallen stark, doch Versicherung, Wartung und Kilometer werden zu Kernfragen. So verhandeln Sie richtig.",

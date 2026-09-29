@@ -2,8 +2,8 @@ import type { LocalizedPage } from '../types';
 import { site } from '../../data/site';
 
 export default {
-  title: "Privacybeleid — AirportRAK",
-  description: "Hoe AirportRAK bezoekersgegevens verwerkt: statistieken, affiliatelinks, cookies, widgets van derden en uw rechten onder de AVG.",
+  title: "Privacybeleid — AirportRAK, luchthaven Marrakech-Menara",
+  description: "Hoe AirportRAK, gids voor luchthaven Marrakech-Menara, uw gegevens verwerkt: statistieken, affiliatelinks, cookies en de AVG.",
   eyebrow: "AirportRAK",
   h1: "Privacybeleid",
   lede: "Wat deze site verzamelt, waarom, hoe lang en wat u kunt eisen. Kortom: geen accounts, geen volgformulieren en diensten van derden strikt beperkt tot statistieken en boekingen.",

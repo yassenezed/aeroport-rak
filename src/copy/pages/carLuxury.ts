@@ -2,8 +2,8 @@ import type { PageContent } from '../types';
 
 export default {
   fr: {
-    title: 'Location de voiture de prestige à Marrakech',
-    description: "Louer une berline, un SUV premium ou un cabriolet à l'aéroport de Marrakech : modèles disponibles, tarifs, cautions élevées et alternative avec chauffeur.",
+    title: "Voiture de prestige à l'aéroport Marrakech-Ménara",
+    description: "Louer une berline, un SUV premium ou un cabriolet à l'aéroport de Marrakech-Ménara : modèles, tarifs, cautions et option avec chauffeur.",
     eyebrow: 'Marrakech Ménara · Prestige',
     h1: 'Location de voiture de prestige à Marrakech',
     lede: "Marrakech est l'une des rares villes marocaines où le haut de gamme automobile est réellement disponible à la location. Voici les modèles qu'on y trouve, ce qu'ils coûtent, et la question à se poser avant de signer : conduire soi-même, ou être conduit ?",

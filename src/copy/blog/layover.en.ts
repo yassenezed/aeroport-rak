@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Layover in Marrakech: what to do with the time',
-  description: 'A layover at Marrakech Airport: how long it takes to get out, what to see in 4, 6 or 10 hours, left luggage and getting back in time.',
+  title: "Layover at Marrakech Menara Airport: what to do",
+  description: "A layover at Marrakech Menara Airport: how long it takes to get out, what to see in 4, 6 or 10 hours, left luggage and getting back in time.",
   eyebrow: 'Airport',
   h1: 'Layover in Marrakech: go out or stay?',
   lede: "Six kilometres separate the terminal from Jemaa el-Fna, which makes a Marrakech layover unusually well suited to a trip into town. You just have to do the arithmetic properly, because it is the return that catches people out.",

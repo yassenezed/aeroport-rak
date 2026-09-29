@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Salas VIP del aeropuerto de Marrakech: acceso y precios',
-  description: 'Las salas VIP del aeropuerto de Marrakech Menara: cómo entrar, precio por persona, tarjetas y programas, y qué se encuentra realmente dentro.',
+  title: "Salas VIP del aeropuerto de Marrakech-Menara: precios",
+  description: "Las salas VIP del aeropuerto de Marrakech-Menara: cómo entrar, precio por persona, tarjetas y programas, y qué se encuentra realmente dentro.",
   eyebrow: 'Aeropuerto',
   h1: 'Las salas VIP del aeropuerto de Marrakech',
   lede: "La zona de embarque del RAK se satura a las mismas horas que las colas. Una sala VIP convierte entonces una espera de pie en una hora sentado, y es una de las pocas compras de comodidad que aquí se justifican de verdad.",

@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Marrakesch → Ouarzazate über den Tichka-Pass',
-  description: 'Vom Flughafen Marrakesch nach Ouarzazate: 200 km über den Tichka-Pass auf 2.260 m, 4 Std. Fahrt, CTM-Busse, Transfers und Fahrtipps.',
+  title: "Flughafen Marrakesch-Menara → Ouarzazate über den Tichka",
+  description: "Vom Flughafen Marrakesch-Menara nach Ouarzazate: 200 km über den Tichka-Pass auf 2.260 m, 4 Std. Fahrt, CTM-Busse, Transfers und Fahrtipps.",
   eyebrow: 'Entfernungen',
   h1: 'Vom Flughafen Marrakesch nach Ouarzazate',
   lede: "Nur zweihundert Kilometer, aber vier Stunden Fahrt: Zwischen den Städten liegt der Tichka-Pass auf 2.260 Metern. Eine der schönsten Strecken Marokkos – und eine, die man nicht unterschätzen sollte.",

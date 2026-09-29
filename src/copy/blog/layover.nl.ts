@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "Overstap in Marrakech: wat doe je met de tijd",
-  description: "Overstap op luchthaven Marrakech: hoe lang naar buiten gaan duurt, wat u ziet in 4, 6 of 10 uur, bagagedepot en op tijd terug zijn voor de vlucht.",
+  title: "Overstap op luchthaven Marrakech-Menara: wat te doen",
+  description: "Overstap op luchthaven Marrakech-Menara: hoe lang naar buiten gaan duurt, wat u ziet in 4, 6 of 10 uur, bagagedepot en op tijd terug zijn voor de vlucht.",
   eyebrow: "Luchthaven",
   h1: "Overstap in Marrakech: naar buiten of blijven?",
   lede: "Zes kilometer scheiden de terminal van Djemaa el-Fna, dus een overstap in Marrakech leent zich uitzonderlijk goed voor een uitje. U moet alleen goed rekenen, want het is de terugweg die knelt.",

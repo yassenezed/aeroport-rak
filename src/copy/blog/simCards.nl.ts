@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "Simkaart in Marokko: Maroc Telecom, Orange of inwi?",
-  description: "Een simkaart kopen op luchthaven Marrakech: toeristenbundels van de drie providers, prijzen, dekking in de Atlas en de eSIM als alternatief.",
+  title: "Simkaart op luchthaven Marrakech-Menara: welke provider?",
+  description: "Een simkaart kopen op luchthaven Marrakech-Menara: toeristenbundels van de drie providers, prijzen, dekking in de Atlas en de eSIM als alternatief.",
   eyebrow: "Praktisch",
   h1: "Welke simkaart kiezen in Marokko",
   lede: "Drie providers, toeristenbundels voor enkele tientallen dirham en balies in de aankomsthal. Hier welke u kiest voor uw route, en wanneer een eSIM het beter doet.",

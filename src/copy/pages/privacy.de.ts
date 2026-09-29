@@ -2,8 +2,8 @@ import type { LocalizedPage } from '../types';
 import { site } from '../../data/site';
 
 export default {
-  title: 'Datenschutzerklärung — AirportRAK',
-  description: 'Wie AirportRAK Besucherdaten verarbeitet: Reichweitenmessung, Affiliate-Links, Cookies, Widgets Dritter und Ihre Rechte nach DSGVO.',
+  title: "Datenschutz — AirportRAK, Flughafen Marrakesch-Menara",
+  description: "Wie AirportRAK, Ratgeber zum Flughafen Marrakesch-Menara, Ihre Daten verarbeitet: Reichweite, Affiliate-Links, Cookies und DSGVO.",
   eyebrow: 'AirportRAK',
   h1: 'Datenschutzerklärung',
   lede: "Was diese Website erhebt, warum, wie lange und was Sie verlangen können. Kurz gesagt: keine Konten, keine Tracking-Formulare und Dienste Dritter strikt auf Reichweitenmessung und Buchung beschränkt.",

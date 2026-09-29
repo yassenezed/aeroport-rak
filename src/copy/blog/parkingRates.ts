@@ -2,8 +2,8 @@ import type { ArticleContent } from '../types';
 
 export default {
   fr: {
-    title: 'Tarifs du parking de l\'aéroport de Marrakech',
-    description: "Grille tarifaire du parking de Marrakech Ménara : prix à l'heure, à la journée et à la semaine, dépose-minute, paiement et alternatives moins chères.",
+    title: "Tarifs du parking de l'aéroport de Marrakech-Ménara",
+    description: "Tarifs du parking de l'aéroport de Marrakech-Ménara : prix à l'heure, à la journée et à la semaine, dépose-minute et alternatives moins chères.",
     eyebrow: 'Aéroport',
     h1: 'Parking de l\'aéroport de Marrakech : la grille des tarifs',
     lede: "Très bon marché pour une dépose, raisonnable pour un aller-retour dans la journée, nettement moins évident pour une semaine. Voici les ordres de grandeur et le calcul à faire avant de laisser sa voiture.",

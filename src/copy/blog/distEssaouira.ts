@@ -2,8 +2,8 @@ import type { ArticleContent } from '../types';
 
 export default {
   fr: {
-    title: 'Marrakech → Essaouira : distance et transports',
-    description: "Aller de l'aéroport de Marrakech à Essaouira : 180 km, 2 h 30 de route, prix du bus CTM et Supratours, transfert privé et location de voiture.",
+    title: "Aéroport Marrakech-Ménara → Essaouira : distance, transports",
+    description: "Aller de l'aéroport de Marrakech-Ménara à Essaouira : 180 km, 2 h 30 de route, prix du bus CTM et Supratours, transfert privé et location de voiture.",
     eyebrow: 'Distances',
     h1: 'De l\'aéroport de Marrakech à Essaouira',
     lede: "Cent quatre-vingts kilomètres de route droite à travers l'arganeraie, deux heures trente, et dix degrés de moins à l'arrivée. Voici les quatre façons de faire ce trajet et ce qu'elles coûtent.",

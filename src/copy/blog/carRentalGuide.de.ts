@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Mietwagen am Flughafen Marrakesch: der Ratgeber',
-  description: 'Mietwagen am RAK: Kategorien und Preise, Kaution, Selbstbeteiligung, Fahrzeugübergabe, Fahren in Marokko und teure Fehler am Schalter.',
+  title: "Mietwagen am Flughafen Marrakesch-Menara: der Ratgeber",
+  description: "Mietwagen am Flughafen Marrakesch-Menara: Kategorien, Preise, Kaution, Selbstbeteiligung, Übergabe und teure Fehler am Schalter.",
   eyebrow: 'Mietwagen',
   h1: 'Mietwagen in Marrakesch: der vollständige Ratgeber',
   lede: "Marokko gehört zu den günstigsten Mietwagenländern und zu denen, in denen der Vertrag am meisten zählt. Hier, was Sie wirklich zahlen, und die zehn Minuten Vorsicht, die 90 % der Streitfälle verhindern.",

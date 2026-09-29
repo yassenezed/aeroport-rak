@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'eSIM Marruecos: conectado nada más aterrizar',
-  description: 'eSIM para Marruecos: cómo estar conectado al bajar del avión en Marrakech, comparación con una tarjeta SIM local y con la itinerancia europea.',
+  title: "eSIM Marruecos: conectado en el aeropuerto Marrakech-Menara",
+  description: "eSIM para Marruecos: conectado al bajar del avión en el aeropuerto de Marrakech-Menara, frente a una SIM local y la itinerancia.",
   eyebrow: 'Marrakech Menara · Conexión',
   h1: 'eSIM Marruecos: conectado desde el aterrizaje',
   lede: "Marruecos no está en la zona de itinerancia europea: su tarifa se vuelve allí muy cara o directamente inutilizable. Estas son las tres formas de resolverlo y la que le hará ganar veinte minutos a la llegada.",

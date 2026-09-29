@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "من نحن — AirportRAK",
-  description: "من يكتب AirportRAK، وكيف نتحقق من المعلومات حول مطار مراكش، وكيف يُموَّل الموقع.",
+  title: "من نحن: AirportRAK، دليل مطار مراكش المنارة",
+  description: "من يكتب AirportRAK، وكيف نتحقق من المعلومات حول مطار مراكش المنارة، وكيف يُموَّل الموقع.",
   eyebrow: "AirportRAK",
   h1: "من نحن",
   lede: "AirportRAK دليل مستقل مخصص لمطار مراكش المنارة. لا ننتمي إلى المطار، ولا نبيع أي خدمة نقل، ولا ننشر إلا ما تمكنا من التحقق منه.",

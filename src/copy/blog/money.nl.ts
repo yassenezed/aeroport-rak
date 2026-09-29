@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "Geld in Marokko: dirham, geldautomaten en budget",
-  description: "De Marokkaanse dirham in de praktijk: waar wisselen, opnemen op luchthaven Marrakech, met kaart betalen, fooien en dagbudget.",
+  title: "Geld op luchthaven Marrakech-Menara: dirham en automaten",
+  description: "De Marokkaanse dirham in de praktijk: waar wisselen, opnemen op luchthaven Marrakech-Menara, met kaart betalen, fooien en dagbudget.",
   eyebrow: "Praktisch",
   h1: "Geld in Marokko: wat u vóór de landing moet weten",
   lede: "De dirham is buiten Marokko niet te koop en mag ook niet mee naar buiten. Die dubbele regel bepaalt hoe u ter plaatse met geld omgaat – te beginnen bij de eerste opname in de aankomsthal.",

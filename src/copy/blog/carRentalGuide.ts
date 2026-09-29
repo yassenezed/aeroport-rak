@@ -2,8 +2,8 @@ import type { ArticleContent } from '../types';
 
 export default {
   fr: {
-    title: 'Louer une voiture à l\'aéroport de Marrakech',
-    description: "Location de voiture au RAK : catégories et prix, caution, franchise, état des lieux, conduite au Maroc et les erreurs qui coûtent cher au comptoir.",
+    title: "Louer une voiture à l'aéroport de Marrakech-Ménara",
+    description: "Louer une voiture à l'aéroport de Marrakech-Ménara : catégories, prix, caution, franchise, état des lieux et erreurs qui coûtent cher au comptoir.",
     eyebrow: 'Location',
     h1: 'Louer une voiture à Marrakech : le guide complet',
     lede: "Le Maroc est l'un des pays où la location est la moins chère, et l'un de ceux où le contrat compte le plus. Voici ce que vous payerez réellement, et les dix minutes de précaution qui évitent 90 % des litiges.",

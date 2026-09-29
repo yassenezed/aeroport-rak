@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "Marrakech → Casablanca: trein, bus en weg",
-  description: "Van luchthaven Marrakech naar Casablanca: 240 km, snelweg, ONCF-trein vanaf station Guéliz, CTM-bus en privétransfer.",
+  title: "Luchthaven Marrakech-Menara → Casablanca: trein, bus, weg",
+  description: "Van luchthaven Marrakech-Menara naar Casablanca: 240 km, snelweg, ONCF-trein vanaf station Guéliz, CTM-bus en privétransfer.",
   eyebrow: "Afstanden",
   h1: "Van luchthaven Marrakech naar Casablanca",
   lede: "Tweehonderdveertig kilometer snelweg of drie uur trein vanaf station Guéliz. De keuze hangt vooral af van één detail: geen spoorlijn bereikt de luchthaven, u moet eerst naar het station.",

@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Marrakech → Agadir: distance, road and transport',
-  description: 'Getting from Marrakech Airport to Agadir: 250 km of motorway, 3 h drive, CTM and Supratours coaches, private transfer and car hire.',
+  title: "Marrakech Menara Airport to Agadir: distance and transport",
+  description: "Getting from Marrakech Menara Airport to Agadir: 250 km of motorway, 3 h drive, CTM and Supratours coaches, private transfer and car hire.",
   eyebrow: 'Distances',
   h1: 'From Marrakech Airport to Agadir',
   lede: "Two hundred and fifty kilometres, three hours by motorway, and a complete change of scene: you leave the red city for the Atlantic. Here is how to make the trip and what it really costs.",

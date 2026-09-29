@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Money in Morocco: dirhams, ATMs and budgets',
-  description: 'The Moroccan dirham in practice: where to change, withdrawing at Marrakech Airport, paying by card, tipping and daily budgets.',
+  title: "Money at Marrakech Menara Airport: dirhams and ATMs",
+  description: "The Moroccan dirham in practice: where to change, withdrawing at Marrakech Menara Airport, paying by card, tipping and daily budgets.",
   eyebrow: 'Practical',
   h1: 'Money in Morocco: what to know before you land',
   lede: "The dirham cannot be bought outside Morocco and cannot be taken out either. That double rule shapes how you handle money there — starting with your first withdrawal in the arrivals hall.",

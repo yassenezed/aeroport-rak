@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Cheap car hire in Marrakech: what to know',
-  description: 'Budget car hire at Marrakech Airport: real prices from €25 a day, local versus international agencies, and the traps in a cheap contract.',
+  title: "Cheap car hire at Marrakech Menara Airport",
+  description: "Budget car hire at Marrakech Menara Airport: real prices from €25 a day, local versus international agencies, and the traps in a cheap contract.",
   eyebrow: 'Marrakech Menara · Budget',
   h1: 'Budget car hire in Marrakech',
   lede: "The £10-a-day adverts exist, and they are not false — they are simply incomplete. Here is what a small car really costs in Morocco, and how to pay little without being caught at the desk.",

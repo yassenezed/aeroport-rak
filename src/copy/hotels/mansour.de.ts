@@ -1,8 +1,8 @@
 import type { LocalizedHotel } from '../types';
 
 export default {
-  title: 'Royal Mansour Marrakesch: Bewertung und Anfahrt',
-  description: 'Royal Mansour: private Riads in einem ummauerten Anwesen, ein außergewöhnlicher Service und fünfzehn Autominuten vom Flughafen Marrakesch.',
+  title: "Royal Mansour: Anfahrt vom Flughafen Marrakesch-Menara",
+  description: "Royal Mansour: private Riads in einem ummauerten Anwesen, ein außergewöhnlicher Service und fünfzehn Autominuten vom Flughafen Marrakesch-Menara.",
   eyebrow: 'Marrakesch · Hotel',
   h1: 'Royal Mansour',
   lede: "Keine Zimmer, sondern private mehrstöckige Riads in einem ummauerten Anwesen innerhalb der Stadtmauer. Das ungewöhnlichste Haus von Marrakesch und vermutlich das teuerste.",

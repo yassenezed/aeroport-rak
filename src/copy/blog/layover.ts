@@ -2,8 +2,8 @@ import type { ArticleContent } from '../types';
 
 export default {
   fr: {
-    title: 'Escale à Marrakech : que faire sur place',
-    description: "Escale à l'aéroport de Marrakech : combien de temps faut-il pour sortir, que voir en 4, 6 ou 10 heures, consigne à bagages et retour à temps pour le vol.",
+    title: "Escale à l'aéroport Marrakech-Ménara : que faire ?",
+    description: "Escale à l'aéroport de Marrakech-Ménara : combien de temps faut-il pour sortir, que voir en 4, 6 ou 10 heures, consigne à bagages et retour à temps pour le vol.",
     eyebrow: 'Aéroport',
     h1: 'Escale à Marrakech : sortir ou rester ?',
     lede: "Six kilomètres séparent le terminal de Jemaa el-Fna : une escale à Marrakech se prête particulièrement bien à une sortie. Encore faut-il calculer correctement, parce que c'est le retour qui coince, pas l'aller.",

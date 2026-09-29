@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Parken am Flughafen Marrakesch: Tarife und Zufahrt',
-  description: 'Parkplätze am Flughafen Marrakesch Menara: Stunden- und Tagestarife, Kurzhaltezone, Langzeitparken und günstigere Alternativen.',
+  title: "Parken am Flughafen Marrakesch-Menara: Tarife und Zufahrt",
+  description: "Parkplätze am Flughafen Marrakesch-Menara: Stunden- und Tagestarife, Kurzhaltezone, Langzeitparken und günstigere Alternativen.",
   eyebrow: 'Marrakesch Menara · Parken',
   h1: 'Parken am Flughafen Marrakesch',
   lede: "Der RAK verfügt über oberirdische Parkplätze vor den Terminals, mit gestaffeltem Tarif: sehr günstig zum Absetzen, deutlich weniger für eine Woche. Hier, was Sie zahlen und wann Sie besser nicht mit dem Auto kommen.",

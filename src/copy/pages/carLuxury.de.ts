@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Luxus-Mietwagen in Marrakesch',
-  description: 'Limousine, Premium-SUV oder Cabrio am Flughafen Marrakesch mieten: verfügbare Modelle, Preise, hohe Kautionen und die Alternative mit Fahrer.',
+  title: "Luxus-Mietwagen am Flughafen Marrakesch-Menara",
+  description: "Limousine, Premium-SUV oder Cabrio am Flughafen Marrakesch-Menara mieten: verfügbare Modelle, Preise, hohe Kautionen und die Alternative mit Fahrer.",
   eyebrow: 'Marrakesch Menara · Premium',
   h1: 'Luxus-Mietwagen in Marrakesch',
   lede: "Marrakesch ist eine der wenigen marokkanischen Städte, in denen gehobene Fahrzeuge tatsächlich zur Miete verfügbar sind. Hier die Modelle, die Preise und die Frage, die vor der Unterschrift zu klären ist: selbst fahren oder gefahren werden?",

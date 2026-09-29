@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Marrakech → Casablanca: tren, autobús y carretera',
-  description: 'Ir del aeropuerto de Marrakech a Casablanca: 240 km, autopista, tren ONCF desde la estación de Guéliz, autobús CTM y traslado privado.',
+  title: "Aeropuerto de Marrakech-Menara → Casablanca: tren y bus",
+  description: "Ir del aeropuerto de Marrakech-Menara a Casablanca: 240 km, autopista, tren ONCF desde la estación de Guéliz, autobús CTM y traslado privado.",
   eyebrow: 'Distancias',
   h1: 'Del aeropuerto de Marrakech a Casablanca',
   lede: "Doscientos cuarenta kilómetros de autopista, o tres horas de tren desde la estación de Guéliz. La elección depende sobre todo de un detalle: ninguna línea ferroviaria llega al aeropuerto, hay que ir primero a la estación.",

@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Een gids in Marrakech: is het de moeite waard?",
-  description: "Een gids nemen in Marrakech: tarieven, officiële gidsen, rondleidingen door de medina, uitstapjes in de Atlas en de fouten die u vanaf dag één vermijdt.",
+  title: "Een gids vanaf luchthaven Marrakech-Menara: de moeite?",
+  description: "Een gids nemen vanaf luchthaven Marrakech-Menara: tarieven, officiële gidsen, medina, uitstapjes in de Atlas en fouten om te vermijden.",
   eyebrow: "Marrakech · Rondleidingen",
   h1: "Een gids nemen in Marrakech",
   lede: "Marrakech is een stad die zich de eerste dag moeilijk alleen laat lezen. Een officiële gids voor een goed gekozen halve dag bespaart meer tijd en geld dan hij kost – als u weet wat u koopt.",

@@ -2,8 +2,8 @@ import type { ArticleContent } from '../types';
 
 export default {
   fr: {
-    title: 'Carte SIM au Maroc : Maroc Telecom, Orange ou inwi ?',
-    description: "Acheter une carte SIM à l'aéroport de Marrakech : forfaits touristiques des trois opérateurs, prix, couverture dans l'Atlas et alternative eSIM.",
+    title: "Carte SIM à l'aéroport Marrakech-Ménara : quel opérateur ?",
+    description: "Acheter une carte SIM à l'aéroport de Marrakech-Ménara : forfaits touristiques des trois opérateurs, prix, couverture dans l'Atlas et alternative eSIM.",
     eyebrow: 'Pratique',
     h1: 'Quelle carte SIM choisir au Maroc',
     lede: "Trois opérateurs, des forfaits touristiques à quelques dizaines de dirhams et des comptoirs dans le hall des arrivées. Voici lequel choisir selon votre itinéraire, et quand une eSIM fait mieux l'affaire.",

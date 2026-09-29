@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "Auto langdurig huren in Marrakech",
-  description: "Een auto per maand huren in Marrakech: dalende tarieven, kortlopende lease, verzekering, onderhoud en alternatieven voor een verblijf van meerdere weken.",
+  title: "Langdurig huren vanaf luchthaven Marrakech-Menara",
+  description: "Een auto per maand huren vanaf luchthaven Marrakech-Menara: dalende tarieven, korte lease, verzekering en alternatieven.",
   eyebrow: "Autohuur",
   h1: "Een auto per maand huren in Marrakech",
   lede: "Vanaf twee weken verandert de logica van huren: dagprijzen zakken flink, maar verzekering, onderhoud en kilometers worden de kernvragen. Zo onderhandelt u goed.",

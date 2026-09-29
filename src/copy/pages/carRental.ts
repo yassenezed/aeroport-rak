@@ -2,8 +2,8 @@ import type { PageContent } from '../types';
 
 export default {
   fr: {
-    title: 'Location de voiture à l\'aéroport de Marrakech',
-    description: "Louer une voiture à l'aéroport de Marrakech : prix réels, caution, franchise, état des lieux, conduite au Maroc et cas où la voiture ne sert à rien.",
+    title: "Location de voiture à l'aéroport de Marrakech-Ménara",
+    description: "Louer une voiture à l'aéroport de Marrakech-Ménara : prix réels, caution, franchise, état des lieux, conduite au Maroc et cas où la voiture ne sert à rien.",
     eyebrow: 'Marrakech Ménara · Location',
     h1: 'Louer une voiture à l\'aéroport de Marrakech',
     lede: "Une voiture ouvre l'Atlas, l'Ourika, Essaouira et le sud. Elle devient un handicap si vous restez en médina. Voici comment trancher, ce que coûte réellement une location au RAK, et les trois lignes du contrat qui comptent.",

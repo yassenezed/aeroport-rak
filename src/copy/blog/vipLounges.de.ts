@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Lounges am Flughafen Marrakesch: Zugang und Preise',
-  description: 'Die Lounges am Flughafen Marrakesch Menara: wie man hineinkommt, Einzelpreise, Karten und Programme und was man drinnen wirklich findet.',
+  title: "Lounges am Flughafen Marrakesch-Menara: Zugang und Preise",
+  description: "Die Lounges am Flughafen Marrakesch-Menara: wie man hineinkommt, Einzelpreise, Karten und Programme und was man drinnen wirklich findet.",
   eyebrow: 'Flughafen',
   h1: 'Die Lounges am Flughafen Marrakesch',
   lede: "Der Abflugbereich des RAK füllt sich zu denselben Zeiten wie die Schlangen. Eine Lounge macht dann aus Warten im Stehen eine Stunde im Sitzen – eine der wenigen Komfortausgaben, die sich hier wirklich lohnen.",

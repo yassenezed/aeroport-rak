@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Alquiler de coches barato en Marrakech',
-  description: 'Alquilar un coche económico en el aeropuerto de Marrakech: precios reales desde 25 €/día, agencias locales o internacionales y las trampas del contrato barato.',
+  title: "Coche barato en el aeropuerto de Marrakech-Menara",
+  description: "Coche barato en el aeropuerto de Marrakech-Menara: precios reales desde 25 €/día, agencias locales o internacionales y trampas del contrato.",
   eyebrow: 'Marrakech Menara · Económico',
   h1: 'Alquiler de coches económico en Marrakech',
   lede: "Los anuncios de 12 € al día existen, y no son falsos: simplemente están incompletos. Esto es lo que cuesta realmente un coche pequeño en Marruecos y cómo pagar poco sin que le alcancen en el mostrador.",

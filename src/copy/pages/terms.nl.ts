@@ -2,8 +2,8 @@ import type { LocalizedPage } from '../types';
 import { site } from '../../data/site';
 
 export default {
-  title: "Gebruiksvoorwaarden — AirportRAK",
-  description: "Gebruiksvoorwaarden van AirportRAK: redactioneel karakter van de site, grenzen van aansprakelijkheid, intellectueel eigendom en links naar derden.",
+  title: "Gebruiksvoorwaarden — gids luchthaven Marrakech-Menara",
+  description: "Gebruiksvoorwaarden van AirportRAK, onafhankelijke gids voor luchthaven Marrakech-Menara: aansprakelijkheid, rechten en links.",
   eyebrow: "AirportRAK",
   h1: "Gebruiksvoorwaarden",
   lede: "Wat u van deze site kunt verwachten, en wat niet. Door AirportRAK te gebruiken, aanvaardt u de onderstaande voorwaarden.",

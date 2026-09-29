@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'SIM cards in Morocco: Maroc Telecom, Orange or inwi?',
-  description: 'Buying a SIM card at Marrakech Airport: tourist bundles from the three operators, prices, Atlas coverage and the eSIM alternative.',
+  title: "SIM cards at Marrakech Menara Airport: which network?",
+  description: "Buying a SIM card at Marrakech Menara Airport: tourist bundles from the three operators, prices, Atlas coverage and the eSIM alternative.",
   eyebrow: 'Practical',
   h1: 'Which SIM card to choose in Morocco',
   lede: "Three operators, tourist bundles for a few tens of dirhams, and counters in the arrivals hall. Here is which to pick for your itinerary, and when an eSIM does the job better.",

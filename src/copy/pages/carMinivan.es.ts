@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Alquiler de monovolumen de 7 a 9 plazas en Marrakech',
-  description: 'Alquilar un monovolumen o una furgoneta en el aeropuerto de Marrakech: capacidad real, equipaje, precios y comparación con una furgoneta con chófer.',
+  title: "Monovolumen de 7 a 9 plazas: aeropuerto Marrakech-Menara",
+  description: "Alquilar un monovolumen o una furgoneta en el aeropuerto de Marrakech-Menara: capacidad real, equipaje, precios y comparación con una furgoneta con chófer.",
   eyebrow: 'Marrakech Menara · Gran formato',
   h1: 'Alquilar un monovolumen en el aeropuerto de Marrakech',
   lede: "A partir de cinco personas, el problema no es el número de asientos: es el maletero. Esto es lo que caben realmente los monovolúmenes disponibles en el RAK, lo que cuestan y cuándo sale más barato una furgoneta con chófer.",

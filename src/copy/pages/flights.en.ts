@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Flights to Marrakech (RAK): airlines, seasons and fares',
-  description: 'Flights to Marrakech Airport: which airlines serve RAK, the best months to book, low-cost baggage traps and domestic connections.',
+  title: "Flights to Marrakech Menara Airport: airlines and fares",
+  description: "Flights to Marrakech Menara Airport: which airlines serve RAK, the best months to book, low-cost baggage traps and domestic connections.",
   eyebrow: 'Marrakech Menara · Flights',
   h1: 'Flights to Marrakech',
   lede: "RAK is Morocco's busiest airport after Casablanca, with a dense network of European routes and a pronounced season. Compare dates, then read what actually moves the final price.",

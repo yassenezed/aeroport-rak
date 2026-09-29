@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Transfer Flughafen Marrakesch: Optionen und Preise',
-  description: 'Transfer, Taxi, Bus 19 oder Mietwagen ab Flughafen Marrakesch: reale Preise in Dirham und Euro, Absetzen an den Medina-Toren und Nachtankünfte.',
+  title: "Transfer Flughafen Marrakesch-Menara: Optionen und Preise",
+  description: "Transfer, Taxi, Bus 19 oder Mietwagen ab Flughafen Marrakesch-Menara: reale Preise in Dirham und Euro, Absetzen an den Medina-Toren und Nachtankünfte.",
   eyebrow: 'Marrakesch Menara · Transfers',
   h1: 'Transfers vom Flughafen Marrakesch',
   lede: "Sechs Kilometer bis Djemaa el-Fna: Die Fahrt ist kurz, problematisch sind die letzten hundert Meter, denn in die Gassen der Medina fährt kein Auto. Hier sind die vier Wege aus dem Terminal, was sie wirklich kosten und welcher zu Ihrem Flug passt.",

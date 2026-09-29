@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "Auto huren op luchthaven Marrakech: de gids",
-  description: "Autohuur op de RAK: categorieën en prijzen, borg, eigen risico, inspectie, rijden in Marokko en dure fouten aan de balie.",
+  title: "Auto huren op luchthaven Marrakech-Menara: de gids",
+  description: "Auto huren op luchthaven Marrakech-Menara: categorieën, prijzen, borg, eigen risico, inspectie en dure fouten aan de balie.",
   eyebrow: "Autohuur",
   h1: "Een auto huren in Marrakech: de complete gids",
   lede: "Marokko is een van de goedkoopste landen om een auto te huren, en een van de landen waar het contract het meest telt. Hier wat u echt betaalt, en de tien minuten voorzorg die 90 % van de geschillen voorkomen.",

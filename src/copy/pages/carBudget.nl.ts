@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Goedkoop een auto huren in Marrakech",
-  description: "Een voordelige auto huren op luchthaven Marrakech: echte prijzen vanaf € 25/dag, lokale of internationale verhuurders en de valkuilen van een goedkoop contract.",
+  title: "Goedkope huurauto op luchthaven Marrakech-Menara",
+  description: "Goedkoop een auto huren op luchthaven Marrakech-Menara: echte prijzen vanaf € 25/dag, lokale of internationale verhuurders en valkuilen.",
   eyebrow: "Marrakech Menara · Voordelig",
   h1: "Voordelig een auto huren in Marrakech",
   lede: "Advertenties van € 12 per dag bestaan, en ze liegen niet – ze zijn alleen onvolledig. Hier wat een kleine auto in Marokko echt kost en hoe u weinig betaalt zonder aan de balie te worden verrast.",

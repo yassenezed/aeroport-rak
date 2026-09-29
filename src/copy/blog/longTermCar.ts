@@ -2,8 +2,8 @@ import type { ArticleContent } from '../types';
 
 export default {
   fr: {
-    title: 'Location de voiture longue durée à Marrakech',
-    description: "Louer une voiture au mois à Marrakech : tarifs dégressifs, leasing courte durée, assurance, entretien et alternatives pour un séjour de plusieurs semaines.",
+    title: "Location longue durée à l'aéroport Marrakech-Ménara",
+    description: "Louer une voiture au mois dès l'aéroport de Marrakech-Ménara : tarifs dégressifs, leasing court, assurance et alternatives pour plusieurs semaines.",
     eyebrow: 'Location',
     h1: 'Louer une voiture au mois à Marrakech',
     lede: "Au-delà de deux semaines, la logique de la location change : les tarifs journaliers s'effondrent, mais les questions d'assurance, d'entretien et de kilométrage deviennent centrales. Voici comment négocier correctement.",

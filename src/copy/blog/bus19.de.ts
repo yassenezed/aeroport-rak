@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Bus 19 ALSA: Flughafen Marrakesch ↔ Djemaa el-Fna',
-  description: 'Der Bus 19 zwischen Flughafen Marrakesch und Djemaa el-Fna: Preis, Fahrplan, Takt, Fahrzeit, Haltestelle und wann er sich nicht eignet.',
+  title: "Bus 19 ALSA: Flughafen Marrakesch-Menara ↔ Djemaa el-Fna",
+  description: "Der Bus 19 zwischen Flughafen Marrakesch-Menara und Djemaa el-Fna: Preis, Fahrplan, Takt, Fahrzeit, Haltestelle und wann er sich nicht eignet.",
   eyebrow: 'Unterwegs',
   h1: 'Der Bus 19 zwischen Flughafen Marrakesch und Zentrum',
   lede: "Dreißig Dirham bis Djemaa el-Fna: das günstigste Verkehrsmittel ab RAK, und es funktioniert gut – sofern Sie vor 23 Uhr landen und Ihr Gepäck selbst tragen können.",

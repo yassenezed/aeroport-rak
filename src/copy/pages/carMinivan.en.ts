@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Minivan hire in Marrakech: 7 to 9 seats',
-  description: 'Hiring a minivan at Marrakech Airport: real capacity, luggage space, prices, and how it compares with a private van and driver.',
+  title: "7-9 seat minivan hire at Marrakech Menara Airport",
+  description: "Hiring a minivan at Marrakech Menara Airport: real capacity, luggage space, prices, and how it compares with a private van and driver.",
   eyebrow: 'Marrakech Menara · Large vehicles',
   h1: 'Hiring a minivan at Marrakech Airport',
   lede: "With five people or more, the problem is not the seats: it is the boot. Here is what the minivans available at RAK actually hold, what they cost, and when a van with a driver works out cheaper.",

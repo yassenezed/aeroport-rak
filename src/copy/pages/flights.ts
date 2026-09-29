@@ -2,8 +2,8 @@ import type { PageContent } from '../types';
 
 export default {
   fr: {
-    title: 'Vols Marrakech (RAK) : compagnies, saisons et prix',
-    description: "Vols vers l'aéroport de Marrakech : compagnies desservant le RAK, meilleures périodes pour réserver, bagages low cost et correspondances intérieures.",
+    title: "Vols vers l'aéroport Marrakech-Ménara : compagnies et prix",
+    description: "Vols vers l'aéroport de Marrakech-Ménara : compagnies desservant le RAK, meilleures périodes pour réserver, bagages low cost et correspondances intérieures.",
     eyebrow: 'Marrakech Ménara · Vols',
     h1: 'Vols vers Marrakech',
     lede: "Le RAK est l'aéroport le plus desservi du Maroc après Casablanca, avec une forte densité de lignes européennes et une saisonnalité marquée. Comparez les dates, puis lisez ce qui change vraiment le prix final.",

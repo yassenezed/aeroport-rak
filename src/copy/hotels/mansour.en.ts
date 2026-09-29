@@ -1,8 +1,8 @@
 import type { LocalizedHotel } from '../types';
 
 export default {
-  title: 'Royal Mansour Marrakech: review and airport access',
-  description: 'Royal Mansour: private riads inside a walled estate, service out of the ordinary, and fifteen minutes by car from Marrakech Airport.',
+  title: "Royal Mansour: review and Marrakech Menara Airport access",
+  description: "Royal Mansour: private riads inside a walled estate, service out of the ordinary, and fifteen minutes by car from Marrakech Menara Airport.",
   eyebrow: 'Marrakech · Hotel',
   h1: 'Royal Mansour',
   lede: "Not rooms but private multi-storey riads, gathered inside a walled estate within the ramparts. The most singular property in Marrakech, and probably the most expensive.",

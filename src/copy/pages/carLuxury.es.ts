@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Alquiler de coches de lujo en Marrakech',
-  description: 'Alquilar una berlina, un SUV premium o un descapotable en el aeropuerto de Marrakech: modelos, tarifas, fianzas elevadas y la alternativa con chófer.',
+  title: "Coches de lujo en el aeropuerto de Marrakech-Menara",
+  description: "Alquilar una berlina, un SUV premium o un descapotable en el aeropuerto de Marrakech-Menara: modelos, tarifas, fianzas elevadas y la alternativa con chófer.",
   eyebrow: 'Marrakech Menara · Prestigio',
   h1: 'Alquiler de coches de prestigio en Marrakech',
   lede: "Marrakech es una de las pocas ciudades marroquíes donde la gama alta está realmente disponible en alquiler. Estos son los modelos que se encuentran, lo que cuestan y la pregunta que hay que hacerse antes de firmar: ¿conducir usted o que le lleven?",

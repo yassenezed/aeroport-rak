@@ -1,8 +1,8 @@
 import type { LocalizedHotel } from '../types';
 
 export default {
-  title: 'La Mamounia Marrakech: review and airport access',
-  description: "La Mamounia: a century of history, vast gardens at the edge of the medina, fifteen minutes by car from Marrakech Airport.",
+  title: "La Mamounia: review and Marrakech Menara Airport access",
+  description: "La Mamounia: a century of history, vast gardens at the edge of the medina, fifteen minutes by car from Marrakech Menara Airport.",
   eyebrow: 'Marrakech · Hotel',
   h1: 'La Mamounia',
   lede: "Marrakech's historic grand hotel, five kilometres from the terminal, on the hinge between the ramparts and the modern town: the medina on foot, car access without constraint.",

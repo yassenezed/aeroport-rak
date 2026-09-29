@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Automaat huren in Marrakech",
-  description: "Een automaat huren op luchthaven Marrakech: echte beschikbaarheid, meerprijs, stadsverkeer en tips voor uw eerste keer achter het stuur in Marokko.",
+  title: "Automaat huren op luchthaven Marrakech-Menara",
+  description: "Een automaat huren op luchthaven Marrakech-Menara: echte beschikbaarheid, meerprijs, stadsverkeer en tips voor uw eerste keer achter het stuur in Marokko.",
   eyebrow: "Marrakech Menara · Makkelijk rijden",
   h1: "Makkelijk rijden: een automaat in Marrakech",
   lede: "In Marokko is handgeschakeld de norm en moet een automaat gereserveerd worden. Hebt u hier nog nooit gereden, dan verandert die keuze meer dan u denkt – te beginnen bij uw eerste uur in het verkeer.",

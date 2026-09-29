@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Marrakech → Fez: ¿tren, autobús, avión o carretera?',
-  description: 'Ir de Marrakech a Fez: 530 km, tren ONCF de 7 h desde Guéliz, autobús, vuelo vía Casablanca o carretera. Duraciones, precios y la mejor opción.',
+  title: "Aeropuerto de Marrakech-Menara → Fez: tren, bus o coche",
+  description: "Del aeropuerto de Marrakech-Menara a Fez: 530 km, tren ONCF de 7 h desde Guéliz, autobús, vuelo vía Casablanca o carretera. Precios y duraciones.",
   eyebrow: 'Distancias',
   h1: 'De Marrakech a Fez: qué opción elegir',
   lede: "Quinientos treinta kilómetros separan las dos ciudades imperiales: es el trayecto más largo de esta guía y aquel en el que la elección del transporte más cambia su jornada.",

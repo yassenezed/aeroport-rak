@@ -3,8 +3,8 @@ import { site } from '../../data/site';
 
 export default {
   fr: {
-    title: 'Politique de confidentialité — AirportRAK',
-    description: "Comment AirportRAK traite les données des visiteurs : mesure d'audience, liens d'affiliation, cookies, widgets tiers et droits RGPD.",
+    title: "Confidentialité — AirportRAK, aéroport Marrakech-Ménara",
+    description: "Comment AirportRAK, guide de l'aéroport de Marrakech-Ménara, traite vos données : audience, affiliation, cookies, widgets tiers et RGPD.",
     eyebrow: 'AirportRAK',
     h1: 'Politique de confidentialité',
     lede: "Ce que ce site collecte, pourquoi, pendant combien de temps, et ce que vous pouvez exiger. En résumé : aucun compte, aucun formulaire de suivi, et des outils tiers strictement limités à la mesure d'audience et à la réservation.",

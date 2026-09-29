@@ -1,8 +1,8 @@
 import type { LocalizedHotel } from '../types';
 
 export default {
-  title: 'Es Saadi Marrakech: review and airport access',
-  description: 'Es Saadi: a multi-hectare estate in Hivernage, several accommodation tiers and only ten minutes from Marrakech Airport.',
+  title: "Es Saadi: review and access from Marrakech Menara Airport",
+  description: "Es Saadi: a multi-hectare estate in Hivernage, several accommodation tiers and only ten minutes from Marrakech Menara Airport.",
   eyebrow: 'Marrakech · Hotel',
   h1: 'Es Saadi',
   lede: "A family-run estate in Hivernage, ten minutes from the terminal: the quickest address to reach from the airport, and one of the few with a genuine park in the middle of the city.",

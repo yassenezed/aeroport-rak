@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Fast Track en el aeropuerto de Marrakech',
-  description: 'El servicio Fast Track en el RAK: cuánto tiempo ahorra realmente, cuánto cuesta, cuándo se justifica y cuándo no sirve de nada.',
+  title: "Fast Track en el aeropuerto de Marrakech-Menara",
+  description: "Fast Track en el aeropuerto de Marrakech-Menara: cuánto tiempo ahorra, cuánto cuesta, cuándo compensa y cuándo no sirve de nada.",
   eyebrow: 'Aeropuerto',
   h1: 'Fast Track en Marrakech: ¿útil o no?',
   lede: "El punto de congestión del RAK es el control de pasaportes, tanto a la llegada como a la salida. Un servicio de paso prioritario ataca precisamente eso, lo que lo hace pertinente a ciertas horas y totalmente inútil a otras.",

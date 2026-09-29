@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Hiring a car at Marrakech Airport',
-  description: 'Car hire at RAK: categories and prices, deposit, excess, vehicle inspection, driving in Morocco and the mistakes that cost money at the desk.',
+  title: "Hiring a car at Marrakech Menara Airport",
+  description: "Car hire at Marrakech Menara Airport: categories and prices, deposit, excess, inspection, driving in Morocco and costly mistakes at the desk.",
   eyebrow: 'Car hire',
   h1: 'Hiring a car in Marrakech: the full guide',
   lede: "Morocco is one of the cheapest countries to hire a car in, and one where the contract matters most. Here is what you will actually pay, and the ten minutes of precaution that prevent 90 % of disputes.",

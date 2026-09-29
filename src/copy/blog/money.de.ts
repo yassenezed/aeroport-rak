@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Geld in Marokko: Dirham, Automaten und Budget',
-  description: 'Der marokkanische Dirham in der Praxis: wo wechseln, Abheben am Flughafen Marrakesch, Kartenzahlung, Trinkgeld und Tagesbudget.',
+  title: "Geld am Flughafen Marrakesch-Menara: Dirham, Automaten",
+  description: "Der marokkanische Dirham in der Praxis: wo wechseln, Abheben am Flughafen Marrakesch-Menara, Kartenzahlung, Trinkgeld und Tagesbudget.",
   eyebrow: 'Praktisches',
   h1: 'Geld in Marokko: was Sie vor der Landung wissen sollten',
   lede: "Der Dirham lässt sich außerhalb Marokkos weder kaufen noch ausführen. Diese doppelte Regel bestimmt den Umgang mit Geld vor Ort – angefangen bei der ersten Abhebung in der Ankunftshalle.",

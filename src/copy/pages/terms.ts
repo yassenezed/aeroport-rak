@@ -3,8 +3,8 @@ import { site } from '../../data/site';
 
 export default {
   fr: {
-    title: 'Conditions d\'utilisation — AirportRAK',
-    description: "Conditions d'utilisation d'AirportRAK : nature éditoriale du site, limites de responsabilité, propriété intellectuelle et liens vers des tiers.",
+    title: "Conditions d'utilisation — guide aéroport Marrakech-Ménara",
+    description: "Conditions d'utilisation d'AirportRAK, guide indépendant de l'aéroport de Marrakech-Ménara : nature du site, responsabilité et liens tiers.",
     eyebrow: 'AirportRAK',
     h1: 'Conditions d\'utilisation',
     lede: "Ce que vous pouvez attendre de ce site, et ce que vous ne pouvez pas en attendre. En consultant AirportRAK, vous acceptez les conditions qui suivent.",

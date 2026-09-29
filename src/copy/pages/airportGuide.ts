@@ -2,8 +2,8 @@ import type { PageContent } from '../types';
 
 export default {
   fr: {
-    title: 'Guide de l\'aéroport de Marrakech Ménara (RAK)',
-    description: "Guide complet de l'aéroport de Marrakech : terminaux, plan, formalités d'entrée, temps d'attente, correspondances et accès à la ville.",
+    title: "Guide de l'aéroport de Marrakech-Ménara (RAK)",
+    description: "Guide complet de l'aéroport de Marrakech-Ménara : terminaux, plan, formalités d'entrée, temps d'attente, correspondances et accès à la ville.",
     eyebrow: 'Marrakech Ménara · Guide',
     h1: 'Guide de l\'aéroport de Marrakech Ménara',
     lede: "Tout ce qu'il faut savoir sur le RAK avant d'y poser le pied : comment le terminal est organisé, où se forment les files, ce que demande la police des frontières et combien de temps prévoir à chaque étape.",

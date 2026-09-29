@@ -2,8 +2,8 @@ import type { HotelContent } from '../types';
 
 export default {
   fr: {
-    title: 'Royal Mansour Marrakech : avis et accès aéroport',
-    description: "Royal Mansour : des riads privés au cœur d'un domaine clos, un service hors norme, et un accès en voiture depuis l'aéroport de Marrakech en quinze minutes.",
+    title: "Royal Mansour : avis et accès aéroport Marrakech-Ménara",
+    description: "Royal Mansour : riads privés dans un domaine clos, service hors norme, à quinze minutes de l'aéroport de Marrakech-Ménara en voiture.",
     eyebrow: 'Marrakech · Hôtel',
     h1: 'Royal Mansour',
     lede: "Non pas des chambres, mais des riads privés de plusieurs étages, réunis dans un domaine clos à l'intérieur des remparts. L'établissement le plus singulier de Marrakech, et probablement le plus cher.",

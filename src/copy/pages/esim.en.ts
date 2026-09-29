@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Morocco eSIM: online the moment you land',
-  description: 'eSIM for Morocco: how to be connected the moment you step off the plane in Marrakech, compared with a local SIM card and with EU roaming.',
+  title: "Morocco eSIM: online from Marrakech Menara Airport",
+  description: "Morocco eSIM: be connected as you step off the plane at Marrakech Menara Airport, compared with a local SIM card and EU roaming.",
   eyebrow: 'Marrakech Menara · Connectivity',
   h1: 'Morocco eSIM: connected the moment you land',
   lede: "Morocco is outside the EU roaming zone: your usual plan becomes either very expensive or unusable there. Here are the three ways to settle it, and the one that saves you twenty minutes on arrival.",

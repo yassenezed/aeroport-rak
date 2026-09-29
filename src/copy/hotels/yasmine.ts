@@ -2,8 +2,8 @@ import type { HotelContent } from '../types';
 
 export default {
   fr: {
-    title: 'Riad Yasmine Marrakech : avis et accès aéroport',
-    description: "Riad Yasmine : le patio le plus photographié de la médina de Marrakech, à l'échelle d'une maison. Accès depuis l'aéroport, porte de dépose et logistique.",
+    title: "Riad Yasmine : avis et accès aéroport Marrakech-Ménara",
+    description: "Riad Yasmine, le patio le plus photographié de la médina : accès depuis l'aéroport de Marrakech-Ménara, porte de dépose et logistique.",
     eyebrow: 'Marrakech · Riad',
     h1: 'Riad Yasmine',
     lede: "Le patio vert de la médina, et la logistique qui va avec. Un vrai riad, à l'échelle domestique, où l'arrivée se prépare parce que la voiture s'arrête à une porte.",

@@ -2,8 +2,8 @@ import type { LocalizedPage } from '../types';
 import { site } from '../../data/site';
 
 export default {
-  title: "Affiliateverklaring — AirportRAK",
-  description: "Hoe AirportRAK geld verdient: affiliatelinks, commissies, en waarom dat noch uw prijs noch onze aanbevelingen verandert.",
+  title: "Affiliateverklaring — luchthaven Marrakech-Menara",
+  description: "Hoe AirportRAK, gids voor luchthaven Marrakech-Menara, zich financiert: affiliatelinks en commissies zonder effect op uw prijs.",
   eyebrow: "AirportRAK",
   h1: "Affiliateverklaring",
   lede: "Deze site is gratis en wordt gefinancierd met affiliatecommissies. Hier precies hoe dat werkt, wat het voor u betekent – niets, qua prijs – en wat het niet verandert aan wat we schrijven.",

@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "Lounges op luchthaven Marrakech: toegang en prijzen",
-  description: "De lounges van luchthaven Marrakech Menara: hoe u binnenkomt, losse prijzen, kaarten en programma's en wat u er echt vindt.",
+  title: "Lounges op luchthaven Marrakech-Menara: toegang en prijzen",
+  description: "De lounges van luchthaven Marrakech-Menara: hoe u binnenkomt, losse prijzen, kaarten en programma's en wat u er echt vindt.",
   eyebrow: "Luchthaven",
   h1: "De lounges van luchthaven Marrakech",
   lede: "De vertrekzone van de RAK loopt vol op dezelfde tijden als de rijen. Een lounge maakt dan van staand wachten een uur zitten – een van de weinige comfortuitgaven die hier echt lonen.",

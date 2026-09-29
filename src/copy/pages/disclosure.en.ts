@@ -2,8 +2,8 @@ import type { LocalizedPage } from '../types';
 import { site } from '../../data/site';
 
 export default {
-  title: 'Affiliate disclosure — AirportRAK',
-  description: 'How AirportRAK makes money: affiliate links, commissions, and why this changes neither the price you pay nor our recommendations.',
+  title: "Affiliate disclosure — Marrakech Menara Airport guide",
+  description: "How AirportRAK, the Marrakech Menara Airport guide, is funded: affiliate links and commissions that change neither your price nor our advice.",
   eyebrow: 'AirportRAK',
   h1: 'Affiliate disclosure',
   lede: "This site is free and funded by affiliate commissions. Here is exactly how that works, what it means for you — nothing, on price — and what it does not change in what we write.",

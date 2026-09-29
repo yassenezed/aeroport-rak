@@ -1,8 +1,8 @@
 import type { LocalizedHotel } from '../types';
 
 export default {
-  title: 'Riad Yasmine Marrakech: review and airport access',
-  description: 'Riad Yasmine: the most photographed courtyard in the Marrakech medina, at house scale. Airport access, drop-off gate and logistics.',
+  title: "Riad Yasmine: review and Marrakech Menara Airport access",
+  description: "Riad Yasmine, the medina's most photographed courtyard: access from Marrakech Menara Airport, drop-off gate and logistics.",
   eyebrow: 'Marrakech · Riad',
   h1: 'Riad Yasmine',
   lede: "The green courtyard of the medina, and the logistics that come with it. A genuine riad at domestic scale, where arrival needs planning because the car stops at a gate.",

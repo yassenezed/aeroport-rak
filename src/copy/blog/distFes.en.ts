@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Marrakech → Fes: train, coach, plane or road?',
-  description: 'Getting from Marrakech to Fes: 530 km, a 7-hour ONCF train from Gueliz, coaches, a connection via Casablanca or the motorway.',
+  title: "Marrakech Menara Airport to Fes: train, coach or road?",
+  description: "From Marrakech Menara Airport to Fes: 530 km, a 7-hour ONCF train from Gueliz, coaches, a connection via Casablanca or the motorway.",
   eyebrow: 'Distances',
   h1: 'From Marrakech to Fes: which option?',
   lede: "Five hundred and thirty kilometres separate the two imperial cities: the longest journey in this guide, and the one where your choice of transport changes your day the most.",

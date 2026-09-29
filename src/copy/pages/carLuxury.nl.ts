@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Luxe auto huren in Marrakech",
-  description: "Een premium sedan, SUV of cabrio huren op luchthaven Marrakech: beschikbare modellen, tarieven, hoge borgsommen en het alternatief met chauffeur.",
+  title: "Luxe huurauto op luchthaven Marrakech-Menara",
+  description: "Een premium sedan, SUV of cabrio huren op luchthaven Marrakech-Menara: beschikbare modellen, tarieven, hoge borgsommen en het alternatief met chauffeur.",
   eyebrow: "Marrakech Menara · Premium",
   h1: "Een luxe auto huren in Marrakech",
   lede: "Marrakech is een van de weinige Marokkaanse steden waar topmodellen echt te huur zijn. Hier welke modellen u vindt, wat ze kosten en de vraag die u vóór het tekenen moet beantwoorden: zelf rijden of gereden worden?",

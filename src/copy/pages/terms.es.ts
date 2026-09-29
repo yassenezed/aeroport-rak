@@ -2,8 +2,8 @@ import type { LocalizedPage } from '../types';
 import { site } from '../../data/site';
 
 export default {
-  title: 'Condiciones de uso — AirportRAK',
-  description: 'Condiciones de uso de AirportRAK: carácter editorial del sitio, límites de responsabilidad, propiedad intelectual y enlaces a terceros.',
+  title: "Condiciones de uso — guía del aeropuerto Marrakech-Menara",
+  description: "Condiciones de uso de AirportRAK, guía independiente del aeropuerto de Marrakech-Menara: carácter editorial, responsabilidad y enlaces.",
   eyebrow: 'AirportRAK',
   h1: 'Condiciones de uso',
   lede: "Lo que puede esperar de este sitio y lo que no. Al consultar AirportRAK, acepta las condiciones que siguen.",

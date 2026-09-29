@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Vuelos a Marrakech (RAK): aerolíneas y temporadas',
-  description: 'Vuelos al aeropuerto de Marrakech: aerolíneas que operan en el RAK, mejores épocas para reservar, equipaje de bajo coste y conexiones interiores.',
+  title: "Vuelos al aeropuerto de Marrakech-Menara: aerolíneas",
+  description: "Vuelos al aeropuerto de Marrakech-Menara: aerolíneas que operan en el RAK, mejores épocas para reservar, equipaje de bajo coste y conexiones interiores.",
   eyebrow: 'Marrakech Menara · Vuelos',
   h1: 'Vuelos a Marrakech',
   lede: "El RAK es el aeropuerto más conectado de Marruecos después de Casablanca, con una densa red de rutas europeas y una estacionalidad marcada. Compare fechas y lea después lo que de verdad mueve el precio final.",

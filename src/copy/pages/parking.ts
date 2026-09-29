@@ -2,7 +2,7 @@ import type { PageContent } from '../types';
 
 export default {
   fr: {
-    title: 'Parking aéroport Marrakech : tarifs et accès',
+    title: "Parking aéroport Marrakech-Ménara : tarifs et accès",
     description: "Parkings de l'aéroport de Marrakech Ménara : tarifs horaires et journaliers, dépose-minute, stationnement longue durée et alternatives moins chères.",
     eyebrow: 'Marrakech Ménara · Parkings',
     h1: 'Se garer à l\'aéroport de Marrakech',

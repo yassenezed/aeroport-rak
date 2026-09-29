@@ -1,8 +1,8 @@
 import type { LocalizedHotel } from '../types';
 
 export default {
-  title: 'La Mamounia Marrakesch: Bewertung und Anfahrt',
-  description: 'La Mamounia: ein Jahrhundert Geschichte, weitläufige Gärten am Rand der Medina, fünfzehn Autominuten vom Flughafen Marrakesch.',
+  title: "La Mamounia: Anfahrt vom Flughafen Marrakesch-Menara",
+  description: "La Mamounia: ein Jahrhundert Geschichte, weitläufige Gärten am Rand der Medina, fünfzehn Autominuten vom Flughafen Marrakesch-Menara.",
   eyebrow: 'Marrakesch · Hotel',
   h1: 'La Mamounia',
   lede: "Das historische Grandhotel von Marrakesch, fünf Kilometer vom Terminal, an der Nahtstelle zwischen Stadtmauer und Stadt: die Medina zu Fuß, die Zufahrt mit dem Auto ohne Einschränkung.",

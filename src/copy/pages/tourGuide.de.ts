@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Guide in Marrakesch buchen: lohnt sich das?',
-  description: 'Einen Guide in Marrakesch buchen: Preise, offizielle Guides, Medina-Führungen, Ausflüge in den Atlas und die Fehler, die man vermeiden sollte.',
+  title: "Reiseführer buchen ab Flughafen Marrakesch-Menara",
+  description: "Einen Guide ab Flughafen Marrakesch-Menara buchen: Preise, offizielle Guides, Medina-Führungen, Atlas-Ausflüge und typische Fehler.",
   eyebrow: 'Marrakesch · Führungen',
   h1: 'Einen Guide in Marrakesch buchen',
   lede: "Marrakesch ist am ersten Tag allein nur schwer zu lesen. Ein offizieller Guide für einen gut gewählten halben Tag spart mehr Zeit und Geld, als er kostet – vorausgesetzt, Sie wissen, was Sie kaufen.",

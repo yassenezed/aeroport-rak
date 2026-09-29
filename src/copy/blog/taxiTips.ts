@@ -2,8 +2,8 @@ import type { ArticleContent } from '../types';
 
 export default {
   fr: {
-    title: 'Taxi à Marrakech : tarifs et bons réflexes',
-    description: "Taxis à Marrakech : tarifs affichés à l'aéroport, prix en ville, différence entre petit et grand taxi, compteur, paiement en espèces et pièges à éviter.",
+    title: "Taxi à l'aéroport Marrakech-Ménara : tarifs et conseils",
+    description: "Taxi à l'aéroport de Marrakech-Ménara et en ville : tarifs affichés, petit ou grand taxi, compteur, paiement en espèces et pièges à éviter.",
     eyebrow: 'Transports',
     h1: 'Taxi à Marrakech : tarifs et bons réflexes',
     lede: "Marrakech affiche ses tarifs de taxi au rang de l'aéroport, et c'est une bonne nouvelle. Reste à savoir les lire, à choisir le bon gabarit de voiture et à se mettre d'accord avant que les bagages ne partent dans le coffre.",

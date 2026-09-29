@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Servicios del aeropuerto de Marrakech Menara',
-  description: 'Servicios del aeropuerto de Marrakech: cajeros, cambio, tarjetas SIM y eSIM, wifi, consigna, salas VIP, restauración y asistencia a pasajeros.',
+  title: "Servicios del aeropuerto de Marrakech-Menara",
+  description: "Servicios del aeropuerto de Marrakech-Menara: cajeros, cambio, tarjetas SIM y eSIM, wifi, consigna, salas VIP, restauración y asistencia a pasajeros.",
   eyebrow: 'Marrakech Menara · Servicios',
   h1: 'Los servicios del aeropuerto de Marrakech',
   lede: "Lo que encontrará realmente en la terminal, dónde está y las tres cosas que conviene resolver antes de salir de la sala: efectivo, conexión y transporte.",

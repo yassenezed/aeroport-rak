@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'RAK o GMMX: el código del aeropuerto de Marrakech',
-  description: 'Por qué el aeropuerto de Marrakech se escribe RAK, qué significa GMMX y cómo no confundirlo con otros aeropuertos marroquíes al reservar.',
+  title: "RAK o GMMX: el código del aeropuerto de Marrakech-Menara",
+  description: "Por qué el aeropuerto de Marrakech-Menara se escribe RAK, qué significa GMMX y cómo no confundirlo con otros aeropuertos marroquíes al reservar.",
   eyebrow: 'Aeropuerto',
   h1: 'RAK y GMMX: los códigos del aeropuerto de Marrakech',
   lede: "Tres letras en su billete, cuatro en los planes de vuelo. Esto es lo que significan, de dónde viene ese «RAK» que no se parece al nombre de la ciudad y las confusiones que hay que evitar al reservar.",

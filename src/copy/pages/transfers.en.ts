@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Marrakech Airport transfer: options and prices',
-  description: 'Transfer, taxi, bus 19 or hire car from Marrakech Airport: real fares in dirhams and euros, medina gate drop-offs and night arrivals.',
+  title: "Marrakech Menara Airport transfer: options and prices",
+  description: "Transfer, taxi, bus 19 or hire car from Marrakech Menara Airport: real fares in dirhams and euros, medina gate drop-offs and night arrivals.",
   eyebrow: 'Marrakech Menara · Transfers',
   h1: 'Transfers from Marrakech Airport',
   lede: "Six kilometres to Jemaa el-Fna: the drive is short, it is the last hundred metres that cause trouble, since no car enters the medina lanes. Here are the four ways out of the terminal, what they really cost, and which one fits your flight.",

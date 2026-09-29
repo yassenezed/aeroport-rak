@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Bus 19 ALSA: Marrakech Airport ↔ Jemaa el-Fna',
-  description: 'Bus 19 between Marrakech Airport and Jemaa el-Fna: fare, timetable, frequency, journey time, where to catch it and when it does not work.',
+  title: "Bus 19 ALSA: Marrakech Menara Airport ↔ Jemaa el-Fna",
+  description: "Bus 19 between Marrakech Menara Airport and Jemaa el-Fna: fare, timetable, frequency, journey time, where to catch it and when it does not work.",
   eyebrow: 'Getting around',
   h1: 'Bus 19 between Marrakech Airport and the centre',
   lede: "Thirty dirhams to reach Jemaa el-Fna: the cheapest way in from RAK, and it works well — provided you land before 11 pm and can carry your own bag.",

@@ -1,8 +1,8 @@
 import type { LocalizedHotel } from '../types';
 
 export default {
-  title: 'Riad BE Marrakech: review and airport access',
-  description: 'Riad BE: the medina experience via Bab Doukkala, one of the easiest gates in Marrakech when you arrive with luggage. Review, access and advice.',
+  title: "Riad BE: review and access from Marrakech Menara Airport",
+  description: "Riad BE in the medina via Bab Doukkala: one of the easiest gates from Marrakech Menara Airport with luggage. Review, access and advice.",
   eyebrow: 'Marrakech · Riad',
   h1: 'Riad BE',
   lede: "The medina experience, through the most convenient gate. Courtyard, pool and terrace, but at Bab Doukkala: one of the few riads where arriving with suitcases does not turn into an expedition.",

@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Delayed or cancelled flight in Marrakech: your rights',
-  description: 'Delayed, cancelled or overbooked flight at Marrakech Airport: when compensation applies, how much to claim and how to build the file.',
+  title: "Delayed flight at Marrakech Menara Airport: your rights",
+  description: "Delayed, cancelled or overbooked flight at Marrakech Menara Airport: when compensation applies, how much to claim and how to build the file.",
   eyebrow: 'Marrakech Menara · Your rights',
   h1: 'Delayed or cancelled flight in Marrakech: what can you claim?',
   lede: "A three-hour delay leaving Marrakech can be worth €400 per passenger — but only in certain cases. Here is the rule that applies, the amounts, and the evidence to gather before you leave the airport.",

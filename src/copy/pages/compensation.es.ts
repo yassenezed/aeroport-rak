@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Vuelo retrasado o cancelado en Marrakech: sus derechos',
-  description: 'Vuelo retrasado, cancelado o con overbooking en Marrakech: cuándo se aplica la compensación, qué importes reclamar y cómo preparar el expediente.',
+  title: "Vuelo retrasado en el aeropuerto de Marrakech-Menara",
+  description: "Vuelo retrasado, cancelado o con overbooking en el aeropuerto de Marrakech-Menara: cuándo hay compensación, importes y cómo reclamar.",
   eyebrow: 'Marrakech Menara · Sus derechos',
   h1: 'Vuelo retrasado o cancelado en Marrakech: ¿qué puede reclamar?',
   lede: "Un retraso de tres horas saliendo de Marrakech puede dar derecho a 400 € por pasajero, pero solo en determinados casos. Esta es la norma aplicable, los importes y las pruebas que hay que reunir antes de salir del aeropuerto.",

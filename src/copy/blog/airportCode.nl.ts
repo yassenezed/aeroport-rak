@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "RAK of GMMX: de code van luchthaven Marrakech",
-  description: "Waarom luchthaven Marrakech RAK heet, wat GMMX betekent en hoe u hem bij het boeken niet verwart met andere Marokkaanse luchthavens.",
+  title: "RAK of GMMX: de code van luchthaven Marrakech-Menara",
+  description: "Waarom luchthaven Marrakech-Menara RAK heet, wat GMMX betekent en hoe u hem bij het boeken niet verwart met andere Marokkaanse luchthavens.",
   eyebrow: "Luchthaven",
   h1: "RAK en GMMX: de codes van luchthaven Marrakech",
   lede: "Drie letters op uw ticket, vier in de vliegplannen. Hier wat ze betekenen, waar die \"RAK\" vandaan komt die niet op de stadsnaam lijkt, en welke verwarring u bij het boeken voorkomt.",

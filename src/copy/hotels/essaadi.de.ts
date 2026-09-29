@@ -1,8 +1,8 @@
 import type { LocalizedHotel } from '../types';
 
 export default {
-  title: 'Es Saadi Marrakesch: Bewertung und Anfahrt',
-  description: 'Es Saadi: ein mehrere Hektar großes Anwesen im Hivernage, mehrere Unterkunftskategorien und nur zehn Minuten vom Flughafen Marrakesch.',
+  title: "Es Saadi: Bewertung, Anfahrt Flughafen Marrakesch-Menara",
+  description: "Es Saadi: ein mehrere Hektar großes Anwesen im Hivernage, mehrere Unterkunftskategorien und nur zehn Minuten vom Flughafen Marrakesch-Menara.",
   eyebrow: 'Marrakesch · Hotel',
   h1: 'Es Saadi',
   lede: "Ein Familienanwesen im Hivernage, zehn Minuten vom Terminal: die am schnellsten erreichbare Adresse ab Flughafen und eine der wenigen mit einem echten Park mitten in der Stadt.",

@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Flüge nach Marrakesch (RAK): Airlines und Saisons',
-  description: 'Flüge zum Flughafen Marrakesch: welche Airlines den RAK bedienen, die besten Buchungszeiten, Gepäckfallen bei Billigfliegern und Inlandsanschlüsse.',
+  title: "Flüge zum Flughafen Marrakesch-Menara: Airlines, Preise",
+  description: "Flüge zum Flughafen Marrakesch-Menara: welche Airlines den RAK bedienen, die besten Buchungszeiten, Gepäckfallen bei Billigfliegern und Inlandsanschlüsse.",
   eyebrow: 'Marrakesch Menara · Flüge',
   h1: 'Flüge nach Marrakesch',
   lede: "Der RAK ist nach Casablanca der meistbediente Flughafen Marokkos, mit einem dichten Netz europäischer Strecken und ausgeprägter Saisonalität. Vergleichen Sie Termine und lesen Sie dann, was den Endpreis wirklich bewegt.",

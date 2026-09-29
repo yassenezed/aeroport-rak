@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Dónde dormir en Marrakech: barrios, riads y hoteles',
-  description: 'Elegir alojamiento en Marrakech: medina, Guéliz, Hivernage o Palmeraie, riad u hotel, y las cinco direcciones que hemos analizado.',
+  title: "Dónde dormir cerca del aeropuerto de Marrakech-Menara",
+  description: "Dónde alojarse en Marrakech, en la ciudad o cerca del aeropuerto de Marrakech-Menara: medina, Guéliz, Hivernage o Palmeraie, riad u hotel.",
   eyebrow: 'Marrakech · Alojamiento',
   h1: 'Dónde dormir en Marrakech',
   lede: "La elección del barrio importa más que la del establecimiento: determina su tiempo de trayecto, su nivel de ruido y la forma en que vivirá la ciudad. Así se decide, y estas son nuestras reseñas de cinco direcciones.",

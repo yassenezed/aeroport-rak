@@ -2,8 +2,8 @@ import type { LocalizedPage } from '../types';
 import { site } from '../../data/site';
 
 export default {
-  title: 'Affiliate-Offenlegung — AirportRAK',
-  description: 'Wie AirportRAK Geld verdient: Affiliate-Links, Provisionen und warum das weder Ihren Preis noch unsere Empfehlungen verändert.',
+  title: "Affiliate-Offenlegung — Flughafen Marrakesch-Menara",
+  description: "Wie sich AirportRAK, Ratgeber zum Flughafen Marrakesch-Menara, finanziert: Affiliate-Links und Provisionen ohne Einfluss auf Ihren Preis.",
   eyebrow: 'AirportRAK',
   h1: 'Affiliate-Offenlegung',
   lede: "Diese Website ist kostenlos und wird über Affiliate-Provisionen finanziert. Hier genau, wie das funktioniert, was es für Sie bedeutet – beim Preis nichts – und was es an unseren Texten nicht ändert.",

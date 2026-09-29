@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "Taxi's in Marrakech: tarieven en goede reflexen",
-  description: "Taxi's in Marrakech: getoonde luchthaventarieven dag en nacht, petit of grand taxi, taximeter, contant betalen en valkuilen om te vermijden.",
+  title: "Taxi op luchthaven Marrakech-Menara: tarieven en tips",
+  description: "Taxi's op luchthaven Marrakech-Menara en in de stad: tarieven dag en nacht, petit of grand taxi, taximeter, contant en valkuilen.",
   eyebrow: "Onderweg",
   h1: "Taxi's in Marrakech: tarieven en goede reflexen",
   lede: "Marrakech toont zijn taxitarieven bij de standplaats van de luchthaven, en dat is goed nieuws. Blijft over: ze kunnen lezen, de juiste autogrootte kiezen en afspraken maken voordat de bagage in de kofferbak gaat.",

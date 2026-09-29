@@ -2,8 +2,8 @@ import type { ArticleContent } from '../types';
 
 export default {
   fr: {
-    title: 'Marrakech → Ouarzazate par le col du Tichka',
-    description: "Aller de l'aéroport de Marrakech à Ouarzazate : 200 km par le col du Tichka à 2 260 m, 4 h de route, bus CTM, transfert privé et conseils de conduite.",
+    title: "Aéroport Marrakech-Ménara → Ouarzazate par le Tichka",
+    description: "Aller de l'aéroport de Marrakech-Ménara à Ouarzazate : 200 km par le col du Tichka à 2 260 m, 4 h de route, bus CTM, transfert privé et conseils de conduite.",
     eyebrow: 'Distances',
     h1: 'De l\'aéroport de Marrakech à Ouarzazate',
     lede: "Deux cents kilomètres seulement, mais quatre heures de route : entre les deux villes se dresse le col du Tichka, à 2 260 mètres. C'est l'un des plus beaux trajets du Maroc, et l'un de ceux qu'il ne faut pas sous-estimer.",

@@ -2,8 +2,8 @@ import type { LocalizedPage } from '../types';
 import { site } from '../../data/site';
 
 export default {
-  title: 'Contact AirportRAK',
-  description: 'Contact AirportRAK: correct information about Marrakech Airport, report an out-of-date fare, or make a professional enquiry.',
+  title: "Contact — AirportRAK, Marrakech Menara Airport guide",
+  description: "Contact AirportRAK: correct information about Marrakech Menara Airport, report an out-of-date fare, or make a professional enquiry.",
   eyebrow: 'AirportRAK',
   h1: 'Contact us',
   lede: "Out-of-date information, a fare that no longer matches, a detail to add: write to us. We read every message and correct the pages concerned.",

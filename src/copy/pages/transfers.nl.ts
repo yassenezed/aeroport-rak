@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Transfer luchthaven Marrakech: opties en prijzen",
-  description: "Transfer, taxi, bus 19 of huurauto vanaf luchthaven Marrakech: echte tarieven in dirham en euro, afzetten bij de medinapoorten en nachtelijke aankomsten.",
+  title: "Transfer luchthaven Marrakech-Menara: opties en prijzen",
+  description: "Transfer, taxi, bus 19 of huurauto vanaf luchthaven Marrakech-Menara: echte tarieven in dirham en euro, afzetten bij de medinapoorten en nachtelijke aankomsten.",
   eyebrow: "Marrakech Menara · Transfers",
   h1: "Transfers vanaf luchthaven Marrakech",
   lede: "Zes kilometer tot Djemaa el-Fna: de rit is kort, het probleem zit in de laatste honderd meter, want geen auto komt de steegjes van de medina in. Hier de vier manieren om de terminal te verlaten, wat ze echt kosten en welke bij uw vlucht past.",

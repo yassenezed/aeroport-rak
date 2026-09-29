@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Reservar un traslado del aeropuerto de Marrakech',
-  description: 'Reserve su traslado privado desde el aeropuerto de Marrakech: precio fijo por vehículo, seguimiento del vuelo, puertas de la medina y cancelación gratuita.',
+  title: "Reservar un traslado del aeropuerto de Marrakech-Menara",
+  description: "Reserve su traslado privado desde el aeropuerto de Marrakech-Menara: precio fijo por vehículo, vuelo seguido, medina y cancelación gratuita.",
   eyebrow: 'Marrakech Menara · Reserva',
   h1: 'Reservar un traslado desde el aeropuerto de Marrakech',
   lede: "Indique su destino y su hora de aterrizaje: el precio se muestra por vehículo, no por pasajero. Un conductor le espera a la salida de llegadas con su nombre y le deja en la puerta de la medina más cercana a su riad.",

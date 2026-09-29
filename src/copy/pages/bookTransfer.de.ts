@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'Transfer ab Flughafen Marrakesch online buchen',
-  description: 'Buchen Sie Ihren Privattransfer ab Flughafen Marrakesch: fester Preis pro Fahrzeug, Flugverfolgung, Absetzen an den Medina-Toren, kostenlose Stornierung.',
+  title: "Transfer ab Flughafen Marrakesch-Menara online buchen",
+  description: "Buchen Sie Ihren Privattransfer ab Flughafen Marrakesch-Menara: fester Preis pro Fahrzeug, Flugverfolgung, Absetzen an den Medina-Toren, kostenlose Stornierung.",
   eyebrow: 'Marrakesch Menara · Buchung',
   h1: 'Transfer ab Flughafen Marrakesch buchen',
   lede: "Geben Sie Ziel und Landezeit an: Der Preis erscheint pro Fahrzeug, nicht pro Person. Ein Fahrer erwartet Sie am Ausgang der Ankunft mit Ihrem Namen und setzt Sie am nächstgelegenen Medina-Tor ab.",

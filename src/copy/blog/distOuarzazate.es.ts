@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Marrakech → Ouarzazate por el puerto de Tichka',
-  description: 'Ir del aeropuerto de Marrakech a Ouarzazate: 200 km por el puerto de Tichka a 2.260 m, 4 h de carretera, autobuses CTM, traslados y consejos.',
+  title: "Aeropuerto de Marrakech-Menara → Ouarzazate por el Tichka",
+  description: "Ir del aeropuerto de Marrakech-Menara a Ouarzazate: 200 km por el puerto de Tichka a 2.260 m, 4 h de carretera, autobuses CTM, traslados y consejos.",
   eyebrow: 'Distancias',
   h1: 'Del aeropuerto de Marrakech a Ouarzazate',
   lede: "Solo doscientos kilómetros, pero cuatro horas de carretera: entre las dos ciudades se alza el puerto de Tichka, a 2.260 metros. Es uno de los trayectos más bonitos de Marruecos y uno de los que no hay que subestimar.",

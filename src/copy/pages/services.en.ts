@@ -2,7 +2,7 @@ import type { LocalizedPage } from '../types';
 
 export default {
   title: 'Services at Marrakech Menara Airport',
-  description: 'Marrakech Airport services: ATMs, currency exchange, SIM cards and eSIM, wi-fi, left luggage, lounges, food and passenger assistance.',
+  description: "Marrakech Menara Airport services: ATMs, currency exchange, SIM cards and eSIM, wi-fi, left luggage, lounges, food and passenger assistance.",
   eyebrow: 'Marrakech Menara · Services',
   h1: 'Services at Marrakech Airport',
   lede: "What you will actually find in the terminal, where to find it, and the three things to sort before you leave the hall: cash, a connection, and a way into town.",

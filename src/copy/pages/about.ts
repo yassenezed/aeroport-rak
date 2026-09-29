@@ -2,8 +2,8 @@ import type { PageContent } from '../types';
 
 export default {
   fr: {
-    title: 'À propos d\'AirportRAK',
-    description: "Qui écrit AirportRAK, comment les informations sur l'aéroport de Marrakech sont vérifiées et comment le site est financé.",
+    title: "À propos d'AirportRAK, guide de l'aéroport Marrakech-Ménara",
+    description: "Qui écrit AirportRAK, comment les informations sur l'aéroport de Marrakech-Ménara sont vérifiées et comment le site est financé.",
     eyebrow: 'AirportRAK',
     h1: 'À propos d\'AirportRAK',
     lede: "AirportRAK est un guide indépendant consacré à l'aéroport de Marrakech Ménara. Nous n'appartenons pas à l'aéroport, nous ne vendons aucun transport, et nous écrivons uniquement ce que nous avons pu vérifier.",

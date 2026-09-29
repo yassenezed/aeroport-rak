@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: 'Fast Track am Flughafen Marrakesch',
-  description: 'Fast Track am RAK: wie viel Zeit er wirklich spart, was er kostet, wann er sich lohnt und wann er gar nichts bringt.',
+  title: "Fast Track am Flughafen Marrakesch-Menara",
+  description: "Fast Track am Flughafen Marrakesch-Menara: wie viel Zeit er spart, was er kostet, wann er sich lohnt und wann er nichts bringt.",
   eyebrow: 'Flughafen',
   h1: 'Fast Track in Marrakesch: sinnvoll oder nicht?',
   lede: "Der Engpass des RAK ist die Passkontrolle – bei Ankunft wie Abflug. Ein Vorrangservice setzt genau dort an, was ihn zu manchen Zeiten sinnvoll und zu anderen völlig nutzlos macht.",

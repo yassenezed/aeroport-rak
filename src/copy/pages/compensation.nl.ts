@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Vlucht vertraagd of geannuleerd in Marrakech: uw rechten",
-  description: "Vertraagde, geannuleerde of overboekte vlucht op luchthaven Marrakech: wanneer compensatie geldt, welke bedragen en hoe u uw dossier opbouwt.",
+  title: "Vertraagde vlucht op luchthaven Marrakech-Menara: rechten",
+  description: "Vertraagde, geannuleerde of overboekte vlucht op luchthaven Marrakech-Menara: wanneer compensatie geldt, welke bedragen en hoe u uw dossier opbouwt.",
   eyebrow: "Marrakech Menara · Uw rechten",
   h1: "Vlucht vertraagd of geannuleerd in Marrakech: waar hebt u recht op?",
   lede: "Drie uur vertraging bij vertrek uit Marrakech kan € 400 per passagier waard zijn – maar alleen in bepaalde gevallen. Hier de geldende regel, de bedragen en het bewijs dat u verzamelt vóór u de luchthaven verlaat.",

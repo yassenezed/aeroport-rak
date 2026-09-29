@@ -1,8 +1,8 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "Marrakech → Fez: trein, bus, vliegtuig of weg?",
-  description: "Van Marrakech naar Fez: 530 km, 7 uur ONCF-trein vanaf Guéliz, bus, vlucht via Casablanca of de weg. Reistijden, prijzen en de beste keuze.",
+  title: "Luchthaven Marrakech-Menara → Fez: trein, bus of weg?",
+  description: "Van luchthaven Marrakech-Menara naar Fez: 530 km, 7 uur ONCF-trein vanaf Guéliz, bus, vlucht via Casablanca of de weg. Reistijden en prijzen.",
   eyebrow: "Afstanden",
   h1: "Van Marrakech naar Fez: welke optie",
   lede: "Vijfhonderddertig kilometer scheiden de twee keizerssteden: de langste rit in deze gids, en die waarbij de keuze van vervoer uw dag het meest bepaalt.",

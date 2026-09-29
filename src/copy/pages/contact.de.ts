@@ -2,8 +2,8 @@ import type { LocalizedPage } from '../types';
 import { site } from '../../data/site';
 
 export default {
-  title: 'Kontakt zu AirportRAK',
-  description: 'AirportRAK kontaktieren: eine Information zum Flughafen Marrakesch korrigieren, einen veralteten Preis melden oder eine geschäftliche Anfrage stellen.',
+  title: "Kontakt — AirportRAK, Flughafen Marrakesch-Menara",
+  description: "AirportRAK kontaktieren: eine Information zum Flughafen Marrakesch-Menara korrigieren, einen veralteten Preis melden oder eine geschäftliche Anfrage stellen.",
   eyebrow: 'AirportRAK',
   h1: 'Kontakt',
   lede: "Eine veraltete Information, ein Preis, der nicht mehr stimmt, eine Ergänzung: Schreiben Sie uns. Wir lesen jede Nachricht und korrigieren die betroffenen Seiten.",

@@ -1,8 +1,8 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: 'About AirportRAK',
-  description: 'Who writes AirportRAK, how information about Marrakech Airport is verified, and how the site is funded.',
+  title: "About AirportRAK, the Marrakech Menara Airport guide",
+  description: "Who writes AirportRAK, how information about Marrakech Menara Airport is verified, and how the site is funded.",
   eyebrow: 'AirportRAK',
   h1: 'About AirportRAK',
   lede: "AirportRAK is an independent guide to Marrakech Menara Airport. We do not belong to the airport, we sell no transport, and we publish only what we have been able to verify.",
