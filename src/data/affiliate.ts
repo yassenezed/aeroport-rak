@@ -34,6 +34,12 @@ export const travelpayouts = {
     campaignId: '541',
   },
 
+  /** Widget indemnisation vol retardé / annulé (promo 8679). */
+  compensation: {
+    promoId: '8679',
+    campaignId: '120',
+  },
+
   /** Widget de recherche vols + hôtels (Aviasales, promo 7879). */
   flights: {
     promoId: '7879',
@@ -133,6 +139,24 @@ export function esimWidgetSrc(locale = 'fr'): string {
     no_labels: 'true',
     promo_id: t.esim.promoId,
     campaign_id: t.esim.campaignId,
+  });
+  return `https://tpemd.com/content?${p.toString()}`;
+}
+
+/** URL du widget indemnisation vol (formulaire AirHelp dans une iframe).
+ *  Le formulaire n'accepte aucun réglage de couleur, seulement la langue :
+ *  fr, en, es, de, nl existent ; l'arabe n'existe pas et retombe sur l'anglais. */
+const COMPENSATION_WIDGET_LOCALES = ['fr', 'en', 'de', 'nl', 'es'];
+
+export function compensationWidgetSrc(locale = 'fr'): string {
+  const t = travelpayouts;
+  const p = new URLSearchParams({
+    trs: t.trs,
+    shmarker: t.marker,
+    lang: COMPENSATION_WIDGET_LOCALES.includes(locale) ? locale : 'en',
+    powered_by: 'true',
+    campaign_id: t.compensation.campaignId,
+    promo_id: t.compensation.promoId,
   });
   return `https://tpemd.com/content?${p.toString()}`;
 }

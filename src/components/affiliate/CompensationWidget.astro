@@ -1,0 +1,12 @@
+---
+// Widget indemnisation vol retardé / annulé (Travelpayouts / tpemd). Identifiants dans src/data/affiliate.ts.
+import { compensationWidgetSrc } from '../../data/affiliate';
+
+interface Props { locale?: string }
+const { locale = 'fr' } = Astro.props;
+const src = compensationWidgetSrc(locale);
+---
+
+<div class="flight-search-widget compensation-widget" id="verifier-mon-vol">
+  <script async src={src} charset="utf-8" is:inline></script>
+</div>

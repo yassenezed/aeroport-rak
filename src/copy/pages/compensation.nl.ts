@@ -1,58 +1,118 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Vertraagde vlucht op luchthaven Marrakech-Menara: rechten",
-  description: "Vertraagde, geannuleerde of overboekte vlucht op luchthaven Marrakech-Menara: wanneer compensatie geldt, welke bedragen en hoe u uw dossier opbouwt.",
-  eyebrow: "Marrakech Menara · Uw rechten",
-  h1: "Vlucht vertraagd of geannuleerd in Marrakech: waar hebt u recht op?",
-  lede: "Drie uur vertraging bij vertrek uit Marrakech kan € 400 per passagier waard zijn – maar alleen in bepaalde gevallen. Hier de geldende regel, de bedragen en het bewijs dat u verzamelt vóór u de luchthaven verlaat.",
+  title: "Vertraagde vlucht luchthaven Marrakech-Menara: tot € 600",
+  description: "Vlucht vertraagd of geannuleerd op luchthaven Marrakech-Menara? Controleer gratis of u recht hebt op € 250, 400 of 600 volgens de EU-verordening 261/2004.",
+  eyebrow: "Passagiersrechten · EU-verordening 261/2004",
+  h1: "Compensatie bij vertraging: luchthaven Marrakech-Menara",
+  lede: "Is uw vlucht van of naar luchthaven Marrakech-Menara met meer dan drie uur vertraging aangekomen, of geannuleerd? Dan hebt u mogelijk recht op € 250, 400 of 600 per passagier. Controleer uw vlucht in een minuut en lees wat echt voor u geldt.",
+  widget: "compensation",
+  highlights: [
+    { icon: 'wallet', value: "€ 250", label: "Onder 1.500 km: Madrid, Sevilla, Lissabon" },
+    { icon: 'wallet', value: "€ 400", label: "1.500–3.500 km: Amsterdam, Brussel, Eindhoven" },
+    { icon: 'wallet', value: "€ 600", label: "Boven 3.500 km: Stockholm, Helsinki, Riga" },
+  ],
+  cardSections: [
+    {
+      eyebrow: "Wie is gedekt?",
+      heading: "Welke vluchten van luchthaven Marrakech-Menara gedekt zijn",
+      intro: "Het hangt af van de richting van de vlucht en de nationaliteit van de maatschappij.",
+      variant: 'feature',
+      items: [
+        { icon: 'plane-landing', title: "Nederland, België of EU → Marrakech", text: "Alle vluchten die vertrekken uit de Europese Unie zijn gedekt, ongeacht de maatschappij, ook Royal Air Maroc.", tags: ["Gedekt", "Alle maatschappijen"] },
+        { icon: 'plane-takeoff', title: "Marrakech → Europa, Europese maatschappij", text: "Gedekt als een Europese maatschappij de vlucht uitvoert: Transavia, Ryanair, TUI fly, easyJet, Air France, Wizz Air…", tags: ["Gedekt", "EU-maatschappij"] },
+        { icon: 'alert', title: "Marrakech → Europa, niet-Europese maatschappij", text: "Royal Air Maroc, Qatar Airways, Turkish Airlines of Saudia vanuit Marokko vallen niet onder de verordening. Hun vervoersvoorwaarden blijven gelden.", tags: ["Niet gedekt"] },
+        { icon: 'shield-check', title: "Vluchten met het Verenigd Koninkrijk", text: "De Britse regeling UK261 geeft dezelfde rechten, in ponden, voor vluchten vanuit het VK en voor Britse maatschappijen.", tags: ["UK261", "£ 220 tot 520"] },
+      ],
+    },
+    {
+      eyebrow: "Vertraagde vlucht",
+      heading: "Vertraging: wat de maatschappij op de luchthaven moet bieden",
+      intro: "Nog vóór enige compensatie moet de maatschappij u vanaf een bepaalde wachttijd op de luchthaven verzorgen.",
+      variant: 'feature',
+      items: [
+        { icon: 'coffee', title: "2 uur of meer, vlucht onder 1.500 km", text: "Maaltijden en verfrissingen in verhouding tot de wachttijd en twee communicaties (telefoon of e-mail).", tags: ["Maaltijden", "Drankjes", "Communicatie"] },
+        { icon: 'clock', title: "3 uur of meer, vlucht van 1.500 tot 3.500 km", text: "Dezelfde verzorging, die geldt voor de meeste vluchten tussen Marrakech en de Benelux: Amsterdam, Eindhoven, Brussel.", tags: ["Maaltijden", "Drankjes", "Communicatie"] },
+        { icon: 'building', title: "4 uur of meer, vlucht boven 3.500 km", text: "Idem, en als het vertrek naar de volgende dag verschuift: hotel en vervoer tussen luchthaven en hotel, ongeacht de afstand.", tags: ["Hotel", "Vervoer", "Maaltijden"] },
+      ],
+    },
+    {
+      eyebrow: "Geannuleerde vlucht",
+      heading: "Geannuleerde vlucht: uw opties",
+      intro: "Bij annulering moet de maatschappij u laten kiezen en u verzorgen.",
+      variant: 'feature',
+      items: [
+        { icon: 'wallet', title: "Volledige terugbetaling", text: "De ticketprijs binnen zeven dagen terugbetaald, ook het ongebruikte deel van een retour." },
+        { icon: 'plane', title: "Vervangende vlucht", text: "Vervoer naar uw bestemming zo snel mogelijk, of op een latere datum naar keuze." },
+        { icon: 'tag', title: "Compensatie van € 250 tot 600", text: "Als u minder dan 14 dagen voor vertrek werd verwittigd, tenzij u werd omgeboekt dicht bij het oorspronkelijke schema." },
+        { icon: 'users', title: "Verzorging", text: "Maaltijden, communicatie en zo nodig hotel en vervoer terwijl u op de vervangende vlucht wacht." },
+      ],
+    },
+    {
+      eyebrow: "Uitzonderingen",
+      heading: "Buitengewone omstandigheden",
+      intro: "In deze gevallen moet de maatschappij u nog steeds verzorgen, maar hoeft ze geen compensatie te betalen.",
+      variant: 'compact',
+      items: [
+        { icon: 'cloud', title: "Weer", text: "Storm, harde wind, mist of onweer die de vlucht gevaarlijk maken." },
+        { icon: 'shield', title: "Veiligheid", text: "Veiligheidsdreiging, sluiting van het luchtruim, politieke instabiliteit." },
+        { icon: 'alert', title: "Natuurverschijnselen", text: "Aardbeving, vulkaanuitbarsting of een andere onvoorzienbare gebeurtenis." },
+        { icon: 'users', title: "Staking luchtverkeersleiding", text: "Stakingen buiten de maatschappij, zoals die van de Franse luchtverkeersleiding." },
+      ],
+    },
+  ],
+  steps: {
+    heading: "Zo claimt u uw compensatie",
+    intro: "U kunt zelf bij de maatschappij claimen, of de controledienst hierboven gebruiken, die alleen bij succes betaald wordt.",
+    items: [
+      { icon: 'clipboard', title: "Bewaar uw documenten", text: "Instapkaart, boekingsbevestiging en elk bewijs van de vertraging of annulering: e-mails, sms'jes, foto's van het vluchtbord." },
+      { icon: 'clock', title: "Noteer de aankomsttijd", text: "De vertraging wordt gemeten bij aankomst, wanneer de deuren van het toestel opengaan. Vraag de reden van de vertraging schriftelijk aan de balie." },
+      { icon: 'users', title: "Claim bij de maatschappij", text: "Stuur een schriftelijke claim naar de klantenservice met verwijzing naar verordening 261/2004, het vluchtnummer, de datum en het bedrag." },
+      { icon: 'shield-check', title: "Laat uw rechten gelden", text: "Geen antwoord binnen twee maanden of een weigering? Wend u tot de ILT in Nederland of de FOD Mobiliteit in België." },
+    ],
+  },
   body: `
-<h2>Welke regels gelden bij vertrek uit Marrakech?</h2>
-<p>De Europese verordening <strong>(EG) 261/2004</strong> geldt voor alle vluchten <em>vanaf</em> een luchthaven in de Europese Unie, ongeacht de maatschappij, en voor vluchten <em>naar</em> de Unie als ze door een Europese maatschappij worden uitgevoerd. Concreet voor een traject Marrakech–Europa:</p>
-<ul>
-<li><strong>Vlucht Marrakech → Amsterdam met Transavia, Ryanair, easyJet, KLM…</strong>: gedekt, omdat de maatschappij Europees is.</li>
-<li><strong>Vlucht Marrakech → Amsterdam met Royal Air Maroc</strong>: niet gedekt door 261/2004, want de maatschappij is niet Europees en het vertrek is buiten de EU. Blijven over: de vervoersvoorwaarden en het Verdrag van Montreal.</li>
-<li><strong>Vlucht Amsterdam → Marrakech, elke maatschappij</strong>: gedekt, omdat het vertrek in de Unie plaatsvindt.</li>
-</ul>
-
-<h2>De bedragen</h2>
+<h2>Hoeveel kunt u krijgen voor een vlucht van of naar Marrakech?</h2>
+<p>Het bedrag hangt niet af van de ticketprijs, maar van de <strong>afstand van de vlucht</strong>. Voor luchthaven Marrakech-Menara geeft dat:</p>
 <div class="table-wrap">
 <table class="data">
-<thead><tr><th>Vluchtafstand</th><th>Compensatie</th><th>Voorbeelden vanaf Marrakech</th></tr></thead>
+<thead><tr><th>Afstand</th><th>Compensatie</th><th>Voorbeelden van routes met Marrakech</th></tr></thead>
 <tbody>
-<tr><td>Minder dan 1.500 km</td><td class="num">€ 250</td><td>Málaga, Sevilla, Lissabon</td></tr>
-<tr class="row-highlight"><td>1.500 tot 3.500 km</td><td class="num">€ 400</td><td>Amsterdam, Eindhoven, Brussel, Parijs</td></tr>
-<tr><td>Meer dan 3.500 km (buiten de EU)</td><td class="num">€ 600</td><td>Montreal, Dubai</td></tr>
+<tr><td><strong>Tot 1.500 km</strong></td><td class="num">€ 250</td><td>Madrid, Barcelona, Sevilla, Málaga, Lissabon</td></tr>
+<tr class="row-highlight"><td><strong>1.500 tot 3.500 km</strong></td><td class="num">€ 400</td><td>Amsterdam, Eindhoven, Rotterdam, Brussel, Charleroi, Parijs, Londen, Frankfurt</td></tr>
+<tr><td><strong>Boven 3.500 km</strong></td><td class="num">€ 600</td><td>Stockholm, Helsinki, Riga</td></tr>
 </tbody>
 </table>
 </div>
-<p>Deze bedragen gelden <strong>per passagier</strong>, ook voor kinderen met een eigen ticket, en komen bovenop terugbetaling of omboeking. Ze staan los van de ticketprijs: een vlucht van € 39 kan € 400 compensatie opleveren.</p>
+<p>De compensatie is verschuldigd als de vlucht <strong>drie uur of meer te laat</strong> op de bestemming aankomt, of bij een late annulering of instapweigering. Ze kan worden gehalveerd als de maatschappij u heeft omgeboekt met een aankomst dicht bij de geplande tijd. Directe vluchten van Marrakech naar Montreal, Atlanta of New York worden door niet-Europese maatschappijen van buiten de EU uitgevoerd: die zijn niet gedekt.</p>
 
-<h2>Wanneer hebt u recht?</h2>
-<ul>
-<li><strong>Vertraging van 3 uur of meer</strong> bij aankomst op de eindbestemming.</li>
-<li><strong>Annulering</strong> minder dan 14 dagen vóór vertrek gemeld, zonder gelijkwaardige omboeking.</li>
-<li><strong>Instapweigering</strong> door overboeking, terwijl u op tijd aanwezig was.</li>
-<li><strong>Gemiste aansluiting</strong> op één boeking, door vertraging van de eerste vlucht.</li>
-</ul>
-<p>De compensatie vervalt bij <strong>buitengewone omstandigheden</strong>: weer dat vliegen onmogelijk maakt, staking van de luchtverkeersleiding, sluiting van het luchtruim, medisch noodgeval aan boord. Let op: een staking van het eigen personeel van de maatschappij valt daar doorgaans niet onder, een technisch mankement evenmin.</p>
+<h2>Welke maatschappijen gedekt zijn vanuit Marrakech</h2>
+<p>Vanaf luchthaven Marrakech-Menara geldt de verordening als de maatschappij Europees is. Dat geldt voor de meeste vluchten naar de Benelux: <strong>Transavia, Ryanair, TUI fly, easyJet, Air France, Wizz Air, Vueling, Norwegian, SAS</strong> en de andere maatschappijen uit de EU, Noorwegen en Zwitserland. <strong>Royal Air Maroc</strong> is vanuit Marokko daarentegen niet gedekt, net zomin als Qatar Airways, Turkish Airlines, Saudia, Air Transat, Delta of United. Bekijk alle routes en maatschappijen op onze pagina <a href="/nl/destinations/">bestemmingen vanuit Marrakech</a>.</p>
 
-<h2>Wat de maatschappij u ter plaatse verschuldigd is</h2>
-<p>Los van de compensatie geldt het recht op verzorging vanaf <strong>2 uur vertraging</strong> op een korte vlucht: maaltijden en drankjes naar verhouding van de wachttijd, twee communicatiemiddelen en een hotel met vervoer als het vertrek naar de volgende dag verschuift. In Marrakech moet u deze voorzieningen in het hoogseizoen actief aan de balie opeisen: ze worden niet vanzelf aangeboden.</p>
+<h2>Veelvoorkomende vertragingen in Marrakech: wat telt</h2>
+<p>Veel prijsvechters komen 's avonds in Marrakech aan, aan het eind van de dag van het toestel: een vroege vertraging werkt door tot de laatste vlucht. Wordt een vlucht <strong>omgeleid</strong> naar Casablanca of Agadir, dan telt de aankomsttijd in Marrakech, uw eindbestemming. Stakingen van de Franse luchtverkeersleiding treffen vaak vluchten uit de Benelux die over Frankrijk vliegen: die gelden als buitengewoon.</p>
 <div class="callout">
-<span class="callout-label">Bewijs verzamelen vóór u de luchthaven verlaat</span>
-<p>Fotografeer het vertrekbord met de vertraging, bewaar uw instapkaart, vraag aan de balie van de maatschappij een <strong>schriftelijke vertragingsverklaring</strong> en bewaar alle bonnetjes – maaltijden, hotel, taxi. Een dossier wordt met deze stukken gewonnen of verloren.</p>
+<span class="callout-label">Goed om te weten</span>
+<p>Een technisch defect aan het toestel is meestal <strong>geen</strong> buitengewone omstandigheid, en een staking van het eigen personeel van de maatschappij evenmin: in beide gevallen behoudt u uw recht op compensatie.</p>
 </div>
 
-<h2>Claimen: eerst de maatschappij, dan een bemiddelaar</h2>
-<p>Stuur de maatschappij een eerste schriftelijke claim, aangetekend of via het onlineformulier, met vermelding van verordening (EG) 261/2004, uw vluchtnummer en de duur van de vertraging. Veel eenvoudige zaken worden in dit stadium binnen enkele weken afgehandeld.</p>
-<p>Bij weigering of stilte nemen gespecialiseerde bureaus het over zonder voorafgaande kosten, tegen een commissie van 25 tot 35 % van het verkregen bedrag. Dat is een afweging: u ontvangt minder, maar hoeft niets te doen en betaalt alleen bij succes. De verjaringstermijn verschilt per land – in Nederland doorgaans twee jaar, in België één jaar – dus wacht niet te lang.</p>
+<h2>Hoe lang hebt u om te claimen?</h2>
+<p>De verordening zelf noemt geen termijn: het recht van het land waar u claimt, geldt. In <strong>Nederland is dat 2 jaar</strong>, in België 1 jaar, in Duitsland 3 jaar, in Frankrijk en Spanje 5 jaar. Wacht toch niet: bewijs gaat snel verloren. Om een vlucht live te volgen, bekijkt u de <a href="/nl/arrivals/">aankomsten</a> en het <a href="/nl/departures/">vertrek</a> van luchthaven Marrakech.</p>
 `,
+  faqHeading: "Compensatie op luchthaven Marrakech: veelgestelde vragen",
   faqs: [
-    { q: "Heb ik recht op compensatie als mijn vlucht Marrakech–Amsterdam 4 uur vertraging heeft?", a: "Ja als de maatschappij Europees is – Transavia, Ryanair, easyJet, KLM –, want verordening (EG) 261/2004 geldt dan ook bij vertrek uit Marokko. Voor deze afstand gaat het om € 400 per passagier. Bij Royal Air Maroc geldt de Europese verordening niet voor een vertrek uit Marrakech." },
-    { q: "Welk bedrag kun je claimen voor een geannuleerde vlucht vanuit Marrakech?", a: "€ 250 voor een vlucht onder 1.500 km, € 400 tussen 1.500 en 3.500 km – dat dekt Amsterdam, Eindhoven, Brussel en Parijs – en € 600 daarboven. Deze bedragen gelden per passagier en komen bovenop terugbetaling of omboeking." },
-    { q: "Vervalt mijn recht op compensatie door slecht weer?", a: "Ja, weersomstandigheden die vliegen onmogelijk maken zijn buitengewone omstandigheden die de maatschappij vrijpleiten. Een technisch mankement of een staking van het eigen personeel valt daar meestal niet onder en geeft wel recht op compensatie." },
-    { q: "Wat moet de maatschappij mij bieden tijdens het wachten?", a: "Vanaf twee uur vertraging op een korte vlucht: maaltijden en drankjes naar verhouding van de wachttijd, twee communicatiemiddelen en een hotel met vervoer als het vertrek naar de volgende dag verschuift. In Marrakech moet u dit aan de balie vragen." },
-    { q: "Hoe lang heb ik om een claim in te dienen?", a: "Dat verschilt per land waar u de claim indient: in Nederland doorgaans twee jaar, in België één jaar. Bewaar vanaf de dag van de vlucht instapkaarten, verklaringen en bonnetjes." },
+    { q: "Geldt verordening 261/2004 voor vluchten vanuit Marrakech?", a: "Ja voor alle vluchten vanuit de EU naar Marrakech, ongeacht de maatschappij. Vanuit Marrakech alleen als de maatschappij Europees is, zoals Transavia, Ryanair, TUI fly of easyJet. Royal Air Maroc is vanuit Marokko niet gedekt." },
+    { q: "Hoeveel krijg ik voor een vertraagde vlucht Amsterdam–Marrakech?", a: "€ 400 per passagier, omdat de vlucht ongeveer 2.525 km lang is. De vertraging bij aankomst moet meer dan drie uur bedragen en niet door buitengewone omstandigheden komen." },
+    { q: "En voor een vlucht Brussel–Marrakech of Eindhoven–Marrakech?", a: "Ook € 400 per passagier: Brussel ligt op ongeveer 2.380 km en Eindhoven op ongeveer 2.465 km, telkens bij meer dan drie uur vertraging bij aankomst." },
+    { q: "Mijn vlucht met Royal Air Maroc vanuit Marrakech is vertraagd: kan ik claimen?", a: "Niet volgens de Europese verordening, omdat de maatschappij niet Europees is en de vlucht van buiten de EU vertrekt. Uw werkelijke kosten kunt u wel claimen via de vervoersvoorwaarden en het Verdrag van Montreal." },
+    { q: "Mijn vlucht werd omgeleid naar Casablanca of Agadir: wat nu?", a: "De aankomsttijd in Marrakech, uw eindbestemming, telt. Komt u meer dan drie uur te laat aan en is de oorzaak niet buitengewoon, dan blijft de compensatie verschuldigd." },
+    { q: "Wanneer hoeft de maatschappij niet te betalen?", a: "Bij buitengewone omstandigheden: gevaarlijk weer, veiligheidsdreiging, natuurrampen, stakingen van de luchtverkeersleiding. Een technisch defect of een staking van het eigen personeel ontslaat haar meestal niet." },
+    { q: "Hoe lang heb ik om compensatie te claimen?", a: "In Nederland 2 jaar, in België 1 jaar, in Duitsland 3 jaar, in Frankrijk en Spanje 5 jaar. Bewaar uw documenten en claim zo snel mogelijk." },
+    { q: "Mijn vlucht naar Marrakech is geannuleerd: wat zijn mijn rechten?", a: "De maatschappij moet u terugbetaling binnen zeven dagen of een vervangende vlucht aanbieden en u verzorgen tijdens het wachten. Werd u minder dan 14 dagen vooraf verwittigd, dan kunt u bovendien € 250 tot 600 claimen, afhankelijk van de afstand." },
   ],
+  cta: {
+    heading: "Te laat geland in Marrakech? Uw chauffeur wacht",
+    text: "Onze chauffeurs volgen uw vlucht en wachten zonder meerprijs bij vertraging, ook midden in de nacht, en zetten u af bij de medinapoort die het dichtst bij uw riad ligt.",
+    label: "Transfer boeken",
+  },
 } satisfies LocalizedPage;

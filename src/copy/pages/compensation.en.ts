@@ -1,74 +1,118 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Delayed flight at Marrakech Menara Airport: your rights",
-  description: "Delayed, cancelled or overbooked flight at Marrakech Menara Airport: when compensation applies, how much to claim and how to build the file.",
-  eyebrow: 'Marrakech Menara · Your rights',
-  h1: 'Delayed or cancelled flight in Marrakech: what can you claim?',
-  lede: "A three-hour delay leaving Marrakech can be worth €400 per passenger — but only in certain cases. Here is the rule that applies, the amounts, and the evidence to gather before you leave the airport.",
+  title: "Delayed flight at Marrakech Menara Airport: up to €600",
+  description: "Flight delayed or cancelled at Marrakech Menara Airport? Check for free whether you can claim €250, €400 or €600 (or £220 to £520) under EU261 and UK261.",
+  eyebrow: "Passenger rights · EU261 & UK261",
+  h1: "Delayed flight compensation: Marrakech Menara Airport",
+  lede: "Did your flight to or from Marrakech Menara Airport arrive more than three hours late, or get cancelled? You may be owed €250, €400 or €600 per passenger. Check your flight in a minute, then read what really applies to your case.",
+  widget: 'compensation',
+  highlights: [
+    { icon: 'wallet', value: "€250 / £220", label: "Under 1,500 km: Madrid, Seville, Lisbon" },
+    { icon: 'wallet', value: "€400 / £350", label: "1,500–3,500 km: London, Manchester, Dublin" },
+    { icon: 'wallet', value: "€600 / £520", label: "Over 3,500 km: Stockholm, Helsinki, Riga" },
+  ],
+  cardSections: [
+    {
+      eyebrow: "Who is covered?",
+      heading: "Which Marrakech Menara Airport flights are covered",
+      intro: "It depends on the direction of the flight and where the airline is based.",
+      variant: 'feature',
+      items: [
+        { icon: 'plane-landing', title: "UK or EU → Marrakech", text: "Every flight departing the UK or the EU is covered, whatever the airline, Royal Air Maroc included.", tags: ["Covered", "All airlines"] },
+        { icon: 'plane-takeoff', title: "Marrakech → UK, UK airline", text: "UK261 covers flights to the UK operated by a UK airline: British Airways, Jet2, TUI Airways, easyJet UK.", tags: ["Covered", "UK261"] },
+        { icon: 'shield-check', title: "Marrakech → Europe, EU airline", text: "EU261 covers flights operated by an EU airline: Ryanair, easyJet Europe, Transavia, Air France, Vueling, Wizz Air, Aer Lingus…", tags: ["Covered", "EU261"] },
+        { icon: 'alert', title: "Marrakech → Europe, non-European airline", text: "Royal Air Maroc, Qatar Airways, Turkish Airlines or Saudia departing Morocco are not covered. Their conditions of carriage still apply.", tags: ["Not covered"] },
+      ],
+    },
+    {
+      eyebrow: "Delayed flight",
+      heading: "Delays: what the airline must provide at the airport",
+      intro: "Even before any compensation, the airline must look after you at the airport once the wait reaches a certain length.",
+      variant: 'feature',
+      items: [
+        { icon: 'coffee', title: "2 h or more, under 1,500 km", text: "Meals and refreshments in proportion to the wait, plus two communications (calls or emails).", tags: ["Meals", "Drinks", "Communications"] },
+        { icon: 'clock', title: "3 h or more, 1,500 to 3,500 km", text: "The same care, which applies to most flights between Marrakech and the UK or Europe: London, Paris, Brussels, Frankfurt.", tags: ["Meals", "Drinks", "Communications"] },
+        { icon: 'building', title: "4 h or more, over 3,500 km", text: "The same, and if departure moves to the next day: a hotel and transport between the airport and the hotel, whatever the distance.", tags: ["Hotel", "Transport", "Meals"] },
+      ],
+    },
+    {
+      eyebrow: "Cancelled flight",
+      heading: "Cancelled flight: your options",
+      intro: "If your flight is cancelled, the airline must give you a choice and look after you.",
+      variant: 'feature',
+      items: [
+        { icon: 'wallet', title: "Full refund", text: "The ticket price refunded within seven days, including the unused part of a return trip." },
+        { icon: 'plane', title: "Replacement flight", text: "Re-routing to your destination as soon as possible, or at a later date of your choice." },
+        { icon: 'tag', title: "Compensation of €250 to €600", text: "If you were told less than 14 days before departure, unless you were re-routed close to the original schedule." },
+        { icon: 'users', title: "Care", text: "Meals, communications and, if needed, a hotel and transport while you wait for the replacement flight." },
+      ],
+    },
+    {
+      eyebrow: "Exceptions",
+      heading: "Extraordinary circumstances",
+      intro: "In these cases the airline must still look after you, but it does not have to pay compensation.",
+      variant: 'compact',
+      items: [
+        { icon: 'cloud', title: "Weather", text: "Storms, high winds, fog or thunderstorms making the flight unsafe." },
+        { icon: 'shield', title: "Security", text: "Security threats, airspace closures, political instability." },
+        { icon: 'alert', title: "Natural events", text: "Earthquakes, volcanic eruptions or other unforeseeable events." },
+        { icon: 'users', title: "Air traffic control strikes", text: "Strikes outside the airline, such as French air traffic control strikes." },
+      ],
+    },
+  ],
+  steps: {
+    heading: "How to claim your compensation",
+    intro: "You can claim directly from the airline, or use the checking service above, which is only paid if the claim succeeds.",
+    items: [
+      { icon: 'clipboard', title: "Keep your documents", text: "Boarding pass, booking confirmation and any proof of the delay or cancellation: emails, texts, photos of the departures board." },
+      { icon: 'clock', title: "Note the arrival time", text: "The delay is measured on arrival, when the aircraft doors open. Ask the airline desk for the reason for the delay in writing." },
+      { icon: 'users', title: "Claim from the airline", text: "Send a written claim to customer service, quoting EU261 or UK261, the flight number, the date and the amount you are claiming." },
+      { icon: 'shield-check', title: "Enforce your rights", text: "If there is no reply within two months, or a refusal, go to an ADR scheme or the civil aviation authority of the departure country." },
+    ],
+  },
   body: `
-<h2>Which rules apply when leaving Marrakech?</h2>
-<p>European regulation <strong>EC 261/2004</strong> covers all flights <em>departing</em> an EU airport, whatever the airline, and flights <em>arriving</em> in the EU when operated by an EU carrier. In practice, for a Marrakech–Europe trip:</p>
-<ul>
-<li><strong>Marrakech → Paris on Transavia, Ryanair, easyJet, Air France, Vueling…</strong>: covered, because the airline is European.</li>
-<li><strong>Marrakech → Paris on Royal Air Maroc</strong>: not covered by EC 261, since the carrier is not European and departure is outside the EU. What remains are the conditions of carriage and the Montreal Convention.</li>
-<li><strong>Paris → Marrakech, any airline</strong>: covered, because departure takes place within the EU.</li>
-</ul>
-<p>UK passengers should note that UK261, the retained version of the rules, applies on the same logic to flights departing the UK or operated by a UK carrier into it, with amounts set in pounds.</p>
-
-<h2>The amounts</h2>
+<h2>How much can you claim for a flight to or from Marrakech?</h2>
+<p>The amount depends not on the ticket price but on the <strong>flight distance</strong>. For Marrakech Menara Airport, that gives:</p>
 <div class="table-wrap">
 <table class="data">
-<thead><tr><th>Flight distance</th><th>Compensation</th><th>Examples from Marrakech</th></tr></thead>
+<thead><tr><th>Distance</th><th>EU261</th><th>UK261</th><th>Examples of routes with Marrakech</th></tr></thead>
 <tbody>
-<tr><td>Under 1,500 km</td><td class="num">€250</td><td>Malaga, Seville, Lisbon</td></tr>
-<tr class="row-highlight"><td>1,500 to 3,500 km</td><td class="num">€400</td><td>London, Paris, Brussels, Milan</td></tr>
-<tr><td>Over 3,500 km (outside EU)</td><td class="num">€600</td><td>Montreal, Dubai</td></tr>
+<tr><td><strong>Up to 1,500 km</strong></td><td class="num">€250</td><td class="num">£220</td><td>Madrid, Barcelona, Seville, Malaga, Lisbon</td></tr>
+<tr class="row-highlight"><td><strong>1,500 to 3,500 km</strong></td><td class="num">€400</td><td class="num">£350</td><td>London, Manchester, Birmingham, Bristol, Edinburgh, Dublin, Paris, Amsterdam, Frankfurt</td></tr>
+<tr><td><strong>Over 3,500 km</strong></td><td class="num">€600</td><td class="num">£520</td><td>Stockholm, Helsinki, Riga</td></tr>
 </tbody>
 </table>
 </div>
-<p>These amounts are due <strong>per passenger</strong>, including children holding a ticket, and come on top of a refund or re-routing. They are unrelated to the ticket price: a €39 flight can attract €400 in compensation.</p>
+<p>Compensation is due when the flight reaches its destination <strong>three hours or more late</strong>, or in the event of a late cancellation or denied boarding. It can be halved if the airline re-routed you with an arrival close to the original time. Direct flights from Marrakech to Montreal, Atlanta or New York are operated by non-European airlines from outside the EU and UK, so they are not covered.</p>
 
-<h2>When are you entitled?</h2>
-<ul>
-<li><strong>A delay of three hours or more</strong> at your final destination.</li>
-<li><strong>Cancellation</strong> announced less than 14 days before departure, without equivalent re-routing.</li>
-<li><strong>Denied boarding</strong> due to overbooking, when you were present on time.</li>
-<li><strong>A missed connection</strong> on a single booking, caused by the first flight's delay.</li>
-</ul>
-<p>Compensation falls away in cases of <strong>extraordinary circumstances</strong>: weather making the flight impossible, air traffic control strikes, airspace closure, medical emergencies on board. Note that a strike by the airline's own staff generally does not qualify, and neither does a technical fault.</p>
+<h2>Which airlines are covered from Marrakech</h2>
+<p>From Marrakech Menara Airport, EU261 applies if the airline is European, which is the case for most flights to Europe: <strong>Ryanair, easyJet Europe, Transavia, Air France, Vueling, Iberia, Volotea, Wizz Air, TUI fly, Discover Airlines, Eurowings, TAP, Aer Lingus, Norwegian, SAS</strong> and other EU, Norwegian and Swiss airlines. UK261 applies to flights to the UK operated by <strong>British Airways, Jet2, TUI Airways and easyJet UK</strong>. <strong>Royal Air Maroc</strong> is not covered when departing Morocco, nor are Qatar Airways, Turkish Airlines, Saudia, Air Transat, Delta or United. See all routes and airlines on our <a href="/en/destinations/">destinations from Marrakech</a> page.</p>
 
-<h2>What the airline owes you on the spot</h2>
-<p>Independently of compensation, the right to care applies from <strong>two hours of delay</strong> on a short flight: meals and refreshments proportionate to the wait, two communications, and accommodation with transfers if departure moves to the next day. In Marrakech, in high season, these must be claimed actively at the desk: they are not offered systematically.</p>
+<h2>Common delays at Marrakech: what matters</h2>
+<p>Many low-cost flights reach Marrakech in the evening, at the end of the aircraft's day: an early delay knocks on to the last flight. When a flight is <strong>diverted</strong> to Casablanca or Agadir, it is the arrival time in Marrakech, your final destination, that counts. French air traffic control strikes often hit flights from the UK, Belgium and the Netherlands that cross French airspace: these count as extraordinary.</p>
 <div class="callout">
-<span class="callout-label">Evidence to gather before you leave the airport</span>
-<p>Photograph the departure board showing the delay, keep your boarding pass, ask the airline desk for a <strong>written delay confirmation</strong>, and retain every receipt — meals, hotel, taxi. Claims are won or lost on those documents.</p>
+<span class="callout-label">Good to know</span>
+<p>A technical fault with the aircraft is usually <strong>not</strong> an extraordinary circumstance, and neither is a strike by the airline's own staff: in both cases you keep your right to compensation.</p>
 </div>
 
-<h2>Claiming: the airline first, an intermediary second</h2>
-<p>Send a first written claim to the airline, by recorded post or through its online form, citing EC 261/2004, your flight number and the length of the delay. Many straightforward cases settle at this stage, within a few weeks.</p>
-<p>If refused or ignored, specialist firms take over with no upfront fee, against a commission of 25 to 35 % on whatever is recovered. It is a trade-off: you receive less, but you handle nothing and only pay on success. Limitation periods vary by country — around six years in the UK and five in France — so an older claim is often still viable.</p>
+<h2>How long do you have to claim?</h2>
+<p>The regulation sets no deadline: it depends on the law of the country where you claim. It is <strong>6 years in England and Wales</strong> (5 in Scotland), 5 years in France and Spain, 3 years in Germany, 2 years in the Netherlands and 1 year in Belgium. Do not wait, though: evidence gets lost fast. To follow a flight in real time, see Marrakech airport <a href="/en/arrivals/">arrivals</a> and <a href="/en/departures/">departures</a>.</p>
 `,
+  faqHeading: "Flight compensation at Marrakech airport: frequently asked questions",
   faqs: [
-    {
-      q: 'Am I entitled to compensation if my Marrakech–London flight is four hours late?',
-      a: "Yes if the airline is European or British — Ryanair, easyJet, British Airways, Transavia, Vueling — since the rules then apply even on departure from Morocco. The amount is €400 per passenger for that distance. On Royal Air Maroc, the European regulation does not apply to a departure from Marrakech.",
-    },
-    {
-      q: 'How much can you claim for a cancelled flight from Marrakech?',
-      a: "€250 for a flight under 1,500 km, €400 between 1,500 and 3,500 km — which covers London, Paris, Brussels and Milan — and €600 beyond. These sums are due per passenger and come on top of a refund or re-routing.",
-    },
-    {
-      q: 'Does bad weather cancel my right to compensation?',
-      a: "Yes, weather making the flight impossible counts as an extraordinary circumstance that exempts the airline. A technical fault or a strike by the airline's own staff generally does not, and those do attract compensation.",
-    },
-    {
-      q: 'What must the airline provide while I wait at the airport?',
-      a: "From two hours of delay on a short flight: meals and refreshments proportionate to the wait, two communications, and accommodation with transfers if departure moves to the next day. In Marrakech these must be requested at the desk, as they are not always offered.",
-    },
-    {
-      q: 'How long do you have to file a claim?',
-      a: "Limitation periods vary by the country where the claim is brought — roughly six years in the UK and five in France — so older flights can often still be pursued. Keep boarding passes, written confirmations and receipts from the day of the flight.",
-    },
+    { q: "Do EU261 and UK261 apply to flights from Marrakech?", a: "Yes for all flights from the EU or the UK to Marrakech, whatever the airline. From Marrakech, EU261 applies only to EU airlines (Ryanair, easyJet Europe, Transavia…) and UK261 to UK airlines flying to the UK (British Airways, Jet2, TUI, easyJet UK). Royal Air Maroc is not covered departing Morocco." },
+    { q: "How much can I claim for a delayed London–Marrakech flight?", a: "£350 per passenger under UK261, or €400 under EU261, as the flight covers about 2,270 km. The arrival delay must exceed three hours and not be caused by extraordinary circumstances." },
+    { q: "And for a Madrid–Marrakech or Seville–Marrakech flight?", a: "€250 per passenger, because these flights are under 1,500 km (about 1,050 km from Madrid and 680 km from Seville), again for an arrival delay of more than three hours." },
+    { q: "My Royal Air Maroc flight from Marrakech is delayed: can I claim?", a: "Not under EU261 or UK261, as the airline is not European and the flight departs outside the EU and UK. You can still claim your actual costs under the airline's conditions of carriage and the Montreal Convention." },
+    { q: "My flight was diverted to Casablanca or Agadir: what happens?", a: "The arrival time in Marrakech, your final destination, is what counts. If you arrive more than three hours late and the cause is not extraordinary, compensation is still due." },
+    { q: "When does the airline not have to pay?", a: "In extraordinary circumstances: dangerous weather, security threats, natural disasters, air traffic control strikes. A technical fault or a strike by the airline's own staff usually does not exempt it." },
+    { q: "How long do I have to claim?", a: "It depends on where you claim: 6 years in England and Wales, 5 in Scotland, 5 in France and Spain, 3 in Germany, 2 in the Netherlands, 1 in Belgium. Keep your documents and claim as soon as possible." },
+    { q: "My flight to Marrakech was cancelled: what are my rights?", a: "The airline must offer a refund within seven days or a replacement flight, and look after you while you wait. If you were told less than 14 days before departure, you can also claim €250 to €600 (£220 to £520) depending on distance." },
   ],
+  cta: {
+    heading: "Landed late in Marrakech? Your driver is waiting",
+    text: "Our drivers track your flight and wait at no extra cost if you are delayed, even in the middle of the night, then drop you at the medina gate closest to your riad.",
+    label: "Book a transfer",
+  },
 } satisfies LocalizedPage;

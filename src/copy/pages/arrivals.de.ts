@@ -50,7 +50,7 @@ export default {
 <p>Wenn Sie die Wahl haben, spart Ihnen ein Flug mit Landung zwischen 13 und 17 Uhr eine halbe Stunde am Ausgang. Kommen Sie abends an, bringt Sie der <a href="/de/blog/fast-track-marrakech-airport/">Fast-Track-Service am Flughafen Marrakesch</a> über eine eigene Spur durch die Kontrollen.</p>
 
 <h2>Airlines und Herkunft der Flüge zum Flughafen Marrakesch-Menara</h2>
-<p>Die meisten Flüge nach Marrakesch kommen aus Europa. Je nach Saison stehen auf der Tafel unter anderem <strong>Ryanair</strong>, <strong>Discover Airlines</strong>, <strong>Eurowings</strong>, <strong>Condor</strong>, <strong>easyJet</strong>, <strong>TUI fly</strong>, <strong>Royal Air Maroc</strong>, <strong>Transavia</strong>, <strong>Wizz Air</strong> und <strong>Air France</strong>.</p>
+<p>Die meisten Flüge nach Marrakesch kommen aus Europa. Je nach Saison stehen auf der Tafel unter anderem <strong>Ryanair</strong>, <strong>Discover Airlines</strong>, <strong>Eurowings</strong>, <strong>easyJet</strong>, <strong>TUI fly</strong>, <strong>Royal Air Maroc</strong>, <strong>Transavia</strong>, <strong>Wizz Air</strong> und <strong>Air France</strong>.</p>
 <ul>
 <li><strong>Deutschland, Österreich, Schweiz</strong>: Frankfurt, München, Berlin, Düsseldorf, Köln/Bonn, Hamburg, Wien, Zürich, Genf, Basel.</li>
 <li><strong>Frankreich und Benelux</strong>: Paris, Lyon, Marseille, Toulouse, Brüssel, Amsterdam, Eindhoven.</li>

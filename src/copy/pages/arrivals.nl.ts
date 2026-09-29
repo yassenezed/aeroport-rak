@@ -50,7 +50,7 @@ export default {
 <p>Als u kunt kiezen, levert een vlucht die tussen 13 en 17 uur landt een halfuur winst op bij de uitgang. Komt u 's avonds aan, dan brengt de <a href="/nl/blog/fast-track-marrakech-airport/">fast track op luchthaven Marrakech</a> u via een aparte rij door de controles.</p>
 
 <h2>Maatschappijen en herkomst van vluchten naar luchthaven Marrakech-Menara</h2>
-<p>De meeste vluchten naar Marrakech komen uit Europa. Afhankelijk van het seizoen ziet u op het bord onder meer <strong>Transavia</strong>, <strong>Ryanair</strong>, <strong>TUI fly</strong>, <strong>easyJet</strong>, <strong>Royal Air Maroc</strong>, <strong>Corendon</strong>, <strong>Wizz Air</strong>, <strong>Vueling</strong> en <strong>Air France</strong>.</p>
+<p>De meeste vluchten naar Marrakech komen uit Europa. Afhankelijk van het seizoen ziet u op het bord onder meer <strong>Transavia</strong>, <strong>Ryanair</strong>, <strong>TUI fly</strong>, <strong>easyJet</strong>, <strong>Royal Air Maroc</strong>, <strong>Wizz Air</strong>, <strong>Vueling</strong> en <strong>Air France</strong>.</p>
 <ul>
 <li><strong>Nederland en België</strong>: Amsterdam, Eindhoven, Rotterdam, Brussel, Charleroi.</li>
 <li><strong>Frankrijk en Zwitserland</strong>: Parijs, Lyon, Marseille, Toulouse, Genève.</li>
