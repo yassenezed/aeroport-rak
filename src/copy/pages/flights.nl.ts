@@ -2,46 +2,89 @@ import type { LocalizedPage } from '../types';
 
 export default {
   title: "Vluchten naar luchthaven Marrakech-Menara: maatschappijen",
-  description: "Vluchten naar luchthaven Marrakech-Menara: welke maatschappijen er vliegen, de beste boekingsperiodes, bagage en binnenlandse aansluitingen.",
-  eyebrow: "Marrakech Menara · Vluchten",
-  h1: "Vluchten naar Marrakech",
-  lede: "De RAK is na Casablanca de drukst bediende luchthaven van Marokko, met een dicht netwerk van Europese routes en een uitgesproken seizoen. Vergelijk data en lees daarna wat de eindprijs echt bepaalt.",
+  description: "Goedkope vluchten naar luchthaven Marrakech-Menara: vluchtzoeker, maatschappijen per stad, vliegtijden, beste reisperiode en extra kosten van prijsvechters.",
+  eyebrow: "Vluchtzoeker · 39 maatschappijen",
+  h1: "Vluchten luchthaven Marrakech-Menara",
+  lede: "Vergelijk de vluchten naar luchthaven Marrakech-Menara (RAK) van alle maatschappijen en kijk wat de prijs echt bepaalt: vertrekstad, seizoen, bagage en aankomsttijd.",
   widget: "flight-search",
+  highlights: [
+    { icon: 'plane', value: "39 maatschappijen", label: "Directe vluchten naar RAK" },
+    { icon: 'map', value: "106 steden", label: "Non-stop verbonden" },
+    { icon: 'clock', value: "≈ 3 u 45", label: "Amsterdam → Marrakech" },
+  ],
+  services: {
+    heading: "Uw aankomst op luchthaven Marrakech voorbereiden",
+    intro: "Na het boeken: alles wat er op de grond gebeurt.",
+    items: [
+      { icon: 'map', key: 'destinations', title: "Alle bestemmingen", text: "De 106 steden met een directe vlucht, te filteren op land en maatschappij.", cta: "Lijst bekijken" },
+      { icon: 'plane-landing', key: 'arrivals', title: "Aankomsten live", text: "Een vlucht en de werkelijke landingstijd in Marrakech volgen.", cta: "Aankomsten bekijken" },
+      { icon: 'plane-takeoff', key: 'departures', title: "Vertrek live", text: "Hoe laat u er moet zijn, inchecken en controles.", cta: "Vertrek bekijken" },
+      { icon: 'van', key: 'bookTransfer', title: "Luchthaventransfer", text: "Chauffeur met naambord, vaste prijs per voertuig vanaf € 27.", cta: "Boeken" },
+      { icon: 'building', key: 'hotels', title: "Waar slapen", text: "Medina, Guéliz, Hivernage of bij de luchthaven.", cta: "Hotels bekijken" },
+      { icon: 'alert', key: 'compensation', title: "Vertraging of annulering", text: "Tot € 400 compensatie afhankelijk van de afstand.", cta: "Rechten checken" },
+    ],
+  },
   body: `
-<h2>Wie naar Marrakech vliegt</h2>
-<p>Drie groepen maatschappijen verdelen het verkeer. De <strong>Europese prijsvechters</strong> – Transavia, Ryanair, easyJet, Vueling, Wizz Air – verzorgen de meeste rechtstreekse routes vanuit Nederland, België, Frankrijk, Spanje en het Verenigd Koninkrijk; zij verklaren waarom de aankomsten zich 's avonds opstapelen. De <strong>klassieke maatschappijen</strong> – Royal Air Maroc, KLM via Parijs of Casablanca, Brussels Airlines, Air France, Iberia – bieden prettiger tijden en inbegrepen bagage tegen hogere tarieven. Tot slot verbinden <strong>Royal Air Maroc en Air Arabia Maroc</strong> Marrakech met andere Marokkaanse steden en verschillende Afrikaanse bestemmingen.</p>
-
-<h2>Wanneer de prijzen stijgen en dalen</h2>
+<h2>Directe vluchten naar luchthaven Marrakech-Menara vanuit Nederland en België</h2>
+<p>Vanuit de Benelux vliegen meerdere maatschappijen non-stop naar Marrakech, het hele jaar door. Dit zijn de belangrijkste verbindingen, de maatschappijen en de gemiddelde vliegtijd.</p>
 <div class="table-wrap">
 <table class="data">
-<thead><tr><th>Periode</th><th>Drukte</th><th>Vliegprijzen</th><th>Klimaat</th></tr></thead>
+<thead><tr><th>Vertrek</th><th>Maatschappijen</th><th>Vliegtijd</th></tr></thead>
+<tbody>
+<tr class="row-highlight"><td><strong>Amsterdam</strong></td><td>Transavia, easyJet (seizoen)</td><td class="num">≈ 3 u 45</td></tr>
+<tr><td><strong>Eindhoven</strong></td><td>Ryanair, Transavia</td><td class="num">≈ 3 u 35</td></tr>
+<tr><td><strong>Rotterdam</strong></td><td>TUI fly</td><td class="num">≈ 3 u 40</td></tr>
+<tr><td><strong>Brussel</strong> (Zaventem)</td><td>Ryanair, Royal Air Maroc, Transavia, TUI fly</td><td class="num">≈ 3 u 25</td></tr>
+<tr><td><strong>Charleroi</strong></td><td>Ryanair</td><td class="num">≈ 3 u 25</td></tr>
+<tr><td><strong>Düsseldorf-Weeze</strong></td><td>Ryanair</td><td class="num">≈ 3 u 45</td></tr>
+<tr><td><strong>Parijs</strong></td><td>Air France, easyJet, Royal Air Maroc, Transavia, Ryanair</td><td class="num">≈ 3 u 15</td></tr>
+</tbody>
+</table>
+</div>
+<p>In totaal is luchthaven Marrakech-Menara verbonden met 106 steden door 39 maatschappijen. De volledige lijst, met seizoensroutes, staat op onze pagina <a href="/nl/destinations/">bestemmingen vanuit Marrakech</a>.</p>
+
+<h2>Wanneer boeken: seizoenen en prijzen</h2>
+<div class="table-wrap">
+<table class="data">
+<thead><tr><th>Periode</th><th>Drukte</th><th>Prijzen</th><th>Klimaat</th></tr></thead>
 <tbody>
 <tr><td><strong>Maart–mei</strong></td><td>Zeer hoog</td><td>Hoog</td><td>Ideaal, 22–28 °C</td></tr>
 <tr><td><strong>Juni–augustus</strong></td><td>Gemiddeld</td><td>Gematigd behalve augustus</td><td>Zeer heet, 38–45 °C</td></tr>
 <tr class="row-highlight"><td><strong>September–november</strong></td><td>Hoog</td><td>Gemiddeld</td><td>Uitstekend, 24–30 °C</td></tr>
-<tr><td><strong>December–februari</strong></td><td>Pieken rond de feestdagen</td><td>Laag buiten de feestdagen</td><td>Zacht overdag, koud 's nachts</td></tr>
+<tr><td><strong>December–februari</strong></td><td>Pieken rond feestdagen</td><td>Laag buiten feestdagen</td><td>Zacht overdag, koud 's nachts</td></tr>
 </tbody>
 </table>
 </div>
-<p>Het beste venster blijft <strong>eind september tot half november</strong>: het beste weer van het jaar, de medina terug in haar ritme na de zomer, en prijzen die nog niet in het feestseizoen zijn beland. Januari en februari buiten de schoolvakanties zijn het goedkoopst – mits u nachten onder de 8 °C accepteert, wat in een nauwelijks verwarmde riad echt meetelt.</p>
+<p>Het beste venster is <strong>eind september tot half november</strong>: het beste weer van het jaar, voordat de kerstprijzen ingaan. Januari en februari buiten de schoolvakanties zijn het goedkoopst, met nachten onder 8 °C, wat u merkt in een weinig verwarmde riad. Boek normaal zes tot tien weken vooraf, voor schoolvakanties, Pasen en Kerstmis drie tot vier maanden.</p>
 
-<h2>De getoonde prijs is niet de betaalde prijs</h2>
-<p>Bij een prijsvechter zit het verschil tussen advertentie en totaal in drie regels. <strong>Ruimbagage</strong> kost vaak € 25 tot € 50 per traject, soms meer dan het ticket zelf. <strong>Stoelreservering</strong> wordt berekend zodra u samen reist en naast elkaar wilt zitten. En <strong>handbagage</strong> boven een klein tasje is bij meerdere maatschappijen betalend, met strikte controles bij vertrek uit Marrakech.</p>
+<h2>De geadverteerde prijs is niet de eindprijs</h2>
+<p>Bij prijsvechters zit het verschil tussen advertentie en totaal in drie posten. <strong>Ruimbagage</strong> kost vaak € 25 tot 50 per traject, soms meer dan het ticket. <strong>Stoelkeuze</strong> betaalt u zodra u naast elkaar wilt zitten. En <strong>handbagage</strong> boven een kleine tas is bij meerdere maatschappijen betalend, met strenge controles bij vertrek uit Marrakech.</p>
 <div class="callout">
 <span class="callout-label">De rekensom</span>
-<p>Tel altijd de terugvlucht mee voordat u vergelijkt. Een budgetretour van € 79 wordt € 179 met twee ruimbagagestukken en gereserveerde stoelen – een niveau waarop een klassieke maatschappij met inbegrepen bagage en dagvluchten weer concurrerend wordt.</p>
+<p>Tel altijd heen- en terugreis op voordat u vergelijkt. Een retour van € 79 bij een prijsvechter wordt € 179 met twee koffers en gereserveerde stoelen: op dat niveau is een klassieke maatschappij met bagage en overdagvluchten weer concurrerend.</p>
 </div>
 
-<h2>Aansluitingen naar de rest van Marokko</h2>
-<p>Vanuit Marrakech lopen binnenlandse verbindingen meestal via Casablanca. Voor Agadir, Essaouira of Ouarzazate is de weg vaak sneller en veel goedkoper zodra u de reistijd naar de luchthavens meerekent. Voor Fez of Tanger is de ONCF-trein vanaf station Guéliz een comfortabel alternatief: u moet alleen het stuk tussen luchthaven en station inplannen, waar geen spoorlijn rijdt.</p>
-<p>Landt uw vlucht laat en vertrekt uw binnenlandse aansluiting vroeg, slaap dan liever in Marrakech dan op de luchthaven: hotels bij de RAK liggen op tien minuten en kosten minder dan een omgeboekt ticket.</p>
+<h2>De juiste aankomsttijd kiezen</h2>
+<p>Veel prijsvechters landen tussen 20 uur en middernacht, op het drukste moment van de luchthaven. De paspoortcontrole is dan trager, de taxi rijdt tegen het nachttarief en bus 19 stopt rond 23.30 uur. Bij een vergelijkbare prijs bespaart een landing rond de middag een halfuur bij de uitgang. Landt u laat, boek dan een <a href="/nl/book-transfer/">transfer</a>: de chauffeur volgt de vlucht en wacht bij vertraging.</p>
+
+<h2>Binnenlandse en langeafstandsvluchten vanuit Marrakech</h2>
+<p>Binnen Marokko verbindt Royal Air Maroc Marrakech met <strong>Casablanca</strong>, <strong>Dakhla</strong> en <strong>Laayoune</strong>, en vliegt Ryanair rechtstreeks naar <strong>Fez</strong>, <strong>Tanger</strong>, <strong>Tetouan</strong>, <strong>Oujda</strong> en <strong>Errachidia</strong>. Naar Agadir, Essaouira of Ouarzazate zijn er geen vluchten: de weg is eenvoudiger (zie <a href="/nl/blog/distance-essaouira-marrakech-airport/">Marrakech–Essaouira</a> en <a href="/nl/blog/distance-agadir-marrakech-airport/">Marrakech–Agadir</a>).</p>
+<p>Verder weg is luchthaven Marrakech-Menara verbonden met <strong>Montreal</strong> (Air Transat) en in het seizoen met <strong>Atlanta</strong> (Delta) en <strong>New York-Newark</strong> (United). Qatar Airways naar <strong>Doha</strong> en Turkish Airlines naar <strong>Istanbul</strong> openen aansluitingen naar Azië en de Golf.</p>
 `,
+  faqHeading: "Vluchten naar luchthaven Marrakech: veelgestelde vragen",
   faqs: [
-    { q: "Welke maatschappijen vliegen op luchthaven Marrakech?", a: "Vooral Transavia, Ryanair, easyJet, Vueling en Wizz Air op de Europese budgetroutes, plus Royal Air Maroc, Brussels Airlines, Air France en Iberia op klassieke vluchten. Royal Air Maroc en Air Arabia Maroc verzorgen de binnenlandse en Afrikaanse verbindingen." },
-    { q: "Wat is de beste periode om naar Marrakech te vliegen?", a: "Eind september tot half november: het klimaat is optimaal, tussen 24 en 30 °C, en de prijzen blijven redelijk vóór het feestseizoen. Januari en februari buiten de schoolvakanties zijn het goedkoopst, met frisse nachten." },
-    { q: "Hoe lang duurt een vlucht naar Marrakech?", a: "Ongeveer 3 uur 45 rechtstreeks vanaf Amsterdam, Eindhoven of Rotterdam, 3 uur 30 vanaf Brussel en Charleroi, en 3 uur 20 vanaf Parijs." },
-    { q: "Zijn er rechtstreekse vluchten tussen Marrakech en andere Marokkaanse steden?", a: "Weinig, en de meeste gaan via Casablanca. Voor Agadir, Essaouira of Ouarzazate blijft de weg sneller en goedkoper zodra u de toegangstijden meerekent. Voor Fez en Tanger is de ONCF-trein vanaf station Guéliz een goed alternatief." },
-    { q: "Hoe ver vooruit moet u een vlucht naar Marrakech boeken?", a: "Zes tot tien weken op de budgetroutes in het normale seizoen. Voor schoolvakanties, Kerstmis en het voorjaar eerder drie tot vier maanden: in die periodes verdubbelen de prijzen het snelst." },
+    { q: "Welke maatschappijen vliegen naar luchthaven Marrakech?", a: "39 maatschappijen bedienen luchthaven Marrakech-Menara. Ryanair is de grootste met meer dan 50 routes, voor easyJet, Transavia en Royal Air Maroc. Ook TUI fly, Wizz Air, Volotea, Vueling, Air France, Turkish Airlines en Qatar Airways vliegen er." },
+    { q: "Welke maatschappijen vliegen direct van Nederland of België naar Marrakech?", a: "Vanuit Nederland: Transavia (Amsterdam, Eindhoven), Ryanair (Eindhoven), TUI fly (Rotterdam) en easyJet in het seizoen (Amsterdam). Vanuit België: Ryanair, Royal Air Maroc, Transavia en TUI fly vanaf Brussel, en Ryanair vanaf Charleroi." },
+    { q: "Hoelang duurt een vlucht van Amsterdam naar Marrakech?", a: "Ongeveer 3 uur 45 minuten non-stop. Vanuit Eindhoven rekent u op zo'n 3 uur 35, vanuit Brussel ongeveer 3 uur 25." },
+    { q: "Wanneer is een vlucht naar Marrakech het goedkoopst?", a: "Januari en februari buiten de schoolvakanties zijn de goedkoopste maanden. Voor de beste verhouding tussen prijs en weer kiest u eind september tot half november, bij 24 tot 30 °C." },
+    { q: "Hoe ver vooruit boek ik een vlucht naar Marrakech?", a: "Normaal zes tot tien weken vooraf. Voor schoolvakanties, Pasen en Kerstmis beter drie tot vier maanden: dan stijgen de prijzen het snelst." },
+    { q: "Is bagage inbegrepen op prijsvechtervluchten naar Marrakech?", a: "Meestal alleen een kleine tas onder de stoel. Ruimbagage kost vaak € 25 tot 50 per traject: vergelijk altijd de totaalprijs, heen en terug met bagage." },
+    { q: "Zijn er binnenlandse vluchten vanuit Marrakech?", a: "Ja: Royal Air Maroc naar Casablanca, Dakhla en Laayoune, en Ryanair naar Fez, Tanger, Tetouan, Oujda en Errachidia. Naar Agadir, Essaouira en Ouarzazate zijn er geen vluchten." },
+    { q: "Mijn vlucht naar Marrakech is vertraagd: heb ik recht op compensatie?", a: "Vertrekt de vlucht uit de EU of vliegt een Europese maatschappij, en komt u meer dan drie uur te laat aan, dan voorziet verordening 261/2004 in € 400 per passagier voor 1.500 tot 3.500 km, zoals Amsterdam–Marrakech." },
   ],
-  cta: { heading: "Vergelijk vluchten naar Marrakech", text: "Alle maatschappijen die de RAK bedienen, op uw data, met overstappen en reistijden op een rij.", label: "Vlucht zoeken", href: "/nl/flights/" },
+  cta: {
+    heading: "Ticket geboekt? Regel uw aankomst",
+    text: "Een chauffeur die uw vlucht volgt, bij vertraging wacht en u afzet bij de medinapoort die het dichtst bij uw riad ligt, tegen een vaste prijs per voertuig.",
+    label: "Transfer boeken",
+  },
 } satisfies LocalizedPage;
