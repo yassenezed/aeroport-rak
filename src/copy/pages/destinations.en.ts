@@ -1,7 +1,7 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Marrakech Airport Destinations: all direct flights",
+  title: "Marrakech Menara Airport Destinations: direct flights",
   description: "Over 100 cities by direct flight from Marrakech Menara Airport: 39 airlines, 33 countries, seasonal and domestic routes. Up-to-date searchable list.",
   eyebrow: "Direct flights · updated September 2026",
   h1: "Marrakech Menara Airport Destinations",

@@ -1,7 +1,7 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Marrakech Airport Departures (RAK): live flight board",
+  title: "Marrakech Menara Airport Departures (RAK): live flights",
   description: "Live departures from Marrakech Menara Airport: flight status, when to arrive, check-in, security, VAT refund and how to get to the terminal.",
   eyebrow: "Live board · local time",
   h1: "Marrakech Menara Airport Departures",
