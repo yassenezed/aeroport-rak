@@ -29,16 +29,16 @@ export default {
 </tbody>
 </table>
 </div>
-<p>Vul het politieformulier <strong>in het vliegtuig</strong> in: het wordt op de meeste vluchten aan boord uitgedeeld, en de rij verlaten om een pen te zoeken kost twintig minuten. U hebt het adres van uw verblijf nodig.</p>
+<p>Sinds september 2019 hoeft u geen <strong>politieformulier</strong> meer in te vullen: houd gewoon uw paspoort en verblijfsadres bij de hand. U hebt het adres van uw verblijf nodig.</p>
 
 <h2>Bij vertrek: het knelpunt</h2>
-<p>Niet het inchecken remt de RAK af, maar de paspoortcontrole bij vertrek, bovenop een eerste bagagescan bij de ingang van de terminal. Twee uur vooraf volstaat in het laagseizoen; mik op <strong>drie uur</strong> in het hoogseizoen, in de schoolvakanties of als u bagage afgeeft. De pieken liggen tussen 6.00 en 9.00 uur en aan het eind van de middag.</p>
+<p>Niet het inchecken remt de RAK af, maar de paspoortcontrole bij vertrek (de scanners bij de ingang van de terminal zijn in maart 2025 verwijderd). Twee uur vooraf volstaat in het laagseizoen; mik op <strong>drie uur</strong> in het hoogseizoen, in de schoolvakanties of als u bagage afgeeft. De pieken liggen tussen 6.00 en 9.00 uur en aan het eind van de middag.</p>
 
 <h2>Inreisformaliteiten voor Marokko</h2>
 <ul>
 <li><strong>Paspoort</strong> dat nog minstens zes maanden geldig is na de inreisdatum.</li>
 <li><strong>Geen visum</strong> voor burgers van de EU, Zwitserland, het Verenigd Koninkrijk, Canada en de VS, voor toeristische verblijven tot 90 dagen.</li>
-<li><strong>Politieformulier</strong> bij in- en uitreis, met het verblijfsadres.</li>
+<li><strong>Geen politieformulier</strong> meer sinds september 2019, bij in- en uitreis; houd het verblijfsadres bij de hand.</li>
 <li><strong>Contant geld</strong>: aangifteplicht boven 100.000 MAD. Dirham mag niet in- of uitgevoerd worden.</li>
 <li><strong>Drones</strong>: invoer is verboden en ze worden bij aankomst stelselmatig in beslag genomen.</li>
 </ul>
@@ -53,7 +53,7 @@ export default {
   faqs: [
     { q: "Hoeveel terminals heeft luchthaven Marrakech?", a: "Twee aangrenzende terminals die te voet verbonden zijn: T1, de nieuwste, verwerkt de meeste internationale vluchten, T2 de rest en een deel van de binnenlandse. De verdeling verschilt per maatschappij en seizoen: vertrouw op uw instapkaart." },
     { q: "Wat is de code van luchthaven Marrakech?", a: "RAK als IATA-code, die op uw ticket staat, en GMMX als ICAO-code voor de luchtverkeersleiding. De officiële naam is Marrakech Menara." },
-    { q: "Heeft u een visum nodig om via Marrakech Marokko in te reizen?", a: "Niet als burger van de EU, Zwitserland, het Verenigd Koninkrijk, Canada of de VS, voor toeristische verblijven tot 90 dagen. Het paspoort moet nog minstens zes maanden na inreis geldig zijn, en er is een politieformulier in te vullen." },
+    { q: "Heeft u een visum nodig om via Marrakech Marokko in te reizen?", a: "Niet als burger van de EU, Zwitserland, het Verenigd Koninkrijk, Canada of de VS, voor toeristische verblijven tot 90 dagen. Het paspoort moet geldig zijn voor het hele verblijf (zes maanden resterende geldigheid wordt aangeraden); het politieformulier is in 2019 afgeschaft." },
     { q: "Kun je op luchthaven Marrakech slapen?", a: "De terminal is er niet op ingericht en 's nachts ongemakkelijk. Vanaf zes uur wachten is een hotel op tien minuten van de luchthaven vaak goedkoper dan loungetoegang met een slapeloze nacht erachteraan." },
     { q: "Mag je een drone meenemen naar Marokko?", a: "Nee. Invoer van drones is verboden en de toestellen worden bij de aankomstcontrole stelselmatig in beslag genomen, ook hobbymodellen. Neem ze niet mee in de cabine of het ruim." },
   ],

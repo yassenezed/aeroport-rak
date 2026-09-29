@@ -16,9 +16,9 @@ export default {
     heading: "Departing Marrakech Menara Airport: the 5 steps",
     intro: "The route is the same at Terminal 1 and Terminal 2. Allow 1 to 1.5 hours between the terminal entrance and the gate at peak times.",
     items: [
-      { icon: 'shield', title: "Entrance screening", text: "A first bag scan right at the terminal entrance, before the check-in desks. At busy times the queue forms outside." },
+      { icon: 'door', title: "Terminal access", text: "Since March 2025 there are no scanners at the terminal entrance: you walk straight into the check-in hall. Keep your passport and boarding pass to hand." },
       { icon: 'clipboard', title: "Check-in at Marrakech Menara Airport", text: "Desks usually open 3 hours before international flights and close 45 to 60 minutes before. Bags are dropped at the desk, even if you checked in online." },
-      { icon: 'passport', title: "Passport control", text: "The longest step. Passport and entry stamp are checked; you may be asked for an exit card, available on site." },
+      { icon: 'passport', title: "Passport control", text: "The longest step. Passport and entry stamp are checked; no form to fill in." },
       { icon: 'shield-check', title: "Security", text: "Liquids limited to 100 ml per container in a clear bag; laptops and tablets out of the bag." },
       { icon: 'plane-takeoff', title: "Departure gate", text: "Duty-free shops, cafés and lounges, then the gate. Boarding usually starts about 45 minutes before take-off." },
     ],
@@ -48,7 +48,7 @@ export default {
 <p>To follow a flight landing in Marrakech, see the <a href="/en/arrivals/">Marrakech airport arrivals board</a>.</p>
 
 <h2>What time should you get to the airport for a flight from Marrakech?</h2>
-<p>The rule that works: <strong>2.5 to 3 hours before a flight to Europe</strong>, 3 hours in high season or whenever you have hold luggage. Check-in is not what slows you down; the two security checks and above all passport control are the airport's bottleneck.</p>
+<p>The rule that works: <strong>2.5 to 3 hours before a flight to Europe</strong>, 3 hours in high season or whenever you have hold luggage. Check-in is not what slows you down; passport control and security are the airport's bottleneck.</p>
 <div class="table-wrap">
 <table class="data">
 <thead><tr><th>Flight type</th><th>Arrive</th><th>Why</th></tr></thead>
@@ -75,7 +75,7 @@ export default {
 <thead><tr><th>Option</th><th>Price</th><th>Time</th><th>Good to know</th></tr></thead>
 <tbody>
 <tr class="row-highlight"><td><strong><a href="/en/book-transfer/">Pre-booked transfer</a></strong></td><td class="num">from €27 / vehicle</td><td class="num">15–30 min</td><td>Pick-up at the agreed time, even before dawn</td></tr>
-<tr><td><strong>Petit taxi</strong></td><td class="num">MAD 70–100 (day)</td><td class="num">15–30 min</td><td>More at night; agree the price before getting in</td></tr>
+<tr><td><strong>Petit taxi</strong></td><td class="num">MAD 70–150 (day)</td><td class="num">15–30 min</td><td>More at night; agree the price before getting in</td></tr>
 <tr><td><strong><a href="/en/blog/bus-19-alsa-marrakech/">Bus 19 (ALSA)</a></strong></td><td class="num">MAD 30 / person</td><td class="num">≈ 20 min</td><td>From Jemaa el-Fna and Gueliz, no early-morning service</td></tr>
 <tr><td><strong>Hire car</strong></td><td class="num">—</td><td class="num">15–30 min</td><td>Allow 30 extra minutes for the return inspection</td></tr>
 </tbody>
@@ -84,7 +84,7 @@ export default {
 <p>For a flight before 9 am, book your ride <strong>the day before</strong>, with your riad or as a <a href="/en/book-transfer/">transfer</a>: finding a taxi in a medina lane at 5 am is anything but easy, and the night fare applies until daybreak. Fare details are on the <a href="/en/transfers/">airport transfers and taxis</a> page and in our <a href="/en/blog/taxi-tips-marrakech/">Marrakech taxi tips</a>.</p>
 
 <h2>Dropping someone off or parking</h2>
-<p>The drop-off zone in front of the terminal is for very short stops only. To walk someone to the desk, use the <a href="/en/parking/">airport car park</a>: about MAD 20 an hour, MAD 70 to 80 a day. At busy times only ticketed passengers pass the terminal entrance check, so goodbyes often happen outside the doors.</p>
+<p>The drop-off zone in front of the terminal is for very short stops only. To walk someone to the desk, use the <a href="/en/parking/">airport car park</a>: about MAD 20 an hour, MAD 70 to 80 a day.</p>
 
 <h2>Dirhams, souvenirs and luggage: what to know</h2>
 <p>Dirhams cannot be taken out beyond a token amount: change your last notes <em>before</em> passport control, at the exchange desks in the public hall, and keep the receipt from your original exchange. For souvenirs, argan oil, spices and cosmetics in containers over 100 ml go in the hold, no exceptions. Pottery travels badly without proper packing; most medina sellers know how to prepare a parcel for the plane. More tips in our guide to <a href="/en/blog/money-in-morocco/">money and exchange in Morocco</a>.</p>
@@ -106,7 +106,7 @@ export default {
     { q: "Which terminal does my flight leave from at Marrakech Menara?", a: "Most international flights leave from Terminal 1, with Terminal 2 handling some domestic flights and charters. The terminal is on your boarding pass and the departures board; the two terminals are linked on foot." },
     { q: "Can I take dirhams out of Morocco?", a: "No, the dirham cannot be exported beyond a token amount. Change your notes at the exchange desks in the public hall, before passport control, and keep the receipt from your original exchange." },
     { q: "Can I take argan oil in my hand luggage?", a: "Only in containers of 100 ml or less, in a clear plastic bag. Anything larger, including argan oil, liquid spices and cosmetics, goes in the hold. Duty-free purchases made after security are not affected." },
-    { q: "How much is a taxi from the medina to Marrakech airport?", a: "Allow MAD 70 to 100 by day for a petit taxi, more at night; agree the price before getting in. For an early departure, book a transfer or your riad's driver the day before." },
+    { q: "How much is a taxi from the medina to Marrakech airport?", a: "Allow MAD 70 to 150 by day for a petit taxi, more at night; agree the price before getting in. For an early departure, book a transfer or your riad's driver the day before." },
     { q: "Is there a VAT refund at Marrakech airport?", a: "Yes, for non-residents, on purchases from approved retailers. The form must be stamped at the customs desk before you check in your bags, with the goods available for inspection." },
     { q: "My flight from Marrakech is delayed: am I entitled to compensation?", a: "Yes if the airline is European or British and the arrival delay exceeds three hours: €400 (£350) per passenger for a 1,500 to 3,500 km journey, unless there were extraordinary circumstances. Non-European airlines departing Morocco are not covered." },
   ],

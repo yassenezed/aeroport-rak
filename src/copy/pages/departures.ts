@@ -17,9 +17,9 @@ export default {
       heading: "Départ de l'aéroport de Marrakech-Ménara : les 5 étapes",
       intro: "Le parcours est le même au terminal 1 et au terminal 2. Comptez 1 h à 1 h 30 entre l'entrée du terminal et la porte d'embarquement aux heures de pointe.",
       items: [
-        { icon: 'shield', title: "Contrôle à l'entrée", text: "Premier passage des bagages au scanner dès l'entrée du terminal, avant même les comptoirs. La file se forme dehors aux heures chargées." },
+        { icon: 'door', title: "Accès au terminal", text: "Depuis mars 2025, plus de scanner à l'entrée du terminal : on entre directement dans le hall d'enregistrement. Gardez passeport et carte d'embarquement à portée de main." },
         { icon: 'clipboard', title: "Enregistrement à l'aéroport de Marrakech-Ménara", text: "Comptoirs ouverts en général 3 h avant les vols internationaux, fermés 45 à 60 min avant. Dépôt des bagages au comptoir, même enregistré en ligne." },
-        { icon: 'passport', title: "Police des frontières", text: "L'étape la plus longue. Contrôle du passeport et du tampon d'entrée ; une fiche de sortie peut vous être demandée, elle est disponible sur place." },
+        { icon: 'passport', title: "Police des frontières", text: "L'étape la plus longue. Contrôle du passeport et du tampon d'entrée, sans fiche à remplir." },
         { icon: 'shield-check', title: "Sûreté", text: "Liquides limités à 100 ml par contenant dans un sac transparent, ordinateur et tablette à sortir du sac." },
         { icon: 'plane-takeoff', title: "Porte d'embarquement", text: "Boutiques hors taxes, cafés et salons, puis la porte. L'embarquement commence environ 45 min avant le décollage." },
       ],
@@ -49,7 +49,7 @@ export default {
 <p>Pour suivre un vol qui arrive à Marrakech, consultez le tableau des <a href="/arrivees/">arrivées de l'aéroport de Marrakech</a>.</p>
 
 <h2>À quelle heure arriver à l'aéroport pour un vol au départ de Marrakech ?</h2>
-<p>La règle qui fonctionne : <strong>2 h 30 à 3 heures avant un vol vers l'Europe</strong>, 3 heures en haute saison ou dès que vous avez des bagages en soute. Ce n'est pas l'enregistrement qui ralentit, mais les deux contrôles de sûreté et surtout la police des frontières, qui reste le goulet d'étranglement de l'aéroport.</p>
+<p>La règle qui fonctionne : <strong>2 h 30 à 3 heures avant un vol vers l'Europe</strong>, 3 heures en haute saison ou dès que vous avez des bagages en soute. Ce n'est pas l'enregistrement qui ralentit, mais la police des frontières et le contrôle de sûreté, qui reste le goulet d'étranglement de l'aéroport.</p>
 <div class="table-wrap">
 <table class="data">
 <thead><tr><th>Type de vol</th><th>Arrivée conseillée</th><th>Pourquoi</th></tr></thead>
@@ -76,7 +76,7 @@ export default {
 <thead><tr><th>Mode</th><th>Prix</th><th>Durée</th><th>Bon à savoir</th></tr></thead>
 <tbody>
 <tr class="row-highlight"><td><strong><a href="/reserver-transfert/">Transfert réservé</a></strong></td><td class="num">dès 27 € / véhicule</td><td class="num">15–30 min</td><td>Prise en charge à l'heure dite, même avant l'aube</td></tr>
-<tr><td><strong>Petit taxi</strong></td><td class="num">70–100 MAD (jour)</td><td class="num">15–30 min</td><td>Plus cher la nuit ; fixez le prix avant de monter</td></tr>
+<tr><td><strong>Petit taxi</strong></td><td class="num">70–150 MAD (jour)</td><td class="num">15–30 min</td><td>Plus cher la nuit ; fixez le prix avant de monter</td></tr>
 <tr><td><strong><a href="/blog/bus-19-alsa-marrakech/">Bus 19 (ALSA)</a></strong></td><td class="num">30 MAD / pers.</td><td class="num">≈ 20 min</td><td>Depuis Jemaa el-Fna et Guéliz, pas de service tôt le matin</td></tr>
 <tr><td><strong>Voiture de location</strong></td><td class="num">—</td><td class="num">15–30 min</td><td>Prévoyez 30 min de plus pour l'état des lieux</td></tr>
 </tbody>
@@ -85,7 +85,7 @@ export default {
 <p>Pour un vol avant 9 h, réservez votre trajet <strong>la veille</strong>, auprès du riad ou en <a href="/reserver-transfert/">transfert</a> : trouver un taxi à 5 h du matin dans une ruelle n'a rien d'évident, et le tarif de nuit s'applique jusqu'au lever du jour. Les détails des tarifs sont sur la page <a href="/transferts/">transferts et taxis de l'aéroport</a> et dans nos <a href="/blog/taxi-marrakech/">conseils taxi à Marrakech</a>.</p>
 
 <h2>Déposer un passager ou se garer</h2>
-<p>Le dépose-minute devant le terminal est réservé aux arrêts très courts. Pour accompagner quelqu'un jusqu'au comptoir, garez-vous au <a href="/parkings/">parking de l'aéroport</a> : environ 20 MAD l'heure, 70 à 80 MAD la journée. Seuls les passagers munis d'un billet franchissent le contrôle d'entrée du terminal aux heures chargées ; les adieux se font souvent devant les portes.</p>
+<p>Le dépose-minute devant le terminal est réservé aux arrêts très courts. Pour accompagner quelqu'un jusqu'au comptoir, garez-vous au <a href="/parkings/">parking de l'aéroport</a> : environ 20 MAD l'heure, 70 à 80 MAD la journée.</p>
 
 <h2>Dirhams, souvenirs et bagages : ce qu'il faut savoir</h2>
 <p>Les dirhams ne s'exportent pas au-delà d'une somme symbolique : rechangez vos derniers billets <em>avant</em> la police des frontières, aux bureaux de change du hall public, en gardant le reçu de votre change initial. Côté souvenirs, l'huile d'argan, les épices et les cosmétiques en flacon de plus de 100 ml partent en soute, sans exception. Les poteries voyagent mal sans emballage sérieux ; la plupart des vendeurs de la médina savent préparer un colis pour l'avion. Plus de conseils dans notre guide <a href="/blog/argent-maroc/">argent et change au Maroc</a>.</p>
@@ -107,7 +107,7 @@ export default {
       { q: "De quel terminal part mon vol à Marrakech-Ménara ?", a: "La plupart des vols internationaux partent du terminal 1, le terminal 2 accueillant une partie des vols intérieurs et des charters. Le terminal figure sur votre carte d'embarquement et sur le tableau des départs ; les deux terminaux sont reliés à pied." },
       { q: "Peut-on emporter des dirhams hors du Maroc ?", a: "Non, le dirham n'est pas exportable au-delà d'une somme symbolique. Rechangez vos billets aux bureaux de change du hall public, avant la police des frontières, en conservant le reçu de votre change initial." },
       { q: "Peut-on mettre de l'huile d'argan dans son bagage cabine ?", a: "Seulement en flacons de 100 ml ou moins, réunis dans un sac plastique transparent. Au-delà, l'huile d'argan, les épices liquides et les cosmétiques partent en soute. Les achats faits en zone hors taxes après la sûreté ne sont pas concernés." },
-      { q: "Combien coûte un taxi de la médina à l'aéroport de Marrakech ?", a: "Comptez 70 à 100 MAD en journée pour un petit taxi, davantage la nuit ; fixez le prix avant de monter. Pour un départ tôt le matin, réservez la veille un transfert ou le chauffeur de votre riad." },
+      { q: "Combien coûte un taxi de la médina à l'aéroport de Marrakech ?", a: "Comptez 70 à 150 MAD en journée pour un petit taxi, davantage la nuit ; fixez le prix avant de monter. Pour un départ tôt le matin, réservez la veille un transfert ou le chauffeur de votre riad." },
       { q: "Y a-t-il une détaxe à l'aéroport de Marrakech ?", a: "Oui, pour les non-résidents, sur les achats effectués chez des commerçants agréés. Le formulaire doit être visé au comptoir douanier avant l'enregistrement des bagages, avec les marchandises présentables." },
       { q: "Mon vol au départ de Marrakech est retardé : ai-je droit à une indemnisation ?", a: "Oui si la compagnie est européenne et que le retard à l'arrivée dépasse trois heures : 400 € par passager pour un trajet de 1 500 à 3 500 km, sauf circonstances extraordinaires. Les compagnies non européennes au départ du Maroc ne sont pas soumises au règlement 261/2004." },
     ],

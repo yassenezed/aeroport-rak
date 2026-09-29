@@ -27,7 +27,7 @@ export default {
 
 <h2>Reduced mobility, families, formalities</h2>
 <p>Assistance for passengers with reduced mobility is requested from your airline at least 48 hours before the flight: the airline triggers the service, not the airport. The terminal has baby-changing facilities and water points.</p>
-<p>On formalities, a police form must be completed on entering and leaving the country; it is usually handed out on board. Citizens of the EU, the UK, Switzerland, Canada and the United States need no visa for a 90-day tourist stay, with a passport valid at least six months.</p>
+<p>On formalities, the police form was abolished in September 2019: only your passport is checked, on entry and exit. Citizens of the EU, the UK, Switzerland, Canada and the United States need no visa for a 90-day tourist stay, with a passport valid at least six months.</p>
 <div class="callout">
 <span class="callout-label">Three things to do before leaving the hall</span>
 <p>Withdraw dirhams and break them into MAD 50s and 100s. Turn on your connection, eSIM or local SIM. And know exactly where you are going: the riad's name, the medina gate, or a confirmed meeting point with your driver.</p>

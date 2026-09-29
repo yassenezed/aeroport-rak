@@ -16,9 +16,9 @@ export default {
     heading: "Abflug vom Flughafen Marrakesch-Menara: die 5 Schritte",
     intro: "Der Weg ist in Terminal 1 und Terminal 2 derselbe. Rechnen Sie zu Spitzenzeiten mit 1 bis 1,5 Stunden vom Terminaleingang bis zum Gate.",
     items: [
-      { icon: 'shield', title: "Kontrolle am Eingang", text: "Ein erster Gepäckscan direkt am Terminaleingang, noch vor den Schaltern. Zu Stoßzeiten bildet sich die Schlange draußen." },
+      { icon: 'door', title: "Zugang zum Terminal", text: "Seit März 2025 gibt es am Terminaleingang keine Scanner mehr: Sie gehen direkt in die Check-in-Halle. Halten Sie Reisepass und Bordkarte bereit." },
       { icon: 'clipboard', title: "Check-in am Flughafen Marrakesch-Menara", text: "Schalter öffnen meist 3 Stunden vor internationalen Flügen und schließen 45 bis 60 Minuten vorher. Gepäck wird am Schalter abgegeben, auch nach Online-Check-in." },
-      { icon: 'passport', title: "Passkontrolle", text: "Der längste Schritt. Reisepass und Einreisestempel werden geprüft; eventuell wird eine Ausreisekarte verlangt, die vor Ort ausliegt." },
+      { icon: 'passport', title: "Passkontrolle", text: "Der längste Schritt. Reisepass und Einreisestempel werden geprüft, ein Formular ist nicht nötig." },
       { icon: 'shield-check', title: "Sicherheitskontrolle", text: "Flüssigkeiten bis 100 ml pro Behälter in einem durchsichtigen Beutel; Laptop und Tablet aus der Tasche nehmen." },
       { icon: 'plane-takeoff', title: "Abfluggate", text: "Duty-free-Shops, Cafés und Lounges, dann das Gate. Das Boarding beginnt etwa 45 Minuten vor dem Start." },
     ],
@@ -48,7 +48,7 @@ export default {
 <p>Um einen Flug nach Marrakesch zu verfolgen, sehen Sie die <a href="/de/arrivals/">Ankunftstafel des Flughafens Marrakesch</a>.</p>
 
 <h2>Wann sollte man für einen Abflug in Marrakesch am Flughafen sein?</h2>
-<p>Die Regel, die funktioniert: <strong>2,5 bis 3 Stunden vor einem Flug nach Europa</strong>, 3 Stunden in der Hochsaison oder mit Aufgabegepäck. Nicht der Check-in bremst, sondern die beiden Sicherheitskontrollen und vor allem die Passkontrolle, das Nadelöhr des Flughafens.</p>
+<p>Die Regel, die funktioniert: <strong>2,5 bis 3 Stunden vor einem Flug nach Europa</strong>, 3 Stunden in der Hochsaison oder mit Aufgabegepäck. Nicht der Check-in bremst, sondern die Pass- und die Sicherheitskontrolle, das Nadelöhr des Flughafens.</p>
 <div class="table-wrap">
 <table class="data">
 <thead><tr><th>Flugart</th><th>Empfohlene Ankunft</th><th>Warum</th></tr></thead>
@@ -75,7 +75,7 @@ export default {
 <thead><tr><th>Option</th><th>Preis</th><th>Dauer</th><th>Gut zu wissen</th></tr></thead>
 <tbody>
 <tr class="row-highlight"><td><strong><a href="/de/book-transfer/">Gebuchter Transfer</a></strong></td><td class="num">ab 27 € / Fahrzeug</td><td class="num">15–30 Min.</td><td>Abholung zur vereinbarten Zeit, auch vor Sonnenaufgang</td></tr>
-<tr><td><strong>Petit Taxi</strong></td><td class="num">70–100 MAD (Tag)</td><td class="num">15–30 Min.</td><td>Nachts teurer; Preis vor dem Einsteigen vereinbaren</td></tr>
+<tr><td><strong>Petit Taxi</strong></td><td class="num">70–150 MAD (Tag)</td><td class="num">15–30 Min.</td><td>Nachts teurer; Preis vor dem Einsteigen vereinbaren</td></tr>
 <tr><td><strong><a href="/de/blog/bus-19-alsa-marrakech/">Bus 19 (ALSA)</a></strong></td><td class="num">30 MAD / Person</td><td class="num">≈ 20 Min.</td><td>Ab Jemaa el-Fna und Gueliz, kein Frühbetrieb</td></tr>
 <tr><td><strong>Mietwagen</strong></td><td class="num">—</td><td class="num">15–30 Min.</td><td>30 Minuten extra für die Rückgabe einplanen</td></tr>
 </tbody>
@@ -84,7 +84,7 @@ export default {
 <p>Für einen Flug vor 9 Uhr buchen Sie die Fahrt <strong>am Vortag</strong>, über das Riad oder als <a href="/de/book-transfer/">Transfer</a>: Um 5 Uhr morgens in einer Gasse ein Taxi zu finden, ist alles andere als sicher, und bis Sonnenaufgang gilt der Nachttarif. Tarifdetails auf der Seite <a href="/de/transfers/">Transfers und Taxis am Flughafen</a> und in unseren <a href="/de/blog/taxi-tips-marrakech/">Taxi-Tipps für Marrakesch</a>.</p>
 
 <h2>Jemanden absetzen oder parken</h2>
-<p>Die Kurzhaltezone vor dem Terminal ist nur für sehr kurze Stopps gedacht. Um jemanden bis zum Schalter zu begleiten, nutzen Sie den <a href="/de/parking/">Flughafenparkplatz</a>: etwa 20 MAD pro Stunde, 70 bis 80 MAD pro Tag. Zu Stoßzeiten passieren nur Passagiere mit Ticket die Eingangskontrolle, der Abschied findet daher oft vor den Türen statt.</p>
+<p>Die Kurzhaltezone vor dem Terminal ist nur für sehr kurze Stopps gedacht. Um jemanden bis zum Schalter zu begleiten, nutzen Sie den <a href="/de/parking/">Flughafenparkplatz</a>: etwa 20 MAD pro Stunde, 70 bis 80 MAD pro Tag.</p>
 
 <h2>Dirham, Souvenirs und Gepäck: was Sie wissen sollten</h2>
 <p>Dirham dürfen nur in symbolischer Höhe ausgeführt werden: Tauschen Sie Ihre letzten Scheine <em>vor</em> der Passkontrolle in den Wechselstuben der öffentlichen Halle und bewahren Sie den Beleg Ihres ersten Umtauschs auf. Bei Souvenirs gilt: Arganöl, Gewürze und Kosmetik in Behältern über 100 ml gehören ausnahmslos ins Aufgabegepäck. Keramik reist ohne gute Verpackung schlecht; die meisten Händler der Medina verpacken auf Wunsch flugtauglich. Mehr Tipps in unserem Ratgeber <a href="/de/blog/money-in-morocco/">Geld und Umtausch in Marokko</a>.</p>
@@ -106,7 +106,7 @@ export default {
     { q: "Von welchem Terminal fliegt mein Flug in Marrakesch-Menara ab?", a: "Die meisten internationalen Flüge starten von Terminal 1, Terminal 2 wickelt einen Teil der Inlands- und Charterflüge ab. Das Terminal steht auf Ihrer Bordkarte und der Abflugtafel; beide Terminals sind zu Fuß verbunden." },
     { q: "Darf man Dirham aus Marokko ausführen?", a: "Nein, der Dirham darf nur in symbolischer Höhe ausgeführt werden. Tauschen Sie Ihre Scheine in den Wechselstuben der öffentlichen Halle vor der Passkontrolle und bewahren Sie den Beleg Ihres ersten Umtauschs auf." },
     { q: "Darf Arganöl ins Handgepäck?", a: "Nur in Behältern bis 100 ml in einem durchsichtigen Plastikbeutel. Größere Mengen, auch Arganöl, flüssige Gewürze und Kosmetik, müssen ins Aufgabegepäck. Duty-free-Einkäufe nach der Sicherheitskontrolle sind nicht betroffen." },
-    { q: "Was kostet ein Taxi von der Medina zum Flughafen Marrakesch?", a: "Rechnen Sie tagsüber mit 70 bis 100 MAD im Petit Taxi, nachts mit mehr; vereinbaren Sie den Preis vor dem Einsteigen. Für einen frühen Abflug buchen Sie am Vortag einen Transfer oder den Fahrer Ihres Riads." },
+    { q: "Was kostet ein Taxi von der Medina zum Flughafen Marrakesch?", a: "Rechnen Sie tagsüber mit 70 bis 150 MAD im Petit Taxi, nachts mit mehr; vereinbaren Sie den Preis vor dem Einsteigen. Für einen frühen Abflug buchen Sie am Vortag einen Transfer oder den Fahrer Ihres Riads." },
     { q: "Gibt es am Flughafen Marrakesch eine Mehrwertsteuer-Erstattung?", a: "Ja, für Nichtansässige bei Einkäufen in zugelassenen Geschäften. Das Formular muss vor der Gepäckaufgabe am Zollschalter abgestempelt werden, die Ware muss vorzeigbar sein." },
     { q: "Mein Flug ab Marrakesch hat Verspätung: Habe ich Anspruch auf Entschädigung?", a: "Ja, wenn die Airline europäisch ist und die Ankunftsverspätung drei Stunden übersteigt: 400 € pro Passagier für 1.500 bis 3.500 km, außer bei außergewöhnlichen Umständen. Nicht-europäische Airlines ab Marokko unterliegen der Verordnung 261/2004 nicht." },
   ],

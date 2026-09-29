@@ -17,7 +17,7 @@ export default {
       heading: "Arrivée à l'aéroport de Marrakech-Ménara : les 4 étapes",
       intro: "Le parcours est le même au terminal 1 et au terminal 2. Ce qui change, c'est l'affluence : un vol posé à 22 h n'a rien à voir avec un vol de 14 h.",
       items: [
-        { icon: 'passport', title: 'Police des frontières à Marrakech-Ménara', text: "Passeport et fiche d'entrée, distribuée à bord. Pas de visa pour les touristes de l'UE, de Suisse, du Royaume-Uni et du Canada (90 jours). 15 à 40 minutes selon l'heure." },
+        { icon: 'passport', title: 'Police des frontières à Marrakech-Ménara', text: "Passeport contrôlé et tamponné, sans fiche à remplir depuis 2019. Pas de visa pour les touristes de l'UE, de Suisse, du Royaume-Uni et du Canada (90 jours). 15 à 40 minutes selon l'heure." },
         { icon: 'luggage', title: 'Livraison des bagages', text: "Les tapis sont juste après le contrôle. Le numéro du tapis s'affiche sur les écrans ; comptez 20 à 30 minutes sur les vols du soir." },
         { icon: 'shield-check', title: 'Douane', text: "Passage en général fluide, avec contrôles par sondage. Les espèces ne se déclarent qu'au-delà de 100 000 MAD. Drones et talkies-walkies sont retenus." },
         { icon: 'door', title: "Hall des arrivées de l'aéroport", text: "Distributeurs, change, cartes SIM et loueurs de voitures, puis la sortie vers la station de taxis, les chauffeurs et les parkings." },
@@ -61,8 +61,8 @@ export default {
 </ul>
 <p>Pour trouver un vol vers Marrakech depuis votre ville, utilisez notre <a href="/vols/">comparateur de vols</a>.</p>
 
-<h2>Formalités d'entrée : passeport, visa et fiche de police</h2>
-<p>Les ressortissants de l'Union européenne, de la Suisse, du Royaume-Uni, du Canada et des États-Unis entrent au Maroc <strong>sans visa pour un séjour touristique de 90 jours</strong>, avec un passeport valable pendant toute la durée du séjour. La fiche d'entrée est distribuée à bord : remplissez-la pendant le vol, avec l'adresse de votre hébergement, pour ne pas quitter la file au dernier moment. Les enfants voyageant avec un seul parent doivent pouvoir présenter une autorisation de l'autre parent.</p>
+<h2>Formalités d'entrée : passeport et visa</h2>
+<p>Les ressortissants de l'Union européenne, de la Suisse, du Royaume-Uni, du Canada et des États-Unis entrent au Maroc <strong>sans visa pour un séjour touristique de 90 jours</strong>, avec un passeport valable pendant toute la durée du séjour. La fiche de police n'existe plus depuis septembre 2019 : il suffit de présenter son passeport, qui est tamponné. Gardez l'adresse de votre hébergement à portée de main, l'agent peut la demander. Les enfants voyageant avec un seul parent doivent pouvoir présenter une autorisation de l'autre parent.</p>
 
 <h2>Retirer de l'argent à l'aéroport de Marrakech</h2>
 <p>C'est l'étape à ne pas sauter. Les taxis n'acceptent pas la carte et le dirham ne s'achète pas hors du Maroc : le hall des arrivées est donc votre premier point de change. Les distributeurs y fonctionnent bien, mais délivrent volontiers des billets de 200 MAD. Retirez de quoi couvrir le trajet et les premiers jours, puis faites de la monnaie au café du terminal : des coupures de 50 et 100 MAD évitent la discussion sur la monnaie dans le taxi. Tous les conseils sont dans notre guide <a href="/blog/argent-maroc/">argent et change au Maroc</a>.</p>
@@ -100,7 +100,7 @@ export default {
     faqs: [
       { q: "Comment connaître l'heure d'arrivée d'un vol à Marrakech ?", a: "Le tableau des arrivées de cette page affiche en temps réel l'heure prévue, l'heure estimée et le statut de chaque vol à l'aéroport de Marrakech-Ménara. Les horaires sont en heure locale de Marrakech. Fiez-vous à l'heure estimée, recalculée pendant le vol." },
       { q: "Combien de temps faut-il pour sortir de l'aéroport de Marrakech après l'atterrissage ?", a: "Entre 30 et 60 minutes en pratique : la police des frontières prend 15 à 40 minutes selon l'affluence, la livraison des bagages 20 à 30 minutes sur les vols du soir. Les arrivées entre 20 h et minuit sont les plus chargées." },
-      { q: "Faut-il remplir une fiche d'entrée à Marrakech ?", a: "Oui, une fiche de police est demandée à l'arrivée. Elle est distribuée à bord sur la plupart des vols : remplissez-la pendant le vol, avec l'adresse de votre hébergement à Marrakech." },
+      { q: "Faut-il remplir une fiche de police à Marrakech ?", a: "Non. La fiche de police d'entrée et de sortie a été supprimée dans les aéroports marocains en septembre 2019. Seul le passeport est contrôlé et tamponné ; gardez l'adresse de votre hébergement à portée de main, l'agent peut la demander." },
       { q: "Y a-t-il des distributeurs dans le hall des arrivées ?", a: "Oui, plusieurs distributeurs et bureaux de change se trouvent dans le hall public, après la douane. Retirez avant de sortir : les taxis n'acceptent pas la carte et le dirham ne peut pas être acheté hors du Maroc." },
       { q: "Où attendre quelqu'un qui arrive à l'aéroport de Marrakech ?", a: "Dans le hall public des arrivées, face aux portes de sortie : seuls les passagers accèdent aux bagages. Arrivez 20 à 30 minutes après l'atterrissage affiché sur le tableau. En voiture, garez-vous au parking de l'aéroport plutôt qu'au dépose-minute." },
       { q: "Où retrouver le chauffeur de mon transfert à Marrakech-Ménara ?", a: "Devant le hall des arrivées : le chauffeur tient une pancarte à votre nom et le bon de confirmation précise le point de rendez-vous. Il suit votre numéro de vol et attend en cas de retard." },

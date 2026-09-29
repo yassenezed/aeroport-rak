@@ -29,16 +29,16 @@ export default {
 </tbody>
 </table>
 </div>
-<p>Rellene la ficha policial <strong>en el avión</strong>: se reparte a bordo en la mayoría de los vuelos, y salir de la cola a buscar un bolígrafo cuesta veinte minutos. Necesitará la dirección de su alojamiento.</p>
+<p>Desde septiembre de 2019 ya no hay <strong>ficha policial</strong> que rellenar: tenga listos el pasaporte y la dirección de su alojamiento. Necesitará la dirección de su alojamiento.</p>
 
 <h2>A la salida: el punto de congestión</h2>
-<p>Lo que ralentiza el RAK no es la facturación, sino el control de pasaportes de salida, sumado a un primer escaneo de equipajes en la entrada de la terminal. Dos horas de antelación bastan en temporada baja; apunte a <strong>tres horas</strong> en temporada alta, en vacaciones escolares o si factura equipaje. Los picos se sitúan entre las 6 h y las 9 h y a última hora de la tarde.</p>
+<p>Lo que ralentiza el RAK no es la facturación, sino el control de pasaportes de salida (el escáner de la entrada de la terminal se retiró en marzo de 2025). Dos horas de antelación bastan en temporada baja; apunte a <strong>tres horas</strong> en temporada alta, en vacaciones escolares o si factura equipaje. Los picos se sitúan entre las 6 h y las 9 h y a última hora de la tarde.</p>
 
 <h2>Formalidades de entrada en Marruecos</h2>
 <ul>
 <li><strong>Pasaporte</strong> con validez mínima de seis meses tras la fecha de entrada.</li>
 <li><strong>Sin visado</strong> para ciudadanos de la Unión Europea, Suiza, Reino Unido, Canadá y Estados Unidos, en estancias turísticas de hasta 90 días.</li>
-<li><strong>Ficha policial</strong> a la entrada y a la salida, con la dirección de estancia.</li>
+<li><strong>Sin ficha policial</strong> desde septiembre de 2019, ni a la entrada ni a la salida; tenga a mano la dirección de estancia.</li>
 <li><strong>Efectivo</strong>: declaración obligatoria por encima de 100.000 MAD. El dirham no se importa ni se exporta.</li>
 <li><strong>Drones</strong>: su importación está prohibida y se requisan sistemáticamente a la llegada.</li>
 </ul>
@@ -61,7 +61,7 @@ export default {
     },
     {
       q: '¿Hace falta visado para entrar en Marruecos por Marrakech?',
-      a: "No para ciudadanos de la Unión Europea, Suiza, Reino Unido, Canadá y Estados Unidos, en estancias turísticas de hasta 90 días. El pasaporte debe tener una validez mínima de seis meses tras la fecha de entrada, y hay que rellenar una ficha policial.",
+      a: "No para ciudadanos de la Unión Europea, Suiza, Reino Unido, Canadá y Estados Unidos, en estancias turísticas de hasta 90 días. El pasaporte debe ser válido durante toda la estancia (se recomiendan seis meses de validez restante); la ficha policial se suprimió en 2019.",
     },
     {
       q: '¿Se puede dormir en el aeropuerto de Marrakech?',

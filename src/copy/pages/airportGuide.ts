@@ -30,16 +30,16 @@ export default {
 </tbody>
 </table>
 </div>
-<p>Remplissez la fiche de police <strong>dans l'avion</strong> : elle est distribuée à bord sur la plupart des vols, et sortir de la file pour chercher un stylo coûte vingt minutes. Il vous faudra l'adresse de votre hébergement.</p>
+<p>Il n'y a plus de <strong>fiche de police</strong> à remplir depuis septembre 2019 : préparez simplement votre passeport et l'adresse de votre hébergement. Il vous faudra l'adresse de votre hébergement.</p>
 
 <h2>Au départ : le point de congestion</h2>
-<p>Ce n'est pas l'enregistrement qui ralentit le RAK, mais le contrôle des passeports au départ, doublé d'un premier passage des bagages à l'entrée du terminal. Deux heures d'avance suffisent en saison creuse ; visez <strong>trois heures</strong> en haute saison, aux vacances scolaires, ou si vous enregistrez des bagages en soute. Les pics se situent entre 6 h et 9 h, puis en fin d'après-midi.</p>
+<p>Ce n'est pas l'enregistrement qui ralentit le RAK, mais le contrôle des passeports au départ (le scanner à l'entrée du terminal a été supprimé en mars 2025). Deux heures d'avance suffisent en saison creuse ; visez <strong>trois heures</strong> en haute saison, aux vacances scolaires, ou si vous enregistrez des bagages en soute. Les pics se situent entre 6 h et 9 h, puis en fin d'après-midi.</p>
 
 <h2>Formalités d'entrée au Maroc</h2>
 <ul>
 <li><strong>Passeport</strong> valide au moins six mois après la date d'entrée.</li>
 <li><strong>Pas de visa</strong> pour les ressortissants de l'Union européenne, de Suisse, du Royaume-Uni, du Canada et des États-Unis, pour un séjour touristique jusqu'à 90 jours.</li>
-<li><strong>Fiche de police</strong> à l'entrée et à la sortie, avec l'adresse de séjour.</li>
+<li><strong>Plus de fiche de police</strong> depuis septembre 2019, à l'entrée comme à la sortie ; gardez l'adresse de séjour à portée de main.</li>
 <li><strong>Espèces</strong> : déclaration obligatoire au-delà de 100 000 MAD. Le dirham ne s'importe ni ne s'exporte.</li>
 <li><strong>Drones</strong> : leur importation est interdite et ils sont systématiquement saisis à l'arrivée.</li>
 </ul>
@@ -62,7 +62,7 @@ export default {
       },
       {
         q: 'Faut-il un visa pour entrer au Maroc par Marrakech ?',
-        a: "Non pour les ressortissants de l'Union européenne, de Suisse, du Royaume-Uni, du Canada et des États-Unis, pour un séjour touristique jusqu'à 90 jours. Le passeport doit être valide au moins six mois après la date d'entrée, et une fiche de police est à remplir.",
+        a: "Non pour les ressortissants de l'Union européenne, de Suisse, du Royaume-Uni, du Canada et des États-Unis, pour un séjour touristique jusqu'à 90 jours. Le passeport doit être valide pendant toute la durée du séjour (six mois de validité restante sont conseillés) ; la fiche de police a été supprimée en 2019.",
       },
       {
         q: 'Peut-on dormir à l\'aéroport de Marrakech ?',

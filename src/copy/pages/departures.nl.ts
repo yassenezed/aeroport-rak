@@ -16,9 +16,9 @@ export default {
     heading: "Vertrek vanaf luchthaven Marrakech-Menara: de 5 stappen",
     intro: "De route is dezelfde in terminal 1 en terminal 2. Reken in de spits op 1 tot 1,5 uur tussen de ingang van de terminal en de gate.",
     items: [
-      { icon: 'shield', title: "Controle bij de ingang", text: "Een eerste bagagescan meteen bij de ingang van de terminal, nog vóór de incheckbalies. In de spits staat de rij buiten." },
+      { icon: 'door', title: "Toegang tot de terminal", text: "Sinds maart 2025 staan er geen scanners meer bij de ingang van de terminal: u loopt meteen de incheckhal in. Houd paspoort en instapkaart bij de hand." },
       { icon: 'clipboard', title: "Inchecken op luchthaven Marrakech-Menara", text: "Balies openen meestal 3 uur voor internationale vluchten en sluiten 45 tot 60 minuten vooraf. Bagage geeft u af aan de balie, ook na online inchecken." },
-      { icon: 'passport', title: "Paspoortcontrole", text: "De langste stap. Paspoort en inreisstempel worden gecontroleerd; mogelijk wordt een vertrekformulier gevraagd, dat ter plaatse ligt." },
+      { icon: 'passport', title: "Paspoortcontrole", text: "De langste stap. Paspoort en inreisstempel worden gecontroleerd, zonder formulier." },
       { icon: 'shield-check', title: "Veiligheidscontrole", text: "Vloeistoffen tot 100 ml per verpakking in een doorzichtig zakje; laptop en tablet uit de tas." },
       { icon: 'plane-takeoff', title: "Gate", text: "Taxfreewinkels, cafés en lounges, daarna de gate. Het instappen begint ongeveer 45 minuten voor vertrek." },
     ],
@@ -48,7 +48,7 @@ export default {
 <p>Om een vlucht naar Marrakech te volgen, bekijkt u het <a href="/nl/arrivals/">aankomstenbord van luchthaven Marrakech</a>.</p>
 
 <h2>Hoe laat moet u op de luchthaven zijn voor een vlucht vanuit Marrakech?</h2>
-<p>De regel die werkt: <strong>2,5 tot 3 uur voor een vlucht naar Europa</strong>, 3 uur in het hoogseizoen of zodra u ruimbagage hebt. Niet het inchecken vertraagt, maar de twee veiligheidscontroles en vooral de paspoortcontrole, de flessenhals van de luchthaven.</p>
+<p>De regel die werkt: <strong>2,5 tot 3 uur voor een vlucht naar Europa</strong>, 3 uur in het hoogseizoen of zodra u ruimbagage hebt. Niet het inchecken vertraagt, maar de paspoort- en veiligheidscontrole, de flessenhals van de luchthaven.</p>
 <div class="table-wrap">
 <table class="data">
 <thead><tr><th>Soort vlucht</th><th>Aanbevolen aankomst</th><th>Waarom</th></tr></thead>
@@ -75,7 +75,7 @@ export default {
 <thead><tr><th>Optie</th><th>Prijs</th><th>Duur</th><th>Goed om te weten</th></tr></thead>
 <tbody>
 <tr class="row-highlight"><td><strong><a href="/nl/book-transfer/">Geboekte transfer</a></strong></td><td class="num">vanaf € 27 / voertuig</td><td class="num">15–30 min</td><td>Ophalen op het afgesproken uur, ook voor zonsopgang</td></tr>
-<tr><td><strong>Petit taxi</strong></td><td class="num">70–100 MAD (dag)</td><td class="num">15–30 min</td><td>'s Nachts duurder; spreek de prijs af voor u instapt</td></tr>
+<tr><td><strong>Petit taxi</strong></td><td class="num">70–150 MAD (dag)</td><td class="num">15–30 min</td><td>'s Nachts duurder; spreek de prijs af voor u instapt</td></tr>
 <tr><td><strong><a href="/nl/blog/bus-19-alsa-marrakech/">Bus 19 (ALSA)</a></strong></td><td class="num">30 MAD / persoon</td><td class="num">≈ 20 min</td><td>Vanaf Jemaa el-Fna en Gueliz, niet vroeg in de ochtend</td></tr>
 <tr><td><strong>Huurauto</strong></td><td class="num">—</td><td class="num">15–30 min</td><td>Reken 30 minuten extra voor het inleveren</td></tr>
 </tbody>
@@ -84,7 +84,7 @@ export default {
 <p>Voor een vlucht vóór 9 uur boekt u uw rit <strong>de dag ervoor</strong>, via de riad of als <a href="/nl/book-transfer/">transfer</a>: om 5 uur 's ochtends een taxi vinden in een steegje is allesbehalve vanzelfsprekend, en tot zonsopgang geldt het nachttarief. De tarieven staan op de pagina <a href="/nl/transfers/">transfers en taxi's van de luchthaven</a> en in onze <a href="/nl/blog/taxi-tips-marrakech/">taxitips voor Marrakech</a>.</p>
 
 <h2>Iemand afzetten of parkeren</h2>
-<p>De kiss-and-ride-zone voor de terminal is alleen voor heel korte stops. Wilt u iemand tot aan de balie begeleiden, gebruik dan het <a href="/nl/parking/">parkeerterrein van de luchthaven</a>: ongeveer 20 MAD per uur, 70 tot 80 MAD per dag. In de spits komen alleen passagiers met een ticket door de controle bij de ingang, dus het afscheid gebeurt vaak voor de deuren.</p>
+<p>De kiss-and-ride-zone voor de terminal is alleen voor heel korte stops. Wilt u iemand tot aan de balie begeleiden, gebruik dan het <a href="/nl/parking/">parkeerterrein van de luchthaven</a>: ongeveer 20 MAD per uur, 70 tot 80 MAD per dag.</p>
 
 <h2>Dirhams, souvenirs en bagage: wat u moet weten</h2>
 <p>Dirhams mogen niet het land uit boven een symbolisch bedrag: wissel uw laatste biljetten <em>vóór</em> de paspoortcontrole bij de wisselkantoren in de openbare hal, en bewaar het bonnetje van uw eerste wisseltransactie. Voor souvenirs geldt: arganolie, specerijen en cosmetica in verpakkingen boven 100 ml gaan zonder uitzondering in de ruimbagage. Aardewerk reist slecht zonder goede verpakking; de meeste verkopers in de medina pakken het op verzoek vliegklaar in. Meer tips in onze gids over <a href="/nl/blog/money-in-morocco/">geld en wisselen in Marokko</a>.</p>
@@ -106,7 +106,7 @@ export default {
     { q: "Van welke terminal vertrekt mijn vlucht op Marrakech-Menara?", a: "De meeste internationale vluchten vertrekken vanaf terminal 1; terminal 2 verwerkt een deel van de binnenlandse en chartervluchten. De terminal staat op uw instapkaart en op het vertrekbord; beide terminals zijn te voet verbonden." },
     { q: "Mag ik dirhams mee het land uit nemen?", a: "Nee, de dirham mag niet worden uitgevoerd boven een symbolisch bedrag. Wissel uw biljetten bij de wisselkantoren in de openbare hal, vóór de paspoortcontrole, en bewaar het bonnetje van uw eerste wisseltransactie." },
     { q: "Mag arganolie in de handbagage?", a: "Alleen in verpakkingen van maximaal 100 ml in een doorzichtig plastic zakje. Grotere hoeveelheden, ook arganolie, vloeibare specerijen en cosmetica, gaan in de ruimbagage. Taxfree-aankopen na de controle vallen er niet onder." },
-    { q: "Wat kost een taxi van de medina naar luchthaven Marrakech?", a: "Reken overdag op 70 tot 100 MAD met een petit taxi, 's nachts meer; spreek de prijs af voor u instapt. Voor een vroeg vertrek boekt u de dag ervoor een transfer of de chauffeur van uw riad." },
+    { q: "Wat kost een taxi van de medina naar luchthaven Marrakech?", a: "Reken overdag op 70 tot 150 MAD met een petit taxi, 's nachts meer; spreek de prijs af voor u instapt. Voor een vroeg vertrek boekt u de dag ervoor een transfer of de chauffeur van uw riad." },
     { q: "Is er btw-teruggave op luchthaven Marrakech?", a: "Ja, voor niet-ingezetenen, op aankopen bij erkende handelaars. Het formulier moet bij de douanebalie worden afgestempeld vóór u uw bagage incheckt, met de goederen bij de hand." },
     { q: "Mijn vlucht vanuit Marrakech is vertraagd: heb ik recht op compensatie?", a: "Ja als de maatschappij Europees is en de vertraging bij aankomst meer dan drie uur bedraagt: € 400 per passagier voor 1.500 tot 3.500 km, behalve bij buitengewone omstandigheden. Niet-Europese maatschappijen vanuit Marokko vallen niet onder verordening 261/2004." },
   ],

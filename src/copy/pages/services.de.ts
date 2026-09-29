@@ -27,7 +27,7 @@ export default {
 
 <h2>Eingeschränkte Mobilität, Familien, Formalitäten</h2>
 <p>Assistenz für Passagiere mit eingeschränkter Mobilität wird mindestens 48 Stunden vor dem Flug bei der Airline angemeldet: Sie löst den Service aus, nicht der Flughafen. Das Terminal verfügt über Wickelmöglichkeiten und Wasserstellen.</p>
-<p>Bei den Formalitäten ist bei Ein- und Ausreise ein Polizeiformular auszufüllen; es wird meist an Bord verteilt. Staatsangehörige der EU, der Schweiz, Großbritanniens, Kanadas und der USA benötigen für einen touristischen Aufenthalt von 90 Tagen kein Visum, bei einem mindestens sechs Monate gültigen Reisepass.</p>
+<p>Bei den Formalitäten gilt: Das Polizeiformular wurde im September 2019 abgeschafft; bei Ein- und Ausreise wird nur der Reisepass kontrolliert. Staatsangehörige der EU, der Schweiz, Großbritanniens, Kanadas und der USA benötigen für einen touristischen Aufenthalt von 90 Tagen kein Visum, bei einem mindestens sechs Monate gültigen Reisepass.</p>
 <div class="callout">
 <span class="callout-label">Die drei Dinge vor dem Verlassen der Halle</span>
 <p>Dirham abheben und in 50er- und 100er-Scheine wechseln. Verbindung aktivieren, eSIM oder lokale SIM. Und genau wissen, wohin Sie fahren: Name des Riads, Name des Medina-Tors oder bestätigter Treffpunkt mit Ihrem Fahrer.</p>

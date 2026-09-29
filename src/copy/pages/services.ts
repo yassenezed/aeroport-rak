@@ -28,7 +28,7 @@ export default {
 
 <h2>Passagers à mobilité réduite, familles, formalités</h2>
 <p>L'assistance aux passagers à mobilité réduite se demande à la compagnie aérienne au moins 48 heures avant le vol : c'est elle qui déclenche le service, pas l'aéroport. Le terminal dispose d'espaces pour changer un bébé et de points d'eau.</p>
-<p>Côté formalités, une fiche de police est à remplir à l'entrée comme à la sortie du territoire ; elle est en général distribuée à bord. Les ressortissants de l'Union européenne, de Suisse, du Canada et des États-Unis n'ont pas besoin de visa pour un séjour touristique de 90 jours, avec un passeport valide au moins six mois.</p>
+<p>Côté formalités, la fiche de police a été supprimée en septembre 2019 : seul le passeport est contrôlé, à l'entrée comme à la sortie. Les ressortissants de l'Union européenne, de Suisse, du Canada et des États-Unis n'ont pas besoin de visa pour un séjour touristique de 90 jours, avec un passeport valide au moins six mois.</p>
 <div class="callout">
 <span class="callout-label">Les trois choses à faire avant de sortir du hall</span>
 <p>Retirer des dirhams et fractionner en coupures de 50 et 100. Activer votre connexion, eSIM ou SIM locale. Et savoir précisément où vous allez : nom du riad, nom de la porte de médina, ou confirmation du point de rendez-vous avec votre chauffeur.</p>

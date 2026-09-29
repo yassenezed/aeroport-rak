@@ -16,9 +16,9 @@ export default {
     heading: "Salida del aeropuerto de Marrakech-Menara: los 5 pasos",
     intro: "El recorrido es el mismo en la terminal 1 y en la terminal 2. Cuente de 1 h a 1 h 30 entre la entrada de la terminal y la puerta de embarque en horas punta.",
     items: [
-      { icon: 'shield', title: "Control en la entrada", text: "Un primer escáner de equipaje en la misma entrada de la terminal, antes de los mostradores. En horas punta la cola se forma fuera." },
+      { icon: 'door', title: "Acceso a la terminal", text: "Desde marzo de 2025 ya no hay escáner en la entrada de la terminal: se accede directamente al vestíbulo de facturación. Tenga a mano el pasaporte y la tarjeta de embarque." },
       { icon: 'clipboard', title: "Facturación en el aeropuerto de Marrakech-Menara", text: "Mostradores abiertos normalmente 3 h antes de los vuelos internacionales y cerrados 45 a 60 min antes. Las maletas se dejan en el mostrador, aunque haya facturado en línea." },
-      { icon: 'passport', title: "Control de pasaportes", text: "La etapa más larga. Se revisan el pasaporte y el sello de entrada; pueden pedirle una tarjeta de salida, disponible allí mismo." },
+      { icon: 'passport', title: "Control de pasaportes", text: "La etapa más larga. Se revisan el pasaporte y el sello de entrada, sin formulario que rellenar." },
       { icon: 'shield-check', title: "Seguridad", text: "Líquidos limitados a 100 ml por envase en una bolsa transparente; portátil y tableta fuera de la mochila." },
       { icon: 'plane-takeoff', title: "Puerta de embarque", text: "Tiendas libres de impuestos, cafeterías y salas VIP, y después la puerta. El embarque empieza unos 45 min antes del despegue." },
     ],
@@ -48,7 +48,7 @@ export default {
 <p>Para seguir un vuelo que llega a Marrakech, consulte el panel de <a href="/es/arrivals/">llegadas del aeropuerto de Marrakech</a>.</p>
 
 <h2>¿A qué hora llegar al aeropuerto para un vuelo desde Marrakech?</h2>
-<p>La regla que funciona: <strong>de 2 h 30 a 3 horas antes de un vuelo a Europa</strong>, 3 horas en temporada alta o si lleva equipaje en bodega. Lo que retrasa no es la facturación, sino los dos controles de seguridad y, sobre todo, el control de pasaportes, el cuello de botella del aeropuerto.</p>
+<p>La regla que funciona: <strong>de 2 h 30 a 3 horas antes de un vuelo a Europa</strong>, 3 horas en temporada alta o si lleva equipaje en bodega. Lo que retrasa no es la facturación, sino el control de pasaportes y el de seguridad, el cuello de botella del aeropuerto.</p>
 <div class="table-wrap">
 <table class="data">
 <thead><tr><th>Tipo de vuelo</th><th>Llegada recomendada</th><th>Por qué</th></tr></thead>
@@ -75,7 +75,7 @@ export default {
 <thead><tr><th>Opción</th><th>Precio</th><th>Duración</th><th>Conviene saber</th></tr></thead>
 <tbody>
 <tr class="row-highlight"><td><strong><a href="/es/book-transfer/">Traslado reservado</a></strong></td><td class="num">desde 27 € / vehículo</td><td class="num">15–30 min</td><td>Recogida a la hora acordada, incluso antes del amanecer</td></tr>
-<tr><td><strong>Petit taxi</strong></td><td class="num">70–100 MAD (día)</td><td class="num">15–30 min</td><td>Más caro de noche; fije el precio antes de subir</td></tr>
+<tr><td><strong>Petit taxi</strong></td><td class="num">70–150 MAD (día)</td><td class="num">15–30 min</td><td>Más caro de noche; fije el precio antes de subir</td></tr>
 <tr><td><strong><a href="/es/blog/bus-19-alsa-marrakech/">Autobús 19 (ALSA)</a></strong></td><td class="num">30 MAD / persona</td><td class="num">≈ 20 min</td><td>Desde Jemaa el-Fna y Gueliz, sin servicio de madrugada</td></tr>
 <tr><td><strong>Coche de alquiler</strong></td><td class="num">—</td><td class="num">15–30 min</td><td>Cuente 30 min más para la devolución</td></tr>
 </tbody>
@@ -84,7 +84,7 @@ export default {
 <p>Para un vuelo antes de las 9 h, reserve su trayecto <strong>la víspera</strong>, con el riad o como <a href="/es/book-transfer/">traslado</a>: encontrar un taxi a las 5 de la mañana en un callejón no es nada evidente, y la tarifa nocturna se aplica hasta el amanecer. Los detalles de tarifas están en la página de <a href="/es/transfers/">traslados y taxis del aeropuerto</a> y en nuestros <a href="/es/blog/taxi-tips-marrakech/">consejos sobre taxis en Marrakech</a>.</p>
 
 <h2>Dejar a un pasajero o aparcar</h2>
-<p>La zona de parada breve delante de la terminal es solo para paradas muy cortas. Para acompañar a alguien hasta el mostrador, use el <a href="/es/parking/">parking del aeropuerto</a>: unos 20 MAD la hora, de 70 a 80 MAD el día. En horas punta solo los pasajeros con billete pasan el control de entrada de la terminal, así que las despedidas suelen hacerse delante de las puertas.</p>
+<p>La zona de parada breve delante de la terminal es solo para paradas muy cortas. Para acompañar a alguien hasta el mostrador, use el <a href="/es/parking/">parking del aeropuerto</a>: unos 20 MAD la hora, de 70 a 80 MAD el día.</p>
 
 <h2>Dírhams, recuerdos y equipaje: lo que hay que saber</h2>
 <p>Los dírhams no pueden sacarse del país más allá de una cantidad simbólica: cambie sus últimos billetes <em>antes</em> del control de pasaportes, en las casas de cambio del vestíbulo público, y guarde el recibo de su cambio inicial. En cuanto a los recuerdos, el aceite de argán, las especias y los cosméticos en envases de más de 100 ml van en bodega, sin excepción. La cerámica viaja mal sin un buen embalaje; la mayoría de los vendedores de la medina saben preparar un paquete para el avión. Más consejos en nuestra guía de <a href="/es/blog/money-in-morocco/">dinero y cambio en Marruecos</a>.</p>
@@ -97,7 +97,7 @@ export default {
 <p>Tras la seguridad, la zona de embarque ofrece tiendas libres de impuestos, cafeterías y restaurantes, además de wifi gratuito, a veces saturado en horas punta. Se llena a las mismas horas que las colas: si sale a última hora del día o tiene una conexión larga, el acceso a una de las <a href="/es/blog/marrakech-airport-vip-lounges/">salas VIP del aeropuerto de Marrakech</a> cambia la espera.</p>
 
 <h2>Vuelo retrasado o cancelado con salida de Marrakech</h2>
-<p>Para los vuelos que salen de Marruecos, el Reglamento europeo 261/2004 se aplica si la compañía es europea (Ryanair, Vueling, Iberia Express, easyJet, Transavia…): con más de tres horas de retraso a la llegada, la compensación alcanza <strong>400 € por pasajero</strong> para un trayecto de 1 500 a 3 500 km, como Marrakech–Madrid. Las compañías no europeas con salida de Marrakech no están sujetas a él. Compruebe su caso en nuestra página de <a href="/es/flight-compensation/">compensación por vuelos</a>. El aeropuerto lo gestiona la <a href="https://www.onda.ma/" target="_blank" rel="noopener">Office National des Aéroports (ONDA)</a>.</p>
+<p>Para los vuelos que salen de Marruecos, el Reglamento europeo 261/2004 se aplica si la compañía es europea (Ryanair, Vueling, Iberia Express, easyJet, Transavia…): con más de tres horas de retraso a la llegada, la compensación es de <strong>250 € por pasajero</strong> en trayectos de menos de 1 500 km, como Marrakech–Madrid, y de <strong>400 €</strong> entre 1 500 y 3 500 km, como Marrakech–París. Las compañías no europeas con salida de Marrakech no están sujetas a él. Compruebe su caso en nuestra página de <a href="/es/flight-compensation/">compensación por vuelos</a>. El aeropuerto lo gestiona la <a href="https://www.onda.ma/" target="_blank" rel="noopener">Office National des Aéroports (ONDA)</a>.</p>
 `,
   faqHeading: "Salidas del aeropuerto de Marrakech: preguntas frecuentes",
   faqs: [
@@ -106,9 +106,9 @@ export default {
     { q: "¿De qué terminal sale mi vuelo en Marrakech-Menara?", a: "La mayoría de los vuelos internacionales salen de la terminal 1; la terminal 2 recibe parte de los vuelos nacionales y chárter. La terminal figura en su tarjeta de embarque y en el panel de salidas; ambas terminales están comunicadas a pie." },
     { q: "¿Se pueden sacar dírhams de Marruecos?", a: "No, el dírham no se puede exportar más allá de una cantidad simbólica. Cambie sus billetes en las casas de cambio del vestíbulo público, antes del control de pasaportes, y guarde el recibo de su cambio inicial." },
     { q: "¿Se puede llevar aceite de argán en el equipaje de mano?", a: "Solo en envases de 100 ml o menos, dentro de una bolsa de plástico transparente. Por encima, el aceite de argán, las especias líquidas y los cosméticos van en bodega. Las compras hechas en la zona libre de impuestos tras la seguridad no están afectadas." },
-    { q: "¿Cuánto cuesta un taxi de la medina al aeropuerto de Marrakech?", a: "Cuente de 70 a 100 MAD de día en petit taxi, más de noche; fije el precio antes de subir. Para una salida de madrugada, reserve la víspera un traslado o el conductor de su riad." },
+    { q: "¿Cuánto cuesta un taxi de la medina al aeropuerto de Marrakech?", a: "Cuente de 70 a 150 MAD de día en petit taxi, más de noche; fije el precio antes de subir. Para una salida de madrugada, reserve la víspera un traslado o el conductor de su riad." },
     { q: "¿Hay devolución del IVA en el aeropuerto de Marrakech?", a: "Sí, para no residentes, en compras realizadas en comercios autorizados. El formulario debe sellarse en el mostrador de aduanas antes de facturar el equipaje, con la mercancía disponible." },
-    { q: "Mi vuelo desde Marrakech se retrasa: ¿tengo derecho a compensación?", a: "Sí si la compañía es europea y el retraso a la llegada supera las tres horas: 400 € por pasajero para un trayecto de 1 500 a 3 500 km, salvo circunstancias extraordinarias. Las compañías no europeas con salida de Marruecos no están sujetas al Reglamento 261/2004." },
+    { q: "Mi vuelo desde Marrakech se retrasa: ¿tengo derecho a compensación?", a: "Sí si la compañía es europea y el retraso a la llegada supera las tres horas: 250 € por pasajero en trayectos de menos de 1 500 km, como a Madrid, y 400 € entre 1 500 y 3 500 km, salvo circunstancias extraordinarias. Las compañías no europeas con salida de Marruecos no están sujetas al Reglamento 261/2004." },
   ],
   cta: {
     heading: "Su trayecto al aeropuerto, resuelto la víspera",

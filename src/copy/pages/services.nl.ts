@@ -27,7 +27,7 @@ export default {
 
 <h2>Beperkte mobiliteit, gezinnen, formaliteiten</h2>
 <p>Assistentie voor passagiers met beperkte mobiliteit vraagt u minstens 48 uur vóór de vlucht aan bij uw maatschappij: die zet de dienst in gang, niet de luchthaven. De terminal heeft verschoonruimtes en waterpunten.</p>
-<p>Voor de formaliteiten vult u bij in- en uitreis een politieformulier in; dat wordt meestal aan boord uitgedeeld. Burgers van de EU, Zwitserland, het Verenigd Koninkrijk, Canada en de VS hebben geen visum nodig voor een toeristisch verblijf van 90 dagen, met een paspoort dat nog minstens zes maanden geldig is.</p>
+<p>Wat de formaliteiten betreft: het politieformulier is in september 2019 afgeschaft; bij in- en uitreis wordt alleen uw paspoort gecontroleerd. Burgers van de EU, Zwitserland, het Verenigd Koninkrijk, Canada en de VS hebben geen visum nodig voor een toeristisch verblijf van 90 dagen, met een paspoort dat nog minstens zes maanden geldig is.</p>
 <div class="callout">
 <span class="callout-label">De drie dingen vóór u de hal verlaat</span>
 <p>Dirham opnemen en wisselen naar biljetten van 50 en 100. Uw verbinding activeren, eSIM of lokale sim. En precies weten waar u heen gaat: naam van de riad, naam van de medinapoort of een bevestigd ontmoetingspunt met uw chauffeur.</p>

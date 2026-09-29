@@ -29,16 +29,16 @@ export default {
 </tbody>
 </table>
 </div>
-<p>Füllen Sie das Polizeiformular <strong>im Flugzeug</strong> aus: Es wird auf den meisten Flügen an Bord verteilt, und die Schlange für die Stiftsuche zu verlassen, kostet zwanzig Minuten. Sie benötigen die Adresse Ihrer Unterkunft.</p>
+<p>Seit September 2019 gibt es kein <strong>Polizeiformular</strong> mehr: Halten Sie einfach Reisepass und Unterkunftsadresse bereit. Sie benötigen die Adresse Ihrer Unterkunft.</p>
 
 <h2>Beim Abflug: der Engpass</h2>
-<p>Nicht der Check-in bremst den RAK, sondern die Passkontrolle bei der Ausreise, zusätzlich zu einer ersten Gepäckdurchleuchtung am Terminaleingang. Zwei Stunden Vorlauf genügen in der Nebensaison; planen Sie <strong>drei Stunden</strong> in der Hochsaison, in den Schulferien oder wenn Sie Gepäck aufgeben. Die Spitzen liegen zwischen 6 und 9 Uhr und am späten Nachmittag.</p>
+<p>Nicht der Check-in bremst den RAK, sondern die Passkontrolle bei der Ausreise (die Scanner am Terminaleingang wurden im März 2025 entfernt). Zwei Stunden Vorlauf genügen in der Nebensaison; planen Sie <strong>drei Stunden</strong> in der Hochsaison, in den Schulferien oder wenn Sie Gepäck aufgeben. Die Spitzen liegen zwischen 6 und 9 Uhr und am späten Nachmittag.</p>
 
 <h2>Einreiseformalitäten für Marokko</h2>
 <ul>
 <li><strong>Reisepass</strong>, mindestens sechs Monate über das Einreisedatum hinaus gültig.</li>
 <li><strong>Kein Visum</strong> für Staatsangehörige der EU, der Schweiz, Großbritanniens, Kanadas und der USA bei touristischen Aufenthalten bis 90 Tage.</li>
-<li><strong>Polizeiformular</strong> bei Ein- und Ausreise, mit der Adresse des Aufenthalts.</li>
+<li><strong>Kein Polizeiformular</strong> mehr seit September 2019, weder bei Ein- noch bei Ausreise; Unterkunftsadresse bereithalten.</li>
 <li><strong>Bargeld</strong>: Anmeldepflicht ab 100.000 MAD. Dirham darf weder ein- noch ausgeführt werden.</li>
 <li><strong>Drohnen</strong>: Die Einfuhr ist verboten, und die Geräte werden bei der Ankunft regelmäßig beschlagnahmt.</li>
 </ul>
@@ -61,7 +61,7 @@ export default {
     },
     {
       q: 'Braucht man ein Visum für die Einreise über Marrakesch?',
-      a: "Nicht für Staatsangehörige der EU, der Schweiz, Großbritanniens, Kanadas und der USA bei touristischen Aufenthalten bis 90 Tage. Der Reisepass muss mindestens sechs Monate über das Einreisedatum hinaus gültig sein, und ein Polizeiformular ist auszufüllen.",
+      a: "Nicht für Staatsangehörige der EU, der Schweiz, Großbritanniens, Kanadas und der USA bei touristischen Aufenthalten bis 90 Tage. Der Reisepass muss für den gesamten Aufenthalt gültig sein (sechs Monate Restgültigkeit werden empfohlen); das Polizeiformular wurde 2019 abgeschafft.",
     },
     {
       q: 'Kann man am Flughafen Marrakesch schlafen?',

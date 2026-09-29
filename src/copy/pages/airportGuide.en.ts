@@ -29,16 +29,16 @@ export default {
 </tbody>
 </table>
 </div>
-<p>Fill in the police form <strong>on the plane</strong>: it is handed out on board on most flights, and leaving the queue to find a pen costs twenty minutes. You will need your accommodation address.</p>
+<p>There has been no <strong>police form</strong> to fill in since September 2019: just have your passport and accommodation address ready. You will need your accommodation address.</p>
 
 <h2>On departure: the bottleneck</h2>
-<p>It is not check-in that slows RAK down, but exit passport control, on top of a first bag screening at the terminal door. Two hours is enough off-season; aim for <strong>three hours</strong> in high season, during school holidays, or if you are checking bags. Peaks run 6 to 9 am, then late afternoon.</p>
+<p>It is not check-in that slows RAK down, but exit passport control (the scanners at the terminal entrance were removed in March 2025). Two hours is enough off-season; aim for <strong>three hours</strong> in high season, during school holidays, or if you are checking bags. Peaks run 6 to 9 am, then late afternoon.</p>
 
 <h2>Entry formalities for Morocco</h2>
 <ul>
 <li><strong>Passport</strong> valid for at least six months beyond your entry date.</li>
 <li><strong>No visa</strong> for citizens of the EU, the UK, Switzerland, Canada and the United States, for tourist stays up to 90 days.</li>
-<li><strong>Police form</strong> on entry and exit, with your address of stay.</li>
+<li><strong>No police form</strong> since September 2019, on entry or exit; keep your accommodation address handy.</li>
 <li><strong>Cash</strong>: declaration required above MAD 100,000. Dirhams can be neither imported nor exported.</li>
 <li><strong>Drones</strong>: importing them is banned and they are routinely seized on arrival.</li>
 </ul>
@@ -61,7 +61,7 @@ export default {
     },
     {
       q: 'Do you need a visa to enter Morocco via Marrakech?',
-      a: "Not for citizens of the EU, the UK, Switzerland, Canada and the United States, for tourist stays up to 90 days. Your passport must be valid for at least six months beyond entry, and a police form must be completed.",
+      a: "Not for citizens of the EU, the UK, Switzerland, Canada and the United States, for tourist stays up to 90 days. Your passport must be valid for the whole stay (six months' remaining validity is recommended); the police form was abolished in 2019.",
     },
     {
       q: 'Can you sleep at Marrakech Airport?',

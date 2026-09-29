@@ -16,7 +16,7 @@ export default {
     heading: "Ankunft am Flughafen Marrakesch-Menara: die 4 Schritte",
     intro: "Der Weg ist in Terminal 1 und Terminal 2 derselbe. Was sich ändert, ist der Andrang: Ein Flug, der um 22 Uhr landet, ist etwas ganz anderes als einer um 14 Uhr.",
     items: [
-      { icon: 'passport', title: 'Passkontrolle in Marrakesch-Menara', text: "Reisepass und Einreisekarte, die an Bord verteilt wird. Kein Visum für Touristen aus der EU, der Schweiz, Großbritannien, den USA und Kanada (90 Tage). 15 bis 40 Minuten je nach Uhrzeit." },
+      { icon: 'passport', title: 'Passkontrolle in Marrakesch-Menara', text: "Reisepass wird geprüft und gestempelt; seit 2019 kein Formular mehr. Kein Visum für Touristen aus der EU, der Schweiz, Großbritannien, den USA und Kanada (90 Tage). 15 bis 40 Minuten je nach Uhrzeit." },
       { icon: 'luggage', title: 'Gepäckausgabe', text: "Die Bänder liegen direkt nach der Kontrolle. Die Bandnummer steht auf den Bildschirmen; rechnen Sie bei Abendflügen mit 20 bis 30 Minuten." },
       { icon: 'shield-check', title: 'Zoll', text: "Meist zügig, mit Stichproben. Bargeld muss erst ab 100.000 MAD angemeldet werden. Drohnen und Funkgeräte werden einbehalten." },
       { icon: 'door', title: 'Ankunftshalle des Flughafens', text: "Geldautomaten, Wechselstuben, SIM-Karten und Mietwagenschalter, dann der Ausgang zum Taxistand, zu den Fahrern und Parkplätzen." },
@@ -59,8 +59,8 @@ export default {
 </ul>
 <p>Einen Flug nach Marrakesch ab Ihrer Stadt finden Sie mit unserem <a href="/de/flights/">Flugvergleich</a>.</p>
 
-<h2>Einreise: Reisepass, Visum und Einreisekarte</h2>
-<p>Staatsangehörige der EU, der Schweiz, Großbritanniens, der USA und Kanadas reisen <strong>für touristische Aufenthalte bis zu 90 Tagen ohne Visum</strong> nach Marokko ein, mit einem Reisepass, der für den gesamten Aufenthalt gültig ist. Ein Personalausweis reicht nicht. Die Einreisekarte wird an Bord verteilt: Füllen Sie sie während des Fluges mit der Adresse Ihrer Unterkunft aus, damit Sie nicht in letzter Minute die Schlange verlassen müssen. Kinder, die mit nur einem Elternteil reisen, sollten eine Einverständniserklärung des anderen Elternteils dabeihaben.</p>
+<h2>Einreise: Reisepass und Visum</h2>
+<p>Staatsangehörige der EU, der Schweiz, Großbritanniens, der USA und Kanadas reisen <strong>für touristische Aufenthalte bis zu 90 Tagen ohne Visum</strong> nach Marokko ein, mit einem Reisepass, der für den gesamten Aufenthalt gültig ist. Ein Personalausweis reicht nicht. Die Einreisekarte wurde im September 2019 abgeschafft: Sie zeigen nur Ihren Reisepass vor, der gestempelt wird. Halten Sie die Adresse Ihrer Unterkunft bereit, der Beamte kann danach fragen. Kinder, die mit nur einem Elternteil reisen, sollten eine Einverständniserklärung des anderen Elternteils dabeihaben.</p>
 
 <h2>Geld abheben am Flughafen Marrakesch</h2>
 <p>Diesen Schritt sollten Sie nicht auslassen. Taxis nehmen keine Karten, und Dirham gibt es außerhalb Marokkos nicht zu kaufen: Die Ankunftshalle ist Ihre erste Wechselstelle. Die Automaten funktionieren gut, geben aber gern 200-MAD-Scheine aus. Heben Sie genug für die Fahrt und die ersten Tage ab und wechseln Sie einen Schein im Terminal-Café: Mit 50- und 100-MAD-Scheinen vermeiden Sie Diskussionen über Wechselgeld im Taxi. Alle Tipps finden Sie in unserem Ratgeber <a href="/de/blog/money-in-morocco/">Geld und Umtausch in Marokko</a>.</p>
@@ -98,7 +98,7 @@ export default {
   faqs: [
     { q: "Wie erfahre ich die Ankunftszeit eines Fluges in Marrakesch?", a: "Die Ankunftstafel auf dieser Seite zeigt in Echtzeit die geplante Zeit, die erwartete Zeit und den Status jedes Fluges am Flughafen Marrakesch-Menara. Die Zeiten sind in Ortszeit Marrakesch angegeben. Verlassen Sie sich auf die erwartete Zeit, die während des Fluges neu berechnet wird." },
     { q: "Wie lange dauert es nach der Landung, bis man den Flughafen Marrakesch verlässt?", a: "In der Praxis 30 bis 60 Minuten: Die Passkontrolle dauert je nach Andrang 15 bis 40 Minuten, das Gepäck bei Abendflügen 20 bis 30 Minuten. Ankünfte zwischen 20 Uhr und Mitternacht sind am vollsten." },
-    { q: "Muss man in Marrakesch eine Einreisekarte ausfüllen?", a: "Ja, bei der Ankunft wird eine Polizei-Einreisekarte verlangt. Sie wird auf den meisten Flügen an Bord verteilt: Füllen Sie sie während des Fluges mit der Adresse Ihrer Unterkunft in Marrakesch aus." },
+    { q: "Muss man in Marrakesch eine Einreisekarte ausfüllen?", a: "Nein. Die Ein- und Ausreisekarte wurde an marokkanischen Flughäfen im September 2019 abgeschafft. Kontrolliert und gestempelt wird nur der Reisepass; halten Sie die Adresse Ihrer Unterkunft bereit, falls der Beamte danach fragt." },
     { q: "Gibt es Geldautomaten in der Ankunftshalle?", a: "Ja, in der öffentlichen Halle hinter dem Zoll gibt es mehrere Geldautomaten und Wechselstuben. Heben Sie vor dem Hinausgehen ab: Taxis nehmen keine Karten, und Dirham kann man außerhalb Marokkos nicht kaufen." },
     { q: "Wo wartet man auf jemanden, der am Flughafen Marrakesch ankommt?", a: "In der öffentlichen Ankunftshalle gegenüber den Ausgangstüren: Nur Passagiere haben Zugang zum Gepäckbereich. Kommen Sie 20 bis 30 Minuten nach der auf der Tafel angezeigten Landung. Mit dem Auto nutzen Sie besser den Flughafenparkplatz als die Kurzhaltezone." },
     { q: "Wo treffe ich den Fahrer meines Transfers am Flughafen Marrakesch-Menara?", a: "Vor der Ankunftshalle: Der Fahrer hält ein Schild mit Ihrem Namen, und die Buchungsbestätigung nennt den genauen Treffpunkt. Er verfolgt Ihre Flugnummer und wartet bei Verspätung." },

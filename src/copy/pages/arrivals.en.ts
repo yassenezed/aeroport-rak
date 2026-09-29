@@ -16,7 +16,7 @@ export default {
     heading: "Arriving at Marrakech Menara Airport: the 4 steps",
     intro: "The route is the same at Terminal 1 and Terminal 2. What changes is the crowd: a flight landing at 10 pm is nothing like one at 2 pm.",
     items: [
-      { icon: 'passport', title: 'Passport control at Marrakech Menara', text: "Passport and entry card, handed out on board. No visa for tourists from the EU, UK, US, Canada or Switzerland (90 days). 15 to 40 minutes depending on the hour." },
+      { icon: 'passport', title: 'Passport control at Marrakech Menara', text: "Passport checked and stamped; no form to fill in since 2019. No visa for tourists from the EU, UK, US, Canada or Switzerland (90 days). 15 to 40 minutes depending on the hour." },
       { icon: 'luggage', title: 'Baggage reclaim', text: "The belts are just after passport control. The belt number shows on the screens; allow 20 to 30 minutes on evening flights." },
       { icon: 'shield-check', title: 'Customs', text: "Usually smooth, with random checks. Cash only needs declaring above MAD 100,000. Drones and walkie-talkies are held." },
       { icon: 'door', title: 'Airport arrivals hall', text: "ATMs, exchange desks, SIM cards and car hire counters, then the exit to the taxi rank, drivers and car parks." },
@@ -59,8 +59,8 @@ export default {
 </ul>
 <p>To find a flight to Marrakech from your city, use our <a href="/en/flights/">flight comparison</a>.</p>
 
-<h2>Entry formalities: passport, visa and entry card</h2>
-<p>Citizens of the EU, the UK, the US, Canada and Switzerland enter Morocco <strong>without a visa for a tourist stay of up to 90 days</strong>, with a passport valid for the whole stay. The entry card is handed out on board: fill it in during the flight, with the address of your accommodation, so you do not have to leave the queue at the last minute. Children travelling with only one parent should carry consent from the other parent.</p>
+<h2>Entry formalities: passport and visa</h2>
+<p>Citizens of the EU, the UK, the US, Canada and Switzerland enter Morocco <strong>without a visa for a tourist stay of up to 90 days</strong>, with a passport valid for the whole stay. The paper police card was abolished in September 2019: you simply show your passport, which is stamped. Keep your accommodation address handy, as the officer may ask for it. Children travelling with only one parent should carry consent from the other parent.</p>
 
 <h2>Withdrawing cash at Marrakech airport</h2>
 <p>This is the step not to skip. Taxis do not take cards and dirhams cannot be bought outside Morocco, so the arrivals hall is your first exchange point. The ATMs work well but tend to dispense MAD 200 notes. Take out enough for the ride and the first few days, then break a note at the terminal café: MAD 50 and 100 notes avoid arguments about change in the taxi. All the tips are in our guide to <a href="/en/blog/money-in-morocco/">money and exchange in Morocco</a>.</p>
@@ -98,7 +98,7 @@ export default {
   faqs: [
     { q: "How can I check a flight's arrival time in Marrakech?", a: "The arrivals board on this page shows, in real time, the scheduled time, estimated time and status of every flight at Marrakech Menara Airport. Times are in Marrakech local time. Rely on the estimated time, recalculated during the flight." },
     { q: "How long does it take to get out of Marrakech airport after landing?", a: "In practice 30 to 60 minutes: passport control takes 15 to 40 minutes depending on crowds, and baggage 20 to 30 minutes on evening flights. Arrivals between 8 pm and midnight are the busiest." },
-    { q: "Do I need to fill in an entry card for Marrakech?", a: "Yes, a police entry card is required on arrival. It is handed out on board most flights: fill it in during the flight, with the address of your accommodation in Marrakech." },
+    { q: "Do I need to fill in a police card for Marrakech?", a: "No. The entry and exit police card was abolished at Moroccan airports in September 2019. Only your passport is checked and stamped; keep your accommodation address handy, as the officer may ask for it." },
     { q: "Are there ATMs in the arrivals hall?", a: "Yes, several ATMs and exchange desks are in the public hall, after customs. Withdraw before you leave: taxis do not accept cards and dirhams cannot be bought outside Morocco." },
     { q: "Where do I wait for someone arriving at Marrakech airport?", a: "In the public arrivals hall, facing the exit doors: only passengers can enter the baggage area. Arrive 20 to 30 minutes after the landing time shown on the board. By car, use the airport car park rather than the drop-off zone." },
     { q: "Where do I meet my transfer driver at Marrakech Menara?", a: "In front of the arrivals hall: the driver holds a sign with your name and the booking confirmation gives the exact meeting point. They track your flight number and wait if you are delayed." },

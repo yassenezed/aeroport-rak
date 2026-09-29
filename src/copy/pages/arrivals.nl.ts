@@ -16,7 +16,7 @@ export default {
     heading: "Aankomst op luchthaven Marrakech-Menara: de 4 stappen",
     intro: "De route is dezelfde in terminal 1 en terminal 2. Wat verandert, is de drukte: een vlucht die om 22 uur landt, is iets heel anders dan een vlucht van 14 uur.",
     items: [
-      { icon: 'passport', title: "Paspoortcontrole op Marrakech-Menara", text: "Paspoort en inreisformulier, dat aan boord wordt uitgedeeld. Geen visum voor toeristen uit de EU, Zwitserland, het VK, de VS en Canada (90 dagen). 15 tot 40 minuten, afhankelijk van het uur." },
+      { icon: 'passport', title: "Paspoortcontrole op Marrakech-Menara", text: "Paspoort wordt gecontroleerd en gestempeld; sinds 2019 geen formulier meer. Geen visum voor toeristen uit de EU, Zwitserland, het VK, de VS en Canada (90 dagen). 15 tot 40 minuten, afhankelijk van het uur." },
       { icon: 'luggage', title: "Bagageafhandeling", text: "De banden liggen direct na de controle. Het bandnummer staat op de schermen; reken op 20 tot 30 minuten bij avondvluchten." },
       { icon: 'shield-check', title: "Douane", text: "Meestal vlot, met steekproeven. Contant geld hoeft pas boven 100.000 MAD aangegeven te worden. Drones en portofoons worden ingehouden." },
       { icon: 'door', title: "Aankomsthal van de luchthaven", text: "Geldautomaten, wisselkantoren, simkaarten en autoverhuurbalies, daarna de uitgang naar de taxistandplaats, de chauffeurs en de parkeerterreinen." },
@@ -59,8 +59,8 @@ export default {
 </ul>
 <p>Een vlucht naar Marrakech vanuit uw stad vindt u met onze <a href="/nl/flights/">vluchtvergelijker</a>.</p>
 
-<h2>Inreisformaliteiten: paspoort, visum en inreisformulier</h2>
-<p>Burgers van de EU, Zwitserland, het VK, de VS en Canada reizen Marokko <strong>zonder visum in voor een toeristisch verblijf tot 90 dagen</strong>, met een paspoort dat geldig is voor de hele duur van het verblijf. Een identiteitskaart volstaat niet. Het inreisformulier wordt aan boord uitgedeeld: vul het tijdens de vlucht in met het adres van uw accommodatie, zodat u niet op het laatste moment uit de rij hoeft. Kinderen die met één ouder reizen, nemen best een toestemmingsverklaring van de andere ouder mee.</p>
+<h2>Inreisformaliteiten: paspoort en visum</h2>
+<p>Burgers van de EU, Zwitserland, het VK, de VS en Canada reizen Marokko <strong>zonder visum in voor een toeristisch verblijf tot 90 dagen</strong>, met een paspoort dat geldig is voor de hele duur van het verblijf. Een identiteitskaart volstaat niet. Het politieformulier is in september 2019 afgeschaft: u toont alleen uw paspoort, dat wordt gestempeld. Houd het adres van uw accommodatie bij de hand, de beambte kan ernaar vragen. Kinderen die met één ouder reizen, nemen best een toestemmingsverklaring van de andere ouder mee.</p>
 
 <h2>Geld opnemen op luchthaven Marrakech</h2>
 <p>Deze stap mag u niet overslaan. Taxi's accepteren geen kaart en dirhams zijn buiten Marokko niet te koop: de aankomsthal is dus uw eerste wisselpunt. De automaten werken goed, maar geven vaak biljetten van 200 MAD. Neem genoeg op voor de rit en de eerste dagen en wissel een biljet in het café van de terminal: met briefjes van 50 en 100 MAD voorkomt u gedoe over wisselgeld in de taxi. Alle tips staan in onze gids over <a href="/nl/blog/money-in-morocco/">geld en wisselen in Marokko</a>.</p>
@@ -98,7 +98,7 @@ export default {
   faqs: [
     { q: "Hoe weet ik de aankomsttijd van een vlucht in Marrakech?", a: "Het aankomstenbord op deze pagina toont in realtime de geplande tijd, de verwachte tijd en de status van elke vlucht op luchthaven Marrakech-Menara. De tijden staan in lokale tijd van Marrakech. Ga uit van de verwachte tijd, die tijdens de vlucht opnieuw wordt berekend." },
     { q: "Hoelang duurt het om na de landing luchthaven Marrakech te verlaten?", a: "In de praktijk 30 tot 60 minuten: de paspoortcontrole duurt 15 tot 40 minuten afhankelijk van de drukte, de bagage 20 tot 30 minuten bij avondvluchten. Aankomsten tussen 20 uur en middernacht zijn het drukst." },
-    { q: "Moet ik in Marrakech een inreisformulier invullen?", a: "Ja, bij aankomst wordt een politieformulier gevraagd. Het wordt op de meeste vluchten aan boord uitgedeeld: vul het tijdens de vlucht in met het adres van uw accommodatie in Marrakech." },
+    { q: "Moet ik in Marrakech een politieformulier invullen?", a: "Nee. Het politieformulier bij in- en uitreis is op de Marokkaanse luchthavens in september 2019 afgeschaft. Alleen uw paspoort wordt gecontroleerd en gestempeld; houd het adres van uw accommodatie bij de hand voor het geval de beambte ernaar vraagt." },
     { q: "Zijn er geldautomaten in de aankomsthal?", a: "Ja, in de openbare hal na de douane staan meerdere geldautomaten en wisselkantoren. Neem geld op voordat u naar buiten gaat: taxi's accepteren geen kaart en dirhams zijn buiten Marokko niet te koop." },
     { q: "Waar wacht ik op iemand die aankomt op luchthaven Marrakech?", a: "In de openbare aankomsthal, tegenover de uitgangsdeuren: alleen passagiers hebben toegang tot de bagagezone. Kom 20 tot 30 minuten na de landing die op het bord staat. Met de auto gebruikt u beter het parkeerterrein dan de kiss-and-ride-zone." },
     { q: "Waar vind ik de chauffeur van mijn transfer op Marrakech-Menara?", a: "Vóór de aankomsthal: de chauffeur houdt een bord met uw naam vast en de boekingsbevestiging vermeldt het exacte ontmoetingspunt. Hij volgt uw vluchtnummer en wacht bij vertraging." },

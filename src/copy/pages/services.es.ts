@@ -27,7 +27,7 @@ export default {
 
 <h2>Movilidad reducida, familias, formalidades</h2>
 <p>La asistencia a pasajeros con movilidad reducida se solicita a la aerolínea al menos 48 horas antes del vuelo: es ella quien activa el servicio, no el aeropuerto. La terminal dispone de espacios para cambiar a un bebé y de fuentes de agua.</p>
-<p>En cuanto a formalidades, hay que rellenar una ficha policial a la entrada y a la salida del país; suele repartirse a bordo. Los ciudadanos de la Unión Europea, Suiza, Reino Unido, Canadá y Estados Unidos no necesitan visado para una estancia turística de 90 días, con pasaporte válido al menos seis meses.</p>
+<p>En cuanto a formalidades, la ficha policial se suprimió en septiembre de 2019: solo se revisa el pasaporte, a la entrada y a la salida. Los ciudadanos de la Unión Europea, Suiza, Reino Unido, Canadá y Estados Unidos no necesitan visado para una estancia turística de 90 días, con pasaporte válido al menos seis meses.</p>
 <div class="callout">
 <span class="callout-label">Las tres cosas que hay que hacer antes de salir</span>
 <p>Retirar dirhams y fraccionarlos en billetes de 50 y 100. Activar su conexión, eSIM o SIM local. Y saber exactamente adónde va: nombre del riad, nombre de la puerta de la medina o confirmación del punto de encuentro con su conductor.</p>
