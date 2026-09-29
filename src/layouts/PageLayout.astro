@@ -5,6 +5,7 @@ import BaseLayout from './BaseLayout.astro';
 import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
 import FlightWidget from '../components/ui/FlightWidget.astro';
 import FlightSearchWidget from '../components/affiliate/FlightSearchWidget.astro';
+import EsimWidget from '../components/affiliate/EsimWidget.astro';
 import TransferWidget from '../components/affiliate/TransferWidget.astro';
 import Icon from '../components/ui/Icon.astro';
 import DestinationsExplorer from '../components/destinations/DestinationsExplorer.astro';
@@ -116,6 +117,7 @@ if (page.faqs?.length) {
         {page.widget === 'flights-departures' && <FlightWidget type="departures" lang={locale} />}
         {page.widget === 'flight-search' && <FlightSearchWidget locale={locale} />}
         {page.widget === 'transfer' && <TransferWidget locale={locale} />}
+        {page.widget === 'esim' && <EsimWidget locale={locale} />}
       </div>
     </section>
   )}
@@ -130,7 +132,7 @@ if (page.faqs?.length) {
           <h2>{sec.heading}</h2>
           {sec.intro && <p>{sec.intro}</p>}
         </header>
-        <ul class={`card-grid card-grid--${sec.variant}`}>
+        <ul class={`card-grid card-grid--${sec.variant}`} style={sec.variant === 'feature' && sec.items.length === 4 ? '--cols: 4' : undefined}>
           {sec.items.map((it) => (
             <li class={`feat-card feat-card--${sec.variant}`}>
               <span class="feat-card__icon"><Icon name={it.icon} size={sec.variant === 'feature' ? 24 : 20} /></span>

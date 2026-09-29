@@ -1,0 +1,12 @@
+---
+// Widget eSIM Airalo (Travelpayouts / tpemd). Identifiants dans src/data/affiliate.ts.
+import { esimWidgetSrc } from '../../data/affiliate';
+
+interface Props { locale?: string }
+const { locale = 'fr' } = Astro.props;
+const src = esimWidgetSrc(locale);
+---
+
+<div class="flight-search-widget esim-widget" id="offres">
+  <script async src={src} charset="utf-8" is:inline></script>
+</div>

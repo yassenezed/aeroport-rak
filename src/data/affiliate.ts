@@ -28,6 +28,12 @@ export const travelpayouts = {
     country: 'Morocco',
   },
 
+  /** Widget eSIM Airalo (promo 8588). */
+  esim: {
+    promoId: '8588',
+    campaignId: '541',
+  },
+
   /** Widget de recherche vols + hôtels (Aviasales, promo 7879). */
   flights: {
     promoId: '7879',
@@ -101,6 +107,32 @@ export function flightWidgetSrc(locale = 'fr'): string {
     plain: 'true',
     promo_id: t.flights.promoId,
     campaign_id: t.flights.campaignId,
+  });
+  return `https://tpemd.com/content?${p.toString()}`;
+}
+
+/** URL du widget eSIM Airalo. Langues du widget : anglais, russe, espagnol. */
+const ESIM_WIDGET_LOCALES = ['en', 'es'];
+
+export function esimWidgetSrc(locale = 'fr'): string {
+  const t = travelpayouts;
+  const p = new URLSearchParams({
+    trs: t.trs,
+    shmarker: t.marker,
+    locale: ESIM_WIDGET_LOCALES.includes(locale) ? locale : 'en',
+    powered_by: 'true',
+    // Charte AirportRAK : bleu Majorelle, indigo.
+    color_button: '#3F4BB8',
+    color_focused: '#3F4BB8',
+    secondary: '#FFFFFF',
+    dark: '#15172B',
+    light: '#FFFFFF',
+    special: '#DDE1EC',
+    border_radius: '8',
+    plain: 'true',
+    no_labels: 'true',
+    promo_id: t.esim.promoId,
+    campaign_id: t.esim.campaignId,
   });
   return `https://tpemd.com/content?${p.toString()}`;
 }

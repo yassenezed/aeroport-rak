@@ -973,7 +973,7 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
 
 /* ---------- Blocs de cartes (services, commodités) ---------- */
 .card-grid { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
-.card-grid--feature { grid-template-columns: repeat(3, 1fr); }
+.card-grid--feature { grid-template-columns: repeat(var(--cols, 3), 1fr); }
 .card-grid--compact { grid-template-columns: repeat(4, 1fr); gap: 14px; }
 .feat-card { display: flex; gap: 16px; background: var(--surface); border: 1px solid var(--line-2); border-radius: var(--r-xl); box-shadow: var(--shadow-sm); }
 .feat-card--feature { flex-direction: column; padding: 24px; }
@@ -997,3 +997,6 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
 @media (max-width: 1100px) { .card-grid--compact { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 1000px) { .card-grid--feature { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .card-grid--feature, .card-grid--compact { grid-template-columns: 1fr; } .spotlight { flex-direction: column; padding: 22px; } }
+
+/* ---------- Widget eSIM ---------- */
+.esim-widget { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); scroll-margin-top: 90px; }
