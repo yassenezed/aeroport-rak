@@ -77,5 +77,25 @@
     "snow": "Nieve",
     "showers": "Chubascos",
     "storm": "Tormenta"
+  },
+  "dest": {
+    "search": "Buscar una ciudad, un país o una compañía…",
+    "all": "Todas",
+    "europe": "Europa",
+    "morocco": "Marruecos",
+    "africa": "África",
+    "middleEast": "Oriente Medio",
+    "americas": "América",
+    "city": "Ciudad",
+    "country": "País",
+    "region": "Región",
+    "airlines": "Compañías",
+    "seasonal": "de temporada",
+    "opens": "desde el {date}",
+    "noResults": "Ningún destino coincide con su búsqueda.",
+    "destinations": "destinos",
+    "shown": "{n} destinos mostrados",
+    "flightsTo": "Vuelos a",
+    "shownOne": "{n} destino mostrado"
   }
 }

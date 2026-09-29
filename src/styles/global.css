@@ -938,3 +938,35 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
 .info-card__label { display: block; color: var(--ink-3); font-size: .95rem; margin-bottom: 4px; }
 .info-card__value { display: block; color: var(--ink); font-size: 1.3rem; font-weight: 700; line-height: 1.25; }
 @media (max-width: 860px) { .info-cards { grid-template-columns: 1fr; gap: 12px; } .info-card { padding: 18px 20px; } }
+
+/* ---------- Page Destinations ---------- */
+.airline-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.airline-card { display: flex; gap: 16px; align-items: flex-start; background: var(--surface); border: 1px solid var(--line-2); border-radius: var(--r-xl); padding: 20px; box-shadow: var(--shadow-sm); }
+.airline-card h3 { font-size: 1.05rem; margin: 2px 0 4px; }
+.airline-card__count { margin: 0; color: var(--ink-2); font-size: .92rem; }
+.airline-card__count strong { color: var(--ink); }
+.airline-card__sample { margin: 4px 0 0; color: var(--ink-3); font-size: .85rem; line-height: 1.4; }
+.dest-tools { display: grid; gap: 14px; margin-bottom: 18px; }
+.dest-search { display: flex; align-items: center; gap: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 0 14px; color: var(--ink-3); }
+.dest-search:focus-within { border-color: var(--blue); box-shadow: 0 0 0 3px var(--blue-soft); }
+.dest-search input { flex: 1; border: 0; background: transparent; font: inherit; color: var(--ink); padding: 14px 0; outline: none; min-width: 0; }
+.dest-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.dest-chip { font: inherit; font-size: .9rem; border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); border-radius: var(--r-pill); padding: 7px 14px; cursor: pointer; }
+.dest-chip span { color: var(--ink-3); margin-inline-start: 4px; }
+.dest-chip.is-active { background: var(--ink); border-color: var(--ink); color: #fff; }
+.dest-chip.is-active span { color: var(--saffron); }
+.dest-count { margin: 0; color: var(--ink-3); font-size: .9rem; }
+.dest-table td { vertical-align: top; }
+.dest-airports { display: block; color: var(--ink-3); font-size: .8rem; margin-top: 2px; }
+.dest-carriers { line-height: 1.7; }
+.dest-carrier { display: inline-block; margin-inline-end: 10px; white-space: nowrap; }
+.dest-tag { font-style: normal; font-size: .72rem; background: var(--saffron-soft); color: var(--saffron-dark); border-radius: var(--r-pill); padding: 1px 7px; margin-inline-start: 4px; }
+.dest-tag--new { background: var(--blue-soft); color: var(--blue-dark); }
+.dest-empty td { text-align: center; color: var(--ink-3); padding: 24px; }
+.region-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.region-card { background: var(--surface); border: 1px solid var(--line-2); border-radius: var(--r-xl); padding: 20px 22px; }
+.region-card h3 { display: flex; align-items: center; justify-content: space-between; font-size: 1.1rem; margin: 0 0 10px; }
+.region-card__count { font-family: var(--font-body); font-size: .85rem; background: var(--ink); color: var(--saffron); border-radius: var(--r-pill); padding: 2px 10px; }
+.region-card ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; color: var(--ink-2); font-size: .93rem; line-height: 1.5; }
+@media (max-width: 1000px) { .airline-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .airline-grid { grid-template-columns: 1fr; } .dest-table th:nth-child(3), .dest-table td:nth-child(3) { display: none; } }

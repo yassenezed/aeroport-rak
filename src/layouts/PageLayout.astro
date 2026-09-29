@@ -7,6 +7,7 @@ import FlightWidget from '../components/ui/FlightWidget.astro';
 import FlightSearchWidget from '../components/affiliate/FlightSearchWidget.astro';
 import TransferWidget from '../components/affiliate/TransferWidget.astro';
 import Icon from '../components/ui/Icon.astro';
+import DestinationsExplorer from '../components/destinations/DestinationsExplorer.astro';
 import { airport } from '../data/airport';
 import { useTranslations, pathFor, type Locale, type RouteKey } from '../i18n';
 import { site } from '../data/site';
@@ -118,6 +119,8 @@ if (page.faqs?.length) {
       </div>
     </section>
   )}
+
+  {page.destinations && <DestinationsExplorer locale={locale} copy={page.destinations} />}
 
   {page.steps && (
     <section class="section-block page-steps">

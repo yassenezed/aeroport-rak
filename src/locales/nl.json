@@ -77,5 +77,25 @@
     "snow": "Sneeuw",
     "showers": "Buien",
     "storm": "Onweer"
+  },
+  "dest": {
+    "search": "Zoek een stad, land of maatschappij…",
+    "all": "Alle",
+    "europe": "Europa",
+    "morocco": "Marokko",
+    "africa": "Afrika",
+    "middleEast": "Midden-Oosten",
+    "americas": "Amerika",
+    "city": "Stad",
+    "country": "Land",
+    "region": "Regio",
+    "airlines": "Maatschappijen",
+    "seasonal": "seizoen",
+    "opens": "vanaf {date}",
+    "noResults": "Geen bestemming komt overeen met uw zoekopdracht.",
+    "destinations": "bestemmingen",
+    "shown": "{n} bestemmingen getoond",
+    "flightsTo": "Vluchten naar",
+    "shownOne": "{n} bestemming getoond"
   }
 }

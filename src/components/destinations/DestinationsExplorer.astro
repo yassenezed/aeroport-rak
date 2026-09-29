@@ -1,0 +1,171 @@
+---
+// Page Destinations : compagnies principales, tableau filtrable des vols directs
+// au départ du RAK et récapitulatif par région. Le tableau est rendu en HTML
+// complet (indexable) ; le script ne fait que filtrer les lignes.
+import Icon from '../ui/Icon.astro';
+import { cities, airlines, airlinesFor, cityName, countryName, type Region } from '../../data/destinations';
+import { useTranslations, type Locale } from '../../i18n';
+
+interface Props {
+  locale: Locale;
+  copy: { airlinesHeading: string; airlinesIntro: string; tableHeading: string; tableIntro: string; regionsHeading: string };
+}
+const { locale, copy } = Astro.props;
+const t = useTranslations(locale);
+
+const regions: Region[] = ['europe', 'morocco', 'africa', 'middleEast', 'americas'];
+const fmtDate = (iso: string) => new Intl.DateTimeFormat(locale, { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(iso));
+const collator = new Intl.Collator(locale);
+const sep = locale === 'fr' ? ' : ' : ': ';
+const comma = locale === 'ar' ? '، ' : ', ';
+const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+
+const rows = cities
+  .map((c) => ({
+    c,
+    name: cityName(c, locale),
+    country: countryName(c.country, locale),
+    carriers: airlinesFor(c.id),
+  }))
+  .sort((a, b) => collator.compare(a.name, b.name));
+
+// Mots-clés de recherche : noms dans toutes les langues, pays, compagnies.
+const searchKey = (r: (typeof rows)[number]) =>
+  norm([...Object.values(r.c.name), r.country, countryName(r.c.country, 'en'), ...r.carriers.map((x) => x.name), r.c.airports ?? ''].join(' '));
+
+const featuredNames = ['Ryanair', 'easyJet', 'Transavia', 'Royal Air Maroc', 'Jet2', 'Wizz Air', 'British Airways', 'Turkish Airlines'];
+const featured = featuredNames.map((n) => {
+  const a = airlines.find((x) => x.name === n)!;
+  const byId = new Map(cities.map((c) => [c.id, c]));
+  const sample = a.routes.filter((r) => !r.s && !r.from).slice(0, 3).map((r) => cityName(byId.get(r.city)!, locale));
+  return { name: n, count: a.routes.length, sample };
+});
+
+const byRegion = regions.map((reg) => {
+  const inReg = rows.filter((r) => r.c.region === reg);
+  const countries = [...new Set(inReg.map((r) => r.c.country))]
+    .map((cc) => ({ cc, name: countryName(cc, locale), list: inReg.filter((r) => r.c.country === cc).map((r) => r.name) }))
+    .sort((a, b) => b.list.length - a.list.length || collator.compare(a.name, b.name));
+  return { reg, count: inReg.length, countries };
+});
+---
+
+<section class="section-block dest-airlines">
+  <div class="container">
+    <header class="home-services__head">
+      <h2>{copy.airlinesHeading}</h2>
+      <p>{copy.airlinesIntro}</p>
+    </header>
+    <ul class="airline-grid">
+      {featured.map((a) => (
+        <li class="airline-card">
+          <span class="info-card__icon"><Icon name="plane" size={22} /></span>
+          <div>
+            <h3>{a.name}</h3>
+            <p class="airline-card__count"><strong dir="ltr">{a.count}</strong> {t('dest.destinations')}</p>
+            <p class="airline-card__sample">{a.sample.join(' · ')}</p>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<section class="section-block section-block--alt dest-table-block" id="destinations-list">
+  <div class="container">
+    <header class="home-services__head">
+      <h2>{copy.tableHeading}</h2>
+      <p>{copy.tableIntro}</p>
+    </header>
+
+    <div class="dest-tools" data-dest-tools>
+      <label class="dest-search">
+        <Icon name="map-pin" size={18} />
+        <input type="search" placeholder={t('dest.search')} aria-label={t('dest.search')} data-dest-search />
+      </label>
+      <div class="dest-chips" role="group" aria-label={t('dest.region')}>
+        <button type="button" class="dest-chip is-active" data-region="all" aria-pressed="true">{t('dest.all')} <span dir="ltr">{rows.length}</span></button>
+        {byRegion.map((r) => (
+          <button type="button" class="dest-chip" data-region={r.reg} aria-pressed="false">{t(`dest.${r.reg}`)} <span dir="ltr">{r.count}</span></button>
+        ))}
+      </div>
+      <p class="dest-count" aria-live="polite" data-dest-count data-template={t('dest.shown')} data-template-one={t('dest.shownOne')}>{t('dest.shown').replace('{n}', String(rows.length))}</p>
+    </div>
+
+    <div class="table-wrap">
+      <table class="data dest-table">
+        <thead>
+          <tr><th>{t('dest.city')}</th><th>{t('dest.country')}</th><th>{t('dest.region')}</th><th>{t('dest.airlines')}</th></tr>
+        </thead>
+        <tbody>
+          {rows.map((r) => (
+            <tr data-region={r.c.region} data-search={searchKey(r)}>
+              <td><strong>{r.name}</strong>{r.c.airports && <small class="dest-airports" dir="ltr">{r.c.airports}</small>}</td>
+              <td>{r.country}</td>
+              <td>{t(`dest.${r.c.region}`)}</td>
+              <td class="dest-carriers">
+                {r.carriers.map((x) => (
+                  <span class="dest-carrier">
+                    {x.name}
+                    {x.s && <em class="dest-tag">{t('dest.seasonal')}</em>}
+                    {x.from && <em class="dest-tag dest-tag--new">{t('dest.opens').replace('{date}', fmtDate(x.from))}</em>}
+                  </span>
+                ))}
+              </td>
+            </tr>
+          ))}
+          <tr class="dest-empty" hidden data-dest-empty><td colspan="4">{t('dest.noResults')}</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section-block dest-regions">
+  <div class="container">
+    <header class="home-services__head"><h2>{copy.regionsHeading}</h2></header>
+    <div class="region-grid">
+      {byRegion.map((r) => (
+        <article class="region-card">
+          <h3>{t(`dest.${r.reg}`)} <span class="region-card__count" dir="ltr">{r.count}</span></h3>
+          <ul>
+            {r.countries.map((c) => (
+              <li><strong>{c.name}</strong>{sep}{c.list.join(comma)}</li>
+            ))}
+          </ul>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  (function () {
+    var box = document.querySelector('[data-dest-tools]');
+    if (!box) return;
+    var input = box.querySelector('[data-dest-search]');
+    var chips = box.querySelectorAll('.dest-chip');
+    var count = box.querySelector('[data-dest-count]');
+    var rows = document.querySelectorAll('.dest-table tbody tr[data-region]');
+    var empty = document.querySelector('[data-dest-empty]');
+    var region = 'all';
+    var norm = function (s) { return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim(); };
+    var apply = function () {
+      var q = norm(input.value), n = 0;
+      rows.forEach(function (tr) {
+        var ok = (region === 'all' || tr.dataset.region === region) && (!q || tr.dataset.search.indexOf(q) !== -1);
+        tr.hidden = !ok; if (ok) n++;
+      });
+      empty.hidden = n !== 0;
+      count.textContent = (n === 1 ? count.dataset.templateOne : count.dataset.template).replace('{n}', n);
+    };
+    input.addEventListener('input', apply);
+    chips.forEach(function (b) {
+      b.addEventListener('click', function () {
+        region = b.dataset.region;
+        chips.forEach(function (c) { var on = c === b; c.classList.toggle('is-active', on); c.setAttribute('aria-pressed', on); });
+        apply();
+      });
+    });
+  })();
+</script>

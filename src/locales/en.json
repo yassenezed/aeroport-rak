@@ -77,5 +77,25 @@
     "snow": "Snow",
     "showers": "Showers",
     "storm": "Thunderstorm"
+  },
+  "dest": {
+    "search": "Search a city, country or airline…",
+    "all": "All",
+    "europe": "Europe",
+    "morocco": "Morocco",
+    "africa": "Africa",
+    "middleEast": "Middle East",
+    "americas": "Americas",
+    "city": "City",
+    "country": "Country",
+    "region": "Region",
+    "airlines": "Airlines",
+    "seasonal": "seasonal",
+    "opens": "from {date}",
+    "noResults": "No destination matches your search.",
+    "destinations": "destinations",
+    "shown": "{n} destinations shown",
+    "flightsTo": "Flights to",
+    "shownOne": "{n} destination shown"
   }
 }

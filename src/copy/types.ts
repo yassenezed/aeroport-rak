@@ -26,6 +26,8 @@ export interface LocalizedPage {
   h1Accent?: string;
   /** Tuiles de chiffres clés avec icône, sous le hero ; `live` affiche l'heure ou la météo en direct. */
   highlights?: { icon: string; value: string; label: string; live?: 'clock' | 'weather' }[];
+  /** Page Destinations : titres des blocs compagnies, tableau et listes par région. */
+  destinations?: { airlinesHeading: string; airlinesIntro: string; tableHeading: string; tableIntro: string; regionsHeading: string };
   /** Parcours en étapes numérotées avec icône. */
   steps?: { heading: string; intro?: string; items: { icon: string; title: string; text: string }[] };
   /** Grille de cartes de services (icône, titre, texte, lien vers une route). */
