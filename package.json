@@ -9,7 +9,6 @@
     "build": "node scripts/lastmod.mjs && astro build",
     "preview": "astro preview",
     "start": "node ./server.mjs",
-    "postinstall": "npm run build",
     "astro": "astro"
   },
   "engines": {
