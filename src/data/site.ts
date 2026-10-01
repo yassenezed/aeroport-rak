@@ -1,7 +1,7 @@
 export const site = {
   url: 'https://aeroportrak.com',
   name: 'AeroportRAK',
-  logo: '/logo-mark.png',
+  logo: '/logo.png',
   // À CONFIRMER : adresse de contact réelle du site.
   contactEmail: 'contact@aeroportrak.com',
   defaultOgImage: '/og/aeroportrak-default.jpg',
