@@ -1,0 +1,46 @@
+---
+// Page 404 : servie par l'hébergeur (et par server.mjs) pour toute URL inconnue.
+// Non indexée ; propose les pages clés et les six langues.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { pathFor } from '../i18n';
+
+const links = [
+  { key: 'arrivals', label: 'Arrivées' },
+  { key: 'departures', label: 'Départs' },
+  { key: 'transfers', label: 'Transferts' },
+  { key: 'carRental', label: 'Location de voiture' },
+];
+const langs = [
+  { locale: 'en', label: 'English' },
+  { locale: 'es', label: 'Español' },
+  { locale: 'de', label: 'Deutsch' },
+  { locale: 'nl', label: 'Nederlands' },
+  { locale: 'ar', label: 'العربية' },
+] as const;
+---
+<BaseLayout
+  locale="fr"
+  routeKey="home"
+  title="Page introuvable – aéroport Marrakech-Ménara"
+  description="Cette page n'existe pas ou a été déplacée. Retrouvez le guide de l'aéroport de Marrakech-Ménara : arrivées, départs, transferts et location."
+  noindex
+>
+  <section class="hero hero--small">
+    <div class="container hero__inner">
+      <span class="eyebrow">Erreur 404</span>
+      <h1>Page introuvable</h1>
+      <p class="lede">Cette page n'existe pas ou a été déplacée. Les informations sur l'aéroport de Marrakech-Ménara restent accessibles ci-dessous.</p>
+      <p><a class="btn btn--primary" href="/">Retour à l'accueil</a></p>
+    </div>
+  </section>
+  <section class="section-block">
+    <div class="container">
+      <ul class="quicklinks__row" style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.75rem">
+        {links.map((l) => <li><a class="btn btn--secondary" href={pathFor(l.key, 'fr')}>{l.label}</a></li>)}
+      </ul>
+      <p style="margin-top:1.5rem" dir="ltr">
+        Page not found · {langs.map((l, i) => <>{i > 0 && ' · '}<a href={pathFor('home', l.locale)} lang={l.locale}>{l.label}</a></>)}
+      </p>
+    </div>
+  </section>
+</BaseLayout>
