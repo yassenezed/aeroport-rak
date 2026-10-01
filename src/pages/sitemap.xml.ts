@@ -5,6 +5,15 @@ import type { APIRoute } from 'astro';
 import { allRoutes, alternatesFor, DEFAULT_LOCALE, ROUTES, type Locale } from '../i18n';
 import { pages, articles, hotels } from '../copy';
 import { site } from '../data/site';
+import lastmod from '../data/lastmod.json';
+
+const DIRS: Record<string, string> = { page: 'pages', blog: 'blog', hotel: 'hotels' };
+
+/** Date de dernière modification du contenu de cette page (git), format AAAA-MM-JJ. */
+function lastmodFor(key: string, kind: string, locale: Locale): string | undefined {
+  const file = `${DIRS[kind]}/${locale === DEFAULT_LOCALE ? key : `${key}.${locale}`}`;
+  return (lastmod as Record<string, string>)[file];
+}
 
 function registryFor(kind: string) {
   return kind === 'hotel' ? hotels : kind === 'blog' ? articles : pages;
@@ -26,7 +35,8 @@ function priorityFor(key: string, locale: Locale): string {
 export const GET: APIRoute = async () => {
   const entries = allRoutes().filter(({ key, kind, locale }) => isIndexable(key, kind, locale));
 
-  const urls = entries.map(({ key, locale, path }) => {
+  const urls = entries.map(({ key, kind, locale, path }) => {
+    const mod = lastmodFor(key, kind, locale);
     const alts = alternatesFor(key)
       .filter((a) => isIndexable(key, ROUTES[key].kind, a.locale))
       .map((a) => `    <xhtml:link rel="alternate" hreflang="${a.locale}" href="${site.url}${a.path}"/>`)
@@ -35,7 +45,7 @@ export const GET: APIRoute = async () => {
     return `  <url>
     <loc>${site.url}${path}</loc>
 ${alts}
-${xDefault}
+${xDefault}${mod ? `\n    <lastmod>${mod}</lastmod>` : ''}
     <changefreq>weekly</changefreq>
     <priority>${priorityFor(key, locale)}</priority>
   </url>`;

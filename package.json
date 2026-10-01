@@ -6,10 +6,10 @@
   "description": "AeroportRAK.com — guide francophone de l'aéroport Marrakech Ménara (RAK) : transferts, taxis, location de voiture, riads, trajets et voyage.",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "node scripts/lastmod.mjs && astro build",
     "preview": "astro preview",
     "start": "node ./server.mjs",
-    "postinstall": "astro build",
+    "postinstall": "npm run build",
     "astro": "astro"
   },
   "engines": {
