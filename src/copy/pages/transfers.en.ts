@@ -1,80 +1,174 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Marrakech Menara Airport transfer: options and prices",
-  description: "Transfer, taxi, bus 19 or hire car from Marrakech Menara Airport: real fares in dirhams and euros, medina gate drop-offs and night arrivals.",
-  eyebrow: 'Marrakech Menara · Transfers',
-  h1: 'Transfers from Marrakech Airport',
-  lede: "Six kilometres to Jemaa el-Fna: the drive is short, it is the last hundred metres that cause trouble, since no car enters the medina lanes. Here are the four ways out of the terminal, what they really cost, and which one fits your flight.",
-  facts: [
-    { label: 'Airport → medina', value: '6', sub: 'km' },
-    { label: 'Real duration', value: '15–30', sub: 'min' },
-    { label: 'Train', value: 'None', sub: 'to RAK' },
-    { label: 'Booked transfer', value: '€27', sub: 'from' },
+  title: "Marrakech Menara Airport transfers: taxi, bus, prices 2026",
+  description: "Getting from Marrakech Menara Airport to the medina: private transfer, taxi, bus 19, riad shuttle or car hire. Real 2026 prices and travel times compared.",
+  eyebrow: "Transfer · taxi · bus 19 · car hire",
+  h1: "Marrakech Menara Airport transfers: 5 ways into the city",
+  lede: "Only six kilometres separate the terminal from Jemaa el-Fna, and no train makes the trip. Landing at midnight, travelling with kids, or on a backpacker budget: here are the five real options, their prices checked on the ground, and which one suits your arrival.",
+  highlights: [
+    { icon: 'map-pin', value: "6 km", label: "Airport → medina, 15–20 min" },
+    { icon: 'van', value: "From €27", label: "Transfer, per vehicle (7 seats)" },
+    { icon: 'car', value: "MAD 100–150", label: "Daytime taxi, whole car" },
+    { icon: 'bus', value: "MAD 30", label: "Bus 19, per person" },
   ],
+  options: {
+    heading: "Quick comparison of transport from Marrakech Menara Airport",
+    intro: "Prices checked in September 2026, <strong>per vehicle</strong> except the bus. No train serves the airport: the ONCF station is in Gueliz.",
+    table: {
+      head: ["Transport", "Price", "To the medina", "Comfort", "Best for"],
+      rows: [
+        ["Private transfer", "from €27", "15–25 min", "Excellent", "Night arrivals, families, riads in the medina"],
+        ["Taxi rank", "MAD 100–150<br>MAD 150–240 at night", "15–25 min", "Fair", "Two people by day, Gueliz or Hivernage"],
+        ["Bus 19 (ALSA)", "MAD 30 / person", "20–30 min", "Basic", "Tight budget, light luggage, daytime"],
+        ["Riad shuttle", "MAD 150–250", "15–25 min", "Very good", "Riads that are hard to find"],
+        ["Car hire", "from €25 / day", "—", "Excellent outside the medina", "Atlas, Agafay, Essaouira, road trips"],
+      ],
+    },
+    detailHeading: "The 5 options in detail",
+    items: [
+      {
+        icon: 'van',
+        title: "Pre-booked private transfer",
+        tagline: "The stress-free choice at night, with family, or for a riad deep in the medina.",
+        badge: "Our pick",
+        meta: [
+          { label: "Price", value: "from €27 / vehicle" },
+          { label: "Journey", value: "15–25 min" },
+          { label: "Seats", value: "up to 7" },
+        ],
+        pros: [
+          "Driver waiting in the arrivals hall <strong>with a sign bearing your name</strong>",
+          "Flight tracking: no extra charge if you are delayed",
+          "Fixed price per vehicle, locked in when you book",
+          "Drop-off at the medina gate (<em>bab</em>) closest to your riad",
+          "Child seat on request, free cancellation up to 24 h with most providers",
+        ],
+        prices: {
+          heading: "Typical prices",
+          rows: [
+            { label: "Medina, Gueliz, Hivernage", value: "from €27" },
+            { label: "Palmeraie, Agafay", value: "by distance" },
+            { label: "Essaouira", value: "≈ €95" },
+            { label: "Minibus, 8+ seats", value: "on request" },
+          ],
+          foot: "Prices are per vehicle, not per person.",
+        },
+        link: { key: 'bookTransfer', label: "Book my transfer" },
+      },
+      {
+        icon: 'car',
+        title: "Taxi from the rank",
+        tagline: "Available around the clock at the rank right outside the terminal.",
+        meta: [
+          { label: "Day", value: "MAD 100–150" },
+          { label: "Night", value: "MAD 150–240" },
+          { label: "Seats", value: "3 (petit taxi)" },
+        ],
+        pros: [
+          "Official rank outside arrivals, with posted fares",
+          "Nothing to book or pay in advance",
+          "Unbeatable for two by day: €9 to €14 for the whole car",
+        ],
+        cons: [
+          "A petit taxi takes 3 passengers at most: four people need two cars",
+          "Cash only, in dirhams",
+          "Drop-off at whichever medina gate suits the driver, not always the closest",
+        ],
+        note: { label: "Tip:", text: "agree the price and destination <strong>before</strong> loading your bags, and ignore touts in the hall: taxis are only taken from the rank." },
+        link: { key: 'taxiTips', label: "Our Marrakech taxi tips" },
+      },
+      {
+        icon: 'bus',
+        title: "Bus 19 (ALSA)",
+        tagline: "The cheapest option, if you travel light and by day.",
+        meta: [
+          { label: "Price", value: "MAD 30 / person" },
+          { label: "Return", value: "MAD 50 (15 days)" },
+          { label: "Hours", value: "≈ 6 am – 11.30 pm" },
+        ],
+        pros: [
+          "Stop right outside the terminal, departures roughly every 30 minutes",
+          "About twenty minutes to Jemaa el-Fna square",
+        ],
+        cons: [
+          "No departures after about 11.30 pm",
+          "Little room for large suitcases",
+          "Drops you on the square: you still walk through the medina to your riad",
+        ],
+        link: { key: 'bus19', label: "Bus 19 timetable and stops" },
+      },
+      {
+        icon: 'door',
+        title: "Your riad or hotel shuttle",
+        tagline: "Your accommodation's own driver, who knows the right gate and the porter.",
+        meta: [
+          { label: "Price", value: "MAD 150–250 / vehicle" },
+          { label: "Journey", value: "15–25 min" },
+          { label: "Booking", value: "through the riad" },
+        ],
+        pros: [
+          "The driver knows exactly where to stop for your riad",
+          "Often arranged together with a porter and handcart for your bags",
+          "Pay on arrival",
+        ],
+        cons: [
+          "Prices vary widely between riads: compare with a transfer",
+          "Not always available for flights landing late at night",
+        ],
+      },
+      {
+        icon: 'car',
+        title: "Car hire",
+        tagline: "For the Atlas, Agafay or Essaouira, not for exploring the medina.",
+        meta: [
+          { label: "Price", value: "from €25 / day" },
+          { label: "Desks", value: "arrivals hall" },
+          { label: "Documents", value: "licence, passport, card" },
+        ],
+        pros: [
+          "International and Moroccan rental desks in the arrivals hall",
+          "Total freedom for Ourika, Imlil, Agafay or the Essaouira road",
+          "Booking online a few days ahead is usually cheaper than at the desk",
+        ],
+        cons: [
+          "The medina is pedestrian: the car stays in a car park",
+          "Deposit blocked on a credit card in the driver's name",
+        ],
+        link: { key: 'carRental', label: "Compare car hire prices" },
+      },
+    ],
+  },
   body: `
-<h2>The four ways out of the terminal</h2>
-<div class="table-wrap">
-<table class="data">
-<thead><tr><th>Option</th><th>Price</th><th>Best for</th><th>The catch</th></tr></thead>
-<tbody>
-<tr class="row-highlight"><td><strong>Pre-booked private transfer</strong></td><td class="num">from €27 / vehicle</td><td>Night flights, medina riads, families, groups</td><td>Must be booked before you fly</td></tr>
-<tr><td><strong>Taxi from the rank</strong></td><td class="num">MAD 100–150 by day</td><td>Leaving without planning anything</td><td>Agree the fare before loading; three passengers max in a petit taxi</td></tr>
-<tr><td><strong>Bus 19 (ALSA)</strong></td><td class="num">MAD 30 / person</td><td>Tight budget, light luggage, daytime arrival</td><td>Nothing after 11.30 pm, drops at Jemaa el-Fna only</td></tr>
-<tr><td><strong>Hire car</strong></td><td class="num">from €25 / day</td><td>Atlas, Ourika, Essaouira, road trips</td><td>Useless and cumbersome for the medina alone</td></tr>
-</tbody>
-</table>
-</div>
-<p>There is no train to RAK, and no ride-hailing service on which to base an arrival. Every fare on this page is <strong>per vehicle</strong>, except the bus, and was checked in September 2026.</p>
-
-<h2>Taxi or transfer: the honest maths</h2>
-<p>Taxis are not expensive in Marrakech, and that should be said: MAD 100–150 posted for the medina, Gueliz and Hivernage, roughly £8–12 for the whole car. For two people by day, no booking will beat that, and the wait is just the queue.</p>
-<p>The balance tips in three specific situations. <strong>At night</strong>, the scale rises to MAD 150–240, around £12–19, for identical comfort. <strong>From four passengers</strong>, a petit taxi takes only three: you will be offered two cars, so MAD 200–300 by day and up to MAD 480 at night, above the transfer. <strong>For a hard-to-find riad</strong>, the driver will drop you at whichever gate suits him, not the nearest one — which can mean fifteen extra minutes on foot with luggage.</p>
-<p>In short: at €27 per vehicle for up to seven seats, a booked transfer becomes the cheapest option as soon as you are four, and the most comfortable as soon as it is dark.</p>
+<h2>Taxi or transfer from Marrakech Menara Airport: the honest maths</h2>
+<p>Taxis are not expensive in Marrakech: MAD 100 to 150 posted for the medina, Gueliz and Hivernage, or €9 to €14 for the whole car. For two people by day, no booking beats that price.</p>
+<p>The picture changes in three cases. <strong>At night</strong>, the fare rises to MAD 150–240 for the same ride. <strong>With four or more</strong>, a petit taxi only takes three passengers: two cars, so MAD 200–300 by day and up to MAD 480 at night. <strong>For a hard-to-reach riad</strong>, the driver stops at the gate that suits him, which can add fifteen minutes of walking with your bags. At €27 per vehicle for up to seven people, a pre-booked transfer then becomes both the cheapest and the most comfortable option.</p>
 
 <h2>The real issue: drop-off at the medina gates</h2>
-<p>Almost never outside your riad, and it is not obstruction: the <em>derbs</em> are too narrow for a car and several entrances are closed to traffic. The driver stops at the nearest <em>bab</em> — Bab Doukkala to the north-west, Bab Laksour by the Koutoubia, Bab Agnaou to the south, Bab el Khemis to the east — and you finish on foot, usually three to ten minutes.</p>
+<p>No car can enter the narrow <em>derbs</em>, and several access points are closed to traffic. The driver stops at the nearest <em>bab</em>: Bab Doukkala in the north-west, Bab Laksour near the Koutoubia, Bab Agnaou in the south, Bab el Khemis in the east. You finish on foot, usually three to ten minutes.</p>
 <div class="callout">
-<span class="callout-label">What to ask your riad</span>
-<p>Two things, by message, before you travel: the exact name of the drop-off gate, and whether a porter can come with a handcart. Most riads do it free or for a few dirhams if you give them your arrival time. That is the detail that changes everything at one in the morning on cobbles.</p>
+<span class="callout-label">Two questions to ask your riad</span>
+<p>Before you travel, ask for the exact name of the drop-off gate, and whether a porter with a handcart can meet you. Most riads do this free or for a few dirhams if you give them your arrival time.</p>
 </div>
 
-<h2>Bus 19, when it makes sense</h2>
-<p>ALSA's line 19 links the airport to Jemaa el-Fna for MAD 30 one way, MAD 50 return valid for a fortnight, with a departure roughly every thirty minutes between 6 am and 11.30 pm. The ride takes about twenty minutes and the stop is outside the terminal.</p>
-<p>It is excellent for two people, by day, with a bag you can carry. It becomes painful with two suitcases, a child, or when you land at 10.45 pm and still have to cross the medina on foot. The bus drops you on the square, not at your accommodation.</p>
-
-<h2>What about a hire car?</h2>
-<p>If you are not leaving Marrakech, it will get in your way: the medina is pedestrian, city parking is paid and watched by informal attendants, and the traffic takes some getting used to. It earns its keep for the Atlas, the Ourika valley, Essaouira or a road trip south. In that case, pick it up when you actually need it rather than on landing: our <a href="/en/car-rental/">car hire pages</a> cover deposits, excesses and the local pitfalls.</p>
+<h2>Arriving at night at Marrakech Menara Airport</h2>
+<p>After 11.30 pm, bus 19 no longer runs: you are left with a taxi at the night fare or a pre-booked transfer. Withdraw dirhams at the ATM in the arrivals hall before leaving, as taxis do not take cards. Let your riad know too: many lock their door at night and send someone to meet you at the <em>bab</em> if they know your arrival time.</p>
 `,
+  faqHeading: "Marrakech Menara Airport transfers: frequently asked questions",
   faqs: [
-    {
-      q: 'How much is a transfer from Marrakech Airport?',
-      a: "A private transfer to the medina, Gueliz or Hivernage starts at €27 per vehicle for up to seven passengers, with flight tracking and child seats available depending on the operator. For the Palmeraie or an Agafay desert camp, expect more; Essaouira runs around €95. These prices are per car, not per person.",
-    },
-    {
-      q: 'What is the best way from Marrakech Airport to the centre?',
-      a: "By day, for two, heading to Gueliz or Hivernage: the taxi rank, at MAD 100–150 per car. For a riad deep in the medina, a night flight or a group of four or more: a booked transfer, which locks both the price and the drop-off gate. With a backpack and a tight budget: bus 19 at MAD 30.",
-    },
-    {
-      q: 'Is there a train between Marrakech Airport and the city?',
-      a: "No, no railway serves the terminal. Marrakech's ONCF station is in Gueliz, a few kilometres away, with trains to Casablanca, Rabat, Fes and Tangier. You must first get there by taxi, transfer or bus 19.",
-    },
-    {
-      q: 'Can you book a transfer and pay later?',
-      a: "With most operators, yes: booking locks the fare, payment comes later and cancellation is generally free up to 24 hours before pickup. It is the sensible reflex for an evening flight or a loaded group, since large vehicles are the first thing to run out in high season.",
-    },
-    {
-      q: 'Can the driver drop me outside my riad in the medina?',
-      a: "Almost never: the derbs are too narrow and several entrances are closed to traffic. The driver leaves you at the nearest gate and you finish on foot, usually three to ten minutes. Ask your riad for a porter with a handcart when you book.",
-    },
-    {
-      q: 'Can you use Uber, Careem or inDrive in Marrakech?',
-      a: "Do not count on it for your arrival. Uber returned to Marrakech in late November 2025, but only with licensed tourist-transport operators, and availability remains irregular; Careem and inDrive operate in a still-unclear legal space. Pick-up outside the terminals is the friction point with taxis. In town, these apps can help out.",
-    },
+    { q: "What transport should I take if I land in Marrakech at midnight?", a: "A pre-booked transfer, which waits even if you are delayed and drops you at the medina gate closest to your riad. A taxi is still possible at the night fare, MAD 150 to 240 per car. Bus 19 stops running at about 11.30 pm." },
+    { q: "How much is a taxi from Marrakech airport to the medina?", a: "MAD 100 to 150 per car by day and MAD 150 to 240 at night, for the medina, Gueliz or Hivernage. The price is per vehicle, with three passengers at most in a petit taxi. Agree it before loading your bags." },
+    { q: "How much is a private transfer from Marrakech Menara Airport?", a: "From €27 per vehicle for up to 7 passengers to the medina, Gueliz or Hivernage, with flight tracking. Expect more for the Palmeraie or an Agafay camp, and about €95 to Essaouira." },
+    { q: "Can I pay for a taxi by card?", a: "No, Marrakech taxis are paid in cash, in dirhams. There are ATMs and exchange desks in the arrivals hall. A pre-booked transfer is paid online or to the driver, depending on the provider." },
+    { q: "Is there a train from Marrakech airport to the city?", a: "No, no railway serves the airport. The ONCF station is in Gueliz, with trains to Rabat, Fez and Tangier: you get there by taxi, transfer or bus." },
+    { q: "Can I use Uber, Careem or inDrive at the airport?", a: "Do not rely on them for your arrival. Uber returned to Marrakech in late November 2025, but only with licensed tourist transport operators and patchy availability; Careem and inDrive operate in a grey area. In town, these apps can help." },
+    { q: "Can the driver drop me at my riad's door?", a: "Almost never: medina lanes are too narrow for cars. The driver stops at the nearest gate and you finish on foot, usually 3 to 10 minutes. Ask your riad for a porter." },
+    { q: "How do I get from Marrakech airport to Essaouira?", a: "The simplest way is a private transfer, about €95 per vehicle for a 2.5 to 3 hour drive. Supratours and CTM buses leave from the city, not the airport, so you first need a taxi to their station." },
   ],
   cta: {
-    heading: 'Lock your ride before take-off',
-    text: "Fixed price per vehicle, a driver waiting with your name, flight tracking and free cancellation on most bookings: settled before you even board.",
-    label: 'See transfer prices',
+    heading: "Your ride sorted before take-off",
+    text: "Fixed price per vehicle, a driver waiting with your name and flight tracking. Or a car to head off into the Atlas.",
+    label: "Book a transfer",
+    secondary: { label: "Hire a car", key: 'carRental' },
   },
 } satisfies LocalizedPage;

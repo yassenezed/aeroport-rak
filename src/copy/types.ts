@@ -19,7 +19,7 @@ export interface LocalizedPage {
   /** Widget affiché juste sous le hero. */
   widget?: 'flights-arrivals' | 'flights-departures' | 'flight-search' | 'transfer' | 'esim' | 'compensation' | 'tours';
   /** Bandeau d'appel à l'action en bas de page. */
-  cta?: { heading: string; text?: string; label: string; href?: string };
+  cta?: { heading: string; text?: string; label: string; href?: string; secondary?: { label: string; key: string } };
   /** Bandeau de chiffres clés sous le hero. */
   facts?: { label: string; value: string; sub?: string }[];
   /** Accueil : seconde ligne du H1, mise en couleur. */
@@ -36,6 +36,25 @@ export interface LocalizedPage {
     variant: 'feature' | 'compact';
     items: { icon: string; title: string; text: string; tags?: string[]; link?: { key: string; label: string } }[];
   }[];
+  /** Comparatif d'options (transport…) : tableau rapide puis une carte détaillée par option. */
+  options?: {
+    heading: string;
+    intro?: string;
+    table?: { head: string[]; rows: string[][] };
+    detailHeading: string;
+    items: {
+      icon: string;
+      title: string;
+      tagline: string;
+      badge?: string;
+      meta: { label: string; value: string }[];
+      pros: string[];
+      cons?: string[];
+      note?: { label: string; text: string };
+      prices?: { heading: string; rows: { label: string; value: string }[]; foot?: string };
+      link?: { key: string; label: string };
+    }[];
+  };
   /** Encadré mis en avant en fin de page (projets, actualité). */
   spotlight?: { icon: string; heading: string; text: string };
   /** Parcours en étapes numérotées avec icône. */

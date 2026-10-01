@@ -112,6 +112,60 @@ if (page.faqs?.length) {
     </section>
   )}
 
+  {page.options && (
+    <section class="section-block">
+      <div class="container">
+        <h2 class="section-block__title">{page.options.heading}</h2>
+        {page.options.intro && <p class="section-block__intro" set:html={page.options.intro} />}
+        {page.options.table && (
+          <div class="table-wrap">
+            <table class="data compare-table">
+              <thead><tr>{page.options.table.head.map((h) => <th>{h}</th>)}</tr></thead>
+              <tbody>
+                {page.options.table.rows.map((r, i) => (
+                  <tr class:list={{ 'row-highlight': i === 0 }}>{r.map((c, j) => (j === 0 ? <td><strong set:html={c} /></td> : <td set:html={c} />))}</tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+        <h2 class="section-block__title option-list__title">{page.options.detailHeading}</h2>
+        <ol class="option-list">
+          {page.options.items.map((o, i) => (
+            <li class:list={['option-card', { 'option-card--top': !!o.badge }]}>
+              <header class="option-card__head">
+                <span class="option-card__icon"><Icon name={o.icon} size={26} /></span>
+                <div>
+                  <h3><span class="option-card__num">{i + 1}.</span> {o.title}</h3>
+                  <p class="option-card__tagline">{o.tagline}</p>
+                </div>
+                {o.badge && <span class="option-card__badge">{o.badge}</span>}
+              </header>
+              <dl class="option-card__meta">
+                {o.meta.map((m) => (<div><dt>{m.label}</dt><dd dir="auto">{m.value}</dd></div>))}
+              </dl>
+              <div class:list={['option-card__body', { 'option-card__body--split': !!o.prices }]}>
+                <ul class="option-card__list">
+                  {o.pros.map((p) => (<li class="is-pro"><Icon name="check" size={16} /><span set:html={p} /></li>))}
+                  {o.cons?.map((p) => (<li class="is-con"><Icon name="alert" size={16} /><span set:html={p} /></li>))}
+                </ul>
+                {o.prices && (
+                  <div class="option-card__prices">
+                    <h4>{o.prices.heading}</h4>
+                    <ul>{o.prices.rows.map((r) => (<li><span>{r.label}</span><strong dir="auto">{r.value}</strong></li>))}</ul>
+                    {o.prices.foot && <p>{o.prices.foot}</p>}
+                  </div>
+                )}
+              </div>
+              {o.note && (<p class="option-card__note"><strong>{o.note.label}</strong> <span set:html={o.note.text} /></p>)}
+              {o.link && (<a class:list={['btn', o.badge ? 'btn--primary' : 'btn--secondary', 'option-card__btn']} href={pathFor(o.link.key, locale)}>{o.link.label} <span aria-hidden="true">{locale === 'ar' ? '←' : '→'}</span></a>)}
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  )}
+
   {page.widget && (
     <section class="section-block section-block--widget">
       <div class="container">
@@ -224,7 +278,7 @@ if (page.faqs?.length) {
           {page.faqs.map((f) => (
             <details class="faq-item">
               <summary>{f.q}</summary>
-              <div class="faq-body"><p>{f.a}</p></div>
+              <div class="faq-body"><p set:html={f.a} /></div>
             </details>
           ))}
         </div>
@@ -238,7 +292,10 @@ if (page.faqs?.length) {
         <div class="cta-dark-bg">
           <h2>{page.cta.heading}</h2>
           {page.cta.text && <p>{page.cta.text}</p>}
-          <a class="btn btn--primary btn--lg" href={page.cta.href ?? pathFor('bookTransfer', locale)}>{page.cta.label}</a>
+          <div class="cta-actions">
+            <a class="btn btn--primary btn--lg" href={page.cta.href ?? pathFor('bookTransfer', locale)}>{page.cta.label}</a>
+            {page.cta.secondary && <a class="btn btn--ghost btn--lg" href={pathFor(page.cta.secondary.key, locale)}>{page.cta.secondary.label}</a>}
+          </div>
         </div>
       </div>
     </section>

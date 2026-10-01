@@ -97,7 +97,7 @@ if (page.faqs?.length) {
             {page.faqs.map((f) => (
               <details class="faq-item">
                 <summary>{f.q}</summary>
-                <div class="faq-body"><p>{f.a}</p></div>
+                <div class="faq-body"><p set:html={f.a} /></div>
               </details>
             ))}
           </div>
