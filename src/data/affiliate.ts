@@ -10,7 +10,7 @@
 //    Laissé vide, aucun script d'analytics n'est injecté.
 // ─────────────────────────────────────────────────────────────────────────────
 
-export const gaId = '';
+export const gaId = 'G-8596EGYJ0G';
 
 export const travelpayouts = {
   trs: '579106',
