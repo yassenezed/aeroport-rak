@@ -41,7 +41,7 @@ export const REQUIRED_PHOTOS = [
   'getting-around-marrakech',   // calèche / scooter / bus urbain
 
   // Hébergement
-  'hotels-airport-rak',         // hôtel proche de l'aéroport
+  'hotels-aeroport-rak',         // hôtel proche de l'aéroport
   'riads-medina',               // patio de riad
   'la-mamounia',                // La Mamounia
   'royal-mansour',              // Royal Mansour
