@@ -5,7 +5,7 @@ export default {
     title: "Guide touristique Marrakech dès l'aéroport Marrakech-Ménara",
     description: "Guide touristique à Marrakech dès l'aéroport de Marrakech-Ménara : visites de la médina, excursions Agafay et Atlas, tarifs 2026, guides officiels.",
     eyebrow: "Visites guidées · médina et excursions",
-    h1: "Guide touristique à Marrakech : visites et excursions",
+    h1: "Guide touristique à Marrakech dès l'aéroport Marrakech-Ménara",
     lede: "À quinze minutes de l'aéroport de Marrakech-Ménara, la médina se comprend mal seul le premier jour. Un guide officiel sur une demi-journée bien choisie vous fait gagner plus de temps et d'argent qu'il n'en coûte. Voici les visites qui valent le coup, les vrais prix et comment éviter les faux guides.",
     widget: 'tours',
     highlights: [
@@ -16,7 +16,7 @@ export default {
     cardSections: [
       {
         eyebrow: "Idées de visites",
-        heading: "Les visites guidées qui valent le coup à Marrakech",
+        heading: "Les visites guidées à faire en arrivant à l'aéroport Marrakech-Ménara",
         intro: "Toutes se rejoignent facilement depuis l'aéroport de Marrakech-Ménara ou depuis votre riad.",
         variant: 'feature',
         items: [
@@ -57,6 +57,24 @@ export default {
 </div>
 <p>Les tarifs s'entendent pour le guide, hors entrées de monuments, déjeuner et transport. Un pourboire de 50 à 100 MAD en fin de visite est d'usage si la prestation a été bonne, sans être obligatoire.</p>
 
+<h2>Temps de trajet depuis l'aéroport Marrakech-Ménara</h2>
+<p>L'aéroport est à 6 km au sud-ouest de la médina, côté Agafay : la plupart des visites se rejoignent vite après l'atterrissage.</p>
+<div class="table-wrap">
+<table class="data">
+<thead><tr><th>Visite</th><th>Distance</th><th>Trajet en voiture</th></tr></thead>
+<tbody>
+<tr class="row-highlight"><td><strong>Médina, Jemaa el-Fna</strong></td><td class="num">≈ 6 km</td><td>15–20 min</td></tr>
+<tr><td><strong>Jardin Majorelle, Guéliz</strong></td><td class="num">≈ 8 km</td><td>20–25 min</td></tr>
+<tr><td><strong>Désert d'Agafay</strong></td><td class="num">≈ 35 km</td><td>40–50 min</td></tr>
+<tr><td><strong>Vallée de l'Ourika (Setti Fatma)</strong></td><td class="num">≈ 65 km</td><td>1 h 15–1 h 30</td></tr>
+<tr><td><strong>Imlil, Haut Atlas</strong></td><td class="num">≈ 65 km</td><td>1 h 15–1 h 30</td></tr>
+<tr><td><strong>Cascades d'Ouzoud</strong></td><td class="num">≈ 170 km</td><td>2 h 45–3 h</td></tr>
+<tr><td><strong>Essaouira</strong></td><td class="num">≈ 185 km</td><td>2 h 30–3 h</td></tr>
+</tbody>
+</table>
+</div>
+<p>Durées indicatives hors heures de pointe. Pour une excursion le jour même de l'arrivée, gardez la médina ou Agafay : l'Atlas et Essaouira demandent une journée pleine.</p>
+
 <h2>Où un guide change vraiment quelque chose</h2>
 <p><strong>La médina et les souks</strong>, le premier jour. En trois heures, vous comprenez la logique des quartiers, vous situez les portes et vous apprenez où acheter quoi et à quel prix : le reste du séjour devient beaucoup plus simple. <strong>Les monuments historiques</strong>, où l'absence de signalétique rend la visite muette sans commentaire. <strong>Les excursions dans l'Atlas et les vallées</strong>, où le guide fait aussi office d'interprète en berbère.</p>
 <div class="callout">
@@ -67,7 +85,7 @@ export default {
 <h2>Réserver avant de partir ou sur place ?</h2>
 <p>Votre <strong>riad ou hôtel</strong> travaille presque toujours avec un guide officiel qu'il connaît : c'est la solution la plus simple, et le prix reste négociable. Les <strong>plateformes en ligne</strong> permettent de comparer les avis, de choisir la langue et de bloquer le tarif à l'avance, ce qui est utile en haute saison. Enfin, les <strong>visites audioguidées</strong> proposées ci-dessus se font seul, avec votre téléphone et des écouteurs, à partir d'une dizaine d'euros : une alternative économique pour découvrir la médina à votre rythme, sans rendez-vous. Pour rejoindre la médina depuis l'aéroport, réservez votre <a href="/reserver-transfert/">transfert</a> ; pour une excursion en autonomie, voyez la <a href="/location-voiture/">location de voiture</a> et nos pages <a href="/blog/distance-essaouira-aeroport-marrakech/">Marrakech–Essaouira</a> et <a href="/blog/distance-ouarzazate-aeroport-marrakech/">Marrakech–Ouarzazate</a>.</p>
 `,
-    faqHeading: "Guide touristique à Marrakech : questions fréquentes",
+    faqHeading: "Guide touristique et aéroport Marrakech-Ménara : questions fréquentes",
     faqs: [
       { q: "Combien coûte un guide officiel à Marrakech ?", a: "Entre 300 et 500 MAD pour une demi-journée dans la médina, et 500 à 800 MAD pour une journée complète, hors entrées de monuments et déjeuner. Un pourboire de 50 à 100 MAD est d'usage si la prestation a été bonne." },
       { q: "Comment reconnaître un guide officiel à Marrakech ?", a: "Il détient une carte professionnelle délivrée par le ministère du Tourisme, avec sa photo et son numéro, et la présente sans difficulté. Les personnes qui abordent les visiteurs dans la rue pour proposer une visite n'en ont généralement pas." },
@@ -76,11 +94,12 @@ export default {
       { q: "Comment éviter les visites qui finissent en boutique ?", a: "Annoncez au départ que la visite ne comportera pas d'arrêt commercial, et convenez de la durée et de ce qui est inclus. Un guide officiel accepte sans problème : c'est ce qui le distingue d'un rabatteur payé à la commission." },
       { q: "Peut-on réserver un guide avant d'arriver à l'aéroport de Marrakech ?", a: "Oui, par votre riad ou hôtel, ou sur une plateforme en ligne qui permet de comparer les avis et de choisir la langue. En haute saison et pour une langue rare, réservez plusieurs jours à l'avance." },
       { q: "Le guide peut-il venir me chercher à l'aéroport de Marrakech-Ménara ?", a: "Les guides ne font en général pas le transport. Réservez plutôt un transfert jusqu'à votre riad, puis retrouvez votre guide le lendemain matin à la porte de médina la plus proche." },
+      { q: "Peut-on visiter Marrakech pendant une escale à l'aéroport Marrakech-Ménara ?", a: "Oui, si l'escale dépasse 7 à 8 heures et que votre passeport vous permet d'entrer au Maroc : la médina est à 15–20 minutes, un guide officiel y fait une visite de 3 heures, et il faut être de retour 2 h 30 avant le vol. Voir notre guide <a href=\"/blog/escale-marrakech/\">escale à Marrakech</a>." },
       { q: "Qu'est-ce qu'une visite audioguidée de Marrakech ?", a: "Un parcours commenté que vous suivez seul avec votre téléphone et des écouteurs, à partir d'une dizaine d'euros. Moins personnalisé qu'un guide officiel, il permet de découvrir la médina ou les monuments à votre rythme, sans rendez-vous." },
       { q: "Faut-il laisser un pourboire au guide ?", a: "Ce n'est pas obligatoire, mais d'usage lorsque la visite a été bonne : 50 à 100 MAD pour une demi-journée, un peu plus pour une journée complète ou un petit groupe." },
     ],
     cta: {
-      heading: "De l'aéroport au riad, avant la première visite",
+      heading: "De l'aéroport Marrakech-Ménara au riad, avant la première visite",
       text: "Un chauffeur vous attend à l'aéroport de Marrakech-Ménara et vous dépose à la porte de médina la plus proche : le lendemain, votre guide vous y retrouve.",
       label: "Réserver un transfert",
     },

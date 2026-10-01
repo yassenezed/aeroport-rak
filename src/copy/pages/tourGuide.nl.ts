@@ -4,7 +4,7 @@ export default {
   title: "Gids in Marrakech vanaf luchthaven Marrakech-Menara",
   description: "Een gids in Marrakech vanaf luchthaven Marrakech-Menara: rondleidingen door de medina, uitstapjes naar Agafay en de Atlas, prijzen 2026 en officiële gidsen.",
   eyebrow: "Rondleidingen · medina en uitstapjes",
-  h1: "Gids in Marrakech: rondleidingen en uitstapjes",
+  h1: "Gids in Marrakech vanaf luchthaven Marrakech-Menara",
   lede: "Op een kwartier van luchthaven Marrakech-Menara is de medina de eerste dag moeilijk alleen te begrijpen. Een officiële gids voor een goed gekozen halve dag bespaart meer tijd en geld dan hij kost. Dit zijn de rondleidingen die de moeite waard zijn, de echte prijzen en hoe u valse gidsen vermijdt.",
   widget: "tours",
   highlights: [
@@ -15,7 +15,7 @@ export default {
   cardSections: [
     {
       eyebrow: "Ideeën voor rondleidingen",
-      heading: "Rondleidingen die de moeite waard zijn in Marrakech",
+      heading: "Rondleidingen na de landing op luchthaven Marrakech-Menara",
       intro: "Allemaal makkelijk bereikbaar vanaf luchthaven Marrakech-Menara of vanuit uw riad.",
       variant: 'feature',
       items: [
@@ -56,6 +56,24 @@ export default {
 </div>
 <p>De prijzen gelden voor de gids, zonder toegangsprijzen, lunch en vervoer. Een fooi van 50 tot 100 MAD na afloop is gebruikelijk als de rondleiding goed was, maar niet verplicht.</p>
 
+<h2>Reistijden vanaf luchthaven Marrakech-Menara</h2>
+<p>De luchthaven ligt 6 km ten zuidwesten van de medina, aan de kant van Agafay: de meeste bestemmingen zijn na de landing snel bereikbaar.</p>
+<div class="table-wrap">
+<table class="data">
+<thead><tr><th>Bestemming</th><th>Afstand</th><th>Met de auto</th></tr></thead>
+<tbody>
+<tr class="row-highlight"><td><strong>Medina, Jemaa el-Fna</strong></td><td class="num">≈ 6 km</td><td>15–20 min</td></tr>
+<tr><td><strong>Jardin Majorelle, Guéliz</strong></td><td class="num">≈ 8 km</td><td>20–25 min</td></tr>
+<tr><td><strong>Agafay-woestijn</strong></td><td class="num">≈ 35 km</td><td>40–50 min</td></tr>
+<tr><td><strong>Ourika-vallei (Setti Fatma)</strong></td><td class="num">≈ 65 km</td><td>1 u 15–1 u 30</td></tr>
+<tr><td><strong>Imlil, Hoge Atlas</strong></td><td class="num">≈ 65 km</td><td>1 u 15–1 u 30</td></tr>
+<tr><td><strong>Watervallen van Ouzoud</strong></td><td class="num">≈ 170 km</td><td>2 u 45–3 u</td></tr>
+<tr><td><strong>Essaouira</strong></td><td class="num">≈ 185 km</td><td>2 u 30–3 u</td></tr>
+</tbody>
+</table>
+</div>
+<p>Richttijden buiten de spits. Voor een rondleiding op de dag van aankomst kiest u de medina of Agafay: de Atlas en Essaouira vragen een hele dag.</p>
+
 <h2>Waar een gids echt verschil maakt</h2>
 <p><strong>De medina en de soeks</strong>, op dag één. In drie uur begrijpt u de logica van de wijken, vindt u de poorten en leert u waar u wat koopt en tegen welke prijs: de rest van het verblijf wordt veel eenvoudiger. <strong>De historische monumenten</strong>, waar gebrek aan bewegwijzering het bezoek zonder toelichting stil laat. <strong>Uitstapjes naar de Atlas en de valleien</strong>, waar de gids ook Berbers vertaalt.</p>
 <div class="callout">
@@ -66,7 +84,7 @@ export default {
 <h2>Vooraf boeken of ter plaatse?</h2>
 <p>Uw <strong>riad of hotel</strong> werkt bijna altijd samen met een officiële gids die het kent: de eenvoudigste oplossing, en de prijs blijft onderhandelbaar. <strong>Online platforms</strong> laten u beoordelingen vergelijken, de taal kiezen en de prijs vooraf vastleggen, handig in het hoogseizoen. De <strong>audiotours</strong> hierboven doet u alleen, met uw telefoon en oortjes, vanaf ongeveer € 10: een voordelige manier om de medina op uw eigen tempo te ontdekken, zonder afspraak. Om van de luchthaven naar de medina te gaan, boekt u een <a href="/nl/book-transfer/">transfer</a>; voor een uitstap op eigen houtje, zie <a href="/nl/car-rental/">autohuur</a> en onze pagina's <a href="/nl/blog/distance-essaouira-marrakech-airport/">Marrakech–Essaouira</a> en <a href="/nl/blog/distance-ouarzazate-marrakech-airport/">Marrakech–Ouarzazate</a>.</p>
 `,
-  faqHeading: "Een gids in Marrakech: veelgestelde vragen",
+  faqHeading: "Gids en luchthaven Marrakech-Menara: veelgestelde vragen",
   faqs: [
     { q: "Wat kost een officiële gids in Marrakech?", a: "300 tot 500 MAD voor een halve dag in de medina en 500 tot 800 MAD voor een hele dag, zonder toegangsprijzen en lunch. Een fooi van 50 tot 100 MAD is gebruikelijk als de rondleiding goed was." },
     { q: "Hoe herken ik een officiële gids in Marrakech?", a: "Hij heeft een beroepskaart van het ministerie van Toerisme, met foto en nummer, en toont die zonder aarzelen. Wie bezoekers op straat aanspreekt, heeft er meestal geen." },
@@ -75,11 +93,12 @@ export default {
     { q: "Hoe vermijd ik rondleidingen die in winkels eindigen?", a: "Zeg bij het begin dat er geen commerciële stops zijn, en spreek de duur en de inhoud af. Een officiële gids gaat akkoord: dat onderscheidt hem van een ronselaar op commissie." },
     { q: "Kan ik een gids boeken voor ik in Marrakech land?", a: "Ja, via uw riad of hotel, of op een online platform waar u beoordelingen vergelijkt en de taal kiest. In het hoogseizoen of voor een minder gangbare taal boekt u enkele dagen vooraf." },
     { q: "Kan de gids me ophalen op luchthaven Marrakech-Menara?", a: "Gidsen verzorgen meestal geen vervoer. Boek een transfer naar uw riad en ontmoet uw gids de volgende ochtend bij de dichtstbijzijnde medinapoort." },
+    { q: "Kan ik Marrakech bezoeken tijdens een overstap op luchthaven Marrakech-Menara?", a: "Ja, als de overstap langer dan 7 à 8 uur duurt en uw paspoort toegang tot Marokko geeft: de medina ligt op 15–20 minuten, een officiële gids leidt u er in 3 uur rond, en u moet 2,5 uur voor de vlucht terug zijn. Zie onze <a href=\"/nl/blog/layover-marrakech/\">gids voor een overstap in Marrakech</a>." },
     { q: "Wat is een audiotour door Marrakech?", a: "Een ingesproken route die u alleen volgt met uw telefoon en oortjes, vanaf ongeveer € 10. Minder persoonlijk dan een officiële gids, maar u ontdekt de medina of monumenten op uw eigen tempo, zonder afspraak." },
     { q: "Geef ik de gids een fooi?", a: "Het is niet verplicht, maar gebruikelijk als de rondleiding goed was: 50 tot 100 MAD voor een halve dag, iets meer voor een hele dag of een kleine groep." },
   ],
   cta: {
-    heading: "Van de luchthaven naar uw riad, voor de eerste rondleiding",
+    heading: "Van luchthaven Marrakech-Menara naar uw riad, voor de eerste rondleiding",
     text: "Een chauffeur wacht op u op luchthaven Marrakech-Menara en zet u af bij de dichtstbijzijnde medinapoort: de volgende ochtend wacht uw gids u daar op.",
     label: "Transfer boeken",
   },

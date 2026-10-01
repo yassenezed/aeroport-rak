@@ -4,7 +4,7 @@ export default {
   title: "Guía en Marrakech desde el aeropuerto de Marrakech-Menara",
   description: "Guía turístico en Marrakech desde el aeropuerto de Marrakech-Menara: visitas a la medina, excursiones a Agafay y al Atlas, precios 2026 y guías oficiales.",
   eyebrow: "Visitas guiadas · medina y excursiones",
-  h1: "Guía turístico en Marrakech: visitas y excursiones",
+  h1: "Guía turístico en Marrakech desde el aeropuerto Marrakech-Menara",
   lede: "A quince minutos del aeropuerto de Marrakech-Menara, la medina cuesta entenderla solo el primer día. Un guía oficial durante media jornada bien elegida ahorra más tiempo y dinero del que cuesta. Estas son las visitas que merecen la pena, los precios reales y cómo evitar a los falsos guías.",
   widget: 'tours',
   highlights: [
@@ -15,7 +15,7 @@ export default {
   cardSections: [
     {
       eyebrow: "Ideas de visitas",
-      heading: "Las visitas guiadas que merecen la pena en Marrakech",
+      heading: "Visitas guiadas para hacer al llegar al aeropuerto de Marrakech-Menara",
       intro: "Todas se alcanzan fácilmente desde el aeropuerto de Marrakech-Menara o desde su riad.",
       variant: 'feature',
       items: [
@@ -56,6 +56,24 @@ export default {
 </div>
 <p>Los precios son solo del guía, sin entradas a monumentos, comida ni transporte. Una propina de 50 a 100 MAD al final es habitual si la visita ha sido buena, pero no obligatoria.</p>
 
+<h2>Tiempos de trayecto desde el aeropuerto de Marrakech-Menara</h2>
+<p>El aeropuerto está a 6 km al suroeste de la medina, del lado de Agafay: casi todas las visitas quedan cerca tras aterrizar.</p>
+<div class="table-wrap">
+<table class="data">
+<thead><tr><th>Visita</th><th>Distancia</th><th>En coche</th></tr></thead>
+<tbody>
+<tr class="row-highlight"><td><strong>Medina, Jemaa el-Fna</strong></td><td class="num">≈ 6 km</td><td>15–20 min</td></tr>
+<tr><td><strong>Jardín Majorelle, Guéliz</strong></td><td class="num">≈ 8 km</td><td>20–25 min</td></tr>
+<tr><td><strong>Desierto de Agafay</strong></td><td class="num">≈ 35 km</td><td>40–50 min</td></tr>
+<tr><td><strong>Valle del Ourika (Setti Fatma)</strong></td><td class="num">≈ 65 km</td><td>1 h 15–1 h 30</td></tr>
+<tr><td><strong>Imlil, Alto Atlas</strong></td><td class="num">≈ 65 km</td><td>1 h 15–1 h 30</td></tr>
+<tr><td><strong>Cascadas de Uzud</strong></td><td class="num">≈ 170 km</td><td>2 h 45–3 h</td></tr>
+<tr><td><strong>Esauira</strong></td><td class="num">≈ 185 km</td><td>2 h 30–3 h</td></tr>
+</tbody>
+</table>
+</div>
+<p>Tiempos orientativos fuera de horas punta. Para una visita el mismo día de llegada, quédese con la medina o Agafay: el Atlas y Esauira requieren una jornada completa.</p>
+
 <h2>Dónde un guía cambia de verdad las cosas</h2>
 <p><strong>La medina y los zocos</strong>, el primer día. En tres horas entiende la lógica de los barrios, sitúa las puertas y aprende dónde comprar qué y a qué precio: el resto de la estancia se vuelve mucho más fácil. <strong>Los monumentos históricos</strong>, donde la falta de señalización deja la visita muda sin comentario. <strong>Las excursiones al Atlas y a los valles</strong>, donde el guía hace también de intérprete del bereber.</p>
 <div class="callout">
@@ -66,7 +84,7 @@ export default {
 <h2>¿Reservar antes de salir o allí?</h2>
 <p>Su <strong>riad u hotel</strong> casi siempre trabaja con un guía oficial de confianza: es lo más sencillo y el precio sigue siendo negociable. Las <strong>plataformas en línea</strong> permiten comparar opiniones, elegir el idioma y fijar el precio de antemano, algo útil en temporada alta. Las <strong>visitas con audioguía</strong> de arriba se hacen solo, con el móvil y auriculares, desde unos 10 €: una opción económica para descubrir la medina a su ritmo, sin cita. Para llegar a la medina desde el aeropuerto, reserve un <a href="/es/book-transfer/">traslado</a>; para una excursión por su cuenta, vea el <a href="/es/car-rental/">alquiler de coches</a> y nuestras páginas <a href="/es/blog/distance-essaouira-marrakech-airport/">Marrakech–Esauira</a> y <a href="/es/blog/distance-ouarzazate-marrakech-airport/">Marrakech–Uarzazat</a>.</p>
 `,
-  faqHeading: "Guía turístico en Marrakech: preguntas frecuentes",
+  faqHeading: "Guía turístico y aeropuerto de Marrakech-Menara: preguntas frecuentes",
   faqs: [
     { q: "¿Cuánto cuesta un guía oficial en Marrakech?", a: "De 300 a 500 MAD por media jornada en la medina, y de 500 a 800 MAD por jornada completa, sin entradas ni comida. Una propina de 50 a 100 MAD es habitual si la visita ha sido buena." },
     { q: "¿Cómo reconocer a un guía oficial en Marrakech?", a: "Tiene un carné profesional expedido por el Ministerio de Turismo, con foto y número, y lo muestra sin problema. Quienes abordan a los visitantes en la calle para ofrecer una visita no suelen tenerlo." },
@@ -75,11 +93,12 @@ export default {
     { q: "¿Cómo evitar las visitas que acaban en tiendas?", a: "Diga al principio que la visita no tendrá paradas comerciales y acuerde la duración y lo incluido. Un guía oficial lo acepta sin problema: es lo que lo distingue de un gancho que cobra comisión." },
     { q: "¿Se puede reservar un guía antes de aterrizar en Marrakech?", a: "Sí, a través de su riad u hotel, o en una plataforma en línea que permita comparar opiniones y elegir idioma. En temporada alta o para un idioma poco común, reserve con varios días de antelación." },
     { q: "¿Puede el guía recogerme en el aeropuerto de Marrakech-Menara?", a: "Los guías no suelen hacer el transporte. Reserve un traslado hasta su riad y reúnase con el guía a la mañana siguiente en la puerta de la medina más cercana." },
+    { q: "¿Se puede visitar Marrakech durante una escala en el aeropuerto de Marrakech-Menara?", a: "Sí, si la escala supera las 7 u 8 horas y su pasaporte le permite entrar en Marruecos: la medina está a 15–20 minutos, un guía oficial la recorre en 3 horas y hay que volver 2 h 30 antes del vuelo. Vea nuestra <a href=\"/es/blog/layover-marrakech/\">guía de escala en Marrakech</a>." },
     { q: "¿Qué es una visita con audioguía de Marrakech?", a: "Un recorrido comentado que sigue solo con el móvil y auriculares, desde unos 10 €. Menos personalizado que un guía oficial, permite descubrir la medina o los monumentos a su ritmo, sin cita." },
     { q: "¿Hay que dar propina al guía?", a: "No es obligatorio, pero sí habitual si la visita ha sido buena: 50 a 100 MAD por media jornada, algo más por una jornada completa o un grupo pequeño." },
   ],
   cta: {
-    heading: "Del aeropuerto al riad, antes de la primera visita",
+    heading: "Del aeropuerto de Marrakech-Menara al riad, antes de la primera visita",
     text: "Un conductor le espera en el aeropuerto de Marrakech-Menara y le deja en la puerta de la medina más cercana: a la mañana siguiente, su guía le espera allí.",
     label: "Reservar un traslado",
   },

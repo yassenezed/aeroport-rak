@@ -4,7 +4,7 @@ export default {
   title: "Reiseführer Marrakesch ab Flughafen Marrakesch-Menara",
   description: "Reiseführer in Marrakesch ab Flughafen Marrakesch-Menara: Medina-Führungen, Ausflüge nach Agafay und in den Atlas, Preise 2026 und offizielle Guides.",
   eyebrow: "Führungen · Medina und Ausflüge",
-  h1: "Reiseführer in Marrakesch: Führungen und Ausflüge",
+  h1: "Reiseführer in Marrakesch ab Flughafen Marrakesch-Menara",
   lede: "Eine Viertelstunde vom Flughafen Marrakesch-Menara entfernt ist die Medina am ersten Tag allein schwer zu verstehen. Ein offizieller Guide für einen gut gewählten halben Tag spart mehr Zeit und Geld, als er kostet. Hier die lohnenden Führungen, echte Preise und wie Sie falsche Guides meiden.",
   widget: 'tours',
   highlights: [
@@ -15,7 +15,7 @@ export default {
   cardSections: [
     {
       eyebrow: "Ideen für Führungen",
-      heading: "Führungen, die sich in Marrakesch lohnen",
+      heading: "Führungen nach der Landung am Flughafen Marrakesch-Menara",
       intro: "Alle sind vom Flughafen Marrakesch-Menara oder von Ihrem Riad aus leicht erreichbar.",
       variant: 'feature',
       items: [
@@ -56,6 +56,24 @@ export default {
 </div>
 <p>Die Preise gelten für den Guide, ohne Eintritte, Mittagessen und Transport. Ein Trinkgeld von 50 bis 100 MAD am Ende ist üblich, wenn die Führung gut war, aber keine Pflicht.</p>
 
+<h2>Fahrzeiten ab Flughafen Marrakesch-Menara</h2>
+<p>Der Flughafen liegt 6 km südwestlich der Medina, Richtung Agafay: Die meisten Ziele erreichen Sie nach der Landung schnell.</p>
+<div class="table-wrap">
+<table class="data">
+<thead><tr><th>Ziel</th><th>Entfernung</th><th>Fahrzeit</th></tr></thead>
+<tbody>
+<tr class="row-highlight"><td><strong>Medina, Jemaa el-Fna</strong></td><td class="num">≈ 6 km</td><td>15–20 Min.</td></tr>
+<tr><td><strong>Jardin Majorelle, Guéliz</strong></td><td class="num">≈ 8 km</td><td>20–25 Min.</td></tr>
+<tr><td><strong>Agafay-Wüste</strong></td><td class="num">≈ 35 km</td><td>40–50 Min.</td></tr>
+<tr><td><strong>Ourika-Tal (Setti Fatma)</strong></td><td class="num">≈ 65 km</td><td>1 Std. 15–1 Std. 30</td></tr>
+<tr><td><strong>Imlil, Hoher Atlas</strong></td><td class="num">≈ 65 km</td><td>1 Std. 15–1 Std. 30</td></tr>
+<tr><td><strong>Ouzoud-Wasserfälle</strong></td><td class="num">≈ 170 km</td><td>2 Std. 45–3 Std.</td></tr>
+<tr><td><strong>Essaouira</strong></td><td class="num">≈ 185 km</td><td>2 Std. 30–3 Std.</td></tr>
+</tbody>
+</table>
+</div>
+<p>Richtwerte außerhalb der Stoßzeiten. Für eine Führung am Ankunftstag eignen sich Medina oder Agafay: Atlas und Essaouira brauchen einen ganzen Tag.</p>
+
 <h2>Wo ein Guide wirklich etwas bringt</h2>
 <p><strong>Die Medina und die Souks</strong>, am ersten Tag. In drei Stunden verstehen Sie die Logik der Viertel, finden die Tore und lernen, wo man was zu welchem Preis kauft: Der Rest des Aufenthalts wird viel einfacher. <strong>Die historischen Monumente</strong>, wo fehlende Beschilderung den Besuch ohne Kommentar stumm lässt. <strong>Ausflüge in den Atlas und die Täler</strong>, wo der Guide auch Berberisch übersetzt.</p>
 <div class="callout">
@@ -66,7 +84,7 @@ export default {
 <h2>Vorab buchen oder vor Ort?</h2>
 <p>Ihr <strong>Riad oder Hotel</strong> arbeitet fast immer mit einem offiziellen Guide zusammen, den es kennt: die einfachste Lösung, und der Preis bleibt verhandelbar. <strong>Online-Plattformen</strong> erlauben, Bewertungen zu vergleichen, die Sprache zu wählen und den Preis vorab festzulegen, was in der Hochsaison hilft. Die <strong>Audio-Touren</strong> oben machen Sie allein mit Handy und Kopfhörern, ab etwa 10 €: eine günstige Art, die Medina im eigenen Tempo und ohne Termin zu entdecken. Für den Weg vom Flughafen in die Medina buchen Sie einen <a href="/de/book-transfer/">Transfer</a>; für einen Ausflug auf eigene Faust siehe <a href="/de/car-rental/">Mietwagen</a> sowie unsere Seiten <a href="/de/blog/distance-essaouira-marrakech-airport/">Marrakesch–Essaouira</a> und <a href="/de/blog/distance-ouarzazate-marrakech-airport/">Marrakesch–Ouarzazate</a>.</p>
 `,
-  faqHeading: "Reiseführer in Marrakesch: häufige Fragen",
+  faqHeading: "Reiseführer und Flughafen Marrakesch-Menara: häufige Fragen",
   faqs: [
     { q: "Was kostet ein offizieller Guide in Marrakesch?", a: "300 bis 500 MAD für einen halben Tag in der Medina und 500 bis 800 MAD für einen ganzen Tag, ohne Eintritte und Mittagessen. Ein Trinkgeld von 50 bis 100 MAD ist üblich, wenn die Führung gut war." },
     { q: "Woran erkenne ich einen offiziellen Guide in Marrakesch?", a: "Er besitzt einen Berufsausweis des Tourismusministeriums mit Foto und Nummer und zeigt ihn ohne Zögern. Wer Besucher auf der Straße anspricht, hat meist keinen." },
@@ -75,11 +93,12 @@ export default {
     { q: "Wie vermeide ich Führungen, die im Laden enden?", a: "Sagen Sie zu Beginn, dass es keine Verkaufsstopps gibt, und vereinbaren Sie Dauer und Leistungen. Ein offizieller Guide akzeptiert das: Das unterscheidet ihn von einem Schlepper auf Provision." },
     { q: "Kann ich einen Guide vor der Landung in Marrakesch buchen?", a: "Ja, über Ihr Riad oder Hotel oder auf einer Online-Plattform, auf der Sie Bewertungen vergleichen und die Sprache wählen. In der Hochsaison oder für eine seltene Sprache mehrere Tage im Voraus buchen." },
     { q: "Kann mich der Guide am Flughafen Marrakesch-Menara abholen?", a: "Guides übernehmen in der Regel keinen Transport. Buchen Sie einen Transfer zu Ihrem Riad und treffen Sie Ihren Guide am nächsten Morgen am nächstgelegenen Medina-Tor." },
+    { q: "Kann man Marrakesch während eines Aufenthalts am Flughafen Marrakesch-Menara besichtigen?", a: "Ja, wenn der Umstieg länger als 7 bis 8 Stunden dauert und Ihr Pass die Einreise nach Marokko erlaubt: Die Medina ist 15–20 Minuten entfernt, ein offizieller Guide zeigt sie in 3 Stunden, und Sie sollten 2,5 Stunden vor dem Flug zurück sein. Siehe unseren <a href=\"/de/blog/layover-marrakech/\">Ratgeber zum Zwischenstopp in Marrakesch</a>." },
     { q: "Was ist eine Audio-Tour durch Marrakesch?", a: "Ein kommentierter Rundgang, den Sie allein mit Handy und Kopfhörern machen, ab etwa 10 €. Weniger persönlich als ein offizieller Guide, aber Sie entdecken Medina oder Monumente im eigenen Tempo und ohne Termin." },
     { q: "Gibt man dem Guide Trinkgeld?", a: "Es ist keine Pflicht, aber üblich, wenn die Führung gut war: 50 bis 100 MAD für einen halben Tag, etwas mehr für einen ganzen Tag oder eine kleine Gruppe." },
   ],
   cta: {
-    heading: "Vom Flughafen zum Riad, vor der ersten Führung",
+    heading: "Vom Flughafen Marrakesch-Menara zum Riad, vor der ersten Führung",
     text: "Ein Fahrer erwartet Sie am Flughafen Marrakesch-Menara und bringt Sie zum nächstgelegenen Medina-Tor: Am nächsten Morgen trifft Sie Ihr Guide dort.",
     label: "Transfer buchen",
   },
