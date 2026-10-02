@@ -8,6 +8,7 @@ import FlightSearchWidget from '../components/affiliate/FlightSearchWidget.astro
 import EsimWidget from '../components/affiliate/EsimWidget.astro';
 import CompensationWidget from '../components/affiliate/CompensationWidget.astro';
 import ToursWidget from '../components/affiliate/ToursWidget.astro';
+import CarRentalWidget from '../components/affiliate/CarRentalWidget.astro';
 import TransferWidget from '../components/affiliate/TransferWidget.astro';
 import Icon from '../components/ui/Icon.astro';
 import DestinationsExplorer from '../components/destinations/DestinationsExplorer.astro';
@@ -169,6 +170,12 @@ if (page.faqs?.length) {
   {page.widget && (
     <section class="section-block section-block--widget">
       <div class="container">
+        {page.widgetIntro && (
+          <div class="widget-intro">
+            <h2 class="section-block__title">{page.widgetIntro.heading}</h2>
+            {page.widgetIntro.text && <p class="section-block__intro">{page.widgetIntro.text}</p>}
+          </div>
+        )}
         {page.widget === 'flights-arrivals' && <FlightWidget type="arrivals" lang={locale} />}
         {page.widget === 'flights-departures' && <FlightWidget type="departures" lang={locale} />}
         {page.widget === 'flight-search' && <FlightSearchWidget locale={locale} />}
@@ -176,6 +183,7 @@ if (page.faqs?.length) {
         {page.widget === 'esim' && <EsimWidget locale={locale} />}
         {page.widget === 'compensation' && <CompensationWidget locale={locale} />}
         {page.widget === 'tours' && <ToursWidget />}
+        {page.widget === 'car-rental' && <CarRentalWidget locale={locale} />}
       </div>
     </section>
   )}

@@ -1059,3 +1059,6 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
   .option-card__head { flex-wrap: wrap; }
 }
 #transfert { scroll-margin-top: 130px; }
+.car-widget { scroll-margin-top: 110px; min-height: 220px; }
+.widget-intro { margin-bottom: 1.25rem; }
+.widget-intro .section-block__intro { margin-bottom: 0; }

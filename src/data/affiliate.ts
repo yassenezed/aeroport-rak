@@ -34,6 +34,12 @@ export const travelpayouts = {
     campaignId: '541',
   },
 
+  /** Widget location de voiture EconomyBookings (promo 4480). */
+  carRental: {
+    promoId: '4480',
+    campaignId: '10',
+  },
+
   /** Widget visites guidées WeGoTrip (promo 4489), ville = Marrakech. */
   tours: {
     promoId: '4489',
@@ -183,6 +189,31 @@ export function toursWidgetSrc(): string {
     powered_by: 'true',
     campaign_id: t.tours.campaignId,
     promo_id: t.tours.promoId,
+  });
+  return `https://tpemd.com/content?${p.toString()}`;
+}
+
+/** URL du widget location de voiture (EconomyBookings), aux couleurs du site. */
+// Langues proposées par le widget : en, fr, es, pt, ru ; les autres retombent sur l'anglais.
+const CAR_WIDGET_LOCALES = ['fr', 'en', 'es'];
+
+export function carRentalWidgetSrc(locale = 'fr'): string {
+  const t = travelpayouts;
+  const p = new URLSearchParams({
+    trs: t.trs,
+    shmarker: t.marker,
+    locale: CAR_WIDGET_LOCALES.includes(locale) ? locale : 'en',
+    powered_by: 'true',
+    border_radius: '8',
+    plain: 'true',
+    show_logo: 'true',
+    color_background: '#FFFFFF',
+    color_button: '#3F4BB8',
+    color_text: '#15172B',
+    color_input_text: '#15172B',
+    color_button_text: '#FFFFFF',
+    promo_id: t.carRental.promoId,
+    campaign_id: t.carRental.campaignId,
   });
   return `https://tpemd.com/content?${p.toString()}`;
 }

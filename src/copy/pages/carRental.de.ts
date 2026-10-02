@@ -1,77 +1,136 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Mietwagen am Flughafen Marrakesch-Menara: Preise und Tipps",
-  description: "Mietwagen am Flughafen Marrakesch-Menara: reale Preise, Kaution, Selbstbeteiligung, Fahrzeugübergabe, Autofahren in Marokko und wann sich ein Auto nicht lohnt.",
-  eyebrow: 'Marrakesch Menara · Mietwagen',
-  h1: 'Einen Mietwagen am Flughafen Marrakesch nehmen',
-  lede: "Ein Auto öffnet den Atlas, das Ourika-Tal, Essaouira und den Süden. In der Medina wird es zur Last. So entscheiden Sie, das kostet Mieten am RAK wirklich, und das sind die drei Vertragszeilen, die zählen.",
-  facts: [
-    { label: 'Ab', value: '25 €', sub: '/ Tag' },
-    { label: 'Typische Kaution', value: '5.000–15.000', sub: 'MAD' },
-    { label: 'Mindestalter', value: '21', sub: 'Jahre' },
-    { label: 'Führerschein', value: 'National', sub: 'akzeptiert' },
+  title: "Mietwagen Flughafen Marrakesch-Menara ab 25 € pro Tag",
+  description: "Mietwagen am Flughafen Marrakesch-Menara: Anbieter vergleichen, Preise ab 25 €/Tag, Kaution, Versicherung und Tipps für Atlas und Essaouira.",
+  eyebrow: "Mietwagen · Preisvergleich",
+  h1: "Mietwagen am Flughafen Marrakesch-Menara",
+  lede: "Vergleichen Sie die Vermieter in der Ankunftshalle und übernehmen Sie Ihr Auto direkt nach der Landung. Kleinwagen für Essaouira, SUV für den Atlas oder Van für die Familie: hier die echten Preise, die einzuplanende Kaution und die Fallen im Vertrag.",
+  highlights: [
+    { icon: 'wallet', value: "Ab 25 €", label: "Pro Tag, Kleinwagen in der Nebensaison" },
+    { icon: 'plane-landing', value: "Ankunftshalle", label: "Schalter der Vermieter am Flughafen" },
+    { icon: 'passport', value: "Nationaler Führerschein", label: "Für Urlaubsreisen akzeptiert" },
+    { icon: 'shield-check', value: "Kostenlose Stornierung", label: "Bei den meisten Angeboten" },
+  ],
+  widget: 'car-rental',
+  widgetIntro: {
+    heading: "Mietwagen am Flughafen Marrakesch-Menara vergleichen",
+    text: "Tippen Sie „Marrakech“ und wählen Sie „Marrakech Airport“ als Abholort, dann Daten und Uhrzeiten: Die Angebote internationaler und marokkanischer Vermieter erscheinen mit Gesamtpreis.",
+  },
+  cardSections: [
+    {
+      eyebrow: "Vor der Buchung",
+      heading: "4 Tipps, um weniger zu zahlen",
+      variant: 'compact',
+      items: [
+        { icon: 'clock', title: "2 bis 3 Wochen vorher buchen", text: "Kleinwagen und Automatik sind in den Ferien zuerst ausgebucht." },
+        { icon: 'dollar-circle', title: "„Voll/Voll“ wählen", text: "Sie geben den Tank voll zurück und zahlen nur den verbrauchten Kraftstoff, ohne Servicegebühr." },
+        { icon: 'sun', title: "Nebensaison nutzen", text: "Januar außerhalb der Feiertage, Juni und November haben die niedrigsten Preise des Jahres." },
+        { icon: 'shield-check', title: "Kostenlose Stornierung behalten", text: "Die meisten Angebote sind bis 48 Stunden vor Abholung kostenlos stornierbar." },
+      ],
+    },
+    {
+      eyebrow: "Kategorien",
+      heading: "Welcher Mietwagen für Ihre Marrakesch-Reise?",
+      intro: "Wählen Sie nach Ihrer Route, nicht nach dem Lockpreis.",
+      variant: 'feature',
+      items: [
+        { icon: 'car', title: "Economy", text: "Dacia Sandero, Kia Picanto, Hyundai i10: ideal für Essaouira, das Ourika-Tal und asphaltierte Straßen.", tags: ["Ab 25 €/Tag", "4–5 Plätze"], link: { key: 'carBudget', label: "Angebote ansehen" } },
+        { icon: 'star', title: "Premium", text: "Premium-Limousinen und SUVs für bequemes Reisen oder Geschäftsreisen.", tags: ["Ab 110 €/Tag", "Hohe Kaution"], link: { key: 'carLuxury', label: "Entdecken" } },
+        { icon: 'users', title: "Van mit 7 bis 9 Plätzen", text: "Dacia Jogger, Renault Trafic: die ganze Familie samt Gepäck in einem Fahrzeug.", tags: ["Ab 55 €/Tag", "7–9 Plätze"], link: { key: 'carMinivan', label: "Erkunden" } },
+        { icon: 'check', title: "Automatik", text: "In Marokko seltener und teurer, im Verkehr von Marrakesch aber deutlich entspannter.", tags: ["Ab 45 €/Tag", "Früh buchen"], link: { key: 'carEasy', label: "Fahrzeuge ansehen" } },
+      ],
+    },
+    {
+      eyebrow: "Warum am Flughafen",
+      heading: "Warum den Mietwagen am Flughafen Marrakesch-Menara nehmen",
+      variant: 'feature',
+      items: [
+        { icon: 'plane-landing', title: "Auto direkt nach der Landung", text: "Die Schalter liegen in der Ankunftshalle: Fahren Sie in den Atlas oder an die Küste, ohne durch die Stadt zu müssen." },
+        { icon: 'map', title: "Direkt auf die Fernstraßen", text: "Der Flughafen liegt südwestlich der Stadt, Richtung Agafay, mit schnellem Zugang zu den Straßen nach Essaouira und in den Atlas." },
+        { icon: 'building', title: "Internationale und lokale Anbieter", text: "Große Marken und marokkanische Agenturen nebeneinander: Der Vergleich zeigt alles auf einer Seite." },
+        { icon: 'luggage', title: "Einfache Rückgabe vor dem Flug", text: "Geben Sie das Auto kurz vor dem Check-in auf dem Flughafenparkplatz ab, ganz ohne Taxisuche." },
+      ],
+    },
   ],
   body: `
-<h2>Brauchen Sie in Marrakesch wirklich ein Auto?</h2>
-<p>Stellen Sie sich die Frage vor der Buchung, sie klärt alles. <strong>Wenn Sie in Marrakesch bleiben</strong>: nein. Die Medina ist Fußgängerzone, Parken in der Stadt kostet und liegt in den Händen informeller Wächter, der Verkehr verlangt echte Eingewöhnung, und ein Taxi kostet 15 bis 50 MAD pro Fahrt. Ein Auto, das fünf Tage vor einem Riad steht, ist verlorenes Geld.</p>
-<p><strong>Wenn Sie die Stadt verlassen</strong>: ja, ohne Zögern. Ourika, Imlil, Agafay, Essaouira, der Tichka und Ouarzazate lassen sich eigenständig ungleich besser erleben als mit einer organisierten Tour, und die marokkanischen Hauptstraßen sind in gutem Zustand.</p>
-<div class="callout">
-<span class="callout-label">Die effizienteste Lösung</span>
-<p>Nehmen Sie das Auto nicht bei der Landung. Verbringen Sie die ersten zwei Tage ohne Fahrzeug in der Medina und mieten Sie dann für die drei Ausflugstage, in einer Station in Guéliz oder am Flughafen. Sie sparen zwei Miettage und zwei Nächte Parkgebühr.</p>
-</div>
-
-<h2>Die realen Preise, jenseits der Anzeige</h2>
+<h2>Mietwagenpreise in Marrakesch 2026</h2>
 <div class="table-wrap">
 <table class="data">
-<thead><tr><th>Kategorie</th><th>Preis / Tag</th><th>Für</th></tr></thead>
+<thead><tr><th>Kategorie</th><th>Preis / Tag</th><th>Übliche Kaution</th><th>Für</th></tr></thead>
 <tbody>
-<tr class="row-highlight"><td><strong>Kleinwagen</strong> (Dacia Sandero, Kia Picanto)</td><td class="num">25–35 €</td><td>Paar, asphaltierte Straßen</td></tr>
-<tr><td><strong>Kompakt</strong> (Clio, Polo)</td><td class="num">35–45 €</td><td>Komfort, leistungsfähige Klimaanlage</td></tr>
-<tr><td><strong>SUV / 4x4</strong> (Duster, Sportage)</td><td class="num">55–90 €</td><td>Pisten, Atlas, Agafay</td></tr>
-<tr><td><strong>Van 7 Plätze</strong></td><td class="num">70–110 €</td><td>Familie, Gruppe</td></tr>
+<tr class="row-highlight"><td><strong>Kleinwagen (Sandero, Picanto)</strong></td><td class="num">25–35 €</td><td class="num">5.000–8.000 MAD</td><td>Paare, asphaltierte Straßen</td></tr>
+<tr><td><strong>Kompaktwagen (Clio, Polo)</strong></td><td class="num">35–45 €</td><td class="num">6.000–10.000 MAD</td><td>Komfort, lange Strecken</td></tr>
+<tr><td><strong>SUV (Duster, Sportage)</strong></td><td class="num">55–90 €</td><td class="num">10.000–15.000 MAD</td><td>Atlas, Pisten von Agafay</td></tr>
+<tr><td><strong>Van mit 7 Plätzen</strong></td><td class="num">55–95 €</td><td class="num">8.000–15.000 MAD</td><td>Familien, Gruppen</td></tr>
 </tbody>
 </table>
 </div>
-<p>Dazu kommen Kraftstoff – Diesel liegt bei 12 bis 14 MAD je Liter –, Maut auf den Autobahnen nach Casablanca oder Agadir und die Zusatzversicherung, falls Sie sie nehmen.</p>
+<p>Dazu kommen Kraftstoff (Diesel kostet rund 12 bis 14 MAD pro Liter), Autobahnmaut und, falls gewünscht, die Selbstbeteiligungsversicherung. In den europäischen Schulferien und im Sommer steigen die Preise deutlich.</p>
 
-<h2>Die drei Vertragszeilen, die zählen</h2>
+<h2>Braucht man in Marrakesch wirklich ein Auto?</h2>
+<p><strong>Wenn Sie in der Stadt bleiben</strong>, nein: Die Medina ist Fußgängerzone, Parken kostet Geld und wird von Wächtern betreut, und ein Petit Taxi kostet 15 bis 50 MAD pro Fahrt. <strong>Wenn Sie die Stadt verlassen</strong>, ja: Ourika, Imlil, Agafay, Essaouira oder der Tichka-Pass lassen sich auf eigene Faust viel besser erkunden.</p>
+<div class="callout">
+<span class="callout-label">Die sparsamste Lösung</span>
+<p>Verbringen Sie die ersten Tage ohne Auto in der Medina, fahren Sie per <a href="/de/book-transfer/">Transfer</a> zum Riad und mieten Sie nur für die Ausflugstage. So sparen Sie Miete und Parkgebühren für Tage, an denen das Auto nur herumstehen würde.</p>
+</div>
+
+<h2>Roadtrips ab Flughafen Marrakesch-Menara</h2>
+<div class="table-wrap">
+<table class="data">
+<thead><tr><th>Ziel</th><th>Entfernung</th><th>Fahrzeit</th><th>Empfohlenes Auto</th></tr></thead>
+<tbody>
+<tr><td><strong>Agafay-Wüste</strong></td><td class="num">≈ 35 km</td><td>40–50 Min.</td><td>Kleinwagen (SUV für Pisten)</td></tr>
+<tr><td><strong>Ourika-Tal</strong></td><td class="num">≈ 65 km</td><td>1 Std. 15–1 Std. 30</td><td>Kleinwagen</td></tr>
+<tr><td><strong>Imlil, Hoher Atlas</strong></td><td class="num">≈ 65 km</td><td>1 Std. 15–1 Std. 30</td><td>Kleinwagen oder SUV</td></tr>
+<tr><td><strong>Ouzoud-Wasserfälle</strong></td><td class="num">≈ 170 km</td><td>2 Std. 45–3 Std.</td><td>Kompaktwagen</td></tr>
+<tr><td><strong>Essaouira</strong></td><td class="num">≈ 185 km</td><td>2 Std. 30–3 Std.</td><td>Kompaktwagen</td></tr>
+<tr><td><strong>Ouarzazate über den Tichka</strong></td><td class="num">≈ 200 km</td><td>4 Std.–4 Std. 30</td><td>Kompaktwagen oder SUV</td></tr>
+</tbody>
+</table>
+</div>
+<p>Alle diese Straßen sind asphaltiert. Der Tichka-Pass (2.260 m) ist kurvig und stark von Lkw befahren: Planen Sie großzügig und fahren Sie ihn nicht nachts. Details in unseren Ratgebern zu <a href="/de/blog/distance-essaouira-marrakech-airport/">Essaouira</a> und <a href="/de/blog/distance-ouarzazate-marrakech-airport/">Ouarzazate</a>.</p>
+
+<h2>Die drei wichtigen Punkte im Vertrag</h2>
 <h3>Die Kaution</h3>
-<p>Zwischen 5.000 und 15.000 MAD, als Reservierung auf einer Kreditkarte <strong>auf den Namen des Hauptfahrers</strong>. Debitkarten mit aufgeschobener Belastung und Prepaidkarten werden oft abgelehnt. Prüfen Sie Ihr Limit vor der Abreise: Das ist der häufigste Ablehnungsgrund am Schalter.</p>
+<p>5.000 bis 15.000 MAD je nach Kategorie, geblockt auf einer <strong>Kreditkarte auf den Namen des Hauptfahrers</strong>. Prepaid- und viele Debitkarten werden abgelehnt: der häufigste Ablehnungsgrund am Schalter. Prüfen Sie Ihr Kartenlimit vor der Reise.</p>
 <h3>Die Selbstbeteiligung</h3>
-<p>Der Basisvertrag enthält fast immer eine hohe Selbstbeteiligung, die im Schadensfall bei Ihnen bleibt. Drei Wege: das Risiko tragen, die Haftungsreduzierung des Vermieters kaufen (teuer, 10 bis 20 € pro Tag) oder eine günstigere Drittversicherung nutzen – dann strecken Sie den Betrag im Schadensfall vor und lassen ihn sich erstatten.</p>
+<p>Der Basisvertrag lässt bei Schäden eine hohe Selbstbeteiligung bei Ihnen. Sie können sie akzeptieren, die Versicherung des Vermieters kaufen (10 bis 20 € pro Tag) oder eine günstigere Drittversicherung abschließen, bei der Sie zuerst zahlen und sich das Geld später erstatten lassen.</p>
 <h3>Die Fahrzeugübergabe</h3>
-<p>Hier entscheiden sich Streitfälle. <strong>Fotografieren und filmen Sie das Fahrzeug vor der Abfahrt aus allen Winkeln</strong>, inklusive Felgen, Windschutzscheibe, Dach und Innenraum, mit aktiviertem Zeitstempel. Lassen Sie jeden Kratzer im Protokoll vermerken. Wiederholen Sie bei der Rückgabe exakt dieselbe Serie. Diese zehn Minuten sind die lohnendste Vorsichtsmaßnahme Ihrer Reise.</p>
+<p><strong>Fotografieren und filmen Sie das Auto vor der Abfahrt von allen Seiten</strong>: Felgen, Windschutzscheibe, Dach, Innenraum und Tankstand. Lassen Sie jeden Kratzer im Protokoll vermerken und wiederholen Sie die Fotos bei der Rückgabe. Diese zehn Minuten verhindern die meisten Streitfälle.</p>
 
-<h2>Autofahren in Marokko</h2>
-<p>Der nationale Führerschein genügt für einen touristischen Aufenthalt. Rechtsverkehr, Tempolimits 60 km/h innerorts, 100 km/h auf Landstraßen und 120 km/h auf Autobahnen, dazu zahlreiche aktive feste und mobile Blitzer. Die örtliche Regel: <strong>Vorfahrt wird eher per Blickkontakt als per Schild ausgehandelt</strong>, und Zweiräder, Karren und Fußgänger tauchen ohne Vorwarnung auf. Nachts außerorts ist mit Fahrzeugen ohne Licht zu rechnen.</p>
-<p>Die Gendarmerie kontrolliert auf Überlandstrecken häufig: Halten Sie Führerschein, Mietvertrag und Reisepass griffbereit. Bußgelder werden vor Ort gegen Quittung bezahlt.</p>
+<h2>Gut zu wissen vor der Anmietung</h2>
+<div class="table-wrap">
+<table class="data">
+<tbody>
+<tr><td><strong>Mindestalter</strong></td><td>Meist 21 Jahre, 23 bis 25 für Premium; Junge-Fahrer-Gebühr möglich</td></tr>
+<tr><td><strong>Führerschein</strong></td><td>Nationaler Führerschein, je nach Vermieter seit mindestens 1 bis 2 Jahren</td></tr>
+<tr><td><strong>Kaution</strong></td><td>Kreditkarte auf den Namen des Fahrers, Pflicht</td></tr>
+<tr><td><strong>Kilometer</strong></td><td>Oft unbegrenzt; bei sehr günstigen Angeboten prüfen</td></tr>
+<tr><td><strong>Tempolimits</strong></td><td>60 km/h innerorts, 100 km/h auf Landstraßen, 120 km/h auf Autobahnen; viele Radarkontrollen</td></tr>
+</tbody>
+</table>
+</div>
+<p>Halten Sie Führerschein, Mietvertrag und Pass griffbereit: Polizeikontrollen sind auf Überlandstraßen häufig, Bußgelder werden vor Ort gegen Quittung bezahlt. Mehr dazu in unseren Ratgebern zum <a href="/de/blog/car-rental-marrakech-airport/">Mietwagen am Flughafen Marrakesch</a> und zur <a href="/de/blog/long-term-car-rental-marrakech/">Langzeitmiete</a>.</p>
 `,
+  faqHeading: "Mietwagen am Flughafen Marrakesch-Menara: häufige Fragen",
   faqs: [
-    {
-      q: 'Was kostet ein Mietwagen am Flughafen Marrakesch?',
-      a: "Ab 25 bis 35 € pro Tag für einen Kleinwagen, 35 bis 45 € für einen Kompakten und 55 bis 90 € für SUV oder 4x4. Hinzu kommen Kraftstoff bei rund 12 bis 14 MAD je Liter Diesel, Maut und eine eventuelle Haftungsreduzierung.",
-    },
-    {
-      q: 'Welche Kaution verlangt man für einen Mietwagen in Marokko?',
-      a: "Zwischen 5.000 und 15.000 MAD je nach Kategorie, als Reservierung auf einer Kreditkarte auf den Namen des Hauptfahrers. Prepaidkarten und manche Debitkarten werden abgelehnt: Prüfen Sie Ihr Limit vor der Abreise.",
-    },
-    {
-      q: 'Reicht der deutsche Führerschein in Marokko?',
-      a: "Ja, der nationale Führerschein genügt für einen touristischen Aufenthalt; ein internationaler Führerschein ist nicht erforderlich. Halten Sie Führerschein, Mietvertrag und Reisepass griffbereit, Kontrollen sind auf Überlandstrecken häufig.",
-    },
-    {
-      q: 'Braucht man für den Atlas ab Marrakesch einen 4x4?',
-      a: "Nein für Ourika, Imlil oder den Tichka-Pass, die asphaltiert und mit einem Kleinwagen befahrbar sind. Ein 4x4 wird erst für die Pisten von Agafay, abgelegene Täler und unbefestigte Zufahrten nützlich, wo die Bodenfreiheit mehr zählt als der Antrieb.",
-    },
-    {
-      q: 'Besser am Flughafen oder in der Stadt mieten?',
-      a: "Am Flughafen, wenn Sie sofort auf Rundreise gehen. In Guéliz, wenn Sie mit zwei Tagen in der Medina beginnen: Sie sparen die Miettage und das Parken, in denen das Auto ohnehin nutzlos wäre.",
-    },
+    { q: "Was kostet ein Mietwagen am Flughafen Marrakesch?", a: "Ab 25 bis 35 € pro Tag für einen Kleinwagen, 35 bis 45 € für einen Kompaktwagen und 55 bis 90 € für einen SUV. Dazu kommen Kraftstoff, Maut und eine eventuelle Versicherung. In Schulferien und im Sommer steigen die Preise." },
+    { q: "Welche Vermieter gibt es am Flughafen Marrakesch-Menara?", a: "Große internationale Marken und viele marokkanische Agenturen haben einen Schalter oder Treffpunkt in der Ankunftshalle. Der Vergleich auf dieser Seite zeigt ihre Angebote nebeneinander mit Gesamtpreis." },
+    { q: "Wie hoch ist die Kaution?", a: "5.000 bis 15.000 MAD je nach Kategorie, geblockt auf einer Kreditkarte des Hauptfahrers. Prepaid- und viele Debitkarten werden abgelehnt: Prüfen Sie Ihr Limit vor der Reise." },
+    { q: "Reicht der deutsche Führerschein in Marokko?", a: "Ja, der nationale Führerschein genügt für eine Urlaubsreise, wenn Sie ihn je nach Vermieter seit mindestens 1 bis 2 Jahren besitzen. Führen Sie ihn mit Vertrag und Pass mit: Kontrollen sind häufig." },
+    { q: "Lohnt sich eine Versicherung ohne Selbstbeteiligung?", a: "Sie senkt oder streicht Ihren Anteil bei Schäden, für 10 bis 20 € pro Tag beim Vermieter. Eine Drittversicherung ist günstiger, aber Sie zahlen zuerst und fordern dann zurück. Ohne Schutz tragen Sie die Selbstbeteiligung." },
+    { q: "Braucht man für den Atlas einen Geländewagen?", a: "Nicht für Ourika, Imlil oder den Tichka-Pass, die komplett asphaltiert sind. Ein SUV hilft nur auf den Pisten von Agafay oder in abgelegenen Tälern, wo Bodenfreiheit wichtiger ist als Allrad." },
+    { q: "Welche Tempolimits gelten in Marokko?", a: "60 km/h innerorts, 100 km/h auf Landstraßen und 120 km/h auf Autobahnen. Feste und mobile Radarkontrollen sind häufig, Bußgelder werden vor Ort gegen Quittung bezahlt." },
+    { q: "Wann ist ein Mietwagen am günstigsten?", a: "Im Januar außerhalb der Feiertage, im Juni und im November. Europäische Schulferien, Ostern und der Sommer treiben die Preise: 2 bis 3 Wochen vorher buchen und kostenlose Stornierung behalten." },
+    { q: "Kann ich kostenlos stornieren?", a: "Bei den meisten Angeboten ja, bis 48 Stunden vor der Abholung. Die genauen Bedingungen stehen vor der Zahlung: Prüfen Sie sie, besonders bei Aktionspreisen." },
+    { q: "Besser am Flughafen oder in der Stadt mieten?", a: "Am Flughafen, wenn Sie direkt zum Roadtrip aufbrechen. Beginnen Sie mit ein paar Tagen in der Medina, nehmen Sie einen Transfer zum Riad und mieten Sie nur für die Ausflugstage." },
   ],
   cta: {
-    heading: 'Am ersten Tag brauchen Sie kein Auto',
-    text: "Ein Transfer bringt Sie zu Ihrem Riad, und Sie setzen sich erst ans Steuer, wenn es in den Atlas oder an die Küste geht.",
-    label: 'Transfer buchen',
+    heading: "Bereit für den Atlas und die Küste?",
+    text: "Vergleichen Sie die Vermieter am Flughafen und buchen Sie mit wenigen Klicks, bei den meisten Angeboten kostenlos stornierbar.",
+    label: "Preise vergleichen",
+    href: "#reserver",
+    secondary: { label: "Lieber einen Transfer", key: 'bookTransfer' },
   },
 } satisfies LocalizedPage;

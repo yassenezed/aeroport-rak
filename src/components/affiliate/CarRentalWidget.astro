@@ -1,0 +1,12 @@
+---
+// Widget location de voiture EconomyBookings (Travelpayouts / tpemd), langue de la page.
+// Identifiants et couleurs dans src/data/affiliate.ts.
+import { carRentalWidgetSrc } from '../../data/affiliate';
+interface Props { locale?: string }
+const { locale = 'fr' } = Astro.props;
+const src = carRentalWidgetSrc(locale);
+---
+
+<div class="car-widget" id="reserver">
+  <script async src={src} charset="utf-8" is:inline></script>
+</div>

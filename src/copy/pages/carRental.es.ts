@@ -1,77 +1,136 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Alquiler de coches en el aeropuerto de Marrakech-Menara",
-  description: "Alquilar un coche en el aeropuerto de Marrakech-Menara: precios reales, fianza, franquicia, inspección, conducir en Marruecos y cuándo no.",
-  eyebrow: 'Marrakech Menara · Alquiler',
-  h1: 'Alquilar un coche en el aeropuerto de Marrakech',
-  lede: "Un coche abre el Atlas, Ourika, Essaouira y el sur. Se convierte en un lastre si se queda en la medina. Así se decide, esto cuesta realmente un alquiler en el RAK y estas son las tres líneas del contrato que importan.",
-  facts: [
-    { label: 'Precio de partida', value: '25 €', sub: '/ día' },
-    { label: 'Fianza habitual', value: '5.000–15.000', sub: 'MAD' },
-    { label: 'Edad mínima', value: '21', sub: 'años' },
-    { label: 'Carné', value: 'Nacional', sub: 'aceptado' },
+  title: "Alquiler de coches aeropuerto Marrakech-Menara desde 25 €",
+  description: "Alquiler de coches en el aeropuerto de Marrakech-Menara: compare empresas, precios desde 25 €/día, fianza, seguro y consejos para el Atlas y Esauira.",
+  eyebrow: "Alquiler de coches · comparador",
+  h1: "Alquiler de coches en el aeropuerto de Marrakech-Menara",
+  lede: "Compare las empresas de alquiler de la sala de llegadas y recoja su coche nada más aterrizar. Un utilitario para Esauira, un SUV para el Atlas o un monovolumen para la familia: estos son los precios reales, la fianza que hay que prever y las trampas del contrato.",
+  highlights: [
+    { icon: 'wallet', value: "Desde 25 €", label: "Por día, utilitario en temporada baja" },
+    { icon: 'plane-landing', value: "Sala de llegadas", label: "Mostradores en el aeropuerto" },
+    { icon: 'passport', value: "Carné nacional", label: "Aceptado para una estancia turística" },
+    { icon: 'shield-check', value: "Cancelación gratuita", label: "En la mayoría de ofertas" },
+  ],
+  widget: 'car-rental',
+  widgetIntro: {
+    heading: "Comparar alquileres en el aeropuerto de Marrakech-Menara",
+    text: "Escriba «Marrakech» y elija «Marrakech Airport» como lugar de recogida, luego sus fechas y horas: las ofertas de empresas internacionales y marroquíes aparecen con el precio total.",
+  },
+  cardSections: [
+    {
+      eyebrow: "Antes de reservar",
+      heading: "4 claves para pagar menos",
+      variant: 'compact',
+      items: [
+        { icon: 'clock', title: "Reserve con 2 o 3 semanas", text: "Los coches pequeños y los automáticos son los primeros en agotarse en vacaciones." },
+        { icon: 'dollar-circle', title: "Elija «lleno a lleno»", text: "Devuelve el depósito lleno y solo paga el combustible usado, sin cargos de servicio." },
+        { icon: 'sun', title: "Apueste por la temporada baja", text: "Enero fuera de fiestas, junio y noviembre tienen los precios más bajos del año." },
+        { icon: 'shield-check', title: "Mantenga la cancelación gratuita", text: "La mayoría de ofertas se cancelan sin coste hasta 48 h antes de la recogida." },
+      ],
+    },
+    {
+      eyebrow: "Categorías",
+      heading: "¿Qué coche alquilar para su viaje a Marrakech?",
+      intro: "Elija según su itinerario, no según el precio de reclamo.",
+      variant: 'feature',
+      items: [
+        { icon: 'car', title: "Económico", text: "Dacia Sandero, Kia Picanto, Hyundai i10: ideal para Esauira, el valle del Ourika y carreteras asfaltadas.", tags: ["Desde 25 €/día", "4–5 plazas"], link: { key: 'carBudget', label: "Ver ofertas" } },
+        { icon: 'star', title: "Prestigio", text: "Berlinas y SUV premium para viajar con comodidad o en viaje de negocios.", tags: ["Desde 110 €/día", "Fianza alta"], link: { key: 'carLuxury', label: "Descubrir" } },
+        { icon: 'users', title: "Monovolumen de 7 a 9 plazas", text: "Dacia Jogger, Renault Trafic: toda la familia y el equipaje en un solo vehículo.", tags: ["Desde 55 €/día", "7–9 plazas"], link: { key: 'carMinivan', label: "Explorar" } },
+        { icon: 'check', title: "Cambio automático", text: "Más escaso y más caro en Marruecos, pero mucho más descansado en el tráfico de Marrakech.", tags: ["Desde 45 €/día", "Reservar pronto"], link: { key: 'carEasy', label: "Ver vehículos" } },
+      ],
+    },
+    {
+      eyebrow: "Por qué el aeropuerto",
+      heading: "Por qué alquilar en el aeropuerto de Marrakech-Menara",
+      variant: 'feature',
+      items: [
+        { icon: 'plane-landing', title: "Coche nada más aterrizar", text: "Los mostradores están en la sala de llegadas: salga hacia el Atlas o la costa sin pasar por la ciudad." },
+        { icon: 'map', title: "Salida directa a las carreteras", text: "El aeropuerto está al suroeste de la ciudad, hacia Agafay, con acceso rápido a las carreteras de Esauira y del Atlas." },
+        { icon: 'building', title: "Empresas internacionales y locales", text: "Grandes marcas y agencias marroquíes, una al lado de otra: el comparador lo muestra todo en una página." },
+        { icon: 'luggage', title: "Devolución fácil antes del vuelo", text: "Deje el coche en el aparcamiento del aeropuerto justo antes de facturar, sin buscar taxi." },
+      ],
+    },
   ],
   body: `
-<h2>¿De verdad necesita un coche en Marrakech?</h2>
-<p>Pregúnteselo antes de reservar, lo resuelve todo. <strong>Si se queda en Marrakech</strong>: no. La medina es peatonal, el aparcamiento en la ciudad es de pago y está en manos de guardas informales, la circulación exige una adaptación real y un taxi cuesta de 15 a 50 MAD la carrera. Un coche inmovilizado cinco días delante de un riad es dinero perdido.</p>
-<p><strong>Si sale de la ciudad</strong>: sí, sin dudarlo. Ourika, Imlil, Agafay, Essaouira, el Tichka y Ouarzazate se visitan infinitamente mejor con autonomía que en una excursión organizada, y las carreteras principales marroquíes están en buen estado.</p>
-<div class="callout">
-<span class="callout-label">La fórmula más eficaz</span>
-<p>No coja el coche al aterrizar. Pase sus dos primeros días en la medina sin vehículo y alquile después para los tres días de excursiones, en una agencia de Guéliz o en el aeropuerto. Se ahorra dos días de alquiler y dos noches de aparcamiento.</p>
-</div>
-
-<h2>Los precios reales, más allá del anuncio</h2>
+<h2>Precio del alquiler de coches en Marrakech en 2026</h2>
 <div class="table-wrap">
 <table class="data">
-<thead><tr><th>Categoría</th><th>Precio / día</th><th>Para</th></tr></thead>
+<thead><tr><th>Categoría</th><th>Precio / día</th><th>Fianza habitual</th><th>Para</th></tr></thead>
 <tbody>
-<tr class="row-highlight"><td><strong>Urbano</strong> (Dacia Sandero, Kia Picanto)</td><td class="num">25–35 €</td><td>Pareja, carreteras asfaltadas</td></tr>
-<tr><td><strong>Compacto</strong> (Clio, Polo)</td><td class="num">35–45 €</td><td>Confort, aire acondicionado eficaz</td></tr>
-<tr><td><strong>SUV / 4x4</strong> (Duster, Sportage)</td><td class="num">55–90 €</td><td>Pistas, Atlas, Agafay</td></tr>
-<tr><td><strong>Monovolumen 7 plazas</strong></td><td class="num">70–110 €</td><td>Familia, grupo</td></tr>
+<tr class="row-highlight"><td><strong>Utilitario (Sandero, Picanto)</strong></td><td class="num">25–35 €</td><td class="num">5000–8000 MAD</td><td>Parejas, carreteras asfaltadas</td></tr>
+<tr><td><strong>Compacto (Clio, Polo)</strong></td><td class="num">35–45 €</td><td class="num">6000–10 000 MAD</td><td>Comodidad, largas distancias</td></tr>
+<tr><td><strong>SUV (Duster, Sportage)</strong></td><td class="num">55–90 €</td><td class="num">10 000–15 000 MAD</td><td>Atlas, pistas de Agafay</td></tr>
+<tr><td><strong>Monovolumen 7 plazas</strong></td><td class="num">55–95 €</td><td class="num">8000–15 000 MAD</td><td>Familias, grupos</td></tr>
 </tbody>
 </table>
 </div>
-<p>A esto se suman el combustible —el gasóleo ronda los 12 a 14 MAD el litro—, los peajes de la autopista de Casablanca o de Agadir, y el seguro complementario si lo contrata.</p>
+<p>Sume el combustible (el gasóleo ronda los 12 a 14 MAD el litro), los peajes de autopista y, si lo contrata, el seguro de franquicia. Los precios suben mucho en las vacaciones escolares europeas y en verano.</p>
+
+<h2>¿De verdad necesita un coche en Marrakech?</h2>
+<p><strong>Si se queda en la ciudad</strong>, no: la medina es peatonal, el aparcamiento es de pago y gestionado por guardas, y un petit taxi cuesta de 15 a 50 MAD por trayecto. <strong>Si sale de la ciudad</strong>, sí: el Ourika, Imlil, Agafay, Esauira o el puerto del Tichka se disfrutan mucho más por libre.</p>
+<div class="callout">
+<span class="callout-label">La fórmula más rentable</span>
+<p>Pase los primeros días en la medina sin coche, llegando a su riad en <a href="/es/book-transfer/">traslado</a>, y alquile solo para los días de excursión. Se ahorra el alquiler y el aparcamiento de los días en que el coche no se movería.</p>
+</div>
+
+<h2>Rutas en coche desde el aeropuerto de Marrakech-Menara</h2>
+<div class="table-wrap">
+<table class="data">
+<thead><tr><th>Destino</th><th>Distancia</th><th>Trayecto</th><th>Coche recomendado</th></tr></thead>
+<tbody>
+<tr><td><strong>Desierto de Agafay</strong></td><td class="num">≈ 35 km</td><td>40–50 min</td><td>Utilitario (SUV para pistas)</td></tr>
+<tr><td><strong>Valle del Ourika</strong></td><td class="num">≈ 65 km</td><td>1 h 15–1 h 30</td><td>Utilitario</td></tr>
+<tr><td><strong>Imlil, Alto Atlas</strong></td><td class="num">≈ 65 km</td><td>1 h 15–1 h 30</td><td>Utilitario o SUV</td></tr>
+<tr><td><strong>Cascadas de Uzud</strong></td><td class="num">≈ 170 km</td><td>2 h 45–3 h</td><td>Compacto</td></tr>
+<tr><td><strong>Esauira</strong></td><td class="num">≈ 185 km</td><td>2 h 30–3 h</td><td>Compacto</td></tr>
+<tr><td><strong>Uarzazat por el Tichka</strong></td><td class="num">≈ 200 km</td><td>4 h–4 h 30</td><td>Compacto o SUV</td></tr>
+</tbody>
+</table>
+</div>
+<p>Todas estas carreteras están asfaltadas. El puerto del Tichka (2260 m) es sinuoso y con muchos camiones: calcule tiempo de sobra y evite cruzarlo de noche. Más detalles en nuestras guías de <a href="/es/blog/distance-essaouira-marrakech-airport/">Esauira</a> y <a href="/es/blog/distance-ouarzazate-marrakech-airport/">Uarzazat</a>.</p>
 
 <h2>Las tres líneas del contrato que importan</h2>
 <h3>La fianza</h3>
-<p>Entre 5.000 y 15.000 MAD, bloqueada por preautorización en una tarjeta de crédito <strong>a nombre del conductor principal</strong>. Las tarjetas de débito diferido y las de prepago suelen rechazarse. Compruebe su límite antes de salir: es el motivo de rechazo más frecuente en el mostrador.</p>
+<p>De 5000 a 15 000 MAD según la categoría, bloqueados en una <strong>tarjeta de crédito a nombre del conductor principal</strong>. Las tarjetas prepago y muchas de débito se rechazan: es el primer motivo de rechazo en el mostrador. Compruebe su límite antes de viajar.</p>
 <h3>La franquicia</h3>
-<p>El contrato básico incluye casi siempre una franquicia elevada, que corre a su cargo en caso de daño. Tres soluciones: asumir el riesgo, contratar la exención de franquicia de la empresa (cara, 10 a 20 € al día), o recurrir a un seguro de terceros más económico, sabiendo que en ese caso usted adelanta el importe y se lo reembolsan después.</p>
+<p>El contrato básico deja a su cargo una franquicia elevada en caso de daños. Puede aceptarla, contratar el seguro de franquicia de la empresa (10 a 20 € al día) o un seguro externo más barato, en cuyo caso adelanta el pago y luego le reembolsan.</p>
 <h3>La inspección del vehículo</h3>
-<p>Aquí se juegan los litigios. <strong>Fotografíe y grabe el vehículo desde todos los ángulos antes de salir</strong>, incluidas llantas, parabrisas, techo e interior, con la fecha activada. Haga anotar cada arañazo en el documento. A la vuelta, repita exactamente la misma secuencia. Esta precaución de diez minutos es la más rentable de su viaje.</p>
+<p><strong>Fotografíe y grabe el coche desde todos los ángulos antes de salir</strong>: llantas, parabrisas, techo, interior y nivel de combustible. Haga anotar cada arañazo en el documento y repita las fotos a la devolución. Esos diez minutos evitan la mayoría de litigios.</p>
 
-<h2>Conducir en Marruecos</h2>
-<p>El carné nacional basta para una estancia turística. Se conduce por la derecha, los límites son de 60 km/h en ciudad, 100 km/h en carretera y 120 km/h en autopista, y los radares fijos y móviles son numerosos y están activos. La regla local que hay que asimilar: <strong>las prioridades se negocian con la mirada más que con la señal</strong>, y las motos, los carros y los peatones aparecen sin avisar. De noche, fuera de poblado, cuidado con los vehículos sin luces.</p>
-<p>La gendarmería controla con frecuencia en los ejes interurbanos: tenga a mano carné, contrato de alquiler y pasaporte. Las multas se pagan en el acto, con recibo.</p>
+<h2>Lo que conviene saber antes de alquilar</h2>
+<div class="table-wrap">
+<table class="data">
+<tbody>
+<tr><td><strong>Edad mínima</strong></td><td>21 años en general, 23 a 25 para premium; posible recargo por conductor joven</td></tr>
+<tr><td><strong>Carné</strong></td><td>Carné nacional con al menos 1 o 2 años de antigüedad según la empresa</td></tr>
+<tr><td><strong>Fianza</strong></td><td>Tarjeta de crédito a nombre del conductor, obligatoria</td></tr>
+<tr><td><strong>Kilometraje</strong></td><td>A menudo ilimitado; compruébelo en las ofertas muy baratas</td></tr>
+<tr><td><strong>Límites de velocidad</strong></td><td>60 km/h en ciudad, 100 km/h en carretera, 120 km/h en autopista; muchos radares</td></tr>
+</tbody>
+</table>
+</div>
+<p>Lleve a mano el carné, el contrato y el pasaporte: los controles son frecuentes en las carreteras interurbanas y las multas se pagan en el acto con recibo. Más información en nuestras guías para <a href="/es/blog/car-rental-marrakech-airport/">alquilar un coche en el aeropuerto de Marrakech</a> y sobre el <a href="/es/blog/long-term-car-rental-marrakech/">alquiler de larga duración</a>.</p>
 `,
+  faqHeading: "Alquiler de coches en el aeropuerto de Marrakech-Menara: preguntas frecuentes",
   faqs: [
-    {
-      q: '¿Cuánto cuesta alquilar un coche en el aeropuerto de Marrakech?',
-      a: "Desde 25 a 35 € al día para un urbano, 35 a 45 € para un compacto y 55 a 90 € para un SUV o un 4x4. Añada el combustible, unos 12 a 14 MAD el litro de gasóleo, los peajes y la eventual exención de franquicia.",
-    },
-    {
-      q: '¿Qué fianza se pide para alquilar un coche en Marruecos?',
-      a: "Entre 5.000 y 15.000 MAD según la categoría, bloqueada por preautorización en una tarjeta de crédito a nombre del conductor principal. Las tarjetas de prepago se rechazan: compruebe su límite antes de salir.",
-    },
-    {
-      q: '¿Basta el carné español para conducir en Marruecos?',
-      a: "Sí, el carné nacional basta para una estancia turística; el permiso internacional no es obligatorio. Tenga a mano carné, contrato y pasaporte: los controles de gendarmería son frecuentes en los ejes interurbanos.",
-    },
-    {
-      q: '¿Hace falta un 4x4 para ir al Atlas desde Marrakech?',
-      a: "No para Ourika, Imlil o el puerto de Tichka, que están asfaltados y son accesibles con un urbano. Un 4x4 solo resulta útil para las pistas de Agafay, los valles apartados y los accesos sin asfaltar, donde importa más la altura libre que la tracción.",
-    },
-    {
-      q: '¿Es mejor alquilar en el aeropuerto o en la ciudad?',
-      a: "En el aeropuerto si sale inmediatamente de ruta. En Guéliz si empieza con dos días en la medina: se ahorra los días de alquiler y el aparcamiento durante los que el coche no serviría de nada.",
-    },
+    { q: "¿Cuánto cuesta alquilar un coche en el aeropuerto de Marrakech?", a: "Desde 25 a 35 € al día un utilitario, 35 a 45 € un compacto y 55 a 90 € un SUV. Añada combustible, peajes y el posible seguro de franquicia. Los precios suben en vacaciones escolares y en verano." },
+    { q: "¿Qué empresas de alquiler hay en el aeropuerto de Marrakech-Menara?", a: "Grandes marcas internacionales y muchas agencias marroquíes tienen mostrador o punto de encuentro en la sala de llegadas. El comparador de esta página muestra sus ofertas juntas con el precio total." },
+    { q: "¿Qué fianza hay que prever?", a: "De 5000 a 15 000 MAD según la categoría, bloqueados en una tarjeta de crédito a nombre del conductor principal. Las tarjetas prepago y muchas de débito se rechazan: compruebe su límite antes de viajar." },
+    { q: "¿Basta el carné de conducir español en Marruecos?", a: "Sí, el carné nacional basta para una estancia turística si tiene al menos 1 o 2 años de antigüedad según la empresa. Llévelo con el contrato y el pasaporte: los controles son frecuentes." },
+    { q: "¿Conviene contratar el seguro de franquicia?", a: "Reduce o elimina lo que paga en caso de daños, por 10 a 20 € al día con la empresa de alquiler. Un seguro externo es más barato, pero adelanta el pago y luego reclama. Sin seguro, la franquicia corre de su cuenta." },
+    { q: "¿Hace falta un 4x4 para el Atlas?", a: "No para el Ourika, Imlil o el puerto del Tichka, totalmente asfaltados. Un SUV solo es útil en las pistas de Agafay o los valles remotos, donde importa más la altura libre que la tracción." },
+    { q: "¿Cuáles son los límites de velocidad en Marruecos?", a: "60 km/h en ciudad, 100 km/h en carretera y 120 km/h en autopista. Hay muchos radares fijos y móviles, y las multas se pagan en el acto con recibo." },
+    { q: "¿Cuándo es más barato alquilar?", a: "En enero fuera de fiestas, junio y noviembre. Las vacaciones escolares europeas, Semana Santa y el verano encarecen los precios: reserve con 2 o 3 semanas y mantenga la cancelación gratuita." },
+    { q: "¿Se puede cancelar la reserva sin coste?", a: "Sí en la mayoría de ofertas, hasta 48 h antes de la recogida. Las condiciones exactas aparecen antes del pago: revíselas, sobre todo en las tarifas promocionales." },
+    { q: "¿Mejor alquilar en el aeropuerto o en la ciudad?", a: "En el aeropuerto si sale de ruta enseguida. Si empieza con unos días en la medina, tome un traslado hasta el riad y alquile solo para los días de excursión." },
   ],
   cta: {
-    heading: 'No necesita coche el primer día',
-    text: "Un traslado le deja en su riad, y usted coge el volante solo cuando sale hacia el Atlas o la costa.",
-    label: 'Reservar un traslado',
+    heading: "¿Listo para recorrer el Atlas y la costa?",
+    text: "Compare las empresas del aeropuerto y reserve en pocos clics, con cancelación gratuita en la mayoría de ofertas.",
+    label: "Comparar precios",
+    href: "#reserver",
+    secondary: { label: "Prefiero un traslado", key: 'bookTransfer' },
   },
 } satisfies LocalizedPage;
