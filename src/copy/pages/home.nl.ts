@@ -72,7 +72,7 @@ export default {
 <p>Meer op de pagina <a href="/nl/services/">voorzieningen op de luchthaven</a>.</p>
 
 <h2>Parkeren bij de luchthaven</h2>
-<p>De parkeerterreinen van de luchthaven liggen tegenover de terminals. Iemand afzetten binnen 30 minuten is gratis of symbolisch, een uur kost ongeveer 20 MAD en een dag 70 tot 80 MAD. Voor een week rekent u op 450 tot 550 MAD: vanaf drie of vier dagen is heen en terug met taxi of transfer vaak goedkoper. Bekijk de <a href="/nl/parking/">parkeertarieven</a>.</p>
+<p>De parkings van de luchthaven liggen tegenover de terminals: ongeveer 1.550 plaatsen op drie bewaakte openluchtparkings. Volgens het ONDA-tarief kost het eerste uur 6 MAD en 12 tot 24 uur 42 MAD, ongeveer 300 MAD voor een week: voor reizen tot een week is dat vaak goedkoper dan een taxi heen en terug. Bekijk de <a href="/nl/parking/">parkeertarieven</a>.</p>
 
 <h2>Ter plaatse een auto huren</h2>
 <p>Internationale en Marokkaanse verhuurders hebben balies in de aankomsthal. Een kleine auto kost € 25 tot € 35 per dag, met een borg van 5.000 tot 15.000 MAD op een creditcard. Een auto is alleen nuttig om Marrakech uit te gaan: de Atlas, Ourika, Essaouira of Ouarzazate. Onze pagina <a href="/nl/car-rental/">autohuur</a> behandelt de valkuilen in het contract.</p>

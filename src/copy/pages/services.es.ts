@@ -63,7 +63,7 @@ export default {
       { icon: 'car', key: 'transfers', title: "Taxi oficial", text: "100–150 MAD de día y 150–240 MAD de noche, con tarifas en la parada.", cta: "Tarifas del taxi" },
       { icon: 'van', key: 'bookTransfer', title: "Traslado privado", text: "Desde 27 € por vehículo, conductor con su nombre y vuelo seguido, incluso de noche.", cta: "Reservar" },
       { icon: 'tag', key: 'carRental', title: "Alquiler de coches", text: "Mostradores en el vestíbulo de llegadas, desde 25 € al día.", cta: "Comparar" },
-      { icon: 'parking', key: 'parking', title: "Parking del aeropuerto", text: "Unos 20 MAD la hora y 70–80 MAD el día, frente a las terminales.", cta: "Ver el parking" },
+      { icon: 'parking', key: 'parking', title: "Parking del aeropuerto", text: "6 MAD la primera hora y 42 MAD las 24 horas (tarifa ONDA), frente a las terminales.", cta: "Ver el parking" },
       { icon: 'plane-landing', key: 'arrivals', title: "Llegadas en directo", text: "Siga un vuelo y su hora real de aterrizaje antes de salir.", cta: "Ver llegadas" },
     ],
   },

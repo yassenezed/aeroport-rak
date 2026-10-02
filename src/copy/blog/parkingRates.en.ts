@@ -1,66 +1,53 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "Marrakech Menara Airport parking rates: hourly and daily",
-  description: "Marrakech Menara Airport parking tariffs: hourly, daily and weekly prices, drop-off zone, payment and cheaper alternatives.",
-  eyebrow: 'Airport',
-  h1: 'Marrakech Airport parking: the tariff table',
-  lede: "Very cheap for a drop-off, reasonable for a same-day return, markedly less obvious for a week. Here are the orders of magnitude and the sum to do before leaving your car.",
-  excerpt: 'Hourly, daily and weekly prices at RAK parking, with the alternatives for when long-stay no longer adds up.',
-  date: '2026-09-06',
+  title: "Marrakech Menara Airport parking cost by length of stay",
+  description: "How much parking at Marrakech Menara Airport costs for 3 hours, 1 day, 1 or 2 weeks: worked out with the ONDA rate card and compared with a taxi.",
+  eyebrow: "Airport",
+  h1: "Marrakech Menara Airport parking: the cost by length of stay",
+  lede: "MAD 6 for a drop-off, MAD 42 for a day, about MAD 300 for a week: RAK parking is one of the cheapest items of any trip. Here is the cost for each length of stay, and the point where a taxi or transfer becomes the better deal.",
+  excerpt: "The real cost of RAK parking for 3 hours, 1 day, 3 days, 1 or 2 weeks, using the ONDA rate card and compared with taxis and transfers.",
+  date: '2026-10-02',
   facts: [
-    { label: '30 minutes', value: 'free', sub: 'or ≈ MAD 10' },
-    { label: '1 hour', value: '≈ 20', sub: 'MAD' },
-    { label: '24 hours', value: '70–80', sub: 'MAD' },
-    { label: '1 week', value: '450–550', sub: 'MAD' },
+    { label: "1 hour", value: "6", sub: "MAD" },
+    { label: "24 hours", value: "42", sub: "MAD" },
+    { label: "1 week", value: "≈ 300", sub: "MAD" },
+    { label: "Capacity", value: "1,550", sub: "spaces" },
   ],
   body: `
-<h2>The tariff, in orders of magnitude</h2>
-<p>RAK parking is charged by duration, with a short first band that is free or nominal, then hourly charging capped daily. The figures below were checked in September 2026 and serve as a guide: <strong>the board at the entrance is authoritative</strong>, since the scale is revised periodically.</p>
+<h2>Marrakech Menara Airport parking cost by how long you are away</h2>
+<p>Worked out with the ONDA rate card for a car in an open-air space, counting MAD 42 per 24-hour period:</p>
 <div class="table-wrap">
 <table class="data">
-<thead><tr><th>Duration</th><th>Indicative rate</th><th>Typical use</th></tr></thead>
+<thead><tr><th>Situation</th><th>Duration</th><th>Cost</th><th>≈ in euros</th></tr></thead>
 <tbody>
-<tr class="row-highlight"><td><strong>Under 30 minutes</strong></td><td class="num">free or ≈ MAD 10</td><td>Dropping off or collecting someone</td></tr>
-<tr><td><strong>1 hour</strong></td><td class="num">≈ MAD 20</td><td>Waiting for a delayed flight</td></tr>
-<tr><td><strong>3 hours</strong></td><td class="num">≈ MAD 40</td><td>Seeing someone off</td></tr>
-<tr><td><strong>24 hours</strong></td><td class="num">MAD 70–80</td><td>Same-day return trip</td></tr>
-<tr><td><strong>3 days</strong></td><td class="num">≈ MAD 200–240</td><td>Long weekend</td></tr>
-<tr><td><strong>1 week</strong></td><td class="num">MAD 450–550</td><td>Trip abroad</td></tr>
+<tr><td><strong>Dropping off or picking up</strong></td><td>up to 1 h</td><td class="num">MAD 6</td><td class="num">€0.55</td></tr>
+<tr><td><strong>Seeing someone off</strong></td><td>2 to 3 h</td><td class="num">MAD 11</td><td class="num">€1</td></tr>
+<tr><td><strong>Same-day return</strong></td><td>5 to 12 h</td><td class="num">MAD 22</td><td class="num">€2</td></tr>
+<tr class="row-highlight"><td><strong>One night</strong></td><td>12 to 24 h</td><td class="num">MAD 42</td><td class="num">€3.90</td></tr>
+<tr><td><strong>Long weekend</strong></td><td>3 days</td><td class="num">≈ MAD 126</td><td class="num">€11.70</td></tr>
+<tr><td><strong>One week</strong></td><td>7 days</td><td class="num">≈ MAD 294</td><td class="num">€27</td></tr>
+<tr><td><strong>Two weeks</strong></td><td>14 days</td><td class="num">≈ MAD 588</td><td class="num">€54</td></tr>
 </tbody>
 </table>
 </div>
-<p>Pay at the machine or the kiosk <strong>before</strong> returning to your vehicle. Bring cash: cards are not accepted at every machine.</p>
+<p class="small">Indicative amounts: ONDA may revise the rates and the sign at the entrance prevails. Approximate conversion €1 ≈ MAD 10.8. The full rate card and the three car parks are covered on our <a href="/en/parking/">airport parking</a> page.</p>
 
-<h2>The point where it stops adding up</h2>
-<p>Compare it with a return trip into town: two taxi rides at the posted fare come to <strong>MAD 200–300</strong>, or about €54 for two private transfers. Beyond three or four days, parking matches then exceeds that figure — and you also leave a car exposed to the sun.</p>
+<h2>Parking, taxi or transfer: the break-even point</h2>
+<p>A return taxi to the medina costs MAD 200 to 300 by day: the price of <strong>5 to 7 days of parking</strong>. Two <a href="/en/book-transfer/">private transfers</a> come to about MAD 580, or <strong>two weeks of parking</strong>. If you live in or around Marrakech, leaving your car at the airport is almost always the cheapest option for trips of up to two weeks.</p>
 <div class="callout">
-<span class="callout-label">Sixty degrees inside</span>
-<p>A car parked in full sun in Marrakech in summer passes 60 °C inside. Leave no electronics, cosmetics, medicines or lighters in it. And nothing visible on the seats, as anywhere else.</p>
+<span class="callout-label">The cost the rate card does not show</span>
+<p>The spaces are open-air. In summer the inside of a car goes well above 60 °C: use a sunshade and leave no electronics, medicines or cosmetics inside.</p>
 </div>
 
-<h2>Drop-off and collection</h2>
-<p>The area in front of the terminals allows a brief stop, and attendants keep traffic moving, especially in the evening. If you are collecting someone, remember that <strong>30 to 60 minutes pass between landing and the exit</strong>: park and wait there rather than circling the building.</p>
-
-<h2>Hire car: do not take a ticket</h2>
-<p>If you are returning a rental, the return parking is arranged by the hire company. Follow their signs and do not take a ticket at the public car park entrance, or you will pay for time that is not yours. Allow a quarter of an hour for the inspection and keep dated photos of the returned vehicle.</p>
+<h2>Three tips to pay the right price</h2>
+<p><strong>Keep the ticket</strong> from the barrier: you need it to pay before leaving. <strong>Carry dirhams in cash</strong>, as cards are not accepted everywhere. And if you are returning a <a href="/en/car-rental/">hire car</a>, follow the company's signs without taking a ticket at the public car park.</p>
 `,
   faqs: [
-    {
-      q: 'How much is a day of parking at Marrakech Airport?',
-      a: "Around MAD 70–80 for 24 hours, with hourly charging of about MAD 20 below that. The board at the entrance is authoritative and is revised periodically.",
-    },
-    {
-      q: 'Is drop-off free at RAK?',
-      a: "The first band, around thirty minutes, is free or nominal, which covers a quick drop-off or collection. Attendants keep traffic moving in front of the terminals, especially in the evening.",
-    },
-    {
-      q: 'How much is a week of parking at Marrakech Airport?',
-      a: "About MAD 450–550. Beyond three or four days, two return rides by taxi or transfer often cost less, and spare you leaving a car in the sun.",
-    },
-    {
-      q: 'Can you pay for parking by card at Marrakech Menara?',
-      a: "Not at every machine: bring cash in dirhams. Payment is made before returning to your vehicle, at the machine or the kiosk.",
-    },
+    { q: "How much is a day of parking at Marrakech airport?", a: "MAD 42 for 12 to 24 hours on the ONDA rate card, about €3.90. For shorter stays, MAD 22 covers 5 to 12 hours." },
+    { q: "How much is a week of parking at RAK?", a: "About MAD 294 (≈ €27) at MAD 42 per 24-hour period, and about MAD 588 for two weeks." },
+    { q: "Is parking cheaper than a return taxi?", a: "Yes for up to about a week: a return taxi to the medina costs MAD 200 to 300 by day, the price of 5 to 7 days of parking." },
+    { q: "How much does a quick drop-off cost?", a: "MAD 6 if you enter the car park, for up to 1 hour. The lane in front of the terminals is only for brief stops." },
+    { q: "Can I pay for parking by card?", a: "Not everywhere: bring dirhams in cash. You pay before leaving, at the cash desk or machine." },
   ],
 } satisfies LocalizedArticle;

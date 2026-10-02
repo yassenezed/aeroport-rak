@@ -84,7 +84,7 @@ export default {
 <p>For a flight before 9 am, book your ride <strong>the day before</strong>, with your riad or as a <a href="/en/book-transfer/">transfer</a>: finding a taxi in a medina lane at 5 am is anything but easy, and the night fare applies until daybreak. Fare details are on the <a href="/en/transfers/">airport transfers and taxis</a> page and in our <a href="/en/blog/taxi-tips-marrakech/">Marrakech taxi tips</a>.</p>
 
 <h2>Dropping someone off or parking</h2>
-<p>The drop-off zone in front of the terminal is for very short stops only. To walk someone to the desk, use the <a href="/en/parking/">airport car park</a>: about MAD 20 an hour, MAD 70 to 80 a day.</p>
+<p>The drop-off zone in front of the terminal is for very short stops only. To walk someone to the desk, use the <a href="/en/parking/">airport car park</a>: MAD 6 for the first hour, MAD 42 for 12 to 24 hours.</p>
 
 <h2>Dirhams, souvenirs and luggage: what to know</h2>
 <p>Dirhams cannot be taken out beyond a token amount: change your last notes <em>before</em> passport control, at the exchange desks in the public hall, and keep the receipt from your original exchange. For souvenirs, argan oil, spices and cosmetics in containers over 100 ml go in the hold, no exceptions. Pottery travels badly without proper packing; most medina sellers know how to prepare a parcel for the plane. More tips in our guide to <a href="/en/blog/money-in-morocco/">money and exchange in Morocco</a>.</p>

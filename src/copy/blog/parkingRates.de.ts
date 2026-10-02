@@ -1,54 +1,53 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "Parktarife am Flughafen Marrakesch-Menara: Stunde und Tag",
-  description: "Parktarife am Flughafen Marrakesch-Menara: Preise pro Stunde, Tag und Woche, Kurzhaltezone, Bezahlung und günstigere Alternativen.",
-  eyebrow: 'Flughafen',
-  h1: 'Parken am Flughafen Marrakesch: die Tariftabelle',
-  lede: "Sehr günstig zum Absetzen, vernünftig für einen Tagesausflug, deutlich weniger eindeutig für eine Woche. Hier die Größenordnungen und die Rechnung vor dem Abstellen.",
-  excerpt: 'Preise pro Stunde, Tag und Woche am RAK-Parkplatz, mit Alternativen, wenn sich Langzeitparken nicht mehr lohnt.',
-  date: '2026-09-06',
+  title: "Parkkosten am Flughafen Marrakesch-Menara nach Dauer",
+  description: "Was Parken am Flughafen Marrakesch-Menara für 3 Stunden, 1 Tag, 1 oder 2 Wochen kostet: berechnet nach ONDA-Tarif und verglichen mit dem Taxi.",
+  eyebrow: "Flughafen",
+  h1: "Parken am Flughafen Marrakesch-Menara: die Kosten nach Reisedauer",
+  lede: "6 MAD zum Absetzen, 42 MAD für einen Tag, rund 300 MAD für eine Woche: Parken am RAK gehört zu den günstigsten Posten einer Reise. Hier die Kosten für jede Dauer und der Punkt, ab dem Taxi oder Transfer günstiger werden.",
+  excerpt: "Die echten Parkkosten am RAK für 3 Stunden, 1 Tag, 3 Tage, 1 oder 2 Wochen, mit dem ONDA-Tarif und dem Vergleich zu Taxi und Transfer.",
+  date: '2026-10-02',
   facts: [
-    { label: '30 Minuten', value: 'kostenlos', sub: 'oder ≈ 10 MAD' },
-    { label: '1 Stunde', value: '≈ 20', sub: 'MAD' },
-    { label: '24 Stunden', value: '70–80', sub: 'MAD' },
-    { label: '1 Woche', value: '450–550', sub: 'MAD' },
+    { label: "1 Stunde", value: "6", sub: "MAD" },
+    { label: "24 Stunden", value: "42", sub: "MAD" },
+    { label: "1 Woche", value: "≈ 300", sub: "MAD" },
+    { label: "Kapazität", value: "1.550", sub: "Plätze" },
   ],
   body: `
-<h2>Die Tabelle in Größenordnungen</h2>
-<p>Parken am RAK wird nach Dauer abgerechnet, mit einer kurzen ersten Stufe, kostenlos oder symbolisch, danach stundenweise mit Tagesdeckel. Die folgenden Werte wurden im September 2026 geprüft und dienen als Anhaltspunkt: <strong>Maßgeblich ist die Tafel am Eingang</strong>, der Tarif wird periodisch überarbeitet.</p>
+<h2>Parkkosten am Flughafen Marrakesch-Menara nach Abwesenheitsdauer</h2>
+<p>Berechnet nach dem ONDA-Tarif für ein Auto auf einem Freiluftplatz, mit 42 MAD pro 24 Stunden:</p>
 <div class="table-wrap">
 <table class="data">
-<thead><tr><th>Dauer</th><th>Richtpreis</th><th>Typische Nutzung</th></tr></thead>
+<thead><tr><th>Situation</th><th>Dauer</th><th>Kosten</th><th>≈ in Euro</th></tr></thead>
 <tbody>
-<tr class="row-highlight"><td><strong>Unter 30 Minuten</strong></td><td class="num">kostenlos oder ≈ 10 MAD</td><td>Jemanden absetzen oder abholen</td></tr>
-<tr><td><strong>1 Stunde</strong></td><td class="num">≈ 20 MAD</td><td>Auf einen verspäteten Flug warten</td></tr>
-<tr><td><strong>3 Stunden</strong></td><td class="num">≈ 40 MAD</td><td>Jemanden zum Abflug begleiten</td></tr>
-<tr><td><strong>24 Stunden</strong></td><td class="num">70–80 MAD</td><td>Tagesausflug</td></tr>
-<tr><td><strong>3 Tage</strong></td><td class="num">≈ 200–240 MAD</td><td>Langes Wochenende</td></tr>
-<tr><td><strong>1 Woche</strong></td><td class="num">450–550 MAD</td><td>Auslandsreise</td></tr>
+<tr><td><strong>Jemanden absetzen oder abholen</strong></td><td>bis 1 Std.</td><td class="num">6 MAD</td><td class="num">0,55 €</td></tr>
+<tr><td><strong>Zum Abflug begleiten</strong></td><td>2 bis 3 Std.</td><td class="num">11 MAD</td><td class="num">1 €</td></tr>
+<tr><td><strong>Hin und zurück am selben Tag</strong></td><td>5 bis 12 Std.</td><td class="num">22 MAD</td><td class="num">2 €</td></tr>
+<tr class="row-highlight"><td><strong>Eine Nacht</strong></td><td>12 bis 24 Std.</td><td class="num">42 MAD</td><td class="num">3,90 €</td></tr>
+<tr><td><strong>Langes Wochenende</strong></td><td>3 Tage</td><td class="num">≈ 126 MAD</td><td class="num">11,70 €</td></tr>
+<tr><td><strong>Eine Woche</strong></td><td>7 Tage</td><td class="num">≈ 294 MAD</td><td class="num">27 €</td></tr>
+<tr><td><strong>Zwei Wochen</strong></td><td>14 Tage</td><td class="num">≈ 588 MAD</td><td class="num">54 €</td></tr>
 </tbody>
 </table>
 </div>
-<p>Bezahlt wird am Automaten oder an der Kasse, <strong>bevor</strong> Sie zum Fahrzeug zurückkehren. Nehmen Sie Bargeld mit: Nicht jeder Automat akzeptiert Karten.</p>
+<p class="small">Richtwerte: Das ONDA kann den Tarif anpassen, es gilt der Aushang an der Einfahrt. Ungefährer Kurs 1 € ≈ 10,8 MAD. Den vollständigen Tarif und die drei Parkplätze finden Sie auf unserer Seite <a href="/de/parking/">Parken am Flughafen</a>.</p>
 
-<h2>Ab wann es sich nicht mehr lohnt</h2>
-<p>Vergleichen Sie mit einer Hin- und Rückfahrt in die Stadt: Zwei Taxifahrten zum ausgewiesenen Tarif kosten <strong>200 bis 300 MAD</strong>, zwei Privattransfers etwa 54 €. Ab drei oder vier Tagen erreicht und übertrifft das Parken diesen Betrag – und Sie lassen zudem ein Auto in der Sonne stehen.</p>
+<h2>Parken, Taxi oder Transfer: ab wann lohnt sich was?</h2>
+<p>Hin- und Rückfahrt mit dem Taxi in die Medina kosten tagsüber 200 bis 300 MAD: so viel wie <strong>5 bis 7 Tage Parken</strong>. Zwei <a href="/de/book-transfer/">Privattransfers</a> kosten rund 580 MAD, also <strong>zwei Wochen Parken</strong>. Wer in oder um Marrakesch wohnt, parkt bei Reisen bis zu zwei Wochen fast immer am günstigsten am Flughafen.</p>
 <div class="callout">
-<span class="callout-label">60 °C im Innenraum</span>
-<p>Ein in Marrakesch im Sommer in der prallen Sonne geparktes Auto überschreitet innen deutlich 60 °C. Lassen Sie weder Elektronik noch Kosmetik, Medikamente oder Feuerzeuge darin. Und nichts Sichtbares auf den Sitzen, wie überall.</p>
+<span class="callout-label">Die Kosten, die der Tarif nicht zeigt</span>
+<p>Die Stellplätze liegen unter freiem Himmel. Im Sommer wird es im Auto weit über 60 °C heiß: Sonnenschutz, und keine Elektronik, Medikamente oder Kosmetik im Wagen.</p>
 </div>
 
-<h2>Absetzen und Abholen</h2>
-<p>Vor den Terminals ist kurzes Halten möglich, und die Mitarbeiter halten den Verkehr in Bewegung, besonders abends. Holen Sie jemanden ab, denken Sie daran, dass <strong>zwischen Landung und Verlassen der Halle 30 bis 60 Minuten vergehen</strong>: Fahren Sie auf den Parkplatz und warten Sie dort, statt vor dem Gebäude zu kreisen.</p>
-
-<h2>Mietwagen: kein Ticket ziehen</h2>
-<p>Geben Sie einen Mietwagen zurück, ist der Rückgabeparkplatz vom Vermieter vorgesehen. Folgen Sie der Beschilderung der Station und ziehen Sie am öffentlichen Parkplatz kein Ticket, sonst zahlen Sie Zeit, die Sie nichts angeht. Planen Sie eine Viertelstunde für die Abnahme und bewahren Sie datierte Fotos des zurückgegebenen Fahrzeugs auf.</p>
+<h2>Drei Tipps für den richtigen Preis</h2>
+<p><strong>Behalten Sie das Ticket</strong> von der Schranke: Sie brauchen es zum Bezahlen vor der Ausfahrt. <strong>Nehmen Sie Dirham in bar mit</strong>, Karten werden nicht überall akzeptiert. Und wenn Sie einen <a href="/de/car-rental/">Mietwagen</a> zurückgeben, folgen Sie der Beschilderung des Vermieters, ohne am öffentlichen Parkplatz ein Ticket zu ziehen.</p>
 `,
   faqs: [
-    { q: 'Was kostet ein Tag Parken am Flughafen Marrakesch?', a: "Etwa 70 bis 80 MAD für 24 Stunden, darunter stundenweise rund 20 MAD pro Stunde. Maßgeblich ist die Tafel am Eingang, sie wird periodisch überarbeitet." },
-    { q: 'Ist das Absetzen am RAK kostenlos?', a: "Die erste Stufe von etwa dreißig Minuten ist kostenlos oder symbolisch, was kurzes Absetzen oder Abholen abdeckt. Vor den Terminals wird der Verkehr zügig in Bewegung gehalten, besonders abends." },
-    { q: 'Was kostet eine Woche Parken am Flughafen Marrakesch?', a: "Etwa 450 bis 550 MAD. Ab drei oder vier Tagen kosten zwei Hin- und Rückfahrten mit Taxi oder Transfer oft weniger und ersparen Ihnen ein Auto in der Sonne." },
-    { q: 'Kann man in Marrakesch Menara das Parken mit Karte bezahlen?', a: "Nicht an jedem Automaten: Nehmen Sie Bargeld in Dirham mit. Bezahlt wird vor der Rückkehr zum Fahrzeug, am Automaten oder an der Kasse." },
+    { q: "Was kostet ein Tag Parken am Flughafen Marrakesch?", a: "42 MAD für 12 bis 24 Stunden laut ONDA-Tarif, rund 3,90 €. Für kürzere Zeit kosten 5 bis 12 Stunden 22 MAD." },
+    { q: "Was kostet eine Woche Parken am RAK?", a: "Rund 294 MAD (≈ 27 €) bei 42 MAD pro 24 Stunden und rund 588 MAD für zwei Wochen." },
+    { q: "Ist Parken günstiger als ein Taxi hin und zurück?", a: "Ja bis etwa eine Woche: Ein Taxi hin und zurück in die Medina kostet tagsüber 200 bis 300 MAD, so viel wie 5 bis 7 Tage Parken." },
+    { q: "Was kostet kurzes Absetzen?", a: "6 MAD, wenn Sie auf den Parkplatz fahren, bis 1 Stunde. Die Spur vor den Terminals ist nur für kurzes Halten." },
+    { q: "Kann man das Parken mit Karte bezahlen?", a: "Nicht überall: Dirham in bar mitnehmen. Bezahlt wird vor der Ausfahrt, an der Kasse oder am Automaten." },
   ],
 } satisfies LocalizedArticle;

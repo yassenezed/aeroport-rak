@@ -73,7 +73,7 @@ export default {
 <p>Retrouvez le détail sur la page <a href="/services/">services de l'aéroport</a>.</p>
 
 <h2>Se garer à l'aéroport</h2>
-<p>Les parkings de l'aéroport se trouvent face aux terminaux. La dépose de moins de 30 minutes est gratuite ou symbolique, l'heure coûte environ 20 MAD et la journée 70 à 80 MAD. Pour une semaine, comptez 450 à 550 MAD : au-delà de trois ou quatre jours, un aller-retour en taxi ou en transfert revient souvent moins cher. Voir les <a href="/parkings/">tarifs des parkings</a>.</p>
+<p>Les parkings de l'aéroport se trouvent face aux terminaux : environ 1 550 places sur trois parkings en plein air, surveillés 24 h/24. Selon la grille ONDA, comptez 6 DH la première heure et 42 DH de 12 à 24 heures, soit environ 300 DH pour une semaine : jusqu'à une semaine d'absence, c'est souvent moins cher qu'un aller-retour en taxi. Voir les <a href="/parkings/">tarifs des parkings</a>.</p>
 
 <h2>Louer une voiture sur place</h2>
 <p>Les loueurs internationaux et marocains sont présents dans le hall des arrivées. Une petite voiture coûte 25 à 35 € par jour, avec une caution de 5 000 à 15 000 MAD bloquée sur une carte de crédit. Une voiture n'est utile que pour sortir de Marrakech : Atlas, Ourika, Essaouira ou Ouarzazate. Notre page <a href="/location-voiture/">location de voiture</a> détaille les pièges du contrat.</p>

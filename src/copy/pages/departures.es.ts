@@ -84,7 +84,7 @@ export default {
 <p>Para un vuelo antes de las 9 h, reserve su trayecto <strong>la víspera</strong>, con el riad o como <a href="/es/book-transfer/">traslado</a>: encontrar un taxi a las 5 de la mañana en un callejón no es nada evidente, y la tarifa nocturna se aplica hasta el amanecer. Los detalles de tarifas están en la página de <a href="/es/transfers/">traslados y taxis del aeropuerto</a> y en nuestros <a href="/es/blog/taxi-tips-marrakech/">consejos sobre taxis en Marrakech</a>.</p>
 
 <h2>Dejar a un pasajero o aparcar</h2>
-<p>La zona de parada breve delante de la terminal es solo para paradas muy cortas. Para acompañar a alguien hasta el mostrador, use el <a href="/es/parking/">parking del aeropuerto</a>: unos 20 MAD la hora, de 70 a 80 MAD el día.</p>
+<p>La zona de parada breve delante de la terminal es solo para paradas muy cortas. Para acompañar a alguien hasta el mostrador, use el <a href="/es/parking/">parking del aeropuerto</a>: 6 MAD la primera hora, 42 MAD de 12 a 24 horas.</p>
 
 <h2>Dírhams, recuerdos y equipaje: lo que hay que saber</h2>
 <p>Los dírhams no pueden sacarse del país más allá de una cantidad simbólica: cambie sus últimos billetes <em>antes</em> del control de pasaportes, en las casas de cambio del vestíbulo público, y guarde el recibo de su cambio inicial. En cuanto a los recuerdos, el aceite de argán, las especias y los cosméticos en envases de más de 100 ml van en bodega, sin excepción. La cerámica viaja mal sin un buen embalaje; la mayoría de los vendedores de la medina saben preparar un paquete para el avión. Más consejos en nuestra guía de <a href="/es/blog/money-in-morocco/">dinero y cambio en Marruecos</a>.</p>

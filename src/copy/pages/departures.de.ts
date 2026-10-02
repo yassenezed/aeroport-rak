@@ -84,7 +84,7 @@ export default {
 <p>Für einen Flug vor 9 Uhr buchen Sie die Fahrt <strong>am Vortag</strong>, über das Riad oder als <a href="/de/book-transfer/">Transfer</a>: Um 5 Uhr morgens in einer Gasse ein Taxi zu finden, ist alles andere als sicher, und bis Sonnenaufgang gilt der Nachttarif. Tarifdetails auf der Seite <a href="/de/transfers/">Transfers und Taxis am Flughafen</a> und in unseren <a href="/de/blog/taxi-tips-marrakech/">Taxi-Tipps für Marrakesch</a>.</p>
 
 <h2>Jemanden absetzen oder parken</h2>
-<p>Die Kurzhaltezone vor dem Terminal ist nur für sehr kurze Stopps gedacht. Um jemanden bis zum Schalter zu begleiten, nutzen Sie den <a href="/de/parking/">Flughafenparkplatz</a>: etwa 20 MAD pro Stunde, 70 bis 80 MAD pro Tag.</p>
+<p>Die Kurzhaltezone vor dem Terminal ist nur für sehr kurze Stopps gedacht. Um jemanden bis zum Schalter zu begleiten, nutzen Sie den <a href="/de/parking/">Flughafenparkplatz</a>: 6 MAD für die erste Stunde, 42 MAD für 12 bis 24 Stunden.</p>
 
 <h2>Dirham, Souvenirs und Gepäck: was Sie wissen sollten</h2>
 <p>Dirham dürfen nur in symbolischer Höhe ausgeführt werden: Tauschen Sie Ihre letzten Scheine <em>vor</em> der Passkontrolle in den Wechselstuben der öffentlichen Halle und bewahren Sie den Beleg Ihres ersten Umtauschs auf. Bei Souvenirs gilt: Arganöl, Gewürze und Kosmetik in Behältern über 100 ml gehören ausnahmslos ins Aufgabegepäck. Keramik reist ohne gute Verpackung schlecht; die meisten Händler der Medina verpacken auf Wunsch flugtauglich. Mehr Tipps in unserem Ratgeber <a href="/de/blog/money-in-morocco/">Geld und Umtausch in Marokko</a>.</p>

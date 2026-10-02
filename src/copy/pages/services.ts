@@ -64,7 +64,7 @@ export default {
         { icon: 'car', key: 'transfers', title: "Taxi officiel", text: "100 à 150 MAD de jour, 150 à 240 MAD la nuit, tarifs affichés à la station.", cta: "Tarifs des taxis" },
         { icon: 'van', key: 'bookTransfer', title: "Transfert privé", text: "Dès 27 € par véhicule, chauffeur à votre nom et vol suivi, même la nuit.", cta: "Réserver" },
         { icon: 'tag', key: 'carRental', title: "Location de voiture", text: "Comptoirs dans le hall des arrivées, à partir de 25 € par jour.", cta: "Comparer" },
-        { icon: 'parking', key: 'parking', title: "Parking de l'aéroport", text: "Environ 20 MAD l'heure et 70 à 80 MAD la journée, face aux terminaux.", cta: "Voir le parking" },
+        { icon: 'parking', key: 'parking', title: "Parking de l'aéroport", text: "6 DH la première heure et 42 DH les 24 heures (grille ONDA), face aux terminaux.", cta: "Voir le parking" },
         { icon: 'plane-landing', key: 'arrivals', title: "Arrivées en direct", text: "Suivez un vol et l'heure réelle d'atterrissage avant de partir.", cta: "Voir les arrivées" },
       ],
     },

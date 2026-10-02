@@ -72,7 +72,7 @@ export default {
 <p>Mehr dazu auf der Seite <a href="/de/services/">Services am Flughafen</a>.</p>
 
 <h2>Parken am Flughafen</h2>
-<p>Die Parkplätze des Flughafens liegen gegenüber den Terminals. Kurzes Absetzen unter 30 Minuten ist kostenlos oder symbolisch, eine Stunde kostet etwa 20 MAD, ein Tag 70 bis 80 MAD. Für eine Woche rechnen Sie mit 450 bis 550 MAD: Ab drei oder vier Tagen kommt eine Hin- und Rückfahrt mit Taxi oder Transfer oft günstiger. Siehe die <a href="/de/parking/">Parktarife</a>.</p>
+<p>Die Parkplätze des Flughafens liegen gegenüber den Terminals: rund 1.550 Stellplätze auf drei bewachten Freiluftparkplätzen. Laut ONDA-Tarif kostet die erste Stunde 6 MAD und 12 bis 24 Stunden 42 MAD, also rund 300 MAD für eine Woche: Bei Reisen bis zu einer Woche ist das oft günstiger als Taxi hin und zurück. Siehe die <a href="/de/parking/">Parktarife</a>.</p>
 
 <h2>Mietwagen vor Ort</h2>
 <p>Internationale und marokkanische Vermieter haben Schalter in der Ankunftshalle. Ein Kleinwagen kostet 25 bis 35 € pro Tag, bei einer Kaution von 5.000 bis 15.000 MAD auf einer Kreditkarte. Ein Auto lohnt sich nur, um Marrakesch zu verlassen: Atlas, Ourika, Essaouira oder Ouarzazate. Unsere Seite <a href="/de/car-rental/">Mietwagen</a> erklärt die Fallen im Vertrag.</p>

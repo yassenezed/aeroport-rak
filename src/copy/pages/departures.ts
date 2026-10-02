@@ -85,7 +85,7 @@ export default {
 <p>Pour un vol avant 9 h, réservez votre trajet <strong>la veille</strong>, auprès du riad ou en <a href="/reserver-transfert/">transfert</a> : trouver un taxi à 5 h du matin dans une ruelle n'a rien d'évident, et le tarif de nuit s'applique jusqu'au lever du jour. Les détails des tarifs sont sur la page <a href="/transferts/">transferts et taxis de l'aéroport</a> et dans nos <a href="/blog/taxi-marrakech/">conseils taxi à Marrakech</a>.</p>
 
 <h2>Déposer un passager ou se garer</h2>
-<p>Le dépose-minute devant le terminal est réservé aux arrêts très courts. Pour accompagner quelqu'un jusqu'au comptoir, garez-vous au <a href="/parkings/">parking de l'aéroport</a> : environ 20 MAD l'heure, 70 à 80 MAD la journée.</p>
+<p>Le dépose-minute devant le terminal est réservé aux arrêts très courts. Pour accompagner quelqu'un jusqu'au comptoir, garez-vous au <a href="/parkings/">parking de l'aéroport</a>: 6 DH la première heure, 42 DH de 12 à 24 heures.</p>
 
 <h2>Dirhams, souvenirs et bagages : ce qu'il faut savoir</h2>
 <p>Les dirhams ne s'exportent pas au-delà d'une somme symbolique : rechangez vos derniers billets <em>avant</em> la police des frontières, aux bureaux de change du hall public, en gardant le reçu de votre change initial. Côté souvenirs, l'huile d'argan, les épices et les cosmétiques en flacon de plus de 100 ml partent en soute, sans exception. Les poteries voyagent mal sans emballage sérieux ; la plupart des vendeurs de la médina savent préparer un colis pour l'avion. Plus de conseils dans notre guide <a href="/blog/argent-maroc/">argent et change au Maroc</a>.</p>

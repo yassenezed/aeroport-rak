@@ -2,67 +2,54 @@ import type { ArticleContent } from '../types';
 
 export default {
   fr: {
-    title: "Tarifs du parking de l'aéroport de Marrakech-Ménara",
-    description: "Tarifs du parking de l'aéroport de Marrakech-Ménara : prix à l'heure, à la journée et à la semaine, dépose-minute et alternatives moins chères.",
-    eyebrow: 'Aéroport',
-    h1: 'Parking de l\'aéroport de Marrakech : la grille des tarifs',
-    lede: "Très bon marché pour une dépose, raisonnable pour un aller-retour dans la journée, nettement moins évident pour une semaine. Voici les ordres de grandeur et le calcul à faire avant de laisser sa voiture.",
-    excerpt: "Prix à l'heure, à la journée et à la semaine au parking du RAK, avec les alternatives quand le stationnement longue durée n'est plus rentable.",
-    date: '2026-09-06',
+    title: "Tarifs parking aéroport Marrakech-Ménara : combien payer",
+    description: "Combien coûte le parking de l'aéroport de Marrakech-Ménara pour 3 heures, 1 jour, 1 ou 2 semaines : calcul avec la grille ONDA et comparaison avec le taxi.",
+    eyebrow: "Aéroport",
+    h1: "Tarifs du parking de l'aéroport Marrakech-Ménara : le coût selon votre séjour",
+    lede: "6 DH pour une dépose, 42 DH pour une journée, environ 300 DH pour une semaine : le parking du RAK compte parmi les postes les moins chers d'un voyage. Voici le calcul pour chaque durée, et le moment où le taxi ou le transfert redeviennent intéressants.",
+    excerpt: "Le coût réel du parking du RAK pour 3 heures, 1 jour, 3 jours, 1 ou 2 semaines, avec la grille ONDA et la comparaison taxi et transfert.",
+    date: '2026-10-02',
     facts: [
-      { label: '30 minutes', value: 'gratuit', sub: 'ou ≈ 10 MAD' },
-      { label: '1 heure', value: '≈ 20', sub: 'MAD' },
-      { label: '24 heures', value: '70–80', sub: 'MAD' },
-      { label: '1 semaine', value: '450–550', sub: 'MAD' },
+      { label: "1 heure", value: "6", sub: "DH" },
+      { label: "24 heures", value: "42", sub: "DH" },
+      { label: "1 semaine", value: "≈ 300", sub: "DH" },
+      { label: "Capacité", value: "1 550", sub: "places" },
     ],
     body: `
-<h2>La grille, en ordres de grandeur</h2>
-<p>Le stationnement du RAK fonctionne à la durée, avec une première tranche courte gratuite ou symbolique, puis une facturation horaire qui plafonne à la journée. Les montants ci-dessous ont été relevés en septembre 2026 et servent d'ordre de grandeur : <strong>l'affichage à l'entrée fait foi</strong>, la grille étant révisée périodiquement.</p>
+<h2>Le coût du parking de l'aéroport Marrakech-Ménara selon la durée</h2>
+<p>Calcul établi avec la grille de l'ONDA pour une voiture en plein air, en comptant 42 DH par tranche de 24 heures :</p>
 <div class="table-wrap">
 <table class="data">
-<thead><tr><th>Durée</th><th>Tarif indicatif</th><th>Usage typique</th></tr></thead>
+<thead><tr><th>Situation</th><th>Durée</th><th>Coût</th><th>≈ en euros</th></tr></thead>
 <tbody>
-<tr class="row-highlight"><td><strong>Moins de 30 minutes</strong></td><td class="num">gratuit ou ≈ 10 MAD</td><td>Déposer ou récupérer quelqu'un</td></tr>
-<tr><td><strong>1 heure</strong></td><td class="num">≈ 20 MAD</td><td>Attendre un vol retardé</td></tr>
-<tr><td><strong>3 heures</strong></td><td class="num">≈ 40 MAD</td><td>Accompagner un départ</td></tr>
-<tr><td><strong>24 heures</strong></td><td class="num">70–80 MAD</td><td>Aller-retour dans la journée</td></tr>
-<tr><td><strong>3 jours</strong></td><td class="num">≈ 200–240 MAD</td><td>Week-end prolongé</td></tr>
-<tr><td><strong>1 semaine</strong></td><td class="num">450–550 MAD</td><td>Séjour à l'étranger</td></tr>
+<tr><td><strong>Déposer ou récupérer quelqu'un</strong></td><td>jusqu'à 1 h</td><td class="num">6 DH</td><td class="num">0,55 €</td></tr>
+<tr><td><strong>Accompagner un départ</strong></td><td>2 à 3 h</td><td class="num">11 DH</td><td class="num">1 €</td></tr>
+<tr><td><strong>Aller-retour dans la journée</strong></td><td>5 à 12 h</td><td class="num">22 DH</td><td class="num">2 €</td></tr>
+<tr class="row-highlight"><td><strong>Une nuit</strong></td><td>12 à 24 h</td><td class="num">42 DH</td><td class="num">3,90 €</td></tr>
+<tr><td><strong>Week-end prolongé</strong></td><td>3 jours</td><td class="num">≈ 126 DH</td><td class="num">11,70 €</td></tr>
+<tr><td><strong>Une semaine</strong></td><td>7 jours</td><td class="num">≈ 294 DH</td><td class="num">27 €</td></tr>
+<tr><td><strong>Deux semaines</strong></td><td>14 jours</td><td class="num">≈ 588 DH</td><td class="num">54 €</td></tr>
 </tbody>
 </table>
 </div>
-<p>Le paiement s'effectue à la borne ou à la caisse <strong>avant</strong> de rejoindre le véhicule. Prévoyez des espèces : la carte n'est pas systématiquement acceptée selon les bornes.</p>
+<p class="small">Montants indicatifs : la grille peut être révisée par l'ONDA et l'affichage à l'entrée fait foi. Conversion approximative 1 € ≈ 10,8 DH. La grille complète et les trois parkings sont détaillés sur notre page <a href="/parkings/">parking de l'aéroport</a>.</p>
 
-<h2>Le seuil à partir duquel ce n'est plus rentable</h2>
-<p>Comparez avec ce que coûte un aller-retour vers la ville : deux trajets en taxi au tarif affiché représentent <strong>200 à 300 MAD</strong>, ou environ 54 € pour deux transferts privés. Au-delà de trois ou quatre jours, le stationnement rejoint puis dépasse ce montant — et vous laissez en plus un véhicule exposé au soleil.</p>
+<h2>Parking, taxi ou transfert : le seuil de rentabilité</h2>
+<p>Un aller-retour en taxi vers la médina coûte 200 à 300 DH de jour : c'est le prix de <strong>5 à 7 jours de parking</strong>. Deux <a href="/reserver-transfert/">transferts privés</a> reviennent à environ 580 DH, soit <strong>deux semaines de stationnement</strong>. Si vous vivez à Marrakech ou dans sa région, garer sa voiture à l'aéroport est donc presque toujours la solution la moins chère, jusqu'à deux semaines d'absence.</p>
 <div class="callout">
-<span class="callout-label">Les 60 °C dans l'habitacle</span>
-<p>Une voiture garée en plein soleil à Marrakech en été dépasse largement les 60 °C à l'intérieur. N'y laissez ni appareils électroniques, ni cosmétiques, ni médicaments, ni briquet. Et rien de visible sur les sièges, comme partout ailleurs.</p>
+<span class="callout-label">Le coût que la grille ne montre pas</span>
+<p>Les places sont en plein air. En été, l'habitacle dépasse largement 60 °C : pare-soleil, et ni électronique, ni médicaments, ni cosmétiques dans la voiture.</p>
 </div>
 
-<h2>Dépose et récupération</h2>
-<p>La zone devant les terminaux permet de s'arrêter brièvement, et les agents y font circuler rapidement, surtout en soirée. Si vous venez chercher quelqu'un, souvenez-vous qu'il s'écoule <strong>30 à 60 minutes entre l'atterrissage et la sortie du hall</strong> : entrez au parking et attendez-y plutôt que de tourner devant l'aérogare.</p>
-
-<h2>Voiture de location : ne prenez pas de ticket</h2>
-<p>Si vous restituez un véhicule loué, le stationnement de retour est prévu par le loueur. Suivez le fléchage de l'agence et ne prenez pas de ticket à l'entrée du parking public, sous peine de payer une durée qui ne vous incombe pas. Comptez un quart d'heure pour l'état des lieux, et conservez des photos datées du véhicule rendu.</p>
+<h2>Trois conseils pour payer le juste prix</h2>
+<p><strong>Gardez le ticket</strong> pris à la barrière : il sert au paiement avant la sortie. <strong>Prévoyez des dirhams en espèces</strong>, la carte n'est pas acceptée partout. Et si vous rendez une <a href="/location-voiture/">voiture de location</a>, suivez le fléchage du loueur sans prendre de ticket au parking public.</p>
 `,
     faqs: [
-      {
-        q: 'Combien coûte une journée de parking à l\'aéroport de Marrakech ?',
-        a: "Environ 70 à 80 MAD pour 24 heures, avec une facturation horaire d'environ 20 MAD l'heure en deçà. La grille affichée à l'entrée fait foi, elle est révisée périodiquement.",
-      },
-      {
-        q: 'La dépose est-elle gratuite au RAK ?',
-        a: "La première tranche, d'environ trente minutes, est gratuite ou symbolique, ce qui couvre une dépose ou une récupération rapide. Les agents font circuler rapidement devant les terminaux, surtout en soirée.",
-      },
-      {
-        q: 'Combien coûte une semaine de stationnement à l\'aéroport de Marrakech ?',
-        a: "De 450 à 550 MAD environ. Au-delà de trois ou quatre jours, deux trajets aller-retour en taxi ou en transfert reviennent souvent moins cher, et vous évitent de laisser un véhicule exposé au soleil.",
-      },
-      {
-        q: 'Peut-on payer le parking par carte à Marrakech Ménara ?',
-        a: "Pas systématiquement selon les bornes : prévoyez des espèces en dirhams. Le règlement s'effectue avant de rejoindre le véhicule, à la borne ou à la caisse.",
-      },
+      { q: "Combien coûte une journée de parking à l'aéroport de Marrakech ?", a: "42 DH pour une durée de 12 à 24 heures selon la grille ONDA, soit environ 3,90 €. En dessous, comptez 22 DH de 5 à 12 heures." },
+      { q: "Combien coûte une semaine de parking au RAK ?", a: "Environ 294 DH (≈ 27 €) en comptant 42 DH par tranche de 24 heures, et environ 588 DH pour deux semaines." },
+      { q: "Le parking est-il moins cher qu'un taxi aller-retour ?", a: "Oui jusqu'à environ une semaine : un taxi aller-retour vers la médina coûte 200 à 300 DH de jour, le prix de 5 à 7 jours de parking." },
+      { q: "Combien coûte une dépose rapide ?", a: "6 DH si vous entrez au parking, pour une durée jusqu'à 1 heure. La voie devant les terminaux ne sert qu'à s'arrêter brièvement." },
+      { q: "Peut-on payer le parking par carte ?", a: "Pas partout : prévoyez des dirhams en espèces. Le paiement se fait avant la sortie, à la caisse ou à la borne." },
     ],
   },
 } satisfies ArticleContent;

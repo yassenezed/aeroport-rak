@@ -1,54 +1,53 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "Parkeertarieven luchthaven Marrakech-Menara: uur en dag",
-  description: "Parkeertarieven van luchthaven Marrakech-Menara: prijzen per uur, dag en week, kiss-and-ride, betalen en goedkopere opties.",
+  title: "Parkeerkosten luchthaven Marrakech-Menara per verblijf",
+  description: "Wat parkeren op luchthaven Marrakech-Menara kost voor 3 uur, 1 dag, 1 of 2 weken: berekend met het ONDA-tarief en vergeleken met de taxi.",
   eyebrow: "Luchthaven",
-  h1: "Parkeren op luchthaven Marrakech: de tarieventabel",
-  lede: "Heel goedkoop om iemand af te zetten, redelijk voor een dagtrip, veel minder vanzelfsprekend voor een week. Hier de ordes van grootte en de rekensom vóór u de auto neerzet.",
-  excerpt: "Prijzen per uur, dag en week op het parkeerterrein van de RAK, met alternatieven als lang parkeren niet meer loont.",
-  date: "2026-09-06",
+  h1: "Parkeren op luchthaven Marrakech-Menara: de kosten per verblijf",
+  lede: "6 MAD om iemand af te zetten, 42 MAD voor een dag, ongeveer 300 MAD voor een week: parkeren aan de RAK is een van de goedkoopste posten van een reis. Dit zijn de kosten per duur, en het punt waarop taxi of transfer weer voordeliger worden.",
+  excerpt: "De echte parkeerkosten aan de RAK voor 3 uur, 1 dag, 3 dagen, 1 of 2 weken, met het ONDA-tarief en de vergelijking met taxi en transfer.",
+  date: '2026-10-02',
   facts: [
-    { label: "30 minuten", value: "gratis", sub: "of ≈ 10 MAD" },
-    { label: "1 uur", value: "≈ 20", sub: "MAD" },
-    { label: "24 uur", value: "70–80", sub: "MAD" },
-    { label: "1 week", value: "450–550", sub: "MAD" },
+    { label: "1 uur", value: "6", sub: "MAD" },
+    { label: "24 uur", value: "42", sub: "MAD" },
+    { label: "1 week", value: "≈ 300", sub: "MAD" },
+    { label: "Capaciteit", value: "1.550", sub: "plaatsen" },
   ],
   body: `
-<h2>De tabel in ordes van grootte</h2>
-<p>Parkeren op de RAK wordt per duur berekend, met een korte eerste schijf die gratis of symbolisch is, daarna per uur met een dagmaximum. De onderstaande cijfers zijn in september 2026 gecontroleerd en dienen als richtlijn: <strong>het bord bij de ingang is leidend</strong>, het tarief wordt periodiek herzien.</p>
+<h2>Parkeerkosten op luchthaven Marrakech-Menara volgens hoelang u weg bent</h2>
+<p>Berekend met het ONDA-tarief voor een auto op een openluchtplaats, aan 42 MAD per periode van 24 uur:</p>
 <div class="table-wrap">
 <table class="data">
-<thead><tr><th>Duur</th><th>Indicatief tarief</th><th>Typisch gebruik</th></tr></thead>
+<thead><tr><th>Situatie</th><th>Duur</th><th>Kosten</th><th>≈ in euro</th></tr></thead>
 <tbody>
-<tr class="row-highlight"><td><strong>Minder dan 30 minuten</strong></td><td class="num">gratis of ≈ 10 MAD</td><td>Iemand afzetten of ophalen</td></tr>
-<tr><td><strong>1 uur</strong></td><td class="num">≈ 20 MAD</td><td>Wachten op een vertraagde vlucht</td></tr>
-<tr><td><strong>3 uur</strong></td><td class="num">≈ 40 MAD</td><td>Iemand uitzwaaien</td></tr>
-<tr><td><strong>24 uur</strong></td><td class="num">70–80 MAD</td><td>Dagtrip</td></tr>
-<tr><td><strong>3 dagen</strong></td><td class="num">≈ 200–240 MAD</td><td>Lang weekend</td></tr>
-<tr><td><strong>1 week</strong></td><td class="num">450–550 MAD</td><td>Reis naar het buitenland</td></tr>
+<tr><td><strong>Iemand afzetten of ophalen</strong></td><td>tot 1 u</td><td class="num">6 MAD</td><td class="num">€ 0,55</td></tr>
+<tr><td><strong>Iemand uitzwaaien</strong></td><td>2 tot 3 u</td><td class="num">11 MAD</td><td class="num">€ 1</td></tr>
+<tr><td><strong>Heen en terug op één dag</strong></td><td>5 tot 12 u</td><td class="num">22 MAD</td><td class="num">€ 2</td></tr>
+<tr class="row-highlight"><td><strong>Eén nacht</strong></td><td>12 tot 24 u</td><td class="num">42 MAD</td><td class="num">€ 3,90</td></tr>
+<tr><td><strong>Lang weekend</strong></td><td>3 dagen</td><td class="num">≈ 126 MAD</td><td class="num">€ 11,70</td></tr>
+<tr><td><strong>Eén week</strong></td><td>7 dagen</td><td class="num">≈ 294 MAD</td><td class="num">€ 27</td></tr>
+<tr><td><strong>Twee weken</strong></td><td>14 dagen</td><td class="num">≈ 588 MAD</td><td class="num">€ 54</td></tr>
 </tbody>
 </table>
 </div>
-<p>U betaalt bij de automaat of de kassa <strong>voordat</strong> u naar uw auto gaat. Neem contant mee: niet elke automaat accepteert een kaart.</p>
+<p class="small">Richtbedragen: het ONDA kan het tarief herzien en het bord aan de ingang geldt. Omrekening bij benadering € 1 ≈ 10,8 MAD. Het volledige tarief en de drie parkings staan op onze pagina <a href="/nl/parking/">parkeren op de luchthaven</a>.</p>
 
-<h2>Vanaf wanneer het niet meer loont</h2>
-<p>Vergelijk met een retourrit naar de stad: twee taxiritten tegen het getoonde tarief kosten <strong>200 tot 300 MAD</strong>, twee privétransfers ongeveer € 54. Vanaf drie of vier dagen haalt parkeren dat bedrag in en gaat erboven – en u laat bovendien een auto in de zon staan.</p>
+<h2>Parkeren, taxi of transfer: het omslagpunt</h2>
+<p>Een taxi heen en terug naar de medina kost overdag 200 tot 300 MAD: de prijs van <strong>5 tot 7 dagen parkeren</strong>. Twee <a href="/nl/book-transfer/">privétransfers</a> kosten ongeveer 580 MAD, ofwel <strong>twee weken parkeren</strong>. Woont u in of rond Marrakech, dan is de auto op de luchthaven laten bijna altijd het goedkoopst voor reizen tot twee weken.</p>
 <div class="callout">
-<span class="callout-label">60 °C in het interieur</span>
-<p>Een auto die in Marrakech in de zomer in de volle zon staat, loopt binnen ruim boven 60 °C op. Laat geen elektronica, cosmetica, medicijnen of aanstekers achter. En niets zichtbaars op de stoelen, zoals overal.</p>
+<span class="callout-label">De kost die het tarief niet toont</span>
+<p>De plaatsen liggen in open lucht. In de zomer wordt het in de auto ruim boven 60 °C: zonnescherm, en geen elektronica, medicijnen of cosmetica in de wagen.</p>
 </div>
 
-<h2>Afzetten en ophalen</h2>
-<p>Voor de terminals kunt u kort stoppen, en medewerkers houden het verkeer in beweging, vooral 's avonds. Haalt u iemand op, bedenk dan dat er <strong>30 tot 60 minuten zitten tussen landing en het verlaten van de hal</strong>: rijd het parkeerterrein op en wacht daar in plaats van rondjes te rijden.</p>
-
-<h2>Huurauto: geen ticket trekken</h2>
-<p>Levert u een huurauto in, dan regelt de verhuurder de inleverplek. Volg de borden van het verhuurkantoor en trek geen ticket bij het openbare parkeerterrein, anders betaalt u tijd die niet de uwe is. Reken een kwartier voor de inspectie en bewaar gedateerde foto's van de ingeleverde auto.</p>
+<h2>Drie tips om de juiste prijs te betalen</h2>
+<p><strong>Bewaar het ticket</strong> van de slagboom: u hebt het nodig om voor vertrek te betalen. <strong>Neem dirham cash mee</strong>, kaarten worden niet overal aanvaard. En levert u een <a href="/nl/car-rental/">huurauto</a> in, volg dan de borden van de verhuurder zonder ticket aan de openbare parking te nemen.</p>
 `,
   faqs: [
-    { q: "Wat kost een dag parkeren op luchthaven Marrakech?", a: "Ongeveer 70 tot 80 MAD per 24 uur, daaronder per uur zo'n 20 MAD. Het bord bij de ingang is leidend en wordt periodiek herzien." },
-    { q: "Is afzetten op de RAK gratis?", a: "De eerste schijf van ongeveer dertig minuten is gratis of symbolisch, genoeg voor een snelle afzet of ophaling. Voor de terminals wordt het verkeer vlot in beweging gehouden, vooral 's avonds." },
-    { q: "Wat kost een week parkeren op luchthaven Marrakech?", a: "Ongeveer 450 tot 550 MAD. Vanaf drie of vier dagen zijn twee retourritten met taxi of transfer vaak goedkoper en laat u geen auto in de zon staan." },
-    { q: "Kun je parkeren op Marrakech Menara met een kaart betalen?", a: "Niet bij elke automaat: neem contant geld in dirham mee. U betaalt vóór u naar uw auto gaat, bij de automaat of de kassa." },
+    { q: "Wat kost een dag parkeren op de luchthaven van Marrakech?", a: "42 MAD voor 12 tot 24 uur volgens het ONDA-tarief, ongeveer € 3,90. Korter: 22 MAD voor 5 tot 12 uur." },
+    { q: "Wat kost een week parkeren aan de RAK?", a: "Ongeveer 294 MAD (≈ € 27) aan 42 MAD per 24 uur, en ongeveer 588 MAD voor twee weken." },
+    { q: "Is parkeren goedkoper dan een taxi heen en terug?", a: "Ja tot ongeveer een week: een taxi heen en terug naar de medina kost overdag 200 tot 300 MAD, de prijs van 5 tot 7 dagen parkeren." },
+    { q: "Wat kost iemand snel afzetten?", a: "6 MAD als u de parking oprijdt, tot 1 uur. De rijstrook voor de terminals is alleen voor kort stoppen." },
+    { q: "Kan ik het parkeren met een kaart betalen?", a: "Niet overal: neem dirham cash mee. U betaalt voor vertrek, aan de kassa of automaat." },
   ],
 } satisfies LocalizedArticle;

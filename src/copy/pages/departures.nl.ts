@@ -84,7 +84,7 @@ export default {
 <p>Voor een vlucht vóór 9 uur boekt u uw rit <strong>de dag ervoor</strong>, via de riad of als <a href="/nl/book-transfer/">transfer</a>: om 5 uur 's ochtends een taxi vinden in een steegje is allesbehalve vanzelfsprekend, en tot zonsopgang geldt het nachttarief. De tarieven staan op de pagina <a href="/nl/transfers/">transfers en taxi's van de luchthaven</a> en in onze <a href="/nl/blog/taxi-tips-marrakech/">taxitips voor Marrakech</a>.</p>
 
 <h2>Iemand afzetten of parkeren</h2>
-<p>De kiss-and-ride-zone voor de terminal is alleen voor heel korte stops. Wilt u iemand tot aan de balie begeleiden, gebruik dan het <a href="/nl/parking/">parkeerterrein van de luchthaven</a>: ongeveer 20 MAD per uur, 70 tot 80 MAD per dag.</p>
+<p>De kiss-and-ride-zone voor de terminal is alleen voor heel korte stops. Wilt u iemand tot aan de balie begeleiden, gebruik dan het <a href="/nl/parking/">parkeerterrein van de luchthaven</a>: 6 MAD voor het eerste uur, 42 MAD van 12 tot 24 uur.</p>
 
 <h2>Dirhams, souvenirs en bagage: wat u moet weten</h2>
 <p>Dirhams mogen niet het land uit boven een symbolisch bedrag: wissel uw laatste biljetten <em>vóór</em> de paspoortcontrole bij de wisselkantoren in de openbare hal, en bewaar het bonnetje van uw eerste wisseltransactie. Voor souvenirs geldt: arganolie, specerijen en cosmetica in verpakkingen boven 100 ml gaan zonder uitzondering in de ruimbagage. Aardewerk reist slecht zonder goede verpakking; de meeste verkopers in de medina pakken het op verzoek vliegklaar in. Meer tips in onze gids over <a href="/nl/blog/money-in-morocco/">geld en wisselen in Marokko</a>.</p>

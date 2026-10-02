@@ -63,7 +63,7 @@ export default {
       { icon: 'car', key: 'transfers', title: "Offizielles Taxi", text: "100–150 MAD tagsüber, 150–240 MAD nachts, Tarife am Taxistand ausgehängt.", cta: "Taxipreise" },
       { icon: 'van', key: 'bookTransfer', title: "Privattransfer", text: "Ab 27 € pro Fahrzeug, Fahrer mit Namensschild und Flugverfolgung, auch nachts.", cta: "Buchen" },
       { icon: 'tag', key: 'carRental', title: "Mietwagen", text: "Schalter in der Ankunftshalle, ab 25 € pro Tag.", cta: "Vergleichen" },
-      { icon: 'parking', key: 'parking', title: "Flughafenparkplatz", text: "Etwa 20 MAD pro Stunde und 70–80 MAD pro Tag, gegenüber den Terminals.", cta: "Parken ansehen" },
+      { icon: 'parking', key: 'parking', title: "Flughafenparkplatz", text: "6 MAD für die erste Stunde und 42 MAD für 24 Stunden (ONDA-Tarif), gegenüber den Terminals.", cta: "Parken ansehen" },
       { icon: 'plane-landing', key: 'arrivals', title: "Ankünfte live", text: "Verfolgen Sie einen Flug und die tatsächliche Landezeit, bevor Sie losfahren.", cta: "Ankünfte ansehen" },
     ],
   },

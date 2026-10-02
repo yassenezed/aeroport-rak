@@ -72,7 +72,7 @@ export default {
 <p>More on our <a href="/en/services/">airport services</a> page.</p>
 
 <h2>Parking at the airport</h2>
-<p>Airport car parks sit in front of the terminals. Drop-offs under 30 minutes are free or nominal, an hour costs about MAD 20 and a day MAD 70 to 80. For a week, expect MAD 450 to 550: beyond three or four days, a return trip by taxi or transfer often works out cheaper. See the <a href="/en/parking/">parking rates</a>.</p>
+<p>Airport car parks sit in front of the terminals: about 1,550 spaces across three open-air car parks, guarded 24/7. On the ONDA rate card, allow MAD 6 for the first hour and MAD 42 for 12 to 24 hours, or about MAD 300 for a week: for trips of up to a week, that is often cheaper than a return taxi. See the <a href="/en/parking/">parking rates</a>.</p>
 
 <h2>Hiring a car on site</h2>
 <p>International and Moroccan hire companies have desks in the arrivals hall. A small car costs €25 to €35 a day, with a MAD 5,000 to 15,000 deposit held on a credit card. A car is only useful for leaving Marrakech: the Atlas, Ourika, Essaouira or Ouarzazate. Our <a href="/en/car-rental/">car hire</a> page covers the contract traps.</p>

@@ -63,7 +63,7 @@ export default {
       { icon: 'car', key: 'transfers', title: "Officiële taxi", text: "100–150 MAD overdag en 150–240 MAD 's nachts, tarieven bij de standplaats.", cta: "Taxitarieven" },
       { icon: 'van', key: 'bookTransfer', title: "Privétransfer", text: "Vanaf € 27 per voertuig, chauffeur met naambord en vluchtbewaking, ook 's nachts.", cta: "Boeken" },
       { icon: 'tag', key: 'carRental', title: "Autohuur", text: "Balies in de aankomsthal, vanaf € 25 per dag.", cta: "Vergelijken" },
-      { icon: 'parking', key: 'parking', title: "Parkeren op de luchthaven", text: "Ongeveer 20 MAD per uur en 70–80 MAD per dag, tegenover de terminals.", cta: "Parkeren bekijken" },
+      { icon: 'parking', key: 'parking', title: "Parkeren op de luchthaven", text: "6 MAD voor het eerste uur en 42 MAD voor 24 uur (ONDA-tarief), tegenover de terminals.", cta: "Parkeren bekijken" },
       { icon: 'plane-landing', key: 'arrivals', title: "Aankomsten live", text: "Volg een vlucht en de werkelijke landingstijd voordat u vertrekt.", cta: "Aankomsten bekijken" },
     ],
   },

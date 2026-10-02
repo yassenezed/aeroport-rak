@@ -63,7 +63,7 @@ export default {
       { icon: 'car', key: 'transfers', title: "Official taxi", text: "MAD 100–150 by day, MAD 150–240 at night, fares posted at the rank.", cta: "Taxi fares" },
       { icon: 'van', key: 'bookTransfer', title: "Private transfer", text: "From €27 per vehicle, driver with your name and flight tracking, even at night.", cta: "Book" },
       { icon: 'tag', key: 'carRental', title: "Car hire", text: "Desks in the arrivals hall, from €25 a day.", cta: "Compare" },
-      { icon: 'parking', key: 'parking', title: "Airport parking", text: "About MAD 20 an hour and MAD 70–80 a day, opposite the terminals.", cta: "See parking" },
+      { icon: 'parking', key: 'parking', title: "Airport parking", text: "MAD 6 for the first hour and MAD 42 for 24 hours (ONDA rates), opposite the terminals.", cta: "See parking" },
       { icon: 'plane-landing', key: 'arrivals', title: "Live arrivals", text: "Track a flight and its actual landing time before you set off.", cta: "See arrivals" },
     ],
   },

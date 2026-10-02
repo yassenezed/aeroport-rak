@@ -1,65 +1,98 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Marrakech Menara Airport parking: rates and access",
-  description: 'Parking at Marrakech Menara Airport: hourly and daily rates, drop-off zone, long-stay parking and cheaper alternatives.',
-  eyebrow: 'Marrakech Menara · Parking',
-  h1: 'Parking at Marrakech Airport',
-  lede: "RAK has surface car parks in front of the terminals with a stepped tariff: very cheap for a drop-off, markedly less so for a week. Here is what you will pay and when it is better not to drive at all.",
+  title: "Marrakech Menara Airport parking: 2026 rates and access",
+  description: "Marrakech Menara Airport parking: 3 car parks, 1,550 spaces, MAD 6 for the first hour and MAD 42 for 24 hours on the ONDA rate card. Drop-off and alternatives.",
+  eyebrow: "Parking · 2026 rates and guide",
+  h1: "Marrakech Menara Airport parking: rates and guide",
+  lede: "Three open-air car parks in front of the terminals, over 1,500 spaces and very low rates. Here are the official prices, the best way to drop off or wait for a traveller, and the maths for a one-week trip.",
+  highlights: [
+    { icon: 'parking', value: "MAD 6", label: "First hour (≈ €0.55)" },
+    { icon: 'clock', value: "MAD 42", label: "12 to 24 hours (≈ €3.90)" },
+    { icon: 'map-pin', value: "1,550 spaces", label: "Across 3 car parks" },
+    { icon: 'shield-check', value: "24/7", label: "Car parks guarded day and night" },
+  ],
+  cardSections: [
+    {
+      eyebrow: "Facilities",
+      heading: "The car parks at Marrakech Menara Airport",
+      intro: "Three surface car parks in front of the terminal building, open day and night.",
+      variant: 'feature',
+      items: [
+        { icon: 'parking', title: "Car park 1", text: "The largest of the airport's three car parks, at ground level in front of the terminal building.", tags: ["740 spaces", "24/7"] },
+        { icon: 'parking', title: "Car park 2", text: "The second largest, a few minutes' walk from the departures and arrivals halls.", tags: ["460 spaces", "24/7"] },
+        { icon: 'parking', title: "Car park 3", text: "The smallest of the three, with the same rates as the other car parks.", tags: ["350 spaces", "24/7"] },
+      ],
+    },
+    {
+      eyebrow: "Good to know",
+      heading: "Security and how it works",
+      variant: 'compact',
+      items: [
+        { icon: 'shield-check', title: "Guarded 24/7", text: "Fenced and guarded day and night, including for late flights." },
+        { icon: 'board', title: "Ticket at the entrance", text: "Automatic barrier: keep the ticket, you need it to pay on the way out." },
+        { icon: 'wallet', title: "Pay before leaving", text: "At the cash desk or machine; carry dirhams in cash, as cards are not always accepted." },
+        { icon: 'sun', title: "Open-air spaces", text: "In summer the inside of a car tops 60 °C: use a sunshade and leave nothing heat-sensitive inside." },
+      ],
+    },
+    {
+      eyebrow: "Alternatives",
+      heading: "Rather not park? The alternatives",
+      variant: 'feature',
+      items: [
+        { icon: 'van', title: "Private transfer", text: "A driver drops you off and picks you up: no space to find, no car left in the sun.", link: { key: 'bookTransfer', label: "Book a transfer" } },
+        { icon: 'car', title: "Car hire", text: "Pick up a car on arrival: return parking is arranged by the rental company.", link: { key: 'carRental', label: "See cars" } },
+        { icon: 'bus', title: "Taxi or bus 19", text: "Rank taxi or bus 19 at MAD 30: the car-free ways into the city.", link: { key: 'transfers', label: "Compare transport" } },
+      ],
+    },
+  ],
   body: `
-<h2>The rates, broadly</h2>
-<p>Airport parking is charged by duration, with a very short first band that is free or nominal, then hourly charging capped daily. As a guide, checked in September 2026:</p>
+<h2>Marrakech Menara Airport parking rates</h2>
+<p>Rate card of Morocco's national airports office (ONDA) for cars in open-air spaces:</p>
 <div class="table-wrap">
 <table class="data">
-<thead><tr><th>Duration</th><th>Indicative rate</th><th>Use</th></tr></thead>
+<thead><tr><th>Duration</th><th>Car</th><th>In euros (≈)</th></tr></thead>
 <tbody>
-<tr class="row-highlight"><td><strong>Under 30 minutes</strong></td><td class="num">free or ≈ MAD 10</td><td>Drop-off and pickup</td></tr>
-<tr><td><strong>1 hour</strong></td><td class="num">≈ MAD 20</td><td>Waiting for a delayed flight</td></tr>
-<tr><td><strong>24 hours</strong></td><td class="num">≈ MAD 70–80</td><td>Same-day return trip</td></tr>
-<tr><td><strong>1 week</strong></td><td class="num">≈ MAD 450–550</td><td>Short trip abroad</td></tr>
+<tr class="row-highlight"><td><strong>Up to 1 hour</strong></td><td class="num">MAD 6</td><td class="num">€0.55</td></tr>
+<tr><td><strong>1 to 2 hours</strong></td><td class="num">MAD 9</td><td class="num">€0.85</td></tr>
+<tr><td><strong>2 to 3 hours</strong></td><td class="num">MAD 11</td><td class="num">€1</td></tr>
+<tr><td><strong>3 to 4 hours</strong></td><td class="num">MAD 15</td><td class="num">€1.40</td></tr>
+<tr><td><strong>4 to 5 hours</strong></td><td class="num">MAD 17</td><td class="num">€1.60</td></tr>
+<tr><td><strong>5 to 12 hours</strong></td><td class="num">MAD 22</td><td class="num">€2</td></tr>
+<tr><td><strong>12 to 24 hours</strong></td><td class="num">MAD 42</td><td class="num">€3.90</td></tr>
 </tbody>
 </table>
 </div>
-<p>These are orders of magnitude: the scale is revised periodically and the board at the entrance is what counts. Pay at the machine or the kiosk before returning to your vehicle, cash preferred.</p>
+<p class="small">Coaches and heavy vehicles: MAD 8 for the first hour, MAD 42 for 12 to 24 hours. Indicative rates that ONDA may revise: the sign at the car park entrance prevails. Approximate conversion €1 ≈ MAD 10.8.</p>
 
-<h2>Drop-off and pickup: the right habit</h2>
-<p>The area in front of the terminals is built for stopping, not parking: attendants keep traffic moving, especially in the evening. If you are collecting someone whose flight has just landed, remember that <strong>30 to 60 minutes pass between touchdown and the exit</strong>. Better to wait in the car park, with an agreed message, than to circle the building.</p>
-
-<h2>Long stays: do the sums first</h2>
-<p>For a week, the official car park stays reasonable by European standards, but it is not trivial. Two alternatives are worth comparing:</p>
-<ul>
-<li><strong>A return trip by transfer or taxi.</strong> Two rides into town cost MAD 200–300, less than a week of parking — and you do not leave a car baking for seven days.</li>
-<li><strong>A nearby hotel's secure car park.</strong> Some properties minutes from the airport offer a night-plus-parking package, useful when your flight leaves at 6 am.</li>
-</ul>
+<h2>How much does a week of parking cost?</h2>
+<p>At MAD 42 per 24-hour period, allow <strong>about MAD 300 (≈ €27) for 7 days</strong>, a very modest sum compared with European airports. By comparison, a return taxi trip to the medina costs MAD 200–300 by day, and two <a href="/en/book-transfer/">private transfers</a> about MAD 580 (≈ €54). If you live in or around Marrakech and travel for a week, airport parking is often the cheapest option.</p>
 <div class="callout">
-<span class="callout-label">Hire car: do not take a ticket</span>
-<p>If you are returning a rental, the drop-off parking is arranged by the hire company: follow their signs and do not take a ticket at the public car park entrance. Allow a quarter of an hour for the inspection and keep dated photos of the returned vehicle.</p>
+<span class="callout-label">The real hidden cost: the sun</span>
+<p>The spaces are open-air. In summer, a car parked for a week in Marrakech faces extreme heat: a sunshade on the windscreen, nothing electronic, no medicines or cosmetics inside, and windows fully closed.</p>
 </div>
 
-<h2>Security and common sense</h2>
-<p>The car parks are fenced and patrolled, but the rule is the same as anywhere: nothing visible in the cabin, no sat-nav on the windscreen, no bag on the back seat. In summer, the interior of a car parked in full sun in Marrakech passes 60 °C comfortably: leave no electronics, cosmetics or medicines inside.</p>
+<h2>Dropping off or waiting for a traveller</h2>
+<p>The lane in front of the terminals is for stopping to unload luggage, not for parking: staff keep traffic moving, especially in the evening. To wait for someone, go into the car park: <strong>the first hour costs MAD 6</strong>. Allow 30 to 60 minutes between landing and leaving the hall, for passport control and baggage: check the flight on our <a href="/en/arrivals/">arrivals</a> page before you set off.</p>
+
+<h2>Hire car: no ticket needed</h2>
+<p>If you are returning a hire car, follow the company's signs to its return area and do not take a ticket at the public car park entrance. Allow a quarter of an hour for the vehicle check and keep dated photos of the car you hand back.</p>
 `,
+  faqHeading: "Marrakech Menara Airport parking: frequently asked questions",
   faqs: [
-    {
-      q: 'How much is parking at Marrakech Airport?',
-      a: "Around MAD 20 for an hour, MAD 70–80 for 24 hours and MAD 450–550 for a week, with a first band of thirty minutes free or nominal for drop-offs. The board at the entrance is authoritative and is revised periodically.",
-    },
-    {
-      q: 'Is there a drop-off zone at Marrakech Menara?',
-      a: "Yes, the area in front of the terminals lets you stop long enough to set down passengers, with a short free or nominal band. Attendants keep traffic moving, so to wait for someone, use the car park instead.",
-    },
-    {
-      q: 'Is Marrakech Airport parking guarded?',
-      a: "The car parks are fenced and patrolled. Still take the usual precautions: nothing visible in the cabin, and nothing heat-sensitive left in a car parked in full sun.",
-    },
-    {
-      q: 'Is it better to park at the airport or take a taxi?',
-      a: "For a week-long trip, two return rides by taxi or transfer often cost less than the parking, and spare you leaving a car exposed. Parking makes sense mainly for short returns, from a few hours to two days.",
-    },
+    { q: "How much is parking at Marrakech airport?", a: "On the ONDA rate card, MAD 6 for up to 1 hour, MAD 9 for up to 2 hours, MAD 22 for 5 to 12 hours and MAD 42 for 12 to 24 hours for a car. The sign at the entrance prevails, as rates may be revised." },
+    { q: "How many spaces does Marrakech Menara Airport parking have?", a: "About 1,550 spaces across three open-air car parks: 740 in car park 1, 460 in car park 2 and 350 in car park 3." },
+    { q: "How much is a week of parking?", a: "About MAD 300 (≈ €27) at MAD 42 per 24-hour period. That is often cheaper than a return private transfer, but protect the car from the sun." },
+    { q: "Is there a free drop-off zone?", a: "The lane in front of the terminals lets you stop briefly to drop off passengers. To wait, go into the car park: the first hour costs MAD 6." },
+    { q: "Is the airport car park secure?", a: "Yes, the car parks are fenced and guarded 24/7. Take the usual precautions: nothing visible inside the car and nothing heat-sensitive." },
+    { q: "How do I pay for parking?", a: "Take a ticket at the entrance barrier and pay before returning to your car, at the cash desk or machine. Carry dirhams in cash, as cards are not always accepted." },
+    { q: "Are the spaces covered?", a: "The published rates are for open-air spaces: do not count on shade. In summer, use a sunshade and leave no electronics or medicines in the car." },
+    { q: "Is the car park open at night?", a: "Yes, it operates 24/7, including for flights arriving or leaving in the middle of the night." },
   ],
   cta: {
-    heading: 'Rather not leave your car in the sun for a week?',
-    text: "A return trip by private transfer often costs less than long-stay parking, driver included.",
-    label: 'Compare with a transfer',
+    heading: "Rather not park?",
+    text: "A private transfer drops you off and picks you up at the airport, with no space to find and no car left in the sun.",
+    label: "Book a transfer",
+    secondary: { label: "Hire a car", key: 'carRental' },
   },
 } satisfies LocalizedPage;
