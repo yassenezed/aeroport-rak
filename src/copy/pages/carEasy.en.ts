@@ -1,13 +1,13 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Automatic car hire at Marrakech Menara Airport from €45",
-  description: "Automatic car hire at Marrakech Menara Airport from €45 a day: availability, extra cost, models and tips for driving in Morocco for the first time.",
+  title: "Automatic car hire at Marrakech Menara Airport from MAD 490",
+  description: "Automatic car hire at Marrakech Menara Airport from MAD 490 a day: availability, extra cost, models and tips for driving in Morocco for the first time.",
   eyebrow: "Easy driving · automatic gearbox",
   h1: "Automatic car hire at Marrakech Menara Airport",
   lede: "In Morocco, manual is still the norm and automatics must be booked. If you have never driven here, that choice changes a lot, starting with your first hour in Marrakech traffic.",
   highlights: [
-    { icon: 'wallet', value: "From €45", label: "Per day, automatic compact" },
+    { icon: 'wallet', value: "From MAD 490", label: "Per day, automatic compact" },
     { icon: 'check', value: "No clutch", label: "Two pedals, right foot only" },
     { icon: 'dollar-circle', value: "+15 to 30%", label: "Extra cost compared with manual" },
     { icon: 'passport', value: "Standard licence", label: "No special licence needed" },
@@ -35,9 +35,9 @@ export default {
       heading: "Automatic cars available in Marrakech",
       variant: 'feature',
       items: [
-        { icon: 'car', title: "Automatic compacts", text: "Renault Clio, Volkswagen Polo, Hyundai i20: easy to park, ideal for town, Essaouira and Ourika.", tags: ["€45–60/day"] },
-        { icon: 'map', title: "Automatic SUVs", text: "Dacia Duster, Kia Sportage: ground clearance and comfort for the Atlas and the Agafay tracks.", tags: ["€70–100/day"] },
-        { icon: 'star', title: "Automatic saloons", text: "Comfort and space for long distances and business travel.", tags: ["€90–140/day"] },
+        { icon: 'car', title: "Automatic compacts", text: "Renault Clio, Volkswagen Polo, Hyundai i20: easy to park, ideal for town, Essaouira and Ourika.", tags: ["MAD 490–650/day"] },
+        { icon: 'map', title: "Automatic SUVs", text: "Dacia Duster, Kia Sportage: ground clearance and comfort for the Atlas and the Agafay tracks.", tags: ["MAD 750–1,100/day"] },
+        { icon: 'star', title: "Automatic saloons", text: "Comfort and space for long distances and business travel.", tags: ["MAD 950–1,500/day"] },
       ],
     },
     {
@@ -56,9 +56,9 @@ export default {
       heading: "Automatic, economy, premium or minivan?",
       variant: 'feature',
       items: [
-        { icon: 'car', title: "Economy", text: "Manual small cars at the best price, for confident drivers.", tags: ["From €25/day"], link: { key: 'carBudget', label: "See economy cars" } },
-        { icon: 'star', title: "Premium", text: "Premium saloons and SUVs, automatic as standard.", tags: ["From €110/day"], link: { key: 'carLuxury', label: "See premium cars" } },
-        { icon: 'users', title: "7 to 9-seat minivan", text: "For groups; few automatics, book very early.", tags: ["From €55/day"], link: { key: 'carMinivan', label: "See minivans" } },
+        { icon: 'car', title: "Economy", text: "Manual small cars at the best price, for confident drivers.", tags: ["From MAD 270/day"], link: { key: 'carBudget', label: "See economy cars" } },
+        { icon: 'star', title: "Premium", text: "Premium saloons and SUVs, automatic as standard.", tags: ["From MAD 1,200/day"], link: { key: 'carLuxury', label: "See premium cars" } },
+        { icon: 'users', title: "7 to 9-seat minivan", text: "For groups; few automatics, book very early.", tags: ["From MAD 600/day"], link: { key: 'carMinivan', label: "See minivans" } },
       ],
     },
   ],
@@ -69,12 +69,13 @@ export default {
 <table class="data">
 <thead><tr><th>Automatic category</th><th>Price / day</th><th>Best for</th></tr></thead>
 <tbody>
-<tr class="row-highlight"><td><strong>Compact (Clio, Polo, i20)</strong></td><td class="num">€45–60</td><td>Town, Essaouira, Ourika</td></tr>
-<tr><td><strong>Compact SUV (Duster, Sportage)</strong></td><td class="num">€70–100</td><td>Atlas, Agafay tracks</td></tr>
-<tr><td><strong>Saloon</strong></td><td class="num">€90–140</td><td>Long distances, business</td></tr>
+<tr class="row-highlight"><td><strong>Compact (Clio, Polo, i20)</strong></td><td class="num">≈ MAD 490–650 (€45–60)</td><td>Town, Essaouira, Ourika</td></tr>
+<tr><td><strong>Compact SUV (Duster, Sportage)</strong></td><td class="num">≈ MAD 750–1,100 (€70–100)</td><td>Atlas, Agafay tracks</td></tr>
+<tr><td><strong>Saloon</strong></td><td class="num">≈ MAD 950–1,500 (€90–140)</td><td>Long distances, business</td></tr>
 </tbody>
 </table>
 </div>
+<p class="small">Indicative prices in dirhams, converted at an approximate rate of €1 ≈ MAD 10.8. The comparison tool shows the exact price of each offer.</p>
 
 <h2>Your first hour behind the wheel from Marrakech Menara Airport</h2>
 <p>Leave the airport towards Gueliz rather than the medina, and take thirty minutes to settle into the local rhythm before heading to your accommodation. Avoid your first drive between 5 and 7 pm, and at night: outside town, some vehicles drive without lights.</p>
@@ -91,7 +92,7 @@ export default {
 `,
   faqHeading: "Automatic car hire at Marrakech Menara Airport: frequently asked questions",
   faqs: [
-    { q: "How much is an automatic hire car at Marrakech airport?", a: "€45 to €60 a day for a compact, €70 to €100 for an SUV and €90 to €140 for a saloon. Expect 15 to 30% more than the same model with a manual gearbox." },
+    { q: "How much is an automatic hire car at Marrakech airport?", a: "≈ MAD 490 to 650 (€45 to €60) a day for a compact, ≈ MAD 750 to 1,100 (€70 to €100) for an SUV and ≈ MAD 950 to 1,500 (€90 to €140) for a saloon. Expect 15 to 30% more than the same model with a manual gearbox." },
     { q: "Are automatics easy to find in Marrakech?", a: "They exist but remain a minority, mostly from the compact category up. Book 2 to 3 weeks ahead and get the transmission confirmed in writing." },
     { q: "Do I need a special licence for an automatic?", a: "No, a standard licence is enough. If your licence is restricted to automatics, say so: the company must then guarantee an automatic." },
     { q: "Does an automatic use more fuel?", a: "A little on older models, hardly at all on recent ones. The difference matters far less than the extra hire cost." },

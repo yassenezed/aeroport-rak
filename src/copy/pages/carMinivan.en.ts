@@ -2,13 +2,13 @@ import type { LocalizedPage } from '../types';
 
 export default {
   title: "7 to 9-seat minivan hire at Marrakech Menara Airport",
-  description: "Hire a 7 or 9-seat minivan at Marrakech Menara Airport from €55 a day: real seats and luggage space, prices and the van-with-driver alternative.",
+  description: "Hire a 7 or 9-seat minivan at Marrakech Menara Airport from MAD 600 a day: real seats and luggage space, prices and the van-with-driver alternative.",
   eyebrow: "Minivan hire · families and groups",
   h1: "Minivan hire at Marrakech Menara Airport",
   lede: "With five or more people, the problem is not the number of seats but the boot. Here is what the people carriers and vans at Marrakech airport really hold, what they cost, and when a van with a driver works out cheaper.",
   highlights: [
     { icon: 'users', value: "7 to 9", label: "Seats, standard licence is enough" },
-    { icon: 'wallet', value: "From €55", label: "Per day, 7-seat people carrier" },
+    { icon: 'wallet', value: "From MAD 600", label: "Per day, 7-seat people carrier" },
     { icon: 'luggage', value: "6–8 cases", label: "In a 9-seat van" },
     { icon: 'shield-check', value: "Free cancellation", label: "On most offers" },
   ],
@@ -23,10 +23,10 @@ export default {
       heading: "Which minivan to choose in Marrakech?",
       variant: 'feature',
       items: [
-        { icon: 'car', title: "7-seat people carrier", text: "Dacia Lodgy or Jogger: perfect for 5 passengers with luggage, or 7 with soft bags.", tags: ["€55–75/day", "1–2 cases with 7"] },
-        { icon: 'car', title: "Comfort people carrier", text: "Volkswagen Touran, Citroën Berlingo: more comfort and a slightly bigger boot.", tags: ["€70–95/day", "2 cases with 7"] },
-        { icon: 'van', title: "9-seat van", text: "Renault Trafic, Volkswagen Transporter: the real answer for 6 to 9 people with suitcases.", tags: ["€100–150/day", "6–8 cases"] },
-        { icon: 'users', title: "12 to 16-seat minibus", text: "Mercedes Sprinter for large groups and weddings, usually with a driver.", tags: ["€150–220/day", "With driver"] },
+        { icon: 'car', title: "7-seat people carrier", text: "Dacia Lodgy or Jogger: perfect for 5 passengers with luggage, or 7 with soft bags.", tags: ["MAD 600–800/day", "1–2 cases with 7"] },
+        { icon: 'car', title: "Comfort people carrier", text: "Volkswagen Touran, Citroën Berlingo: more comfort and a slightly bigger boot.", tags: ["MAD 750–1,050/day", "2 cases with 7"] },
+        { icon: 'van', title: "9-seat van", text: "Renault Trafic, Volkswagen Transporter: the real answer for 6 to 9 people with suitcases.", tags: ["MAD 1,100–1,600/day", "6–8 cases"] },
+        { icon: 'users', title: "12 to 16-seat minibus", text: "Mercedes Sprinter for large groups and weddings, usually with a driver.", tags: ["MAD 1,600–2,400/day", "With driver"] },
       ],
     },
     {
@@ -45,9 +45,9 @@ export default {
       heading: "Minivan, economy or premium?",
       variant: 'feature',
       items: [
-        { icon: 'car', title: "Economy", text: "For 2 to 4 travellers with little luggage, on a budget.", tags: ["From €25/day"], link: { key: 'carBudget', label: "See economy cars" } },
-        { icon: 'star', title: "Premium and SUVs", text: "Premium comfort for long distances in a small group.", tags: ["From €110/day"], link: { key: 'carLuxury', label: "See premium cars" } },
-        { icon: 'check', title: "Automatic", text: "More relaxing in town; automatic minivans are rare, book early.", tags: ["From €45/day"], link: { key: 'carEasy', label: "See automatics" } },
+        { icon: 'car', title: "Economy", text: "For 2 to 4 travellers with little luggage, on a budget.", tags: ["From MAD 270/day"], link: { key: 'carBudget', label: "See economy cars" } },
+        { icon: 'star', title: "Premium and SUVs", text: "Premium comfort for long distances in a small group.", tags: ["From MAD 1,200/day"], link: { key: 'carLuxury', label: "See premium cars" } },
+        { icon: 'check', title: "Automatic", text: "More relaxing in town; automatic minivans are rare, book early.", tags: ["From MAD 490/day"], link: { key: 'carEasy', label: "See automatics" } },
       ],
     },
   ],
@@ -57,13 +57,14 @@ export default {
 <table class="data">
 <thead><tr><th>Vehicle</th><th>Seats</th><th>Cases, 3rd row up</th><th>Price / day</th></tr></thead>
 <tbody>
-<tr><td><strong>Dacia Lodgy / Jogger</strong></td><td class="num">7</td><td class="num">1–2</td><td class="num">€55–75</td></tr>
-<tr><td><strong>VW Touran / Citroën Berlingo</strong></td><td class="num">7</td><td class="num">2</td><td class="num">€70–95</td></tr>
-<tr class="row-highlight"><td><strong>Renault Trafic / VW Transporter</strong></td><td class="num">9</td><td class="num">6–8</td><td class="num">€100–150</td></tr>
-<tr><td><strong>Mercedes Sprinter</strong></td><td class="num">12–16</td><td class="num">12+</td><td class="num">€150–220</td></tr>
+<tr><td><strong>Dacia Lodgy / Jogger</strong></td><td class="num">7</td><td class="num">1–2</td><td class="num">≈ MAD 600–800 (€55–75)</td></tr>
+<tr><td><strong>VW Touran / Citroën Berlingo</strong></td><td class="num">7</td><td class="num">2</td><td class="num">≈ MAD 750–1,050 (€70–95)</td></tr>
+<tr class="row-highlight"><td><strong>Renault Trafic / VW Transporter</strong></td><td class="num">9</td><td class="num">6–8</td><td class="num">≈ MAD 1,100–1,600 (€100–150)</td></tr>
+<tr><td><strong>Mercedes Sprinter</strong></td><td class="num">12–16</td><td class="num">12+</td><td class="num">≈ MAD 1,600–2,400 (€150–220)</td></tr>
 </tbody>
 </table>
 </div>
+<p class="small">Indicative prices in dirhams, converted at an approximate rate of €1 ≈ MAD 10.8. The comparison tool shows the exact price of each offer.</p>
 <p>The simple rule: <strong>from six people with suitcases, go straight to the 9-seat van</strong>. A standard car licence covers up to 9 seats including the driver; beyond that you need a passenger-transport licence, hence the driver for minibuses.</p>
 
 <h2>Driving a large vehicle around Marrakech Menara Airport</h2>
@@ -74,12 +75,12 @@ export default {
 </div>
 
 <h2>Van with driver: do the full maths</h2>
-<p>Add up the hire, fuel (a 9-seater is thirsty), tolls, parking and the blocked deposit. Against that, a van with driver for a day in Ourika or Agafay often costs about the same, with none of the hassle. The smart mix: a <a href="/en/book-transfer/">transfer</a> on arrival and departure, from €27 for up to 7 passengers, and a van hire only for the days you actually drive.</p>
+<p>Add up the hire, fuel (a 9-seater is thirsty), tolls, parking and the blocked deposit. Against that, a van with driver for a day in Ourika or Agafay often costs about the same, with none of the hassle. The smart mix: a <a href="/en/book-transfer/">transfer</a> on arrival and departure, from MAD 290 (€27) for up to 7 passengers, and a van hire only for the days you actually drive.</p>
 <p>Large vehicles are the first to run out: in school holidays, at Christmas and in spring, 9-seaters go <strong>several weeks ahead</strong>.</p>
 `,
   faqHeading: "Minivan hire at Marrakech Menara Airport: frequently asked questions",
   faqs: [
-    { q: "How much is a minivan at Marrakech airport?", a: "€55 to €95 a day for a 7-seat people carrier and €100 to €150 for a 9-seat van with a real boot. A 12 to 16-seat Sprinter, usually with a driver, costs €150 to €220 a day." },
+    { q: "How much is a minivan at Marrakech airport?", a: "≈ MAD 600 to 1,050 (€55 to €95) a day for a 7-seat people carrier and ≈ MAD 1,100 to 1,600 (€100 to €150) for a 9-seat van with a real boot. A 12 to 16-seat Sprinter, usually with a driver, costs ≈ MAD 1,600 to 2,400 (€150 to €220) a day." },
     { q: "How many suitcases fit in a 7-seater?", a: "Only one or two with the third row up in a Dacia Lodgy or Jogger. With seven people and checked suitcases, move up to a 9-seat van such as a Renault Trafic." },
     { q: "Do I need a special licence for a 9-seat minivan?", a: "No, a standard car licence covers up to 9 seats including the driver. Beyond that, as with a Sprinter, a passenger-transport licence is needed: these vehicles are hired with a driver." },
     { q: "Is a minivan cheaper than two cars?", a: "Usually yes with six or more people: one vehicle, one tank, one parking space and one excess waiver instead of two." },

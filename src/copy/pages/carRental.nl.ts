@@ -1,13 +1,13 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Autohuur luchthaven Marrakech-Menara vanaf € 25 per dag",
-  description: "Autohuur op luchthaven Marrakech-Menara: vergelijk verhuurders, prijzen vanaf € 25 per dag, borg, verzekering en tips voor de Atlas en Essaouira.",
+  title: "Autohuur luchthaven Marrakech-Menara vanaf 270 MAD per dag",
+  description: "Autohuur op luchthaven Marrakech-Menara: vergelijk verhuurders, prijzen vanaf 270 MAD per dag, borg, verzekering en tips voor de Atlas en Essaouira.",
   eyebrow: "Autohuur · prijsvergelijker",
   h1: "Autohuur op luchthaven Marrakech-Menara",
   lede: "Vergelijk de verhuurders in de aankomsthal en haal uw auto op zodra u geland bent. Een kleine auto voor Essaouira, een SUV voor de Atlas of een minivan voor het gezin: dit zijn de echte prijzen, de borg om in te plannen en de valkuilen in het contract.",
   highlights: [
-    { icon: 'wallet', value: "Vanaf € 25", label: "Per dag, kleine auto in het laagseizoen" },
+    { icon: 'wallet', value: "Vanaf 270 MAD", label: "Per dag, kleine auto in het laagseizoen" },
     { icon: 'plane-landing', value: "Aankomsthal", label: "Balies van de verhuurders op de luchthaven" },
     { icon: 'passport', value: "Nationaal rijbewijs", label: "Aanvaard voor een toeristisch verblijf" },
     { icon: 'shield-check', value: "Gratis annuleren", label: "Bij de meeste aanbiedingen" },
@@ -35,10 +35,10 @@ export default {
       intro: "Kies op basis van uw route, niet op de lokprijs.",
       variant: "feature",
       items: [
-        { icon: 'car', title: "Economy", text: "Dacia Sandero, Kia Picanto, Hyundai i10: ideaal voor Essaouira, de Ourika-vallei en verharde wegen.", tags: ["Vanaf € 25/dag", "4–5 plaatsen"], link: { key: 'carBudget', label: "Aanbiedingen bekijken" } },
-        { icon: 'star', title: "Premium", text: "Premium sedans en SUV's voor comfortabel reizen of een zakenreis.", tags: ["Vanaf € 110/dag", "Hoge borg"], link: { key: 'carLuxury', label: "Ontdekken" } },
-        { icon: 'users', title: "Minivan 7 tot 9 plaatsen", text: "Dacia Jogger, Renault Trafic: het hele gezin en de bagage in één voertuig.", tags: ["Vanaf € 55/dag", "7–9 plaatsen"], link: { key: 'carMinivan', label: "Verkennen" } },
-        { icon: 'check', title: "Automaat", text: "Zeldzamer en duurder in Marokko, maar veel rustiger in het verkeer van Marrakech.", tags: ["Vanaf € 45/dag", "Vroeg boeken"], link: { key: 'carEasy', label: "Voertuigen bekijken" } },
+        { icon: 'car', title: "Economy", text: "Dacia Sandero, Kia Picanto, Hyundai i10: ideaal voor Essaouira, de Ourika-vallei en verharde wegen.", tags: ["Vanaf 270 MAD/dag", "4–5 plaatsen"], link: { key: 'carBudget', label: "Aanbiedingen bekijken" } },
+        { icon: 'star', title: "Premium", text: "Premium sedans en SUV's voor comfortabel reizen of een zakenreis.", tags: ["Vanaf 1.200 MAD/dag", "Hoge borg"], link: { key: 'carLuxury', label: "Ontdekken" } },
+        { icon: 'users', title: "Minivan 7 tot 9 plaatsen", text: "Dacia Jogger, Renault Trafic: het hele gezin en de bagage in één voertuig.", tags: ["Vanaf 600 MAD/dag", "7–9 plaatsen"], link: { key: 'carMinivan', label: "Verkennen" } },
+        { icon: 'check', title: "Automaat", text: "Zeldzamer en duurder in Marokko, maar veel rustiger in het verkeer van Marrakech.", tags: ["Vanaf 490 MAD/dag", "Vroeg boeken"], link: { key: 'carEasy', label: "Voertuigen bekijken" } },
       ],
     },
     {
@@ -59,13 +59,14 @@ export default {
 <table class="data">
 <thead><tr><th>Categorie</th><th>Prijs / dag</th><th>Gebruikelijke borg</th><th>Voor</th></tr></thead>
 <tbody>
-<tr class="row-highlight"><td><strong>Kleine auto (Sandero, Picanto)</strong></td><td class="num">€ 25–35</td><td class="num">5.000–8.000 MAD</td><td>Koppels, verharde wegen</td></tr>
-<tr><td><strong>Compact (Clio, Polo)</strong></td><td class="num">€ 35–45</td><td class="num">6.000–10.000 MAD</td><td>Comfort, lange afstanden</td></tr>
-<tr><td><strong>SUV (Duster, Sportage)</strong></td><td class="num">€ 55–90</td><td class="num">10.000–15.000 MAD</td><td>Atlas, pistes van Agafay</td></tr>
-<tr><td><strong>Minivan 7 plaatsen</strong></td><td class="num">€ 55–95</td><td class="num">8.000–15.000 MAD</td><td>Gezinnen, groepen</td></tr>
+<tr class="row-highlight"><td><strong>Kleine auto (Sandero, Picanto)</strong></td><td class="num">≈ 270–380 MAD (€ 25–35)</td><td class="num">5.000–8.000 MAD</td><td>Koppels, verharde wegen</td></tr>
+<tr><td><strong>Compact (Clio, Polo)</strong></td><td class="num">≈ 380–490 MAD (€ 35–45)</td><td class="num">6.000–10.000 MAD</td><td>Comfort, lange afstanden</td></tr>
+<tr><td><strong>SUV (Duster, Sportage)</strong></td><td class="num">≈ 600–950 MAD (€ 55–90)</td><td class="num">10.000–15.000 MAD</td><td>Atlas, pistes van Agafay</td></tr>
+<tr><td><strong>Minivan 7 plaatsen</strong></td><td class="num">≈ 600–1.050 MAD (€ 55–95)</td><td class="num">8.000–15.000 MAD</td><td>Gezinnen, groepen</td></tr>
 </tbody>
 </table>
 </div>
+<p class="small">Richtprijzen in dirham, omgerekend aan een koers van ongeveer € 1 ≈ 10,8 MAD. De vergelijker toont de exacte prijs van elke aanbieding.</p>
 <p>Tel daar brandstof bij (diesel kost rond 12 tot 14 MAD per liter), tol op de snelweg en, als u die neemt, de eigenrisicoverzekering. De prijzen stijgen sterk in de Europese schoolvakanties en in de zomer.</p>
 
 <h2>Hebt u in Marrakech echt een auto nodig?</h2>
@@ -95,7 +96,7 @@ export default {
 <h3>De borg</h3>
 <p>5.000 tot 15.000 MAD naargelang de categorie, geblokkeerd op een <strong>creditcard op naam van de hoofdbestuurder</strong>. Prepaidkaarten en veel debetkaarten worden geweigerd: de meest voorkomende reden om aan de balie te worden afgewezen. Controleer uw kaartlimiet voor vertrek.</p>
 <h3>Het eigen risico</h3>
-<p>Het basiscontract laat bij schade een hoog eigen risico voor uw rekening. U kunt het aanvaarden, de verzekering van de verhuurder kopen (€ 10 tot € 20 per dag) of een goedkopere externe verzekering nemen, waarbij u eerst betaalt en daarna terugvordert.</p>
+<p>Het basiscontract laat bij schade een hoog eigen risico voor uw rekening. U kunt het aanvaarden, de verzekering van de verhuurder kopen (≈ 110 tot 220 MAD, € 10 tot € 20 per dag) of een goedkopere externe verzekering nemen, waarbij u eerst betaalt en daarna terugvordert.</p>
 <h3>De inspectie van de auto</h3>
 <p><strong>Fotografeer en film de auto van alle kanten voor vertrek</strong>: velgen, voorruit, dak, interieur en brandstofniveau. Laat elke kras op het formulier noteren en herhaal de foto's bij het inleveren. Die tien minuten voorkomen de meeste geschillen.</p>
 
@@ -115,11 +116,11 @@ export default {
 `,
   faqHeading: "Autohuur op luchthaven Marrakech-Menara: veelgestelde vragen",
   faqs: [
-    { q: "Wat kost een huurauto op de luchthaven van Marrakech?", a: "Vanaf € 25 tot € 35 per dag voor een kleine auto, € 35 tot € 45 voor een compacte en € 55 tot € 90 voor een SUV. Reken daarbij brandstof, tol en een eventuele verzekering. In schoolvakanties en de zomer stijgen de prijzen." },
+    { q: "Wat kost een huurauto op de luchthaven van Marrakech?", a: "Vanaf 270 tot 380 MAD (€ 25 tot € 35) per dag voor een kleine auto, ≈ 380 tot 490 MAD (€ 35 tot € 45) voor een compacte en ≈ 600 tot 950 MAD (€ 55 tot € 90) voor een SUV. Reken daarbij brandstof, tol en een eventuele verzekering. In schoolvakanties en de zomer stijgen de prijzen." },
     { q: "Welke verhuurders zitten op luchthaven Marrakech-Menara?", a: "Grote internationale merken en veel Marokkaanse agentschappen hebben een balie of ontmoetingspunt in de aankomsthal. De vergelijker op deze pagina toont hun aanbiedingen naast elkaar met de totaalprijs." },
     { q: "Hoeveel borg moet ik voorzien?", a: "5.000 tot 15.000 MAD naargelang de categorie, geblokkeerd op een creditcard op naam van de hoofdbestuurder. Prepaidkaarten en veel debetkaarten worden geweigerd: controleer uw limiet voor vertrek." },
     { q: "Volstaat mijn Belgisch of Nederlands rijbewijs in Marokko?", a: "Ja, het nationale rijbewijs volstaat voor een toeristisch verblijf, als u het naargelang de verhuurder minstens 1 tot 2 jaar hebt. Neem het mee met het contract en uw paspoort: controles zijn frequent." },
-    { q: "Moet ik een eigenrisicoverzekering nemen?", a: "Die verlaagt of schrapt wat u betaalt bij schade, voor € 10 tot € 20 per dag bij de verhuurder. Een externe verzekering is goedkoper, maar u betaalt eerst en vordert terug. Zonder dekking draagt u zelf het eigen risico." },
+    { q: "Moet ik een eigenrisicoverzekering nemen?", a: "Die verlaagt of schrapt wat u betaalt bij schade, voor ≈ 110 tot 220 MAD (€ 10 tot € 20) per dag bij de verhuurder. Een externe verzekering is goedkoper, maar u betaalt eerst en vordert terug. Zonder dekking draagt u zelf het eigen risico." },
     { q: "Heb ik een 4x4 nodig voor de Atlas?", a: "Niet voor Ourika, Imlil of de Tichka-pas, die volledig verhard zijn. Een SUV helpt alleen op de pistes van Agafay of in afgelegen valleien, waar bodemvrijheid belangrijker is dan vierwielaandrijving." },
     { q: "Wat zijn de snelheidslimieten in Marokko?", a: "60 km/u in de stad, 100 km/u op de weg en 120 km/u op de snelweg. Vaste en mobiele flitsers zijn talrijk, en boetes betaalt u ter plaatse tegen ontvangstbewijs." },
     { q: "Wanneer is autohuur het goedkoopst?", a: "In januari buiten de feestdagen, in juni en in november. Europese schoolvakanties, Pasen en de zomer drijven de prijzen op: boek 2 tot 3 weken vooraf en houd gratis annuleren." },

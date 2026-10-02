@@ -1,13 +1,13 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Mietwagen Flughafen Marrakesch-Menara ab 25 € pro Tag",
-  description: "Mietwagen am Flughafen Marrakesch-Menara: Anbieter vergleichen, Preise ab 25 €/Tag, Kaution, Versicherung und Tipps für Atlas und Essaouira.",
+  title: "Mietwagen Flughafen Marrakesch-Menara ab 270 MAD pro Tag",
+  description: "Mietwagen am Flughafen Marrakesch-Menara: Anbieter vergleichen, Preise ab 270 MAD/Tag, Kaution, Versicherung und Tipps für Atlas und Essaouira.",
   eyebrow: "Mietwagen · Preisvergleich",
   h1: "Mietwagen am Flughafen Marrakesch-Menara",
   lede: "Vergleichen Sie die Vermieter in der Ankunftshalle und übernehmen Sie Ihr Auto direkt nach der Landung. Kleinwagen für Essaouira, SUV für den Atlas oder Van für die Familie: hier die echten Preise, die einzuplanende Kaution und die Fallen im Vertrag.",
   highlights: [
-    { icon: 'wallet', value: "Ab 25 €", label: "Pro Tag, Kleinwagen in der Nebensaison" },
+    { icon: 'wallet', value: "Ab 270 MAD", label: "Pro Tag, Kleinwagen in der Nebensaison" },
     { icon: 'plane-landing', value: "Ankunftshalle", label: "Schalter der Vermieter am Flughafen" },
     { icon: 'passport', value: "Nationaler Führerschein", label: "Für Urlaubsreisen akzeptiert" },
     { icon: 'shield-check', value: "Kostenlose Stornierung", label: "Bei den meisten Angeboten" },
@@ -35,10 +35,10 @@ export default {
       intro: "Wählen Sie nach Ihrer Route, nicht nach dem Lockpreis.",
       variant: 'feature',
       items: [
-        { icon: 'car', title: "Economy", text: "Dacia Sandero, Kia Picanto, Hyundai i10: ideal für Essaouira, das Ourika-Tal und asphaltierte Straßen.", tags: ["Ab 25 €/Tag", "4–5 Plätze"], link: { key: 'carBudget', label: "Angebote ansehen" } },
-        { icon: 'star', title: "Premium", text: "Premium-Limousinen und SUVs für bequemes Reisen oder Geschäftsreisen.", tags: ["Ab 110 €/Tag", "Hohe Kaution"], link: { key: 'carLuxury', label: "Entdecken" } },
-        { icon: 'users', title: "Van mit 7 bis 9 Plätzen", text: "Dacia Jogger, Renault Trafic: die ganze Familie samt Gepäck in einem Fahrzeug.", tags: ["Ab 55 €/Tag", "7–9 Plätze"], link: { key: 'carMinivan', label: "Erkunden" } },
-        { icon: 'check', title: "Automatik", text: "In Marokko seltener und teurer, im Verkehr von Marrakesch aber deutlich entspannter.", tags: ["Ab 45 €/Tag", "Früh buchen"], link: { key: 'carEasy', label: "Fahrzeuge ansehen" } },
+        { icon: 'car', title: "Economy", text: "Dacia Sandero, Kia Picanto, Hyundai i10: ideal für Essaouira, das Ourika-Tal und asphaltierte Straßen.", tags: ["Ab 270 MAD/Tag", "4–5 Plätze"], link: { key: 'carBudget', label: "Angebote ansehen" } },
+        { icon: 'star', title: "Premium", text: "Premium-Limousinen und SUVs für bequemes Reisen oder Geschäftsreisen.", tags: ["Ab 1.200 MAD/Tag", "Hohe Kaution"], link: { key: 'carLuxury', label: "Entdecken" } },
+        { icon: 'users', title: "Van mit 7 bis 9 Plätzen", text: "Dacia Jogger, Renault Trafic: die ganze Familie samt Gepäck in einem Fahrzeug.", tags: ["Ab 600 MAD/Tag", "7–9 Plätze"], link: { key: 'carMinivan', label: "Erkunden" } },
+        { icon: 'check', title: "Automatik", text: "In Marokko seltener und teurer, im Verkehr von Marrakesch aber deutlich entspannter.", tags: ["Ab 490 MAD/Tag", "Früh buchen"], link: { key: 'carEasy', label: "Fahrzeuge ansehen" } },
       ],
     },
     {
@@ -59,13 +59,14 @@ export default {
 <table class="data">
 <thead><tr><th>Kategorie</th><th>Preis / Tag</th><th>Übliche Kaution</th><th>Für</th></tr></thead>
 <tbody>
-<tr class="row-highlight"><td><strong>Kleinwagen (Sandero, Picanto)</strong></td><td class="num">25–35 €</td><td class="num">5.000–8.000 MAD</td><td>Paare, asphaltierte Straßen</td></tr>
-<tr><td><strong>Kompaktwagen (Clio, Polo)</strong></td><td class="num">35–45 €</td><td class="num">6.000–10.000 MAD</td><td>Komfort, lange Strecken</td></tr>
-<tr><td><strong>SUV (Duster, Sportage)</strong></td><td class="num">55–90 €</td><td class="num">10.000–15.000 MAD</td><td>Atlas, Pisten von Agafay</td></tr>
-<tr><td><strong>Van mit 7 Plätzen</strong></td><td class="num">55–95 €</td><td class="num">8.000–15.000 MAD</td><td>Familien, Gruppen</td></tr>
+<tr class="row-highlight"><td><strong>Kleinwagen (Sandero, Picanto)</strong></td><td class="num">≈ 270–380 MAD (25–35 €)</td><td class="num">5.000–8.000 MAD</td><td>Paare, asphaltierte Straßen</td></tr>
+<tr><td><strong>Kompaktwagen (Clio, Polo)</strong></td><td class="num">≈ 380–490 MAD (35–45 €)</td><td class="num">6.000–10.000 MAD</td><td>Komfort, lange Strecken</td></tr>
+<tr><td><strong>SUV (Duster, Sportage)</strong></td><td class="num">≈ 600–950 MAD (55–90 €)</td><td class="num">10.000–15.000 MAD</td><td>Atlas, Pisten von Agafay</td></tr>
+<tr><td><strong>Van mit 7 Plätzen</strong></td><td class="num">≈ 600–1.050 MAD (55–95 €)</td><td class="num">8.000–15.000 MAD</td><td>Familien, Gruppen</td></tr>
 </tbody>
 </table>
 </div>
+<p class="small">Richtpreise in Dirham, umgerechnet zum ungefähren Kurs 1 € ≈ 10,8 MAD. Der Vergleich zeigt den genauen Preis jedes Angebots.</p>
 <p>Dazu kommen Kraftstoff (Diesel kostet rund 12 bis 14 MAD pro Liter), Autobahnmaut und, falls gewünscht, die Selbstbeteiligungsversicherung. In den europäischen Schulferien und im Sommer steigen die Preise deutlich.</p>
 
 <h2>Braucht man in Marrakesch wirklich ein Auto?</h2>
@@ -95,7 +96,7 @@ export default {
 <h3>Die Kaution</h3>
 <p>5.000 bis 15.000 MAD je nach Kategorie, geblockt auf einer <strong>Kreditkarte auf den Namen des Hauptfahrers</strong>. Prepaid- und viele Debitkarten werden abgelehnt: der häufigste Ablehnungsgrund am Schalter. Prüfen Sie Ihr Kartenlimit vor der Reise.</p>
 <h3>Die Selbstbeteiligung</h3>
-<p>Der Basisvertrag lässt bei Schäden eine hohe Selbstbeteiligung bei Ihnen. Sie können sie akzeptieren, die Versicherung des Vermieters kaufen (10 bis 20 € pro Tag) oder eine günstigere Drittversicherung abschließen, bei der Sie zuerst zahlen und sich das Geld später erstatten lassen.</p>
+<p>Der Basisvertrag lässt bei Schäden eine hohe Selbstbeteiligung bei Ihnen. Sie können sie akzeptieren, die Versicherung des Vermieters kaufen (≈ 110 bis 220 MAD, 10 bis 20 € pro Tag) oder eine günstigere Drittversicherung abschließen, bei der Sie zuerst zahlen und sich das Geld später erstatten lassen.</p>
 <h3>Die Fahrzeugübergabe</h3>
 <p><strong>Fotografieren und filmen Sie das Auto vor der Abfahrt von allen Seiten</strong>: Felgen, Windschutzscheibe, Dach, Innenraum und Tankstand. Lassen Sie jeden Kratzer im Protokoll vermerken und wiederholen Sie die Fotos bei der Rückgabe. Diese zehn Minuten verhindern die meisten Streitfälle.</p>
 
@@ -115,11 +116,11 @@ export default {
 `,
   faqHeading: "Mietwagen am Flughafen Marrakesch-Menara: häufige Fragen",
   faqs: [
-    { q: "Was kostet ein Mietwagen am Flughafen Marrakesch?", a: "Ab 25 bis 35 € pro Tag für einen Kleinwagen, 35 bis 45 € für einen Kompaktwagen und 55 bis 90 € für einen SUV. Dazu kommen Kraftstoff, Maut und eine eventuelle Versicherung. In Schulferien und im Sommer steigen die Preise." },
+    { q: "Was kostet ein Mietwagen am Flughafen Marrakesch?", a: "Ab 270 bis 380 MAD (25 bis 35 €) pro Tag für einen Kleinwagen, ≈ 380 bis 490 MAD (35 bis 45 €) für einen Kompaktwagen und ≈ 600 bis 950 MAD (55 bis 90 €) für einen SUV. Dazu kommen Kraftstoff, Maut und eine eventuelle Versicherung. In Schulferien und im Sommer steigen die Preise." },
     { q: "Welche Vermieter gibt es am Flughafen Marrakesch-Menara?", a: "Große internationale Marken und viele marokkanische Agenturen haben einen Schalter oder Treffpunkt in der Ankunftshalle. Der Vergleich auf dieser Seite zeigt ihre Angebote nebeneinander mit Gesamtpreis." },
     { q: "Wie hoch ist die Kaution?", a: "5.000 bis 15.000 MAD je nach Kategorie, geblockt auf einer Kreditkarte des Hauptfahrers. Prepaid- und viele Debitkarten werden abgelehnt: Prüfen Sie Ihr Limit vor der Reise." },
     { q: "Reicht der deutsche Führerschein in Marokko?", a: "Ja, der nationale Führerschein genügt für eine Urlaubsreise, wenn Sie ihn je nach Vermieter seit mindestens 1 bis 2 Jahren besitzen. Führen Sie ihn mit Vertrag und Pass mit: Kontrollen sind häufig." },
-    { q: "Lohnt sich eine Versicherung ohne Selbstbeteiligung?", a: "Sie senkt oder streicht Ihren Anteil bei Schäden, für 10 bis 20 € pro Tag beim Vermieter. Eine Drittversicherung ist günstiger, aber Sie zahlen zuerst und fordern dann zurück. Ohne Schutz tragen Sie die Selbstbeteiligung." },
+    { q: "Lohnt sich eine Versicherung ohne Selbstbeteiligung?", a: "Sie senkt oder streicht Ihren Anteil bei Schäden, für ≈ 110 bis 220 MAD (10 bis 20 €) pro Tag beim Vermieter. Eine Drittversicherung ist günstiger, aber Sie zahlen zuerst und fordern dann zurück. Ohne Schutz tragen Sie die Selbstbeteiligung." },
     { q: "Braucht man für den Atlas einen Geländewagen?", a: "Nicht für Ourika, Imlil oder den Tichka-Pass, die komplett asphaltiert sind. Ein SUV hilft nur auf den Pisten von Agafay oder in abgelegenen Tälern, wo Bodenfreiheit wichtiger ist als Allrad." },
     { q: "Welche Tempolimits gelten in Marokko?", a: "60 km/h innerorts, 100 km/h auf Landstraßen und 120 km/h auf Autobahnen. Feste und mobile Radarkontrollen sind häufig, Bußgelder werden vor Ort gegen Quittung bezahlt." },
     { q: "Wann ist ein Mietwagen am günstigsten?", a: "Im Januar außerhalb der Feiertage, im Juni und im November. Europäische Schulferien, Ostern und der Sommer treiben die Preise: 2 bis 3 Wochen vorher buchen und kostenlose Stornierung behalten." },

@@ -1,13 +1,13 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Goedkope huurauto luchthaven Marrakech-Menara vanaf € 25",
-  description: "Goedkope huurauto op luchthaven Marrakech-Menara vanaf € 25 per dag: Sandero, Picanto, i10. Vergelijk verhuurders en vermijd verborgen kosten.",
-  eyebrow: "Economy-autohuur · vanaf € 25 per dag",
+  title: "Goedkope huurauto luchthaven Marrakech-Menara vanaf 270 MAD",
+  description: "Goedkope huurauto op luchthaven Marrakech-Menara vanaf 270 MAD per dag: Sandero, Picanto, i10. Vergelijk verhuurders en vermijd verborgen kosten.",
+  eyebrow: "Economy-autohuur · vanaf 270 MAD per dag",
   h1: "Goedkope huurauto op luchthaven Marrakech-Menara",
   lede: "De kleine auto is de meest gehuurde categorie in Marrakech en de juiste voor Essaouira, Ourika of Imlil. Dit kost een kleine auto vanaf de luchthaven echt, en zo betaalt u weinig zonder verrassingen aan de balie.",
   highlights: [
-    { icon: 'wallet', value: "Vanaf € 25", label: "Per dag, in het laagseizoen" },
+    { icon: 'wallet', value: "Vanaf 270 MAD", label: "Per dag, in het laagseizoen" },
     { icon: 'car', value: "5–6 L/100 km", label: "Gemiddeld verbruik van een kleine auto" },
     { icon: 'map-pin', value: "Makkelijk parkeren", label: "Ideaal formaat rond de medina" },
     { icon: 'shield-check', value: "Gratis annuleren", label: "Tot 48 u vooraf, bij de meeste aanbiedingen" },
@@ -24,7 +24,7 @@ export default {
       intro: "De meest geboekte categorie, en terecht.",
       variant: "feature",
       items: [
-        { icon: 'wallet', title: "De laagste prijs", text: "€ 25 tot € 35 per dag in het normale seizoen, minder per week: meerdere huurdagen voor de prijs van één georganiseerde uitstap." },
+        { icon: 'wallet', title: "De laagste prijs", text: "≈ 270 tot 380 MAD (€ 25 tot € 35) per dag in het normale seizoen, minder per week: meerdere huurdagen voor de prijs van één georganiseerde uitstap." },
         { icon: 'sun', title: "Weinig brandstof", text: "Een kleine auto verbruikt 5 tot 6 L/100 km: heen en terug naar Essaouira blijft betaalbaar, ook met diesel aan 12–14 MAD." },
         { icon: 'map-pin', title: "Makkelijk parkeren", text: "Bij de poorten van de medina en in Guéliz zijn de plaatsen krap: een kleine auto past waar een SUV opgeeft." },
         { icon: 'map', title: "Genoeg voor de Atlas", text: "Ourika, Imlil en de Tichka-pas zijn verhard: een kleine auto rijdt er vlot op met twee of drie passagiers." },
@@ -35,10 +35,10 @@ export default {
       heading: "De meest gehuurde kleine auto's in Marrakech",
       variant: "feature",
       items: [
-        { icon: 'car', title: "Dacia Sandero", text: "De bestseller in Marokko: 5 plaatsen, goede koffer voor zijn formaat, robuust in de bergen.", tags: ["€ 25–32/dag", "≈ 5,8 L/100 km"] },
-        { icon: 'car', title: "Kia Picanto", text: "Heel compact en wendbaar, ideaal met twee in de stad en langs de kust.", tags: ["€ 25–30/dag", "≈ 5 L/100 km"] },
-        { icon: 'car', title: "Hyundai i10", text: "4 plaatsen, goede airco, het makkelijkst te parkeren rond de medina.", tags: ["€ 25–30/dag", "≈ 4,8 L/100 km"] },
-        { icon: 'car', title: "Renault Clio", text: "Een stap hoger in comfort en vermogen, beter met vier of voor Ouarzazate.", tags: ["€ 32–40/dag", "≈ 5,6 L/100 km"] },
+        { icon: 'car', title: "Dacia Sandero", text: "De bestseller in Marokko: 5 plaatsen, goede koffer voor zijn formaat, robuust in de bergen.", tags: ["270–350 MAD/dag", "≈ 5,8 L/100 km"] },
+        { icon: 'car', title: "Kia Picanto", text: "Heel compact en wendbaar, ideaal met twee in de stad en langs de kust.", tags: ["270–320 MAD/dag", "≈ 5 L/100 km"] },
+        { icon: 'car', title: "Hyundai i10", text: "4 plaatsen, goede airco, het makkelijkst te parkeren rond de medina.", tags: ["270–320 MAD/dag", "≈ 4,8 L/100 km"] },
+        { icon: 'car', title: "Renault Clio", text: "Een stap hoger in comfort en vermogen, beter met vier of voor Ouarzazate.", tags: ["350–430 MAD/dag", "≈ 5,6 L/100 km"] },
       ],
     },
     {
@@ -57,9 +57,9 @@ export default {
       heading: "Kleine auto, premium, minivan of automaat?",
       variant: "feature",
       items: [
-        { icon: 'star', title: "Premium en SUV", text: "Premium sedans en SUV's voor comfort op lange afstanden.", tags: ["Vanaf € 110/dag"], link: { key: 'carLuxury', label: "Premium bekijken" } },
-        { icon: 'users', title: "Minivan 7 tot 9 plaatsen", text: "Gezinnen en groepen: iedereen en de koffers in één voertuig.", tags: ["Vanaf € 55/dag"], link: { key: 'carMinivan', label: "Minivans bekijken" } },
-        { icon: 'check', title: "Automaat", text: "Rustiger in het verkeer van Marrakech; boek vroeg.", tags: ["Vanaf € 45/dag"], link: { key: 'carEasy', label: "Automaten bekijken" } },
+        { icon: 'star', title: "Premium en SUV", text: "Premium sedans en SUV's voor comfort op lange afstanden.", tags: ["Vanaf 1.200 MAD/dag"], link: { key: 'carLuxury', label: "Premium bekijken" } },
+        { icon: 'users', title: "Minivan 7 tot 9 plaatsen", text: "Gezinnen en groepen: iedereen en de koffers in één voertuig.", tags: ["Vanaf 600 MAD/dag"], link: { key: 'carMinivan', label: "Minivans bekijken" } },
+        { icon: 'check', title: "Automaat", text: "Rustiger in het verkeer van Marrakech; boek vroeg.", tags: ["Vanaf 490 MAD/dag"], link: { key: 'carEasy', label: "Automaten bekijken" } },
       ],
     },
   ],
@@ -73,19 +73,20 @@ export default {
   },
   body: `
 <h2>De echte prijs van een goedkope huurauto op luchthaven Marrakech-Menara</h2>
-<p>Advertenties aan € 12 per dag bestaan, maar ze zijn onvolledig. Deze regels in het contract drijven de rekening op:</p>
+<p>Advertenties aan ≈ 130 MAD (€ 12) per dag bestaan, maar ze zijn onvolledig. Deze regels in het contract drijven de rekening op:</p>
 <div class="table-wrap">
 <table class="data">
 <thead><tr><th>Regel in het contract</th><th>Wat wordt aangekondigd</th><th>Wat u betaalt</th></tr></thead>
 <tbody>
 <tr><td><strong>Eigen risico</strong></td><td>"Verzekering inbegrepen"</td><td>5.000 tot 15.000 MAD voor uw rekening bij schade</td></tr>
-<tr><td><strong>Afkoop eigen risico</strong></td><td>Optioneel</td><td>€ 10 tot € 20 per dag, soms meer dan de huur</td></tr>
+<tr><td><strong>Afkoop eigen risico</strong></td><td>Optioneel</td><td>≈ 110 tot 220 MAD (€ 10 tot € 20) per dag, soms meer dan de huur</td></tr>
 <tr><td><strong>Brandstof</strong></td><td>"Vol-vol"</td><td>Bij sommigen volle tank vooraf aangerekend en niet terugbetaald</td></tr>
-<tr><td><strong>Tweede bestuurder</strong></td><td>Niet vermeld</td><td>€ 5 tot € 10 per dag</td></tr>
+<tr><td><strong>Tweede bestuurder</strong></td><td>Niet vermeld</td><td>≈ 50 tot 110 MAD (€ 5 tot € 10) per dag</td></tr>
 <tr><td><strong>Inleveren buiten de openingsuren</strong></td><td>Niet vermeld</td><td>Nacht- of zondagtoeslag</td></tr>
 </tbody>
 </table>
 </div>
+<p class="small">Richtprijzen in dirham, omgerekend aan een koers van ongeveer € 1 ≈ 10,8 MAD. De vergelijker toont de exacte prijs van elke aanbieding.</p>
 <p>De juiste reflex: vraag vóór de bevestiging het <strong>totaalbedrag, eigen risico inbegrepen</strong>. Een betrouwbare verhuurder geeft het zonder problemen.</p>
 
 <h2>Marokkaans agentschap of internationaal merk?</h2>
@@ -112,11 +113,11 @@ export default {
 `,
   faqHeading: "Goedkope huurauto op luchthaven Marrakech-Menara: veelgestelde vragen",
   faqs: [
-    { q: "Wat kost een kleine huurauto op de luchthaven van Marrakech?", a: "€ 25 tot € 35 per dag in het normale seizoen voor een Dacia Sandero, Kia Picanto of Hyundai i10, minder per week. Veel lagere advertenties laten vaak de afkoop van het eigen risico weg, die € 10 tot € 20 per dag kost." },
+    { q: "Wat kost een kleine huurauto op de luchthaven van Marrakech?", a: "≈ 270 tot 380 MAD (€ 25 tot € 35) per dag in het normale seizoen voor een Dacia Sandero, Kia Picanto of Hyundai i10, minder per week. Veel lagere advertenties laten vaak de afkoop van het eigen risico weg, die ≈ 110 tot 220 MAD (€ 10 tot € 20) per dag kost." },
     { q: "Welke kleine auto wordt in Marrakech het meest gehuurd?", a: "De Dacia Sandero, gebouwd in Marokko: 5 plaatsen, goede koffer en robuust. De Kia Picanto en Hyundai i10 zijn kleiner en nog makkelijker te parkeren." },
     { q: "Volstaat een kleine auto voor de Atlas?", a: "Ja voor Ourika, Imlil en de Tichka-pas, die volledig verhard zijn. De grenzen zijn het vermogen bergop met vier volwassenen en bagage, en de airco boven 42 °C midden in de zomer." },
     { q: "Welke documenten heb ik nodig?", a: "Een nationaal rijbewijs van minstens een jaar oud, een paspoort en een creditcard op naam van de hoofdbestuurder voor de borg, 5.000 tot 8.000 MAD voor een kleine auto." },
-    { q: "Kan ik een kleine automaat huren?", a: "Zelden: kleine auto's zijn bijna allemaal geschakeld. Automaten beginnen in de compacte klasse, vanaf ongeveer € 45 tot € 60 per dag, en boekt u best vooraf." },
+    { q: "Kan ik een kleine automaat huren?", a: "Zelden: kleine auto's zijn bijna allemaal geschakeld. Automaten beginnen in de compacte klasse, vanaf ongeveer 490 tot 650 MAD (€ 45 tot € 60) per dag, en boekt u best vooraf." },
     { q: "Zijn er verborgen kosten?", a: "De meest voorkomende: hoog eigen risico, afkoopverzekering, tweede bestuurder, inleveren 's nachts en slecht geregelde brandstof. Vraag het totaalbedrag inclusief eigen risico voor u bevestigt." },
     { q: "Wanneer is huren het goedkoopst?", a: "In januari buiten de feestdagen, in juni en in november. Europese schoolvakanties, Pasen, het Suikerfeest en de zomer kunnen de prijzen verdubbelen: boek 2 tot 3 weken vooraf." },
     { q: "Kan ik de auto in een andere stad inleveren?", a: "Ja bij de meeste verhuurders, bijvoorbeeld in Essaouira, Fez of Tanger, met een toeslag voor enkele reis volgens de afstand. Controleer het in de aanbieding voor u boekt." },

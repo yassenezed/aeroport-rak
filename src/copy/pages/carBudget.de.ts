@@ -1,13 +1,13 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Günstiger Mietwagen Flughafen Marrakesch-Menara ab 25 €",
-  description: "Günstiger Mietwagen am Flughafen Marrakesch-Menara ab 25 €/Tag: Sandero, Picanto, i10. Vermieter vergleichen und versteckte Kosten vermeiden.",
-  eyebrow: "Economy-Mietwagen · ab 25 €/Tag",
+  title: "Günstiger Mietwagen Flughafen Marrakesch-Menara ab 270 MAD",
+  description: "Günstiger Mietwagen am Flughafen Marrakesch-Menara ab 270 MAD/Tag: Sandero, Picanto, i10. Vermieter vergleichen und versteckte Kosten vermeiden.",
+  eyebrow: "Economy-Mietwagen · ab 270 MAD/Tag",
   h1: "Günstiger Mietwagen am Flughafen Marrakesch-Menara",
   lede: "Der Kleinwagen ist die meistgemietete Kategorie in Marrakesch und die richtige für Essaouira, Ourika oder Imlil. Hier erfahren Sie, was ein Kleinwagen ab Flughafen wirklich kostet und wie Sie wenig zahlen, ohne am Schalter überrascht zu werden.",
   highlights: [
-    { icon: 'wallet', value: "Ab 25 €", label: "Pro Tag, in der Nebensaison" },
+    { icon: 'wallet', value: "Ab 270 MAD", label: "Pro Tag, in der Nebensaison" },
     { icon: 'car', value: "5–6 L/100 km", label: "Durchschnittsverbrauch eines Kleinwagens" },
     { icon: 'map-pin', value: "Leicht zu parken", label: "Ideale Größe rund um die Medina" },
     { icon: 'shield-check', value: "Kostenlos stornierbar", label: "Bis 48 Std. vorher, bei den meisten Angeboten" },
@@ -24,7 +24,7 @@ export default {
       intro: "Die meistgebuchte Kategorie, aus gutem Grund.",
       variant: 'feature',
       items: [
-        { icon: 'wallet', title: "Der niedrigste Preis", text: "25 bis 35 € pro Tag in der Normalsaison, weniger bei Wochenmiete: mehrere Miettage zum Preis eines organisierten Ausflugs." },
+        { icon: 'wallet', title: "Der niedrigste Preis", text: "≈ 270 bis 380 MAD (25 bis 35 €) pro Tag in der Normalsaison, weniger bei Wochenmiete: mehrere Miettage zum Preis eines organisierten Ausflugs." },
         { icon: 'sun', title: "Wenig Verbrauch", text: "Ein Kleinwagen braucht 5 bis 6 L/100 km: Hin und zurück nach Essaouira bleibt bezahlbar, auch bei Diesel für 12–14 MAD." },
         { icon: 'map-pin', title: "Leicht zu parken", text: "An den Toren der Medina und in Guéliz sind die Plätze eng: Ein Kleinwagen passt, wo ein SUV aufgibt." },
         { icon: 'map', title: "Reicht für den Atlas", text: "Ourika, Imlil und der Tichka-Pass sind asphaltiert: Ein Kleinwagen schafft sie mit zwei oder drei Personen problemlos." },
@@ -35,10 +35,10 @@ export default {
       heading: "Die meistgemieteten Kleinwagen in Marrakesch",
       variant: 'feature',
       items: [
-        { icon: 'car', title: "Dacia Sandero", text: "Der Bestseller in Marokko: 5 Plätze, guter Kofferraum für seine Größe, robust in den Bergen.", tags: ["25–32 €/Tag", "≈ 5,8 L/100 km"] },
-        { icon: 'car', title: "Kia Picanto", text: "Sehr kompakt und wendig, ideal zu zweit in der Stadt und an der Küste.", tags: ["25–30 €/Tag", "≈ 5 L/100 km"] },
-        { icon: 'car', title: "Hyundai i10", text: "4 Plätze, wirksame Klimaanlage, am leichtesten rund um die Medina zu parken.", tags: ["25–30 €/Tag", "≈ 4,8 L/100 km"] },
-        { icon: 'car', title: "Renault Clio", text: "Eine Stufe mehr Komfort und Leistung, besser zu viert oder für Ouarzazate.", tags: ["32–40 €/Tag", "≈ 5,6 L/100 km"] },
+        { icon: 'car', title: "Dacia Sandero", text: "Der Bestseller in Marokko: 5 Plätze, guter Kofferraum für seine Größe, robust in den Bergen.", tags: ["270–350 MAD/Tag", "≈ 5,8 L/100 km"] },
+        { icon: 'car', title: "Kia Picanto", text: "Sehr kompakt und wendig, ideal zu zweit in der Stadt und an der Küste.", tags: ["270–320 MAD/Tag", "≈ 5 L/100 km"] },
+        { icon: 'car', title: "Hyundai i10", text: "4 Plätze, wirksame Klimaanlage, am leichtesten rund um die Medina zu parken.", tags: ["270–320 MAD/Tag", "≈ 4,8 L/100 km"] },
+        { icon: 'car', title: "Renault Clio", text: "Eine Stufe mehr Komfort und Leistung, besser zu viert oder für Ouarzazate.", tags: ["350–430 MAD/Tag", "≈ 5,6 L/100 km"] },
       ],
     },
     {
@@ -57,9 +57,9 @@ export default {
       heading: "Kleinwagen, Premium, Van oder Automatik?",
       variant: 'feature',
       items: [
-        { icon: 'star', title: "Premium und SUV", text: "Premium-Limousinen und SUVs für Komfort auf langen Strecken.", tags: ["Ab 110 €/Tag"], link: { key: 'carLuxury', label: "Premium ansehen" } },
-        { icon: 'users', title: "Van mit 7 bis 9 Plätzen", text: "Familien und Gruppen: alle samt Koffern in einem Fahrzeug.", tags: ["Ab 55 €/Tag"], link: { key: 'carMinivan', label: "Vans ansehen" } },
-        { icon: 'check', title: "Automatik", text: "Entspannter im Verkehr von Marrakesch, früh buchen.", tags: ["Ab 45 €/Tag"], link: { key: 'carEasy', label: "Automatik ansehen" } },
+        { icon: 'star', title: "Premium und SUV", text: "Premium-Limousinen und SUVs für Komfort auf langen Strecken.", tags: ["Ab 1.200 MAD/Tag"], link: { key: 'carLuxury', label: "Premium ansehen" } },
+        { icon: 'users', title: "Van mit 7 bis 9 Plätzen", text: "Familien und Gruppen: alle samt Koffern in einem Fahrzeug.", tags: ["Ab 600 MAD/Tag"], link: { key: 'carMinivan', label: "Vans ansehen" } },
+        { icon: 'check', title: "Automatik", text: "Entspannter im Verkehr von Marrakesch, früh buchen.", tags: ["Ab 490 MAD/Tag"], link: { key: 'carEasy', label: "Automatik ansehen" } },
       ],
     },
   ],
@@ -73,19 +73,20 @@ export default {
   },
   body: `
 <h2>Der echte Preis eines günstigen Mietwagens am Flughafen Marrakesch-Menara</h2>
-<p>Anzeigen für 12 € pro Tag gibt es, aber sie sind unvollständig. Diese Vertragszeilen treiben die Rechnung in die Höhe:</p>
+<p>Anzeigen für ≈ 130 MAD (12 €) pro Tag gibt es, aber sie sind unvollständig. Diese Vertragszeilen treiben die Rechnung in die Höhe:</p>
 <div class="table-wrap">
 <table class="data">
 <thead><tr><th>Vertragszeile</th><th>Was beworben wird</th><th>Was Sie zahlen</th></tr></thead>
 <tbody>
 <tr><td><strong>Selbstbeteiligung</strong></td><td>„Versicherung inklusive“</td><td>5.000 bis 15.000 MAD zu Ihren Lasten bei Schäden</td></tr>
-<tr><td><strong>Versicherung ohne Selbstbeteiligung</strong></td><td>Optional</td><td>10 bis 20 € pro Tag, manchmal mehr als die Miete</td></tr>
+<tr><td><strong>Versicherung ohne Selbstbeteiligung</strong></td><td>Optional</td><td>≈ 110 bis 220 MAD (10 bis 20 €) pro Tag, manchmal mehr als die Miete</td></tr>
 <tr><td><strong>Kraftstoff</strong></td><td>„Voll/Voll“</td><td>Bei manchen voller Tank im Voraus berechnet, nicht erstattet</td></tr>
-<tr><td><strong>Zweiter Fahrer</strong></td><td>Nicht erwähnt</td><td>5 bis 10 € pro Tag</td></tr>
+<tr><td><strong>Zweiter Fahrer</strong></td><td>Nicht erwähnt</td><td>≈ 50 bis 110 MAD (5 bis 10 €) pro Tag</td></tr>
 <tr><td><strong>Rückgabe außerhalb der Öffnungszeiten</strong></td><td>Nicht erwähnt</td><td>Nacht- oder Sonntagszuschlag</td></tr>
 </tbody>
 </table>
 </div>
+<p class="small">Richtpreise in Dirham, umgerechnet zum ungefähren Kurs 1 € ≈ 10,8 MAD. Der Vergleich zeigt den genauen Preis jedes Angebots.</p>
 <p>Der richtige Reflex: Fragen Sie vor der Bestätigung nach dem <strong>Gesamtbetrag inklusive Selbstbeteiligung</strong>. Ein seriöser Vermieter nennt ihn ohne Weiteres.</p>
 
 <h2>Marokkanische Agentur oder internationale Marke?</h2>
@@ -112,11 +113,11 @@ export default {
 `,
   faqHeading: "Günstiger Mietwagen am Flughafen Marrakesch-Menara: häufige Fragen",
   faqs: [
-    { q: "Was kostet ein kleiner Mietwagen am Flughafen Marrakesch?", a: "25 bis 35 € pro Tag in der Normalsaison für einen Dacia Sandero, Kia Picanto oder Hyundai i10, bei Wochenmiete weniger. Deutlich günstigere Anzeigen enthalten oft keine Versicherung ohne Selbstbeteiligung, die 10 bis 20 € pro Tag kostet." },
+    { q: "Was kostet ein kleiner Mietwagen am Flughafen Marrakesch?", a: "≈ 270 bis 380 MAD (25 bis 35 €) pro Tag in der Normalsaison für einen Dacia Sandero, Kia Picanto oder Hyundai i10, bei Wochenmiete weniger. Deutlich günstigere Anzeigen enthalten oft keine Versicherung ohne Selbstbeteiligung, die ≈ 110 bis 220 MAD (10 bis 20 €) pro Tag kostet." },
     { q: "Welcher Kleinwagen wird in Marrakesch am meisten gemietet?", a: "Der Dacia Sandero, der in Marokko gebaut wird: 5 Plätze, guter Kofferraum und robust. Kia Picanto und Hyundai i10 sind kleiner und noch leichter zu parken." },
     { q: "Reicht ein Kleinwagen für den Atlas?", a: "Ja für Ourika, Imlil und den Tichka-Pass, die komplett asphaltiert sind. Grenzen sind die Leistung am Berg mit vier Erwachsenen samt Gepäck und die Klimaanlage über 42 °C im Hochsommer." },
     { q: "Welche Dokumente brauche ich?", a: "Einen seit mindestens einem Jahr gültigen nationalen Führerschein, den Reisepass und eine Kreditkarte des Hauptfahrers für die Kaution, 5.000 bis 8.000 MAD bei einem Kleinwagen." },
-    { q: "Gibt es Kleinwagen mit Automatik?", a: "Selten: Kleinwagen sind fast alle Schaltwagen. Automatik beginnt in der Kompaktklasse, ab etwa 45 bis 60 € pro Tag, und sollte früh gebucht werden." },
+    { q: "Gibt es Kleinwagen mit Automatik?", a: "Selten: Kleinwagen sind fast alle Schaltwagen. Automatik beginnt in der Kompaktklasse, ab etwa 490 bis 650 MAD (45 bis 60 €) pro Tag, und sollte früh gebucht werden." },
     { q: "Gibt es versteckte Kosten?", a: "Die häufigsten: hohe Selbstbeteiligung, Zusatzversicherung, zweiter Fahrer, Nachtrückgabe und schlecht geregelter Kraftstoff. Fragen Sie vor der Bestätigung nach dem Gesamtbetrag inklusive Selbstbeteiligung." },
     { q: "Wann ist ein Mietwagen am günstigsten?", a: "Im Januar außerhalb der Feiertage, im Juni und im November. Europäische Schulferien, Ostern, Eid und der Sommer können die Preise verdoppeln: 2 bis 3 Wochen vorher buchen." },
     { q: "Kann ich das Auto in einer anderen Stadt zurückgeben?", a: "Ja bei den meisten Vermietern, etwa in Essaouira, Fès oder Tanger, gegen eine Einweggebühr je nach Entfernung. Prüfen Sie das im Angebot vor der Buchung." },

@@ -1,13 +1,13 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Automaat huren luchthaven Marrakech-Menara vanaf € 45",
-  description: "Een automaat huren op luchthaven Marrakech-Menara vanaf € 45 per dag: beschikbaarheid, meerprijs, modellen en tips om voor het eerst in Marokko te rijden.",
+  title: "Automaat huren luchthaven Marrakech-Menara vanaf 490 MAD",
+  description: "Een automaat huren op luchthaven Marrakech-Menara vanaf 490 MAD per dag: beschikbaarheid, meerprijs, modellen en tips om voor het eerst in Marokko te rijden.",
   eyebrow: "Makkelijk rijden · automatische versnellingsbak",
   h1: "Automaat huren op luchthaven Marrakech-Menara",
   lede: "In Marokko is schakelen nog de norm en een automaat moet u reserveren. Hebt u hier nog nooit gereden, dan verandert die keuze veel, te beginnen met uw eerste uur in het verkeer van Marrakech.",
   highlights: [
-    { icon: 'wallet', value: "Vanaf € 45", label: "Per dag, compacte automaat" },
+    { icon: 'wallet', value: "Vanaf 490 MAD", label: "Per dag, compacte automaat" },
     { icon: 'check', value: "Geen koppeling", label: "Twee pedalen, alleen de rechtervoet" },
     { icon: 'dollar-circle', value: "+15 tot 30 %", label: "Meerprijs tegenover geschakeld" },
     { icon: 'passport', value: "Rijbewijs B", label: "Geen speciaal rijbewijs nodig" },
@@ -35,9 +35,9 @@ export default {
       heading: "Automaten beschikbaar in Marrakech",
       variant: "feature",
       items: [
-        { icon: 'car', title: "Compacte automaten", text: "Renault Clio, Volkswagen Polo, Hyundai i20: makkelijk te parkeren, ideaal voor de stad, Essaouira en Ourika.", tags: ["€ 45–60/dag"] },
-        { icon: 'map', title: "SUV-automaten", text: "Dacia Duster, Kia Sportage: bodemvrijheid en comfort voor de Atlas en de pistes van Agafay.", tags: ["€ 70–100/dag"] },
-        { icon: 'star', title: "Sedan-automaten", text: "Comfort en ruimte voor lange afstanden en zakenreizen.", tags: ["€ 90–140/dag"] },
+        { icon: 'car', title: "Compacte automaten", text: "Renault Clio, Volkswagen Polo, Hyundai i20: makkelijk te parkeren, ideaal voor de stad, Essaouira en Ourika.", tags: ["490–650 MAD/dag"] },
+        { icon: 'map', title: "SUV-automaten", text: "Dacia Duster, Kia Sportage: bodemvrijheid en comfort voor de Atlas en de pistes van Agafay.", tags: ["750–1.100 MAD/dag"] },
+        { icon: 'star', title: "Sedan-automaten", text: "Comfort en ruimte voor lange afstanden en zakenreizen.", tags: ["950–1.500 MAD/dag"] },
       ],
     },
     {
@@ -56,9 +56,9 @@ export default {
       heading: "Automaat, economy, premium of minivan?",
       variant: "feature",
       items: [
-        { icon: 'car', title: "Economy", text: "Geschakelde kleine auto's tegen de beste prijs, voor zelfverzekerde bestuurders.", tags: ["Vanaf € 25/dag"], link: { key: 'carBudget', label: "Economy bekijken" } },
-        { icon: 'star', title: "Premium", text: "Premium sedans en SUV's, standaard automaat.", tags: ["Vanaf € 110/dag"], link: { key: 'carLuxury', label: "Premium bekijken" } },
-        { icon: 'users', title: "Minivan 7 tot 9 plaatsen", text: "Voor groepen; weinig automaten, boek heel vroeg.", tags: ["Vanaf € 55/dag"], link: { key: 'carMinivan', label: "Minivans bekijken" } },
+        { icon: 'car', title: "Economy", text: "Geschakelde kleine auto's tegen de beste prijs, voor zelfverzekerde bestuurders.", tags: ["Vanaf 270 MAD/dag"], link: { key: 'carBudget', label: "Economy bekijken" } },
+        { icon: 'star', title: "Premium", text: "Premium sedans en SUV's, standaard automaat.", tags: ["Vanaf 1.200 MAD/dag"], link: { key: 'carLuxury', label: "Premium bekijken" } },
+        { icon: 'users', title: "Minivan 7 tot 9 plaatsen", text: "Voor groepen; weinig automaten, boek heel vroeg.", tags: ["Vanaf 600 MAD/dag"], link: { key: 'carMinivan', label: "Minivans bekijken" } },
       ],
     },
   ],
@@ -69,12 +69,13 @@ export default {
 <table class="data">
 <thead><tr><th>Categorie automaat</th><th>Prijs / dag</th><th>Geschikt voor</th></tr></thead>
 <tbody>
-<tr class="row-highlight"><td><strong>Compact (Clio, Polo, i20)</strong></td><td class="num">€ 45–60</td><td>Stad, Essaouira, Ourika</td></tr>
-<tr><td><strong>Compacte SUV (Duster, Sportage)</strong></td><td class="num">€ 70–100</td><td>Atlas, pistes van Agafay</td></tr>
-<tr><td><strong>Sedan</strong></td><td class="num">€ 90–140</td><td>Lange afstanden, zakenreizen</td></tr>
+<tr class="row-highlight"><td><strong>Compact (Clio, Polo, i20)</strong></td><td class="num">≈ 490–650 MAD (€ 45–60)</td><td>Stad, Essaouira, Ourika</td></tr>
+<tr><td><strong>Compacte SUV (Duster, Sportage)</strong></td><td class="num">≈ 750–1.100 MAD (€ 70–100)</td><td>Atlas, pistes van Agafay</td></tr>
+<tr><td><strong>Sedan</strong></td><td class="num">≈ 950–1.500 MAD (€ 90–140)</td><td>Lange afstanden, zakenreizen</td></tr>
 </tbody>
 </table>
 </div>
+<p class="small">Richtprijzen in dirham, omgerekend aan een koers van ongeveer € 1 ≈ 10,8 MAD. De vergelijker toont de exacte prijs van elke aanbieding.</p>
 
 <h2>Uw eerste uur achter het stuur vanaf luchthaven Marrakech-Menara</h2>
 <p>Rijd van de luchthaven richting Guéliz in plaats van de medina, en neem dertig minuten om aan het lokale ritme te wennen voor u naar uw verblijf rijdt. Rijd niet voor het eerst tussen 17 en 19 uur, en niet 's nachts: buiten de stad rijden sommige voertuigen zonder licht.</p>
@@ -91,7 +92,7 @@ export default {
 `,
   faqHeading: "Automaat huren op luchthaven Marrakech-Menara: veelgestelde vragen",
   faqs: [
-    { q: "Wat kost een automaat op de luchthaven van Marrakech?", a: "€ 45 tot € 60 per dag voor een compacte, € 70 tot € 100 voor een SUV en € 90 tot € 140 voor een sedan. Reken op 15 tot 30 % meer dan hetzelfde geschakelde model." },
+    { q: "Wat kost een automaat op de luchthaven van Marrakech?", a: "≈ 490 tot 650 MAD (€ 45 tot € 60) per dag voor een compacte, ≈ 750 tot 1.100 MAD (€ 70 tot € 100) voor een SUV en ≈ 950 tot 1.500 MAD (€ 90 tot € 140) voor een sedan. Reken op 15 tot 30 % meer dan hetzelfde geschakelde model." },
     { q: "Vind je in Marrakech makkelijk een automaat?", a: "Ze bestaan, maar zijn in de minderheid, vooral vanaf de compacte klasse. Boek 2 tot 3 weken vooraf en laat de transmissie schriftelijk bevestigen." },
     { q: "Heb ik een speciaal rijbewijs nodig voor een automaat?", a: "Nee, rijbewijs B volstaat. Is uw rijbewijs beperkt tot automaat, meld het dan: de verhuurder moet u dan een automaat garanderen." },
     { q: "Verbruikt een automaat meer?", a: "Een beetje bij oudere modellen, nauwelijks bij recente. Het verschil weegt veel minder dan de meerprijs van de huur." },

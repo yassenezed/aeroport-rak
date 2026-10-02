@@ -3,13 +3,13 @@ import type { PageContent } from '../types';
 export default {
   fr: {
     title: "Location minivan 7 à 9 places aéroport Marrakech-Ménara",
-    description: "Location de minivan 7 ou 9 places à l'aéroport de Marrakech-Ménara dès 55 €/jour : places, valises, prix et alternative du van avec chauffeur.",
+    description: "Location de minivan 7 ou 9 places à l'aéroport de Marrakech-Ménara dès 600 DH/jour : places, valises, prix et alternative du van avec chauffeur.",
     eyebrow: "Location minivan · familles et groupes",
     h1: "Location minivan 7 à 9 places aéroport Marrakech-Ménara",
     lede: "À cinq et plus, le problème n'est pas le nombre de sièges mais le coffre. Voici ce que contiennent vraiment les monospaces et vans de l'aéroport de Marrakech, ce qu'ils coûtent, et quand un van avec chauffeur revient moins cher.",
     highlights: [
       { icon: 'users', value: "7 à 9", label: "Places, permis B suffisant" },
-      { icon: 'wallet', value: "Dès 55 €", label: "Par jour, monospace 7 places" },
+      { icon: 'wallet', value: "Dès 600 DH", label: "Par jour, monospace 7 places" },
       { icon: 'luggage', value: "6–8 valises", label: "Dans un van 9 places" },
       { icon: 'shield-check', value: "Annulation gratuite", label: "Sur la plupart des offres" },
     ],
@@ -24,10 +24,10 @@ export default {
         heading: "Quel minivan choisir à Marrakech ?",
         variant: 'feature',
         items: [
-          { icon: 'car', title: "Monospace 7 places", text: "Dacia Lodgy ou Jogger : parfait pour 5 passagers avec bagages, ou 7 avec des sacs souples.", tags: ["55–75 €/jour", "1–2 valises à 7"] },
-          { icon: 'car', title: "Monospace confort", text: "Volkswagen Touran, Citroën Berlingo : plus de confort et un coffre un peu plus grand.", tags: ["70–95 €/jour", "2 valises à 7"] },
-          { icon: 'van', title: "Van 9 places", text: "Renault Trafic, Volkswagen Transporter : la vraie solution pour 6 à 9 personnes avec valises.", tags: ["100–150 €/jour", "6–8 valises"] },
-          { icon: 'users', title: "Minibus 12 à 16 places", text: "Mercedes Sprinter pour les grands groupes et les mariages, généralement avec chauffeur.", tags: ["150–220 €/jour", "Avec chauffeur"] },
+          { icon: 'car', title: "Monospace 7 places", text: "Dacia Lodgy ou Jogger : parfait pour 5 passagers avec bagages, ou 7 avec des sacs souples.", tags: ["600–800 DH/jour", "1–2 valises à 7"] },
+          { icon: 'car', title: "Monospace confort", text: "Volkswagen Touran, Citroën Berlingo : plus de confort et un coffre un peu plus grand.", tags: ["750–1 050 DH/jour", "2 valises à 7"] },
+          { icon: 'van', title: "Van 9 places", text: "Renault Trafic, Volkswagen Transporter : la vraie solution pour 6 à 9 personnes avec valises.", tags: ["1 100–1 600 DH/jour", "6–8 valises"] },
+          { icon: 'users', title: "Minibus 12 à 16 places", text: "Mercedes Sprinter pour les grands groupes et les mariages, généralement avec chauffeur.", tags: ["1 600–2 400 DH/jour", "Avec chauffeur"] },
         ],
       },
       {
@@ -46,9 +46,9 @@ export default {
         heading: "Minivan, économique ou prestige ?",
         variant: 'feature',
         items: [
-          { icon: 'car', title: "Économique", text: "Pour 2 à 4 voyageurs avec peu de bagages, à petit budget.", tags: ["Dès 25 €/jour"], link: { key: 'carBudget', label: "Voir les économiques" } },
-          { icon: 'star', title: "Prestige et SUV", text: "Confort premium pour les longues distances en petit groupe.", tags: ["Dès 110 €/jour"], link: { key: 'carLuxury', label: "Voir le prestige" } },
-          { icon: 'check', title: "Boîte automatique", text: "Plus reposante en ville ; les minivans automatiques sont rares, à réserver tôt.", tags: ["Dès 45 €/jour"], link: { key: 'carEasy', label: "Voir les automatiques" } },
+          { icon: 'car', title: "Économique", text: "Pour 2 à 4 voyageurs avec peu de bagages, à petit budget.", tags: ["Dès 270 DH/jour"], link: { key: 'carBudget', label: "Voir les économiques" } },
+          { icon: 'star', title: "Prestige et SUV", text: "Confort premium pour les longues distances en petit groupe.", tags: ["Dès 1 200 DH/jour"], link: { key: 'carLuxury', label: "Voir le prestige" } },
+          { icon: 'check', title: "Boîte automatique", text: "Plus reposante en ville ; les minivans automatiques sont rares, à réserver tôt.", tags: ["Dès 490 DH/jour"], link: { key: 'carEasy', label: "Voir les automatiques" } },
         ],
       },
     ],
@@ -58,13 +58,14 @@ export default {
 <table class="data">
 <thead><tr><th>Véhicule</th><th>Places</th><th>Valises, 3e rangée dépliée</th><th>Prix / jour</th></tr></thead>
 <tbody>
-<tr><td><strong>Dacia Lodgy / Jogger</strong></td><td class="num">7</td><td class="num">1–2</td><td class="num">55–75 €</td></tr>
-<tr><td><strong>VW Touran / Citroën Berlingo</strong></td><td class="num">7</td><td class="num">2</td><td class="num">70–95 €</td></tr>
-<tr class="row-highlight"><td><strong>Renault Trafic / VW Transporter</strong></td><td class="num">9</td><td class="num">6–8</td><td class="num">100–150 €</td></tr>
-<tr><td><strong>Mercedes Sprinter</strong></td><td class="num">12–16</td><td class="num">12+</td><td class="num">150–220 €</td></tr>
+<tr><td><strong>Dacia Lodgy / Jogger</strong></td><td class="num">7</td><td class="num">1–2</td><td class="num">≈ 600–800 DH (55–75 €)</td></tr>
+<tr><td><strong>VW Touran / Citroën Berlingo</strong></td><td class="num">7</td><td class="num">2</td><td class="num">≈ 750–1 050 DH (70–95 €)</td></tr>
+<tr class="row-highlight"><td><strong>Renault Trafic / VW Transporter</strong></td><td class="num">9</td><td class="num">6–8</td><td class="num">≈ 1 100–1 600 DH (100–150 €)</td></tr>
+<tr><td><strong>Mercedes Sprinter</strong></td><td class="num">12–16</td><td class="num">12+</td><td class="num">≈ 1 600–2 400 DH (150–220 €)</td></tr>
 </tbody>
 </table>
 </div>
+<p class="small">Prix indicatifs en dirhams, convertis au taux approximatif de 1 € ≈ 10,8 DH. Le comparateur affiche le prix exact de chaque offre.</p>
 <p>La règle simple : <strong>à partir de six personnes avec des valises, passez directement au van 9 places</strong>. Le permis B suffit jusqu'à 9 places conducteur compris ; au-delà, il faut un permis transport de personnes, d'où le chauffeur pour les minibus.</p>
 
 <h2>Conduire un grand véhicule autour de l'aéroport Marrakech-Ménara</h2>
@@ -75,12 +76,12 @@ export default {
 </div>
 
 <h2>Van avec chauffeur : faites le calcul complet</h2>
-<p>Additionnez la location, le carburant (un 9 places consomme sérieusement), les péages, le stationnement et la caution immobilisée. Face à cela, un van avec chauffeur à la journée pour l'Ourika ou Agafay se situe souvent dans le même ordre de prix, sans aucune contrainte. Le bon arbitrage : un <a href="/reserver-transfert/">transfert</a> à l'arrivée et au départ, dès 27 € jusqu'à 7 passagers, et une location de van seulement pour les jours où vous roulez vraiment.</p>
+<p>Additionnez la location, le carburant (un 9 places consomme sérieusement), les péages, le stationnement et la caution immobilisée. Face à cela, un van avec chauffeur à la journée pour l'Ourika ou Agafay se situe souvent dans le même ordre de prix, sans aucune contrainte. Le bon arbitrage : un <a href="/reserver-transfert/">transfert</a> à l'arrivée et au départ, dès 290 DH (27 €) jusqu'à 7 passagers, et une location de van seulement pour les jours où vous roulez vraiment.</p>
 <p>Le parc de grands véhicules est le premier à manquer : aux vacances scolaires, à Noël et au printemps, les 9 places partent <strong>plusieurs semaines à l'avance</strong>.</p>
 `,
     faqHeading: "Location de minivan à l'aéroport Marrakech-Ménara : questions fréquentes",
     faqs: [
-      { q: "Combien coûte un minivan à l'aéroport de Marrakech ?", a: "55 à 95 € par jour pour un monospace 7 places et 100 à 150 € pour un van 9 places avec un vrai coffre. Un Sprinter de 12 à 16 places, généralement avec chauffeur, compte 150 à 220 € par jour." },
+      { q: "Combien coûte un minivan à l'aéroport de Marrakech ?", a: "≈ 600 à 1 050 DH (55 à 95 €) par jour pour un monospace 7 places et ≈ 1 100 à 1 600 DH (100 à 150 €) pour un van 9 places avec un vrai coffre. Un Sprinter de 12 à 16 places, généralement avec chauffeur, compte ≈ 1 600 à 2 400 DH (150 à 220 €) par jour." },
       { q: "Combien de valises tiennent dans un 7 places ?", a: "Une à deux seulement quand la troisième rangée est dépliée sur un Dacia Lodgy ou Jogger. À sept avec des valises en soute, il faut passer à un van 9 places type Renault Trafic." },
       { q: "Faut-il un permis spécial pour un minivan 9 places ?", a: "Non, le permis B suffit jusqu'à 9 places conducteur compris. Au-delà, comme pour un Sprinter, il faut un permis transport de personnes : ces véhicules se louent avec chauffeur." },
       { q: "Un minivan est-il moins cher que deux voitures ?", a: "En général oui à six personnes ou plus : un seul véhicule, un seul plein, un seul stationnement et un seul rachat de franchise, au lieu de deux." },

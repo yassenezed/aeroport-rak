@@ -2,13 +2,13 @@ import type { LocalizedPage } from '../types';
 
 export default {
   title: "Minivan 7 tot 9 plaatsen huren luchthaven Marrakech-Menara",
-  description: "Huur een minivan met 7 of 9 plaatsen op luchthaven Marrakech-Menara vanaf € 55 per dag: echte plaatsen en koffers, prijzen en het alternatief met chauffeur.",
+  description: "Huur een minivan met 7 of 9 plaatsen op luchthaven Marrakech-Menara vanaf 600 MAD per dag: echte plaatsen en koffers, prijzen en het alternatief met chauffeur.",
   eyebrow: "Minivan huren · gezinnen en groepen",
   h1: "Minivan huren op luchthaven Marrakech-Menara",
   lede: "Vanaf vijf personen is niet het aantal zitplaatsen het probleem, maar de koffer. Dit passen de minivans en busjes op de luchthaven van Marrakech echt, dit kosten ze, en zo weet u wanneer een busje met chauffeur goedkoper uitvalt.",
   highlights: [
     { icon: 'users', value: "7 tot 9", label: "Plaatsen, rijbewijs B volstaat" },
-    { icon: 'wallet', value: "Vanaf € 55", label: "Per dag, 7-zitter" },
+    { icon: 'wallet', value: "Vanaf 600 MAD", label: "Per dag, 7-zitter" },
     { icon: 'luggage', value: "6–8 koffers", label: "In een 9-zitter" },
     { icon: 'shield-check', value: "Gratis annuleren", label: "Bij de meeste aanbiedingen" },
   ],
@@ -23,10 +23,10 @@ export default {
       heading: "Welke minivan kiezen in Marrakech?",
       variant: "feature",
       items: [
-        { icon: 'car', title: "7-zitter", text: "Dacia Lodgy of Jogger: perfect voor 5 passagiers met bagage, of 7 met zachte tassen.", tags: ["€ 55–75/dag", "1–2 koffers met 7"] },
-        { icon: 'car', title: "Comfort-minivan", text: "Volkswagen Touran, Citroën Berlingo: meer comfort en een iets grotere koffer.", tags: ["€ 70–95/dag", "2 koffers met 7"] },
-        { icon: 'van', title: "9-zitter", text: "Renault Trafic, Volkswagen Transporter: de echte oplossing voor 6 tot 9 personen met koffers.", tags: ["€ 100–150/dag", "6–8 koffers"] },
-        { icon: 'users', title: "Minibus 12 tot 16 plaatsen", text: "Mercedes Sprinter voor grote groepen en bruiloften, meestal met chauffeur.", tags: ["€ 150–220/dag", "Met chauffeur"] },
+        { icon: 'car', title: "7-zitter", text: "Dacia Lodgy of Jogger: perfect voor 5 passagiers met bagage, of 7 met zachte tassen.", tags: ["600–800 MAD/dag", "1–2 koffers met 7"] },
+        { icon: 'car', title: "Comfort-minivan", text: "Volkswagen Touran, Citroën Berlingo: meer comfort en een iets grotere koffer.", tags: ["750–1.050 MAD/dag", "2 koffers met 7"] },
+        { icon: 'van', title: "9-zitter", text: "Renault Trafic, Volkswagen Transporter: de echte oplossing voor 6 tot 9 personen met koffers.", tags: ["1.100–1.600 MAD/dag", "6–8 koffers"] },
+        { icon: 'users', title: "Minibus 12 tot 16 plaatsen", text: "Mercedes Sprinter voor grote groepen en bruiloften, meestal met chauffeur.", tags: ["1.600–2.400 MAD/dag", "Met chauffeur"] },
       ],
     },
     {
@@ -45,9 +45,9 @@ export default {
       heading: "Minivan, economy of premium?",
       variant: "feature",
       items: [
-        { icon: 'car', title: "Economy", text: "Voor 2 tot 4 reizigers met weinig bagage en een klein budget.", tags: ["Vanaf € 25/dag"], link: { key: 'carBudget', label: "Economy bekijken" } },
-        { icon: 'star', title: "Premium en SUV", text: "Premium comfort voor lange afstanden in een kleine groep.", tags: ["Vanaf € 110/dag"], link: { key: 'carLuxury', label: "Premium bekijken" } },
-        { icon: 'check', title: "Automaat", text: "Rustiger in de stad; automatische minivans zijn zeldzaam, boek vroeg.", tags: ["Vanaf € 45/dag"], link: { key: 'carEasy', label: "Automaten bekijken" } },
+        { icon: 'car', title: "Economy", text: "Voor 2 tot 4 reizigers met weinig bagage en een klein budget.", tags: ["Vanaf 270 MAD/dag"], link: { key: 'carBudget', label: "Economy bekijken" } },
+        { icon: 'star', title: "Premium en SUV", text: "Premium comfort voor lange afstanden in een kleine groep.", tags: ["Vanaf 1.200 MAD/dag"], link: { key: 'carLuxury', label: "Premium bekijken" } },
+        { icon: 'check', title: "Automaat", text: "Rustiger in de stad; automatische minivans zijn zeldzaam, boek vroeg.", tags: ["Vanaf 490 MAD/dag"], link: { key: 'carEasy', label: "Automaten bekijken" } },
       ],
     },
   ],
@@ -57,13 +57,14 @@ export default {
 <table class="data">
 <thead><tr><th>Voertuig</th><th>Plaatsen</th><th>Koffers, 3e rij in gebruik</th><th>Prijs / dag</th></tr></thead>
 <tbody>
-<tr><td><strong>Dacia Lodgy / Jogger</strong></td><td class="num">7</td><td class="num">1–2</td><td class="num">€ 55–75</td></tr>
-<tr><td><strong>VW Touran / Citroën Berlingo</strong></td><td class="num">7</td><td class="num">2</td><td class="num">€ 70–95</td></tr>
-<tr class="row-highlight"><td><strong>Renault Trafic / VW Transporter</strong></td><td class="num">9</td><td class="num">6–8</td><td class="num">€ 100–150</td></tr>
-<tr><td><strong>Mercedes Sprinter</strong></td><td class="num">12–16</td><td class="num">12+</td><td class="num">€ 150–220</td></tr>
+<tr><td><strong>Dacia Lodgy / Jogger</strong></td><td class="num">7</td><td class="num">1–2</td><td class="num">≈ 600–800 MAD (€ 55–75)</td></tr>
+<tr><td><strong>VW Touran / Citroën Berlingo</strong></td><td class="num">7</td><td class="num">2</td><td class="num">≈ 750–1.050 MAD (€ 70–95)</td></tr>
+<tr class="row-highlight"><td><strong>Renault Trafic / VW Transporter</strong></td><td class="num">9</td><td class="num">6–8</td><td class="num">≈ 1.100–1.600 MAD (€ 100–150)</td></tr>
+<tr><td><strong>Mercedes Sprinter</strong></td><td class="num">12–16</td><td class="num">12+</td><td class="num">≈ 1.600–2.400 MAD (€ 150–220)</td></tr>
 </tbody>
 </table>
 </div>
+<p class="small">Richtprijzen in dirham, omgerekend aan een koers van ongeveer € 1 ≈ 10,8 MAD. De vergelijker toont de exacte prijs van elke aanbieding.</p>
 <p>De eenvoudige regel: <strong>vanaf zes personen met koffers kiest u meteen de 9-zitter</strong>. Rijbewijs B volstaat tot 9 plaatsen inclusief bestuurder; daarboven is een rijbewijs voor personenvervoer nodig, vandaar de chauffeur bij minibussen.</p>
 
 <h2>Met een groot voertuig rijden rond luchthaven Marrakech-Menara</h2>
@@ -74,12 +75,12 @@ export default {
 </div>
 
 <h2>Busje met chauffeur: maak de volledige rekensom</h2>
-<p>Tel de huur, de brandstof (een 9-zitter verbruikt flink), tol, parkeren en de geblokkeerde borg op. Daartegenover kost een busje met chauffeur voor een dag naar Ourika of Agafay vaak ongeveer evenveel, zonder enige zorg. De slimste mix: een <a href="/nl/book-transfer/">transfer</a> bij aankomst en vertrek, vanaf € 27 tot 7 passagiers, en een busje huren alleen voor de dagen dat u echt rijdt.</p>
+<p>Tel de huur, de brandstof (een 9-zitter verbruikt flink), tol, parkeren en de geblokkeerde borg op. Daartegenover kost een busje met chauffeur voor een dag naar Ourika of Agafay vaak ongeveer evenveel, zonder enige zorg. De slimste mix: een <a href="/nl/book-transfer/">transfer</a> bij aankomst en vertrek, vanaf 290 MAD (€ 27) tot 7 passagiers, en een busje huren alleen voor de dagen dat u echt rijdt.</p>
 <p>Grote voertuigen zijn het eerst volgeboekt: in schoolvakanties, met Kerstmis en in de lente zijn 9-zitters <strong>enkele weken vooraf</strong> weg.</p>
 `,
   faqHeading: "Minivan huren op luchthaven Marrakech-Menara: veelgestelde vragen",
   faqs: [
-    { q: "Wat kost een minivan op de luchthaven van Marrakech?", a: "€ 55 tot € 95 per dag voor een 7-zitter en € 100 tot € 150 voor een 9-zitter met echte koffer. Een Sprinter met 12 tot 16 plaatsen, meestal met chauffeur, kost € 150 tot € 220 per dag." },
+    { q: "Wat kost een minivan op de luchthaven van Marrakech?", a: "≈ 600 tot 1.050 MAD (€ 55 tot € 95) per dag voor een 7-zitter en ≈ 1.100 tot 1.600 MAD (€ 100 tot € 150) voor een 9-zitter met echte koffer. Een Sprinter met 12 tot 16 plaatsen, meestal met chauffeur, kost ≈ 1.600 tot 2.400 MAD (€ 150 tot € 220) per dag." },
     { q: "Hoeveel koffers passen in een 7-zitter?", a: "Maar één of twee met de derde rij in gebruik in een Dacia Lodgy of Jogger. Met zeven personen en ingecheckte koffers kiest u beter een 9-zitter zoals de Renault Trafic." },
     { q: "Heb ik een speciaal rijbewijs nodig voor een 9-zitter?", a: "Nee, rijbewijs B volstaat tot 9 plaatsen inclusief bestuurder. Daarboven, zoals bij een Sprinter, is een rijbewijs voor personenvervoer nodig: die voertuigen worden met chauffeur verhuurd." },
     { q: "Is een minivan goedkoper dan twee auto's?", a: "Meestal wel vanaf zes personen: één voertuig, één tank, één parkeerplaats en één afkoopverzekering in plaats van twee." },

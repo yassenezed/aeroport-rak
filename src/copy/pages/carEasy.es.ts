@@ -1,13 +1,13 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Coche automático aeropuerto de Marrakech-Menara desde 45 €",
-  description: "Alquiler de coche automático en el aeropuerto de Marrakech-Menara desde 45 €/día: disponibilidad, sobrecoste, modelos y consejos para conducir en Marruecos.",
+  title: "Coche automático aeropuerto Marrakech-Menara desde 490 MAD",
+  description: "Alquiler de coche automático en el aeropuerto de Marrakech-Menara desde 490 MAD/día: disponibilidad, sobrecoste, modelos y consejos para conducir en Marruecos.",
   eyebrow: "Conducción fácil · cambio automático",
   h1: "Alquiler de coche automático en el aeropuerto de Marrakech-Menara",
   lede: "En Marruecos el cambio manual sigue siendo la norma y el automático hay que reservarlo. Si nunca ha conducido aquí, esta elección cambia mucho, empezando por su primera hora en el tráfico de Marrakech.",
   highlights: [
-    { icon: 'wallet', value: "Desde 45 €", label: "Por día, compacto automático" },
+    { icon: 'wallet', value: "Desde 490 MAD", label: "Por día, compacto automático" },
     { icon: 'check', value: "Sin embrague", label: "Dos pedales, solo el pie derecho" },
     { icon: 'dollar-circle', value: "+15 a 30 %", label: "Sobrecoste frente al manual" },
     { icon: 'passport', value: "Carné B", label: "Sin permiso especial" },
@@ -35,9 +35,9 @@ export default {
       heading: "Los coches automáticos disponibles en Marrakech",
       variant: 'feature',
       items: [
-        { icon: 'car', title: "Compactos automáticos", text: "Renault Clio, Volkswagen Polo, Hyundai i20: fáciles de aparcar, ideales para la ciudad, Esauira y el Ourika.", tags: ["45–60 €/día"] },
-        { icon: 'map', title: "SUV automáticos", text: "Dacia Duster, Kia Sportage: altura libre y confort para el Atlas y las pistas de Agafay.", tags: ["70–100 €/día"] },
-        { icon: 'star', title: "Berlinas automáticas", text: "Confort y espacio para largas distancias y viajes de negocios.", tags: ["90–140 €/día"] },
+        { icon: 'car', title: "Compactos automáticos", text: "Renault Clio, Volkswagen Polo, Hyundai i20: fáciles de aparcar, ideales para la ciudad, Esauira y el Ourika.", tags: ["490–650 MAD/día"] },
+        { icon: 'map', title: "SUV automáticos", text: "Dacia Duster, Kia Sportage: altura libre y confort para el Atlas y las pistas de Agafay.", tags: ["750–1100 MAD/día"] },
+        { icon: 'star', title: "Berlinas automáticas", text: "Confort y espacio para largas distancias y viajes de negocios.", tags: ["950–1500 MAD/día"] },
       ],
     },
     {
@@ -56,9 +56,9 @@ export default {
       heading: "¿Automático, económico, prestigio o monovolumen?",
       variant: 'feature',
       items: [
-        { icon: 'car', title: "Económico", text: "Utilitarios manuales al mejor precio, para conductores seguros.", tags: ["Desde 25 €/día"], link: { key: 'carBudget', label: "Ver económicos" } },
-        { icon: 'star', title: "Prestigio", text: "Berlinas y SUV premium, automáticos de serie.", tags: ["Desde 110 €/día"], link: { key: 'carLuxury', label: "Ver prestigio" } },
-        { icon: 'users', title: "Monovolumen de 7 a 9 plazas", text: "Para grupos; pocos automáticos, reserve muy pronto.", tags: ["Desde 55 €/día"], link: { key: 'carMinivan', label: "Ver monovolúmenes" } },
+        { icon: 'car', title: "Económico", text: "Utilitarios manuales al mejor precio, para conductores seguros.", tags: ["Desde 270 MAD/día"], link: { key: 'carBudget', label: "Ver económicos" } },
+        { icon: 'star', title: "Prestigio", text: "Berlinas y SUV premium, automáticos de serie.", tags: ["Desde 1200 MAD/día"], link: { key: 'carLuxury', label: "Ver prestigio" } },
+        { icon: 'users', title: "Monovolumen de 7 a 9 plazas", text: "Para grupos; pocos automáticos, reserve muy pronto.", tags: ["Desde 600 MAD/día"], link: { key: 'carMinivan', label: "Ver monovolúmenes" } },
       ],
     },
   ],
@@ -69,12 +69,13 @@ export default {
 <table class="data">
 <thead><tr><th>Categoría automática</th><th>Precio / día</th><th>Adecuada para</th></tr></thead>
 <tbody>
-<tr class="row-highlight"><td><strong>Compacto (Clio, Polo, i20)</strong></td><td class="num">45–60 €</td><td>Ciudad, Esauira, Ourika</td></tr>
-<tr><td><strong>SUV compacto (Duster, Sportage)</strong></td><td class="num">70–100 €</td><td>Atlas, pistas de Agafay</td></tr>
-<tr><td><strong>Berlina</strong></td><td class="num">90–140 €</td><td>Largas distancias, negocios</td></tr>
+<tr class="row-highlight"><td><strong>Compacto (Clio, Polo, i20)</strong></td><td class="num">≈ 490–650 MAD (45–60 €)</td><td>Ciudad, Esauira, Ourika</td></tr>
+<tr><td><strong>SUV compacto (Duster, Sportage)</strong></td><td class="num">≈ 750–1100 MAD (70–100 €)</td><td>Atlas, pistas de Agafay</td></tr>
+<tr><td><strong>Berlina</strong></td><td class="num">≈ 950–1500 MAD (90–140 €)</td><td>Largas distancias, negocios</td></tr>
 </tbody>
 </table>
 </div>
+<p class="small">Precios orientativos en dírhams, convertidos a un tipo aproximado de 1 € ≈ 10,8 MAD. El comparador muestra el precio exacto de cada oferta.</p>
 
 <h2>Primera hora al volante desde el aeropuerto de Marrakech-Menara</h2>
 <p>Salga del aeropuerto hacia Guéliz en lugar de la medina y tómese treinta minutos para adaptarse al ritmo local antes de ir a su alojamiento. Evite conducir por primera vez entre las 17 y las 19 h, y de noche: fuera de la ciudad, algunos vehículos circulan sin luces.</p>
@@ -91,7 +92,7 @@ export default {
 `,
   faqHeading: "Coche automático en el aeropuerto de Marrakech-Menara: preguntas frecuentes",
   faqs: [
-    { q: "¿Cuánto cuesta un coche automático en el aeropuerto de Marrakech?", a: "De 45 a 60 € al día un compacto, de 70 a 100 € un SUV y de 90 a 140 € una berlina. Cuente un 15 a 30 % más que el mismo modelo manual." },
+    { q: "¿Cuánto cuesta un coche automático en el aeropuerto de Marrakech?", a: "De ≈ 490 a 650 MAD (45 a 60 €) al día un compacto, de ≈ 750 a 1100 MAD (70 a 100 €) un SUV y de ≈ 950 a 1500 MAD (90 a 140 €) una berlina. Cuente un 15 a 30 % más que el mismo modelo manual." },
     { q: "¿Es fácil encontrar automáticos en Marrakech?", a: "Existen, pero son minoría, sobre todo a partir de la categoría compacta. Reserve con 2 o 3 semanas y haga confirmar la transmisión por escrito." },
     { q: "¿Hace falta un permiso especial para un automático?", a: "No, basta el carné B. Si su carné está limitado a automáticos, indíquelo: la empresa debe garantizarle uno." },
     { q: "¿Un automático consume más?", a: "Un poco en modelos antiguos, casi nada en los recientes. La diferencia pesa mucho menos que el sobrecoste del alquiler." },
