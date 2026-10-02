@@ -1062,3 +1062,6 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
 .car-widget { scroll-margin-top: 110px; min-height: 220px; }
 .widget-intro { margin-bottom: 1.25rem; }
 .widget-intro .section-block__intro { margin-bottom: 0; }
+.feat-card__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1rem; margin-top: auto; padding-top: 0.75rem; }
+.feat-card__price { padding: 0.45rem 0.9rem; font-size: 0.88rem; }
+.feat-card__actions .feat-card__link { margin-top: 0; padding-top: 0; }

@@ -36,7 +36,7 @@ export interface LocalizedPage {
     heading: string;
     intro?: string;
     variant: 'feature' | 'compact';
-    items: { icon: string; title: string; text: string; tags?: string[]; link?: { key: string; label: string } }[];
+    items: { icon: string; title: string; text: string; tags?: string[]; link?: { key: string; label: string }; /** Identifiant dans src/data/hotelLinks.ts : ajoute « Voir les prix » si un lien existe. */ hotel?: string }[];
   }[];
   /** Comparatif d'options (transport…) : tableau rapide puis une carte détaillée par option. */
   options?: {

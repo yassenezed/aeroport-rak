@@ -1,71 +1,98 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Hotels nahe Flughafen Marrakesch-Menara und in der Stadt",
-  description: "Übernachten in Marrakesch, in der Stadt oder nahe Flughafen Marrakesch-Menara: Medina, Guéliz, Hivernage oder Palmeraie, Riad oder Hotel.",
-  eyebrow: 'Marrakesch · Unterkunft',
-  h1: 'Wo in Marrakesch übernachten',
-  lede: "Die Wahl des Viertels zählt mehr als die des Hauses: Sie bestimmt Ihre Fahrzeiten, Ihren Geräuschpegel und die Art, wie Sie die Stadt erleben. So entscheiden Sie – und hier unsere Bewertungen von fünf Adressen.",
+  title: "Hotels nahe Flughafen Marrakesch-Menara: 15 Adressen",
+  description: "Hotels nahe dem Flughafen Marrakesch-Menara: 15 Adressen von Hivernage bis zur Medina, Fahrzeiten, Preisniveau und 5 ausführliche Hotelbewertungen.",
+  eyebrow: "Hotels · Flughafen und Stadt",
+  h1: "Hotels nahe dem Flughafen Marrakesch-Menara und in der Stadt",
+  lede: "Der Flughafen liegt 6 km von der Medina entfernt: Kein Hotel in Marrakesch ist wirklich weit weg. Wichtiger als die Entfernung zum Terminal ist die Wahl des Viertels. Hier 15 ausgewählte Adressen, vom Palast bis zum Riad, nach Vierteln geordnet, mit ausführlichen Bewertungen von fünf davon.",
+  highlights: [
+    { icon: 'clock', value: "10–15 Min.", label: "Vom Flughafen ins Hivernage, das nächstgelegene Hotelviertel" },
+    { icon: 'building', value: "15 Hotels", label: "Ausgewählt, vom Palast bis zum Riad" },
+    { icon: 'star', value: "5 Bewertungen", label: "Anfahrt, Stärken und Grenzen" },
+    { icon: 'van', value: "Ab ≈ 290 MAD", label: "Transfer bis zum Hotel (≈ 27 €)" },
+  ],
+  cardSections: [
+    {
+      eyebrow: "10–15 Minuten vom Terminal",
+      heading: "Die nächstgelegenen Hotels am Flughafen Marrakesch-Menara",
+      intro: "Hivernage, Avenue de la Ménara und Agdal sind die Hotelviertel, die dem Flughafen am nächsten liegen: Pools, direkte Zufahrt mit dem Auto und die Medina in wenigen Minuten.",
+      variant: 'feature',
+      items: [
+        { icon: 'building', title: "Four Seasons Resort Marrakech", text: "Großes Resort mit Gärten, Pools und Spa, gleich bei den Ménara-Gärten.", tags: ["Luxus", "≈ 10 Min. vom Flughafen"], hotel: 'fourSeasons' },
+        { icon: 'building', title: "Savoy Le Grand Hotel", text: "Großes familienfreundliches Hotel mit weitläufigem Pool und Spa, zwischen Hivernage und Avenue de la Ménara.", tags: ["Gehoben", "≈ 10 Min. vom Flughafen"], hotel: 'savoyGrandHotel' },
+        { icon: 'building', title: "Pestana CR7 Marrakech", text: "Lebhaftes Designhotel im Hivernage, bekannt für seinen Rooftop-Pool.", tags: ["Mittel bis gehoben", "≈ 10–15 Min."], hotel: 'pestanaCr7' },
+        { icon: 'building', title: "Sofitel Marrakech Lounge & Spa", text: "Zeitgenössisches Palasthotel im Hivernage mit Pools und Spa, wenige Gehminuten von der Medina.", tags: ["Gehoben", "≈ 10–15 Min."], hotel: 'sofitelLoungeSpa' },
+        { icon: 'building', title: "Mövenpick Mansour Eddahbi", text: "Großes Hotel neben dem Kongresspalast, praktisch für Geschäfts- und Familienreisen.", tags: ["Gehoben", "≈ 10–15 Min."], hotel: 'movenpickMansourEddahbi' },
+        { icon: 'building', title: "Kenzi Menara Palace", text: "Hotel an der Avenue Mohammed VI mit Pool und Gärten, im Viertel Agdal.", tags: ["Gehoben", "≈ 10–15 Min."], hotel: 'kenziMenaraPalace' },
+      ],
+    },
+    {
+      eyebrow: "Paläste und Resorts",
+      heading: "Palasthotels und Grandhotels in Marrakesch",
+      intro: "Die außergewöhnlichen Adressen, drei davon mit ausführlicher Bewertung.",
+      variant: 'feature',
+      items: [
+        { icon: 'star', title: "La Mamounia", text: "Das historische Palasthotel mit Olivengärten am Rand der Medina, 12–20 Minuten vom Flughafen.", tags: ["Luxus", "Unsere Note 4,8/5"], link: { key: 'mamounia', label: "Zur Bewertung" }, hotel: 'mamounia' },
+        { icon: 'star', title: "Royal Mansour", text: "Private Riads in einem ummauerten Anwesen innerhalb der Stadtmauern, fünfzehn Minuten vom Flughafen.", tags: ["Luxus", "Unsere Note 4,9/5"], link: { key: 'mansour', label: "Zur Bewertung" }, hotel: 'royalMansour' },
+        { icon: 'star', title: "Es Saadi", text: "Familiengeführtes Anwesen im Hivernage in einem mehrere Hektar großen Park, zehn Minuten vom Terminal.", tags: ["Luxus", "Unsere Note 4,5/5"], link: { key: 'essaadi', label: "Zur Bewertung" }, hotel: 'esSaadi' },
+        { icon: 'star', title: "Mandarin Oriental Marrakech", text: "Villen mit privatem Pool zwischen Olivenbäumen, an der Route du Golf Royal.", tags: ["Luxus", "≈ 25–30 Min."], hotel: 'mandarinOriental' },
+        { icon: 'star', title: "Fairmont Royal Palm", text: "Golfresort am Fuß des Atlas, ideal für einen ruhigen Aufenthalt außerhalb der Stadt.", tags: ["Luxus", "≈ 20–25 Min."], hotel: 'fairmontRoyalPalm' },
+      ],
+    },
+    {
+      eyebrow: "In der Stadt und in der Medina",
+      heading: "Stadthotels und charmante Riads",
+      intro: "Guéliz für den Komfort, die Medina für die Atmosphäre.",
+      variant: 'feature',
+      items: [
+        { icon: 'building', title: "Radisson Blu Carré Eden", text: "Modernes Hotel mitten in Guéliz, über dem Einkaufszentrum Carré Eden.", tags: ["Gehoben", "≈ 15–20 Min."], hotel: 'radissonCarreEden' },
+        { icon: 'building', title: "ibis Marrakech Gare Voyageurs", text: "Die einfache, günstige Adresse gegenüber dem ONCF-Bahnhof, ideal für eine Nacht vor der Zugfahrt.", tags: ["Günstig", "≈ 15 Min."], hotel: 'ibisGare' },
+        { icon: 'door', title: "Riad Yasmine", text: "Der meistfotografierte grüne Innenhof der Medina, im Viertel Dar el Bacha.", tags: ["Mittelklasse", "Unsere Note 4,4/5"], link: { key: 'yasmine', label: "Zur Bewertung" }, hotel: 'riadYasmine' },
+        { icon: 'door', title: "Riad BE", text: "Innenhof, Becken und Dachterrasse am Bab Doukkala: eines der am einfachsten mit Koffern erreichbaren Riads.", tags: ["Mittelklasse", "Unsere Note 4,3/5"], link: { key: 'riadbe', label: "Zur Bewertung" }, hotel: 'riadBe' },
+      ],
+    },
+  ],
   body: `
-<h2>Riad oder Hotel: zwei verschiedene Erfahrungen</h2>
-<p>Das <strong>Riad</strong> ist ein traditionelles Haus um einen Innenhof, meist mit fünf bis zehn Zimmern, in der Medina. Man wird persönlich empfangen, das Frühstück wird auf der Terrasse serviert, und hinter der Tür ist es wirklich ruhig. Im Gegenzug: kein Auto bis zum Eingang, oft steile Treppen, bauartbedingt manchmal dunkle Zimmer und ungleichmäßige Heizung im Winter.</p>
-<p>Das <strong>Hotel</strong> in Guéliz, im Hivernage oder in der Palmeraie bietet Aufzug, verlässliche Klimaanlage, Pool und Zufahrt bis vor die Tür. Es ist die Wahl des Komforts, mit weniger Fremdheit.</p>
-
-<h2>Die vier Viertel und für wen sie passen</h2>
+<h2>Welches Viertel ab Flughafen Marrakesch-Menara wählen?</h2>
 <div class="table-wrap">
 <table class="data">
-<thead><tr><th>Viertel</th><th>Für wen</th><th>Zufahrt</th><th>Zum Flughafen</th></tr></thead>
+<thead><tr><th>Viertel</th><th>Für wen</th><th>Zufahrt mit dem Auto</th><th>Ab Flughafen</th></tr></thead>
 <tbody>
-<tr class="row-highlight"><td><strong>Medina</strong></td><td>Erster Besuch, Atmosphäre, Riads</td><td>Absetzen am Tor, dann zu Fuß</td><td class="num">15–30 Min.</td></tr>
-<tr><td><strong>Guéliz</strong></td><td>Restaurants, Bequemlichkeit, Mietwagen</td><td>Direkt</td><td class="num">10–20 Min.</td></tr>
-<tr><td><strong>Hivernage</strong></td><td>Große Hotels, Ruhe, Spas</td><td>Direkt</td><td class="num">10–15 Min.</td></tr>
-<tr><td><strong>Palmeraie</strong></td><td>Pools, Erholung, Familien</td><td>Direkt</td><td class="num">25–35 Min.</td></tr>
+<tr class="row-highlight"><td><strong>Hivernage, Ménara, Agdal</strong></td><td>Große Hotels, Ruhe, Pools</td><td>Direkt</td><td>10–15 Min.</td></tr>
+<tr><td><strong>Medina</strong></td><td>Erster Besuch, Atmosphäre, Riads</td><td>Absetzen an einem Tor, dann zu Fuß</td><td>15–25 Min.</td></tr>
+<tr><td><strong>Guéliz</strong></td><td>Restaurants, Bahnhof, Mietwagen</td><td>Direkt</td><td>15–20 Min.</td></tr>
+<tr><td><strong>Palmeraie, Golfstraße</strong></td><td>Resorts, Erholung, Familien</td><td>Direkt</td><td>25–35 Min.</td></tr>
 </tbody>
 </table>
 </div>
-<p>Entscheidend ist eine Frage: Wie oft wollen Sie tagsüber zurückkommen und ausruhen? Lautet die Antwort „oft“, wohnen Sie in der Medina oder im Hivernage. Planen Sie einen Tag in Agafay, einen im Atlas und Abende in der Stadt, kostet Sie die Palmeraie täglich eine Stunde im Auto.</p>
+<p>Die entscheidende Frage: Wie oft am Tag wollen Sie zum Ausruhen zurückkehren? Wenn oft, wohnen Sie in der Medina oder im Hivernage. Planen Sie Agafay, den Atlas und Abende in der Stadt, kostet Sie ein Resort in der Palmeraie täglich eine Stunde Fahrt.</p>
 
-<h2>Was Sie vor einer Buchung in der Medina fragen sollten</h2>
-<ul>
-<li><strong>Den Namen des Tors</strong> – Bab Doukkala, Bab Laksour, Bab Agnaou, Bab el Khemis – und die Gehzeit von dort.</li>
-<li><strong>Einen Gepäckträger mit Karren</strong> zu Ihrer Ankunftszeit: Die meisten Riads bieten das kostenlos oder für ein paar Dirham an.</li>
-<li><strong>Die Heizung</strong> im Winter: Januarnächte sinken unter 8 °C, und ein steinernes Riad kühlt schnell aus.</li>
-<li><strong>Die Klimaanlage</strong> im Sommer, wenn tagsüber regelmäßig über 42 °C erreicht werden.</li>
-<li><strong>Die Zahlungsweise</strong>: Viele kleine Riads nehmen für den Restbetrag nur Bargeld.</li>
-</ul>
+<h2>Riad oder Hotel: zwei verschiedene Erlebnisse</h2>
+<p>Ein <strong>Riad</strong> ist ein traditionelles Haus um einen Innenhof mit fünf bis zehn Zimmern in der Medina: persönlicher Empfang, Frühstück auf der Terrasse, echte Ruhe hinter der Tür. Dafür: keine Zufahrt bis zur Tür, steile Treppen und ungleichmäßige Heizung im Winter. Ein <strong>Hotel</strong> im Hivernage, in Guéliz oder der Palmeraie bietet Aufzug, zuverlässige Klimaanlage, Pool und Zufahrt bis zum Eingang.</p>
 <div class="callout">
-<span class="callout-label">Späte Ankunft</span>
-<p>Landet Ihr Flug nach 22 Uhr, nennen Sie Ihrer Unterkunft die Flugnummer, nicht nur die Uhrzeit. Ein Riad, das weiß, dass Sie zwei Stunden später kommen, hält jemanden an der Tür bereit; sonst klingeln Sie in einer leeren Gasse.</p>
+<span class="callout-label">Vor der Buchung in der Medina</span>
+<p>Fragen Sie nach dem Namen des Tors zum Absetzen (Bab Doukkala, Bab Laksour, Bab Agnaou…), dem Fußweg, einem Gepäckträger zur Ankunftszeit, der Heizung im Winter und der Zahlungsart für den Restbetrag: Viele kleine Riads nehmen nur Bargeld.</p>
 </div>
 
-<h2>Unsere ausführlichen Bewertungen</h2>
-<p>Wir haben fünf Adressen geprüft, die repräsentativ für Marrakesch sind, vom historischen Palast bis zum Charme-Riad: <a href="/de/hotels/la-mamounia/">La Mamounia</a>, <a href="/de/hotels/royal-mansour/">Royal Mansour</a>, <a href="/de/hotels/es-saadi/">Es Saadi</a>, <a href="/de/hotels/riad-yasmine/">Riad Yasmine</a> und <a href="/de/hotels/riad-be/">Riad BE</a>. Jede Seite nennt Viertel, Preisniveau, was funktioniert und was Sie vor der Buchung wissen sollten.</p>
+<h2>Späte Ankunft: der Reflex gegen die verschlossene Tür</h2>
+<p>Landet Ihr Flug nach 22 Uhr, geben Sie Ihrer Unterkunft die <strong>Flugnummer</strong>, nicht nur die Uhrzeit: Ein Riad, das von Ihrer zweistündigen Verspätung weiß, lässt jemanden an der Tür. Hotels in Marrakesch bieten selten einen kostenlosen Shuttle: Planen Sie einen <a href="/de/book-transfer/">gebuchten Transfer</a> oder ein Taxi zum Nachttarif ein.</p>
 `,
+  faqHeading: "Hotels nahe Flughafen Marrakesch-Menara: häufige Fragen",
   faqs: [
-    {
-      q: 'Besser in der Medina oder in Guéliz übernachten?',
-      a: "Die Medina wegen Atmosphäre, Riads und Nähe zu den Souks, wenn Sie das Absetzen am Tor und den Fußweg akzeptieren. Guéliz wegen der Bequemlichkeit: Zufahrt, Restaurants, ONCF-Bahnhof und einfacherer Verkehr, dafür weniger Fremdheit.",
-    },
-    {
-      q: 'Eignet sich ein Riad mit Kindern?',
-      a: "Das hängt vom Riad ab: Die Treppen sind oft steil, Terrassen selten gesichert und Innenhöfe offen. Viele Familien bevorzugen ein Hotel im Hivernage oder in der Palmeraie mit Pool. Manche großzügigen Riads funktionieren sehr gut, fragen Sie aber direkt nach.",
-    },
-    {
-      q: 'Kann man mit dem Auto bis zu einem Riad in der Medina fahren?',
-      a: "Fast nie: Die Derbs sind zu eng, und mehrere Zugänge sind gesperrt. Man setzt Sie am nächstgelegenen Tor ab, den Rest gehen Sie in drei bis zehn Minuten zu Fuß. Bitten Sie bei der Buchung um einen Gepäckträger mit Karren.",
-    },
-    {
-      q: 'Sind Riads in Marrakesch im Winter beheizt?',
-      a: "Ungleichmäßig. Die Nächte im Januar und Februar sinken unter 8 °C, und Steingebäude kühlen schnell aus. Prüfen Sie vor einer Winterbuchung ausdrücklich, ob das Zimmer eine Heizung hat.",
-    },
-    {
-      q: 'Muss man in Riads bar bezahlen?',
-      a: "Oft ja, für den Restbetrag: Viele kleine Häuser akzeptieren Karten nur für die Online-Anzahlung oder gar nicht. Bringen Sie Dirham mit und fragen Sie bei der Buchung nach.",
-    },
+    { q: "Welches Hotel liegt dem Flughafen Marrakesch am nächsten?", a: "Auf dem Flughafengelände gibt es kein großes Hotel. Am nächsten liegen die Häuser an der Avenue de la Ménara und im Hivernage, etwa das Four Seasons oder das Savoy Le Grand Hotel, rund zehn Autominuten vom Terminal." },
+    { q: "Haben Hotels in Marrakesch einen kostenlosen Flughafenshuttle?", a: "Selten. Die meisten bieten auf Anfrage einen kostenpflichtigen Transfer an. Ein gebuchter Transfer ab 27 € pro Fahrzeug oder ein Taxi vom Stand sind am einfachsten." },
+    { q: "Wo übernachten vor einem frühen Flug?", a: "Im Hivernage, an der Ménara oder im Agdal, 10–15 Minuten vom Terminal und mit dem Auto bis zur Tür erreichbar. Meiden Sie die Medina bei Abflug im Morgengrauen: Erst müssen Sie mit Gepäck zu Fuß zu einem Tor." },
+    { q: "Besser in der Medina oder in Guéliz übernachten?", a: "Die Medina für Atmosphäre, Riads und Souks, mit Absetzen an einem Tor. Guéliz für Komfort: Zufahrt mit dem Auto, Restaurants und ONCF-Bahnhof, aber weniger Flair." },
+    { q: "Ist ein Riad für Kinder geeignet?", a: "Das hängt ab: steile Treppen, selten gesicherte Terrassen und offene Innenhöfe. Viele Familien bevorzugen ein Hotel mit Pool im Hivernage oder in der Palmeraie." },
+    { q: "Kann man mit dem Auto bis vor ein Riad fahren?", a: "Fast nie: Die Gassen sind zu eng. Sie werden am nächsten Tor abgesetzt und gehen drei bis zehn Minuten zu Fuß. Bitten Sie um einen Gepäckträger mit Handkarren." },
+    { q: "Sind Riads im Winter beheizt?", a: "Unterschiedlich: Januarnächte fallen unter 8 °C. Prüfen Sie vor einer Winterbuchung, ob das Zimmer beheizt ist." },
+    { q: "Muss man in Riads bar bezahlen?", a: "Oft den Restbetrag: Viele kleine Häuser akzeptieren Karten nur für die Online-Anzahlung. Nehmen Sie Dirham mit und fragen Sie bei der Buchung." },
   ],
   cta: {
-    heading: 'Vom Flughafen bis vor Ihr Riad',
-    text: "Nennen Sie den Namen Ihrer Unterkunft: Der Fahrer kennt das nächstgelegene Medina-Tor und setzt Sie dort ab, fester Preis pro Fahrzeug.",
-    label: 'Transfer buchen',
+    heading: "Vom Flughafen bis vor Ihr Hotel",
+    text: "Nennen Sie den Namen Ihrer Unterkunft: Der Fahrer bringt Sie zum Hotel oder zum Medina-Tor nächst Ihrem Riad, zum Festpreis pro Fahrzeug.",
+    label: "Transfer buchen",
+    secondary: { label: "Auto mieten", key: 'carRental' },
   },
 } satisfies LocalizedPage;
