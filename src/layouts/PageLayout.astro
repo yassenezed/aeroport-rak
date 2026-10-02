@@ -15,7 +15,7 @@ import DestinationsExplorer from '../components/destinations/DestinationsExplore
 import { airport } from '../data/airport';
 import { useTranslations, pathFor, type Locale, type RouteKey } from '../i18n';
 import { site } from '../data/site';
-import { HOTEL_LINKS, PRICE_LABEL } from '../data/hotelLinks';
+import { HOTEL_LINKS, HOTEL_IMAGES, PRICE_LABEL, hotelPriceLink } from '../data/hotelLinks';
 import type { LocalizedPage } from '../copy/types';
 
 interface Props {
@@ -201,18 +201,20 @@ if (page.faqs?.length) {
         </header>
         <ul class={`card-grid card-grid--${sec.variant}`} style={sec.variant === 'feature' && sec.items.length === 4 ? '--cols: 4' : undefined}>
           {sec.items.map((it) => (
-            <li class={`feat-card feat-card--${sec.variant}`}>
-              <span class="feat-card__icon"><Icon name={it.icon} size={sec.variant === 'feature' ? 24 : 20} /></span>
+            <li class:list={[`feat-card feat-card--${sec.variant}`, { 'feat-card--photo': !!(it.hotel && HOTEL_IMAGES[it.hotel]) }]}>
+              {it.hotel && HOTEL_IMAGES[it.hotel]
+                ? <img class="feat-card__photo" src={HOTEL_IMAGES[it.hotel]} alt={`${it.title}, Marrakech`} width="640" height="400" loading="lazy" decoding="async" />
+                : <span class="feat-card__icon"><Icon name={it.icon} size={sec.variant === 'feature' ? 24 : 20} /></span>}
               <div class="feat-card__body">
                 <h3>{it.title}</h3>
                 <p>{it.text}</p>
                 {it.tags && it.tags.length > 0 && (
                   <ul class="feat-card__tags">{it.tags.map((tg) => <li>{tg}</li>)}</ul>
                 )}
-                {(it.link || (it.hotel && HOTEL_LINKS[it.hotel])) && (
+                {(it.link || it.hotel) && (
                   <div class="feat-card__actions">
                     {it.link && <a class="feat-card__link" href={pathFor(it.link.key, locale)}>{it.link.label} <span aria-hidden="true">{locale === 'ar' ? '←' : '→'}</span></a>}
-                    {it.hotel && HOTEL_LINKS[it.hotel] && <a class="btn btn--primary feat-card__price" href={HOTEL_LINKS[it.hotel]} target="_blank" rel="sponsored nofollow noopener">{PRICE_LABEL[locale]}</a>}
+                    {it.hotel && (!it.link || HOTEL_LINKS[it.hotel]) && (() => { const pl = hotelPriceLink(it.hotel!, it.title); return <a class="btn btn--primary feat-card__price" href={pl.href} target="_blank" rel={pl.rel}>{PRICE_LABEL[locale]}</a>; })()}
                   </div>
                 )}
               </div>

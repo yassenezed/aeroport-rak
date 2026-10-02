@@ -1065,3 +1065,5 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
 .feat-card__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1rem; margin-top: auto; padding-top: 0.75rem; }
 .feat-card__price { padding: 0.45rem 0.9rem; font-size: 0.88rem; }
 .feat-card__actions .feat-card__link { margin-top: 0; padding-top: 0; }
+.feat-card--photo { padding-top: 0; overflow: hidden; }
+.feat-card__photo { display: block; width: calc(100% + 48px); max-width: none; margin: 0 -24px 4px; aspect-ratio: 16 / 10; object-fit: cover; }
