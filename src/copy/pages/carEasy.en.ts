@@ -1,64 +1,110 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Automatic car hire at Marrakech Menara Airport",
-  description: "Hiring an automatic at Marrakech Menara Airport: real availability, the premium, city driving and advice for your first time at the wheel in Morocco.",
-  eyebrow: 'Marrakech Menara · Easy drive',
-  h1: 'Easy-drive hire: automatics in Marrakech',
-  lede: "In Morocco, manual is the norm and automatics have to be reserved. If you have never driven here, that choice changes more than you might think — starting with your first hour in traffic.",
+  title: "Automatic car hire at Marrakech Menara Airport from €45",
+  description: "Automatic car hire at Marrakech Menara Airport from €45 a day: availability, extra cost, models and tips for driving in Morocco for the first time.",
+  eyebrow: "Easy driving · automatic gearbox",
+  h1: "Automatic car hire at Marrakech Menara Airport",
+  lede: "In Morocco, manual is still the norm and automatics must be booked. If you have never driven here, that choice changes a lot, starting with your first hour in Marrakech traffic.",
+  highlights: [
+    { icon: 'wallet', value: "From €45", label: "Per day, automatic compact" },
+    { icon: 'check', value: "No clutch", label: "Two pedals, right foot only" },
+    { icon: 'dollar-circle', value: "+15 to 30%", label: "Extra cost compared with manual" },
+    { icon: 'passport', value: "Standard licence", label: "No special licence needed" },
+  ],
+  widget: 'car-rental',
+  widgetIntro: {
+    heading: "Book an automatic car at Marrakech Menara Airport",
+    text: "Type \"Marrakech\" and choose \"Marrakech Airport\", then your dates: filter the results on automatic transmission.",
+  },
+  cardSections: [
+    {
+      eyebrow: "Benefits",
+      heading: "Why choose an automatic in Marrakech",
+      intro: "In dense and unpredictable traffic, an automatic is not a luxury.",
+      variant: 'feature',
+      items: [
+        { icon: 'check', title: "Effortless driving", text: "No clutch, no gears: you keep all your attention for the road." },
+        { icon: 'users', title: "Suited to the traffic", text: "Scooters filtering, carts, pedestrians, the Gueliz roundabouts: no stalling, far less stress." },
+        { icon: 'map', title: "Comfort on mountain and open roads", text: "Climbs to Imlil and the long straights to Essaouira without fatigue." },
+        { icon: 'star', title: "Reassuring on a first trip", text: "First time in Morocco or not used to driving? An automatic makes everything simpler." },
+      ],
+    },
+    {
+      eyebrow: "The range",
+      heading: "Automatic cars available in Marrakech",
+      variant: 'feature',
+      items: [
+        { icon: 'car', title: "Automatic compacts", text: "Renault Clio, Volkswagen Polo, Hyundai i20: easy to park, ideal for town, Essaouira and Ourika.", tags: ["€45–60/day"] },
+        { icon: 'map', title: "Automatic SUVs", text: "Dacia Duster, Kia Sportage: ground clearance and comfort for the Atlas and the Agafay tracks.", tags: ["€70–100/day"] },
+        { icon: 'star', title: "Automatic saloons", text: "Comfort and space for long distances and business travel.", tags: ["€90–140/day"] },
+      ],
+    },
+    {
+      eyebrow: "Tips",
+      heading: "First drive in an automatic: 4 tips",
+      variant: 'compact',
+      items: [
+        { icon: 'info', title: "Right foot only", text: "Accelerate and brake with the same foot; never rest your left on the brake." },
+        { icon: 'lock', title: "Brake before shifting", text: "Keep the brake pressed to move from P to D or R." },
+        { icon: 'map', title: "Manage the descents", text: "On the Tichka, use manual mode or L to hold the car rather than the brakes." },
+        { icon: 'clock', title: "Book early", text: "Automatic stock is limited: 2 to 3 weeks ahead, especially in high season." },
+      ],
+    },
+    {
+      eyebrow: "Compare",
+      heading: "Automatic, economy, premium or minivan?",
+      variant: 'feature',
+      items: [
+        { icon: 'car', title: "Economy", text: "Manual small cars at the best price, for confident drivers.", tags: ["From €25/day"], link: { key: 'carBudget', label: "See economy cars" } },
+        { icon: 'star', title: "Premium", text: "Premium saloons and SUVs, automatic as standard.", tags: ["From €110/day"], link: { key: 'carLuxury', label: "See premium cars" } },
+        { icon: 'users', title: "7 to 9-seat minivan", text: "For groups; few automatics, book very early.", tags: ["From €55/day"], link: { key: 'carMinivan', label: "See minivans" } },
+      ],
+    },
+  ],
   body: `
 <h2>Automatics in Morocco: a minority, so book ahead</h2>
-<p>The Moroccan fleet is predominantly manual. Automatics exist at RAK, but they cluster in the compact category and above and make up a limited share of the fleet. Two consequences: a <strong>premium of 15 to 30 %</strong> over the same model with a manual gearbox, and availability that thins out as the season builds.</p>
-<p>If an automatic is a necessity rather than a preference — an automatic-only licence, an injury, or simply comfort — say so <strong>explicitly when booking</strong> and have the transmission confirmed in writing. A rental contract's "or similar" never guarantees the gearbox.</p>
-
-<h2>Why it genuinely matters here</h2>
-<p>Marrakech traffic is not aggressive, but it is <strong>dense, fluid and lateral</strong>: two-wheelers filtering up the inside, carts, pedestrians crossing, priority negotiated by eye contact rather than by sign. The big Gueliz roundabouts and Avenue Mohammed VI work on continuous merging.</p>
-<p>In that setting, not having to manage a clutch frees exactly the attention you need to look around. That is the only real argument, and it is enough.</p>
-<div class="callout">
-<span class="callout-label">Your first hour at the wheel</span>
-<p>Leave the airport towards Gueliz rather than the medina, and give yourself thirty minutes to settle into the local rhythm before heading to your accommodation. Avoid a first drive between 5 and 7 pm, and avoid driving at night: outside towns, some vehicles run without lights.</p>
-</div>
-
-<h2>What an automatic does not solve</h2>
-<ul>
-<li><strong>City parking</strong>, handled by informal attendants in hi-vis vests: MAD 5–10, MAD 20 overnight, paid on your return rather than on arrival.</li>
-<li><strong>Medina access</strong>, impossible by car whatever the gearbox.</li>
-<li><strong>Speed cameras</strong>, fixed and mobile, active on all main roads.</li>
-<li><strong>The Tichka pass</strong>, where a small-engined automatic heats up on sustained climbs and engine braking behaves differently on the descent.</li>
-</ul>
-
-<h2>Choosing the right car</h2>
+<p>The Moroccan fleet is mostly manual. Automatics exist at Marrakech airport, but mainly from the compact category up. Two consequences: an <strong>extra 15 to 30%</strong> compared with the same model in manual, and availability that dries up as the season fills. If an automatic is a must (automatic-only licence, injury), say so when booking and get the <strong>transmission confirmed in writing</strong>: "or similar" never guarantees the gearbox type.</p>
 <div class="table-wrap">
 <table class="data">
-<thead><tr><th>Automatic category</th><th>Per day</th><th>Suited to</th></tr></thead>
+<thead><tr><th>Automatic category</th><th>Price / day</th><th>Best for</th></tr></thead>
 <tbody>
-<tr class="row-highlight"><td><strong>Compact</strong> (Clio, Polo, i20)</td><td class="num">€45–60</td><td>City, Essaouira, Ourika</td></tr>
-<tr><td><strong>Compact SUV</strong> (Duster, Sportage)</td><td class="num">€70–100</td><td>Atlas, Agafay tracks</td></tr>
-<tr><td><strong>Saloon</strong></td><td class="num">€90–140</td><td>Long distance, Casablanca</td></tr>
+<tr class="row-highlight"><td><strong>Compact (Clio, Polo, i20)</strong></td><td class="num">€45–60</td><td>Town, Essaouira, Ourika</td></tr>
+<tr><td><strong>Compact SUV (Duster, Sportage)</strong></td><td class="num">€70–100</td><td>Atlas, Agafay tracks</td></tr>
+<tr><td><strong>Saloon</strong></td><td class="num">€90–140</td><td>Long distances, business</td></tr>
 </tbody>
 </table>
 </div>
-<p>For a first drive in Morocco, a compact automatic is the right compromise: small enough for Gueliz streets, strong enough for the air conditioning and the hills, and far easier to park than an SUV.</p>
 
-<h2>And if you would rather not drive at all</h2>
-<p>That is a perfectly reasonable option, and many visitors choose it after the first day. A transfer for arrival and departure, taxis in town at MAD 15–50 a ride, and a car with driver for excursions cover an entire stay, often for a total close to the cost of hiring — with no deposit, no inspection and no parking.</p>
+<h2>Your first hour behind the wheel from Marrakech Menara Airport</h2>
+<p>Leave the airport towards Gueliz rather than the medina, and take thirty minutes to settle into the local rhythm before heading to your accommodation. Avoid your first drive between 5 and 7 pm, and at night: outside town, some vehicles drive without lights.</p>
+<h3>The P-R-N-D quick guide</h3>
+<ul>
+<li><strong>P</strong> (park): for starting and switching off the engine.</li>
+<li><strong>R</strong> (reverse): always with the brake pressed before selecting it.</li>
+<li><strong>N</strong> (neutral): rarely needed.</li>
+<li><strong>D</strong> (drive): the normal position for driving.</li>
+</ul>
+
+<h2>What an automatic does not solve</h2>
+<p><strong>Parking in town</strong>, handled by attendants in vests (MAD 5 to 10, MAD 20 overnight, paid on return); <strong>access to the medina</strong>, impossible by car; <strong>speed cameras</strong>, fixed and mobile; and <strong>the Tichka pass</strong>, where a small automatic runs hot on a long climb. If you would rather not drive at all, a <a href="/en/book-transfer/">transfer</a> on arrival, taxis in town and a driver for excursions cover the whole stay, with no deposit or vehicle check.</p>
 `,
+  faqHeading: "Automatic car hire at Marrakech Menara Airport: frequently asked questions",
   faqs: [
-    {
-      q: 'Are automatic cars easy to find in Marrakech?',
-      a: "They exist but remain a minority, concentrated in the compact category and above. Book ahead and have the transmission confirmed in writing: a contract's \"or similar\" never guarantees the gearbox.",
-    },
-    {
-      q: 'How much extra is an automatic in Morocco?',
-      a: "Between 15 and 30 % more than the same model with a manual gearbox. A compact automatic runs around €45–60 a day, against €35–45 manual.",
-    },
-    {
-      q: 'Is driving in Marrakech hard for a beginner?',
-      a: "It is dense rather than aggressive: two-wheelers filtering up the inside, carts, pedestrians, and priority negotiated by eye contact. An automatic frees the attention you need to observe. Avoid a first drive between 5 and 7 pm, and at night outside towns.",
-    },
-    {
-      q: 'How does street parking work in Marrakech?',
-      a: "Informal attendants in hi-vis vests watch streets and squares: expect MAD 5–10 for a few hours and around MAD 20 overnight, paid on your return rather than on arrival. The medina itself stays closed to cars.",
-    },
+    { q: "How much is an automatic hire car at Marrakech airport?", a: "€45 to €60 a day for a compact, €70 to €100 for an SUV and €90 to €140 for a saloon. Expect 15 to 30% more than the same model with a manual gearbox." },
+    { q: "Are automatics easy to find in Marrakech?", a: "They exist but remain a minority, mostly from the compact category up. Book 2 to 3 weeks ahead and get the transmission confirmed in writing." },
+    { q: "Do I need a special licence for an automatic?", a: "No, a standard licence is enough. If your licence is restricted to automatics, say so: the company must then guarantee an automatic." },
+    { q: "Does an automatic use more fuel?", a: "A little on older models, hardly at all on recent ones. The difference matters far less than the extra hire cost." },
+    { q: "It is my first time driving an automatic. Is it hard?", a: "No: right foot only, brake pressed to move from P to D or R, and a few minutes in the car park are enough to get your bearings." },
+    { q: "Can I do a Moroccan road trip in an automatic?", a: "Yes. For the Atlas, prefer an SUV or a recent compact, and use manual mode or L on the long Tichka descents." },
+    { q: "Is the insurance different for an automatic?", a: "No, the same rules apply: basic excess, optional excess waiver and a deposit on a credit card in the driver's name." },
+    { q: "What if I do not want to drive at all?", a: "A transfer on arrival and departure, taxis in town at MAD 15 to 50 a ride and a driver for excursions cover the whole stay, often for a total close to a rental." },
   ],
+  cta: {
+    heading: "Ready to drive stress-free in Marrakech?",
+    text: "Compare automatic cars from the airport rental companies and book in a few clicks.",
+    label: "Compare prices",
+    href: "#reserver",
+    secondary: { label: "See all categories", key: 'carRental' },
+  },
 } satisfies LocalizedPage;

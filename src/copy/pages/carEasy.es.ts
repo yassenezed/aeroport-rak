@@ -1,64 +1,110 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Coche automático en el aeropuerto de Marrakech-Menara",
-  description: "Alquilar un automático en el aeropuerto de Marrakech-Menara: disponibilidad real, sobrecoste, conducción urbana y consejos.",
-  eyebrow: 'Marrakech Menara · Conducción fácil',
-  h1: 'Alquiler de conducción fácil: cambio automático en Marrakech',
-  lede: "En Marruecos el cambio manual es la norma y el automático hay que reservarlo. Si nunca ha conducido aquí, esa elección cambia más cosas de las que imagina, empezando por su primera hora de circulación.",
+  title: "Coche automático aeropuerto de Marrakech-Menara desde 45 €",
+  description: "Alquiler de coche automático en el aeropuerto de Marrakech-Menara desde 45 €/día: disponibilidad, sobrecoste, modelos y consejos para conducir en Marruecos.",
+  eyebrow: "Conducción fácil · cambio automático",
+  h1: "Alquiler de coche automático en el aeropuerto de Marrakech-Menara",
+  lede: "En Marruecos el cambio manual sigue siendo la norma y el automático hay que reservarlo. Si nunca ha conducido aquí, esta elección cambia mucho, empezando por su primera hora en el tráfico de Marrakech.",
+  highlights: [
+    { icon: 'wallet', value: "Desde 45 €", label: "Por día, compacto automático" },
+    { icon: 'check', value: "Sin embrague", label: "Dos pedales, solo el pie derecho" },
+    { icon: 'dollar-circle', value: "+15 a 30 %", label: "Sobrecoste frente al manual" },
+    { icon: 'passport', value: "Carné B", label: "Sin permiso especial" },
+  ],
+  widget: 'car-rental',
+  widgetIntro: {
+    heading: "Reservar un coche automático en el aeropuerto de Marrakech-Menara",
+    text: "Escriba «Marrakech» y elija «Marrakech Airport», luego sus fechas: filtre los resultados por transmisión automática.",
+  },
+  cardSections: [
+    {
+      eyebrow: "Ventajas",
+      heading: "Por qué elegir un automático en Marrakech",
+      intro: "En un tráfico denso e imprevisible, el automático no es un lujo.",
+      variant: 'feature',
+      items: [
+        { icon: 'check', title: "Conducción sin esfuerzo", text: "Sin embrague ni marchas: toda su atención queda para la carretera." },
+        { icon: 'users', title: "Adaptado al tráfico", text: "Motos que adelantan, carros, peatones, rotondas de Guéliz: imposible calarse, mucho menos estrés." },
+        { icon: 'map', title: "Confort en montaña y carretera", text: "Las subidas a Imlil y las largas rectas hacia Esauira, sin cansancio." },
+        { icon: 'star', title: "Tranquilizador en un primer viaje", text: "¿Primera vez en Marruecos o poca costumbre al volante? El automático lo simplifica todo." },
+      ],
+    },
+    {
+      eyebrow: "La gama",
+      heading: "Los coches automáticos disponibles en Marrakech",
+      variant: 'feature',
+      items: [
+        { icon: 'car', title: "Compactos automáticos", text: "Renault Clio, Volkswagen Polo, Hyundai i20: fáciles de aparcar, ideales para la ciudad, Esauira y el Ourika.", tags: ["45–60 €/día"] },
+        { icon: 'map', title: "SUV automáticos", text: "Dacia Duster, Kia Sportage: altura libre y confort para el Atlas y las pistas de Agafay.", tags: ["70–100 €/día"] },
+        { icon: 'star', title: "Berlinas automáticas", text: "Confort y espacio para largas distancias y viajes de negocios.", tags: ["90–140 €/día"] },
+      ],
+    },
+    {
+      eyebrow: "Consejos",
+      heading: "Primera vez con automático: 4 consejos",
+      variant: 'compact',
+      items: [
+        { icon: 'info', title: "Solo el pie derecho", text: "Acelere y frene con el mismo pie; nunca apoye el izquierdo en el freno." },
+        { icon: 'lock', title: "Frene antes de cambiar", text: "Mantenga el freno pisado para pasar de P a D o R." },
+        { icon: 'map', title: "Controle las bajadas", text: "En el Tichka, use el modo manual o L para retener el coche en lugar de los frenos." },
+        { icon: 'clock', title: "Reserve pronto", text: "Hay pocos automáticos: reserve con 2 o 3 semanas, sobre todo en temporada alta." },
+      ],
+    },
+    {
+      eyebrow: "Comparar",
+      heading: "¿Automático, económico, prestigio o monovolumen?",
+      variant: 'feature',
+      items: [
+        { icon: 'car', title: "Económico", text: "Utilitarios manuales al mejor precio, para conductores seguros.", tags: ["Desde 25 €/día"], link: { key: 'carBudget', label: "Ver económicos" } },
+        { icon: 'star', title: "Prestigio", text: "Berlinas y SUV premium, automáticos de serie.", tags: ["Desde 110 €/día"], link: { key: 'carLuxury', label: "Ver prestigio" } },
+        { icon: 'users', title: "Monovolumen de 7 a 9 plazas", text: "Para grupos; pocos automáticos, reserve muy pronto.", tags: ["Desde 55 €/día"], link: { key: 'carMinivan', label: "Ver monovolúmenes" } },
+      ],
+    },
+  ],
   body: `
-<h2>El automático en Marruecos: minoritario, hay que reservarlo</h2>
-<p>La flota marroquí es mayoritariamente manual. Los cambios automáticos existen en el RAK, pero se concentran en las categorías compacta y superior y representan una parte limitada del parque. Dos consecuencias: un <strong>sobrecoste del 15 al 30 %</strong> respecto al mismo modelo en manual, y una disponibilidad que escasea en cuanto sube la temporada.</p>
-<p>Si el automático es una necesidad y no una preferencia —carné de automático, lesión, simple comodidad—, indíquelo <strong>explícitamente al reservar</strong> y haga confirmar por escrito el tipo de cambio. La mención «o similar» de un contrato de alquiler nunca garantiza la caja.</p>
-
-<h2>Por qué importa de verdad aquí</h2>
-<p>La circulación de Marrakech no es agresiva, pero es <strong>densa, fluida y lateral</strong>: motos que adelantan por la derecha, carros, peatones que cruzan, prioridades que se negocian con la mirada más que con la señal. Las grandes rotondas de Guéliz y la avenida Mohammed VI funcionan por incorporación permanente.</p>
-<p>En ese contexto, no tener que gestionar el embrague libera exactamente la atención que necesita para mirar alrededor. Es el único argumento real, y basta.</p>
-<div class="callout">
-<span class="callout-label">Primera hora al volante</span>
-<p>Salga del aeropuerto en dirección a Guéliz y no hacia la medina, y dedique treinta minutos a coger el ritmo local antes de llegar a su alojamiento. Evite la primera conducción entre las 17 h y las 19 h, y evítela de noche: fuera de poblado circulan vehículos sin luces.</p>
-</div>
-
-<h2>Lo que el automático no resuelve</h2>
-<ul>
-<li><strong>El aparcamiento en la ciudad</strong>, en manos de guardas informales con chaleco: calcule 5 a 10 MAD, 20 MAD por la noche, y pague a la vuelta, no al llegar.</li>
-<li><strong>El acceso a la medina</strong>, imposible en coche sea cual sea el cambio.</li>
-<li><strong>Los radares</strong>, fijos y móviles, activos en todas las carreteras principales.</li>
-<li><strong>El puerto de Tichka</strong>, donde un automático de pequeña cilindrada se calienta en subida prolongada y el freno motor se gestiona de otra manera en el descenso.</li>
-</ul>
-
-<h2>Elegir bien el vehículo</h2>
+<h2>El automático en Marruecos: minoritario, así que hay que reservarlo</h2>
+<p>La flota marroquí es mayoritariamente manual. Los automáticos existen en el aeropuerto de Marrakech, pero sobre todo a partir de la categoría compacta. Dos consecuencias: un <strong>sobrecoste del 15 al 30 %</strong> frente al mismo modelo manual, y una disponibilidad que se agota cuando sube la temporada. Si el automático es imprescindible (carné limitado, lesión), dígalo al reservar y haga <strong>confirmar la transmisión por escrito</strong>: «o similar» nunca garantiza el tipo de cambio.</p>
 <div class="table-wrap">
 <table class="data">
 <thead><tr><th>Categoría automática</th><th>Precio / día</th><th>Adecuada para</th></tr></thead>
 <tbody>
-<tr class="row-highlight"><td><strong>Compacto</strong> (Clio, Polo, i20)</td><td class="num">45–60 €</td><td>Ciudad, Essaouira, Ourika</td></tr>
-<tr><td><strong>SUV compacto</strong> (Duster, Sportage)</td><td class="num">70–100 €</td><td>Atlas, pistas de Agafay</td></tr>
-<tr><td><strong>Berlina</strong></td><td class="num">90–140 €</td><td>Larga distancia, Casablanca</td></tr>
+<tr class="row-highlight"><td><strong>Compacto (Clio, Polo, i20)</strong></td><td class="num">45–60 €</td><td>Ciudad, Esauira, Ourika</td></tr>
+<tr><td><strong>SUV compacto (Duster, Sportage)</strong></td><td class="num">70–100 €</td><td>Atlas, pistas de Agafay</td></tr>
+<tr><td><strong>Berlina</strong></td><td class="num">90–140 €</td><td>Largas distancias, negocios</td></tr>
 </tbody>
 </table>
 </div>
-<p>Para un primer volante en Marruecos, el compacto automático es el buen compromiso: lo bastante pequeño para las calles de Guéliz, lo bastante potente para el aire acondicionado y las cuestas, y mucho más fácil de aparcar que un SUV.</p>
 
-<h2>¿Y si prefiere no conducir?</h2>
-<p>Es una opción perfectamente razonable, y muchos visitantes la eligen tras el primer día. Un traslado para la llegada y la salida, taxis en la ciudad a 15–50 MAD la carrera y un vehículo con chófer para las excursiones cubren toda una estancia, a menudo por un coste total cercano al de un alquiler, sin fianza, sin inspección y sin aparcamiento.</p>
+<h2>Primera hora al volante desde el aeropuerto de Marrakech-Menara</h2>
+<p>Salga del aeropuerto hacia Guéliz en lugar de la medina y tómese treinta minutos para adaptarse al ritmo local antes de ir a su alojamiento. Evite conducir por primera vez entre las 17 y las 19 h, y de noche: fuera de la ciudad, algunos vehículos circulan sin luces.</p>
+<h3>Guía rápida P-R-N-D</h3>
+<ul>
+<li><strong>P</strong> (parking): para arrancar y apagar el motor.</li>
+<li><strong>R</strong> (marcha atrás): siempre con el freno pisado antes de engranarla.</li>
+<li><strong>N</strong> (punto muerto): rara vez útil.</li>
+<li><strong>D</strong> (drive): la posición normal para circular.</li>
+</ul>
+
+<h2>Lo que el automático no resuelve</h2>
+<p>El <strong>aparcamiento en la ciudad</strong>, gestionado por guardas con chaleco (5 a 10 MAD, 20 MAD la noche, a pagar al volver); el <strong>acceso a la medina</strong>, imposible en coche; los <strong>radares</strong>, fijos y móviles; y el <strong>puerto del Tichka</strong>, donde un automático pequeño se calienta en una subida larga. Si prefiere no conducir, un <a href="/es/book-transfer/">traslado</a> a la llegada, taxis en la ciudad y un chófer para las excursiones cubren toda la estancia, sin fianza ni inspección.</p>
 `,
+  faqHeading: "Coche automático en el aeropuerto de Marrakech-Menara: preguntas frecuentes",
   faqs: [
-    {
-      q: '¿Se encuentran fácilmente coches automáticos en Marrakech?',
-      a: "Existen pero son minoritarios, concentrados en las categorías compacta y superior. Reserve con antelación y haga confirmar por escrito el tipo de cambio: la mención «o similar» de un contrato nunca garantiza la caja.",
-    },
-    {
-      q: '¿Cuánto cuesta de más un cambio automático en Marruecos?',
-      a: "Entre un 15 y un 30 % más que el mismo modelo en manual. Un compacto automático ronda los 45 a 60 € al día, frente a 35 a 45 € en manual.",
-    },
-    {
-      q: '¿Es difícil conducir en Marrakech para un principiante?',
-      a: "Es densa más que agresiva: motos que adelantan por la derecha, carros, peatones y prioridades negociadas con la mirada. Un cambio automático libera la atención necesaria para observar. Evite la primera conducción entre las 17 h y las 19 h, y de noche fuera de poblado.",
-    },
-    {
-      q: '¿Cómo funciona el aparcamiento en la ciudad en Marrakech?',
-      a: "Guardas informales con chaleco vigilan calles y plazas: calcule 5 a 10 MAD por unas horas y unos 20 MAD por la noche, a pagar a la vuelta y no al llegar. La medina, en cambio, sigue siendo inaccesible en coche.",
-    },
+    { q: "¿Cuánto cuesta un coche automático en el aeropuerto de Marrakech?", a: "De 45 a 60 € al día un compacto, de 70 a 100 € un SUV y de 90 a 140 € una berlina. Cuente un 15 a 30 % más que el mismo modelo manual." },
+    { q: "¿Es fácil encontrar automáticos en Marrakech?", a: "Existen, pero son minoría, sobre todo a partir de la categoría compacta. Reserve con 2 o 3 semanas y haga confirmar la transmisión por escrito." },
+    { q: "¿Hace falta un permiso especial para un automático?", a: "No, basta el carné B. Si su carné está limitado a automáticos, indíquelo: la empresa debe garantizarle uno." },
+    { q: "¿Un automático consume más?", a: "Un poco en modelos antiguos, casi nada en los recientes. La diferencia pesa mucho menos que el sobrecoste del alquiler." },
+    { q: "Es mi primera vez con automático, ¿es difícil?", a: "No: solo el pie derecho, freno pisado para pasar de P a D o R, y unos minutos en el aparcamiento bastan para habituarse." },
+    { q: "¿Se puede hacer una ruta por Marruecos en automático?", a: "Sí. Para el Atlas, prefiera un SUV o un compacto reciente, y use el modo manual o L en las largas bajadas del Tichka." },
+    { q: "¿El seguro es distinto para un automático?", a: "No, se aplican las mismas reglas: franquicia básica, seguro de franquicia opcional y fianza en tarjeta de crédito a nombre del conductor." },
+    { q: "¿Y si no quiero conducir?", a: "Un traslado a la llegada y la salida, taxis en la ciudad a 15–50 MAD el trayecto y un chófer para las excursiones cubren toda la estancia, a menudo por un coste cercano al de un alquiler." },
   ],
+  cta: {
+    heading: "¿Listo para conducir sin estrés en Marrakech?",
+    text: "Compare los coches automáticos de las empresas del aeropuerto y reserve en pocos clics.",
+    label: "Comparar precios",
+    href: "#reserver",
+    secondary: { label: "Ver todas las categorías", key: 'carRental' },
+  },
 } satisfies LocalizedPage;
