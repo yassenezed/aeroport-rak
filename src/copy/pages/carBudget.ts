@@ -2,65 +2,132 @@ import type { PageContent } from '../types';
 
 export default {
   fr: {
-    title: "Location pas chère à l'aéroport Marrakech-Ménara",
-    description: "Louer une voiture économique à l'aéroport de Marrakech-Ménara : prix réels dès 25 €/jour, agences locales ou internationales, pièges du contrat à bas prix.",
-    eyebrow: 'Marrakech Ménara · Économique',
-    h1: 'Location de voiture économique à Marrakech',
-    lede: "Les annonces à 12 € par jour existent, et elles ne sont pas fausses — elles sont simplement incomplètes. Voici ce que coûte réellement une petite voiture au Maroc, et comment payer peu sans se faire rattraper au comptoir.",
+    title: "Location voiture pas chère aéroport Marrakech-Ménara",
+    description: "Location de voiture économique à l'aéroport de Marrakech-Ménara dès 25 €/jour : Sandero, Picanto, i10. Comparez les loueurs et évitez les frais cachés.",
+    eyebrow: "Location économique · dès 25 €/jour",
+    h1: "Location voiture économique aéroport Marrakech-Ménara",
+    lede: "La citadine est la catégorie la plus louée à Marrakech, et la bonne pour Essaouira, l'Ourika ou Imlil. Voici ce que coûte vraiment une petite voiture au départ de l'aéroport, et comment payer peu sans mauvaise surprise au comptoir.",
+    highlights: [
+      { icon: 'wallet', value: "Dès 25 €", label: "Par jour, en basse saison" },
+      { icon: 'car', value: "5–6 L/100 km", label: "Consommation moyenne d'une citadine" },
+      { icon: 'map-pin', value: "Facile à garer", label: "Taille idéale autour de la médina" },
+      { icon: 'shield-check', value: "Annulation gratuite", label: "Jusqu'à 48 h avant, sur la plupart des offres" },
+    ],
+    widget: 'car-rental',
+    widgetIntro: {
+      heading: "Réserver une voiture économique à l'aéroport Marrakech-Ménara",
+      text: "Tapez « Marrakech » et choisissez « Marrakech Airport », puis vos dates : triez ensuite les résultats par prix pour afficher les citadines en premier.",
+    },
+    cardSections: [
+      {
+        eyebrow: "Avantages",
+        heading: "Pourquoi choisir une citadine à Marrakech",
+        intro: "La catégorie la plus réservée, et pour de bonnes raisons.",
+        variant: 'feature',
+        items: [
+          { icon: 'wallet', title: "Le prix le plus bas", text: "25 à 35 € par jour en saison normale, moins à la semaine : de quoi louer plusieurs jours pour le prix d'une excursion organisée." },
+          { icon: 'sun', title: "Peu de carburant", text: "Une citadine consomme 5 à 6 L/100 km : l'aller-retour vers Essaouira reste raisonnable, même avec le gazole à 12–14 MAD." },
+          { icon: 'map-pin', title: "Facile à garer", text: "Près des portes de la médina et à Guéliz, les places sont étroites : une petite voiture passe là où un SUV renonce." },
+          { icon: 'map', title: "Suffisante pour l'Atlas", text: "L'Ourika, Imlil et le col du Tichka sont goudronnés : une citadine y monte sans difficulté, à deux ou trois passagers." },
+        ],
+      },
+      {
+        eyebrow: "Modèles",
+        heading: "Les citadines les plus louées à Marrakech",
+        variant: 'feature',
+        items: [
+          { icon: 'car', title: "Dacia Sandero", text: "Le modèle phare au Maroc : 5 places, bon coffre pour sa taille, robuste sur les routes de montagne.", tags: ["25–32 €/jour", "≈ 5,8 L/100 km"] },
+          { icon: 'car', title: "Kia Picanto", text: "Très compacte et maniable, idéale à deux pour la ville et les routes côtières.", tags: ["25–30 €/jour", "≈ 5 L/100 km"] },
+          { icon: 'car', title: "Hyundai i10", text: "4 places, climatisation efficace, la plus facile à garer autour de la médina.", tags: ["25–30 €/jour", "≈ 4,8 L/100 km"] },
+          { icon: 'car', title: "Renault Clio", text: "Un cran au-dessus en confort et en reprise, à privilégier à quatre ou pour Ouarzazate.", tags: ["32–40 €/jour", "≈ 5,6 L/100 km"] },
+        ],
+      },
+      {
+        eyebrow: "Astuces",
+        heading: "4 astuces pour payer moins cher",
+        variant: 'compact',
+        items: [
+          { icon: 'clock', title: "Réservez tôt", text: "Les prix en ligne 2 à 3 semaines avant sont plus bas qu'au comptoir en haute saison." },
+          { icon: 'sun', title: "Visez la basse saison", text: "Janvier hors fêtes, juin et novembre ; évitez les vacances scolaires et l'Aïd." },
+          { icon: 'dollar-circle', title: "Plein à plein", text: "Rendez le réservoir au niveau du départ et ne payez que ce que vous consommez." },
+          { icon: 'check', title: "Louez à la semaine", text: "Le prix par jour baisse nettement au-delà de cinq jours de location." },
+        ],
+      },
+      {
+        eyebrow: "Comparer",
+        heading: "Citadine, prestige, minivan ou automatique ?",
+        variant: 'feature',
+        items: [
+          { icon: 'star', title: "Prestige et SUV premium", text: "Berlines et SUV haut de gamme pour le confort sur longue distance.", tags: ["Dès 110 €/jour"], link: { key: 'carLuxury', label: "Voir le prestige" } },
+          { icon: 'users', title: "Minivan 7 à 9 places", text: "Familles et groupes : tout le monde et les valises dans un seul véhicule.", tags: ["Dès 55 €/jour"], link: { key: 'carMinivan', label: "Voir les minivans" } },
+          { icon: 'check', title: "Boîte automatique", text: "Plus reposante dans la circulation de Marrakech, à réserver tôt.", tags: ["Dès 45 €/jour"], link: { key: 'carEasy', label: "Voir les automatiques" } },
+        ],
+      },
+    ],
+    steps: {
+      heading: "Récupérer sa voiture à l'aéroport en 3 étapes",
+      items: [
+        { icon: 'clipboard', title: "Réservez avant le vol", text: "Comparez les offres ci-dessus et réservez : vous recevez un bon de confirmation par e-mail." },
+        { icon: 'plane-landing', title: "Allez au comptoir", text: "Après la police et les bagages, rejoignez le comptoir ou le point de rendez-vous du loueur dans le hall des arrivées." },
+        { icon: 'shield-check', title: "Contrôlez puis partez", text: "Faites le tour de la voiture avec l'agent, photographiez chaque défaut, vérifiez le carburant, et prenez la route." },
+      ],
+    },
     body: `
-<h2>Ce qu'on loue vraiment à ce prix</h2>
-<p>La catégorie économique au Maroc, c'est la <strong>Dacia Sandero, la Kia Picanto, la Hyundai i10 ou la Fiat Panda</strong> : quatre à cinq places, coffre modeste, climatisation, boîte manuelle. Ces voitures sont produites ou massivement importées au Maroc, ce qui explique des tarifs nettement inférieurs à l'Europe. Comptez <strong>25 à 35 € par jour</strong> en saison normale, moins sur une location d'une semaine.</p>
-<p>Elles suffisent parfaitement pour Marrakech, Essaouira, l'Ourika, Imlil et le Tichka : toutes ces routes sont goudronnées. Leur vraie limite est la climatisation en plein été, qui peine sur les petits moteurs lorsque l'on dépasse 42 °C, et la reprise en montagne à quatre passagers chargés.</p>
-
-<h2>Comment un prix bas devient un prix élevé</h2>
+<h2>Le vrai prix d'une voiture pas chère à l'aéroport Marrakech-Ménara</h2>
+<p>Les annonces à 12 € par jour existent, mais elles sont incomplètes. Voici les lignes du contrat qui font monter la note :</p>
 <div class="table-wrap">
 <table class="data">
 <thead><tr><th>Ligne du contrat</th><th>Ce qui est annoncé</th><th>Ce que vous payez</th></tr></thead>
 <tbody>
-<tr class="row-highlight"><td><strong>Franchise</strong></td><td>« Assurance incluse »</td><td>Franchise de 5 000 à 15 000 MAD à votre charge</td></tr>
-<tr><td><strong>Rachat de franchise</strong></td><td>Optionnel</td><td>10 à 20 € / jour, parfois plus que la location</td></tr>
-<tr><td><strong>Carburant</strong></td><td>« Plein / plein »</td><td>Plein facturé au départ, non remboursé au retour chez certains</td></tr>
-<tr><td><strong>Second conducteur</strong></td><td>Non mentionné</td><td>5 à 10 € / jour</td></tr>
-<tr><td><strong>Retour hors horaires</strong></td><td>Non mentionné</td><td>Supplément nuit ou dimanche</td></tr>
+<tr><td><strong>Franchise</strong></td><td>« Assurance incluse »</td><td>5 000 à 15 000 MAD à votre charge en cas de dommage</td></tr>
+<tr><td><strong>Rachat de franchise</strong></td><td>Optionnel</td><td>10 à 20 € par jour, parfois plus que la location</td></tr>
+<tr><td><strong>Carburant</strong></td><td>« Plein / plein »</td><td>Chez certains, plein facturé au départ et non remboursé</td></tr>
+<tr><td><strong>Second conducteur</strong></td><td>Non mentionné</td><td>5 à 10 € par jour</td></tr>
+<tr><td><strong>Retour hors horaires</strong></td><td>Non mentionné</td><td>Supplément de nuit ou de dimanche</td></tr>
 </tbody>
 </table>
 </div>
-<p>Le réflexe qui protège : demandez <strong>le montant total débité, franchise comprise</strong>, par écrit, avant de valider. Un loueur sérieux le fournit sans difficulté.</p>
+<p>Le bon réflexe : demandez le <strong>montant total débité, franchise comprise</strong>, avant de valider. Un loueur sérieux le donne sans difficulté.</p>
 
-<h2>Agence locale ou enseigne internationale ?</h2>
-<p>Les <strong>agences marocaines</strong> sont souvent 20 à 40 % moins chères, avec des véhicules plus anciens mais correctement entretenus, et un vrai interlocuteur sur place. Le risque tient à la qualité très variable de l'état des lieux et au traitement des litiges. Choisissez-en une avec un volume d'avis significatif et récent.</p>
-<p>Les <strong>enseignes internationales</strong> présentes au RAK coûtent davantage mais offrent des procédures standardisées, une flotte plus récente et un recours plus simple en cas de problème. À budget serré, c'est le compromis raisonnable pour une première location au Maroc.</p>
+<h2>Agence marocaine ou enseigne internationale ?</h2>
+<p>Les agences marocaines sont souvent 20 à 40 % moins chères, avec des voitures un peu plus anciennes mais entretenues et un interlocuteur sur place. Leur point faible : un état des lieux plus ou moins rigoureux. Choisissez-en une avec beaucoup d'avis récents. Les enseignes internationales coûtent plus cher mais offrent des procédures standard et un recours plus simple : le compromis raisonnable pour une première location au Maroc.</p>
 <div class="callout">
 <span class="callout-label">La précaution qui vaut tous les contrats</span>
-<p>Filmez le véhicule sous tous les angles au départ — jantes, pare-brise, toit, bas de caisse, intérieur — avec l'horodatage activé, et refaites exactement la même série au retour. C'est la seule pièce qui compte en cas de contestation sur une rayure, et elle prend dix minutes.</p>
+<p>Filmez la voiture sous tous les angles au départ (jantes, pare-brise, toit, bas de caisse, intérieur) avec l'horodatage activé, et refaites la même série au retour. Dix minutes qui règlent la plupart des contestations.</p>
 </div>
 
-<h2>Payer moins, concrètement</h2>
-<ul>
-<li><strong>Réservez à l'avance</strong> : les prix au comptoir en haute saison sont systématiquement plus élevés qu'en ligne.</li>
-<li><strong>Louez à la semaine</strong> : le tarif journalier chute nettement au-delà de cinq jours.</li>
-<li><strong>Ne prenez pas la voiture dès l'atterrissage</strong> si vos deux premiers jours se passent en médina — vous payeriez un véhicule inutilisable.</li>
-<li><strong>Refusez le GPS</strong> à 8 € par jour : votre téléphone avec une carte hors ligne fait mieux.</li>
-<li><strong>Comparez le rachat de franchise du loueur</strong> avec une assurance tierce, souvent trois fois moins chère, en acceptant d'avancer les frais en cas de sinistre.</li>
-</ul>
+<h2>Documents nécessaires</h2>
+<div class="table-wrap">
+<table class="data">
+<tbody>
+<tr><td><strong>Âge minimum</strong></td><td>21 ans en général ; frais « jeune conducteur » possibles avant 23–25 ans</td></tr>
+<tr><td><strong>Permis</strong></td><td>Permis national valide depuis au moins 1 an</td></tr>
+<tr><td><strong>Caution</strong></td><td>Carte de crédit au nom du conducteur principal (5 000 à 8 000 MAD)</td></tr>
+<tr><td><strong>Identité</strong></td><td>Passeport</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Prise en charge et restitution</h2>
+<p><strong>À l'aéroport</strong> : la solution la plus simple si vous partez directement vers la côte ou l'Atlas. <strong>En ville</strong> : si vous commencez par la médina, rejoignez votre riad en <a href="/reserver-transfert/">transfert</a> et louez le jour du départ en excursion, à Guéliz ou avec livraison. <strong>En aller simple</strong> : la plupart des loueurs acceptent un retour à Essaouira, Fès ou Tanger, moyennant un supplément selon la distance.</p>
 `,
+    faqHeading: "Location économique à l'aéroport Marrakech-Ménara : questions fréquentes",
     faqs: [
-      {
-        q: 'Quel est le vrai prix d\'une petite voiture de location à Marrakech ?',
-        a: "De 25 à 35 € par jour en saison normale pour une Dacia Sandero, une Kia Picanto ou équivalent, avec des tarifs dégressifs à la semaine. Les annonces très en dessous excluent généralement le rachat de franchise, qui peut ajouter 10 à 20 € par jour.",
-      },
-      {
-        q: 'Les agences locales marocaines sont-elles fiables ?',
-        a: "Les meilleures le sont, et elles coûtent 20 à 40 % de moins que les enseignes internationales. La qualité tient surtout au sérieux de l'état des lieux : choisissez une agence avec des avis nombreux et récents, et filmez le véhicule au départ comme au retour.",
-      },
-      {
-        q: 'Une citadine suffit-elle pour visiter l\'Atlas depuis Marrakech ?',
-        a: "Oui pour l'Ourika, Imlil, Essaouira et le col du Tichka, qui sont goudronnés. Sa limite est la climatisation en plein été et la reprise en montagne à pleine charge. Seules les pistes non revêtues justifient un SUV.",
-      },
-      {
-        q: 'Faut-il prendre le rachat de franchise du loueur ?',
-        a: "Ce n'est pas obligatoire, et c'est souvent le poste le plus cher. Une assurance tierce spécialisée coûte généralement trois fois moins, avec une contrepartie : vous avancez les frais en cas de dommage et vous vous faites rembourser ensuite.",
-      },
+      { q: "Quel est le prix d'une petite voiture de location à l'aéroport de Marrakech ?", a: "25 à 35 € par jour en saison normale pour une Dacia Sandero, une Kia Picanto ou une Hyundai i10, moins à la semaine. Les annonces bien plus basses excluent souvent le rachat de franchise, qui ajoute 10 à 20 € par jour." },
+      { q: "Quelle est la voiture économique la plus louée à Marrakech ?", a: "La Dacia Sandero, produite au Maroc : 5 places, bon coffre et robuste. Les Kia Picanto et Hyundai i10 sont plus petites et encore plus faciles à garer." },
+      { q: "Une citadine suffit-elle pour l'Atlas ?", a: "Oui pour l'Ourika, Imlil et le col du Tichka, entièrement goudronnés. Sa limite est la reprise en côte à quatre adultes chargés, et la climatisation au-delà de 42 °C en plein été." },
+      { q: "Quels documents faut-il pour louer ?", a: "Un permis national valide depuis au moins un an, un passeport et une carte de crédit au nom du conducteur principal pour la caution, de 5 000 à 8 000 MAD sur une citadine." },
+      { q: "Peut-on louer une citadine automatique ?", a: "C'est rare : les citadines sont presque toutes en boîte manuelle. Les automatiques commencent en catégorie compacte, autour de 45 à 60 € par jour, et se réservent à l'avance." },
+      { q: "Y a-t-il des frais cachés ?", a: "Les plus fréquents : franchise élevée, rachat de franchise, second conducteur, retour de nuit et carburant mal géré. Demandez le montant total débité, franchise comprise, avant de valider." },
+      { q: "Quand louer le moins cher ?", a: "Janvier hors fêtes, juin et novembre. Les vacances scolaires européennes, Pâques, l'Aïd et l'été peuvent faire doubler les prix : réservez 2 à 3 semaines à l'avance." },
+      { q: "Peut-on rendre la voiture dans une autre ville ?", a: "Oui chez la plupart des loueurs, à Essaouira, Fès ou Tanger par exemple, avec un supplément d'aller simple qui dépend de la distance. Vérifiez-le dans l'offre avant de réserver." },
     ],
+    cta: {
+      heading: "Prêt à explorer le Maroc à petit prix ?",
+      text: "Comparez les citadines de tous les loueurs de l'aéroport et réservez en quelques clics, annulation gratuite sur la plupart des offres.",
+      label: "Comparer les prix",
+      href: "#reserver",
+      secondary: { label: "Voir toutes les catégories", key: 'carRental' },
+    },
   },
 } satisfies PageContent;
