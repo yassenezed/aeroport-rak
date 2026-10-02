@@ -1,57 +1,100 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Luxus-Mietwagen am Flughafen Marrakesch-Menara",
-  description: "Limousine, Premium-SUV oder Cabrio am Flughafen Marrakesch-Menara mieten: verfügbare Modelle, Preise, hohe Kautionen und die Alternative mit Fahrer.",
-  eyebrow: 'Marrakesch Menara · Premium',
-  h1: 'Luxus-Mietwagen in Marrakesch',
-  lede: "Marrakesch ist eine der wenigen marokkanischen Städte, in denen gehobene Fahrzeuge tatsächlich zur Miete verfügbar sind. Hier die Modelle, die Preise und die Frage, die vor der Unterschrift zu klären ist: selbst fahren oder gefahren werden?",
+  title: "Luxus-Mietwagen Flughafen Marrakesch-Menara ab 110 €",
+  description: "Premium-Limousine, SUV oder Cabrio am Flughafen Marrakesch-Menara mieten: Modelle, Preise ab 110 €/Tag, Kaution und die Option mit Fahrer.",
+  eyebrow: "Premium-Mietwagen · Limousinen und SUVs",
+  h1: "Luxus-Mietwagen am Flughafen Marrakesch-Menara",
+  lede: "Marrakesch ist eine der wenigen Städte Marokkos, in denen man Oberklassewagen wirklich mieten kann. Hier die verfügbaren Modelle, ihre Preise, die strengeren Bedingungen und die eigentliche Frage: selbst fahren oder fahren lassen?",
+  highlights: [
+    { icon: 'star', value: "Ab 110 €", label: "Pro Tag, Premium-Limousine" },
+    { icon: 'check', value: "Automatik", label: "Bei fast allen Modellen" },
+    { icon: 'passport', value: "25 Jahre", label: "Häufigstes Mindestalter" },
+    { icon: 'shield-check', value: "Ohne Selbstbeteiligung", label: "Vollkasko-Option verfügbar" },
+  ],
+  widget: 'car-rental',
+  widgetIntro: {
+    heading: "Luxus-Mietwagen am Flughafen Marrakesch-Menara buchen",
+    text: "Tippen Sie „Marrakech“ und wählen Sie „Marrakech Airport“, dann Ihre Daten: Filtern Sie die Ergebnisse nach Premium, SUV oder Luxus.",
+  },
+  cardSections: [
+    {
+      eyebrow: "Unsere Auswahl",
+      heading: "Premium-Fahrzeuge in Marrakesch",
+      variant: 'feature',
+      items: [
+        { icon: 'star', title: "Premium-Limousinen", text: "Mercedes C- und E-Klasse, BMW 3er und 5er, Audi A4 und A6: Komfort und Diskretion für Geschäftsreisen.", tags: ["110–180 €/Tag", "Leder, Navi"] },
+        { icon: 'map', title: "Premium-SUVs", text: "Range Rover, Porsche Cayenne, Mercedes GLE: am gefragtesten, souverän auf den Pisten von Agafay und am Tichka.", tags: ["150–280 €/Tag", "Großer Kofferraum"] },
+        { icon: 'sun', title: "Cabrios und Sportwagen", text: "Allen voran der Ford Mustang, meist tageweise für einen Anlass oder eine Panoramastrecke gemietet.", tags: ["200–400 €/Tag", "Tageweise"] },
+        { icon: 'users', title: "VIP-Van mit Fahrer", text: "Mercedes V-Klasse mit Chauffeur: die Wahl für Gruppen und Geschäftsreisen, ohne Kaution.", tags: ["150–250 €/Tag", "Fahrer inklusive"] },
+      ],
+    },
+    {
+      eyebrow: "Vorteile",
+      heading: "Warum einen Premium-Wagen in Marrakesch mieten",
+      variant: 'feature',
+      items: [
+        { icon: 'map', title: "Komfort auf langen Strecken", text: "Ledersitze, Fahrwerk und Dämmung machen auf der Strecke nach Essaouira oder Ouarzazate den Unterschied." },
+        { icon: 'shield', title: "Moderne Sicherheit", text: "Notbremsassistent, Spurhalter, Abstandstempomat: ein echter Gewinn mit Familie." },
+        { icon: 'check', title: "Automatik serienmäßig", text: "Kein Stress im Verkehr von Marrakesch: Fast alle Premium-Modelle sind Automatik." },
+        { icon: 'luggage', title: "Empfang nach Maß", text: "Schlüsselübergabe am Flughafen oder Zustellung ins Hotel, je nach Vermieter." },
+      ],
+    },
+    {
+      eyebrow: "Vergleichen",
+      heading: "Premium, Kleinwagen oder Van?",
+      variant: 'feature',
+      items: [
+        { icon: 'car', title: "Kleinwagen", text: "Für kleines Budget, ideal für Essaouira und das Ourika-Tal.", tags: ["Ab 25 €/Tag"], link: { key: 'carBudget', label: "Kleinwagen ansehen" } },
+        { icon: 'users', title: "Van mit 7 bis 9 Plätzen", text: "Für Familien und Gruppen, mit Platz für das Gepäck.", tags: ["Ab 55 €/Tag"], link: { key: 'carMinivan', label: "Vans ansehen" } },
+        { icon: 'check', title: "Automatik", text: "Kompakte und SUVs mit Automatik, günstiger als Premium.", tags: ["Ab 45 €/Tag"], link: { key: 'carEasy', label: "Automatik ansehen" } },
+      ],
+    },
+  ],
   body: `
-<h2>Was am RAK tatsächlich verfügbar ist</h2>
-<p>Das Premiumangebot in Marrakesch gliedert sich in drei Familien. <strong>Deutsche Limousinen</strong> – Mercedes C- und E-Klasse, BMW 3er und 5er, Audi A4 und A6 – für Geschäftsfahrten und Strecken nach Casablanca. <strong>Premium-SUV</strong> – Range Rover, Porsche Cayenne, Mercedes GLE –, die am stärksten nachgefragt werden, weil sie die Pisten von Agafay und die Tichka-Straße mühelos wegstecken. Und einige <strong>Cabrios und Sportwagen</strong>, allen voran der Mustang, meist tageweise für einen Anlass gemietet.</p>
+<h2>Preise und Kaution für Luxusautos am Flughafen Marrakesch-Menara</h2>
 <div class="table-wrap">
 <table class="data">
-<thead><tr><th>Kategorie</th><th>Preis / Tag</th><th>Typische Kaution</th></tr></thead>
+<thead><tr><th>Kategorie</th><th>Preis / Tag</th><th>Übliche Kaution</th></tr></thead>
 <tbody>
-<tr><td><strong>Premium-Limousine</strong></td><td class="num">110–180 €</td><td class="num">20.000–30.000 MAD</td></tr>
-<tr class="row-highlight"><td><strong>Premium-SUV</strong></td><td class="num">150–280 €</td><td class="num">30.000–50.000 MAD</td></tr>
+<tr class="row-highlight"><td><strong>Premium-Limousine</strong></td><td class="num">110–180 €</td><td class="num">20.000–30.000 MAD</td></tr>
+<tr><td><strong>Premium-SUV</strong></td><td class="num">150–280 €</td><td class="num">30.000–50.000 MAD</td></tr>
 <tr><td><strong>Cabrio / Sportwagen</strong></td><td class="num">200–400 €</td><td class="num">40.000–60.000 MAD</td></tr>
-<tr><td><strong>VIP-Van mit Fahrer</strong></td><td class="num">150–250 €</td><td class="num">keine</td></tr>
+<tr><td><strong>VIP-Van mit Fahrer</strong></td><td class="num">150–250 €</td><td>keine</td></tr>
 </tbody>
 </table>
 </div>
 
-<h2>Die Bedingungen sind strenger</h2>
-<p>In diesen Klassen ist mit einem <strong>Mindestalter von 25 bis 30 Jahren</strong>, einem Führerscheinbesitz von mindestens drei bis fünf Jahren und einer Kaution zu rechnen, die die üblichen Kartenlimits deutlich übersteigt. Informieren Sie Ihre Bank vor der Abreise, damit Ihr Verfügungsrahmen vorübergehend angehoben wird: Das ist der Ablehnungsgrund Nummer eins am Schalter und lässt sich dort nicht lösen.</p>
-<p>Manche Vermieter verlangen zudem einen Wohnsitznachweis und begrenzen die Kilometerleistung oder untersagen das Verlassen des Landes – ein Punkt, den Sie prüfen sollten, wenn Sie nach Süden wollen.</p>
+<h2>Strengere Bedingungen</h2>
+<p>In diesen Kategorien gelten meist ein <strong>Mindestalter von 25 bis 30 Jahren</strong>, ein Führerschein seit <strong>3 bis 5 Jahren</strong> und eine Kaution, die das übliche Kartenlimit oft übersteigt. <strong>Informieren Sie vor der Reise Ihre Bank</strong>, damit sie das Autorisierungslimit vorübergehend erhöht: der häufigste Ablehnungsgrund am Schalter, der sich vor Ort nicht lösen lässt. Manche Vermieter begrenzen auch Kilometer oder Pisten: prüfen, wenn Sie in den Süden fahren.</p>
+<p>Bei einem Auto dieses Werts ist eine <strong>Versicherung ohne Selbstbeteiligung</strong> dringend zu empfehlen: Schon eine zerkratzte Felge kostet Tausende Dirham. Fotografieren Sie das Auto bei Abholung und Rückgabe genau.</p>
+
+<h2>Selbst fahren oder fahren lassen?</h2>
+<p>Ein Premium-SUV für 200 € pro Tag, der vor dem Riad steht, weil die Medina Fußgängerzone ist, kostet so viel wie ein <strong>privater Fahrer für den Tag</strong>, der wartet, Sie absetzt und das Parken übernimmt. Der Fahrer lohnt sich für lange Strecken nach Ouarzazate oder Essaouira, Geschäftstage mit mehreren Terminen und Familienreisen, bei denen nach einem Tag im Atlas niemand mehr fahren will.</p>
 <div class="callout">
-<span class="callout-label">Die ehrliche Frage</span>
-<p>Ein Premium-SUV für 200 € pro Tag, der vor einem Riad steht, weil die Medina Fußgängerzone ist, kostet dasselbe wie ein privater Fahrer für den Tag, der wartet, Sie absetzt und das Parken regelt. Bei einem städtischen Aufenthalt ist die zweite Option bequemer – und in der Summe oft günstiger.</p>
+<span class="callout-label">Früh buchen und Modell bestätigen lassen</span>
+<p>Die Premium-Flotte ist begrenzt und rotiert zwischen mehreren Agenturen. Im Frühjahr, zum Jahresende und bei Großveranstaltungen einige Wochen vorher buchen und <strong>das genaue Modell</strong> schriftlich bestätigen lassen, nicht nur die Kategorie.</p>
 </div>
 
-<h2>Auto mit Fahrer: der eigentliche Konkurrent</h2>
-<p>In Marrakesch ist die Bereitstellung eines Fahrzeugs mit Fahrer eine gängige, gut organisierte Leistung auf einem Preisniveau, das dem einer Premiummiete entspricht. Sie erhalten einen Van oder eine Limousine, einen Fahrer, der die Atlas-Straßen und die Zufahrten kennt, und völlige Sorglosigkeit bei Parken, Kaution und Fahrzeugabnahme.</p>
-<p>Sie drängt sich vor allem in drei Fällen auf: bei <strong>Langstrecken</strong> nach Ouarzazate oder Essaouira, wo die Straße Aufmerksamkeit verlangt; bei <strong>Geschäftsreisen</strong> mit mehreren Terminen am Tag; und bei <strong>Familienaufenthalten</strong>, bei denen nach einem Tag im Atlas niemand mehr fahren möchte.</p>
-
-<h2>Richtig buchen</h2>
-<p>Die Premiumflotte ist begrenzt: In Marrakesch rotieren dieselben Fahrzeuge zwischen mehreren Stationen. In der Hochsaison – Frühjahr, Jahresendfeiertage, Großveranstaltungen – sollten Sie mehrere Wochen im Voraus buchen und sich das <strong>genaue Modell</strong> schriftlich bestätigen lassen, nicht nur die Kategorie. Fotografieren Sie das Fahrzeug bei der Übernahme im Detail: In diesen Klassen schlägt eine einzige beschädigte Felge mit Tausenden Dirham zu Buche.</p>
+<h2>Abholung und Zustellung</h2>
+<p><strong>Am Flughafen</strong>: Schlüssel am Schalter oder auf dem Parkplatz, bei Luxusmodellen teils direkt am Terminal. <strong>Im Hotel</strong>: Viele Premium-Vermieter liefern ins Hotel oder an den Rand der Medina; reisen Sie per <a href="/de/book-transfer/">Transfer</a> an und übernehmen Sie das Auto am nächsten Tag. <strong>Einwegmiete</strong>: Rückgabe je nach Vermieter in Essaouira, Fès oder Tanger möglich, gegen Aufpreis.</p>
 `,
+  faqHeading: "Luxus-Mietwagen am Flughafen Marrakesch-Menara: häufige Fragen",
   faqs: [
-    {
-      q: 'Was kostet ein Luxus-Mietwagen in Marrakesch?',
-      a: "110 bis 180 € pro Tag für eine Premium-Limousine, 150 bis 280 € für einen SUV wie Range Rover oder Cayenne und 200 bis 400 € für ein Cabrio oder einen Sportwagen. Die Kautionen reichen je nach Modell von 20.000 bis 60.000 MAD.",
-    },
-    {
-      q: 'Welches Alter ist für einen gehobenen Mietwagen in Marokko nötig?',
-      a: "In der Regel mindestens 25 Jahre, bei Sportwagen teils 30, mit drei bis fünf Jahren Führerscheinbesitz. Ein Wohnsitznachweis kann verlangt werden, und manche Verträge begrenzen die Kilometerleistung oder untersagen das Verlassen des Landes.",
-    },
-    {
-      q: 'Premium-Mietwagen oder Fahrer?',
-      a: "Bei einem städtischen Aufenthalt ist der Fahrer bequemer und in der Summe oft günstiger: keine Kaution, kein Parken, keine Fahrzeugabnahme, und ein Wagen, der auf Sie wartet. Die Premiummiete behält ihren Sinn für eine Rundreise, bei der das Fahren selbst Teil der Reise ist.",
-    },
-    {
-      q: 'Reicht meine Kreditkarte für die Kaution?',
-      a: "Selten ohne Vorbereitung: Kautionen von 30.000 bis 60.000 MAD übersteigen Standardlimits. Lassen Sie Ihren Verfügungsrahmen vor der Abreise vorübergehend anheben – das ist die häufigste Ablehnungsursache am Schalter und lässt sich dort nicht beheben.",
-    },
+    { q: "Was kostet ein Luxus-Mietwagen am Flughafen Marrakesch?", a: "110 bis 180 € pro Tag für eine Premium-Limousine, 150 bis 280 € für einen SUV wie Range Rover oder Cayenne und 200 bis 400 € für ein Cabrio oder einen Sportwagen. Die Kaution liegt je nach Modell bei 20.000 bis 60.000 MAD." },
+    { q: "Welche Premium-Modelle kann man in Marrakesch mieten?", a: "Mercedes C-, E-Klasse und GLE, BMW 3er und 5er, Audi A4 und A6, Range Rover, Porsche Cayenne und einige Cabrios wie den Ford Mustang, je nach Verfügbarkeit." },
+    { q: "Wie alt muss man sein?", a: "25 bis 30 Jahre je nach Modell, mit einem Führerschein seit 3 bis 5 Jahren. Sportwagen und die größten SUVs haben die strengsten Bedingungen." },
+    { q: "Ist eine Vollkaskoversicherung inklusive?", a: "Die Basisversicherung ja, mit hoher Selbstbeteiligung. Bei einem Auto dieses Werts ist die Option ohne Selbstbeteiligung sehr zu empfehlen: Sie deckt Schäden, Diebstahl und Glas." },
+    { q: "Kann das Auto ins Hotel geliefert werden?", a: "Ja, viele Premium-Vermieter liefern ins Hotel oder an den Rand der Medina, kostenlos oder gegen Aufpreis. Bei der Buchung angeben." },
+    { q: "Haben Premium-Autos Automatik?", a: "Fast alle. Lassen Sie Getriebe und genaues Modell trotzdem schriftlich bestätigen, denn „oder ähnlich“ garantiert nichts." },
+    { q: "Lohnt sich ein Premium-SUV für einen Roadtrip in Marokko?", a: "Für Agafay, die Pisten im Süden oder eine lange Fahrt nach Ouarzazate ja: Komfort, Bodenfreiheit und großer Kofferraum. Für einen Stadtaufenthalt ist ein privater Fahrer oft praktischer." },
+    { q: "Warum kann meine Karte am Schalter abgelehnt werden?", a: "Weil die Kaution, oft 20.000 bis 60.000 MAD, das übliche Autorisierungslimit übersteigt. Lassen Sie es vor der Reise von Ihrer Bank vorübergehend erhöhen." },
   ],
+  cta: {
+    heading: "Bereit für Marrakesch in der ersten Klasse?",
+    text: "Vergleichen Sie Premium-Limousinen und SUVs der Vermieter am Flughafen und buchen Sie mit wenigen Klicks.",
+    label: "Preise vergleichen",
+    href: "#reserver",
+    secondary: { label: "Alle Kategorien ansehen", key: 'carRental' },
+  },
 } satisfies LocalizedPage;

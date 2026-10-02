@@ -1,45 +1,100 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Luxe huurauto op luchthaven Marrakech-Menara: SUV's",
-  description: "Een premium sedan, SUV of cabrio huren op luchthaven Marrakech-Menara: beschikbare modellen, tarieven, hoge borgsommen en het alternatief met chauffeur.",
-  eyebrow: "Marrakech Menara · Premium",
-  h1: "Een luxe auto huren in Marrakech",
-  lede: "Marrakech is een van de weinige Marokkaanse steden waar topmodellen echt te huur zijn. Hier welke modellen u vindt, wat ze kosten en de vraag die u vóór het tekenen moet beantwoorden: zelf rijden of gereden worden?",
+  title: "Luxe huurauto luchthaven Marrakech-Menara vanaf € 110",
+  description: "Huur een premium sedan, SUV of cabrio op luchthaven Marrakech-Menara: modellen, prijzen vanaf € 110 per dag, borg en de optie met chauffeur.",
+  eyebrow: "Premium autohuur · sedans en SUV's",
+  h1: "Luxe huurauto op luchthaven Marrakech-Menara",
+  lede: "Marrakech is een van de weinige Marokkaanse steden waar u echt topklasse-auto's kunt huren. Dit zijn de beschikbare modellen, hun prijzen, de strengere voorwaarden en de echte vraag: zelf rijden of gereden worden?",
+  highlights: [
+    { icon: 'star', value: "Vanaf € 110", label: "Per dag, premium sedan" },
+    { icon: 'check', value: "Automaat", label: "Bij bijna alle modellen" },
+    { icon: 'passport', value: "25 jaar", label: "Meest gangbare minimumleeftijd" },
+    { icon: 'shield-check', value: "Zonder eigen risico", label: "Allriskoptie beschikbaar" },
+  ],
+  widget: "car-rental",
+  widgetIntro: {
+    heading: "Luxe huurauto boeken op luchthaven Marrakech-Menara",
+    text: "Typ \"Marrakech\" en kies \"Marrakech Airport\", daarna uw data: filter de resultaten op premium, SUV of luxe.",
+  },
+  cardSections: [
+    {
+      eyebrow: "Onze selectie",
+      heading: "Premium auto's beschikbaar in Marrakech",
+      variant: "feature",
+      items: [
+        { icon: 'star', title: "Premium sedans", text: "Mercedes C- en E-Klasse, BMW 3- en 5-serie, Audi A4 en A6: comfort en discretie voor zakenreizen.", tags: ["€ 110–180/dag", "Leer, gps"] },
+        { icon: 'map', title: "Premium SUV's", text: "Range Rover, Porsche Cayenne, Mercedes GLE: het meest gevraagd, vlot op de pistes van Agafay en de Tichka.", tags: ["€ 150–280/dag", "Grote koffer"] },
+        { icon: 'sun', title: "Cabrio's en sportwagens", text: "Met de Ford Mustang voorop, vooral per dag gehuurd voor een gelegenheid of panoramaroute.", tags: ["€ 200–400/dag", "Per dag"] },
+        { icon: 'users', title: "VIP-van met chauffeur", text: "Mercedes V-Klasse met chauffeur: de keuze voor groepen en zakenreizen, zonder borg.", tags: ["€ 150–250/dag", "Chauffeur inbegrepen"] },
+      ],
+    },
+    {
+      eyebrow: "Voordelen",
+      heading: "Waarom een premium auto huren in Marrakech",
+      variant: "feature",
+      items: [
+        { icon: 'map', title: "Comfort op lange afstand", text: "Lederen zetels, vering en geluidsisolatie maken het verschil op de weg naar Essaouira of Ouarzazate." },
+        { icon: 'shield', title: "Geavanceerde veiligheid", text: "Noodremassistent, rijstrookhulp, adaptieve cruisecontrol: een echte plus met het gezin." },
+        { icon: 'check', title: "Standaard automaat", text: "Geen stress in het verkeer van Marrakech: bijna alle premium modellen zijn automaat." },
+        { icon: 'luggage', title: "Onthaal op maat", text: "Sleuteloverdracht op de luchthaven of levering aan uw hotel, afhankelijk van de verhuurder." },
+      ],
+    },
+    {
+      eyebrow: "Vergelijken",
+      heading: "Premium, economy of minivan?",
+      variant: "feature",
+      items: [
+        { icon: 'car', title: "Economy", text: "Kleine auto's voor een krap budget, perfect voor Essaouira en Ourika.", tags: ["Vanaf € 25/dag"], link: { key: 'carBudget', label: "Economy bekijken" } },
+        { icon: 'users', title: "Minivan 7 tot 9 plaatsen", text: "Voor gezinnen en groepen, met plaats voor de bagage.", tags: ["Vanaf € 55/dag"], link: { key: 'carMinivan', label: "Minivans bekijken" } },
+        { icon: 'check', title: "Automaat", text: "Automatische compacte auto's en SUV's, voordeliger dan premium.", tags: ["Vanaf € 45/dag"], link: { key: 'carEasy', label: "Automaten bekijken" } },
+      ],
+    },
+  ],
   body: `
-<h2>Wat er op de RAK echt beschikbaar is</h2>
-<p>Het premiumaanbod in Marrakech valt uiteen in drie families. <strong>Duitse sedans</strong> – Mercedes C- en E-Klasse, BMW 3- en 5-serie, Audi A4 en A6 – voor zakenreizen en ritten naar Casablanca. <strong>Premium-SUV's</strong> – Range Rover, Porsche Cayenne, Mercedes GLE –, het meest gevraagd, omdat ze de pistes van Agafay en de Tichka-weg moeiteloos aankunnen. En een handvol <strong>cabrio's en sportwagens</strong>, met de Mustang voorop, vooral per dag gehuurd voor een gelegenheid.</p>
+<h2>Prijzen en borg van luxe auto's op luchthaven Marrakech-Menara</h2>
 <div class="table-wrap">
 <table class="data">
-<thead><tr><th>Categorie</th><th>Per dag</th><th>Gebruikelijke borg</th></tr></thead>
+<thead><tr><th>Categorie</th><th>Prijs / dag</th><th>Gebruikelijke borg</th></tr></thead>
 <tbody>
-<tr><td><strong>Premium sedan</strong></td><td class="num">€ 110–180</td><td class="num">20.000–30.000 MAD</td></tr>
-<tr class="row-highlight"><td><strong>Premium-SUV</strong></td><td class="num">€ 150–280</td><td class="num">30.000–50.000 MAD</td></tr>
+<tr class="row-highlight"><td><strong>Premium sedan</strong></td><td class="num">€ 110–180</td><td class="num">20.000–30.000 MAD</td></tr>
+<tr><td><strong>Premium SUV</strong></td><td class="num">€ 150–280</td><td class="num">30.000–50.000 MAD</td></tr>
 <tr><td><strong>Cabrio / sportwagen</strong></td><td class="num">€ 200–400</td><td class="num">40.000–60.000 MAD</td></tr>
-<tr><td><strong>VIP-busje met chauffeur</strong></td><td class="num">€ 150–250</td><td class="num">geen</td></tr>
+<tr><td><strong>VIP-van met chauffeur</strong></td><td class="num">€ 150–250</td><td>geen</td></tr>
 </tbody>
 </table>
 </div>
 
-<h2>De voorwaarden zijn strenger</h2>
-<p>In deze categorieën rekent u op een <strong>minimumleeftijd van 25 tot 30 jaar</strong>, minstens drie tot vijf jaar rijbewijs en een borg die de gewone kaartlimieten ruim overstijgt. Waarschuw uw bank vóór vertrek zodat uw bestedingslimiet tijdelijk wordt verhoogd: dat is de weigeringsreden nummer één aan de balie en ter plaatse niet op te lossen.</p>
-<p>Sommige verhuurders vragen ook een bewijs van woonadres en beperken het aantal kilometers of verbieden het land te verlaten – iets om te controleren als u naar het zuiden wilt.</p>
+<h2>Strengere voorwaarden</h2>
+<p>Voor deze categorieën geldt meestal een <strong>minimumleeftijd van 25 tot 30 jaar</strong>, een rijbewijs van <strong>3 tot 5 jaar</strong> oud en een borg die vaak boven de gewone kaartlimiet uitkomt. <strong>Verwittig uw bank voor vertrek</strong> zodat ze de autorisatielimiet tijdelijk verhoogt: de belangrijkste reden voor weigering aan de balie, en ter plaatse niet op te lossen. Sommige verhuurders beperken ook kilometers of pistes: controleer dat als u naar het zuiden gaat.</p>
+<p>Voor een auto van deze waarde is een <strong>verzekering zonder eigen risico</strong> sterk aan te raden: de minste kras op een velg kost duizenden dirham. Fotografeer de auto grondig bij vertrek en bij inleveren.</p>
+
+<h2>Zelf rijden of gereden worden?</h2>
+<p>Een premium SUV van € 200 per dag die voor een riad stilstaat omdat de medina autovrij is, kost evenveel als een <strong>privéchauffeur per dag</strong> die wacht, u afzet en het parkeren regelt. Een chauffeur loont voor lange ritten naar Ouarzazate of Essaouira, zakendagen met meerdere afspraken en gezinsreizen waarbij niemand na een dag in de Atlas nog wil rijden.</p>
 <div class="callout">
-<span class="callout-label">De eerlijke vraag</span>
-<p>Een premium-SUV van € 200 per dag die voor een riad staat omdat de medina voetgangersgebied is, kost evenveel als een privéchauffeur voor een dag die wacht, u afzet en het parkeren regelt. Bij een stedelijk verblijf is het tweede comfortabeler – en in totaal vaak goedkoper.</p>
+<span class="callout-label">Boek vroeg en laat het model bevestigen</span>
+<p>De premium vloot is beperkt en roteert tussen verschillende agentschappen. In de lente, op het eind van het jaar en bij grote evenementen boekt u enkele weken vooraf en laat u <strong>het exacte model</strong> schriftelijk bevestigen, niet alleen de categorie.</p>
 </div>
 
-<h2>Auto met chauffeur: de echte concurrent</h2>
-<p>In Marrakech is een voertuig met chauffeur een gangbare, goed georganiseerde dienst tegen een prijs vergelijkbaar met premium huur. U krijgt een busje of sedan, een chauffeur die de Atlaswegen en de toegangen kent, en geen enkele zorg over parkeren, borg of inspectie.</p>
-<p>Vooral voor drie toepassingen ligt het voor de hand: <strong>lange ritten</strong> naar Ouarzazate of Essaouira, waar de weg aandacht vraagt; <strong>zakenreizen</strong> met meerdere afspraken per dag; en <strong>gezinsverblijven</strong>, waar niemand na een dag in de Atlas nog wil rijden.</p>
-
-<h2>Goed boeken</h2>
-<p>De premiumvloot is beperkt: in Marrakech rouleren dezelfde auto's tussen meerdere kantoren. In het hoogseizoen – voorjaar, eindejaarsfeesten, grote evenementen – boekt u enkele weken vooruit en laat u het <strong>exacte model</strong> schriftelijk bevestigen, niet alleen de categorie. Fotografeer de auto bij ophalen in detail: in deze klasse kost één beschadigde velg duizenden dirham.</p>
+<h2>Ophalen en levering</h2>
+<p><strong>Op de luchthaven</strong>: sleutels aan de balie of op de parking, voor luxemodellen soms aan de terminal. <strong>Aan het hotel</strong>: veel premium verhuurders leveren aan uw hotel of aan de rand van de medina; kom aan met een <a href="/nl/book-transfer/">transfer</a> en ontvang de auto de dag erna. <strong>Enkele reis</strong>: inleveren mogelijk in Essaouira, Fez of Tanger afhankelijk van de verhuurder, tegen een toeslag.</p>
 `,
+  faqHeading: "Luxe huurauto op luchthaven Marrakech-Menara: veelgestelde vragen",
   faqs: [
-    { q: "Wat kost een luxe huurauto in Marrakech?", a: "€ 110 tot € 180 per dag voor een premium sedan, € 150 tot € 280 voor een SUV als Range Rover of Cayenne en € 200 tot € 400 voor een cabrio of sportwagen. De borg varieert per model van 20.000 tot 60.000 MAD." },
-    { q: "Welke leeftijd is nodig om een topauto in Marokko te huren?", a: "Meestal minimaal 25 jaar, voor sportwagens soms 30, met drie tot vijf jaar rijbewijs. Een bewijs van woonadres kan worden gevraagd, en sommige contracten beperken de kilometers of verbieden het land te verlaten." },
-    { q: "Premium huurauto of chauffeur?", a: "Bij een stedelijk verblijf is de chauffeur comfortabeler en in totaal vaak goedkoper: geen borg, geen parkeren, geen inspectie, en een auto die op u wacht. Premium huur houdt zijn zin voor een rondreis waarbij het rijden deel van de reis is." },
-    { q: "Volstaat mijn creditcard voor de borg?", a: "Zelden zonder voorbereiding: borgsommen van 30.000 tot 60.000 MAD overstijgen standaardlimieten. Laat uw bestedingslimiet vóór vertrek tijdelijk verhogen – het is de belangrijkste oorzaak van weigering aan de balie en daar niet op te lossen." },
+    { q: "Wat kost een luxe huurauto op de luchthaven van Marrakech?", a: "€ 110 tot € 180 per dag voor een premium sedan, € 150 tot € 280 voor een SUV zoals een Range Rover of Cayenne, en € 200 tot € 400 voor een cabrio of sportwagen. De borg bedraagt 20.000 tot 60.000 MAD volgens het model." },
+    { q: "Welke premium modellen kan ik in Marrakech huren?", a: "Mercedes C-, E-Klasse en GLE, BMW 3- en 5-serie, Audi A4 en A6, Range Rover, Porsche Cayenne en enkele cabrio's zoals de Ford Mustang, afhankelijk van de beschikbaarheid." },
+    { q: "Hoe oud moet ik zijn?", a: "25 tot 30 jaar volgens het model, met een rijbewijs van 3 tot 5 jaar. Sportwagens en de grootste SUV's hebben de strengste voorwaarden." },
+    { q: "Is een allriskverzekering inbegrepen?", a: "De basisverzekering wel, met een hoog eigen risico. Voor een auto van deze waarde is de optie zonder eigen risico sterk aangeraden: ze dekt schade, diefstal en glas." },
+    { q: "Kan de auto aan mijn hotel geleverd worden?", a: "Ja, veel premium verhuurders leveren aan het hotel of de rand van de medina, gratis of tegen betaling. Vermeld het bij het boeken." },
+    { q: "Zijn premium auto's automaten?", a: "Bijna allemaal. Laat de transmissie en het exacte model toch schriftelijk bevestigen, want \"of gelijkwaardig\" garandeert niets." },
+    { q: "Is een premium SUV de moeite voor een roadtrip in Marokko?", a: "Voor Agafay, de pistes in het zuiden of een lange rit naar Ouarzazate wel: comfort, bodemvrijheid en een grote koffer. Voor een stedentrip is een privéchauffeur vaak praktischer." },
+    { q: "Waarom kan mijn kaart aan de balie geweigerd worden?", a: "Omdat de borg, vaak 20.000 tot 60.000 MAD, boven de gebruikelijke autorisatielimiet uitkomt. Vraag uw bank om die voor vertrek tijdelijk te verhogen." },
   ],
+  cta: {
+    heading: "Klaar om Marrakech in eerste klasse te beleven?",
+    text: "Vergelijk de premium sedans en SUV's van de verhuurders op de luchthaven en boek in een paar klikken.",
+    label: "Prijzen vergelijken",
+    href: "#reserver",
+    secondary: { label: "Alle categorieën bekijken", key: 'carRental' },
+  },
 } satisfies LocalizedPage;
