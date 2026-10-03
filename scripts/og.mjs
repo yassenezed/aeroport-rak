@@ -60,6 +60,6 @@ for (const [slug, src] of Object.entries(HOTELS)) {
   const band = Buffer.from(`<svg width="${W}" height="110"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#15172B" stop-opacity="0"/><stop offset="1" stop-color="#15172B" stop-opacity="0.85"/></linearGradient></defs><rect width="100%" height="100%" fill="url(#g)"/></svg>`);
   await sharp(`brand/hotels-originals/${src}`).resize(W, H, { fit: 'cover' })
     .composite([{ input: band, left: 0, top: H - 110 }, { input: logo, left: 40, top: H - 82 }])
-    .jpeg({ quality: 82, mozjpeg: true }).toFile(`public/og/hotels/${slug}.jpg`);
+    .sharpen({ sigma: 0.8 }).jpeg({ quality: 84, mozjpeg: true }).toFile(`public/og/hotels/${slug}.jpg`);
 }
 console.log('OG images generated');
