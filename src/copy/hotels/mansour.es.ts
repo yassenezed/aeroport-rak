@@ -18,7 +18,7 @@ export default {
 <p>La particularidad más comentada es la organización del servicio: el personal circula por una red de galerías subterráneas y solo aparece cuando se le llama. El resultado es una intimidad poco común para un establecimiento de este tamaño.</p>
 <p>La artesanía movilizada —zellige, yeserías talladas, madera de cedro, tadelakt— implicó a cientos de artesanos marroquíes, y se nota en el detalle más que en el efecto de conjunto.</p>
 
-<h2>El acceso desde el aeropuerto</h2>
+<h2>El acceso desde el aeropuerto de Marrakech-Menara</h2>
 <p>Unos seis kilómetros, quince a veinte minutos, con llegada en coche directamente a la finca. Ninguna atadura de medina: el establecimiento se sitúa dentro de las murallas pero dispone de un acceso rodado propio. Los traslados los gestiona el hotel bajo petición y, con este nivel de servicio, es la vía más sencilla.</p>
 
 <h2>A quién conviene</h2>

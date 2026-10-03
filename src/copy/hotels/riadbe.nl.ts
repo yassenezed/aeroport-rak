@@ -17,7 +17,7 @@ export default {
 <p>Riad BE zit in een medinahuis in de wijk Bab Doukkala, met het gebruikelijke riadvocabulaire – centrale binnenplaats, bassin, dakterras, ontbijt in de schaduw – in een iets modernere en iets minder besloten versie dan de heel kleine gastenverblijven.</p>
 <p>De omvang telt hier: genoeg kamers om als hotel te functioneren, weinig genoeg om u niet anoniem te voelen.</p>
 
-<h2>Bereikbaarheid vanaf de luchthaven</h2>
+<h2>Bereikbaarheid vanaf luchthaven Marrakech-Menara</h2>
 <p>Dat is het belangrijkste argument, en het wordt onderschat. <strong>Bab Doukkala is een van de best bereikbare poorten van de medina</strong>: breed, goed ontsloten, makkelijk te noemen aan een chauffeur en op korte loopafstand van de riad. Reken op ongeveer twintig minuten rijden vanaf de RAK en dan een paar minuten lopen.</p>
 <p>Bij een eerste reis naar Marrakech of een avondaankomst vertaalt dat verschil met een riad diep in een <em>derb</em> zich in echt comfort – zeker met een koffer achter u aan.</p>
 

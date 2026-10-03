@@ -18,7 +18,7 @@ export default {
 <p>Its most-discussed feature is how service is organised: staff move through a network of underground galleries and appear only when called. The result is a rare degree of privacy for a property of this size.</p>
 <p>The craftsmanship involved — zellige, carved stucco, cedar, tadelakt — drew on hundreds of Moroccan artisans, and it shows in the detail rather than in the overall effect.</p>
 
-<h2>Getting there from the airport</h2>
+<h2>Getting there from Marrakech Menara Airport</h2>
 <p>About six kilometres, fifteen to twenty minutes, arriving by car directly at the estate. No medina constraint: the property sits inside the ramparts but has its own road access. Transfers are handled by the hotel on request, and at this level of service that is the simplest route.</p>
 
 <h2>Who it suits</h2>

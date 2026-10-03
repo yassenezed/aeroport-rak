@@ -17,7 +17,7 @@ export default {
 <p>Es Saadi ist ein Anwesen, kein Gebäude: mehrere Hektar Gärten im Hivernage, mit Unterkünften verschiedener Klassen auf demselben Gelände – ein historisches Hotel, Villen und ein Palastflügel. So lässt sich das Leistungsniveau wählen, ohne die Adresse zu wechseln, was in Marrakesch selten ist.</p>
 <p>Das Haus wird seit Jahrzehnten von derselben Familie geführt, was sich in einer Kontinuität des Service zeigt, die weniger standardisiert wirkt als bei einer internationalen Kette.</p>
 
-<h2>Anfahrt vom Flughafen</h2>
+<h2>Anfahrt vom Flughafen Marrakesch-Menara</h2>
 <p>Das ist sein greifbarster Vorteil: <strong>Das Hivernage ist das dem RAK nächstgelegene Viertel</strong>, vier bis fünf Kilometer entfernt, zehn bis fünfzehn Minuten Fahrt. Direkte Zufahrt, Absetzen vor dem Eingang, kein Träger, keine Gasse. Bei später Ankunft oder Abflug um 5 Uhr morgens ist der Unterschied zu einem Medina-Riad erheblich.</p>
 
 <h2>Für wen es passt</h2>

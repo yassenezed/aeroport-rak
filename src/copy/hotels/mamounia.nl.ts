@@ -17,7 +17,7 @@ export default {
 <p>In 1923 geopend op een olijfgaard die een sultan ooit aan zijn zoon schonk, is La Mamounia het historische grand hotel van Marrakech – het hotel waarvan de naam ver buiten Marokko bekend is. Churchill schilderde hier, en het huis heeft een eeuw van opeenvolgende renovaties doorstaan zonder te verliezen wat het bijzonder maakt: een uitgestrekte ommuurde tuin, op een steenworp van de stadsmuur.</p>
 <p>De ervaring rust in de eerste plaats op die tuin. In een dichte, stenige medinastad veranderen enkele hectaren olijfbomen, paden en vijvers het ritme van een verblijf volledig. De rest – restaurants, spa, service – is navenant, maar het is het landgoed zelf dat het adres rechtvaardigt.</p>
 
-<h2>Bereikbaarheid vanaf de luchthaven</h2>
+<h2>Bereikbaarheid vanaf luchthaven Marrakech-Menara</h2>
 <p>Vijf kilometer, twaalf tot twintig minuten afhankelijk van het verkeer, en afzetten voor de ingang. Een van de weinige prestigieuze adressen in Marrakech waar de logistieke vraag niet speelt: geen medinapoort, geen drager, geen steeg met koffers.</p>
 <p>Het hotel regelt transfers meestal op verzoek. Anders volstaat een taxi tegen het getoonde tarief van 100 tot 150 MAD overdag of een <a href="/nl/book-transfer/">geboekte transfer</a> ruimschoots: de rit is kort en rechtstreeks.</p>
 

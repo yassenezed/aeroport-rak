@@ -17,7 +17,7 @@ export default {
 <p>Riad Yasmine is een traditioneel medinahuis rond een beplante binnenplaats met een groen bassin dat de wereld van de sociale media rond is gegaan. Het moet duidelijk gezegd: <strong>het is een huis, geen hotel</strong>. Een handvol kamers, een dakterras, ontbijt in huis en een klein team dat u na twee dagen kent.</p>
 <p>Precies wat zoekt wie komt voor de riadbeleving – de rust achter een dikke deur, de lucht boven de binnenplaats, het draaiende licht –, en precies wat verwart wie hotelservice verwacht.</p>
 
-<h2>Bereikbaarheid vanaf de luchthaven</h2>
+<h2>Bereikbaarheid vanaf luchthaven Marrakech-Menara</h2>
 <p>Zes kilometer tot de wijk Dar el Bacha, zo'n twintig minuten rijden, <strong>daarna een paar minuten lopen</strong>. Geen voertuig bereikt de ingang: de chauffeur stopt bij de dichtstbijzijnde poort en u loopt verder door de steegjes.</p>
 <p>Twee voorzorgen regelen alles. Vraag de riad naar <strong>de exacte naam van de afzetpoort</strong> en geef die door aan uw chauffeur of transfer. En geef uw aankomsttijd door: het huis stuurt iemand naar u toe, zo nodig met een karretje voor de koffers. Bij aankomst na 22.00 uur is dat onmisbaar, niet alleen prettig.</p>
 

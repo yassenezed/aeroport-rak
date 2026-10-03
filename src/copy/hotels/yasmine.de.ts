@@ -17,7 +17,7 @@ export default {
 <p>Riad Yasmine ist ein traditionelles Medinahaus um einen bepflanzten Innenhof mit einem grünen Becken, das um die Welt der sozialen Netzwerke gegangen ist. Man muss es klar sagen: <strong>Es ist ein Haus, kein Hotel</strong>. Eine Handvoll Zimmer, eine Terrasse, Frühstück im Haus und ein kleines Team, das man nach zwei Tagen kennt.</p>
 <p>Genau das suchen alle, die wegen des Riad-Erlebnisses kommen – die Ruhe hinter einer dicken Tür, der Himmel über dem Hof, das wandernde Licht –, und genau das irritiert jene, die Hotelservice erwarten.</p>
 
-<h2>Anfahrt vom Flughafen</h2>
+<h2>Anfahrt vom Flughafen Marrakesch-Menara</h2>
 <p>Sechs Kilometer bis ins Viertel Dar el Bacha, etwa zwanzig Minuten Fahrt, <strong>dann einige Minuten zu Fuß</strong>. Kein Fahrzeug erreicht den Eingang: Der Fahrer hält am nächstgelegenen Tor, und Sie gehen durch die Gassen weiter.</p>
 <p>Zwei Vorkehrungen klären die Sache. Fragen Sie das Riad nach <strong>dem genauen Namen des Absetztors</strong> und geben Sie ihn an Fahrer oder Transfer weiter. Und nennen Sie Ihre Ankunftszeit: Das Haus schickt jemanden entgegen, bei Bedarf mit einem Karren für die Koffer. Bei Ankunft nach 22 Uhr ist das unverzichtbar, nicht nur bequem.</p>
 

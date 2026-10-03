@@ -17,7 +17,7 @@ export default {
 <p>Riad BE occupies a medina house in the Bab Doukkala quarter, with the usual riad vocabulary — central courtyard, pool, rooftop terrace, breakfast served in the shade — in a slightly more contemporary and slightly less confidential version than the very small guesthouses.</p>
 <p>Size matters here: enough rooms for the property to function like a hotel, few enough that you do not feel anonymous.</p>
 
-<h2>Getting there from the airport</h2>
+<h2>Getting there from Marrakech Menara Airport</h2>
 <p>This is its main argument, and it is underrated. <strong>Bab Doukkala is one of the most accessible gates in the medina</strong>: wide, well served, easy to name to a driver, and a short walk from the riad. Allow about twenty minutes by road from RAK, then a few minutes on foot.</p>
 <p>For a first trip to Marrakech, or an evening arrival, that difference from a riad buried at the end of a <em>derb</em> translates into real comfort — especially with a suitcase in tow.</p>
 

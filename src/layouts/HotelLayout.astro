@@ -7,6 +7,35 @@ import { site } from '../data/site';
 import type { LocalizedHotel } from '../copy/types';
 import { HOTEL_HERO, HOTEL_ALT_SUFFIX, PRICE_LABEL, hotelPriceLink } from '../data/hotelLinks';
 import { existsSync } from 'node:fs';
+import { HOTEL_IMAGES } from '../data/hotelLinks';
+
+// Sous-titre du H1 (mot-clé), titre de FAQ et bloc « autres hôtels », par langue.
+const H1_SUB: Record<string, string> = {
+  fr: "notre avis et l'accès depuis l'aéroport Marrakech-Ménara",
+  en: 'our review and access from Marrakech Menara Airport',
+  es: 'nuestra reseña y el acceso desde el aeropuerto de Marrakech-Menara',
+  de: 'unsere Bewertung und Anfahrt ab Flughafen Marrakesch-Menara',
+  nl: 'onze beoordeling en bereikbaarheid vanaf luchthaven Marrakech-Menara',
+  ar: 'تقييمنا وطريقة الوصول من مطار مراكش المنارة',
+};
+const FAQ_H: Record<string, (n: string) => string> = {
+  fr: (n) => `${n} et aéroport Marrakech-Ménara : questions fréquentes`,
+  en: (n) => `${n} and Marrakech Menara Airport: frequently asked questions`,
+  es: (n) => `${n} y aeropuerto de Marrakech-Menara: preguntas frecuentes`,
+  de: (n) => `${n} und Flughafen Marrakesch-Menara: häufige Fragen`,
+  nl: (n) => `${n} en luchthaven Marrakech-Menara: veelgestelde vragen`,
+  ar: (n) => `${n} ومطار مراكش المنارة: أسئلة شائعة`,
+};
+const MORE: Record<string, { h: string; all: string; read: string; prep: string; links: [string, string][] }> = {
+  fr: { h: "Autres hôtels près de l'aéroport Marrakech-Ménara", all: 'Voir les 15 hôtels sélectionnés', read: 'Lire notre avis', prep: 'Préparer votre arrivée :', links: [['bookTransfer', 'réserver un transfert'], ['transfers', 'taxi, bus 19 ou transfert'], ['arrivals', 'arrivées en direct'], ['carRental', 'location de voiture']] },
+  en: { h: 'More hotels near Marrakech Menara Airport', all: 'See all 15 selected hotels', read: 'Read our review', prep: 'Plan your arrival:', links: [['bookTransfer', 'book a transfer'], ['transfers', 'taxi, bus 19 or transfer'], ['arrivals', 'live arrivals'], ['carRental', 'car hire']] },
+  es: { h: 'Otros hoteles cerca del aeropuerto de Marrakech-Menara', all: 'Ver los 15 hoteles seleccionados', read: 'Leer nuestra reseña', prep: 'Prepare su llegada:', links: [['bookTransfer', 'reservar un traslado'], ['transfers', 'taxi, bus 19 o traslado'], ['arrivals', 'llegadas en directo'], ['carRental', 'alquiler de coches']] },
+  de: { h: 'Weitere Hotels nahe Flughafen Marrakesch-Menara', all: 'Alle 15 ausgewählten Hotels', read: 'Zur Bewertung', prep: 'Ankunft planen:', links: [['bookTransfer', 'Transfer buchen'], ['transfers', 'Taxi, Bus 19 oder Transfer'], ['arrivals', 'Ankünfte live'], ['carRental', 'Mietwagen']] },
+  nl: { h: 'Meer hotels bij luchthaven Marrakech-Menara', all: 'Bekijk de 15 geselecteerde hotels', read: 'Lees onze beoordeling', prep: 'Uw aankomst plannen:', links: [['bookTransfer', 'transfer boeken'], ['transfers', 'taxi, bus 19 of transfer'], ['arrivals', 'aankomsten live'], ['carRental', 'autohuur']] },
+  ar: { h: 'فنادق أخرى قرب مطار مراكش المنارة', all: 'شاهد الفنادق الخمسة عشر المختارة', read: 'اقرأ تقييمنا', prep: 'خطط لوصولك:', links: [['bookTransfer', 'احجز نقلًا'], ['transfers', 'تاكسي أو الحافلة 19 أو نقل'], ['arrivals', 'الرحلات الواصلة مباشرة'], ['carRental', 'كراء السيارات']] },
+};
+// Autres fiches d'avis : clé de route → identifiant photo.
+const REVIEWS: [string, string][] = [['mamounia', 'mamounia'], ['mansour', 'royalMansour'], ['essaadi', 'esSaadi'], ['yasmine', 'riadYasmine'], ['riadbe', 'riadBe']];
 
 interface Props { locale: Locale; routeKey: string; page: LocalizedHotel; noindex?: boolean }
 const { locale, routeKey, page, noindex = false } = Astro.props;
@@ -18,6 +47,8 @@ const ogCandidate = hero ? hero.src.replace('/images/hotels/', '/og/hotels/').re
 const heroOg = ogCandidate && existsSync(`public${ogCandidate}`) ? ogCandidate : undefined;
 // Clé de route de la fiche → identifiant de l'hôtel dans hotelLinks.ts
 const HOTEL_ID: Record<string, string> = { mamounia: 'mamounia', mansour: 'royalMansour', essaadi: 'esSaadi', yasmine: 'riadYasmine', riadbe: 'riadBe' };
+const more = MORE[locale] ?? MORE.en;
+const others = REVIEWS.filter(([k]) => k !== routeKey);
 const price = HOTEL_ID[routeKey] ? hotelPriceLink(HOTEL_ID[routeKey], page.h1) : null;
 
 const crumbs = [
@@ -63,7 +94,7 @@ if (page.faqs?.length) {
     <div class="container hero__inner">
       <Breadcrumbs items={crumbs} />
       {page.eyebrow && <span class="eyebrow">{page.eyebrow}</span>}
-      <h1>{page.h1}</h1>
+      <h1>{page.h1}<span class="h1-sub">{H1_SUB[locale] ?? H1_SUB.en}</span></h1>
       <p class="lede">{page.lede}</p>
       <div class="hotel-meta">
         {page.stars && <span class="chip">{page.stars}</span>}
@@ -130,18 +161,37 @@ if (page.faqs?.length) {
   {page.faqs && page.faqs.length > 0 && (
     <section class="section-block">
       <div class="container container--narrow">
-        <h2 class="section-block__title">{t('common.faq')}</h2>
+        <h2 class="section-block__title">{(FAQ_H[locale] ?? FAQ_H.en)(page.h1)}</h2>
         <div class="faq-list">
           {page.faqs.map((f) => (
             <details class="faq-item">
               <summary>{f.q}</summary>
-              <div class="faq-body"><p>{f.a}</p></div>
+              <div class="faq-body"><p set:html={f.a} /></div>
             </details>
           ))}
         </div>
       </div>
     </section>
   )}
+
+  <section class="section-block section-block--alt related-hotels">
+    <div class="container">
+      <h2 class="section-block__title">{more.h}</h2>
+      <ul class="card-grid card-grid--feature" style="--cols: 4">
+        {others.map(([k, id]) => (
+          <li class:list={['feat-card feat-card--feature', { 'feat-card--photo': !!HOTEL_IMAGES[id] }]}>
+            {HOTEL_IMAGES[id] && <img class="feat-card__photo" src={HOTEL_IMAGES[id]} alt={`${t(`hotelNames.${k}`)} – ${HOTEL_ALT_SUFFIX[locale]}`} width="640" height="400" loading="lazy" decoding="async" />}
+            <div class="feat-card__body">
+              <h3>{t(`hotelNames.${k}`)}</h3>
+              <a class="feat-card__link" href={pathFor(k, locale)}>{more.read} <span aria-hidden="true">{locale === 'ar' ? '←' : '→'}</span></a>
+            </div>
+          </li>
+        ))}
+      </ul>
+      <p class="related-hotels__all"><a class="btn btn--secondary" href={pathFor('hotels', locale)}>{more.all}</a></p>
+      <p class="related-hotels__prep"><strong>{more.prep}</strong> {more.links.map(([k, label], i) => <>{i > 0 && ' · '}<a href={pathFor(k, locale)}>{label}</a></>)}</p>
+    </div>
+  </section>
 
   {page.cta && (
     <section class="section-block section-block--alt">

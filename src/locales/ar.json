@@ -97,5 +97,12 @@
     "shown": "{n} وجهة معروضة",
     "flightsTo": "رحلات إلى",
     "shownOne": "{n} وجهة معروضة"
+  },
+  "hotelNames": {
+    "mamounia": "المامونية",
+    "mansour": "رويال منصور",
+    "essaadi": "السعدي",
+    "yasmine": "رياض ياسمين",
+    "riadbe": "رياض بي"
   }
 }

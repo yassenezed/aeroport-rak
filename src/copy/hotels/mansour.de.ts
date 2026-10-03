@@ -18,7 +18,7 @@ export default {
 <p>Am meisten besprochen wird die Organisation des Service: Das Personal bewegt sich durch ein Netz unterirdischer Galerien und erscheint nur, wenn man es ruft. Das Ergebnis ist eine für ein Haus dieser Größe seltene Privatsphäre.</p>
 <p>Das eingesetzte Kunsthandwerk – Zellige, geschnitzter Stuck, Zedernholz, Tadelakt – beschäftigte Hunderte marokkanischer Handwerker, und das zeigt sich im Detail mehr als im Gesamteindruck.</p>
 
-<h2>Anfahrt vom Flughafen</h2>
+<h2>Anfahrt vom Flughafen Marrakesch-Menara</h2>
 <p>Etwa sechs Kilometer, fünfzehn bis zwanzig Minuten, Ankunft mit dem Auto direkt am Anwesen. Keine Medina-Einschränkung: Das Haus liegt innerhalb der Stadtmauer, hat aber eine eigene Zufahrt. Transfers übernimmt das Hotel auf Anfrage, und auf diesem Serviceniveau ist das der einfachste Weg.</p>
 
 <h2>Für wen es passt</h2>

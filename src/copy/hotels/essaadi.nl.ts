@@ -17,7 +17,7 @@ export default {
 <p>Es Saadi is een landgoed, geen gebouw: enkele hectaren tuinen in Hivernage, met accommodatie van verschillende niveaus op hetzelfde terrein – een historisch hotel, villa's en een paleisvleugel. Zo kiest u uw serviceniveau zonder van adres te veranderen, wat in Marrakech zeldzaam is.</p>
 <p>Het huis wordt al tientallen jaren door dezelfde familie geleid, en dat merk je aan een continuïteit in de service die minder gestandaardiseerd aanvoelt dan bij een internationale keten.</p>
 
-<h2>Bereikbaarheid vanaf de luchthaven</h2>
+<h2>Bereikbaarheid vanaf luchthaven Marrakech-Menara</h2>
 <p>Dat is het meest tastbare voordeel: <strong>Hivernage is de wijk die het dichtst bij de RAK ligt</strong>, vier à vijf kilometer, tien tot vijftien minuten rijden. Directe toegang met de auto, afzetten voor de ingang, geen drager en geen steeg. Bij een late aankomst of een vertrek om 5 uur 's ochtends is het verschil met een medinariad aanzienlijk.</p>
 
 <h2>Voor wie het past</h2>

@@ -17,7 +17,7 @@ export default {
 <p>Inaugurado en 1923 sobre un terreno de olivos que un sultán regaló en su día a su hijo, La Mamounia es el gran hotel histórico de Marrakech, ese cuyo nombre circula mucho más allá de Marruecos. Churchill pintó aquí, y el establecimiento ha atravesado un siglo de restauraciones sucesivas sin perder lo que le hace singular: un vasto jardín cerrado, a dos pasos de las murallas.</p>
 <p>La experiencia se apoya ante todo en ese jardín. En una ciudad de medina densa y mineral, disponer de varias hectáreas de olivos, paseos y estanques cambia radicalmente el ritmo de una estancia. El resto —restauración, spa, servicio— está a la altura, pero es la finca misma la que justifica la dirección.</p>
 
-<h2>El acceso desde el aeropuerto</h2>
+<h2>El acceso desde el aeropuerto de Marrakech-Menara</h2>
 <p>Cinco kilómetros, doce a veinte minutos según el tráfico, y llegada delante de la entrada. Es uno de los pocos establecimientos de prestigio de Marrakech donde la cuestión logística no se plantea: ninguna puerta de la medina que negociar, ningún mozo que prever, ningún callejón que remontar con maletas.</p>
 <p>El hotel suele organizar los traslados bajo petición. En su defecto, un taxi a la tarifa del panel, 100 a 150 MAD de día, o un <a href="/es/book-transfer/">traslado reservado</a> bastan perfectamente: el trayecto es corto y directo.</p>
 

@@ -17,7 +17,7 @@ export default {
 <p>Opened in 1923 on an olive grove once given by a sultan to his son, La Mamounia is the historic grand hotel of Marrakech, the one whose name travels far beyond Morocco. Churchill painted here, and the property has come through a century of successive restorations without losing what makes it singular: a vast walled garden, a step away from the ramparts.</p>
 <p>The experience rests on that garden first. In a dense, mineral medina city, having several hectares of olive trees, walkways and pools changes the rhythm of a stay entirely. The rest — dining, spa, service — follows suit, but it is the estate itself that justifies the address.</p>
 
-<h2>Getting there from the airport</h2>
+<h2>Getting there from Marrakech Menara Airport</h2>
 <p>Five kilometres, twelve to twenty minutes depending on traffic, and a drop-off at the door. This is one of the rare prestigious properties in Marrakech where logistics simply do not arise: no medina gate to negotiate, no porter to arrange, no lane to walk with suitcases.</p>
 <p>The hotel usually arranges transfers on request. Failing that, a taxi at the posted fare of MAD 100–150 by day, or a <a href="/en/book-transfer/">booked transfer</a>, does the job perfectly: the drive is short and direct.</p>
 

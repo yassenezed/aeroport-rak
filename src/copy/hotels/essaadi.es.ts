@@ -17,7 +17,7 @@ export default {
 <p>Es Saadi es una finca, no un edificio: varias hectáreas de jardines en el Hivernage, con alojamientos de distintos niveles reunidos en el mismo terreno —un hotel histórico, villas y un ala palacio—. Esa organización permite elegir el nivel de servicio sin cambiar de dirección, algo poco común en Marrakech.</p>
 <p>El establecimiento lo lleva la misma familia desde hace décadas, y se nota en una continuidad del servicio menos estandarizada que en una cadena internacional.</p>
 
-<h2>El acceso desde el aeropuerto</h2>
+<h2>El acceso desde el aeropuerto de Marrakech-Menara</h2>
 <p>Es su ventaja más concreta: <strong>el Hivernage es el barrio más cercano al RAK</strong>, a cuatro o cinco kilómetros, diez a quince minutos de carretera. Acceso en coche directo, llegada delante de la entrada, ningún mozo ni callejón. Para una llegada tardía o una salida a las 5 de la mañana, la diferencia con un riad de la medina es considerable.</p>
 
 <h2>A quién conviene</h2>

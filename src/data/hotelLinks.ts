@@ -46,7 +46,7 @@ export const HOTEL_FALLBACK_LINK = '';
 
 /** Photos des hôtels pour les cartes (640×400, public/images/hotels/). Originaux dans brand/hotels-originals/. */
 export const HOTEL_IMAGES: Record<string, string> = {
-  esSaadi: '/images/hotels/es-saadi-marrakech-aeroport-menara.webp',
+  esSaadi: '/images/hotels/es-saadi-hd-marrakech-aeroport-menara.webp',
   fairmontRoyalPalm: '/images/hotels/fairmont-royal-palm-marrakech-aeroport-menara.webp',
   mamounia: '/images/hotels/la-mamounia-hd-marrakech-aeroport-menara.webp',
   mandarinOriental: '/images/hotels/mandarin-oriental-marrakech-aeroport-menara.webp',
@@ -69,7 +69,7 @@ export const HOTEL_HERO: Record<string, { src: string; width: number; height: nu
   riadbe: { src: '/images/hotels/riad-be-marrakech-aeroport-menara-large.webp', width: 1024, height: 576 },
   mamounia: { src: '/images/hotels/la-mamounia-hd-marrakech-aeroport-menara-large.webp', width: 1200, height: 675 },
   mansour: { src: '/images/hotels/royal-mansour-marrakech-aeroport-menara-large.webp', width: 1200, height: 675 },
-  essaadi: { src: '/images/hotels/es-saadi-marrakech-aeroport-menara-large.webp', width: 618, height: 323 },
+  essaadi: { src: '/images/hotels/es-saadi-hd-marrakech-aeroport-menara-large.webp', width: 1200, height: 675 },
 };
 
 /** Fin du texte alternatif des photos d'hôtels, par langue (SEO image). */

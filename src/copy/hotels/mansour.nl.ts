@@ -18,7 +18,7 @@ export default {
 <p>Het meest besproken kenmerk is de organisatie van de service: het personeel beweegt zich via een netwerk van ondergrondse galerijen en verschijnt alleen als u roept. Het resultaat is een privacy die voor een hotel van deze omvang zeldzaam is.</p>
 <p>Het ingezette vakmanschap – zellige, gesneden stucwerk, cederhout, tadelakt – bracht honderden Marokkaanse ambachtslieden aan het werk, en dat zie je meer in het detail dan in het totaalbeeld.</p>
 
-<h2>Bereikbaarheid vanaf de luchthaven</h2>
+<h2>Bereikbaarheid vanaf luchthaven Marrakech-Menara</h2>
 <p>Ongeveer zes kilometer, vijftien tot twintig minuten, met aankomst per auto direct op het landgoed. Geen medinabeperking: het hotel ligt binnen de stadsmuren maar heeft een eigen toegangsweg. Transfers regelt het hotel op verzoek, en op dit serviceniveau is dat de eenvoudigste weg.</p>
 
 <h2>Voor wie het past</h2>

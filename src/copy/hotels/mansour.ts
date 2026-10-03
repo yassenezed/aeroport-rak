@@ -19,7 +19,7 @@ export default {
 <p>La particularité la plus commentée tient à l'organisation du service : le personnel circule par un réseau de galeries souterraines et n'apparaît qu'au moment où on le sollicite. Le résultat est une intimité rare pour un établissement de cette taille.</p>
 <p>L'artisanat mobilisé — zelliges, stucs sculptés, bois de cèdre, tadelakt — a impliqué des centaines d'artisans marocains, et c'est visible dans le détail plutôt que dans l'effet d'ensemble.</p>
 
-<h2>L'accès depuis l'aéroport</h2>
+<h2>L'accès depuis l'aéroport Marrakech-Ménara</h2>
 <p>Environ six kilomètres, quinze à vingt minutes, avec une arrivée en voiture directement au domaine. Aucune contrainte de médina : l'établissement se situe à l'intérieur des remparts mais dispose d'un accès routier propre. Les transferts sont pris en charge par l'hôtel sur demande, et à ce niveau de prestation, c'est la voie la plus simple.</p>
 
 <h2>À qui cela convient</h2>

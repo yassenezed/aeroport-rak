@@ -97,5 +97,12 @@
     "shown": "{n} destinos mostrados",
     "flightsTo": "Vuelos a",
     "shownOne": "{n} destino mostrado"
+  },
+  "hotelNames": {
+    "mamounia": "La Mamounia",
+    "mansour": "Royal Mansour",
+    "essaadi": "Es Saadi",
+    "yasmine": "Riad Yasmine",
+    "riadbe": "Riad BE"
   }
 }

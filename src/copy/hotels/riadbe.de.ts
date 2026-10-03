@@ -17,7 +17,7 @@ export default {
 <p>Riad BE bewohnt ein Medinahaus im Viertel Bab Doukkala, mit dem üblichen Riad-Vokabular – zentraler Innenhof, Becken, Dachterrasse, Frühstück im Schatten – in einer etwas moderneren und etwas weniger verschwiegenen Version als die ganz kleinen Gästehäuser.</p>
 <p>Die Größe zählt hier: genug Zimmer, damit das Haus wie ein Hotel funktioniert, wenige genug, damit man sich nicht anonym fühlt.</p>
 
-<h2>Anfahrt vom Flughafen</h2>
+<h2>Anfahrt vom Flughafen Marrakesch-Menara</h2>
 <p>Das ist sein Hauptargument, und es wird unterschätzt. <strong>Bab Doukkala ist eines der am besten erreichbaren Tore der Medina</strong>: breit, gut angebunden, einem Fahrer leicht zu nennen und nur einen kurzen Fußweg vom Riad entfernt. Rechnen Sie mit etwa zwanzig Minuten Fahrt vom RAK, dann einigen Minuten zu Fuß.</p>
 <p>Bei einer ersten Reise nach Marrakesch oder einer Ankunft am Abend bedeutet dieser Unterschied zu einem Riad am Ende eines <em>Derb</em> echten Komfort – besonders mit einem Koffer im Schlepptau.</p>
 
