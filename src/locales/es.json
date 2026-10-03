@@ -106,5 +106,11 @@
     "essaadi": "Es Saadi",
     "yasmine": "Riad Yasmine",
     "riadbe": "Riad BE"
+  },
+  "sticky": {
+    "title": "Traslado desde el aeropuerto",
+    "sub": "Desde ≈ 290 MAD por vehículo, chófer a la llegada",
+    "btn": "Reservar",
+    "close": "Cerrar"
   }
 }

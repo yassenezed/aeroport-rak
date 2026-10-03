@@ -106,5 +106,11 @@
     "essaadi": "Es Saadi",
     "yasmine": "Riad Yasmine",
     "riadbe": "Riad BE"
+  },
+  "sticky": {
+    "title": "Transfert depuis l'aéroport",
+    "sub": "Dès ≈ 290 DH par véhicule, chauffeur à l'arrivée",
+    "btn": "Réserver",
+    "close": "Fermer"
   }
 }

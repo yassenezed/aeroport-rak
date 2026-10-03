@@ -1,91 +1,90 @@
 ---
-import { getLocalizedPath, defaultLang, type Lang } from '../../i18n';
+// Barre fixe « réserver un transfert » : lien interne rendu en HTML statique (crawlable),
+// sans bibliothèque ni popup. Le seul script sert au bouton fermer (mémorisé pour la session).
 import Icon from './Icon.astro';
+import { useTranslations, pathFor, type Locale } from '../../i18n';
 
-interface Props {
-  lang?: Lang;
-}
-
-const { lang = defaultLang } = Astro.props;
-const href = getLocalizedPath('/reserver-transfert/', lang);
-
-const currentPath = Astro.url.pathname;
-const normalizedPath = currentPath.endsWith('/') ? currentPath : currentPath + '/';
-
-const t = {
-  title: "Besoin d'un transfert ?",
-  sub: "Trajet direct et fiable jusqu'à votre hôtel ou riad",
-  btn: 'Réserver'
-};
-
-const showWidget = normalizedPath !== href;
+interface Props { locale: Locale; routeKey: string }
+const { locale, routeKey } = Astro.props;
+const t = useTranslations(locale);
+// Inutile sur la page de réservation elle-même.
+const show = routeKey !== 'bookTransfer';
 ---
-
-{showWidget && (
-<div class="floating-cta-widget" id="transferWidget">
-  <button class="close-btn" aria-label="Close" onclick="document.getElementById('transferWidget').style.display='none'">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-  </button>
-  
-  <div class="widget-content">
-    <div class="text-area">
-      <div class="widget-title">{t.title}</div>
-      <div class="widget-sub">{t.sub}</div>
+{show && (
+  <aside class="sticky-transfer" id="sticky-transfer" aria-label={t('sticky.title')} data-nosnippet>
+    <div class="sticky-transfer__inner">
+      <p class="sticky-transfer__text">
+        <strong>{t('sticky.title')}</strong>
+        <span>{t('sticky.sub')}</span>
+      </p>
+      <a class="sticky-transfer__btn" href={pathFor('bookTransfer', locale)}>
+        {t('sticky.btn')} <Icon name="arrow-right" size={16} />
+      </a>
+      <button type="button" class="sticky-transfer__close" aria-label={t('sticky.close')} data-close>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" /></svg>
+      </button>
     </div>
-    
-    <a href={href} class="widget-btn">
-      {t.btn}
-      <Icon name="arrow-right" size={18} />
-    </a>
-  </div>
-</div>
+  </aside>
+  <script is:inline>
+    (function () {
+      var el = document.getElementById('sticky-transfer');
+      if (!el) return;
+      try { if (sessionStorage.getItem('stickyTransferClosed')) { el.remove(); return; } } catch (e) {}
+      el.querySelector('[data-close]').addEventListener('click', function () {
+        el.remove();
+        try { sessionStorage.setItem('stickyTransferClosed', '1'); } catch (e) {}
+      });
+    })();
+  </script>
 )}
 
 <style>
-  .floating-cta-widget {
+  .sticky-transfer {
     position: fixed;
-    left: 0; right: 0; bottom: 0;
+    inset-inline: 0;
+    bottom: 0;
     z-index: 90;
     background: var(--ink);
     border-top: 2px solid var(--saffron);
-    padding: 0.7rem 1.25rem;
-    display: flex;
-    justify-content: center;
+    padding: 0.6rem 1.25rem calc(0.6rem + env(safe-area-inset-bottom));
   }
-  .widget-content {
-    width: 100%;
+  .sticky-transfer__inner {
     max-width: var(--container);
+    margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 1rem;
+    padding-inline-end: 1.75rem;
   }
-  .text-area { display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap; min-width: 0; }
-  .widget-title { font-family: var(--font-display); font-weight: 600; font-size: 1.02rem; color: #fff; }
-  .widget-sub { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
-  .widget-btn {
+  .sticky-transfer__text { flex: 1; min-width: 0; margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.15rem 0.6rem; color: #fff; }
+  .sticky-transfer__text strong { font-family: var(--font-display); font-weight: 600; font-size: 1rem; }
+  .sticky-transfer__text span { font-size: 0.85rem; color: rgba(255, 255, 255, 0.7); }
+  .sticky-transfer__btn {
     flex: none;
-    display: inline-flex; align-items: center; gap: 0.45rem;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    min-height: 44px;
     background: var(--blue); color: #fff;
-    font-family: var(--font-body); font-weight: 700; font-size: 0.9rem;
-    padding: 0.62rem 1.2rem; border-radius: var(--r-md);
+    font-weight: 700; font-size: 0.9rem;
+    padding: 0 1.15rem; border-radius: var(--r-md);
     text-decoration: none;
     transition: background var(--transition);
   }
-  .widget-btn:hover { background: var(--blue-dark); color: #fff; }
-  .close-btn {
-    position: absolute; top: 0.3rem; right: 0.5rem;
-    background: none; border: none; cursor: pointer;
-    color: rgba(255,255,255,0.4); padding: 0.15rem; line-height: 0;
+  .sticky-transfer__btn:hover, .sticky-transfer__btn:focus-visible { background: var(--blue-dark); color: #fff; }
+  :global([dir='rtl']) .sticky-transfer__btn :global(svg) { transform: scaleX(-1); }
+  .sticky-transfer__close {
+    position: absolute; top: 50%; inset-inline-end: 0.5rem; transform: translateY(-50%);
+    width: 32px; height: 32px; display: grid; place-items: center;
+    background: none; border: 0; border-radius: var(--r-pill); cursor: pointer;
+    color: rgba(255, 255, 255, 0.55);
   }
-  .close-btn:hover { color: #fff; }
-  .close-btn svg { width: 15px; height: 15px; }
-
+  .sticky-transfer__close:hover, .sticky-transfer__close:focus-visible { color: #fff; background: rgba(255, 255, 255, 0.1); }
+  /* La barre ne doit jamais masquer le bas du pied de page. */
+  :global(body:has(.sticky-transfer)) { padding-bottom: 68px; }
   @media (max-width: 620px) {
-    .floating-cta-widget { padding: 0.6rem 1rem; }
-    .widget-content { gap: 0.75rem; }
-    .widget-sub { display: none; }
-    .widget-title { font-size: 0.93rem; }
-    .widget-btn { padding: 0.55rem 0.95rem; font-size: 0.85rem; }
+    .sticky-transfer { padding-inline: 1rem; }
+    .sticky-transfer__text span { display: none; }
+    .sticky-transfer__text strong { font-size: 0.92rem; }
+    .sticky-transfer__btn { padding: 0 0.9rem; font-size: 0.85rem; }
   }
+  @media print { .sticky-transfer { display: none; } }
 </style>

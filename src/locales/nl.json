@@ -106,5 +106,11 @@
     "essaadi": "Es Saadi",
     "yasmine": "Riad Yasmine",
     "riadbe": "Riad BE"
+  },
+  "sticky": {
+    "title": "Transfer vanaf de luchthaven",
+    "sub": "Vanaf ≈ 290 MAD per voertuig, chauffeur bij aankomst",
+    "btn": "Boeken",
+    "close": "Sluiten"
   }
 }

@@ -106,5 +106,11 @@
     "essaadi": "Es Saadi",
     "yasmine": "Riad Yasmine",
     "riadbe": "Riad BE"
+  },
+  "sticky": {
+    "title": "Flughafentransfer",
+    "sub": "Ab ≈ 290 MAD pro Fahrzeug, Fahrer wartet bei der Ankunft",
+    "btn": "Buchen",
+    "close": "Schließen"
   }
 }
