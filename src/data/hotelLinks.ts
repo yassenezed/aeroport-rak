@@ -67,9 +67,9 @@ export const HOTEL_IMAGES: Record<string, string> = {
 export const HOTEL_HERO: Record<string, { src: string; width: number; height: number }> = {
   yasmine: { src: '/images/hotels/riad-yasmine-marrakech-aeroport-menara-large.webp', width: 900, height: 506 },
   riadbe: { src: '/images/hotels/riad-be-marrakech-aeroport-menara-large.webp', width: 1024, height: 576 },
-  mamounia: { src: '/images/hotels/la-mamounia-marrakech-aeroport-menara-large.webp', width: 600, height: 338 },
+  mamounia: { src: '/images/hotels/la-mamounia-marrakech-aeroport-menara-large.webp', width: 600, height: 399 },
   mansour: { src: '/images/hotels/royal-mansour-marrakech-aeroport-menara-large.webp', width: 1200, height: 675 },
-  essaadi: { src: '/images/hotels/es-saadi-marrakech-aeroport-menara-large.webp', width: 618, height: 348 },
+  essaadi: { src: '/images/hotels/es-saadi-marrakech-aeroport-menara-large.webp', width: 618, height: 323 },
 };
 
 /** Fin du texte alternatif des photos d'hôtels, par langue (SEO image). */

@@ -3,7 +3,7 @@
 //  - une image par fiche d'hôtel : public/og/hotels/<slug>.jpg
 // Usage : node scripts/og.mjs   (sources dans brand/)
 import sharp from 'sharp';
-import { mkdirSync } from 'node:fs';
+import { mkdirSync, rmSync } from 'node:fs';
 
 const W = 1200, H = 630;
 const FONT_BOLD = '/System/Library/Fonts/Supplemental/Arial Bold.ttf';
@@ -56,10 +56,12 @@ const HOTELS = {
 
 for (const l of Object.keys(TEXT)) await brand(l);
 for (const [slug, src] of Object.entries(HOTELS)) {
+  // Jamais d'agrandissement : une photo trop petite pour 1200×630 garde l'image de marque de la langue.
+  if ((await sharp(`brand/hotels-originals/${src}`).metadata()).width < 1000) { rmSync(`public/og/hotels/${slug}.jpg`, { force: true }); continue; }
   const logo = await sharp('public/logo.png').resize({ height: 60 }).toBuffer();
   const band = Buffer.from(`<svg width="${W}" height="110"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#15172B" stop-opacity="0"/><stop offset="1" stop-color="#15172B" stop-opacity="0.85"/></linearGradient></defs><rect width="100%" height="100%" fill="url(#g)"/></svg>`);
   await sharp(`brand/hotels-originals/${src}`).resize(W, H, { fit: 'cover' })
     .composite([{ input: band, left: 0, top: H - 110 }, { input: logo, left: 40, top: H - 82 }])
-    .sharpen({ sigma: 0.8 }).jpeg({ quality: 84, mozjpeg: true }).toFile(`public/og/hotels/${slug}.jpg`);
+    .jpeg({ quality: 88, mozjpeg: true }).toFile(`public/og/hotels/${slug}.jpg`);
 }
 console.log('OG images generated');

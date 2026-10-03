@@ -6,12 +6,16 @@ import { useTranslations, pathFor, type Locale } from '../i18n';
 import { site } from '../data/site';
 import type { LocalizedHotel } from '../copy/types';
 import { HOTEL_HERO, HOTEL_ALT_SUFFIX, PRICE_LABEL, hotelPriceLink } from '../data/hotelLinks';
+import { existsSync } from 'node:fs';
 
 interface Props { locale: Locale; routeKey: string; page: LocalizedHotel; noindex?: boolean }
 const { locale, routeKey, page, noindex = false } = Astro.props;
 const t = useTranslations(locale);
 const path = pathFor(routeKey, locale);
 const hero = HOTEL_HERO[routeKey];
+// Image de partage de l'hôtel si elle existe (photos assez grandes), sinon image de marque de la langue.
+const ogCandidate = hero ? hero.src.replace('/images/hotels/', '/og/hotels/').replace('-large.webp', '.jpg') : undefined;
+const heroOg = ogCandidate && existsSync(`public${ogCandidate}`) ? ogCandidate : undefined;
 // Clé de route de la fiche → identifiant de l'hôtel dans hotelLinks.ts
 const HOTEL_ID: Record<string, string> = { mamounia: 'mamounia', mansour: 'royalMansour', essaadi: 'esSaadi', yasmine: 'riadYasmine', riadbe: 'riadBe' };
 const price = HOTEL_ID[routeKey] ? hotelPriceLink(HOTEL_ID[routeKey], page.h1) : null;
@@ -54,7 +58,7 @@ if (page.faqs?.length) {
   });
 }
 ---
-<BaseLayout locale={locale} routeKey={routeKey} title={page.title} description={page.description} schema={schema} noindex={noindex} ogImage={hero ? hero.src.replace('/images/hotels/', '/og/hotels/').replace('-large.webp', '.jpg') : undefined}>
+<BaseLayout locale={locale} routeKey={routeKey} title={page.title} description={page.description} schema={schema} noindex={noindex} ogImage={heroOg}>
   <section class="hero hero--small hero--hotel">
     <div class="container hero__inner">
       <Breadcrumbs items={crumbs} />
@@ -79,7 +83,7 @@ if (page.faqs?.length) {
     <section class="section-block section-block--tight hotel-photo-block">
       <div class="container">
         <figure class="hotel-photo">
-          <img src={hero.src} alt={`${page.h1} – ${HOTEL_ALT_SUFFIX[locale]}`} width={hero.width} height={hero.height} fetchpriority="high" decoding="async" style={hero.width < 1000 ? `max-width: ${Math.round(hero.width * 1.4)}px` : undefined} />
+          <img src={hero.src} alt={`${page.h1} – ${HOTEL_ALT_SUFFIX[locale]}`} width={hero.width} height={hero.height} fetchpriority="high" decoding="async" style={hero.width < 1000 ? `max-width: ${hero.width}px` : undefined} />
         </figure>
       </div>
     </section>
