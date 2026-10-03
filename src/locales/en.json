@@ -108,9 +108,9 @@
     "riadbe": "Riad BE"
   },
   "sticky": {
-    "title": "Airport transfer",
-    "sub": "From ≈ MAD 290 per vehicle, driver waiting at arrivals",
-    "btn": "Book",
+    "title": "Need a transfer?",
+    "sub": "Door-to-door service to and from Marrakech airport",
+    "btn": "Book a transfer",
     "close": "Close"
   }
 }

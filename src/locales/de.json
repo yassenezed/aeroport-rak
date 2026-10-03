@@ -108,9 +108,9 @@
     "riadbe": "Riad BE"
   },
   "sticky": {
-    "title": "Flughafentransfer",
-    "sub": "Ab ≈ 290 MAD pro Fahrzeug, Fahrer wartet bei der Ankunft",
-    "btn": "Buchen",
+    "title": "Brauchen Sie einen Transfer?",
+    "sub": "Tür-zu-Tür-Service vom und zum Flughafen Marrakesch",
+    "btn": "Transfer buchen",
     "close": "Schließen"
   }
 }

@@ -108,9 +108,9 @@
     "riadbe": "Riad BE"
   },
   "sticky": {
-    "title": "Traslado desde el aeropuerto",
-    "sub": "Desde ≈ 290 MAD por vehículo, chófer a la llegada",
-    "btn": "Reservar",
+    "title": "¿Necesita un traslado?",
+    "sub": "Servicio puerta a puerta desde y hacia el aeropuerto de Marrakech",
+    "btn": "Reservar un traslado",
     "close": "Cerrar"
   }
 }

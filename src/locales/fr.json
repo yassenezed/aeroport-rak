@@ -108,9 +108,9 @@
     "riadbe": "Riad BE"
   },
   "sticky": {
-    "title": "Transfert depuis l'aéroport",
-    "sub": "Dès ≈ 290 DH par véhicule, chauffeur à l'arrivée",
-    "btn": "Réserver",
+    "title": "Besoin d'un transfert ?",
+    "sub": "Service porte-à-porte depuis et vers l'aéroport de Marrakech",
+    "btn": "Réserver un transfert",
     "close": "Fermer"
   }
 }
