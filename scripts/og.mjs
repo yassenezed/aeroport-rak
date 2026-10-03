@@ -47,7 +47,7 @@ async function brand(locale) {
 }
 
 const HOTELS = {
-  'la-mamounia-marrakech-aeroport-menara': 'La Mamounia depuis marrakech menara.jpeg',
+  'la-mamounia-marrakech-aeroport-menara': 'hotel-mamounia-marrakech-600x399.jpg',
   'royal-mansour-marrakech-aeroport-menara': 'RM-Marrakech-14-1.webp',
   'es-saadi-marrakech-aeroport-menara': 'Es Saadi marrakech menara.jpeg',
   'riad-yasmine-marrakech-aeroport-menara': 'riad-yasmine.jpg',
