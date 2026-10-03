@@ -13,12 +13,12 @@ const show = routeKey !== 'bookTransfer';
 {show && (
   <aside class="ride-pill" id="ride-pill" aria-label={t('sticky.title')} data-nosnippet>
     <a class="ride-pill__link" href={pathFor('bookTransfer', locale)}>
-      <span class="ride-pill__icon" aria-hidden="true"><Icon name="plane-landing" size={20} /></span>
+      <span class="ride-pill__icon" aria-hidden="true"><Icon name="plane-landing" size={24} /></span>
       <span class="ride-pill__text">
         <strong>{t('sticky.title')}</strong>
         <span>{t('sticky.sub')}</span>
       </span>
-      <span class="ride-pill__go" aria-hidden="true"><Icon name="arrow-right" size={16} /></span>
+      <span class="ride-pill__go" aria-hidden="true"><Icon name="arrow-right" size={20} /></span>
     </a>
     <button type="button" class="ride-pill__close" aria-label={t('sticky.close')} data-close>
       <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" /></svg>
@@ -48,8 +48,9 @@ const show = routeKey !== 'bookTransfer';
   .ride-pill__link {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    padding: 0.45rem 0.5rem 0.45rem 0.45rem;
+    gap: 1rem;
+    min-width: 400px;
+    padding: 0.6rem 0.6rem 0.6rem 0.6rem;
     background: var(--surface);
     color: var(--ink);
     border: 1px solid var(--line);
@@ -60,14 +61,14 @@ const show = routeKey !== 'bookTransfer';
   }
   .ride-pill__link:hover, .ride-pill__link:focus-visible { color: var(--ink); transform: translateY(-2px); box-shadow: 0 20px 48px rgba(21, 23, 43, 0.18); }
   .ride-pill__icon {
-    flex: none; width: 42px; height: 42px; display: grid; place-items: center;
+    flex: none; width: 52px; height: 52px; display: grid; place-items: center;
     background: var(--clay-soft); color: var(--clay); border-radius: var(--r-pill);
   }
-  .ride-pill__text { display: flex; flex-direction: column; min-width: 0; line-height: 1.25; }
-  .ride-pill__text strong { font-family: var(--font-display); font-weight: 600; font-size: 0.98rem; }
-  .ride-pill__text span { font-size: 0.8rem; color: var(--clay); font-weight: 600; }
+  .ride-pill__text { flex: 1; display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; line-height: 1.25; padding-inline-end: 0.5rem; }
+  .ride-pill__text strong { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; }
+  .ride-pill__text span { font-size: 0.9rem; color: var(--clay); font-weight: 600; }
   .ride-pill__go {
-    flex: none; width: 38px; height: 38px; display: grid; place-items: center;
+    flex: none; width: 48px; height: 48px; display: grid; place-items: center;
     background: var(--saffron); color: var(--ink); border-radius: var(--r-pill);
     margin-inline-start: 0.35rem;
   }
@@ -83,12 +84,13 @@ const show = routeKey !== 'bookTransfer';
   @media (max-width: 620px) {
     .ride-pill { inset-inline: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); max-width: none; }
     .ride-pill__text { flex: 1; }
-    .ride-pill__link { gap: 0.6rem; }
-    .ride-pill__icon { width: 36px; height: 36px; }
-    .ride-pill__text strong { font-size: 0.92rem; }
+    .ride-pill__link { gap: 0.6rem; min-width: 0; padding: 0.45rem; }
+    .ride-pill__go { width: 40px; height: 40px; }
+    .ride-pill__text strong { font-size: 0.95rem; }
+    .ride-pill__icon { width: 40px; height: 40px; }
     .ride-pill__text span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .ride-pill__text span { font-size: 0.74rem; }
-    :global(body:has(.ride-pill)) { padding-bottom: 80px; }
+    .ride-pill__text span { font-size: 0.78rem; }
+    :global(body:has(.ride-pill)) { padding-bottom: 86px; }
   }
   @media (prefers-reduced-motion: reduce) { .ride-pill__link { transition: none; } .ride-pill__link:hover { transform: none; } }
   @media print { .ride-pill { display: none; } }
