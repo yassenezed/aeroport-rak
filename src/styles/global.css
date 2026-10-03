@@ -1070,4 +1070,4 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
 .hotel-cta { margin: 1.1rem 0 0; }
 .hotel-photo { margin: 0; }
 .hotel-photo img { display: block; width: 100%; max-height: 520px; object-fit: cover; border-radius: var(--r-xl); box-shadow: 0 6px 20px rgba(21, 23, 43, 0.12); }
-.hotel-photo { text-align: center; } .hotel-photo img { margin-inline: auto; }
+.hotel-photo { text-align: start; } .hotel-photo img { margin-inline: 0; }
