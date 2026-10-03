@@ -54,7 +54,7 @@ if (page.faqs?.length) {
   });
 }
 ---
-<BaseLayout locale={locale} routeKey={routeKey} title={page.title} description={page.description} schema={schema} noindex={noindex} ogImage={hero?.src}>
+<BaseLayout locale={locale} routeKey={routeKey} title={page.title} description={page.description} schema={schema} noindex={noindex} ogImage={hero ? hero.src.replace('/images/hotels/', '/og/hotels/').replace('-large.webp', '.jpg') : undefined}>
   <section class="hero hero--small hero--hotel">
     <div class="container hero__inner">
       <Breadcrumbs items={crumbs} />
