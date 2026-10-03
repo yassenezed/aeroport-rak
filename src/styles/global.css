@@ -1077,3 +1077,22 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
 .related-hotels .feat-card__body h3 { margin-bottom: 0.25rem; }
 .related-hotels__all { margin: 1.5rem 0 0; text-align: center; }
 .related-hotels__prep { margin: 1rem 0 0; text-align: center; color: var(--ink-2); }
+/* Index du blog */
+.blog-themes { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.4rem; }
+.blog-themes__chip { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.8rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink); font-size: 0.88rem; font-weight: 600; text-decoration: none; }
+.blog-themes__chip:hover { border-color: var(--blue); color: var(--blue); }
+.blog-themes__chip svg { color: var(--saffron-dark); }
+.blog-themes__n { background: var(--blue-soft); color: var(--blue-dark); border-radius: 999px; padding: 0 0.45rem; font-size: 0.75rem; }
+.blog-section { scroll-margin-top: 100px; }
+.blog-section__head { display: flex; gap: 0.9rem; align-items: flex-start; margin-bottom: 1.4rem; }
+.blog-section__head h2 { margin: 0; }
+.blog-section__head p { margin: 0.3rem 0 0; color: var(--ink-2); }
+.blog-section__icon { flex: none; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 12px; background: var(--ink); color: var(--saffron); }
+.blog-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.1rem; }
+.blog-card { display: flex; flex-direction: column; height: 100%; padding: 1.3rem 1.4rem; background: var(--surface); border: 1px solid var(--line-2); border-radius: var(--r-xl); text-decoration: none; color: var(--ink); transition: border-color .15s, box-shadow .15s, transform .15s; }
+.blog-card:hover { border-color: var(--blue); box-shadow: 0 6px 18px rgba(21, 23, 43, 0.08); transform: translateY(-2px); }
+.blog-card__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--ink-3); margin-bottom: 0.6rem; }
+.blog-card__tag { background: var(--saffron-soft); color: var(--saffron-dark); font-weight: 700; padding: 0.15rem 0.55rem; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.7rem; }
+.blog-card h3 { font-size: 1.12rem; margin: 0 0 0.5rem; line-height: 1.35; }
+.blog-card p { margin: 0 0 0.9rem; color: var(--ink-2); font-size: 0.95rem; }
+.blog-card__link { margin-top: auto; font-weight: 600; color: var(--blue); }

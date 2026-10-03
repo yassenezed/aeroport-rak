@@ -1,25 +1,87 @@
 ---
-// Index du blog : liste tous les articles publiés dans la langue courante.
+// Index du blog : articles publiés dans la langue courante, regroupés par thème.
 import BaseLayout from './BaseLayout.astro';
 import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
+import Icon from '../components/ui/Icon.astro';
 import { useTranslations, pathFor, type Locale } from '../i18n';
 import { site } from '../data/site';
 import { articleKeys, getArticle } from '../copy';
-import type { LocalizedPage } from '../copy/types';
+import type { LocalizedPage, LocalizedArticle } from '../copy/types';
+import { BLOG_THEMES } from '../data/blogThemes';
 
 interface Props { locale: Locale; page: LocalizedPage; noindex?: boolean }
 const { locale, page, noindex = false } = Astro.props;
 const t = useTranslations(locale);
 
+const THEMES = BLOG_THEMES;
+
+type Theme = { h: string; intro: string };
+const LABELS: Record<string, { read: string; themes: Record<string, Theme> }> = {
+  fr: { read: 'Lire le guide', themes: {
+    airport: { h: "À l'aéroport Marrakech-Ménara", intro: 'Rejoindre la ville, escale, Fast Track, salons, parking et codes RAK.' },
+    transport: { h: 'Taxi et bus à Marrakech', intro: 'Tarifs réels et bons réflexes pour se déplacer sans mauvaise surprise.' },
+    rental: { h: 'Location de voiture', intro: 'Louer à la journée ou au mois, caution, assurance et pièges du contrat.' },
+    distances: { h: "Distances depuis l'aéroport de Marrakech", intro: 'Essaouira, Ouarzazate et les grandes villes : temps de route et solutions.' },
+    practical: { h: 'Argent et téléphone', intro: "Dirhams, distributeurs, change et carte SIM : ce qu'il faut avant d'atterrir." },
+  } },
+  en: { read: 'Read the guide', themes: {
+    airport: { h: 'At Marrakech Menara Airport', intro: 'Getting into town, layovers, Fast Track, lounges, parking and RAK codes.' },
+    transport: { h: 'Taxis and buses in Marrakech', intro: 'Real fares and good habits to get around without nasty surprises.' },
+    rental: { h: 'Car hire', intro: 'Hiring by the day or the month, deposit, insurance and contract traps.' },
+    distances: { h: 'Distances from Marrakech airport', intro: 'Essaouira, Ouarzazate and the big cities: driving times and options.' },
+    practical: { h: 'Money and phone', intro: 'Dirhams, ATMs, exchange and SIM cards: what you need before landing.' },
+  } },
+  es: { read: 'Leer la guía', themes: {
+    airport: { h: 'En el aeropuerto de Marrakech-Menara', intro: 'Llegar a la ciudad, escalas, Fast Track, salas VIP, parking y códigos RAK.' },
+    transport: { h: 'Taxi y autobús en Marrakech', intro: 'Tarifas reales y buenos reflejos para moverse sin sorpresas.' },
+    rental: { h: 'Alquiler de coches', intro: 'Alquilar por días o por meses, fianza, seguro y trampas del contrato.' },
+    distances: { h: 'Distancias desde el aeropuerto de Marrakech', intro: 'Esauira, Uarzazat y las grandes ciudades: tiempos de ruta y opciones.' },
+    practical: { h: 'Dinero y teléfono', intro: 'Dírhams, cajeros, cambio y tarjeta SIM: lo necesario antes de aterrizar.' },
+  } },
+  de: { read: 'Ratgeber lesen', themes: {
+    airport: { h: 'Am Flughafen Marrakesch-Menara', intro: 'In die Stadt kommen, Zwischenstopp, Fast Track, Lounges, Parken und RAK-Codes.' },
+    transport: { h: 'Taxi und Bus in Marrakesch', intro: 'Echte Preise und gute Tipps, um ohne böse Überraschung unterwegs zu sein.' },
+    rental: { h: 'Mietwagen', intro: 'Tages- oder Monatsmiete, Kaution, Versicherung und Vertragsfallen.' },
+    distances: { h: 'Entfernungen ab Flughafen Marrakesch', intro: 'Essaouira, Ouarzazate und die großen Städte: Fahrzeiten und Möglichkeiten.' },
+    practical: { h: 'Geld und Telefon', intro: 'Dirham, Geldautomaten, Wechsel und SIM-Karte: was Sie vor der Landung brauchen.' },
+  } },
+  nl: { read: 'Lees de gids', themes: {
+    airport: { h: 'Op luchthaven Marrakech-Menara', intro: 'Naar de stad, overstap, Fast Track, lounges, parkeren en RAK-codes.' },
+    transport: { h: 'Taxi en bus in Marrakech', intro: 'Echte prijzen en goede reflexen om zonder verrassingen rond te reizen.' },
+    rental: { h: 'Autohuur', intro: 'Per dag of per maand huren, borg, verzekering en valkuilen in het contract.' },
+    distances: { h: 'Afstanden vanaf de luchthaven van Marrakech', intro: 'Essaouira, Ouarzazate en de grote steden: reistijden en opties.' },
+    practical: { h: 'Geld en telefoon', intro: 'Dirham, geldautomaten, wisselen en simkaart: wat u nodig hebt voor de landing.' },
+  } },
+  ar: { read: 'اقرأ الدليل', themes: {
+    airport: { h: 'في مطار مراكش المنارة', intro: 'الوصول إلى المدينة، التوقف، المسار السريع، الصالونات، المواقف ورموز المطار.' },
+    transport: { h: 'التاكسي والحافلة في مراكش', intro: 'أسعار حقيقية ونصائح للتنقل دون مفاجآت.' },
+    rental: { h: 'كراء السيارات', intro: 'الكراء باليوم أو بالشهر، الضمان، التأمين وفخاخ العقد.' },
+    distances: { h: 'المسافات من مطار مراكش', intro: 'الصويرة وورزازات والمدن الكبرى: مدة الطريق والحلول.' },
+    practical: { h: 'المال والهاتف', intro: 'الدرهم، الشبابيك الآلية، الصرف وبطاقة SIM: ما تحتاجه قبل الهبوط.' },
+  } },
+};
+const L = LABELS[locale] ?? LABELS.en;
+const DATE_LOCALE: Record<string, string> = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', nl: 'nl-NL', ar: 'ar-MA' };
+const fmtDate = (d?: string) =>
+  d ? new Date(`${d}T12:00:00Z`).toLocaleDateString(DATE_LOCALE[locale] ?? 'en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }) : '';
+
+type Post = { key: string; art: LocalizedArticle };
+const post = (key: string): Post | null => {
+  const r = getArticle(key, locale);
+  return r ? { key, art: r.content } : null;
+};
+const sections = THEMES
+  .map((th) => ({ ...th, posts: th.keys.map(post).filter((p): p is Post => p !== null) }))
+  .filter((s) => s.posts.length > 0);
+// Articles rattachés à aucun thème : affichés à la fin, pour n'en perdre aucun.
+const themed = new Set(THEMES.flatMap((th) => th.keys));
+const orphans = articleKeys.filter((k) => !themed.has(k)).map(post).filter((p): p is Post => p !== null);
+const all = sections.flatMap((s) => s.posts).concat(orphans);
+
 const crumbs = [
   { name: t('nav.home'), href: pathFor('home', locale) },
-  { name: page.h1, href: pathFor('blogIndex', locale) },
+  { name: t('nav.blog'), href: pathFor('blogIndex', locale) },
 ];
-
-const posts = articleKeys
-  .map((key) => ({ key, art: getArticle(key, locale) }))
-  .filter((p) => p.art)
-  .sort((a, b) => (b.art!.date ?? '').localeCompare(a.art!.date ?? ''));
 
 const schema = [
   {
@@ -30,11 +92,14 @@ const schema = [
   {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    itemListElement: posts.map((p, i) => ({
-      '@type': 'ListItem', position: i + 1, name: p.art!.h1, url: `${site.url}${pathFor(p.key, locale)}`,
+    name: page.h1,
+    numberOfItems: all.length,
+    itemListElement: all.map((p, i) => ({
+      '@type': 'ListItem', position: i + 1, name: p.art.h1, url: `${site.url}${pathFor(p.key, locale)}`,
     })),
   },
 ];
+const arrow = locale === 'ar' ? '←' : '→';
 ---
 <BaseLayout locale={locale} routeKey="blogIndex" title={page.title} description={page.description} schema={schema} noindex={noindex}>
   <section class="hero hero--small">
@@ -43,6 +108,11 @@ const schema = [
       {page.eyebrow && <span class="eyebrow">{page.eyebrow}</span>}
       <h1>{page.h1}</h1>
       <p class="lede">{page.lede}</p>
+      <nav class="blog-themes" aria-label={t('nav.blog')}>
+        {sections.map((s) => (
+          <a class="blog-themes__chip" href={`#${s.id}`}><Icon name={s.icon} size={15} /> {L.themes[s.id].h} <span class="blog-themes__n">{s.posts.length}</span></a>
+        ))}
+      </nav>
     </div>
   </section>
 
@@ -52,18 +122,50 @@ const schema = [
     </section>
   )}
 
-  <section class="section-block">
-    <div class="container">
-      <div class="card-grid card-grid--blog">
-        {posts.map(({ key, art }) => (
-          <a class="card" href={pathFor(key, locale)}>
-            {art!.eyebrow && <span class="card__tag">{art!.eyebrow}</span>}
-            <h2>{art!.h1}</h2>
-            <p>{art!.excerpt ?? art!.description}</p>
-            <span class="card__link">{t('common.readMore')} →</span>
-          </a>
-        ))}
+  {sections.map((s, si) => (
+    <section class:list={['section-block blog-section', { 'section-block--alt': si % 2 === 1 }]} id={s.id}>
+      <div class="container">
+        <header class="blog-section__head">
+          <span class="blog-section__icon"><Icon name={s.icon} size={22} /></span>
+          <div>
+            <h2>{L.themes[s.id].h}</h2>
+            <p>{L.themes[s.id].intro}</p>
+          </div>
+        </header>
+        <ul class="blog-grid">
+          {s.posts.map(({ key, art }) => (
+            <li>
+              <a class="blog-card" href={pathFor(key, locale)}>
+                <span class="blog-card__meta">
+                  {art.eyebrow && <span class="blog-card__tag">{art.eyebrow}</span>}
+                  {art.date && <time datetime={art.date}>{fmtDate(art.date)}</time>}
+                </span>
+                <h3>{art.h1}</h3>
+                <p>{art.excerpt ?? art.description}</p>
+                <span class="blog-card__link">{L.read} <span aria-hidden="true">{arrow}</span></span>
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
-    </div>
-  </section>
+    </section>
+  ))}
+
+  {orphans.length > 0 && (
+    <section class="section-block">
+      <div class="container">
+        <ul class="blog-grid">
+          {orphans.map(({ key, art }) => (
+            <li>
+              <a class="blog-card" href={pathFor(key, locale)}>
+                <h3>{art.h1}</h3>
+                <p>{art.excerpt ?? art.description}</p>
+                <span class="blog-card__link">{L.read} <span aria-hidden="true">{arrow}</span></span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )}
 </BaseLayout>
