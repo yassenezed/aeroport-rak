@@ -1,6 +1,6 @@
 ---
-// Carte flottante « réserver un transfert » : lien interne rendu en HTML statique (crawlable),
-// sans bibliothèque ni popup. Le seul script sert au bouton fermer (mémorisé pour la session).
+// Pastille flottante « transfert privé » en bas à gauche : lien interne rendu en HTML statique
+// (crawlable), sans bibliothèque ni popup. Le seul script sert au bouton fermer (mémorisé pour la session).
 import Icon from './Icon.astro';
 import { useTranslations, pathFor, type Locale } from '../../i18n';
 
@@ -11,78 +11,85 @@ const t = useTranslations(locale);
 const show = routeKey !== 'bookTransfer';
 ---
 {show && (
-  <aside class="sticky-transfer" id="sticky-transfer" aria-label={t('sticky.title')} data-nosnippet>
-    <div class="sticky-transfer__inner">
-      <p class="sticky-transfer__text">
+  <aside class="ride-pill" id="ride-pill" aria-label={t('sticky.title')} data-nosnippet>
+    <a class="ride-pill__link" href={pathFor('bookTransfer', locale)}>
+      <span class="ride-pill__icon" aria-hidden="true"><Icon name="van" size={20} /></span>
+      <span class="ride-pill__text">
         <strong>{t('sticky.title')}</strong>
         <span>{t('sticky.sub')}</span>
-      </p>
-      <a class="sticky-transfer__btn" href={pathFor('bookTransfer', locale)}>
-        {t('sticky.btn')} <Icon name="arrow-right" size={16} />
-      </a>
-      <button type="button" class="sticky-transfer__close" aria-label={t('sticky.close')} data-close>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" /></svg>
-      </button>
-    </div>
+      </span>
+      <span class="ride-pill__go" aria-hidden="true"><Icon name="arrow-right" size={16} /></span>
+    </a>
+    <button type="button" class="ride-pill__close" aria-label={t('sticky.close')} data-close>
+      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" /></svg>
+    </button>
   </aside>
   <script is:inline>
     (function () {
-      var el = document.getElementById('sticky-transfer');
+      var el = document.getElementById('ride-pill');
       if (!el) return;
-      try { if (sessionStorage.getItem('stickyTransferClosed')) { el.remove(); return; } } catch (e) {}
+      try { if (sessionStorage.getItem('ridePillClosed')) { el.remove(); return; } } catch (e) {}
       el.querySelector('[data-close]').addEventListener('click', function () {
         el.remove();
-        try { sessionStorage.setItem('stickyTransferClosed', '1'); } catch (e) {}
+        try { sessionStorage.setItem('ridePillClosed', '1'); } catch (e) {}
       });
     })();
   </script>
 )}
 
 <style>
-  /* Carte flottante en bas à droite (pleine largeur compacte sur mobile). */
-  .sticky-transfer {
+  .ride-pill {
     position: fixed;
-    inset-inline-end: 20px;
+    inset-inline-start: 20px;
     bottom: calc(20px + env(safe-area-inset-bottom));
     z-index: 90;
-    width: min(400px, calc(100% - 40px));
-    background: var(--blue-dark);
-    color: #fff;
-    border-radius: var(--r-xl);
-    box-shadow: 0 4px 12px rgba(21, 23, 43, 0.15), 0 12px 32px rgba(21, 23, 43, 0.18);
-    padding: 1.15rem 1.35rem;
+    max-width: calc(100% - 40px);
   }
-  .sticky-transfer__inner { display: flex; align-items: center; gap: 1rem; padding-inline-end: 0.75rem; }
-  .sticky-transfer__text { flex: 1; min-width: 0; margin: 0; display: flex; flex-direction: column; gap: 0.25rem; }
-  .sticky-transfer__text strong { font-size: 1.08rem; font-weight: 700; line-height: 1.25; }
-  .sticky-transfer__text span { font-size: 0.86rem; line-height: 1.45; color: rgba(255, 255, 255, 0.85); }
-  .sticky-transfer__btn {
-    flex: none;
-    display: inline-flex; align-items: center; gap: 0.4rem;
-    min-height: 44px;
-    background: #fff; color: var(--blue-dark);
-    font-weight: 700; font-size: 0.9rem;
-    padding: 0 1.1rem; border-radius: var(--r-lg);
+  .ride-pill__link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.45rem 0.5rem 0.45rem 0.45rem;
+    background: var(--surface);
+    color: var(--ink);
+    border: 1px solid var(--line);
+    border-radius: var(--r-pill);
+    box-shadow: var(--shadow-lg);
     text-decoration: none;
-    transition: transform var(--transition), background var(--transition);
+    transition: box-shadow var(--transition), transform var(--transition);
   }
-  .sticky-transfer__btn:hover, .sticky-transfer__btn:focus-visible { background: var(--blue-soft); color: var(--blue-dark); }
-  :global([dir='rtl']) .sticky-transfer__btn :global(svg) { transform: scaleX(-1); }
-  .sticky-transfer__close {
-    position: absolute; top: 6px; inset-inline-end: 6px;
-    width: 30px; height: 30px; display: grid; place-items: center;
-    background: none; border: 0; border-radius: var(--r-pill); cursor: pointer;
-    color: rgba(255, 255, 255, 0.75);
+  .ride-pill__link:hover, .ride-pill__link:focus-visible { color: var(--ink); transform: translateY(-2px); box-shadow: 0 20px 48px rgba(21, 23, 43, 0.18); }
+  .ride-pill__icon {
+    flex: none; width: 42px; height: 42px; display: grid; place-items: center;
+    background: var(--clay-soft); color: var(--clay); border-radius: var(--r-pill);
   }
-  .sticky-transfer__close:hover, .sticky-transfer__close:focus-visible { color: #fff; background: rgba(255, 255, 255, 0.12); }
+  .ride-pill__text { display: flex; flex-direction: column; min-width: 0; line-height: 1.25; }
+  .ride-pill__text strong { font-family: var(--font-display); font-weight: 600; font-size: 0.98rem; }
+  .ride-pill__text span { font-size: 0.8rem; color: var(--clay); font-weight: 600; }
+  .ride-pill__go {
+    flex: none; width: 38px; height: 38px; display: grid; place-items: center;
+    background: var(--saffron); color: var(--ink); border-radius: var(--r-pill);
+    margin-inline-start: 0.35rem;
+  }
+  :global([dir='rtl']) .ride-pill__go :global(svg) { transform: scaleX(-1); }
+  .ride-pill__close {
+    position: absolute; top: -8px; inset-inline-end: -6px;
+    width: 24px; height: 24px; display: grid; place-items: center;
+    background: var(--ink); color: #fff; border: 2px solid var(--surface); border-radius: var(--r-pill);
+    cursor: pointer;
+  }
+  .ride-pill__close::after { content: ''; position: absolute; inset: -10px; } /* zone tactile 44px */
+  .ride-pill__close:hover, .ride-pill__close:focus-visible { background: var(--clay); }
   @media (max-width: 620px) {
-    .sticky-transfer { inset-inline: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); width: auto; padding: 0.8rem 1rem; }
-    .sticky-transfer__inner { gap: 0.75rem; padding-inline-end: 1.1rem; }
-    .sticky-transfer__text span { display: none; }
-    .sticky-transfer__text strong { font-size: 0.95rem; }
-    .sticky-transfer__btn { padding: 0 0.85rem; font-size: 0.85rem; }
-    /* Sur mobile la carte couvre toute la largeur : on libère le bas du pied de page. */
-    :global(body:has(.sticky-transfer)) { padding-bottom: 84px; }
+    .ride-pill { inset-inline: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); max-width: none; }
+    .ride-pill__text { flex: 1; }
+    .ride-pill__link { gap: 0.6rem; }
+    .ride-pill__icon { width: 36px; height: 36px; }
+    .ride-pill__text strong { font-size: 0.92rem; }
+    .ride-pill__text span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .ride-pill__text span { font-size: 0.74rem; }
+    :global(body:has(.ride-pill)) { padding-bottom: 80px; }
   }
-  @media print { .sticky-transfer { display: none; } }
+  @media (prefers-reduced-motion: reduce) { .ride-pill__link { transition: none; } .ride-pill__link:hover { transform: none; } }
+  @media print { .ride-pill { display: none; } }
 </style>
