@@ -48,7 +48,7 @@ export const HOTEL_FALLBACK_LINK = '';
 export const HOTEL_IMAGES: Record<string, string> = {
   esSaadi: '/images/hotels/es-saadi-marrakech-aeroport-menara.webp',
   fairmontRoyalPalm: '/images/hotels/fairmont-royal-palm-marrakech-aeroport-menara.webp',
-  mamounia: '/images/hotels/la-mamounia-marrakech-aeroport-menara.webp',
+  mamounia: '/images/hotels/la-mamounia-hd-marrakech-aeroport-menara.webp',
   mandarinOriental: '/images/hotels/mandarin-oriental-marrakech-aeroport-menara.webp',
   movenpickMansourEddahbi: '/images/hotels/movenpick-mansour-eddahbi-marrakech-aeroport-menara.webp',
   pestanaCr7: '/images/hotels/pestana-cr7-marrakech-aeroport-menara.webp',
@@ -67,7 +67,7 @@ export const HOTEL_IMAGES: Record<string, string> = {
 export const HOTEL_HERO: Record<string, { src: string; width: number; height: number }> = {
   yasmine: { src: '/images/hotels/riad-yasmine-marrakech-aeroport-menara-large.webp', width: 900, height: 506 },
   riadbe: { src: '/images/hotels/riad-be-marrakech-aeroport-menara-large.webp', width: 1024, height: 576 },
-  mamounia: { src: '/images/hotels/la-mamounia-marrakech-aeroport-menara-large.webp', width: 600, height: 399 },
+  mamounia: { src: '/images/hotels/la-mamounia-hd-marrakech-aeroport-menara-large.webp', width: 1200, height: 675 },
   mansour: { src: '/images/hotels/royal-mansour-marrakech-aeroport-menara-large.webp', width: 1200, height: 675 },
   essaadi: { src: '/images/hotels/es-saadi-marrakech-aeroport-menara-large.webp', width: 618, height: 323 },
 };
