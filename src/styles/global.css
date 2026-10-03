@@ -1067,3 +1067,7 @@ a.card p { color: var(--ink-2); font-size: 0.95rem; margin: 0; flex: 1; }
 .feat-card__actions .feat-card__link { margin-top: 0; padding-top: 0; }
 .feat-card--photo { padding-top: 0; overflow: hidden; }
 .feat-card__photo { display: block; width: calc(100% + 48px); max-width: none; margin: 0 -24px 4px; aspect-ratio: 16 / 10; object-fit: cover; }
+.hotel-cta { margin: 1.1rem 0 0; }
+.hotel-photo { margin: 0; }
+.hotel-photo img { display: block; width: 100%; max-height: 520px; object-fit: cover; border-radius: var(--r-xl); box-shadow: 0 6px 20px rgba(21, 23, 43, 0.12); }
+.hotel-photo { text-align: center; } .hotel-photo img { margin-inline: auto; }

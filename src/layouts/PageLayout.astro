@@ -15,7 +15,7 @@ import DestinationsExplorer from '../components/destinations/DestinationsExplore
 import { airport } from '../data/airport';
 import { useTranslations, pathFor, type Locale, type RouteKey } from '../i18n';
 import { site } from '../data/site';
-import { HOTEL_LINKS, HOTEL_IMAGES, PRICE_LABEL, hotelPriceLink } from '../data/hotelLinks';
+import { HOTEL_LINKS, HOTEL_IMAGES, HOTEL_ALT_SUFFIX, PRICE_LABEL, hotelPriceLink } from '../data/hotelLinks';
 import type { LocalizedPage } from '../copy/types';
 
 interface Props {
@@ -203,7 +203,7 @@ if (page.faqs?.length) {
           {sec.items.map((it) => (
             <li class:list={[`feat-card feat-card--${sec.variant}`, { 'feat-card--photo': !!(it.hotel && HOTEL_IMAGES[it.hotel]) }]}>
               {it.hotel && HOTEL_IMAGES[it.hotel]
-                ? <img class="feat-card__photo" src={HOTEL_IMAGES[it.hotel]} alt={`${it.title}, Marrakech`} width="640" height="400" loading="lazy" decoding="async" />
+                ? <img class="feat-card__photo" src={HOTEL_IMAGES[it.hotel]} alt={`${it.title} – ${HOTEL_ALT_SUFFIX[locale]}`} width="640" height="400" loading="lazy" decoding="async" />
                 : <span class="feat-card__icon"><Icon name={it.icon} size={sec.variant === 'feature' ? 24 : 20} /></span>}
               <div class="feat-card__body">
                 <h3>{it.title}</h3>

@@ -44,8 +44,37 @@ const HOTEL_NAMES: Record<string, string> = {
 /** Lien d'affiliation général Booking (Marrakech), utilisé quand un hôtel n'a pas son propre lien. */
 export const HOTEL_FALLBACK_LINK = '';
 
-/** Photos des hôtels (fichiers dans public/images/hotels/), ex. fourSeasons: '/images/hotels/four-seasons.webp'. */
-export const HOTEL_IMAGES: Record<string, string> = {};
+/** Photos des hôtels pour les cartes (640×400, public/images/hotels/). Originaux dans brand/hotels-originals/. */
+export const HOTEL_IMAGES: Record<string, string> = {
+  esSaadi: '/images/hotels/es-saadi-marrakech-aeroport-menara.webp',
+  fairmontRoyalPalm: '/images/hotels/fairmont-royal-palm-marrakech-aeroport-menara.webp',
+  mamounia: '/images/hotels/la-mamounia-marrakech-aeroport-menara.webp',
+  mandarinOriental: '/images/hotels/mandarin-oriental-marrakech-aeroport-menara.webp',
+  movenpickMansourEddahbi: '/images/hotels/movenpick-mansour-eddahbi-marrakech-aeroport-menara.webp',
+  pestanaCr7: '/images/hotels/pestana-cr7-marrakech-aeroport-menara.webp',
+  royalMansour: '/images/hotels/royal-mansour-marrakech-aeroport-menara.webp',
+  sofitelLoungeSpa: '/images/hotels/sofitel-lounge-spa-marrakech-aeroport-menara.webp',
+  fourSeasons: '/images/hotels/four-seasons-marrakech-aeroport-menara.webp',
+  savoyGrandHotel: '/images/hotels/savoy-le-grand-hotel-marrakech-aeroport-menara.webp',
+  kenziMenaraPalace: '/images/hotels/kenzi-menara-palace-marrakech-aeroport-menara.webp',
+};
+
+/** Grande photo des pages d'avis, par clé de route (mamounia, mansour…). */
+export const HOTEL_HERO: Record<string, { src: string; width: number; height: number }> = {
+  mamounia: { src: '/images/hotels/la-mamounia-marrakech-aeroport-menara-large.webp', width: 440, height: 248 },
+  mansour: { src: '/images/hotels/royal-mansour-marrakech-aeroport-menara-large.webp', width: 1200, height: 675 },
+  essaadi: { src: '/images/hotels/es-saadi-marrakech-aeroport-menara-large.webp', width: 618, height: 348 },
+};
+
+/** Fin du texte alternatif des photos d'hôtels, par langue (SEO image). */
+export const HOTEL_ALT_SUFFIX: Record<string, string> = {
+  fr: "hôtel près de l'aéroport Marrakech-Ménara",
+  en: 'hotel near Marrakech Menara Airport',
+  es: 'hotel cerca del aeropuerto de Marrakech-Menara',
+  de: 'Hotel nahe Flughafen Marrakesch-Menara',
+  nl: 'hotel bij luchthaven Marrakech-Menara',
+  ar: 'فندق قرب مطار مراكش المنارة',
+};
 
 export const PRICE_LABEL: Record<string, string> = {
   fr: 'Voir les prix',

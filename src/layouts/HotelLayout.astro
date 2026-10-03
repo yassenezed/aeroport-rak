@@ -5,11 +5,16 @@ import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
 import { useTranslations, pathFor, type Locale } from '../i18n';
 import { site } from '../data/site';
 import type { LocalizedHotel } from '../copy/types';
+import { HOTEL_HERO, HOTEL_ALT_SUFFIX, PRICE_LABEL, hotelPriceLink } from '../data/hotelLinks';
 
 interface Props { locale: Locale; routeKey: string; page: LocalizedHotel; noindex?: boolean }
 const { locale, routeKey, page, noindex = false } = Astro.props;
 const t = useTranslations(locale);
 const path = pathFor(routeKey, locale);
+const hero = HOTEL_HERO[routeKey];
+// Clé de route de la fiche → identifiant de l'hôtel dans hotelLinks.ts
+const HOTEL_ID: Record<string, string> = { mamounia: 'mamounia', mansour: 'royalMansour', essaadi: 'esSaadi', yasmine: 'riadYasmine', riadbe: 'riadBe' };
+const price = HOTEL_ID[routeKey] ? hotelPriceLink(HOTEL_ID[routeKey], page.h1) : null;
 
 const crumbs = [
   { name: t('nav.home'), href: pathFor('home', locale) },
@@ -29,6 +34,7 @@ const schema: object[] = [
     name: page.h1,
     description: page.description,
     address: { '@type': 'PostalAddress', addressLocality: 'Marrakech', addressCountry: 'MA' },
+    ...(hero ? { image: `${site.url}${hero.src}` } : {}),
     ...(page.priceRange ? { priceRange: page.priceRange } : {}),
     ...(page.rating ? {
       review: {
@@ -48,7 +54,7 @@ if (page.faqs?.length) {
   });
 }
 ---
-<BaseLayout locale={locale} routeKey={routeKey} title={page.title} description={page.description} schema={schema} noindex={noindex}>
+<BaseLayout locale={locale} routeKey={routeKey} title={page.title} description={page.description} schema={schema} noindex={noindex} ogImage={hero?.src}>
   <section class="hero hero--small hero--hotel">
     <div class="container hero__inner">
       <Breadcrumbs items={crumbs} />
@@ -65,8 +71,19 @@ if (page.faqs?.length) {
           </span>
         )}
       </div>
+      {price && <p class="hotel-cta"><a class="btn btn--primary" href={price.href} target="_blank" rel={price.rel}>{PRICE_LABEL[locale]}</a></p>}
     </div>
   </section>
+
+  {hero && (
+    <section class="section-block section-block--tight hotel-photo-block">
+      <div class="container">
+        <figure class="hotel-photo">
+          <img src={hero.src} alt={`${page.h1} – ${HOTEL_ALT_SUFFIX[locale]}`} width={hero.width} height={hero.height} fetchpriority="high" decoding="async" style={hero.width < 1000 ? `max-width: ${Math.round(hero.width * 1.4)}px` : undefined} />
+        </figure>
+      </div>
+    </section>
+  )}
 
   {page.verdict && (
     <section class="section-block section-block--tight">
