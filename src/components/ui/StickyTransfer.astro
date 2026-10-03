@@ -29,6 +29,10 @@ const show = routeKey !== 'bookTransfer';
       var el = document.getElementById('ride-pill');
       if (!el) return;
       try { if (sessionStorage.getItem('ridePillClosed')) { el.remove(); return; } } catch (e) {}
+      // Mesure des clics dans GA4 (événement « ride_pill_click »).
+      el.querySelector('a').addEventListener('click', function () {
+        if (typeof gtag === 'function') gtag('event', 'ride_pill_click', { page_path: location.pathname });
+      });
       el.querySelector('[data-close]').addEventListener('click', function () {
         el.remove();
         try { sessionStorage.setItem('ridePillClosed', '1'); } catch (e) {}
