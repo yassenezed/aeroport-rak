@@ -156,6 +156,7 @@ export default {
 `,
   faqHeading: "Transfer vanaf luchthaven Marrakech-Menara: veelgestelde vragen",
   faqs: [
+    { q: "Is er een shuttle op de luchthaven van Marrakech?", a: "Er is geen gratis openbare shuttle. ALSA-bus 19 doet dienst als shuttle naar Djemaa el-Fna (30 MAD, 6.00 tot 23.30 uur), en veel riads en hotels bieden op verzoek een betaalde shuttle aan. Een geboekte transfer vanaf € 27 per voertuig is de eenvoudigste privéshuttle." },
     { q: "Welk vervoer kies ik als ik om middernacht in Marrakech land?", a: "Een geboekte transfer, die ook bij vertraging wacht en u afzet bij de medinapoort het dichtst bij uw riad. Een taxi kan ook, tegen nachttarief: 150 tot 240 MAD per auto. Bus 19 rijdt niet meer na ongeveer 23.30 uur." },
     { q: "Wat kost een taxi van de luchthaven van Marrakech naar de medina?", a: "100 tot 150 MAD per auto overdag en 150 tot 240 MAD 's nachts, naar de medina, Guéliz of Hivernage. De prijs geldt per voertuig, met maximaal drie passagiers in een petit taxi. Bevestig hem voor het inladen." },
     { q: "Wat kost een privétransfer vanaf luchthaven Marrakech-Menara?", a: "Vanaf € 27 per voertuig voor maximaal 7 passagiers naar de medina, Guéliz of Hivernage, met vluchtvolging. Reken op meer voor de Palmeraie of een kamp in Agafay, en ongeveer € 95 naar Essaouira." },

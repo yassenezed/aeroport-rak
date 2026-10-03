@@ -157,6 +157,7 @@ export default {
 `,
     faqHeading: "Transferts depuis l'aéroport Marrakech-Ménara : questions fréquentes",
     faqs: [
+      { q: "Y a-t-il une navette à l'aéroport de Marrakech ?", a: "Il n'existe pas de navette publique gratuite. Le bus 19 d'ALSA fait office de navette vers Jemaa el-Fna (30 DH, de 6 h à 23 h 30), et beaucoup de riads et d'hôtels proposent une navette payante sur demande. Un transfert réservé, dès 27 € par véhicule, reste la navette privée la plus simple." },
       { q: "Quel transport choisir si j'atterris à minuit à Marrakech ?", a: "Un transfert réservé, qui vous attend même en cas de retard et vous dépose à la porte de médina la plus proche de votre riad. Le taxi reste possible au tarif de nuit, 150 à 240 MAD la voiture. Le bus 19 ne circule plus après 23 h 30 environ." },
       { q: "Combien coûte un taxi de l'aéroport de Marrakech à la médina ?", a: "100 à 150 MAD la voiture en journée et 150 à 240 MAD la nuit, pour la médina, Guéliz ou l'Hivernage. Le prix est par véhicule, avec trois passagers au maximum dans un petit taxi. Confirmez-le avant de charger les bagages." },
       { q: "Combien coûte un transfert privé depuis l'aéroport Marrakech-Ménara ?", a: "Dès 27 € par véhicule jusqu'à 7 passagers pour la médina, Guéliz ou l'Hivernage, avec suivi du vol. Comptez davantage pour la Palmeraie ou un camp d'Agafay, et environ 95 € pour Essaouira." },

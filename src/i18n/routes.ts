@@ -51,6 +51,8 @@ export const PAGES = {
   compensation: { fr: 'indemnisation-vol', intl: 'flight-compensation', kind: 'page' },
   tourGuide: { fr: 'guide-touristique-marrakech', intl: 'tour-guide-marrakech', kind: 'page' },
   transfers: { fr: 'transferts', intl: 'transfers', kind: 'page' },
+  airportTaxi: { fr: 'taxi-aeroport-marrakech', intl: 'marrakech-airport-taxi', kind: 'page' },
+  airportFood: { fr: 'restaurants-boutiques-aeroport-marrakech', intl: 'marrakech-airport-restaurants-shops', kind: 'page' },
   bookTransfer: { fr: 'reserver-transfert', intl: 'book-transfer', kind: 'page' },
   carRental: { fr: 'location-voiture', intl: 'car-rental', kind: 'page' },
   carBudget: { fr: 'location-voiture-economique', intl: 'budget-car-rental', kind: 'page' },

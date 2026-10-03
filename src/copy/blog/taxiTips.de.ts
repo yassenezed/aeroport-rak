@@ -1,10 +1,10 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "Taxi am Flughafen Marrakesch-Menara: Preise und Tipps",
-  description: "Taxis am Flughafen Marrakesch-Menara und in der Stadt: Tarife bei Tag und Nacht, Petit oder Grand Taxi, Taxameter und Fallen.",
+  title: "Taxi in Marrakesch und zum Flughafen Marrakesch-Menara",
+  description: "Taxi in der Stadt Marrakesch: Petit oder Grand Taxi, Taxameter, Fahrpreise (15 bis 50 MAD), Bezahlung und zurück zum Flughafen Marrakesch-Menara.",
   eyebrow: 'Unterwegs',
-  h1: 'Taxis in Marrakesch: Preise und gute Reflexe',
+  h1: "Taxi in der Stadt Marrakesch: Taxameter, Preise und gute Tipps",
   lede: "Marrakesch weist seine Taxitarife am Flughafenstand aus – eine gute Nachricht. Bleibt, sie zu lesen, die richtige Wagengröße zu wählen und sich zu einigen, bevor das Gepäck im Kofferraum liegt.",
   excerpt: 'Tag- und Nachttarife, Petit oder Grand Taxi, Taxameter und Wechselgeld: was man vor dem Einsteigen in ein marokkanisches Taxi wissen sollte.',
   date: '2026-09-14',
@@ -15,6 +15,7 @@ export default {
     { label: 'Petit Taxi', value: '3', sub: 'Personen max.' },
   ],
   body: `
+<div class="callout"><span class="callout-label">Mit dem Flugzeug angekommen?</span><p>Preise am Taxistand, Petit oder Grand Taxi und Ablauf vor dem Terminal: siehe unsere Seite <a href="/de/marrakech-airport-taxi/">Flughafentaxi Marrakesch</a>.</p></div>
 <h2>Was Sie zahlen sollten</h2>
 <p>Beim Verlassen der Ankunftshalle liegt der Taxistand direkt vor Ihnen, und man spricht Sie an, bevor Sie ihn erreichen. Anders als an anderen marokkanischen Flughäfen weist Marrakesch seine Tarife offiziell auf einer Tafel nach Zielzone aus. Das ist Ihr bestes Werkzeug: Es geht nicht ums blinde Feilschen, sondern darum, den genannten Preis mit dem ausgewiesenen zur Deckung zu bringen.</p>
 <p>Für Medina, Guéliz oder Hivernage – die überwiegende Mehrheit der Ankünfte – liegt die vernünftige Spanne bei <strong>100 bis 150 MAD tagsüber</strong> und <strong>150 bis 240 MAD nach Einbruch der Dunkelheit</strong>, für den ganzen Wagen. Die weiter entfernte Palmeraie liegt entsprechend darüber.</p>

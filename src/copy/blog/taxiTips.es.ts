@@ -1,10 +1,10 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "Taxi en el aeropuerto de Marrakech-Menara: tarifas",
-  description: "Taxis en el aeropuerto de Marrakech-Menara y en la ciudad: tarifas de día y de noche, petit o grand taxi, taxímetro, efectivo y trampas.",
+  title: "Taxi en Marrakech y al aeropuerto de Marrakech-Menara",
+  description: "Taxi en la ciudad de Marrakech: petit o grand taxi, taxímetro, precio de las carreras (15 a 50 MAD), pago y vuelta al aeropuerto de Marrakech-Menara.",
   eyebrow: 'Transportes',
-  h1: 'Taxis en Marrakech: tarifas y buenos reflejos',
+  h1: "Taxi en la ciudad de Marrakech: taxímetro, precios y buenos reflejos",
   lede: "Marrakech publica sus tarifas de taxi en la parada del aeropuerto, y es una buena noticia. Queda saber leerlas, elegir el tamaño de coche adecuado y ponerse de acuerdo antes de que las maletas entren en el maletero.",
   excerpt: 'Tarifas de día y de noche, petit o grand taxi, taxímetro y cambio: lo que hay que saber antes de subir a un taxi marroquí.',
   date: '2026-09-14',
@@ -15,6 +15,7 @@ export default {
     { label: 'Petit taxi', value: '3', sub: 'pasajeros máx.' },
   ],
   body: `
+<div class="callout"><span class="callout-label">¿Llega en avión?</span><p>Tarifas de la parada, petit o grand taxi y cómo funciona a la salida de la terminal: vea nuestra página <a href="/es/marrakech-airport-taxi/">taxi aeropuerto de Marrakech</a>.</p></div>
 <h2>Lo que debería pagar</h2>
 <p>Al salir de la sala de llegadas, la parada de taxis está justo delante y le abordarán antes incluso de alcanzarla. A diferencia de otros aeropuertos marroquíes, Marrakech publica oficialmente sus tarifas en un panel, por zona de destino. Es su mejor herramienta: no se trata de regatear a ciegas, sino de hacer coincidir el precio anunciado con el precio publicado.</p>
 <p>Para la medina, Guéliz o el Hivernage —la inmensa mayoría de las llegadas—, la horquilla razonable es de <strong>100 a 150 MAD de día</strong> y de <strong>150 a 240 MAD tras la puesta de sol</strong>, por el coche entero. La Palmeraie, más alejada, sube lógicamente por encima.</p>

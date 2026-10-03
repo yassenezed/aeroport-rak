@@ -2,10 +2,10 @@ import type { ArticleContent } from '../types';
 
 export default {
   fr: {
-    title: "Bus 19 ALSA : aéroport de Marrakech-Ménara ↔ Jemaa el-Fna",
+    title: "Bus aéroport Marrakech-Ménara : ligne 19, prix et horaires",
     description: "Le bus 19 entre l'aéroport de Marrakech-Ménara et Jemaa el-Fna : tarif, horaires, fréquence, durée du trajet, où prendre le bus et quand il ne convient pas.",
     eyebrow: 'Transports',
-    h1: 'Le bus 19 entre l\'aéroport de Marrakech et le centre',
+    h1: "Bus aéroport Marrakech-Ménara : la ligne 19 vers le centre",
     lede: "Trente dirhams pour rejoindre Jemaa el-Fna : c'est le transport le moins cher depuis le RAK, et il fonctionne bien — à condition d'atterrir avant 23 h et de pouvoir porter son bagage.",
     excerpt: "Tarif, horaires, fréquence et limites de la ligne 19 d'ALSA, le bus qui relie l'aéroport à Jemaa el-Fna pour 30 MAD.",
     date: '2026-09-13',

@@ -156,6 +156,7 @@ export default {
 `,
   faqHeading: "Traslados desde el aeropuerto de Marrakech-Menara: preguntas frecuentes",
   faqs: [
+    { q: "¿Hay lanzadera en el aeropuerto de Marrakech?", a: "No hay lanzadera pública gratuita. El bus 19 de ALSA hace de lanzadera hasta Jemaa el-Fna (30 MAD, de 6 h a 23.30 h), y muchos riads y hoteles ofrecen una lanzadera de pago bajo petición. Un traslado reservado, desde 27 € por vehículo, es la lanzadera privada más sencilla." },
     { q: "¿Qué transporte elegir si aterrizo a medianoche en Marrakech?", a: "Un traslado reservado, que le espera aunque el vuelo se retrase y le deja en la puerta de la medina más cercana a su riad. El taxi sigue siendo posible con tarifa nocturna, de 150 a 240 MAD el coche. El bus 19 deja de circular hacia las 23:30." },
     { q: "¿Cuánto cuesta un taxi del aeropuerto de Marrakech a la medina?", a: "De 100 a 150 MAD el coche de día y de 150 a 240 MAD de noche, hacia la medina, Guéliz o el Hivernage. El precio es por vehículo, con un máximo de tres pasajeros en un petit taxi. Confírmelo antes de cargar el equipaje." },
     { q: "¿Cuánto cuesta un traslado privado desde el aeropuerto de Marrakech-Menara?", a: "Desde 27 € por vehículo hasta 7 pasajeros hacia la medina, Guéliz o el Hivernage, con seguimiento del vuelo. Cuente con más para la Palmeraie o un campamento de Agafay, y unos 95 € hasta Esauira." },

@@ -1,7 +1,7 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Gids luchthaven Marrakech-Menara (RAK): terminals en tips",
+  title: "Gids luchthaven Marrakech-Menara: contact, kaart, review",
   description: "Complete gids voor luchthaven Marrakech-Menara: terminals, indeling, inreisformaliteiten, wachttijden, aansluitingen en de weg naar de stad.",
   eyebrow: "Marrakech Menara · Gids",
   h1: "Gids voor luchthaven Marrakech Menara",
@@ -49,8 +49,26 @@ export default {
 
 <h2>Naar de stad</h2>
 <p>Vier opties en niet meer: de <strong>taxi</strong> aan de standplaats, voor 100–150 MAD overdag en 150–240 MAD 's nachts voor de hele auto; de <strong>geboekte transfer</strong>, vanaf € 27 per voertuig voor maximaal zeven passagiers; <strong>bus 19</strong> van ALSA, voor 30 MAD per persoon tot Djemaa el-Fna, tussen 6.00 en 23.30 uur; en de <strong>huurauto</strong>, met balies in de aankomsthal. Alles per optie op onze pagina over <a href="/nl/transfers/">transfers</a>.</p>
+
+<h2>Contact, adres en telefoon van luchthaven Marrakech-Menara</h2>
+<div class="table-wrap">
+<table class="data">
+<tbody>
+<tr><td><strong>Centrale van de luchthaven</strong></td><td>+212 5 24 44 79 10</td></tr>
+<tr><td><strong>ONDA-callcenter (24/7)</strong></td><td>080 1000 224 (vanuit Marokko)</td></tr>
+<tr><td><strong>Postadres</strong></td><td>BP 13201, Aéroport Marrakech-Ménara, 40000 Marrakech, Marokko</td></tr>
+<tr><td><strong>Officiële website</strong></td><td>onda.ma (Nationaal Luchthavenbureau)</td></tr>
+</tbody>
+</table>
+</div>
+<p>Bij verloren bagage of vertraging neemt u eerst contact op met <strong>uw luchtvaartmaatschappij</strong> of haar afhandelaar: de luchthaven regelt geen boekingen of compensaties. Actuele tijden staan op onze pagina's <a href="/nl/arrivals/">aankomst</a> en <a href="/nl/departures/">vertrek</a>.</p>
+
+<h2>Onze review van luchthaven Marrakech-Menara</h2>
+<p><strong>Sterke punten:</strong> een moderne, lichte terminal op slechts 6 km van de medina, duidelijke borden in drie talen en een van de goedkoopste parkeerterreinen van Europa en Noord-Afrika. <strong>Zwakke punten:</strong> lange rijen bij de paspoortcontrole op piekmomenten (vaak 45 minuten tot ruim een uur), weinig eten 's nachts en veel taxironselaars in de aankomsthal. Ons advies: neem bij vertrek ruim de tijd en boek uw rit naar de stad als u laat landt. Zie ook <a href="/nl/marrakech-airport-restaurants-shops/">restaurants en winkels</a> en <a href="/nl/marrakech-airport-taxi/">luchthaventaxi</a>.</p>
 `,
   faqs: [
+    { q: "Wat is het telefoonnummer van de luchthaven van Marrakech?", a: "De centrale van luchthaven Marrakech-Menara is bereikbaar op +212 5 24 44 79 10, het ONDA-callcenter op 080 1000 224, 24/7 vanuit Marokko. Voor bagage of vertraging eerst uw maatschappij bellen." },
+    { q: "Hoe is luchthaven Marrakech-Menara?", a: "Een moderne terminal dicht bij de stad, maar soms lange rijen bij de paspoortcontrole op piekuren en weinig aanbod 's nachts. Neem ruim de tijd bij vertrek en boek uw rit als u laat landt." },
     { q: "Hoeveel terminals heeft luchthaven Marrakech?", a: "Twee aangrenzende terminals die te voet verbonden zijn: T1, de nieuwste, verwerkt de meeste internationale vluchten, T2 de rest en een deel van de binnenlandse. De verdeling verschilt per maatschappij en seizoen: vertrouw op uw instapkaart." },
     { q: "Wat is de code van luchthaven Marrakech?", a: "RAK als IATA-code, die op uw ticket staat, en GMMX als ICAO-code voor de luchtverkeersleiding. De officiële naam is Marrakech Menara." },
     { q: "Heeft u een visum nodig om via Marrakech Marokko in te reizen?", a: "Niet als burger van de EU, Zwitserland, het Verenigd Koninkrijk, Canada of de VS, voor toeristische verblijven tot 90 dagen. Het paspoort moet geldig zijn voor het hele verblijf (zes maanden resterende geldigheid wordt aangeraden); het politieformulier is in 2019 afgeschaft." },

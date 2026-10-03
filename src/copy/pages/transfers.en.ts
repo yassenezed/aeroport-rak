@@ -156,6 +156,7 @@ export default {
 `,
   faqHeading: "Marrakech Menara Airport transfers: frequently asked questions",
   faqs: [
+    { q: "Is there a shuttle at Marrakech airport?", a: "There is no free public shuttle. ALSA bus 19 acts as a shuttle to Jemaa el-Fna (MAD 30, 6 am to 11.30 pm), and many riads and hotels offer a paid shuttle on request. A pre-booked transfer from €27 per vehicle is the simplest private shuttle." },
     { q: "What transport should I take if I land in Marrakech at midnight?", a: "A pre-booked transfer, which waits even if you are delayed and drops you at the medina gate closest to your riad. A taxi is still possible at the night fare, MAD 150 to 240 per car. Bus 19 stops running at about 11.30 pm." },
     { q: "How much is a taxi from Marrakech airport to the medina?", a: "MAD 100 to 150 per car by day and MAD 150 to 240 at night, for the medina, Gueliz or Hivernage. The price is per vehicle, with three passengers at most in a petit taxi. Agree it before loading your bags." },
     { q: "How much is a private transfer from Marrakech Menara Airport?", a: "From €27 per vehicle for up to 7 passengers to the medina, Gueliz or Hivernage, with flight tracking. Expect more for the Palmeraie or an Agafay camp, and about €95 to Essaouira." },

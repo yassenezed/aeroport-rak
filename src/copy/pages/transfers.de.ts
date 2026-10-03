@@ -156,6 +156,7 @@ export default {
 `,
   faqHeading: "Transfer ab Flughafen Marrakesch-Menara: häufige Fragen",
   faqs: [
+    { q: "Gibt es einen Shuttle am Flughafen Marrakesch?", a: "Einen kostenlosen öffentlichen Shuttle gibt es nicht. Der ALSA-Bus 19 dient als Shuttle zur Djemaa el-Fna (30 MAD, 6 bis 23.30 Uhr), und viele Riads und Hotels bieten auf Anfrage einen kostenpflichtigen Shuttle an. Ein gebuchter Transfer ab 27 € pro Fahrzeug ist der einfachste private Shuttle." },
     { q: "Welches Verkehrsmittel, wenn ich um Mitternacht in Marrakesch lande?", a: "Ein gebuchter Transfer, der auch bei Verspätung wartet und Sie am Medina-Tor nächst Ihrem Riad absetzt. Ein Taxi ist zum Nachttarif möglich, 150 bis 240 MAD pro Auto. Der Bus 19 fährt nach etwa 23:30 Uhr nicht mehr." },
     { q: "Was kostet ein Taxi vom Flughafen Marrakesch in die Medina?", a: "100 bis 150 MAD pro Auto tagsüber und 150 bis 240 MAD nachts, für Medina, Guéliz oder Hivernage. Der Preis gilt pro Fahrzeug, mit höchstens drei Fahrgästen im Petit Taxi. Vor dem Einladen bestätigen lassen." },
     { q: "Was kostet ein Privattransfer ab Flughafen Marrakesch-Menara?", a: "Ab 27 € pro Fahrzeug für bis zu 7 Fahrgäste in die Medina, nach Guéliz oder ins Hivernage, mit Flugverfolgung. Für die Palmeraie oder ein Agafay-Camp mehr, nach Essaouira rund 95 €." },

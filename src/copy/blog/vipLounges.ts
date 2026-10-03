@@ -3,7 +3,7 @@ import type { ArticleContent } from '../types';
 export default {
   fr: {
     title: "Salons VIP aéroport Marrakech-Ménara : accès et tarifs",
-    description: "Les salons de l'aéroport de Marrakech Ménara : comment y accéder, prix d'entrée à l'unité, cartes bancaires et programmes, et ce qu'on y trouve vraiment.",
+    description: "Les salons de l'aéroport de Marrakech-Ménara : comment y accéder, prix d'entrée à l'unité, cartes bancaires et programmes, et ce qu'on y trouve vraiment.",
     eyebrow: 'Aéroport',
     h1: 'Les salons de l\'aéroport de Marrakech',
     lede: "La zone d'embarquement du RAK sature aux mêmes heures que les files. Un salon transforme alors une attente debout en une heure assise — et c'est l'un des rares achats de confort qui se justifie vraiment ici.",

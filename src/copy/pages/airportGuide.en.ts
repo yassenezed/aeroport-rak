@@ -1,7 +1,7 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Marrakech Menara Airport guide (RAK): terminals and tips",
+  title: "Marrakech Menara Airport guide (RAK): contact, map, review",
   description: "A full guide to Marrakech Menara Airport: terminals, layout, entry formalities, waiting times, connections and getting into the city.",
   eyebrow: 'Marrakech Menara · Guide',
   h1: 'Marrakech Menara Airport guide',
@@ -49,8 +49,26 @@ export default {
 
 <h2>Getting into the city</h2>
 <p>Four options, and no more: the <strong>taxi</strong> rank, at MAD 100–150 by day and MAD 150–240 at night for the whole car; a <strong>booked transfer</strong>, from €27 per vehicle for up to seven passengers; <strong>bus 19</strong> by ALSA, at MAD 30 per person to Jemaa el-Fna, between 6 am and 11.30 pm; and a <strong>hire car</strong>, with desks in the arrivals hall. Each is covered on our <a href="/en/transfers/">transfers page</a>.</p>
+
+<h2>Marrakech Menara Airport contact, address and phone</h2>
+<div class="table-wrap">
+<table class="data">
+<tbody>
+<tr><td><strong>Airport switchboard</strong></td><td>+212 5 24 44 79 10</td></tr>
+<tr><td><strong>ONDA call centre (24/7)</strong></td><td>080 1000 224 (from Morocco)</td></tr>
+<tr><td><strong>Postal address</strong></td><td>BP 13201, Aéroport Marrakech-Ménara, 40000 Marrakech, Morocco</td></tr>
+<tr><td><strong>Official website</strong></td><td>onda.ma (National Airports Office)</td></tr>
+</tbody>
+</table>
+</div>
+<p>For lost luggage or a delayed flight, contact <strong>your airline</strong> or its ground handling agent first: the airport handles neither bookings nor compensation. Live times are on our <a href="/en/arrivals/">arrivals</a> and <a href="/en/departures/">departures</a> pages.</p>
+
+<h2>Our review of Marrakech Menara Airport</h2>
+<p><strong>Strengths:</strong> a modern, bright terminal only 6 km from the medina, clear signs in three languages and some of the cheapest parking in Europe and North Africa. <strong>Weaknesses:</strong> long passport queues at peak times (often 45 minutes to over an hour), limited food at night and an arrivals hall busy with taxi touts. Our advice: allow plenty of time on departure, and book your ride into town if you land late. See also our <a href="/en/marrakech-airport-restaurants-shops/">restaurants and shops</a> and <a href="/en/marrakech-airport-taxi/">airport taxi</a> pages.</p>
 `,
   faqs: [
+    { q: "What is the phone number of Marrakech airport?", a: "Marrakech Menara Airport's switchboard is +212 5 24 44 79 10, and the ONDA call centre is 080 1000 224, 24/7 from Morocco. For luggage or delays, contact your airline first." },
+    { q: "Is Marrakech Menara Airport any good?", a: "A modern terminal close to the city, but passport queues can be long at peak times and the offer is reduced at night. Allow plenty of time on departure and book your ride if you land late." },
     {
       q: 'How many terminals does Marrakech Airport have?',
       a: "Two adjoining terminals linked on foot: T1, the newer one, handles most international flights, while T2 takes the overflow and part of the domestic traffic. The split varies by airline and season, so trust your boarding pass.",

@@ -1,10 +1,10 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "Bus 19 ALSA: luchthaven Marrakech-Menara ↔ Djemaa el-Fna",
+  title: "Bus luchthaven Marrakech-Menara: lijn 19, prijs en tijden",
   description: "Bus 19 tussen luchthaven Marrakech-Menara en Djemaa el-Fna: prijs, dienstregeling, frequentie, reistijd, halte en wanneer hij niet geschikt is.",
   eyebrow: "Onderweg",
-  h1: "Bus 19 tussen luchthaven Marrakech en het centrum",
+  h1: "Bus luchthaven Marrakech-Menara: lijn 19 naar het centrum",
   lede: "Dertig dirham tot Djemaa el-Fna: het goedkoopste vervoer vanaf de RAK, en het werkt goed – mits u vóór 23.00 uur landt en uw bagage zelf kunt dragen.",
   excerpt: "Prijs, dienstregeling, frequentie en grenzen van ALSA-lijn 19, de bus die de luchthaven voor 30 MAD met Djemaa el-Fna verbindt.",
   date: "2026-09-13",

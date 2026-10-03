@@ -1,10 +1,10 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "Taxi op luchthaven Marrakech-Menara: tarieven en tips",
-  description: "Taxi's op luchthaven Marrakech-Menara en in de stad: tarieven dag en nacht, petit of grand taxi, taximeter, contant en valkuilen.",
+  title: "Taxi in Marrakech en naar luchthaven Marrakech-Menara",
+  description: "Taxi in de stad Marrakech: petit of grand taxi, meter, ritprijzen (15 tot 50 MAD), betalen en terug naar luchthaven Marrakech-Menara.",
   eyebrow: "Onderweg",
-  h1: "Taxi's in Marrakech: tarieven en goede reflexen",
+  h1: "Taxi in de stad Marrakech: meter, ritprijzen en goede reflexen",
   lede: "Marrakech toont zijn taxitarieven bij de standplaats van de luchthaven, en dat is goed nieuws. Blijft over: ze kunnen lezen, de juiste autogrootte kiezen en afspraken maken voordat de bagage in de kofferbak gaat.",
   excerpt: "Dag- en nachttarieven, petit of grand taxi, taximeter en wisselgeld: wat u moet weten vóór u in een Marokkaanse taxi stapt.",
   date: "2026-09-14",
@@ -15,6 +15,7 @@ export default {
     { label: "Petit taxi", value: "3", sub: "passagiers max." },
   ],
   body: `
+<div class="callout"><span class="callout-label">Komt u met het vliegtuig?</span><p>Tarieven aan de standplaats, petit of grand taxi en werkwijze buiten de terminal: zie onze pagina <a href="/nl/marrakech-airport-taxi/">luchthaventaxi Marrakech</a>.</p></div>
 <h2>Wat u zou moeten betalen</h2>
 <p>Als u de aankomsthal verlaat, ligt de taxistandplaats recht voor u, en men spreekt u aan voordat u er bent. Anders dan op andere Marokkaanse luchthavens toont Marrakech zijn tarieven officieel op een bord, per bestemmingszone. Dat is uw beste hulpmiddel: het gaat niet om blind afdingen, maar om de genoemde prijs gelijk te trekken met de getoonde prijs.</p>
 <p>Voor de medina, Guéliz of Hivernage – veruit de meeste aankomsten – is de redelijke marge <strong>100 tot 150 MAD overdag</strong> en <strong>150 tot 240 MAD na zonsondergang</strong>, voor de hele auto. De verder gelegen Palmeraie ligt daar uiteraard boven.</p>

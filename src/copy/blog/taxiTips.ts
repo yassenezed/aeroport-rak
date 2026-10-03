@@ -2,10 +2,10 @@ import type { ArticleContent } from '../types';
 
 export default {
   fr: {
-    title: "Taxi à l'aéroport Marrakech-Ménara : tarifs et conseils",
-    description: "Taxi à l'aéroport de Marrakech-Ménara et en ville : tarifs affichés, petit ou grand taxi, compteur, paiement en espèces et pièges à éviter.",
+    title: "Taxi en ville et vers l'aéroport Marrakech-Ménara : prix",
+    description: "Taxi en ville à Marrakech : petit ou grand taxi, compteur, prix des courses (15 à 50 DH), paiement et retour vers l'aéroport de Marrakech-Ménara.",
     eyebrow: 'Transports',
-    h1: 'Taxi à Marrakech : tarifs et bons réflexes',
+    h1: "Taxi en ville à Marrakech : compteur, prix des courses et bons réflexes",
     lede: "Marrakech affiche ses tarifs de taxi au rang de l'aéroport, et c'est une bonne nouvelle. Reste à savoir les lire, à choisir le bon gabarit de voiture et à se mettre d'accord avant que les bagages ne partent dans le coffre.",
     excerpt: "Tarifs jour et nuit, petit ou grand taxi, compteur, monnaie : tout ce qu'il faut savoir avant de monter dans un taxi marocain.",
     date: '2026-09-14',
@@ -16,6 +16,7 @@ export default {
       { label: 'Petit taxi', value: '3', sub: 'passagers max' },
     ],
     body: `
+<div class="callout"><span class="callout-label">Vous arrivez en avion ?</span><p>Prix de la station, petit ou grand taxi et mode d'emploi à la sortie du terminal : voir notre page <a href="/taxi-aeroport-marrakech/">taxi aéroport Marrakech</a>.</p></div>
 <h2>Ce que vous devriez payer</h2>
 <p>À la sortie du hall des arrivées, la station de taxis est immédiatement devant vous, et vous serez abordé avant même de l'atteindre. Contrairement à d'autres aéroports marocains, Marrakech affiche officiellement ses tarifs sur un panneau, par zone de destination. C'est votre meilleur outil : il ne s'agit pas de marchander à l'aveugle, mais de faire coïncider le prix annoncé avec le prix affiché.</p>
 <p>Pour la médina, Guéliz ou l'Hivernage — l'écrasante majorité des arrivées —, la fourchette raisonnable est de <strong>100 à 150 MAD en journée</strong> et de <strong>150 à 240 MAD après la tombée de la nuit</strong>, pour la voiture entière. La Palmeraie, plus éloignée, monte naturellement au-dessus.</p>

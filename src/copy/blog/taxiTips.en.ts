@@ -1,10 +1,10 @@
 import type { LocalizedArticle } from '../types';
 
 export default {
-  title: "Taxis at Marrakech Menara Airport: fares and tips",
-  description: "Taxis at Marrakech Menara Airport and in town: posted day and night fares, petit versus grand taxi, meters, cash and traps to avoid.",
+  title: "City taxis in Marrakech and to Marrakech Menara Airport",
+  description: "City taxis in Marrakech: petit or grand taxi, meter, ride prices (MAD 15 to 50), payment and getting back to Marrakech Menara Airport.",
   eyebrow: 'Getting around',
-  h1: 'Taxis in Marrakech: fares and good habits',
+  h1: "City taxis in Marrakech: meters, ride prices and good habits",
   lede: "Marrakech posts its taxi fares at the airport rank, which is good news. What remains is reading them, choosing the right size of car, and agreeing terms before the bags go in the boot.",
   excerpt: 'Day and night fares, petit or grand taxi, meters and small change: what to know before getting into a Moroccan taxi.',
   date: '2026-09-14',
@@ -15,6 +15,7 @@ export default {
     { label: 'Petit taxi', value: '3', sub: 'passengers max' },
   ],
   body: `
+<div class="callout"><span class="callout-label">Arriving by plane?</span><p>Rank fares, petit or grand taxi and how it works outside the terminal: see our <a href="/en/marrakech-airport-taxi/">Marrakech airport taxi</a> page.</p></div>
 <h2>What you should be paying</h2>
 <p>As you leave the arrivals hall the taxi rank is immediately in front of you, and you will be approached before you reach it. Unlike some other Moroccan airports, Marrakech officially posts its fares on a board, by destination zone. That is your best tool: this is not blind haggling, it is matching the quoted price to the posted one.</p>
 <p>For the medina, Gueliz or Hivernage — the vast majority of arrivals — the reasonable range is <strong>MAD 100–150 by day</strong> and <strong>MAD 150–240 after dark</strong>, for the whole car. The Palmeraie, further out, naturally sits above that.</p>

@@ -21,7 +21,9 @@
     "airportGuide": "دليل المطار",
     "blog": "المدونة",
     "menu": "القائمة",
-    "language": "اللغة"
+    "language": "اللغة",
+    "airportTaxi": "تاكسي المطار",
+    "airportFood": "المطاعم والمتاجر"
   },
   "site": {
     "disclaimer": "موقع غير رسمي. غير تابع لمطار مراكش المنارة."

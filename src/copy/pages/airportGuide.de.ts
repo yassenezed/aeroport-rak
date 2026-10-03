@@ -1,7 +1,7 @@
 import type { LocalizedPage } from '../types';
 
 export default {
-  title: "Guide Flughafen Marrakesch-Menara (RAK): Terminals, Tipps",
+  title: "Guide Flughafen Marrakesch-Menara: Kontakt, Plan, Bewertung",
   description: "Vollständiger Guide zum Flughafen Marrakesch-Menara: Terminals, Plan, Einreiseformalitäten, Wartezeiten, Anschlüsse und Weg in die Stadt.",
   eyebrow: 'Marrakesch Menara · Guide',
   h1: 'Guide zum Flughafen Marrakesch Menara',
@@ -49,8 +49,26 @@ export default {
 
 <h2>In die Stadt kommen</h2>
 <p>Vier Optionen und nicht mehr: das <strong>Taxi</strong> am Stand für 100–150 MAD tagsüber und 150–240 MAD nachts für den ganzen Wagen; der <strong>gebuchte Transfer</strong> ab 27 € pro Fahrzeug für bis zu sieben Personen; der <strong>Bus 19</strong> von ALSA für 30 MAD pro Person bis Djemaa el-Fna, zwischen 6 und 23:30 Uhr; und der <strong>Mietwagen</strong>, dessen Schalter in der Ankunftshalle liegen. Details zu jeder Option finden Sie auf unserer Seite zu den <a href="/de/transfers/">Transfers</a>.</p>
+
+<h2>Kontakt, Adresse und Telefon des Flughafens Marrakesch-Menara</h2>
+<div class="table-wrap">
+<table class="data">
+<tbody>
+<tr><td><strong>Flughafenzentrale</strong></td><td>+212 5 24 44 79 10</td></tr>
+<tr><td><strong>ONDA-Callcenter (24 h)</strong></td><td>080 1000 224 (aus Marokko)</td></tr>
+<tr><td><strong>Postanschrift</strong></td><td>BP 13201, Aéroport Marrakech-Ménara, 40000 Marrakesch, Marokko</td></tr>
+<tr><td><strong>Offizielle Website</strong></td><td>onda.ma (Nationales Flughafenamt)</td></tr>
+</tbody>
+</table>
+</div>
+<p>Bei verlorenem Gepäck oder Verspätung wenden Sie sich zuerst an <strong>Ihre Fluggesellschaft</strong> oder deren Abfertigungsagenten: Der Flughafen kümmert sich weder um Buchungen noch um Entschädigungen. Aktuelle Zeiten finden Sie auf unseren Seiten <a href="/de/arrivals/">Ankünfte</a> und <a href="/de/departures/">Abflüge</a>.</p>
+
+<h2>Unsere Bewertung des Flughafens Marrakesch-Menara</h2>
+<p><strong>Stärken:</strong> ein modernes, helles Terminal nur 6 km von der Medina, klare dreisprachige Beschilderung und eines der günstigsten Parkhäuser Europas und Nordafrikas. <strong>Schwächen:</strong> lange Schlangen an der Passkontrolle zu Spitzenzeiten (oft 45 Minuten bis über eine Stunde), wenig Gastronomie nachts und viele Taxi-Schlepper in der Ankunftshalle. Unser Rat: beim Abflug viel Zeit einplanen und bei später Landung die Fahrt in die Stadt buchen. Siehe auch <a href="/de/marrakech-airport-restaurants-shops/">Restaurants und Shops</a> und <a href="/de/marrakech-airport-taxi/">Flughafentaxi</a>.</p>
 `,
   faqs: [
+    { q: "Wie lautet die Telefonnummer des Flughafens Marrakesch?", a: "Die Zentrale des Flughafens Marrakesch-Menara ist unter +212 5 24 44 79 10 erreichbar, das ONDA-Callcenter unter 080 1000 224, rund um die Uhr aus Marokko. Bei Gepäck oder Verspätung zuerst die Airline kontaktieren." },
+    { q: "Wie gut ist der Flughafen Marrakesch-Menara?", a: "Ein modernes Terminal nahe der Stadt, aber zu Spitzenzeiten teils lange Schlangen an der Passkontrolle und nachts wenig Angebot. Beim Abflug viel Zeit einplanen und bei später Landung die Fahrt buchen." },
     {
       q: 'Wie viele Terminals hat der Flughafen Marrakesch?',
       a: "Zwei angrenzende, zu Fuß verbundene Terminals: T1, das neuere, nimmt die meisten internationalen Flüge auf, T2 den Rest und einen Teil der Inlandsflüge. Die Aufteilung variiert nach Airline und Saison: Verlassen Sie sich auf Ihre Bordkarte.",

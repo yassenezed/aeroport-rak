@@ -2,7 +2,7 @@ import type { PageContent } from '../types';
 
 export default {
   fr: {
-    title: "Parking aéroport Marrakech-Ménara : tarifs 2026 et accès",
+    title: "Parking aéroport Marrakech-Ménara : prix et tarifs 2026",
     description: "Parking de l'aéroport de Marrakech-Ménara : 3 parkings, 1 550 places, 6 DH la 1re heure et 42 DH les 24 h selon la grille ONDA. Dépose et alternatives.",
     eyebrow: "Parking · tarifs et guide 2026",
     h1: "Parking aéroport Marrakech-Ménara : tarifs et guide",

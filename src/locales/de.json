@@ -21,7 +21,9 @@
     "airportGuide": "Flughafen-Guide",
     "blog": "Blog",
     "menu": "Menü",
-    "language": "Sprache"
+    "language": "Sprache",
+    "airportTaxi": "Flughafentaxi",
+    "airportFood": "Restaurants und Shops"
   },
   "site": {
     "disclaimer": "Inoffizielle Website. Nicht mit dem Flughafen Marrakesch Menara verbunden."
