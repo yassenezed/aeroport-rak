@@ -6,6 +6,13 @@ import { allRoutes, alternatesFor, DEFAULT_LOCALE, ROUTES, type Locale } from '.
 import { pages, articles, hotels } from '../copy';
 import { site } from '../data/site';
 import lastmod from '../data/lastmod.json';
+import { HOTEL_IMAGES, HOTEL_HERO } from '../data/hotelLinks';
+
+/** Photos à déclarer dans le sitemap (Google Images) : page Hôtels et fiches d'avis. */
+function imagesFor(key: string): string[] {
+  if (key === 'hotels') return Object.values(HOTEL_IMAGES);
+  return HOTEL_HERO[key] ? [HOTEL_HERO[key].src] : [];
+}
 
 const DIRS: Record<string, string> = { page: 'pages', blog: 'blog', hotel: 'hotels' };
 
@@ -45,14 +52,14 @@ export const GET: APIRoute = async () => {
     return `  <url>
     <loc>${site.url}${path}</loc>
 ${alts}
-${xDefault}${mod ? `\n    <lastmod>${mod}</lastmod>` : ''}
+${xDefault}${mod ? `\n    <lastmod>${mod}</lastmod>` : ''}${imagesFor(key).map((src) => `\n    <image:image><image:loc>${site.url}${src}</image:loc></image:image>`).join('')}
     <changefreq>weekly</changefreq>
     <priority>${priorityFor(key, locale)}</priority>
   </url>`;
   });
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${urls.join('\n')}
 </urlset>
 `;

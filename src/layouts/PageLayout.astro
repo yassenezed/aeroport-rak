@@ -50,6 +50,28 @@ const schema: object[] = [
   },
   ...extraSchema,
 ];
+// Liste d'hôtels (page Hôtels) : schéma ItemList avec nom, photo et lien vers l'avis.
+const hotelItems = (page.cardSections ?? []).flatMap((sec) => sec.items.filter((it) => it.hotel));
+if (hotelItems.length) {
+  schema.push({
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: page.h1,
+    numberOfItems: hotelItems.length,
+    itemListElement: hotelItems.map((it, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'Hotel',
+        name: it.title,
+        description: it.text,
+        address: { '@type': 'PostalAddress', addressLocality: 'Marrakech', addressCountry: 'MA' },
+        ...(HOTEL_IMAGES[it.hotel!] ? { image: `${site.url}${HOTEL_IMAGES[it.hotel!]}` } : {}),
+        ...(it.link ? { url: `${site.url}${pathFor(it.link.key, locale)}` } : {}),
+      },
+    })),
+  });
+}
 if (page.faqs?.length) {
   schema.push({
     '@context': 'https://schema.org',
