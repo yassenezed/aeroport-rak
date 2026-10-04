@@ -8,6 +8,7 @@ import { site } from '../data/site';
 import { articleKeys, getArticle } from '../copy';
 import type { LocalizedPage, LocalizedArticle } from '../copy/types';
 import { BLOG_THEMES } from '../data/blogThemes';
+import { BLOG_IMAGES } from '../data/blogImages';
 
 interface Props { locale: Locale; page: LocalizedPage; noindex?: boolean }
 const { locale, page, noindex = false } = Astro.props;
@@ -136,6 +137,9 @@ const arrow = locale === 'ar' ? '←' : '→';
           {s.posts.map(({ key, art }) => (
             <li>
               <a class="blog-card" href={pathFor(key, locale)}>
+                {BLOG_IMAGES[key] && (
+                  <span class="blog-card__thumb"><img src={BLOG_IMAGES[key].card} alt={BLOG_IMAGES[key].alt[locale]} width={BLOG_IMAGES[key].cardWidth} height={BLOG_IMAGES[key].cardHeight} loading="lazy" decoding="async" /></span>
+                )}
                 <span class="blog-card__meta">
                   {art.eyebrow && <span class="blog-card__tag">{art.eyebrow}</span>}
                   {art.date && <time datetime={art.date}>{fmtDate(art.date)}</time>}
@@ -158,6 +162,9 @@ const arrow = locale === 'ar' ? '←' : '→';
           {orphans.map(({ key, art }) => (
             <li>
               <a class="blog-card" href={pathFor(key, locale)}>
+                {BLOG_IMAGES[key] && (
+                  <span class="blog-card__thumb"><img src={BLOG_IMAGES[key].card} alt={BLOG_IMAGES[key].alt[locale]} width={BLOG_IMAGES[key].cardWidth} height={BLOG_IMAGES[key].cardHeight} loading="lazy" decoding="async" /></span>
+                )}
                 <h3>{art.h1}</h3>
                 <p>{art.excerpt ?? art.description}</p>
                 <span class="blog-card__link">{L.read} <span aria-hidden="true">{arrow}</span></span>

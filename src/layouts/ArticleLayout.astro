@@ -2,6 +2,7 @@
 // Article de blog : même charpente que PageLayout, avec date, schéma Article
 // et suggestions de lecture.
 import { relatedKeys } from '../data/blogThemes';
+import { BLOG_IMAGES } from '../data/blogImages';
 import BaseLayout from './BaseLayout.astro';
 import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
 import { useTranslations, pathFor, type Locale } from '../i18n';
@@ -30,6 +31,8 @@ const related = relatedKeys(routeKey, 6)
   .filter((r) => r.art)
   .slice(0, 3);
 
+const img = BLOG_IMAGES[routeKey];
+
 const schema: object[] = [
   {
     '@context': 'https://schema.org',
@@ -44,6 +47,7 @@ const schema: object[] = [
     inLanguage: locale,
     mainEntityOfPage: { '@type': 'WebPage', '@id': `${site.url}${path}` },
     ...(page.date ? { datePublished: page.date, dateModified: page.date } : {}),
+    ...(img ? { image: { '@type': 'ImageObject', url: `${site.url}${img.src}`, width: img.width, height: img.height } } : {}),
     author: { '@type': 'Organization', name: site.name, url: site.url },
     publisher: { '@type': 'Organization', name: site.name, url: site.url, logo: { '@type': 'ImageObject', url: `${site.url}/logo.png` } },
   },
@@ -67,6 +71,14 @@ if (page.faqs?.length) {
         {dateFmt && <p class="article-meta">{t('common.updated')} · <time datetime={page.date}>{dateFmt}</time></p>}
       </div>
     </section>
+
+    {img && (
+      <figure class="article-figure">
+        <div class="container container--narrow">
+          <img src={img.src} alt={img.alt[locale]} width={img.width} height={img.height} style={`max-width:${img.width}px`} fetchpriority="high" decoding="async" />
+        </div>
+      </figure>
+    )}
 
     {page.facts && page.facts.length > 0 && (
       <section class="facts-band">
@@ -123,7 +135,10 @@ if (page.faqs?.length) {
           <h2 class="section-block__title">{t('common.readMore')}</h2>
           <div class="card-grid">
             {related.map(({ key, art }) => (
-              <a class="card" href={pathFor(key, locale)}>
+              <a class="card card--thumb" href={pathFor(key, locale)}>
+                {BLOG_IMAGES[key] && (
+                  <span class="card__thumb"><img src={BLOG_IMAGES[key].card} alt={BLOG_IMAGES[key].alt[locale]} width={BLOG_IMAGES[key].cardWidth} height={BLOG_IMAGES[key].cardHeight} loading="lazy" decoding="async" /></span>
+                )}
                 <h3>{art!.h1}</h3>
                 <p>{art!.excerpt ?? art!.description}</p>
                 <span class="card__link">{t('common.readMore')} →</span>

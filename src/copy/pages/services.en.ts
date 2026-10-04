@@ -33,7 +33,7 @@ export default {
       variant: 'compact',
       items: [
         { icon: 'shop', title: "Duty-free shops", text: "Perfume, cosmetics, crafts and local products, mostly after security." },
-        { icon: 'coffee', title: "Cafés and food", text: "Cafés landside, a wider choice airside, at airport prices." },
+        { icon: 'coffee', title: "Cafés and food", text: "Cafés landside, a wider choice airside, at airport prices.", link: { key: 'airportFood', label: "Restaurants and shops" } },
         { icon: 'prayer', title: "Prayer rooms", text: "In both terminals, landside and in the departure area." },
         { icon: 'baby', title: "Family areas", text: "Baby-changing facilities and water points for travelling with young children." },
         { icon: 'wifi', title: "Free wifi", text: "An open network in the terminals, slower at peak times." },

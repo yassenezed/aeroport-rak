@@ -94,7 +94,7 @@ export default {
 </div>
 
 <h2>En la zona de embarque: tiendas, salas VIP y wifi</h2>
-<p>Tras la seguridad, la zona de embarque ofrece tiendas libres de impuestos, cafeterías y restaurantes, además de wifi gratuito, a veces saturado en horas punta. Se llena a las mismas horas que las colas: si sale a última hora del día o tiene una conexión larga, el acceso a una de las <a href="/es/blog/marrakech-airport-vip-lounges/">salas VIP del aeropuerto de Marrakech</a> cambia la espera.</p>
+<p>Tras la seguridad, la zona de embarque ofrece tiendas libres de impuestos, <a href="/es/marrakech-airport-restaurants-shops/">cafeterías y restaurantes</a>, además de wifi gratuito, a veces saturado en horas punta. Se llena a las mismas horas que las colas: si sale a última hora del día o tiene una conexión larga, el acceso a una de las <a href="/es/blog/marrakech-airport-vip-lounges/">salas VIP del aeropuerto de Marrakech</a> cambia la espera.</p>
 
 <h2>Vuelo retrasado o cancelado con salida de Marrakech</h2>
 <p>Para los vuelos que salen de Marruecos, el Reglamento europeo 261/2004 se aplica si la compañía es europea (Ryanair, Vueling, Iberia Express, easyJet, Transavia…): con más de tres horas de retraso a la llegada, la compensación es de <strong>250 € por pasajero</strong> en trayectos de menos de 1 500 km, como Marrakech–Madrid, y de <strong>400 €</strong> entre 1 500 y 3 500 km, como Marrakech–París. Las compañías no europeas con salida de Marrakech no están sujetas a él. Compruebe su caso en nuestra página de <a href="/es/flight-compensation/">compensación por vuelos</a>. El aeropuerto lo gestiona la <a href="https://www.onda.ma/" target="_blank" rel="noopener">Office National des Aéroports (ONDA)</a>.</p>

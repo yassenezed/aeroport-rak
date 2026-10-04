@@ -33,7 +33,7 @@ export default {
       variant: 'compact',
       items: [
         { icon: 'shop', title: "Taxfreewinkels", text: "Parfum, cosmetica, ambachtelijke en lokale producten, vooral na de controle." },
-        { icon: 'coffee', title: "Cafés en eten", text: "Cafés aan de openbare kant, meer keus in de vertrekzone, tegen luchthavenprijzen." },
+        { icon: 'coffee', title: "Cafés en eten", text: "Cafés aan de openbare kant, meer keus in de vertrekzone, tegen luchthavenprijzen.", link: { key: 'airportFood', label: "Restaurants en winkels" } },
         { icon: 'prayer', title: "Gebedsruimtes", text: "In beide terminals, aan de openbare kant en in de vertrekzone." },
         { icon: 'baby', title: "Gezinsruimtes", text: "Verschoontafels en waterpunten voor reizen met jonge kinderen." },
         { icon: 'wifi', title: "Gratis wifi", text: "Open netwerk in de terminals, trager tijdens de spits." },

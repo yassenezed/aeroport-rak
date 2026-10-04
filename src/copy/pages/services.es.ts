@@ -33,7 +33,7 @@ export default {
       variant: 'compact',
       items: [
         { icon: 'shop', title: "Tiendas libres de impuestos", text: "Perfumes, cosmética, artesanía y productos locales, sobre todo tras la seguridad." },
-        { icon: 'coffee', title: "Cafeterías y restauración", text: "Cafeterías en la zona pública y más oferta en la zona de embarque, a precios de aeropuerto." },
+        { icon: 'coffee', title: "Cafeterías y restauración", text: "Cafeterías en la zona pública y más oferta en la zona de embarque, a precios de aeropuerto.", link: { key: 'airportFood', label: "Restaurantes y tiendas" } },
         { icon: 'prayer', title: "Salas de oración", text: "En ambas terminales, en la zona pública y en la de embarque." },
         { icon: 'baby', title: "Espacios para familias", text: "Cambiadores y puntos de agua para viajar con niños pequeños." },
         { icon: 'wifi', title: "Wifi gratuito", text: "Red abierta en las terminales, más lenta en horas punta." },

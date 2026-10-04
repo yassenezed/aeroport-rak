@@ -34,7 +34,7 @@ export default {
         variant: 'compact',
         items: [
           { icon: 'shop', title: "Boutiques hors taxes", text: "Parfums, cosmétiques, artisanat et produits locaux, surtout après la sûreté." },
-          { icon: 'coffee', title: "Cafés et restauration", text: "Cafés côté public, offre plus large en zone d'embarquement, aux prix d'aéroport." },
+          { icon: 'coffee', title: "Cafés et restauration", text: "Cafés côté public, offre plus large en zone d'embarquement, aux prix d'aéroport.", link: { key: 'airportFood', label: "Restaurants et boutiques" } },
           { icon: 'prayer', title: "Salles de prière", text: "Dans les deux terminaux, côté public comme en zone d'embarquement." },
           { icon: 'baby', title: "Espaces familles", text: "Tables à langer et points d'eau pour voyager avec de jeunes enfants." },
           { icon: 'wifi', title: "Wifi gratuit", text: "Réseau ouvert dans les terminaux, plus lent aux heures de pointe." },

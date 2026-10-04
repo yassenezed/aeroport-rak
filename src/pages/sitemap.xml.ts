@@ -7,10 +7,12 @@ import { pages, articles, hotels } from '../copy';
 import { site } from '../data/site';
 import lastmod from '../data/lastmod.json';
 import { HOTEL_IMAGES, HOTEL_HERO } from '../data/hotelLinks';
+import { BLOG_IMAGES } from '../data/blogImages';
 
 /** Photos à déclarer dans le sitemap (Google Images) : page Hôtels et fiches d'avis. */
 function imagesFor(key: string): string[] {
   if (key === 'hotels') return Object.values(HOTEL_IMAGES);
+  if (BLOG_IMAGES[key]) return [BLOG_IMAGES[key].src];
   return HOTEL_HERO[key] ? [HOTEL_HERO[key].src] : [];
 }
 

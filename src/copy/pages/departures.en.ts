@@ -94,7 +94,7 @@ export default {
 </div>
 
 <h2>Airside: shops, lounges and wifi</h2>
-<p>After security, the departure area offers duty-free shops, cafés and restaurants, plus free wifi that can be saturated at peak times. It fills up at the same hours as the queues: if you leave late in the day or have a long connection, access to one of the <a href="/en/blog/marrakech-airport-vip-lounges/">Marrakech airport VIP lounges</a> transforms the wait.</p>
+<p>After security, the departure area offers duty-free shops, <a href="/en/marrakech-airport-restaurants-shops/">cafés and restaurants</a>, plus free wifi that can be saturated at peak times. It fills up at the same hours as the queues: if you leave late in the day or have a long connection, access to one of the <a href="/en/blog/marrakech-airport-vip-lounges/">Marrakech airport VIP lounges</a> transforms the wait.</p>
 
 <h2>Delayed or cancelled flight from Marrakech</h2>
 <p>For flights leaving Morocco, EU Regulation 261/2004 applies if the airline is European (Ryanair, easyJet, Transavia, Air France…), and UK261 if it is a UK carrier (Jet2, British Airways, easyJet UK): beyond a three-hour arrival delay, compensation reaches <strong>€400 (£350) per passenger</strong> for a 1,500 to 3,500 km journey, such as Marrakech–London. Non-European airlines departing Marrakech are not covered. Check your case on our <a href="/en/flight-compensation/">flight compensation</a> page. The airport is run by the <a href="https://www.onda.ma/" target="_blank" rel="noopener">Office National des Aéroports (ONDA)</a>.</p>

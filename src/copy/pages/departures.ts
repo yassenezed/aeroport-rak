@@ -95,7 +95,7 @@ export default {
 </div>
 
 <h2>En zone d'embarquement : boutiques, salons et wifi</h2>
-<p>Après la sûreté, la zone d'embarquement propose boutiques hors taxes, cafés et restaurants, ainsi qu'un wifi gratuit, parfois saturé aux heures de pointe. Elle se remplit aux mêmes heures que les files : si vous partez en fin de journée ou avec une longue correspondance, un accès à l'un des <a href="/blog/salons-vip-aeroport-marrakech/">salons VIP de l'aéroport de Marrakech</a> transforme l'attente.</p>
+<p>Après la sûreté, la zone d'embarquement propose boutiques hors taxes, <a href="/restaurants-boutiques-aeroport-marrakech/">cafés et restaurants</a>, ainsi qu'un wifi gratuit, parfois saturé aux heures de pointe. Elle se remplit aux mêmes heures que les files : si vous partez en fin de journée ou avec une longue correspondance, un accès à l'un des <a href="/blog/salons-vip-aeroport-marrakech/">salons VIP de l'aéroport de Marrakech</a> transforme l'attente.</p>
 
 <h2>Vol retardé ou annulé au départ de Marrakech</h2>
 <p>Au départ du Maroc, le règlement européen 261/2004 s'applique si la compagnie est européenne (Ryanair, easyJet, Transavia, Air France…) : au-delà de trois heures de retard à l'arrivée, l'indemnisation atteint <strong>400 € par passager</strong> pour un trajet de 1 500 à 3 500 km, comme Marrakech–Paris. Les vols de compagnies non européennes au départ de Marrakech n'y sont pas soumis. Vérifiez votre cas sur notre page <a href="/indemnisation-vol/">indemnisation de vol</a>. L'aéroport est exploité par l'<a href="https://www.onda.ma/" target="_blank" rel="noopener">Office national des aéroports (ONDA)</a>.</p>

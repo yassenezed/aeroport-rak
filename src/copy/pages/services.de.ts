@@ -33,7 +33,7 @@ export default {
       variant: 'compact',
       items: [
         { icon: 'shop', title: "Duty-free-Shops", text: "Parfüm, Kosmetik, Kunsthandwerk und lokale Produkte, vor allem nach der Sicherheitskontrolle." },
-        { icon: 'coffee', title: "Cafés und Gastronomie", text: "Cafés im öffentlichen Bereich, mehr Auswahl im Abflugbereich, zu Flughafenpreisen." },
+        { icon: 'coffee', title: "Cafés und Gastronomie", text: "Cafés im öffentlichen Bereich, mehr Auswahl im Abflugbereich, zu Flughafenpreisen.", link: { key: 'airportFood', label: "Restaurants und Shops" } },
         { icon: 'prayer', title: "Gebetsräume", text: "In beiden Terminals, im öffentlichen Bereich und im Abflugbereich." },
         { icon: 'baby', title: "Familienbereiche", text: "Wickelmöglichkeiten und Wasserstellen für Reisen mit kleinen Kindern." },
         { icon: 'wifi', title: "Kostenloses WLAN", text: "Offenes Netz in den Terminals, zu Stoßzeiten langsamer." },
