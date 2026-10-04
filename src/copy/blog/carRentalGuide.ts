@@ -5,7 +5,7 @@ export default {
     title: "Louer une voiture à l'aéroport de Marrakech-Ménara",
     description: "Louer une voiture à l'aéroport de Marrakech-Ménara : catégories, prix, caution, franchise, état des lieux et erreurs qui coûtent cher au comptoir.",
     eyebrow: 'Location',
-    h1: 'Louer une voiture à Marrakech : le guide complet',
+    h1: "Louer une voiture à l'aéroport Marrakech-Ménara : le guide complet",
     lede: "Le Maroc est l'un des pays où la location est la moins chère, et l'un de ceux où le contrat compte le plus. Voici ce que vous payerez réellement, et les dix minutes de précaution qui évitent 90 % des litiges.",
     excerpt: "Prix par catégorie, caution, franchise, état des lieux et conduite : tout ce qu'il faut savoir avant de signer au comptoir du RAK.",
     date: '2026-09-05',
@@ -18,7 +18,7 @@ export default {
 <p>Deux jours en médina sans véhicule, puis une location pour les trois jours d'excursions, prise en agence à Guéliz ou à l'aéroport. Vous économisez deux jours de location et deux nuits de stationnement, pour exactement le même programme.</p>
 </div>
 
-<h2>Les prix par catégorie</h2>
+<h2>Prix de location à l'aéroport Marrakech-Ménara par catégorie</h2>
 <div class="table-wrap">
 <table class="data">
 <thead><tr><th>Catégorie</th><th>Prix / jour</th><th>Adaptée à</th></tr></thead>
@@ -33,6 +33,17 @@ export default {
 </div>
 <p>À cela s'ajoutent le carburant — 12 à 14 MAD le litre de diesel —, les péages autoroutiers vers Casablanca ou Agadir, et le rachat de franchise si vous le prenez.</p>
 
+<h2>Retirer sa voiture à l'aéroport Marrakech-Ménara</h2>
+<p>Les comptoirs des loueurs internationaux et locaux se trouvent dans le <strong>hall des arrivées</strong>, après la douane. Certains loueurs n'ont pas de comptoir et pratiquent l'accueil sur place : un agent vous attend avec une pancarte et vous accompagne jusqu'au véhicule sur le parking. Le bon d'échange précise toujours la formule : vérifiez-la avant d'atterrir, surtout pour une arrivée tardive.</p>
+<p>Au comptoir, présentez dans cet ordre :</p>
+<ul>
+<li>le <strong>permis de conduire</strong> du conducteur principal (et des conducteurs additionnels déclarés) ;</li>
+<li>le <strong>passeport</strong> ;</li>
+<li>une <strong>carte de crédit au nom du conducteur principal</strong>, avec un plafond suffisant pour la caution ;</li>
+<li>le bon de réservation, imprimé ou sur le téléphone.</li>
+</ul>
+<p>Comptez 20 à 40 minutes entre le comptoir et le départ, état des lieux compris. Pour comparer les offres disponibles à l'aéroport, utilisez notre moteur sur la page <a href="/location-voiture/">location de voiture</a>.</p>
+
 <h2>Caution et franchise : les deux pièges</h2>
 <p>La <strong>caution</strong> va de 5 000 à 15 000 MAD, bloquée par empreinte sur une carte bancaire <em>au nom du conducteur principal</em>. Les cartes prépayées et certaines cartes à débit différé sont refusées. Vérifiez votre plafond avant de partir : c'est le premier motif de refus au comptoir, et il ne se règle pas sur place.</p>
 <p>La <strong>franchise</strong> du contrat de base reste élevée. Trois options : l'assumer, souscrire le rachat du loueur (10 à 20 € par jour), ou passer par une assurance tierce moins chère — dans ce dernier cas, vous avancez les frais en cas de sinistre et vous vous faites rembourser ensuite.</p>
@@ -44,8 +55,29 @@ export default {
 <h2>Conduire au Maroc</h2>
 <p>Le permis national suffit pour un séjour touristique. Conduite à droite, limitations à 60 km/h en ville, 100 km/h sur route et 120 km/h sur autoroute, avec des radars fixes et mobiles nombreux et actifs. Les amendes se règlent sur place, contre reçu.</p>
 <p>La règle locale à intégrer : <strong>les priorités se négocient au regard plus qu'au panneau</strong>. Deux-roues, charrettes et piétons surgissent sans prévenir, et de nuit hors agglomération, des véhicules circulent sans éclairage. Gardez permis, contrat et passeport accessibles : les contrôles de gendarmerie sont fréquents sur les axes interurbains.</p>
+
+<h2>Rendre la voiture à l'aéroport Marrakech-Ménara</h2>
+<p>Au retour, suivez le fléchage de votre loueur vers sa zone de restitution : ne prenez pas de ticket au <a href="/parkings/">parking public</a> de l'aéroport. Faites le plein dans une station de la ville, refaites la même vidéo qu'au départ et faites signer le document de retour avant de rendre les clés. Prévoyez <strong>30 minutes de marge</strong> en plus de l'enregistrement de votre vol.</p>
+
+<h2>Distances en voiture depuis l'aéroport</h2>
+<div class="table-wrap">
+<table class="data">
+<thead><tr><th>Destination</th><th>Distance</th><th>Durée</th><th>Route</th></tr></thead>
+<tbody>
+<tr><td><strong>Agafay</strong></td><td class="num">≈ 40 km</td><td class="num">≈ 45 min</td><td>Route goudronnée, puis piste courte</td></tr>
+<tr><td><strong>Vallée de l'Ourika</strong></td><td class="num">≈ 40 km</td><td class="num">≈ 1 h</td><td>Route de montagne facile</td></tr>
+<tr class="row-highlight"><td><strong>Essaouira</strong></td><td class="num">≈ 180 km</td><td class="num">≈ 2 h 30</td><td>Nationale en bon état</td></tr>
+<tr><td><strong>Casablanca</strong></td><td class="num">≈ 240 km</td><td class="num">≈ 2 h 30</td><td>Autoroute A7, péages</td></tr>
+<tr><td><strong>Agadir</strong></td><td class="num">≈ 250 km</td><td class="num">≈ 3 h</td><td>Autoroute, péages</td></tr>
+<tr><td><strong>Ouarzazate</strong></td><td class="num">≈ 200 km</td><td class="num">≈ 4 h</td><td>Col du Tichka (2 260 m)</td></tr>
+</tbody>
+</table>
+</div>
+<p>Le détail de chaque trajet est dans nos guides <a href="/blog/distance-essaouira-aeroport-marrakech/">aéroport → Essaouira</a> et <a href="/blog/distance-ouarzazate-aeroport-marrakech/">aéroport → Ouarzazate</a>. Pour un séjour d'un mois ou plus, voir aussi la <a href="/blog/location-voiture-longue-duree-marrakech/">location longue durée</a>.</p>
 `,
     faqs: [
+      { q: "Où se trouvent les loueurs à l'aéroport de Marrakech ?", a: "Dans le hall des arrivées, après la douane. Certains loueurs sans comptoir pratiquent l'accueil sur place : un agent vous attend avec une pancarte et vous conduit au véhicule sur le parking. Votre bon de réservation précise la formule." },
+      { q: "Faut-il une carte de crédit pour louer à l'aéroport de Marrakech ?", a: "Oui, une carte de crédit au nom du conducteur principal, avec un plafond suffisant pour bloquer la caution (5 000 à 15 000 DH). Les cartes prépayées et beaucoup de cartes de débit sont refusées au comptoir." },
       {
         q: 'Quel budget prévoir pour louer une voiture à Marrakech ?',
         a: "De 25 à 35 € par jour pour une citadine, 35 à 45 € pour une compacte, 55 à 90 € pour un SUV et 45 à 60 € pour une automatique. Ajoutez le carburant, autour de 12 à 14 MAD le litre, les péages et l'éventuel rachat de franchise.",

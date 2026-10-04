@@ -4,7 +4,7 @@ export default {
   title: "Mietwagen am Flughafen Marrakesch-Menara: der Ratgeber",
   description: "Mietwagen am Flughafen Marrakesch-Menara: Kategorien, Preise, Kaution, Selbstbeteiligung, Übergabe und teure Fehler am Schalter.",
   eyebrow: 'Mietwagen',
-  h1: 'Mietwagen in Marrakesch: der vollständige Ratgeber',
+  h1: "Mietwagen am Flughafen Marrakesch-Menara: der vollständige Ratgeber",
   lede: "Marokko gehört zu den günstigsten Mietwagenländern und zu denen, in denen der Vertrag am meisten zählt. Hier, was Sie wirklich zahlen, und die zehn Minuten Vorsicht, die 90 % der Streitfälle verhindern.",
   excerpt: 'Preise nach Kategorie, Kaution, Selbstbeteiligung, Übergabe und Fahren: was man vor der Unterschrift am RAK-Schalter wissen sollte.',
   date: '2026-09-05',
@@ -17,7 +17,7 @@ export default {
 <p>Zwei Tage ohne Fahrzeug in der Medina, dann eine Miete für die drei Ausflugstage, abgeholt in Guéliz oder am Flughafen. Sie sparen zwei Miettage und zwei Nächte Parken, bei genau demselben Programm.</p>
 </div>
 
-<h2>Preise nach Kategorie</h2>
+<h2>Mietwagenpreise am Flughafen Marrakesch-Menara nach Kategorie</h2>
 <div class="table-wrap">
 <table class="data">
 <thead><tr><th>Kategorie</th><th>Preis / Tag</th><th>Geeignet für</th></tr></thead>
@@ -32,6 +32,17 @@ export default {
 </div>
 <p>Hinzu kommen Kraftstoff – 12 bis 14 MAD je Liter Diesel –, Autobahnmaut Richtung Casablanca oder Agadir und die Haftungsreduzierung, falls Sie sie nehmen.</p>
 
+<h2>Den Mietwagen am Flughafen Marrakesch-Menara abholen</h2>
+<p>Die Schalter der internationalen und lokalen Vermieter befinden sich in der <strong>Ankunftshalle</strong>, nach dem Zoll. Manche Anbieter haben keinen Schalter und arbeiten mit persönlicher Übergabe: Ein Mitarbeiter wartet mit Namensschild und begleitet Sie zum Auto auf dem Parkplatz. Der Voucher nennt immer die Variante: Prüfen Sie sie vor der Landung, vor allem bei später Ankunft.</p>
+<p>Am Schalter benötigen Sie:</p>
+<ul>
+<li>den <strong>Führerschein</strong> des Hauptfahrers (und der angemeldeten Zusatzfahrer);</li>
+<li>den <strong>Reisepass</strong>;</li>
+<li>eine <strong>Kreditkarte auf den Namen des Hauptfahrers</strong> mit ausreichendem Limit für die Kaution;</li>
+<li>den Buchungsbeleg, ausgedruckt oder auf dem Handy.</li>
+</ul>
+<p>Rechnen Sie mit 20 bis 40 Minuten zwischen Schalter und Abfahrt, Übergabeprotokoll inklusive. Die Angebote am Flughafen vergleichen Sie über die Suche auf unserer Seite <a href="/de/car-rental/">Mietwagen</a>.</p>
+
 <h2>Kaution und Selbstbeteiligung: die zwei Fallen</h2>
 <p>Die <strong>Kaution</strong> liegt bei 5.000 bis 15.000 MAD, reserviert auf einer Kreditkarte <em>auf den Namen des Hauptfahrers</em>. Prepaidkarten und manche Debitkarten werden abgelehnt. Prüfen Sie Ihr Limit vor der Abreise: Das ist der häufigste Ablehnungsgrund am Schalter und lässt sich dort nicht lösen.</p>
 <p>Die <strong>Selbstbeteiligung</strong> des Basisvertrags ist hoch. Drei Wege: selbst tragen, die Reduzierung des Vermieters kaufen (10 bis 20 € pro Tag) oder eine günstigere Drittversicherung nutzen – dann strecken Sie im Schadensfall vor und lassen sich erstatten.</p>
@@ -43,8 +54,29 @@ export default {
 <h2>Fahren in Marokko</h2>
 <p>Der nationale Führerschein genügt für einen touristischen Aufenthalt. Rechtsverkehr, Tempolimits 60 km/h innerorts, 100 km/h auf Landstraßen und 120 km/h auf Autobahnen, mit zahlreichen aktiven festen und mobilen Blitzern. Bußgelder werden vor Ort gegen Quittung bezahlt.</p>
 <p>Die örtliche Regel: <strong>Vorfahrt wird eher per Blick als per Schild ausgehandelt</strong>. Zweiräder, Karren und Fußgänger tauchen ohne Vorwarnung auf, und nachts außerorts fahren Fahrzeuge ohne Licht. Halten Sie Führerschein, Vertrag und Reisepass griffbereit: Gendarmeriekontrollen sind auf Überlandstrecken häufig.</p>
+
+<h2>Den Mietwagen am Flughafen Marrakesch-Menara zurückgeben</h2>
+<p>Folgen Sie bei der Rückgabe der Beschilderung Ihres Vermieters zu seinem Rückgabebereich: Ziehen Sie kein Ticket am <a href="/de/parking/">öffentlichen Parkplatz</a> des Flughafens. Tanken Sie in der Stadt, filmen Sie das Auto erneut wie bei der Abholung und lassen Sie das Rückgabeprotokoll unterschreiben, bevor Sie die Schlüssel abgeben. Planen Sie <strong>30 Minuten</strong> zusätzlich zum Check-in Ihres Flugs ein.</p>
+
+<h2>Fahrstrecken ab dem Flughafen</h2>
+<div class="table-wrap">
+<table class="data">
+<thead><tr><th>Ziel</th><th>Entfernung</th><th>Fahrzeit</th><th>Straße</th></tr></thead>
+<tbody>
+<tr><td><strong>Agafay</strong></td><td class="num">≈ 40 km</td><td class="num">≈ 45 Min.</td><td>Asphalt, dann kurze Piste</td></tr>
+<tr><td><strong>Ourika-Tal</strong></td><td class="num">≈ 40 km</td><td class="num">≈ 1 Std.</td><td>Einfache Bergstraße</td></tr>
+<tr class="row-highlight"><td><strong>Essaouira</strong></td><td class="num">≈ 180 km</td><td class="num">≈ 2 Std. 30</td><td>Gut ausgebaute Landstraße</td></tr>
+<tr><td><strong>Casablanca</strong></td><td class="num">≈ 240 km</td><td class="num">≈ 2 Std. 30</td><td>Autobahn A7, Maut</td></tr>
+<tr><td><strong>Agadir</strong></td><td class="num">≈ 250 km</td><td class="num">≈ 3 Std.</td><td>Autobahn, Maut</td></tr>
+<tr><td><strong>Ouarzazate</strong></td><td class="num">≈ 200 km</td><td class="num">≈ 4 Std.</td><td>Tichka-Pass (2.260 m)</td></tr>
+</tbody>
+</table>
+</div>
+<p>Jede Strecke beschreiben unsere Ratgeber <a href="/de/blog/distance-essaouira-marrakech-airport/">Flughafen → Essaouira</a> und <a href="/de/blog/distance-ouarzazate-marrakech-airport/">Flughafen → Ouarzazate</a>. Ab einem Monat siehe auch die <a href="/de/blog/long-term-car-rental-marrakech/">Langzeitmiete</a>.</p>
 `,
   faqs: [
+    { q: "Wo sind die Autovermieter am Flughafen Marrakesch?", a: "In der Ankunftshalle, nach dem Zoll. Manche Anbieter ohne Schalter arbeiten mit persönlicher Übergabe: Ein Mitarbeiter wartet mit Namensschild und bringt Sie zum Auto auf dem Parkplatz. Ihr Voucher nennt die Variante." },
+    { q: "Braucht man eine Kreditkarte für einen Mietwagen am Flughafen Marrakesch?", a: "Ja, eine Kreditkarte auf den Namen des Hauptfahrers mit ausreichendem Limit für die Kaution (5.000 bis 15.000 MAD). Prepaid- und viele Debitkarten werden am Schalter abgelehnt." },
     { q: 'Welches Budget für einen Mietwagen in Marrakesch?', a: "25 bis 35 € pro Tag für einen Kleinwagen, 35 bis 45 € für einen Kompakten, 55 bis 90 € für einen SUV und 45 bis 60 € für eine Automatik. Dazu Kraftstoff bei rund 12 bis 14 MAD je Liter, Maut und eine eventuelle Haftungsreduzierung." },
     { q: 'Welche Kaution verlangt man für einen Mietwagen in Marokko?', a: "5.000 bis 15.000 MAD je nach Kategorie, reserviert auf einer Kreditkarte auf den Namen des Hauptfahrers. Prepaidkarten werden abgelehnt: Prüfen Sie Ihr Limit vor der Abreise." },
     { q: 'Wie vermeidet man Streit mit einem marokkanischen Vermieter?', a: "Filmen Sie das Fahrzeug bei Übernahme aus allen Winkeln mit Zeitstempel, Felgen und Scheibe inklusive, lassen Sie jeden Kratzer protokollieren und wiederholen Sie die Serie bei Rückgabe. Prüfen Sie außerdem Warnweste, Warndreieck, Reserverad und Wagenheber." },

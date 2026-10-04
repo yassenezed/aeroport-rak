@@ -4,7 +4,7 @@ export default {
   title: "Del aeropuerto de Marrakech-Menara al centro: las opciones",
   description: "Del aeropuerto de Marrakech-Menara al centro: taxi, traslado, autobús 19 o alquiler, con precios reales, duraciones y puertas de la medina.",
   eyebrow: 'Transportes',
-  h1: 'Del aeropuerto RAK al centro de Marrakech',
+  h1: "Del aeropuerto de Marrakech-Menara al centro de Marrakech",
   lede: "Seis kilómetros, cuatro opciones y una sola dificultad real: la medina no se atraviesa en coche. Esto es lo que cuesta cada solución y cuál corresponde a su hora de aterrizaje.",
   excerpt: 'Taxi, traslado, autobús 19 o alquiler: las cuatro formas de llegar al centro, con los precios reales y las puertas de la medina.',
   date: '2026-09-15',
@@ -15,7 +15,7 @@ export default {
     { label: 'Traslado', value: '27 €', sub: 'desde' },
   ],
   body: `
-<h2>La comparación en una tabla</h2>
+<h2>Aeropuerto de Marrakech-Menara → centro: la comparación</h2>
 <div class="table-wrap">
 <table class="data">
 <thead><tr><th>Opción</th><th>Precio</th><th>Duración</th><th>Deja en</th></tr></thead>
@@ -28,7 +28,7 @@ export default {
 </table>
 </div>
 
-<h2>El taxi: la opción por defecto, y es buena</h2>
+<h2>El taxi desde el aeropuerto de Marrakech-Menara: la opción por defecto</h2>
 <p>Marrakech muestra sus tarifas en la parada del aeropuerto, por zonas. Para la medina, Guéliz y el Hivernage la horquilla es de <strong>100 a 150 MAD de día</strong>, es decir 9 a 14 € el coche entero, y de 150 a 240 MAD tras la puesta de sol. El precio corresponde a la carrera, no a cada pasajero.</p>
 <p>La regla que evita el 90 % de los disgustos: nombre su puerta, cite el panel, confirme el importe y <strong>después</strong> abra el maletero. Si el conductor se niega, el siguiente aceptará.</p>
 <p>Atención al tamaño: el petit taxi beige está limitado a tres pasajeros. Siendo cuatro con maletas, le ofrecerán dos coches: pida directamente un grand taxi o pagará el doble.</p>
@@ -37,9 +37,28 @@ export default {
 <p>A 27 € por vehículo hasta siete pasajeros, el traslado no tiene ningún interés para dos personas que llegan a las 14 h. Lo tiene, y mucho, en tres casos: <strong>de noche</strong>, cuando el taxi sube a 150–240 MAD; <strong>a partir de cuatro pasajeros</strong>, cuando dos petits taxis cuestan más; y para un <strong>riad difícil de situar</strong>, donde el conductor parará en la puerta que le convenga y no en la más cercana.</p>
 <p>A eso se suman el seguimiento del vuelo, la espera incluida en caso de retraso y la posibilidad de pedir sillas infantiles, que los taxis prácticamente nunca ofrecen.</p>
 
-<h2>El autobús 19: imbatible, con condiciones</h2>
+<h2>El autobús 19 del aeropuerto de Marrakech-Menara: imbatible, con condiciones</h2>
 <p>La línea 19 de ALSA une el aeropuerto con Jemaa el-Fna por <strong>30 MAD la ida y 50 MAD ida y vuelta</strong>, válido unos quince días, con una salida cada treinta minutos aproximadamente entre las 6 h y las 23:30. La parada está a la salida de la terminal y el trayecto dura unos veinte minutos.</p>
 <p>Funciona perfectamente para dos personas, de día, con un equipaje que se pueda cargar. Se vuelve pesado con dos maletas, un niño o después de las 22 h, y solo llega a la plaza, no a su alojamiento.</p>
+
+<h2>Tiempo de trayecto por barrio</h2>
+<p>El aeropuerto está al suroeste de la ciudad, a seis kilómetros de Jemaa el-Fna: ningún barrio queda realmente lejos, pero el tráfico de última hora de la tarde puede duplicar el tiempo. Referencias en coche, fuera de la hora punta:</p>
+<div class="table-wrap">
+<table class="data">
+<thead><tr><th>Barrio</th><th>En coche</th><th>Conviene saber</th></tr></thead>
+<tbody>
+<tr><td><strong>Hivernage, Menara, Agdal</strong></td><td class="num">10–15 min</td><td>Grandes hoteles, acceso hasta la puerta</td></tr>
+<tr class="row-highlight"><td><strong>Medina (Jemaa el-Fna)</strong></td><td class="num">15–25 min</td><td>Bajada en una puerta, luego a pie</td></tr>
+<tr><td><strong>Gueliz</strong></td><td class="num">15–20 min</td><td>Estación ONCF, restaurantes, agencias de alquiler</td></tr>
+<tr><td><strong>Palmeraie, carretera del Golf</strong></td><td class="num">25–35 min</td><td>Resorts; taxi más caro que a la medina</td></tr>
+</tbody>
+</table>
+</div>
+<p>Para elegir dónde alojarse según su hora de llegada, vea nuestra selección de <a href="/es/hotels/">hoteles cerca del aeropuerto</a>.</p>
+
+<h2>Llegar de noche al aeropuerto de Marrakech-Menara</h2>
+<p>A partir de las 22 h las reglas cambian. El <strong>autobús 19 deja de circular hacia las 23.30 h</strong>, los taxis pasan a la tarifa nocturna (150 a 240 MAD hasta la medina) y la mayoría de los riads cierran la puerta: sin nadie esperándole, una llegada a la 1 h puede convertirse en buscar un callejón a oscuras.</p>
+<p>Ahí el <a href="/es/book-transfer/">traslado reservado</a> cobra todo su sentido: precio fijo acordado de antemano, chófer que sigue su vuelo y espera si hay retraso, bajada en la puerta más cercana al riad. Antes de salir, consulte la hora real de aterrizaje en nuestra página de <a href="/es/arrivals/">llegadas</a> y envíela a su alojamiento.</p>
 
 <h2>Los últimos cien metros</h2>
 <p>Sea cual sea la opción, la medina termina a pie: los <em>derbs</em> son demasiado estrechos y varios accesos están cerrados al tráfico. Según su zona le dejarán en <strong>Bab Doukkala, Bab Laksour, Bab Agnaou o Bab el Khemis</strong>, a tres o diez minutos andando.</p>
@@ -49,6 +68,8 @@ export default {
 </div>
 `,
   faqs: [
+    { q: "¿Funciona Uber en el aeropuerto de Marrakech?", a: "Uber volvió a Marrakech a finales de noviembre de 2025, solo con conductores de operadores de transporte autorizados. La disponibilidad en el aeropuerto es variable, sobre todo de noche: tenga como alternativa la parada de taxis o un traslado reservado. Tarifas de la parada en nuestra página <a href=\"/es/marrakech-airport-taxi/\">taxi aeropuerto de Marrakech</a>." },
+    { q: "¿Cuál es la mejor opción para llegar a la medina de noche?", a: "El traslado reservado: el autobús 19 no circula después de las 23.30 h y el taxi pasa a la tarifa nocturna (150 a 240 MAD). Desde 27 € por vehículo, garantiza un precio fijo y un chófer que le deja en la puerta de la medina más cercana a su riad." },
     {
       q: '¿Cuánto cuesta un taxi del aeropuerto de Marrakech al centro?',
       a: "De 100 a 150 MAD de día hacia la medina, Guéliz y el Hivernage, y de 150 a 240 MAD de noche, por el coche entero y no por pasajero. Las tarifas están publicadas en un panel en la parada de taxis.",

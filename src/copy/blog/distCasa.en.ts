@@ -4,7 +4,7 @@ export default {
   title: "Marrakech Menara Airport to Casablanca: train, coach, road",
   description: "Getting from Marrakech Menara Airport to Casablanca: 240 km, motorway, ONCF train from Gueliz station, CTM coach and private transfer.",
   eyebrow: 'Distances',
-  h1: 'From Marrakech Airport to Casablanca',
+  h1: "From Marrakech Menara Airport to Casablanca",
   lede: "Two hundred and forty kilometres of motorway, or three hours by train from Gueliz station. The choice hinges on one detail: no railway serves the airport, so you must first reach the station.",
   excerpt: 'ONCF train, CTM coach, motorway or private transfer between RAK and Casablanca: times, prices and the station access leg.',
   date: '2026-09-02',
@@ -20,7 +20,16 @@ export default {
 <p>The caveat is the starting point: Marrakech station sits in the <strong>Gueliz</strong> district, not at the airport. Allow MAD 50–70 for a taxi from RAK, ten to fifteen minutes, plus a waiting margin. Total journey time therefore approaches four hours.</p>
 <p>Watch the arrival station too: <strong>Casa-Voyageurs</strong> is the main one, while <strong>Casa-Port</strong> is closer to the centre and the corniche. Check which serves your destination.</p>
 
-<h2>The other options</h2>
+<h2>The train step by step from Marrakech Menara Airport</h2>
+<ol>
+<li><strong>Taxi to Marrakech station</strong> (Gueliz): MAD 50 to 70 by day, ten to fifteen minutes. Say "la gare ONCF" and confirm the fare before loading the bags — see our <a href="/en/marrakech-airport-taxi/">airport taxi</a> page.</li>
+<li><strong>Ticket</strong>: at the station counters or machines, or in advance on the ONCF website and app. Buy online on peak days (Friday evenings, end of holidays, festivals).</li>
+<li><strong>Journey</strong>: about three hours to Casa-Voyageurs, in air-conditioned carriages with luggage space.</li>
+<li><strong>Arrival</strong>: at Casa-Voyageurs, tram and red petits taxis to the centre; some trains continue to Casa-Port.</li>
+</ol>
+<p>Allow an hour between landing and your train: getting out of the terminal (passport control, bags) often takes 30 to 60 minutes.</p>
+
+<h2>Marrakech Menara Airport to Casablanca: all the options</h2>
 <div class="table-wrap">
 <table class="data">
 <thead><tr><th>Option</th><th>Price</th><th>Door-to-door</th></tr></thead>
@@ -41,10 +50,20 @@ export default {
 <p>CMN (Casablanca Mohammed V) often tops search results for Morocco, and sits 240 kilometres from Marrakech. If your destination is Marrakech, check that your ticket reads <strong>RAK</strong>.</p>
 </div>
 
-<h2>Which option to choose</h2>
+<h2>Which option to choose from Marrakech Menara Airport</h2>
 <p><strong>The train</strong> for one or two travellers without tight timing: comfortable, punctual and cheap. <strong>A private transfer</strong> from three or four passengers, or with fixed timings: you leave the terminal and arrive at your address, with no change. <strong>A hire car</strong> only if you intend to continue to Rabat or along the coast.</p>
+
+<h2>By car: the A7 motorway from the airport</h2>
+<p>Leaving the airport, join the Marrakech ring road then the A7 motorway north: <strong>about 240 km and 2 h 30</strong> to Casablanca, with tolls payable in cash or by card and regular service areas. The road is simple and well maintained; speed cameras are frequent and the limit is 120 km/h.</p>
+<p>A car hired at Marrakech airport and returned in Casablanca often carries a <strong>one-way fee</strong>: check it before booking on our <a href="/en/car-rental/">car hire</a> page, and read our <a href="/en/blog/car-rental-marrakech-airport/">airport car hire guide</a> for deposit and inspection.</p>
+<div class="callout">
+<span class="callout-label">Group or tight schedule?</span>
+<p>From three or four travellers, a <a href="/en/transfers/">private transfer</a> from the terminal often costs about the same as several train tickets plus taxis, with no change and no bags to carry.</p>
+</div>
 `,
   faqs: [
+    { q: "Is there a direct bus from Marrakech airport to Casablanca?", a: "Not from the terminal: CTM and Supratours coaches leave from their stations in town. Take a taxi first (MAD 50 to 70) to the bus or train station, then allow four to four and a half hours." },
+    { q: "How much is a private transfer from Marrakech airport to Casablanca?", a: "Around €130 to €170 per vehicle, for two and a half hours without changes. It is the best value from three or four travellers or with a lot of luggage." },
     {
       q: 'Is there a train between Marrakech Airport and Casablanca?',
       a: "Not from the airport: Marrakech's ONCF station is in the Gueliz district, ten to fifteen minutes by taxi from the terminal. From there, the train reaches Casablanca in about three hours.",
