@@ -10,6 +10,7 @@ import CompensationWidget from '../components/affiliate/CompensationWidget.astro
 import ToursWidget from '../components/affiliate/ToursWidget.astro';
 import CarRentalWidget from '../components/affiliate/CarRentalWidget.astro';
 import TransferWidget from '../components/affiliate/TransferWidget.astro';
+import ContactForm from '../components/ui/ContactForm.astro';
 import Icon from '../components/ui/Icon.astro';
 import DestinationsExplorer from '../components/destinations/DestinationsExplorer.astro';
 import { airport } from '../data/airport';
@@ -207,6 +208,7 @@ if (page.faqs?.length) {
         {page.widget === 'compensation' && <CompensationWidget locale={locale} />}
         {page.widget === 'tours' && <ToursWidget />}
         {page.widget === 'car-rental' && <CarRentalWidget locale={locale} />}
+        {page.widget === 'contact-form' && <ContactForm locale={locale} />}
       </div>
     </section>
   )}

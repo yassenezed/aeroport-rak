@@ -7,6 +7,8 @@ export default {
   eyebrow: "AeroportRAK",
   h1: "اتصل بنا",
   lede: "معلومة قديمة، سعر لم يعد مطابقًا، إضافة ضرورية: راسلنا. نقرأ كل الرسائل ونصحح الصفحات المعنية.",
+  widget: 'contact-form',
+  widgetIntro: { heading: "أرسل لنا رسالة", text: "أسرع طريقة للإبلاغ عن خطأ: املأ النموذج وتصلنا رسالتك مباشرة." },
   body: `
 <h2>مراسلة فريق التحرير</h2>
 <p>البريد الإلكتروني: <a href="mailto:${site.contactEmail}">${site.contactEmail}</a></p>

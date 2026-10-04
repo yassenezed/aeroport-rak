@@ -35,6 +35,7 @@ export default {
 <li><strong>Google Analytics 4</strong> (Google Ireland Ltd): إحصاءات الزيارات دون الاحتفاظ بعناوين IP. يرسل وضع الموافقة من Google إشارات مجهولة فقط ودون ملفات ارتباط إلى أن توافق.</li>
 <li><strong>الشراكة</strong>: Travelpayouts وشركاؤها (Kiwitaxi للنقل، EconomyBookings لكراء السيارات، محركات البحث عن الرحلات)، وBooking.com للفنادق. قد تضع ملف ارتباط لنسب الحجز إلى موقعنا.</li>
 <li><strong>الإعلانات (Google AdSense)</strong>: قد يعرض الموقع إعلانات. يستخدم موردون خارجيون، منهم Google، ملفات ارتباط لعرض إعلانات بناءً على زياراتك السابقة لهذا الموقع أو لمواقع أخرى. تتيح ملفات الارتباط الإعلانية لـGoogle ولشركائها عرض إعلانات ملائمة لك. يمكنك إيقاف الإعلانات المخصصة من <a href="https://adssettings.google.com" rel="noopener" target="_blank">إعدادات إعلانات Google</a>. للمزيد: <a href="https://policies.google.com/technologies/partner-sites?hl=ar" rel="noopener" target="_blank">كيف تستخدم Google بيانات المواقع الشريكة</a>.</li>
+<li><strong>نموذج الاتصال</strong>: تمر الرسائل المرسلة عبر النموذج من خلال Formspree (Formspree Inc.، الولايات المتحدة) التي تحيلها إلينا بالبريد الإلكتروني، وتُستعمل فقط للرد عليك.</li>
 </ul>
 
 <h2>روابط الشراكة</h2>

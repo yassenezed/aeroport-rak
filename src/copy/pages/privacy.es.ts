@@ -35,6 +35,7 @@ export default {
 <li><strong>Google Analytics 4</strong> (Google Ireland Ltd): estadísticas de visitas, sin conservar las direcciones IP. El modo de consentimiento de Google solo envía señales anónimas sin cookies hasta que usted acepte.</li>
 <li><strong>Afiliación</strong>: Travelpayouts y sus socios (Kiwitaxi para traslados, EconomyBookings para alquiler de coches, buscadores de vuelos), y Booking.com para hoteles. Pueden instalar una cookie para atribuir una reserva a nuestro sitio.</li>
 <li><strong>Publicidad (Google AdSense)</strong>: el sitio puede mostrar anuncios. Proveedores externos, incluido Google, utilizan cookies para mostrar anuncios según sus visitas anteriores a este u otros sitios web. Las cookies publicitarias de Google le permiten a Google y a sus socios mostrarle anuncios adaptados. Puede desactivar la publicidad personalizada en la <a href="https://adssettings.google.com" rel="noopener" target="_blank">configuración de anuncios de Google</a> o en <a href="https://www.youronlinechoices.com/es/" rel="noopener" target="_blank">youronlinechoices.com</a>. Más información: <a href="https://policies.google.com/technologies/partner-sites?hl=es" rel="noopener" target="_blank">cómo usa Google los datos de sitios asociados</a>.</li>
+<li><strong>Formulario de contacto</strong>: los mensajes enviados con el formulario pasan por Formspree (Formspree Inc., Estados Unidos), que nos los reenvía por correo. Solo se usan para responderle.</li>
 </ul>
 
 <h2>Enlaces de afiliación</h2>

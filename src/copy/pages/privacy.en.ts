@@ -35,6 +35,7 @@ export default {
 <li><strong>Google Analytics 4</strong> (Google Ireland Ltd): visitor statistics, IP addresses not stored. Google's consent mode only sends anonymous, cookieless signals until you accept.</li>
 <li><strong>Affiliate partners</strong>: Travelpayouts and its partners (Kiwitaxi for transfers, EconomyBookings for car hire, flight search tools), and Booking.com for hotels. They may set a cookie to attribute a booking to our site.</li>
 <li><strong>Advertising (Google AdSense)</strong>: the site may display ads. Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this website or other websites. Google's use of advertising cookies enables it and its partners to serve ads based on your visits. You can opt out of personalised advertising in <a href="https://adssettings.google.com" rel="noopener" target="_blank">Google Ads Settings</a> or at <a href="https://www.aboutads.info/choices/" rel="noopener" target="_blank">aboutads.info</a>. More: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener" target="_blank">how Google uses data from partner sites</a>.</li>
+<li><strong>Contact form</strong>: messages sent through the form are processed by Formspree (Formspree Inc., United States), which forwards them to us by email. They are only used to reply to you.</li>
 </ul>
 
 <h2>Affiliate links</h2>

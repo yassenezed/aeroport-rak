@@ -7,6 +7,8 @@ export default {
   eyebrow: "AeroportRAK",
   h1: "Contact",
   lede: "Verouderde informatie, een tarief dat niet meer klopt, een aanvulling: schrijf ons. We lezen elk bericht en corrigeren de betreffende pagina's.",
+  widget: 'contact-form',
+  widgetIntro: { heading: "Stuur ons een bericht", text: "De snelste manier om een fout te melden: vul het formulier in en uw bericht komt direct bij ons." },
   body: `
 <h2>De redactie schrijven</h2>
 <p>E-mail: <a href="mailto:${site.contactEmail}">${site.contactEmail}</a></p>

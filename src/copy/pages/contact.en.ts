@@ -7,6 +7,8 @@ export default {
   eyebrow: 'AeroportRAK',
   h1: 'Contact us',
   lede: "Out-of-date information, a fare that no longer matches, a detail to add: write to us. We read every message and correct the pages concerned.",
+  widget: 'contact-form',
+  widgetIntro: { heading: "Send us a message", text: "The quickest way to report an error: fill in the form and your message reaches us directly." },
   body: `
 <h2>Writing to the editors</h2>
 <p>Email: <a href="mailto:${site.contactEmail}">${site.contactEmail}</a></p>
