@@ -4,7 +4,7 @@ export default {
   title: "Geld op luchthaven Marrakech-Menara: dirham en automaten",
   description: "De Marokkaanse dirham in de praktijk: waar wisselen, opnemen op luchthaven Marrakech-Menara, met kaart betalen, fooien en dagbudget.",
   eyebrow: "Praktisch",
-  h1: "Geld in Marokko: wat u vóór de landing moet weten",
+  h1: "Geld en dirham op luchthaven Marrakech-Menara: wat u moet weten",
   lede: "De dirham is buiten Marokko niet te koop en mag ook niet mee naar buiten. Die dubbele regel bepaalt hoe u ter plaatse met geld omgaat – te beginnen bij de eerste opname in de aankomsthal.",
   excerpt: "Dirham, geldautomaten, wisselen, kaartbetaling en fooien: geld in Marokko, van de aankomsthal tot de laatste dag.",
   date: "2026-09-12",
@@ -19,7 +19,11 @@ export default {
 <p>De Marokkaanse dirham is niet vrij inwisselbaar: u vindt hem bij geen enkel Europees wisselkantoor en u kunt hem niet mee naar huis nemen. Twee momenten tellen: de <strong>eerste opname bij aankomst</strong>, in de hal van de luchthaven, en het <strong>terugwisselen vóór de grenspolitie</strong> op de dag van vertrek.</p>
 <p>Boven 100.000 MAD geldt bij in- en uitreis een aangifteplicht – een drempel die een gewone vakantie niet raakt.</p>
 
-<h2>Opnemen in plaats van wisselen</h2>
+<h2>Geldautomaten en wisselkantoren op luchthaven Marrakech-Menara</h2>
+<p>In de openbare aankomsthal, direct na de douane, staan meerdere <strong>geldautomaten</strong> en <strong>wisselkantoren</strong>, en er zijn er ook aan de vertrekzijde. De automaten accepteren Visa en Mastercard; de koers van de wisselkantoren op de luchthaven is redelijk maar niet de beste van de stad. De goede reflex: opnemen bij het naar buiten gaan, voordat u een taxi zoekt — de taxistandplaats wordt contant betaald (zie onze pagina <a href="/nl/marrakech-airport-taxi/">luchthaventaxi</a>).</p>
+<p>Wilt u bij aankomst geen contant geld nodig hebben, dan voorkomt een <a href="/nl/book-transfer/">online geboekte en betaalde transfer</a> dat u moet opnemen voordat u de terminal verlaat. Alle voorzieningen staan op onze pagina <a href="/nl/services/">luchthavendiensten</a>.</p>
+
+<h2>Opnemen in plaats van wisselen op luchthaven Marrakech-Menara</h2>
 <p>Geldautomaten geven meestal een betere koers dan wisselkantoren, ook die op de luchthaven. Een paar nuttige regels:</p>
 <ul>
 <li><strong>Weiger altijd de omrekening die de automaat voorstelt.</strong> Stelt het scherm voor om in euro's in plaats van dirham af te rekenen, zeg dan nee: die dienst hanteert een ongunstige koers. Kies altijd de lokale munt.</li>
@@ -59,8 +63,27 @@ export default {
 <span class="callout-label">Op de dag van vertrek</span>
 <p>Wissel uw dirham terug <strong>vóór</strong> de grenspolitie: daarna lukt het niet meer tegen redelijke voorwaarden. Bewaar het bonnetje van uw eerste wissel, sommige loketten vragen erom. En houd genoeg over voor een koffie en een laatste taxi.</p>
 </div>
+
+<h2>Hoeveel opnemen bij aankomst op luchthaven Marrakech-Menara</h2>
+<p>Voor de eerste 24 uur, voordat u in de stad een automaat vindt, een richtlijn:</p>
+<div class="table-wrap">
+<table class="data">
+<thead><tr><th>Uitgave</th><th>Richtbedrag</th></tr></thead>
+<tbody>
+<tr><td>Taxi naar de medina (dag / nacht)</td><td class="num">100–150 / 150–240 MAD</td></tr>
+<tr><td>Kruier tot aan de riad</td><td class="num">10–20 MAD</td></tr>
+<tr><td>Toeristen-simkaart</td><td class="num">50–100 MAD</td></tr>
+<tr><td>Diner in een degelijk restaurant</td><td class="num">70–120 MAD per persoon</td></tr>
+<tr><td>Koffie, water, fooien</td><td class="num">50–100 MAD</td></tr>
+<tr class="row-highlight"><td><strong>Totaal voor twee personen</strong></td><td class="num"><strong>≈ 500–800 MAD (€ 45–75)</strong></td></tr>
+</tbody>
+</table>
+</div>
+<p>Een opname van 1.000 MAD (≈ € 90) dekt de aankomst en de volgende dag ruim. Voor de simkaart, zie onze gids <a href="/nl/blog/morocco-sim-cards/">simkaart op de luchthaven</a>.</p>
 `,
   faqs: [
+    { q: "Zijn er geldautomaten op de luchthaven van Marrakech?", a: "Ja, meerdere automaten voor Visa en Mastercard staan in de openbare aankomsthal na de douane en aan de vertrekzijde. Omdat de kosten deels vast zijn, is één grote opname voordeliger dan meerdere kleine." },
+    { q: "Heb je dirham nodig voor de taxi op de luchthaven van Marrakech?", a: "Ja: taxi's van de standplaats worden contant in dirham betaald en kaarten worden bijna nooit geaccepteerd. Neem op voordat u de hal verlaat, of boek een online betaalde transfer als u bij aankomst geen contant geld wilt." },
     { q: "Kun je vóór de reis naar Marokko dirham kopen?", a: "Nee, de dirham is niet vrij inwisselbaar en bij Europese wisselkantoren niet verkrijgbaar. Uw eerste opname of wissel gebeurt bij aankomst in de hal van luchthaven Marrakech." },
     { q: "Beter opnemen bij de automaat of euro's wisselen in Marokko?", a: "Opnemen bij de automaat geeft meestal een betere koers, mits u de voorgestelde omrekening naar euro's weigert en in één keer een flink bedrag opneemt, want de kosten zijn grotendeels vast." },
     { q: "Kun je in Marrakech met een kaart betalen?", a: "In hotels, toeristische restaurants en bij autoverhuurders wel. In taxi's, souks en voor alles op straat niet: neem contant geld mee in kleine biljetten van 50 en 100 MAD." },

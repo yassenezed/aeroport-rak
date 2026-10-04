@@ -4,7 +4,7 @@ export default {
   title: "Fast Track op luchthaven Marrakech-Menara: prijs en nut",
   description: "Fast Track op luchthaven Marrakech-Menara: hoeveel tijd het scheelt, wat het kost, wanneer het loont en wanneer niet.",
   eyebrow: "Luchthaven",
-  h1: "Fast Track in Marrakech: zinvol of niet?",
+  h1: "Fast Track op luchthaven Marrakech-Menara: de moeite waard?",
   lede: "Het knelpunt van de RAK is de paspoortcontrole – bij aankomst én bij vertrek. Een voorrangsdienst pakt precies dat aan, wat hem op sommige tijden zinvol en op andere volkomen nutteloos maakt.",
   excerpt: "Wat Fast Track in Marrakech echt oplevert, wat het kost en op welke tijden het echt loont.",
   date: "2026-09-08",
@@ -19,7 +19,16 @@ export default {
 </ul>
 <p>Wat er nooit onder valt: de beveiligingscontrole bij vertrek, voor iedereen verplicht, en de bagageafgifte, waarvan de duur afhangt van de grondafhandeling.</p>
 
-<h2>Hoeveel tijd u echt wint</h2>
+<h2>De route bij aankomst, met en zonder voorrangsdoorgang</h2>
+<ol>
+<li><strong>Uitstappen</strong> via een slurf of met de bus naar de terminal.</li>
+<li><strong>Grenspolitie</strong>: hier ontstaan de rijen, en dit is de enige stap die Fast Track verkort.</li>
+<li><strong>Bagageafhandeling</strong>: dezelfde wachttijd voor iedereen, met of zonder Fast Track.</li>
+<li><strong>Douane</strong>, daarna naar buiten de aankomsthal in, waar de chauffeurs wachten.</li>
+</ol>
+<p>Zonder voorrang duurt het afhankelijk van het tijdstip meestal 30 tot 60 minuten om buiten te komen. Met voorrang wint u vooral de paspoortrij — daarna wacht u op uw bagage zoals iedereen. Volg uw vlucht op onze pagina <a href="/nl/arrivals/">aankomsten</a> en lees tips per stap in onze <a href="/nl/airport-guide/">luchthavengids</a>.</p>
+
+<h2>Hoeveel tijd u wint op luchthaven Marrakech-Menara</h2>
 <div class="table-wrap">
 <table class="data">
 <thead><tr><th>Moment</th><th>Wachttijd paspoort</th><th>Geschatte winst</th><th>Oordeel</th></tr></thead>
@@ -33,7 +42,7 @@ export default {
 </div>
 <p>De cijfers schommelen per seizoen en aantal gelijktijdige vluchten. De regel past in één zin: <strong>de dienst loont alleen als uw tijdvak druk is</strong>. Midden op de dag in het laagseizoen betaalt u voor een kwartier.</p>
 
-<h2>Wat het kost</h2>
+<h2>Prijs van Fast Track op luchthaven Marrakech-Menara</h2>
 <p>Afhankelijk van aanbieder en pakket rekent u op ongeveer <strong>€ 20 tot € 60 per persoon</strong> voor een eenvoudige voorrang, meer voor een volledige ontvangst met begeleiding en lounge. Omdat de prijs per passagier geldt, bereikt een gezin van vier snel een bedrag dat bedenktijd verdient.</p>
 
 <h2>Wanneer het echt loont</h2>
@@ -50,8 +59,13 @@ export default {
 
 <h2>Wat u vóór aankoop controleert</h2>
 <p>Drie punten, elke keer. Geldt de dienst <strong>bij aankomst, vertrek of beide</strong>? Geldt hij <strong>voor uw terminal</strong> – de RAK heeft er twee? En waar is precies het <strong>ontmoetingspunt</strong> met de medewerker? Dat is de meest voorkomende reden voor teleurstelling: een betaalde dienst die u nooit vond.</p>
+
+<h2>Fast Track, lounge en transfer op luchthaven Marrakech-Menara</h2>
+<p><strong>Bij een nachtelijke aankomst</strong> helpt Fast Track alleen als er buiten iemand wacht: combineer het met een <a href="/nl/book-transfer/">geboekte transfer</a>, anders verliest u de gewonnen dertig minuten weer bij de taxistandplaats. <strong>Bij een vroeg vertrek</strong> combineert het goed met een loungetoegang om rustig op het boarden te wachten — zie onze vergelijking van de <a href="/nl/blog/marrakech-airport-vip-lounges/">luchthavenlounges</a> en de tijden op de pagina <a href="/nl/departures/">vertrek</a>.</p>
 `,
   faqs: [
+    { q: "Versnelt Fast Track de bagageafhandeling in Marrakech?", a: "Nee. Het verkort alleen de rij bij de grenspolitie. De bagageafhandeling hangt af van de grondafhandeling en duurt voor alle passagiers even lang." },
+    { q: "Fast Track of VIP-lounge in Marrakech: wat kiezen?", a: "Ze dienen een ander doel: Fast Track spaart tijd bij de controles, een lounge maakt het wachten voor het boarden comfortabel. Bij een heel vroeg vertrek in het hoogseizoen gaan ze goed samen; midden op de dag is geen van beide nodig." },
     { q: "Bestaat Fast Track op luchthaven Marrakech?", a: "Ja, als voorrang bij de paspoortcontrole, bij aankomst en vertrek aangeboden door verschillende aanbieders, vaak met begeleiding en soms loungetoegang." },
     { q: "Hoeveel tijd bespaart Fast Track in Marrakech?", a: "25 tot 50 minuten op drukke momenten – aankomsten van 20.00 uur tot middernacht, vertrek tussen 6.00 en 9.00 uur. Midden op de dag in het laagseizoen scheelt het ongeveer een kwartier, wat de uitgave niet rechtvaardigt." },
     { q: "Wat kost Fast Track op de RAK?", a: "Ongeveer € 20 tot € 60 per persoon voor een eenvoudige voorrang, meer voor een volledige ontvangst met begeleiding en lounge. Omdat het per passagier is, rekent u het voor een gezin opnieuw uit." },

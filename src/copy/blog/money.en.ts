@@ -4,7 +4,7 @@ export default {
   title: "Money at Marrakech Menara Airport: dirhams and ATMs",
   description: "The Moroccan dirham in practice: where to change, withdrawing at Marrakech Menara Airport, paying by card, tipping and daily budgets.",
   eyebrow: 'Practical',
-  h1: 'Money in Morocco: what to know before you land',
+  h1: "Money and dirhams at Marrakech Menara Airport: what to know",
   lede: "The dirham cannot be bought outside Morocco and cannot be taken out either. That double rule shapes how you handle money there — starting with your first withdrawal in the arrivals hall.",
   excerpt: 'Dirhams, ATMs, exchange, card payments and tipping: managing money in Morocco, from arrivals to your last day.',
   date: '2026-09-12',
@@ -19,7 +19,11 @@ export default {
 <p>The Moroccan dirham is non-convertible: you will not find it in a European bureau de change, and you cannot take it home. In practice two moments matter: the <strong>first withdrawal on arrival</strong>, in the airport hall, and <strong>changing back before border police</strong> on departure day.</p>
 <p>Above MAD 100,000 a declaration is required on entry and exit — a threshold that does not concern ordinary tourism.</p>
 
-<h2>Withdraw rather than exchange</h2>
+<h2>ATMs and exchange at Marrakech Menara Airport</h2>
+<p>Several <strong>ATMs</strong> and <strong>exchange offices</strong> stand in the public arrivals hall, just after customs, with others airside on departures. The ATMs take Visa and Mastercard; the airport exchange rate is fair without being the best in town. The right habit: withdraw on your way out, before looking for a taxi — the airport rank is paid in cash (see our <a href="/en/marrakech-airport-taxi/">airport taxi</a> page).</p>
+<p>If you would rather not handle cash on arrival, a <a href="/en/book-transfer/">transfer booked and paid online</a> means you do not need to withdraw before leaving the terminal. The full list of facilities is on our <a href="/en/services/">airport services</a> page.</p>
+
+<h2>Withdraw rather than exchange at Marrakech Menara Airport</h2>
 <p>ATMs generally give a better rate than bureaux de change, including those at the airport. A few useful rules:</p>
 <ul>
 <li><strong>Always decline the conversion the ATM offers.</strong> When the screen proposes charging in your home currency rather than dirhams, say no: that service applies an unfavourable rate. Always choose the local currency.</li>
@@ -59,8 +63,27 @@ export default {
 <span class="callout-label">On departure day</span>
 <p>Change your dirhams back <strong>before</strong> border police: past that point you can no longer do it on decent terms. Keep the receipt from your original exchange, as some counters ask for it. And keep enough for a coffee and one last taxi.</p>
 </div>
+
+<h2>How much to withdraw on arrival at Marrakech Menara Airport</h2>
+<p>For the first 24 hours, before finding an ATM in town, here is a rough guide:</p>
+<div class="table-wrap">
+<table class="data">
+<thead><tr><th>Expense</th><th>Rough amount</th></tr></thead>
+<tbody>
+<tr><td>Taxi to the medina (day / night)</td><td class="num">MAD 100–150 / 150–240</td></tr>
+<tr><td>Porter to the riad</td><td class="num">MAD 10–20</td></tr>
+<tr><td>Tourist SIM card</td><td class="num">MAD 50–100</td></tr>
+<tr><td>Dinner in a decent restaurant</td><td class="num">MAD 70–120 per person</td></tr>
+<tr><td>Coffee, water, tips</td><td class="num">MAD 50–100</td></tr>
+<tr class="row-highlight"><td><strong>Total for two people</strong></td><td class="num"><strong>≈ MAD 500–800 (€45–75)</strong></td></tr>
+</tbody>
+</table>
+</div>
+<p>A MAD 1,000 withdrawal (≈ €90) comfortably covers arrival and the next day. For the SIM card, see our <a href="/en/blog/morocco-sim-cards/">airport SIM card</a> guide.</p>
 `,
   faqs: [
+    { q: "Are there ATMs at Marrakech airport?", a: "Yes, several ATMs taking Visa and Mastercard are in the public arrivals hall, after customs, and airside on departures. As fees are partly fixed, one large withdrawal beats several small ones." },
+    { q: "Do I need dirhams for the taxi at Marrakech airport?", a: "Yes: rank taxis are paid in cash, in dirhams, and cards are almost never accepted. Withdraw before leaving the hall, or book a transfer paid online if you want no cash on arrival." },
     {
       q: 'Can you buy dirhams before travelling to Morocco?',
       a: "No, the dirham is a non-convertible currency not available in European bureaux de change. Your first withdrawal or exchange will happen on arrival, in the Marrakech Airport hall.",

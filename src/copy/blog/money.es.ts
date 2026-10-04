@@ -4,7 +4,7 @@ export default {
   title: "Dinero en el aeropuerto de Marrakech-Menara: dírhams",
   description: "El dirham marroquí en la práctica: dónde cambiar, sacar dinero en el aeropuerto de Marrakech-Menara, pagar con tarjeta, propinas y presupuesto diario.",
   eyebrow: 'Práctico',
-  h1: 'El dinero en Marruecos: lo que hay que saber antes de aterrizar',
+  h1: "Dinero y dírhams en el aeropuerto de Marrakech-Menara: lo que hay que saber",
   lede: "El dirham no se compra fuera de Marruecos y tampoco se exporta. Esa doble regla estructura toda la gestión de su dinero allí, empezando por la primera retirada en la sala de llegadas.",
   excerpt: 'Dirhams, cajeros, cambio, pago con tarjeta y propinas: la gestión del dinero en Marruecos, de la sala de llegadas al último día.',
   date: '2026-09-12',
@@ -19,7 +19,11 @@ export default {
 <p>El dirham marroquí es una divisa no convertible: no lo encontrará en una casa de cambio europea y no podrá llevárselo a casa. En concreto, cuentan dos momentos: la <strong>primera retirada a la llegada</strong>, en la sala del aeropuerto, y el <strong>cambio antes de la policía de fronteras</strong> el día de la salida.</p>
 <p>Por encima de 100.000 MAD, la declaración es obligatoria a la entrada y a la salida, un umbral que no afecta a un viaje turístico corriente.</p>
 
-<h2>Sacar dinero mejor que cambiar</h2>
+<h2>Cajeros y cambio en el aeropuerto de Marrakech-Menara</h2>
+<p>Hay varios <strong>cajeros</strong> y <strong>oficinas de cambio</strong> en el vestíbulo público de llegadas, justo después de la aduana, y otros en la zona de salidas. Los cajeros aceptan Visa y Mastercard; el cambio del aeropuerto es correcto sin ser el mejor de la ciudad. El buen reflejo: sacar dinero al salir, antes de buscar taxi, porque la parada del aeropuerto se paga en efectivo (vea nuestra página <a href="/es/marrakech-airport-taxi/">taxi aeropuerto</a>).</p>
+<p>Si prefiere no manejar efectivo al llegar, un <a href="/es/book-transfer/">traslado reservado y pagado en línea</a> le evita sacar dinero antes de dejar la terminal. La lista completa de servicios está en nuestra página <a href="/es/services/">servicios del aeropuerto</a>.</p>
+
+<h2>Sacar dinero mejor que cambiar en el aeropuerto de Marrakech-Menara</h2>
 <p>Los cajeros suelen dar mejor cambio que las casas de cambio, incluidas las del aeropuerto. Algunas reglas útiles:</p>
 <ul>
 <li><strong>Rechace siempre la conversión que propone el cajero.</strong> Cuando la pantalla ofrece cobrar en euros en lugar de en dirhams, diga que no: ese servicio aplica un tipo desfavorable. Elija siempre la moneda local.</li>
@@ -59,8 +63,27 @@ export default {
 <span class="callout-label">El día de la salida</span>
 <p>Cambie sus dirhams <strong>antes</strong> de la policía de fronteras: pasado ese punto ya no podrá hacerlo en buenas condiciones. Conserve el recibo de su cambio inicial, algunas ventanillas lo piden. Y guarde lo justo para un café y un último taxi.</p>
 </div>
+
+<h2>Cuánto sacar al llegar al aeropuerto de Marrakech-Menara</h2>
+<p>Para las primeras 24 horas, antes de encontrar un cajero en la ciudad, una referencia:</p>
+<div class="table-wrap">
+<table class="data">
+<thead><tr><th>Gasto</th><th>Importe orientativo</th></tr></thead>
+<tbody>
+<tr><td>Taxi a la medina (día / noche)</td><td class="num">100–150 / 150–240 MAD</td></tr>
+<tr><td>Porteador hasta el riad</td><td class="num">10–20 MAD</td></tr>
+<tr><td>Tarjeta SIM turística</td><td class="num">50–100 MAD</td></tr>
+<tr><td>Cena en un restaurante correcto</td><td class="num">70–120 MAD por persona</td></tr>
+<tr><td>Cafés, agua, propinas</td><td class="num">50–100 MAD</td></tr>
+<tr class="row-highlight"><td><strong>Total para dos personas</strong></td><td class="num"><strong>≈ 500–800 MAD (45–75 €)</strong></td></tr>
+</tbody>
+</table>
+</div>
+<p>Una retirada de 1.000 MAD (≈ 90 €) cubre de sobra la llegada y el día siguiente. Para la tarjeta SIM, vea nuestra guía <a href="/es/blog/morocco-sim-cards/">tarjeta SIM en el aeropuerto</a>.</p>
 `,
   faqs: [
+    { q: "¿Hay cajeros en el aeropuerto de Marrakech?", a: "Sí, varios cajeros que aceptan Visa y Mastercard están en el vestíbulo público de llegadas, después de la aduana, y en la zona de salidas. Como las comisiones son en parte fijas, mejor una retirada grande que varias pequeñas." },
+    { q: "¿Hacen falta dírhams para el taxi del aeropuerto de Marrakech?", a: "Sí: los taxis de la parada se pagan en efectivo, en dírhams, y casi nunca aceptan tarjeta. Saque dinero antes de salir del vestíbulo o reserve un traslado pagado en línea si no quiere efectivo al llegar." },
     {
       q: '¿Se pueden comprar dirhams antes de viajar a Marruecos?',
       a: "No, el dirham es una moneda no convertible que no se encuentra en las casas de cambio europeas. Su primera retirada o cambio se hará a la llegada, en la sala del aeropuerto de Marrakech.",

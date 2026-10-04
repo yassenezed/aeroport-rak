@@ -4,12 +4,12 @@ export default {
   title: "Tarjeta SIM en el aeropuerto de Marrakech-Menara",
   description: "Comprar una tarjeta SIM en el aeropuerto de Marrakech-Menara: tarifas turísticas de los tres operadores, precios, cobertura en el Atlas y alternativa eSIM.",
   eyebrow: 'Práctico',
-  h1: 'Qué tarjeta SIM elegir en Marruecos',
+  h1: "Tarjeta SIM en el aeropuerto de Marrakech-Menara: ¿qué operador elegir?",
   lede: "Tres operadores, tarifas turísticas por unas decenas de dirhams y mostradores en la sala de llegadas. Este es el que conviene elegir según su itinerario, y cuándo una eSIM cumple mejor.",
   excerpt: 'Maroc Telecom, Orange o inwi: precios, datos incluidos, cobertura en el Atlas y comparación con una eSIM activada antes de salir.',
   date: '2026-09-11',
   body: `
-<h2>Los tres operadores</h2>
+<h2>Los tres operadores del aeropuerto de Marrakech-Menara</h2>
 <p>El mercado marroquí se reparte entre <strong>Maroc Telecom (IAM)</strong>, <strong>Orange Maroc</strong> e <strong>inwi</strong>. Los tres tienen mostradores en la sala de llegadas del aeropuerto de Marrakech, abiertos con amplio horario, y ofrecen tarifas de prepago pensadas para visitantes.</p>
 <div class="table-wrap">
 <table class="data">
@@ -27,7 +27,7 @@ export default {
 <p>Calcule <strong>50 a 100 MAD</strong> por una tarjeta SIM de prepago que incluya varios gigabytes válidos de una a cuatro semanas, a menudo con crédito de llamadas nacionales. Las recargas se encuentran en todas partes: tiendas de operadores, ultramarinos, quioscos.</p>
 <p>Cuidado con las ofertas anunciadas como «ilimitadas»: suelen incluir un volumen a partir del cual la velocidad se reduce mucho. Para un uso turístico —mapas, mensajería, algunas búsquedas—, <strong>de 5 a 10 GB cubren de sobra una o dos semanas</strong>.</p>
 
-<h2>El trámite en el mostrador</h2>
+<h2>Comprar la SIM en el mostrador del aeropuerto de Marrakech-Menara</h2>
 <ol>
 <li><strong>Presente su pasaporte</strong>: el registro de identidad es obligatorio, sin excepción.</li>
 <li>Elija la tarifa y pague, preferiblemente en efectivo.</li>
@@ -36,6 +36,14 @@ export default {
 </ol>
 <p>Su teléfono debe estar <strong>libre de operador</strong> para aceptar una SIM extranjera. Es lo que más suele bloquear, y no se resuelve en el mostrador.</p>
 
+<h2>Lo que hay que resolver antes de aterrizar</h2>
+<ul>
+<li><strong>Compruebe que el teléfono está liberado</strong> por su operador: es lo único que no se arregla en el mostrador.</li>
+<li><strong>Desactive la itinerancia de datos</strong> de su SIM de origen al aterrizar, o déjela solo para los SMS del banco: las tarifas fuera de la UE siguen siendo altas.</li>
+<li><strong>Conserve su número de WhatsApp</strong>: sigue ligado a su número de origen aunque use una SIM marroquí, siempre que no lo cambie en la aplicación.</li>
+<li><strong>Lleve dírhams</strong> para pagar en el mostrador; vea <a href="/es/blog/money-in-morocco/">dinero y cambio en el aeropuerto</a>.</li>
+</ul>
+
 <h2>¿SIM local o eSIM?</h2>
 <p>La <strong>eSIM</strong> se instala antes de salir, se activa al aterrizar y le evita la cola, los papeles y el cambio de número. Es la mejor solución para una estancia corta si su teléfono es compatible: vea nuestra página <a href="/es/morocco-esim/">eSIM Marruecos</a>.</p>
 <p>La <strong>SIM local</strong> conserva dos ventajas claras: permite llamar a números marroquíes a tarifa local, algo que cuenta si necesita contactar con un riad, una empresa de alquiler o un guía; y resulta mucho más económica en estancias de más de dos o tres semanas.</p>
@@ -43,8 +51,13 @@ export default {
 <span class="callout-label">Antes de salir de la sala</span>
 <p>Descargue el mapa de Marrakech sin conexión mientras siga conectado al wifi del aeropuerto. Los callejones de la medina no corresponden a ninguna placa de calle, y un mapa sin conexión consume mucho menos que una navegación en directo.</p>
 </div>
+
+<h2>Wi-Fi gratuito en el aeropuerto de Marrakech-Menara</h2>
+<p>Hay <strong>Wi-Fi gratuito</strong> en las terminales, más lento en hora punta. Basta para escribir a su riad o a su chófer, descargar el mapa sin conexión o instalar una eSIM de última hora. No sustituye a los datos móviles después: al salir de la terminal los necesitará para seguir el trayecto en taxi o encontrar a su <a href="/es/book-transfer/">chófer de traslado</a>. Los demás servicios (cajeros, salas VIP, consigna) están en nuestra página <a href="/es/services/">servicios del aeropuerto</a>.</p>
 `,
   faqs: [
+    { q: "¿Se conserva WhatsApp con una SIM marroquí?", a: "Sí. WhatsApp sigue vinculado a su número de origen mientras no lo cambie en la aplicación: seguirá recibiendo mensajes usando los datos de la SIM marroquí." },
+    { q: "¿Hay Wi-Fi gratuito en el aeropuerto de Marrakech?", a: "Sí, hay una red Wi-Fi gratuita en las terminales. Es más lenta en hora punta, pero sirve para enviar un mensaje, descargar un mapa sin conexión o activar una eSIM." },
     {
       q: '¿Qué operador elegir en Marruecos?',
       a: "Maroc Telecom por la mejor cobertura fuera de las ciudades, sobre todo en el Atlas y hacia el sur. Orange por una buena relación datos/precio en zonas urbanas y turísticas. inwi suele ser el más barato pero más irregular en montaña.",

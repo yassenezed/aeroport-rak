@@ -5,7 +5,7 @@ export default {
     title: "Fast Track à l'aéroport de Marrakech-Ménara : prix et avis",
     description: "Fast Track à l'aéroport de Marrakech-Ménara : le temps réellement gagné, le prix, quand il se justifie et quand il ne sert à rien.",
     eyebrow: 'Aéroport',
-    h1: 'Fast Track à Marrakech : utile ou pas ?',
+    h1: "Fast Track à l'aéroport Marrakech-Ménara : utile ou pas ?",
     lede: "Le point de congestion du RAK, c'est le contrôle des passeports — à l'arrivée comme au départ. Un coupe-file s'y attaque directement, ce qui le rend pertinent à certaines heures et parfaitement inutile à d'autres.",
     excerpt: "Ce que le Fast Track fait vraiment gagner à Marrakech, son prix, et les créneaux horaires où il se justifie réellement.",
     date: '2026-09-08',
@@ -20,7 +20,16 @@ export default {
 </ul>
 <p>Ce que le service ne couvre jamais : la sûreté au départ, qui reste obligatoire pour tous, et la livraison des bagages, dont le délai dépend du traitement au sol.</p>
 
-<h2>Combien de temps on gagne, réellement</h2>
+<h2>Le parcours à l'arrivée, avec et sans coupe-file</h2>
+<ol>
+<li><strong>Débarquement</strong> par passerelle ou en bus jusqu'au terminal.</li>
+<li><strong>Police des frontières</strong> : c'est ici que se forment les files, et la seule étape que le Fast Track raccourcit.</li>
+<li><strong>Livraison des bagages</strong> : même délai pour tout le monde, Fast Track ou non.</li>
+<li><strong>Douane</strong>, puis sortie dans le hall des arrivées, où attendent les chauffeurs.</li>
+</ol>
+<p>Sans coupe-file, la sortie du terminal prend en général 30 à 60 minutes selon l'heure. Avec, vous gagnez surtout le temps de la file des passeports — et vous attendez ensuite vos bagages comme les autres. Suivez l'état de votre vol sur notre page <a href="/arrivees/">arrivées</a>, et les conseils de chaque étape dans notre <a href="/guide-aeroport/">guide de l'aéroport</a>.</p>
+
+<h2>Combien de temps on gagne à l'aéroport Marrakech-Ménara</h2>
 <div class="table-wrap">
 <table class="data">
 <thead><tr><th>Moment</th><th>Attente passeports</th><th>Gain estimé</th><th>Verdict</th></tr></thead>
@@ -34,7 +43,7 @@ export default {
 </div>
 <p>Les ordres de grandeur varient selon la saison et le nombre de vols simultanés. La règle tient en une phrase : <strong>le service ne vaut que si votre créneau est chargé</strong>. En milieu de journée hors saison, vous paierez pour gagner un quart d'heure.</p>
 
-<h2>Combien ça coûte</h2>
+<h2>Prix du Fast Track à l'aéroport Marrakech-Ménara</h2>
 <p>Selon le prestataire et la formule, comptez de l'ordre de <strong>20 à 60 € par personne</strong> pour un coupe-file simple, davantage pour un accueil complet avec accompagnement et salon. Le prix étant par passager, une famille de quatre atteint vite un montant qui mérite réflexion.</p>
 
 <h2>Quand cela se justifie vraiment</h2>
@@ -51,8 +60,13 @@ export default {
 
 <h2>Ce qu'il faut vérifier avant d'acheter</h2>
 <p>Trois points, systématiquement. Le service est-il proposé <strong>à l'arrivée, au départ, ou les deux</strong> ? Est-il <strong>valable sur votre terminal</strong>, le RAK en comptant deux ? Et quel est le <strong>point de rendez-vous exact</strong> avec l'agent — c'est le motif de déconvenue le plus fréquent, un service payé mais jamais trouvé.</p>
+
+<h2>Fast Track, salon et transfert à l'aéroport Marrakech-Ménara</h2>
+<p><strong>À l'arrivée de nuit</strong>, le coupe-file n'a d'intérêt que si quelqu'un vous attend à la sortie : l'associer à un <a href="/reserver-transfert/">transfert réservé</a> évite de gagner trente minutes à la police pour les perdre à la station de taxis. <strong>Au départ tôt le matin</strong>, il se combine bien avec un accès salon pour attendre l'embarquement au calme — voir notre comparatif des <a href="/blog/salons-vip-aeroport-marrakech/">salons de l'aéroport</a> et les horaires sur la page <a href="/departs/">départs</a>.</p>
 `,
     faqs: [
+      { q: "Le Fast Track accélère-t-il la récupération des bagages à Marrakech ?", a: "Non. Il raccourcit seulement la file de la police des frontières. La livraison des bagages dépend du traitement au sol et prend le même temps pour tous les passagers." },
+      { q: "Fast Track ou salon VIP à Marrakech : que choisir ?", a: "Ils ne répondent pas au même besoin : le Fast Track fait gagner du temps aux contrôles, le salon rend l'attente confortable avant l'embarquement. Au départ très tôt en haute saison, les deux se combinent bien ; en milieu de journée, aucun n'est indispensable." },
       {
         q: 'Le Fast Track existe-t-il à l\'aéroport de Marrakech ?',
         a: "Oui, sous forme de coupe-file au contrôle des passeports, proposé à l'arrivée comme au départ par différents prestataires, souvent avec un accompagnement par un agent et parfois un accès salon.",

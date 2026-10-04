@@ -4,7 +4,7 @@ export default {
   title: "Geld am Flughafen Marrakesch-Menara: Dirham, Automaten",
   description: "Der marokkanische Dirham in der Praxis: wo wechseln, Abheben am Flughafen Marrakesch-Menara, Kartenzahlung, Trinkgeld und Tagesbudget.",
   eyebrow: 'Praktisches',
-  h1: 'Geld in Marokko: was Sie vor der Landung wissen sollten',
+  h1: "Geld und Dirham am Flughafen Marrakesch-Menara: was Sie wissen sollten",
   lede: "Der Dirham lässt sich außerhalb Marokkos weder kaufen noch ausführen. Diese doppelte Regel bestimmt den Umgang mit Geld vor Ort – angefangen bei der ersten Abhebung in der Ankunftshalle.",
   excerpt: 'Dirham, Geldautomaten, Wechsel, Kartenzahlung und Trinkgeld: Geld in Marokko, von der Ankunftshalle bis zum letzten Tag.',
   date: '2026-09-12',
@@ -19,7 +19,11 @@ export default {
 <p>Der marokkanische Dirham ist nicht frei konvertierbar: Sie finden ihn in keiner europäischen Wechselstube und können ihn nicht mit nach Hause nehmen. Zwei Momente zählen: die <strong>erste Abhebung bei der Ankunft</strong> in der Flughafenhalle und der <strong>Rücktausch vor der Grenzpolizei</strong> am Abreisetag.</p>
 <p>Ab 100.000 MAD besteht bei Ein- und Ausreise Anmeldepflicht – eine Schwelle, die eine normale Urlaubsreise nicht betrifft.</p>
 
-<h2>Abheben statt wechseln</h2>
+<h2>Geldautomaten und Wechsel am Flughafen Marrakesch-Menara</h2>
+<p>Mehrere <strong>Geldautomaten</strong> und <strong>Wechselstuben</strong> stehen in der öffentlichen Ankunftshalle direkt nach dem Zoll, weitere im Abflugbereich. Die Automaten akzeptieren Visa und Mastercard; der Kurs der Wechselstuben am Flughafen ist ordentlich, aber nicht der beste der Stadt. Die richtige Reihenfolge: beim Hinausgehen abheben, bevor Sie ein Taxi suchen — der Taxistand wird bar bezahlt (siehe unsere Seite <a href="/de/marrakech-airport-taxi/">Flughafentaxi</a>).</p>
+<p>Wer bei der Ankunft kein Bargeld braucht, bucht einen <a href="/de/book-transfer/">online bezahlten Transfer</a> und muss vor dem Verlassen des Terminals nichts abheben. Alle Einrichtungen finden Sie auf unserer Seite <a href="/de/services/">Flughafen-Services</a>.</p>
+
+<h2>Abheben statt wechseln am Flughafen Marrakesch-Menara</h2>
 <p>Geldautomaten bieten meist bessere Kurse als Wechselstuben, auch die am Flughafen. Einige nützliche Regeln:</p>
 <ul>
 <li><strong>Lehnen Sie die vom Automaten angebotene Umrechnung immer ab.</strong> Schlägt der Bildschirm vor, in Euro statt in Dirham abzurechnen, sagen Sie nein: Dieser Service nutzt einen ungünstigen Kurs. Wählen Sie immer die Landeswährung.</li>
@@ -59,8 +63,27 @@ export default {
 <span class="callout-label">Am Abreisetag</span>
 <p>Tauschen Sie Ihre Dirham <strong>vor</strong> der Grenzpolizei zurück: Danach geht das nicht mehr zu vernünftigen Bedingungen. Bewahren Sie den Beleg Ihres ursprünglichen Umtauschs auf, manche Schalter verlangen ihn. Und behalten Sie genug für einen Kaffee und ein letztes Taxi.</p>
 </div>
+
+<h2>Wie viel bei der Ankunft am Flughafen Marrakesch-Menara abheben</h2>
+<p>Für die ersten 24 Stunden, bevor Sie in der Stadt einen Automaten finden, eine Orientierung:</p>
+<div class="table-wrap">
+<table class="data">
+<thead><tr><th>Ausgabe</th><th>Richtwert</th></tr></thead>
+<tbody>
+<tr><td>Taxi zur Medina (Tag / Nacht)</td><td class="num">100–150 / 150–240 MAD</td></tr>
+<tr><td>Gepäckträger bis zum Riad</td><td class="num">10–20 MAD</td></tr>
+<tr><td>Touristen-SIM-Karte</td><td class="num">50–100 MAD</td></tr>
+<tr><td>Abendessen in einem ordentlichen Restaurant</td><td class="num">70–120 MAD pro Person</td></tr>
+<tr><td>Kaffee, Wasser, Trinkgeld</td><td class="num">50–100 MAD</td></tr>
+<tr class="row-highlight"><td><strong>Summe für zwei Personen</strong></td><td class="num"><strong>≈ 500–800 MAD (45–75 €)</strong></td></tr>
+</tbody>
+</table>
+</div>
+<p>Eine Abhebung von 1.000 MAD (≈ 90 €) deckt Ankunft und den Folgetag bequem ab. Zur SIM-Karte siehe unseren Ratgeber <a href="/de/blog/morocco-sim-cards/">SIM-Karte am Flughafen</a>.</p>
 `,
   faqs: [
+    { q: "Gibt es Geldautomaten am Flughafen Marrakesch?", a: "Ja, mehrere Automaten für Visa und Mastercard stehen in der öffentlichen Ankunftshalle nach dem Zoll sowie im Abflugbereich. Da die Gebühren teils fix sind, ist eine große Abhebung günstiger als mehrere kleine." },
+    { q: "Braucht man Dirham für das Taxi am Flughafen Marrakesch?", a: "Ja: Taxis am Taxistand werden bar in Dirham bezahlt, Karten werden fast nie akzeptiert. Heben Sie vor dem Verlassen der Halle ab oder buchen Sie einen online bezahlten Transfer, wenn Sie bei der Ankunft kein Bargeld möchten." },
     { q: 'Kann man vor der Reise nach Marokko Dirham kaufen?', a: "Nein, der Dirham ist nicht frei konvertierbar und in europäischen Wechselstuben nicht erhältlich. Ihre erste Abhebung oder Ihr erster Umtausch erfolgt bei der Ankunft in der Halle des Flughafens Marrakesch." },
     { q: 'Besser am Automaten abheben oder Euro in Marokko wechseln?', a: "Die Abhebung am Automaten bietet meist den besseren Kurs, sofern Sie die angebotene Euro-Umrechnung ablehnen und einen größeren Betrag auf einmal abheben, da die Gebühren weitgehend fix sind." },
     { q: 'Kann man in Marrakesch mit Karte bezahlen?', a: "In Hotels, touristischen Restaurants und bei Autovermietungen ja. In Taxis, Souks und für alles auf der Straße nein: Nehmen Sie Bargeld in kleinen 50er- und 100er-Scheinen mit." },

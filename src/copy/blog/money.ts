@@ -5,7 +5,7 @@ export default {
     title: "Argent et dirhams à l'aéroport Marrakech-Ménara",
     description: "Le dirham marocain en pratique : où changer, retraits aux distributeurs de l'aéroport de Marrakech-Ménara, paiement par carte, pourboires et budget quotidien.",
     eyebrow: 'Pratique',
-    h1: 'L\'argent au Maroc : ce qu\'il faut savoir avant d\'atterrir',
+    h1: "Argent et dirhams à l'aéroport Marrakech-Ménara : ce qu'il faut savoir",
     lede: "Le dirham ne s'achète pas hors du Maroc et ne s'exporte pas davantage. Cette double règle structure toute la gestion de votre argent sur place — à commencer par le premier retrait, dans le hall des arrivées.",
     excerpt: "Dirham, distributeurs, change, paiement par carte et pourboires : la gestion de l'argent au Maroc, du hall des arrivées au dernier jour.",
     date: '2026-09-12',
@@ -20,7 +20,11 @@ export default {
 <p>Le dirham marocain est une devise non convertible : vous ne la trouverez pas dans un bureau de change européen, et vous ne pourrez pas la ramener chez vous. Concrètement, deux moments comptent : le <strong>premier retrait à l'arrivée</strong>, dans le hall de l'aéroport, et le <strong>rechange avant la police des frontières</strong> le jour du départ.</p>
 <p>Au-delà de 100 000 MAD, une déclaration est obligatoire à l'entrée comme à la sortie — un seuil qui ne concerne pas un voyage touristique ordinaire.</p>
 
-<h2>Retirer plutôt que changer</h2>
+<h2>Distributeurs et change à l'aéroport Marrakech-Ménara</h2>
+<p>Plusieurs <strong>distributeurs</strong> et <strong>bureaux de change</strong> sont installés dans le hall public des arrivées, juste après la douane, et d'autres côté départs. Les distributeurs acceptent Visa et Mastercard ; le taux des bureaux de change de l'aéroport est correct sans être le meilleur de la ville. Le bon réflexe : un retrait à la sortie, avant de chercher un taxi — la station de l'aéroport se paie en espèces (voir notre page <a href="/taxi-aeroport-marrakech/">taxi aéroport</a>).</p>
+<p>Si vous préférez ne pas manipuler d'argent liquide dès l'arrivée, un <a href="/reserver-transfert/">transfert réservé et payé en ligne</a> évite d'avoir à retirer avant de quitter le terminal. La liste complète des services est sur notre page <a href="/services/">services de l'aéroport</a>.</p>
+
+<h2>Retirer plutôt que changer à l'aéroport Marrakech-Ménara</h2>
 <p>Les distributeurs donnent généralement un meilleur taux que les bureaux de change, y compris ceux de l'aéroport. Quelques règles utiles :</p>
 <ul>
 <li><strong>Refusez systématiquement la conversion proposée par le distributeur.</strong> Quand l'écran propose de débiter en euros plutôt qu'en dirhams, dites non : ce service applique un taux défavorable. Choisissez toujours la devise locale.</li>
@@ -60,8 +64,27 @@ export default {
 <span class="callout-label">Le jour du départ</span>
 <p>Rechangez vos dirhams <strong>avant</strong> la police des frontières : passé ce point, vous ne pourrez plus le faire dans de bonnes conditions. Conservez le reçu de votre change initial, certains guichets le demandent. Et gardez de quoi payer un café et un dernier taxi.</p>
 </div>
+
+<h2>Combien retirer en arrivant à l'aéroport Marrakech-Ménara</h2>
+<p>Pour les 24 premières heures, avant de trouver un distributeur en ville, voici un ordre de grandeur :</p>
+<div class="table-wrap">
+<table class="data">
+<thead><tr><th>Dépense</th><th>Montant indicatif</th></tr></thead>
+<tbody>
+<tr><td>Taxi vers la médina (jour / nuit)</td><td class="num">100–150 DH / 150–240 DH</td></tr>
+<tr><td>Porteur jusqu'au riad</td><td class="num">10–20 DH</td></tr>
+<tr><td>Carte SIM touristique</td><td class="num">50–100 DH</td></tr>
+<tr><td>Dîner dans un restaurant correct</td><td class="num">70–120 DH par personne</td></tr>
+<tr><td>Cafés, eau, pourboires</td><td class="num">50–100 DH</td></tr>
+<tr class="row-highlight"><td><strong>Total pour deux personnes</strong></td><td class="num"><strong>≈ 500–800 DH (45–75 €)</strong></td></tr>
+</tbody>
+</table>
+</div>
+<p>Un retrait de 1 000 DH (≈ 90 €) couvre donc confortablement l'arrivée et le lendemain. Pour la carte SIM, voir notre guide <a href="/blog/cartes-sim-maroc/">carte SIM à l'aéroport</a>.</p>
 `,
     faqs: [
+      { q: "Y a-t-il des distributeurs à l'aéroport de Marrakech ?", a: "Oui, plusieurs distributeurs acceptant Visa et Mastercard se trouvent dans le hall public des arrivées, après la douane, ainsi que côté départs. Les frais étant en partie fixes, mieux vaut un retrait conséquent que plusieurs petits." },
+      { q: "Faut-il des dirhams pour le taxi à l'aéroport de Marrakech ?", a: "Oui : les taxis de la station se paient en espèces, en dirhams, et la carte n'est pratiquement jamais acceptée. Retirez avant de sortir du hall, ou réservez un transfert payé en ligne si vous ne voulez pas d'espèces à l'arrivée." },
       {
         q: 'Peut-on acheter des dirhams avant de partir au Maroc ?',
         a: "Non, le dirham est une monnaie non convertible qui ne se trouve pas dans les bureaux de change européens. Votre premier retrait ou change se fera à l'arrivée, dans le hall de l'aéroport de Marrakech.",
