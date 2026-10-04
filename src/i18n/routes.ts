@@ -67,6 +67,7 @@ export const PAGES = {
   privacy: { fr: 'politique-confidentialite', intl: 'privacy-policy', kind: 'page' },
   terms: { fr: 'conditions-utilisation', intl: 'terms-of-use', kind: 'page' },
   disclosure: { fr: 'divulgation-affiliation', intl: 'affiliate-disclosure', kind: 'page' },
+  legalNotice: { fr: 'mentions-legales', intl: 'legal-notice', kind: 'page' },
 } as const satisfies Record<string, RouteDef>;
 
 // ── Les 5 fiches hôtels (mêmes slugs dans toutes les langues) ───────────────

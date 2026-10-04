@@ -57,7 +57,9 @@
     "privacy": "Privacy",
     "terms": "Terms of use",
     "disclosure": "Affiliate disclosure",
-    "contact": "Contact"
+    "contact": "Contact",
+    "notice": "Legal notice",
+    "manageCookies": "Manage cookies"
   },
   "trust": {
     "heading": "Why trust us",
@@ -111,5 +113,12 @@
     "title": "Private airport transfer",
     "sub": "Driver waiting for you · fixed price",
     "close": "Close"
+  },
+  "consent": {
+    "title": "Cookies and privacy",
+    "text": "We use analytics (Google Analytics) and affiliate cookies to improve this guide and fund it. You can accept or refuse, and change your mind at any time from the footer.",
+    "more": "Learn more",
+    "accept": "Accept",
+    "refuse": "Refuse"
   }
 }

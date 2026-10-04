@@ -17,7 +17,7 @@ export default {
 <li><strong>Registros técnicos</strong> del alojamiento, conservados por seguridad y para el correcto funcionamiento del sitio.</li>
 <li><strong>Mensajes que nos envía</strong>: únicamente si nos escribe, y solo el tiempo necesario para atender su solicitud.</li>
 </ul>
-<p>No vendemos ningún dato, no elaboramos ningún perfil publicitario y no transmitimos nada a intermediarios de datos.</p>
+<p>No vendemos ningún dato y no transmitimos nada a intermediarios de datos.</p>
 
 <h2>Cookies y servicios de terceros</h2>
 <p>Algunas páginas integran herramientas facilitadas por terceros, que depositan sus propias cookies y tienen sus propias políticas:</p>
@@ -28,6 +28,14 @@ export default {
 <li><strong>Tiempo</strong>: la temperatura de la portada procede de Open-Meteo, sin cookies; solo se transmite su dirección IP, como en cualquier carga de página.</li>
 </ul>
 <p>Puede bloquear o eliminar estas cookies desde los ajustes de su navegador. El sitio sigue siendo plenamente consultable sin ellas; solo los widgets de reserva pueden dejar de funcionar correctamente.</p>
+
+<h2>Consentimiento, medición de audiencia y publicidad</h2>
+<p>En su primera visita desde la Unión Europea, el Espacio Económico Europeo, el Reino Unido o Suiza, un aviso le pide su consentimiento. Mientras no acepte, no se instala ninguna cookie de medición ni de publicidad y el script de afiliación no se carga. Puede cambiar de opinión en cualquier momento mediante el enlace <strong>«Gestionar cookies»</strong> al pie de cada página.</p>
+<ul>
+<li><strong>Google Analytics 4</strong> (Google Ireland Ltd): estadísticas de visitas, sin conservar las direcciones IP. El modo de consentimiento de Google solo envía señales anónimas sin cookies hasta que usted acepte.</li>
+<li><strong>Afiliación</strong>: Travelpayouts y sus socios (Kiwitaxi para traslados, EconomyBookings para alquiler de coches, buscadores de vuelos), y Booking.com para hoteles. Pueden instalar una cookie para atribuir una reserva a nuestro sitio.</li>
+<li><strong>Publicidad (Google AdSense)</strong>: el sitio puede mostrar anuncios. Proveedores externos, incluido Google, utilizan cookies para mostrar anuncios según sus visitas anteriores a este u otros sitios web. Las cookies publicitarias de Google le permiten a Google y a sus socios mostrarle anuncios adaptados. Puede desactivar la publicidad personalizada en la <a href="https://adssettings.google.com" rel="noopener" target="_blank">configuración de anuncios de Google</a> o en <a href="https://www.youronlinechoices.com/es/" rel="noopener" target="_blank">youronlinechoices.com</a>. Más información: <a href="https://policies.google.com/technologies/partner-sites?hl=es" rel="noopener" target="_blank">cómo usa Google los datos de sitios asociados</a>.</li>
+</ul>
 
 <h2>Enlaces de afiliación</h2>
 <p>Cuando sigue un enlace de reserva desde este sitio, el socio correspondiente puede registrar su procedencia para atribuirnos una comisión si usted reserva. Este mecanismo <strong>nunca aumenta el precio que usted paga</strong>. Se detalla en nuestra página de <a href="/es/affiliate-disclosure/">divulgación de afiliación</a>.</p>

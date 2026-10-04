@@ -4,6 +4,7 @@ import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
 import TrustBand from '../components/layout/TrustBand.astro';
 import StickyTransfer from '../components/ui/StickyTransfer.astro';
+import ConsentBanner from '../components/layout/ConsentBanner.astro';
 import { site } from '../data/site';
 import { gaId, travelpayouts } from '../data/affiliate';
 import {
@@ -43,6 +44,25 @@ const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
 <!DOCTYPE html>
 <html lang={locale} dir={dir}>
 <head>
+  <script is:inline>
+    // Consentement (mode consentement Google v2). Les visiteurs dont le fuseau horaire est
+    // européen (EEE, Royaume-Uni, Suisse) partent en « refusé » jusqu'à leur choix dans le
+    // bandeau ; les autres en « accordé », avec possibilité de refuser via le pied de page.
+    (function () {
+      var tz = '';
+      try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
+      var eu = /^Europe\//.test(tz) || /^(Atlantic\/(Canary|Madeira|Azores|Reykjavik|Faroe)|Asia\/Nicosia|Arctic\/Longyearbyen)$/.test(tz);
+      var choice = null;
+      try { choice = localStorage.getItem('rak-consent'); } catch (e) {}
+      var ok = choice === 'granted' || (!eu && choice !== 'denied');
+      window.rakConsent = { eu: eu, choice: choice, ok: ok };
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { dataLayer.push(arguments); };
+      var v = ok ? 'granted' : 'denied';
+      gtag('consent', 'default', { analytics_storage: v, ad_storage: v, ad_user_data: v, ad_personalization: v, wait_for_update: 500 });
+      gtag('set', 'ads_data_redaction', !ok);
+    })();
+  </script>
   {gaId && (
     <>
       <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
@@ -109,12 +129,19 @@ const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
           s.async = true; s.src = src; s.setAttribute('data-cmp-ab', '2');
           document.head.appendChild(s);
         };
+        var done = false;
         var idle = function () {
+          if (done) return; done = true;
           if ('requestIdleCallback' in window) requestIdleCallback(inject, { timeout: 3000 });
           else setTimeout(inject, 1500);
         };
-        if (document.readyState === 'complete') idle();
-        else window.addEventListener('load', idle, { once: true });
+        var start = function () {
+          if (document.readyState === 'complete') idle();
+          else window.addEventListener('load', idle, { once: true });
+        };
+        // Script d'affiliation : seulement si le consentement est acquis (voir bandeau).
+        window.rakLoadDrive = start;
+        if (window.rakConsent && window.rakConsent.ok) start();
       })();
     </script>
   )}
@@ -127,6 +154,7 @@ const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
   <TrustBand locale={locale} />
   <Footer locale={locale} />
   <StickyTransfer locale={locale} routeKey={routeKey} />
+  <ConsentBanner locale={locale} />
   <script is:inline>
     window.addEventListener('message', function (e) {
       if (e.data && e.data.tpemdHeight) {

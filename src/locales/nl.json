@@ -57,7 +57,9 @@
     "privacy": "Privacy",
     "terms": "Gebruiksvoorwaarden",
     "disclosure": "Affiliate-verklaring",
-    "contact": "Contact"
+    "contact": "Contact",
+    "notice": "Juridische informatie",
+    "manageCookies": "Cookies beheren"
   },
   "trust": {
     "heading": "Waarom ons vertrouwen",
@@ -111,5 +113,12 @@
     "title": "Privétransfer luchthaven",
     "sub": "Chauffeur wacht op u · vaste prijs",
     "close": "Sluiten"
+  },
+  "consent": {
+    "title": "Cookies en privacy",
+    "text": "We gebruiken analysecookies (Google Analytics) en affiliatecookies om deze gids te verbeteren en te financieren. U kunt accepteren of weigeren, en uw keuze altijd wijzigen via de voettekst.",
+    "more": "Meer informatie",
+    "accept": "Accepteren",
+    "refuse": "Weigeren"
   }
 }

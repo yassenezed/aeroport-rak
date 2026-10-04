@@ -57,7 +57,9 @@
     "privacy": "Confidentialité",
     "terms": "Conditions d'utilisation",
     "disclosure": "Divulgation d'affiliation",
-    "contact": "Contact"
+    "contact": "Contact",
+    "notice": "Mentions légales",
+    "manageCookies": "Gérer les cookies"
   },
   "trust": {
     "heading": "Pourquoi nous faire confiance",
@@ -111,5 +113,12 @@
     "title": "Transfert privé aéroport",
     "sub": "Chauffeur qui vous attend · prix fixe",
     "close": "Fermer"
+  },
+  "consent": {
+    "title": "Cookies et vie privée",
+    "text": "Nous utilisons des cookies de mesure d'audience (Google Analytics) et d'affiliation pour améliorer le guide et le financer. Vous pouvez accepter ou refuser, et changer d'avis à tout moment depuis le pied de page.",
+    "more": "En savoir plus",
+    "accept": "Accepter",
+    "refuse": "Refuser"
   }
 }

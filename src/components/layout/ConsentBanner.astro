@@ -1,0 +1,88 @@
+---
+// Bandeau de consentement (RGPD) : affiché seulement aux visiteurs dont le fuseau horaire
+// indique l'Europe (EEE, Royaume-Uni, Suisse), tant qu'ils n'ont pas choisi.
+// « Accepter » et « Refuser » ont le même poids visuel. Le choix met à jour le
+// mode consentement Google (gtag) et autorise ou non le script d'affiliation.
+// L'état initial est calculé dans BaseLayout (window.rakConsent), avant le chargement de GA4.
+import { useTranslations, pathFor, type Locale } from '../../i18n';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+---
+<div class="consent" id="consent" role="dialog" aria-modal="false" aria-labelledby="consent-title" hidden data-nosnippet>
+  <div class="consent__inner">
+    <p class="consent__text">
+      <strong id="consent-title">{t('consent.title')}</strong>
+      {t('consent.text')} <a href={pathFor('privacy', locale)}>{t('consent.more')}</a>
+    </p>
+    <div class="consent__actions">
+      <button type="button" class="consent__btn" data-consent="denied">{t('consent.refuse')}</button>
+      <button type="button" class="consent__btn" data-consent="granted">{t('consent.accept')}</button>
+    </div>
+  </div>
+</div>
+<script is:inline>
+  (function () {
+    var box = document.getElementById('consent');
+    var state = window.rakConsent || {};
+    var open = function () { box.hidden = false; document.body.classList.add('consent-open'); };
+    var close = function () { box.hidden = true; document.body.classList.remove('consent-open'); };
+    if (state.eu && !state.choice) open();
+    box.addEventListener('click', function (e) {
+      var v = e.target.getAttribute && e.target.getAttribute('data-consent');
+      if (!v) return;
+      try { localStorage.setItem('rak-consent', v); } catch (err) {}
+      if (typeof gtag === 'function') {
+        gtag('consent', 'update', { analytics_storage: v, ad_storage: v, ad_user_data: v, ad_personalization: v });
+      }
+      state.choice = v; state.ok = v === 'granted';
+      if (state.ok && window.rakLoadDrive) window.rakLoadDrive();
+      close();
+    });
+    // Lien « Gérer les cookies » du pied de page : rouvre le bandeau pour tout visiteur.
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('[data-consent-open]');
+      if (a) { e.preventDefault(); open(); }
+    });
+  })();
+</script>
+
+<style>
+  .consent {
+    position: fixed;
+    inset-inline: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom));
+    z-index: 100;
+    max-width: 760px;
+    margin-inline: auto;
+    background: var(--surface);
+    color: var(--ink);
+    border: 1px solid var(--line);
+    border-radius: var(--r-xl);
+    box-shadow: var(--shadow-lg);
+    padding: 1rem 1.15rem;
+  }
+  .consent[hidden] { display: none; }
+  .consent__inner { display: flex; align-items: center; gap: 1rem 1.25rem; }
+  .consent__text { flex: 1; margin: 0; font-size: 0.88rem; line-height: 1.5; color: var(--ink-2); }
+  .consent__text strong { display: block; color: var(--ink); font-size: 0.95rem; margin-bottom: 0.15rem; }
+  .consent__actions { flex: none; display: flex; gap: 0.5rem; }
+  /* Même style pour les deux choix : pas de bouton « piège ». */
+  .consent__btn {
+    min-height: 44px; padding: 0 1.1rem;
+    background: var(--ink); color: #fff;
+    border: 0; border-radius: var(--r-md);
+    font: inherit; font-weight: 700; font-size: 0.88rem; cursor: pointer;
+    transition: background var(--transition);
+  }
+  .consent__btn:hover, .consent__btn:focus-visible { background: var(--blue); }
+  /* La pastille transfert s'efface tant que le bandeau est ouvert. */
+  :global(body.consent-open .ride-pill) { display: none; }
+  @media (max-width: 620px) {
+    .consent { inset-inline: 10px; bottom: calc(10px + env(safe-area-inset-bottom)); padding: 0.9rem; }
+    .consent__inner { flex-direction: column; align-items: stretch; }
+    .consent__actions > * { flex: 1; }
+  }
+  @media print { .consent { display: none; } }
+</style>

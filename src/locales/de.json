@@ -57,7 +57,9 @@
     "privacy": "Datenschutz",
     "terms": "Nutzungsbedingungen",
     "disclosure": "Affiliate-Offenlegung",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "notice": "Impressum",
+    "manageCookies": "Cookie-Einstellungen"
   },
   "trust": {
     "heading": "Warum Sie uns vertrauen können",
@@ -111,5 +113,12 @@
     "title": "Privater Flughafentransfer",
     "sub": "Fahrer wartet auf Sie · Festpreis",
     "close": "Schließen"
+  },
+  "consent": {
+    "title": "Cookies und Datenschutz",
+    "text": "Wir verwenden Analyse-Cookies (Google Analytics) und Affiliate-Cookies, um diesen Ratgeber zu verbessern und zu finanzieren. Sie können zustimmen oder ablehnen und Ihre Wahl jederzeit im Seitenfuß ändern.",
+    "more": "Mehr erfahren",
+    "accept": "Akzeptieren",
+    "refuse": "Ablehnen"
   }
 }

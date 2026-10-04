@@ -17,7 +17,7 @@ export default {
 <li><strong>Technische Protokolle</strong> des Hosters, aufbewahrt für Sicherheit und Betrieb der Website.</li>
 <li><strong>Nachrichten, die Sie uns senden</strong>: nur wenn Sie uns schreiben, und nur so lange, wie die Bearbeitung dauert.</li>
 </ul>
-<p>Wir verkaufen keine Daten, erstellen keine Werbeprofile und geben nichts an Datenhändler weiter.</p>
+<p>Wir verkaufen keine Daten und geben nichts an Datenhändler weiter.</p>
 
 <h2>Cookies und Dienste Dritter</h2>
 <p>Einige Seiten binden Werkzeuge Dritter ein, die eigene Cookies setzen und eigene Richtlinien haben:</p>
@@ -28,6 +28,14 @@ export default {
 <li><strong>Wetter</strong>: Die Temperatur auf der Startseite stammt von Open-Meteo, ohne Cookie; übertragen wird nur Ihre IP-Adresse, wie bei jedem Seitenaufruf.</li>
 </ul>
 <p>Sie können diese Cookies in den Browsereinstellungen blockieren oder löschen. Die Website bleibt ohne sie vollständig lesbar; lediglich die Buchungswidgets funktionieren dann womöglich nicht korrekt.</p>
+
+<h2>Einwilligung, Reichweitenmessung und Werbung</h2>
+<p>Bei Ihrem ersten Besuch aus der Europäischen Union, dem Europäischen Wirtschaftsraum, dem Vereinigten Königreich oder der Schweiz bittet ein Banner um Ihre Einwilligung. Solange Sie nicht zustimmen, werden keine Analyse- oder Werbe-Cookies gesetzt und das Affiliate-Skript wird nicht geladen. Sie können Ihre Wahl jederzeit über den Link <strong>„Cookie-Einstellungen"</strong> unten auf jeder Seite ändern.</p>
+<ul>
+<li><strong>Google Analytics 4</strong> (Google Ireland Ltd): Besucherstatistiken, IP-Adressen werden nicht gespeichert. Der Einwilligungsmodus von Google sendet bis zu Ihrer Zustimmung nur anonyme Signale ohne Cookies.</li>
+<li><strong>Affiliate-Partner</strong>: Travelpayouts und seine Partner (Kiwitaxi für Transfers, EconomyBookings für Mietwagen, Flugsuchmaschinen) sowie Booking.com für Hotels. Sie können ein Cookie setzen, um eine Buchung unserer Website zuzuordnen.</li>
+<li><strong>Werbung (Google AdSense)</strong>: Die Website kann Anzeigen einblenden. Drittanbieter, einschließlich Google, verwenden Cookies, um Anzeigen auf Grundlage Ihrer früheren Besuche auf dieser oder anderen Websites zu schalten. Mit den Werbe-Cookies von Google können Google und seine Partner Ihnen passende Anzeigen zeigen. Personalisierte Werbung können Sie in den <a href="https://adssettings.google.com" rel="noopener" target="_blank">Google-Anzeigeneinstellungen</a> oder auf <a href="https://www.youronlinechoices.com/de/" rel="noopener" target="_blank">youronlinechoices.com</a> deaktivieren. Mehr dazu: <a href="https://policies.google.com/technologies/partner-sites?hl=de" rel="noopener" target="_blank">wie Google Daten von Partnerwebsites nutzt</a>.</li>
+</ul>
 
 <h2>Affiliate-Links</h2>
 <p>Folgen Sie von dieser Website einem Buchungslink, kann der betreffende Partner Ihre Herkunft erfassen, um uns bei einer Buchung eine Provision zuzuordnen. Dieser Mechanismus <strong>erhöht nie den Preis, den Sie zahlen</strong>. Er ist auf unserer Seite zur <a href="/de/affiliate-disclosure/">Affiliate-Offenlegung</a> erläutert.</p>
