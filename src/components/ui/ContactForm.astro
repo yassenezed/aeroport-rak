@@ -8,12 +8,12 @@ const { locale } = Astro.props;
 const ENDPOINT = 'https://formspree.io/f/meaejnbb';
 
 const T = {
-  fr: { name: 'Votre nom', email: 'Votre e-mail', topic: 'Sujet', topics: ['Signaler une erreur ou un tarif périmé', 'Demande professionnelle', 'Autre question'], message: 'Votre message', pageUrl: 'Page concernée (facultatif)', send: 'Envoyer le message', sending: 'Envoi…', ok: 'Merci, votre message est bien envoyé. Nous répondons en général sous quelques jours ouvrés.', err: "L'envoi a échoué. Vérifiez les champs ou écrivez-nous directement par e-mail.", privacy: 'Vos données servent uniquement à vous répondre.', privacyLink: 'Confidentialité', required: 'obligatoire' },
-  en: { name: 'Your name', email: 'Your email', topic: 'Subject', topics: ['Report an error or outdated fare', 'Business enquiry', 'Other question'], message: 'Your message', pageUrl: 'Page concerned (optional)', send: 'Send message', sending: 'Sending…', ok: 'Thank you, your message has been sent. We usually reply within a few working days.', err: 'Sending failed. Please check the fields or email us directly.', privacy: 'Your data is only used to reply to you.', privacyLink: 'Privacy', required: 'required' },
-  es: { name: 'Su nombre', email: 'Su correo electrónico', topic: 'Asunto', topics: ['Señalar un error o una tarifa desfasada', 'Consulta profesional', 'Otra pregunta'], message: 'Su mensaje', pageUrl: 'Página afectada (opcional)', send: 'Enviar mensaje', sending: 'Enviando…', ok: 'Gracias, su mensaje se ha enviado. Solemos responder en pocos días laborables.', err: 'No se pudo enviar. Revise los campos o escríbanos directamente por correo.', privacy: 'Sus datos solo se usan para responderle.', privacyLink: 'Privacidad', required: 'obligatorio' },
-  de: { name: 'Ihr Name', email: 'Ihre E-Mail', topic: 'Betreff', topics: ['Fehler oder veralteten Preis melden', 'Geschäftliche Anfrage', 'Andere Frage'], message: 'Ihre Nachricht', pageUrl: 'Betroffene Seite (optional)', send: 'Nachricht senden', sending: 'Wird gesendet…', ok: 'Danke, Ihre Nachricht wurde gesendet. Wir antworten meist innerhalb weniger Werktage.', err: 'Senden fehlgeschlagen. Prüfen Sie die Felder oder schreiben Sie uns direkt per E-Mail.', privacy: 'Ihre Daten werden nur zur Beantwortung verwendet.', privacyLink: 'Datenschutz', required: 'Pflichtfeld' },
-  nl: { name: 'Uw naam', email: 'Uw e-mailadres', topic: 'Onderwerp', topics: ['Een fout of verouderd tarief melden', 'Zakelijke vraag', 'Andere vraag'], message: 'Uw bericht', pageUrl: 'Betreffende pagina (optioneel)', send: 'Bericht versturen', sending: 'Versturen…', ok: 'Bedankt, uw bericht is verstuurd. We antwoorden meestal binnen enkele werkdagen.', err: 'Versturen mislukt. Controleer de velden of mail ons rechtstreeks.', privacy: 'Uw gegevens worden alleen gebruikt om u te antwoorden.', privacyLink: 'Privacy', required: 'verplicht' },
-  ar: { name: 'اسمك', email: 'بريدك الإلكتروني', topic: 'الموضوع', topics: ['الإبلاغ عن خطأ أو سعر قديم', 'طلب مهني', 'سؤال آخر'], message: 'رسالتك', pageUrl: 'الصفحة المعنية (اختياري)', send: 'إرسال الرسالة', sending: 'جارٍ الإرسال…', ok: 'شكرًا، تم إرسال رسالتك. نرد عادةً خلال أيام عمل قليلة.', err: 'تعذر الإرسال. تحقق من الحقول أو راسلنا مباشرة بالبريد الإلكتروني.', privacy: 'تُستعمل بياناتك فقط للرد عليك.', privacyLink: 'الخصوصية', required: 'إلزامي' },
+  fr: { name: 'Votre nom', email: 'Votre e-mail', topic: 'Sujet', message: 'Votre message', pageUrl: 'Page concernée (facultatif)', send: 'Envoyer le message', sending: 'Envoi…', ok: 'Merci, votre message est bien envoyé. Nous répondons en général sous quelques jours ouvrés.', err: "L'envoi a échoué. Vérifiez les champs ou écrivez-nous directement par e-mail.", privacy: 'Vos données servent uniquement à vous répondre.', privacyLink: 'Confidentialité', required: 'obligatoire' },
+  en: { name: 'Your name', email: 'Your email', topic: 'Subject', message: 'Your message', pageUrl: 'Page concerned (optional)', send: 'Send message', sending: 'Sending…', ok: 'Thank you, your message has been sent. We usually reply within a few working days.', err: 'Sending failed. Please check the fields or email us directly.', privacy: 'Your data is only used to reply to you.', privacyLink: 'Privacy', required: 'required' },
+  es: { name: 'Su nombre', email: 'Su correo electrónico', topic: 'Asunto', message: 'Su mensaje', pageUrl: 'Página afectada (opcional)', send: 'Enviar mensaje', sending: 'Enviando…', ok: 'Gracias, su mensaje se ha enviado. Solemos responder en pocos días laborables.', err: 'No se pudo enviar. Revise los campos o escríbanos directamente por correo.', privacy: 'Sus datos solo se usan para responderle.', privacyLink: 'Privacidad', required: 'obligatorio' },
+  de: { name: 'Ihr Name', email: 'Ihre E-Mail', topic: 'Betreff', message: 'Ihre Nachricht', pageUrl: 'Betroffene Seite (optional)', send: 'Nachricht senden', sending: 'Wird gesendet…', ok: 'Danke, Ihre Nachricht wurde gesendet. Wir antworten meist innerhalb weniger Werktage.', err: 'Senden fehlgeschlagen. Prüfen Sie die Felder oder schreiben Sie uns direkt per E-Mail.', privacy: 'Ihre Daten werden nur zur Beantwortung verwendet.', privacyLink: 'Datenschutz', required: 'Pflichtfeld' },
+  nl: { name: 'Uw naam', email: 'Uw e-mailadres', topic: 'Onderwerp', message: 'Uw bericht', pageUrl: 'Betreffende pagina (optioneel)', send: 'Bericht versturen', sending: 'Versturen…', ok: 'Bedankt, uw bericht is verstuurd. We antwoorden meestal binnen enkele werkdagen.', err: 'Versturen mislukt. Controleer de velden of mail ons rechtstreeks.', privacy: 'Uw gegevens worden alleen gebruikt om u te antwoorden.', privacyLink: 'Privacy', required: 'verplicht' },
+  ar: { name: 'اسمك', email: 'بريدك الإلكتروني', topic: 'الموضوع', message: 'رسالتك', pageUrl: 'الصفحة المعنية (اختياري)', send: 'إرسال الرسالة', sending: 'جارٍ الإرسال…', ok: 'شكرًا، تم إرسال رسالتك. نرد عادةً خلال أيام عمل قليلة.', err: 'تعذر الإرسال. تحقق من الحقول أو راسلنا مباشرة بالبريد الإلكتروني.', privacy: 'تُستعمل بياناتك فقط للرد عليك.', privacyLink: 'الخصوصية', required: 'إلزامي' },
 }[locale] ?? null;
 const t = T!;
 ---
@@ -36,7 +36,7 @@ const t = T!;
   <div class="contact-form__row">
     <label class="contact-form__field">
       <span>{t.topic}</span>
-      <select name="topic">{t.topics.map((o) => <option>{o}</option>)}</select>
+      <input type="text" name="topic" maxlength="150" />
     </label>
     <label class="contact-form__field">
       <span>{t.pageUrl}</span>
@@ -86,13 +86,13 @@ const t = T!;
   .contact-form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   .contact-form__field { display: grid; gap: 0.35rem; font-size: 0.9rem; font-weight: 600; color: var(--ink); }
   .contact-form__field abbr { color: var(--clay); text-decoration: none; }
-  .contact-form input, .contact-form select, .contact-form textarea {
+  .contact-form input, .contact-form textarea {
     width: 100%; font: inherit; font-weight: 400; color: var(--ink);
     background: var(--paper); border: 1px solid var(--line); border-radius: var(--r-md);
     padding: 0.7rem 0.8rem; min-height: 44px;
   }
   .contact-form textarea { resize: vertical; min-height: 140px; }
-  .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { outline: 2px solid var(--blue); outline-offset: 1px; background: var(--surface); }
+  .contact-form input:focus, .contact-form textarea:focus { outline: 2px solid var(--blue); outline-offset: 1px; background: var(--surface); }
   .contact-form__trap { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
   .contact-form__foot { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
   .contact-form__privacy { margin: 0; font-size: 0.82rem; color: var(--ink-3); }
