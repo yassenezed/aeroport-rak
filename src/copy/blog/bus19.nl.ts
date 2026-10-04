@@ -15,10 +15,23 @@ export default {
     { label: "Reistijd", value: "≈ 20", sub: "min" },
   ],
   body: `
-<h2>Hoe het werkt</h2>
+<h2>Bus 19 vanaf luchthaven Marrakech-Menara: hoe het werkt</h2>
 <p>Lijn 19, uitgebaat door <strong>ALSA</strong>, verbindt luchthaven Marrakech Menara met het plein Djemaa el-Fna. De halte ligt goed aangegeven voor de terminal en de rit duurt zo'n twintig minuten met enkele tussenhaltes, onder meer in Guéliz.</p>
 <p>Een kaartje kost <strong>30 MAD enkele reis</strong> en <strong>50 MAD retour</strong>, dat laatste ongeveer twee weken geldig – de interessantste formule als u dezelfde weg terug neemt. Kopen doet u bij de chauffeur of aan het loket, contant.</p>
 <p>Vertrekken volgen elkaar ongeveer elk halfuur op, tussen <strong>6.00 en 23.30 uur</strong>. De tijden kunnen per seizoen en verkeer verschillen: kijk op het bord bij de halte.</p>
+
+<h2>Bus 19, taxi of transfer vanaf luchthaven Marrakech-Menara</h2>
+<div class="table-wrap">
+<table class="data">
+<thead><tr><th>Optie</th><th>Prijs</th><th>Dienstregeling</th><th>Afzetten</th></tr></thead>
+<tbody>
+<tr class="row-highlight"><td><strong>Bus 19</strong></td><td class="num">30 MAD / persoon</td><td>≈ 6.00 – 23.30 uur</td><td>Gueliz, Djemaa el-Fna</td></tr>
+<tr><td><strong>Taxi van de standplaats</strong></td><td class="num">100–150 MAD overdag, 150–240 's nachts</td><td>24/7</td><td>Medinapoort of adres</td></tr>
+<tr><td><strong>Geboekte transfer</strong></td><td class="num">vanaf ≈ 290 MAD (€ 27) / voertuig</td><td>24/7</td><td>Poort het dichtst bij de riad</td></tr>
+</tbody>
+</table>
+</div>
+<p>De volledige vergelijking staat in onze gids <a href="/nl/blog/rak-to-city-center/">luchthaven → centrum</a>; de tarieven van de standplaats op onze pagina <a href="/nl/marrakech-airport-taxi/">luchthaventaxi</a>.</p>
 
 <h2>Wanneer hij de juiste keuze is</h2>
 <ul>
@@ -36,10 +49,15 @@ export default {
 <p>Vier personen met de bus: 120 MAD. Een grand taxi of transfer voor dezelfde groep: 150 MAD overdag, of € 27 voor een voertuig tot zeven plaatsen, van deur tot deur. Het verschil wordt verwaarloosbaar, het comfort is van een andere orde.</p>
 </div>
 
-<h2>Voor de terugrit naar de luchthaven</h2>
+<h2>Met bus 19 terug naar luchthaven Marrakech-Menara</h2>
 <p>De bus vertrekt in omgekeerde richting vanaf Djemaa el-Fna met dezelfde frequentie. Voor een middagvlucht is dat een prima optie. Voor een vroege vlucht laat het eerste vertrek rond 6.00 uur daarentegen geen marge als uw incheckbalie vroeg sluit: boek dan de avond ervoor een transfer.</p>
+
+<h2>Voor het instappen: dirham en kleingeld</h2>
+<p>Het kaartje betaalt u <strong>contant, in dirham</strong>: neem op bij de automaat in de aankomsthal voordat u naar buiten gaat, en wissel een biljet van 200 in het terminalcafé om gepast te betalen. Handige wisselregels staan in ons artikel <a href="/nl/blog/money-in-morocco/">geld en dirham op de luchthaven</a>. Landt u na 23.00 uur, vergeet de bus dan: boek vooraf een <a href="/nl/book-transfer/">transfer</a>.</p>
 `,
   faqs: [
+    { q: "Kun je bus 19 met een kaart betalen?", a: "Neem contant geld mee: het kaartje koopt u bij de chauffeur of aan het loket, in dirham. Geldautomaten staan in de aankomsthal, vlak voor de uitgang." },
+    { q: "Stopt bus 19 in Gueliz?", a: "Ja, de lijn heeft enkele tussenhaltes, waaronder Gueliz, voordat hij Djemaa el-Fna bereikt; de hele rit duurt ongeveer twintig minuten." },
     { q: "Wat kost bus 19 in Marrakech?", a: "30 MAD enkele reis en 50 MAD retour, dat laatste ongeveer twee weken geldig. U betaalt contant bij de chauffeur of aan het loket." },
     { q: "Wat zijn de tijden van bus 19 op luchthaven Marrakech?", a: "Vertrekken ongeveer elk halfuur tussen 6.00 en 23.30 uur. De tijden verschillen per seizoen: kijk op het bord bij de halte voor de terminal." },
     { q: "Waar stopt bus 19 in Marrakech?", a: "Op het plein Djemaa el-Fna, met enkele tussenhaltes zoals Guéliz. Hij rijdt niet naar uw verblijf: ligt uw riad verder van het plein, reken dan op tien tot twintig minuten lopen." },

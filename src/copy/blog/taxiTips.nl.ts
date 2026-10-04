@@ -32,14 +32,32 @@ export default {
 <p>Vanaf de luchthaven is een vast tarief van het bord gebruikelijk, geen taximeter. In de stad horen petits taxis er een te hebben, maar <strong>bij toeristen gaat hij zelden aan</strong>: vraag erom bij het instappen of spreek de prijs vooraf af.</p>
 <p>Ordes van grootte in de stad: <strong>15 tot 30 MAD</strong> voor een korte rit, <strong>30 tot 50 MAD</strong> voor een langere, met 's nachts ongeveer 50 % toeslag. Noemt men 100 MAD van Djemaa el-Fna naar Guéliz, dan is dat de toeristenprijs: bied 30 en wacht af.</p>
 
+<h2>Ritprijzen in de stad in één tabel</h2>
+<div class="table-wrap">
+<table class="data">
+<thead><tr><th>Rit</th><th>Dag</th><th>Nacht (≈ +50%)</th></tr></thead>
+<tbody>
+<tr><td><strong>Kort</strong>, binnen één wijk</td><td class="num">15–30 MAD</td><td class="num">25–45 MAD</td></tr>
+<tr class="row-highlight"><td><strong>Door de stad</strong>, medina ↔ Gueliz, station of Hivernage</td><td class="num">30–50 MAD</td><td class="num">45–75 MAD</td></tr>
+<tr><td><strong>Medina → luchthaven</strong></td><td class="num">70–150 MAD</td><td class="num">hoger, vooraf afspreken</td></tr>
+</tbody>
+</table>
+</div>
+<p>Richtprijzen voor een petit taxi: spreek de prijs altijd vooraf af, of vraag om de meter, voordat u vertrekt.</p>
+
 <h2>Contant, wisselgeld en kleine biljetten</h2>
 <p>Neem dirham mee: kaarten worden vrijwel nooit geaccepteerd en wisselgeld ontbreekt vaak. De automaten in de aankomsthal werken goed, maar geven graag biljetten van 200 MAD, waarop een chauffeur bij een rit van 100 niet kan teruggeven. Neem op en wissel zo snel mogelijk – in het café of de winkel van de terminal – naar biljetten van 50 en 100.</p>
 
 <h2>Wanneer de taxi niet de juiste keuze is</h2>
 <p>In drie gevallen verliest hij zijn voordeel. Bij <strong>zeer late aankomsten</strong>, als het nachttarief de taxi dicht bij de prijs van een geboekte transfer brengt, zonder het comfort. Bij <strong>groepen van vier of meer</strong>, die vaak twee voertuigen betalen. En bij <strong>moeilijk vindbare riads</strong>, waar de chauffeur stopt bij de poort die hem uitkomt, niet bij de dichtstbijzijnde.</p>
 <p>Vergelijk dan met een <a href="/nl/book-transfer/">transfer tegen vaste prijs</a>: voor € 27 per voertuig tot zeven plaatsen is die vanaf vier personen het goedkoopst.</p>
+
+<h2>Met de taxi terug naar luchthaven Marrakech-Menara</h2>
+<p>Vanuit de medina kost een petit taxi naar de luchthaven meestal <strong>70 tot 150 MAD overdag</strong>, af te spreken voor het instappen. Vroeg in de ochtend rijden er echter geen taxi's door de steegjes: laat uw riad de avond ervoor een taxi bestellen, of boek een <a href="/nl/book-transfer/">transfer</a> die bij de poort wacht. Voor de aankomst staat alles op onze pagina <a href="/nl/marrakech-airport-taxi/">luchthaventaxi</a>; voor de incheck tijden, zie de pagina <a href="/nl/departures/">vertrek</a>.</p>
 `,
   faqs: [
+    { q: "Wat kost een taxi van de medina naar de luchthaven van Marrakech?", a: "Meestal 70 tot 150 MAD overdag in een petit taxi, vooraf afgesproken. Vroeg in de ochtend of 's nachts stijgt de prijs en zijn taxi's schaars in de steegjes: laat uw riad er een bestellen of neem een transfer." },
+    { q: "Vind je 's ochtends vroeg taxi's in Marrakech?", a: "In de medina vóór 6.00 uur nauwelijks. Vraag uw accommodatie de avond ervoor een taxi te bestellen, of boek een transfer voor een vroege vlucht." },
     { q: "Wat kost een taxi van luchthaven Marrakech naar de medina?", a: "Het officiële bord bij de standplaats toont ongeveer 100 tot 150 MAD overdag naar de medina, Guéliz en Hivernage, en 150 tot 240 MAD 's nachts. De prijs geldt voor de hele auto, niet per passagier." },
     { q: "Gebruiken taxi's in Marrakech de taximeter?", a: "Vanaf de luchthaven niet: daar geldt een vast tarief van het bord. In de stad horen petits taxis er een te hebben, maar bij toeristen gaat hij zelden aan. Vraag erom bij het instappen of spreek de prijs vooraf af." },
     { q: "Petit of grand taxi, wat is het verschil?", a: "De petit taxi is de beige sedan van Marrakech, beperkt tot drie passagiers en tot de stad. De grand taxi neemt tot zes personen mee, heeft een echte kofferbak en rijdt ook buiten de stad. Vanaf vier personen vraagt u meteen een grand taxi." },

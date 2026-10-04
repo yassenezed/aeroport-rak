@@ -32,14 +32,32 @@ export default {
 <p>Leaving the airport, the established practice is a flat fare from the posted board, not the meter. In town, petits taxis are supposed to have one, but <strong>it is rarely switched on for tourists</strong>: ask as you get in, or agree the price before setting off.</p>
 <p>City benchmarks: <strong>MAD 15–30</strong> for a short ride, <strong>MAD 30–50</strong> for a longer crossing, with roughly a 50 % night surcharge. If you are quoted MAD 100 to go from Jemaa el-Fna to Gueliz, that is the tourist price: offer 30 and wait.</p>
 
+<h2>City ride prices in one table</h2>
+<div class="table-wrap">
+<table class="data">
+<thead><tr><th>Ride</th><th>Day</th><th>Night (≈ +50%)</th></tr></thead>
+<tbody>
+<tr><td><strong>Short</strong>, within one district</td><td class="num">MAD 15–30</td><td class="num">MAD 25–45</td></tr>
+<tr class="row-highlight"><td><strong>Across town</strong>, medina ↔ Gueliz, station or Hivernage</td><td class="num">MAD 30–50</td><td class="num">MAD 45–75</td></tr>
+<tr><td><strong>Medina → airport</strong></td><td class="num">MAD 70–150</td><td class="num">higher, agree first</td></tr>
+</tbody>
+</table>
+</div>
+<p>These are rough figures for a petit taxi: always agree on the fare, or ask for the meter, before setting off.</p>
+
 <h2>Cash, change and small notes</h2>
 <p>Bring dirhams: cards are almost never accepted and change is often short. The ATMs in arrivals work well but happily dispense MAD 200 notes, with which a driver will not break a MAD 100 fare. Withdraw, then break them as soon as you can — at the terminal café or shop — so you hold MAD 50s and 100s.</p>
 
 <h2>When a taxi is the wrong call</h2>
 <p>It loses its edge in three specific cases. <strong>Very late arrivals</strong>, where the night scale brings the taxi close to a booked transfer without the comfort. <strong>Groups of four or more</strong>, who often pay for two vehicles. And <strong>hard-to-place riads</strong>, where the driver will drop you at whichever gate suits him rather than the nearest.</p>
 <p>In those situations, compare with a <a href="/en/book-transfer/">fixed-price transfer</a>: at €27 per vehicle for up to seven seats, it becomes cheapest from four passengers onwards.</p>
+
+<h2>Back to Marrakech Menara Airport by taxi</h2>
+<p>From the medina, a petit taxi to the airport usually costs <strong>MAD 70 to 150 by day</strong>, to be agreed before getting in. Early in the morning, however, taxis do not run through the alleys: ask your riad to book one the evening before, or reserve a <a href="/en/book-transfer/">transfer</a> waiting at the gate. For arrival, everything is on our <a href="/en/marrakech-airport-taxi/">airport taxi</a> page; for check-in times, see the <a href="/en/departures/">departures</a> page.</p>
 `,
   faqs: [
+    { q: "How much is a taxi from the medina to Marrakech airport?", a: "Usually MAD 70 to 150 by day for a petit taxi, agreed before getting in. Early morning or at night the price rises and taxis are scarce in the alleys: have your riad book one or take a transfer." },
+    { q: "Can you find taxis early in the morning in Marrakech?", a: "Hardly in the medina before 6 am. Ask your accommodation to book one the evening before, or reserve a transfer for an early flight." },
     {
       q: 'How much is a taxi from Marrakech Airport to the medina?',
       a: "The official board at the rank shows roughly MAD 100–150 by day to the medina, Gueliz and Hivernage, and MAD 150–240 at night. The price is for the whole car, not per passenger.",

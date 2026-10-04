@@ -16,10 +16,23 @@ export default {
       { label: 'Durée', value: '≈ 20', sub: 'min' },
     ],
     body: `
-<h2>Comment ça marche</h2>
+<h2>Le bus 19 de l'aéroport Marrakech-Ménara : comment ça marche</h2>
 <p>La ligne 19, exploitée par <strong>ALSA</strong>, relie l'aéroport Marrakech Ménara à la place Jemaa el-Fna. L'arrêt se trouve à la sortie du terminal, bien signalé, et le trajet dure une vingtaine de minutes avec quelques arrêts intermédiaires, notamment à Guéliz.</p>
 <p>Le billet coûte <strong>30 MAD l'aller</strong> et <strong>50 MAD l'aller-retour</strong>, ce dernier restant valable une quinzaine de jours — ce qui en fait la formule la plus intéressante si vous repartez par le même chemin. L'achat se fait auprès du conducteur ou au guichet, en espèces.</p>
 <p>Les départs s'enchaînent toutes les trente minutes environ, entre <strong>6 h et 23 h 30</strong>. Les horaires peuvent varier selon la saison et le trafic : vérifiez l'affichage à l'arrêt.</p>
+
+<h2>Bus 19, taxi ou transfert depuis l'aéroport Marrakech-Ménara</h2>
+<div class="table-wrap">
+<table class="data">
+<thead><tr><th>Option</th><th>Prix</th><th>Horaires</th><th>Dépose</th></tr></thead>
+<tbody>
+<tr class="row-highlight"><td><strong>Bus 19</strong></td><td class="num">30 DH / personne</td><td>≈ 6 h – 23 h 30</td><td>Guéliz, Jemaa el-Fna</td></tr>
+<tr><td><strong>Taxi de la station</strong></td><td class="num">100–150 DH le jour, 150–240 DH la nuit</td><td>24 h/24</td><td>Porte de médina ou adresse</td></tr>
+<tr><td><strong>Transfert réservé</strong></td><td class="num">dès ≈ 290 DH (27 €) / véhicule</td><td>24 h/24</td><td>Porte la plus proche du riad</td></tr>
+</tbody>
+</table>
+</div>
+<p>Le comparatif complet est dans notre guide <a href="/blog/rak-centre-ville/">aéroport → centre-ville</a> ; les tarifs de la station sur notre page <a href="/taxi-aeroport-marrakech/">taxi aéroport</a>.</p>
 
 <h2>Quand c'est le bon choix</h2>
 <ul>
@@ -37,10 +50,15 @@ export default {
 <p>Quatre personnes en bus : 120 MAD. Un grand taxi ou un transfert pour le même groupe : 150 MAD en journée, ou 27 € pour un véhicule jusqu'à sept places, porte à porte. L'écart devient dérisoire, et le confort n'a plus rien à voir.</p>
 </div>
 
-<h2>Pour le retour vers l'aéroport</h2>
+<h2>Retour vers l'aéroport Marrakech-Ménara en bus 19</h2>
 <p>Le bus repart de Jemaa el-Fna dans l'autre sens, aux mêmes fréquences. C'est une option correcte pour un vol en milieu de journée. Pour un vol matinal, en revanche, l'horaire du premier départ — vers 6 h — ne laisse aucune marge si votre enregistrement ferme tôt : dans ce cas, réservez un transfert la veille.</p>
+
+<h2>Avant de monter : dirhams et petite monnaie</h2>
+<p>Le billet se paie <strong>en espèces, en dirhams</strong> : retirez au distributeur du hall des arrivées avant de sortir, et cassez un billet de 200 au café du terminal pour avoir l'appoint. Les règles utiles pour le change sont dans notre article <a href="/blog/argent-maroc/">argent et dirhams à l'aéroport</a>. Si vous atterrissez après 23 h, oubliez le bus : réservez un <a href="/reserver-transfert/">transfert</a> à l'avance.</p>
 `,
     faqs: [
+      { q: "Peut-on payer le bus 19 par carte ?", a: "Prévoyez des espèces : le billet s'achète auprès du conducteur ou au guichet, en dirhams. Des distributeurs se trouvent dans le hall des arrivées, juste avant la sortie." },
+      { q: "Le bus 19 s'arrête-t-il à Guéliz ?", a: "Oui, la ligne marque quelques arrêts intermédiaires, notamment à Guéliz, avant d'arriver à Jemaa el-Fna, pour un trajet total d'une vingtaine de minutes." },
       {
         q: 'Combien coûte le bus 19 à Marrakech ?',
         a: "30 MAD l'aller et 50 MAD l'aller-retour, ce dernier étant valable une quinzaine de jours. Le paiement se fait en espèces, auprès du conducteur ou au guichet.",

@@ -5,12 +5,20 @@ export default {
     title: "Salons VIP aéroport Marrakech-Ménara : accès et tarifs",
     description: "Les salons de l'aéroport de Marrakech-Ménara : comment y accéder, prix d'entrée à l'unité, cartes bancaires et programmes, et ce qu'on y trouve vraiment.",
     eyebrow: 'Aéroport',
-    h1: 'Les salons de l\'aéroport de Marrakech',
+    h1: "Les salons VIP de l'aéroport Marrakech-Ménara",
     lede: "La zone d'embarquement du RAK sature aux mêmes heures que les files. Un salon transforme alors une attente debout en une heure assise — et c'est l'un des rares achats de confort qui se justifie vraiment ici.",
     excerpt: "Accès, tarifs et contenu réel des salons du RAK : quand ils valent leur prix, et les trois voies pour y entrer.",
     date: '2026-09-07',
     body: `
-<h2>Les trois façons d'y entrer</h2>
+<h2>Les salons de l'aéroport Marrakech-Ménara</h2>
+<ul>
+<li><strong>Pearl Lounge</strong> : le salon ouvert à l'unité, accessible quelle que soit votre compagnie, ainsi que par certaines cartes et programmes.</li>
+<li><strong>Salon Royal Air Maroc</strong> : réservé en priorité aux passagers en classe affaires et aux membres élite de la compagnie et de ses partenaires.</li>
+<li><strong>Convives de Marque (ONDA)</strong> : le service d'accueil VIP de l'Office national des aéroports, avec salon et accompagnement.</li>
+</ul>
+<p>Tous offrent sièges, wifi, prises et buffet léger, avec un accès à l'unité d'environ 25 à 45 € selon le salon. La liste des autres services est sur notre page <a href="/services/">services de l'aéroport</a>.</p>
+
+<h2>Accéder aux salons de l'aéroport Marrakech-Ménara : trois façons</h2>
 <ol>
 <li><strong>À l'unité, sur place ou en ligne.</strong> C'est la voie la plus simple : comptez de l'ordre de 25 à 45 € par personne pour une durée généralement limitée à trois heures. La réservation en ligne est souvent moins chère et garantit la place en période chargée.</li>
 <li><strong>Par une carte bancaire ou un programme d'accès.</strong> Plusieurs cartes haut de gamme et programmes de salons donnent droit à l'entrée, parfois avec un quota d'invités. Vérifiez la couverture du RAK avant de partir : elle varie d'une année à l'autre.</li>
@@ -37,10 +45,15 @@ export default {
 <h2>Quand cela n'en vaut pas la peine</h2>
 <p>Si votre vol part dans moins de quatre-vingt-dix minutes après le contrôle de sûreté, vous n'aurez pas le temps d'en profiter. Si vous voyagez seul, léger, et que la zone est calme — milieu de journée hors saison —, un café et une prise libre font le même travail pour 20 MAD.</p>
 
-<h2>Points pratiques</h2>
+<h2>Points pratiques à l'aéroport Marrakech-Ménara</h2>
 <p>Les salons se situent <strong>après le contrôle de sûreté</strong> : intégrez le temps de passage de la police et de la sûreté avant de calculer votre temps sur place. La durée d'accès est le plus souvent plafonnée à trois heures, au-delà desquelles un supplément s'applique. Et en période de forte affluence, un salon peut refuser du monde : la réservation en ligne reste la seule vraie garantie.</p>
+
+<h2>Salon, Fast Track ou café : que choisir ?</h2>
+<p>Le salon rend l'<strong>attente</strong> confortable, mais ne fait gagner aucun temps aux contrôles : c'est le rôle du <a href="/blog/fast-track-aeroport-marrakech/">Fast Track</a>. Pour une attente courte ou un petit budget, les cafés et la restauration de la zone d'embarquement suffisent — voir notre page <a href="/restaurants-boutiques-aeroport-marrakech/">restaurants et boutiques de l'aéroport</a>. Vérifiez enfin l'heure et le hall de votre vol sur la page <a href="/departs/">départs</a> avant de vous installer.</p>
 `,
     faqs: [
+      { q: "Quels salons y a-t-il à l'aéroport de Marrakech ?", a: "Le Pearl Lounge, le salon de Royal Air Maroc et le service Convives de Marque de l'ONDA. Tous proposent sièges, wifi, prises et buffet léger, avec un accès possible à l'unité pour environ 25 à 45 €." },
+      { q: "Peut-on dormir dans un salon de l'aéroport de Marrakech ?", a: "Pas vraiment : l'accès est généralement limité à trois heures et les salons ne sont pas conçus pour la nuit. Pour une longue attente nocturne, un hôtel proche de l'aéroport revient souvent moins cher." },
       {
         q: 'Combien coûte l\'accès à un salon à l\'aéroport de Marrakech ?',
         a: "De l'ordre de 25 à 45 € par personne pour un accès à l'unité, généralement limité à trois heures. La réservation en ligne est souvent moins chère que l'achat sur place et garantit la place en période chargée.",

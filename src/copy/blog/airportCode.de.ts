@@ -4,18 +4,25 @@ export default {
   title: "RAK oder GMMX: der Code des Flughafens Marrakesch-Menara",
   description: "Warum der Flughafen Marrakesch-Menara RAK heißt, was GMMX bedeutet und wie man ihn bei der Buchung nicht mit anderen marokkanischen Flughäfen verwechselt.",
   eyebrow: 'Flughafen',
-  h1: 'RAK und GMMX: die Codes des Flughafens Marrakesch',
+  h1: "RAK und GMMX: die Codes des Flughafens Marrakesch-Menara",
   lede: "Drei Buchstaben auf Ihrem Ticket, vier in den Flugplänen. Hier, was sie bedeuten, woher das „RAK“ kommt, das dem Stadtnamen nicht ähnelt, und welche Verwechslungen man bei der Buchung vermeiden sollte.",
   excerpt: 'RAK, GMMX und die Codes der anderen marokkanischen Flughäfen: was die Buchstaben bedeuten und wie man Buchungsfehler vermeidet.',
   date: '2026-09-10',
   body: `
-<h2>RAK: der IATA-Code</h2>
+<h2>RAK: der IATA-Code des Flughafens Marrakesch-Menara</h2>
 <p><strong>RAK</strong> ist der dreibuchstabige Code des Internationalen Luftverkehrsverbands. Ihn sehen Sie auf Tickets, Gepäckanhängern und Anzeigetafeln; er bezeichnet den Flughafen <strong>Marrakesch Menara</strong>.</p>
 <p>Warum RAK und nicht MAR oder MRK? Weil IATA-Codes nach Verfügbarkeit vergeben werden, nicht nach sprachlicher Logik: MAR und MRK waren anderswo bereits belegt. RAK übernimmt einfach drei Konsonanten aus „Marrakech“, wie AGA für Agadir oder CMN für Casablanca Mohammed V.</p>
 
-<h2>GMMX: der ICAO-Code</h2>
+<h2>GMMX: der ICAO-Code des Flughafens Marrakesch-Menara</h2>
 <p><strong>GMMX</strong> ist der vierbuchstabige Code der Internationalen Zivilluftfahrtorganisation, verwendet von Fluglotsen, Flugplänen und Flugwetterdiensten. Seine Struktur ist geografisch: <strong>GM</strong> steht für Marokko, die beiden letzten Buchstaben für den Flugplatz.</p>
 <p>Zum Buchen nutzen Sie ihn nie, begegnen ihm aber in Flugverfolgungs-Apps und Flugwetterberichten.</p>
+
+<h2>Wo Ihnen der Code RAK begegnet</h2>
+<ul>
+<li><strong>Bei der Buchung</strong>: Geben Sie „RAK“ statt „Marrakesch“ in die Suche ein, um Ergebnisse für andere Städte zu vermeiden. Unsere <a href="/de/flights/">Flugsuche</a> geht direkt von diesem Code aus.</li>
+<li><strong>Auf dem Gepäckanhänger</strong>: Prüfen Sie beim Check-in, dass auf dem Anhänger Ihres Koffers RAK steht. Ein falscher Anhänger ist die häufigste Ursache für verlorenes Gepäck.</li>
+<li><strong>Auf den Anzeigen</strong>: Die Tafeln für <a href="/de/arrivals/">Ankünfte</a> und <a href="/de/departures/">Abflüge</a> nutzen Code und Flugnummer.</li>
+</ul>
 
 <h2>Die anderen marokkanischen Flughäfen, um Fehler zu vermeiden</h2>
 <div class="table-wrap">
@@ -37,7 +44,7 @@ export default {
 <p>Nach <strong>CMN</strong> buchen im Glauben, in Marrakesch zu landen. Casablanca Mohammed V ist der größte Flughafen des Landes und steht oft oben in den Suchergebnissen – liegt aber 240 Kilometer entfernt, rund zweieinhalb Stunden Fahrt oder eine Bahnfahrt ab Casa-Voyageurs. Prüfen Sie vor dem Bezahlen immer die drei Buchstaben.</p>
 </div>
 
-<h2>Marrakesch Menara in Kürze</h2>
+<h2>Der Flughafen Marrakesch-Menara in Kürze</h2>
 <ul>
 <li><strong>Offizieller Name</strong>: Flughafen Marrakesch Menara, nach den benachbarten Menara-Gärten.</li>
 <li><strong>Lage</strong>: 6 km südwestlich des Zentrums, auf 471 Metern Höhe.</li>
@@ -45,8 +52,13 @@ export default {
 <li><strong>Verkehr</strong>: über 9,3 Millionen Passagiere 2024.</li>
 <li><strong>Terminals</strong>: zwei angrenzende, zu Fuß verbundene Hallen.</li>
 </ul>
+
+<h2>Nach der Landung in RAK</h2>
+<p>Der Flughafen liegt sechs Kilometer von der Medina: Taxi vom Stand, Bus 19 oder gebuchter Transfer — Optionen und Preise vergleicht unser Ratgeber <a href="/de/blog/rak-to-city-center/">Flughafen → Zentrum</a>. Für eine späte Ankunft siehe auch unsere Seite <a href="/de/marrakech-airport-taxi/">Flughafentaxi</a>.</p>
 `,
   faqs: [
+    { q: "Was bedeutet RAK auf einem Gepäckanhänger?", a: "Es ist der Code des Zielflughafens: RAK steht für Marrakesch-Menara. Prüfen Sie ihn beim Check-in, besonders mit Umstieg, damit der Koffer am richtigen Ort ankommt." },
+    { q: "Sucht man einen Flug besser mit RAK oder Marrakesch?", a: "RAK ist sicherer: Der Code bezeichnet genau einen Flughafen, während die Suche nach dem Stadtnamen andere marokkanische Flughäfen vorschlagen kann." },
     { q: 'Wie lautet der Code des Flughafens Marrakesch?', a: "RAK ist der IATA-Code auf Ticket und Gepäckanhänger, GMMX der ICAO-Code für Flugsicherung und Flugpläne." },
     { q: 'Warum heißt der Flughafen Marrakesch RAK?', a: "IATA-Codes werden nach Verfügbarkeit vergeben, nicht nach sprachlicher Logik: MAR und MRK waren anderswo belegt. RAK übernimmt drei Konsonanten aus „Marrakech“, wie AGA für Agadir oder CMN für Casablanca." },
     { q: 'Was bedeutet GMMX?', a: "Es ist der ICAO-Code von Marrakesch Menara. Die Struktur ist geografisch: GM steht für Marokko, die letzten beiden Buchstaben für den Flugplatz. Er dient Flugplänen und Flugwetter, nie Buchungen." },

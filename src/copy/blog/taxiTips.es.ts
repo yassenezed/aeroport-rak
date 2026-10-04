@@ -32,14 +32,32 @@ export default {
 <p>Saliendo del aeropuerto, la práctica establecida es una tarifa fija publicada en el panel, no el taxímetro. En la ciudad, los petits taxis deberían tenerlo, pero <strong>rara vez se activa con los turistas</strong>: pídalo al subir o acuerde el precio antes de salir.</p>
 <p>Los órdenes de magnitud en la ciudad: <strong>15 a 30 MAD</strong> para una carrera corta y <strong>30 a 50 MAD</strong> para una travesía más larga, con un recargo de aproximadamente el 50 % de noche. Si le anuncian 100 MAD para ir de Jemaa el-Fna a Guéliz, es el precio para turistas: proponga 30 y espere.</p>
 
+<h2>Los precios de las carreras en la ciudad, en una tabla</h2>
+<div class="table-wrap">
+<table class="data">
+<thead><tr><th>Carrera</th><th>Día</th><th>Noche (≈ +50 %)</th></tr></thead>
+<tbody>
+<tr><td><strong>Corta</strong>, en el mismo barrio</td><td class="num">15–30 MAD</td><td class="num">25–45 MAD</td></tr>
+<tr class="row-highlight"><td><strong>Travesía</strong> medina ↔ Gueliz, estación o Hivernage</td><td class="num">30–50 MAD</td><td class="num">45–75 MAD</td></tr>
+<tr><td><strong>Medina → aeropuerto</strong></td><td class="num">70–150 MAD</td><td class="num">más caro, a acordar</td></tr>
+</tbody>
+</table>
+</div>
+<p>Son referencias para un petit taxi: acuerde siempre el precio, o pida el taxímetro, antes de salir.</p>
+
 <h2>Efectivo, cambio y billetes pequeños</h2>
 <p>Lleve dirhams: la tarjeta casi nunca se acepta y suele faltar cambio. Los cajeros de la sala de llegadas funcionan bien, pero entregan de buena gana billetes de 200 MAD, con los que un conductor no devolverá el cambio de una carrera de 100. Retire y fraccione cuanto antes —en la cafetería o la tienda de la terminal— para disponer de billetes de 50 y 100 MAD.</p>
 
 <h2>Cuándo el taxi no es la buena elección</h2>
 <p>Pierde interés en tres casos precisos. Las <strong>llegadas muy tardías</strong>, donde el baremo nocturno acerca el taxi al precio de un traslado reservado sin ofrecer su comodidad. Los <strong>grupos de cuatro o más</strong>, que a menudo pagan dos vehículos. Y los <strong>riads difíciles de situar</strong>, donde el conductor le dejará en la puerta que le convenga y no en la más cercana.</p>
 <p>En esas situaciones, compare con un <a href="/es/book-transfer/">traslado a precio fijo</a>: a 27 € el vehículo hasta siete plazas, pasa a ser el más barato en cuanto son cuatro.</p>
+
+<h2>Volver al aeropuerto de Marrakech-Menara en taxi</h2>
+<p>Desde la medina, un petit taxi al aeropuerto suele costar <strong>70 a 150 MAD de día</strong>, a acordar antes de subir. A primera hora, en cambio, no circulan taxis por los callejones: pida a su riad que reserve uno la víspera o reserve un <a href="/es/book-transfer/">traslado</a> que le espere en la puerta. Para la llegada, todo está en nuestra página <a href="/es/marrakech-airport-taxi/">taxi aeropuerto</a>; para la hora de facturación, vea la página de <a href="/es/departures/">salidas</a>.</p>
 `,
   faqs: [
+    { q: "¿Cuánto cuesta un taxi de la medina al aeropuerto de Marrakech?", a: "Normalmente 70 a 150 MAD de día en petit taxi, acordado antes de subir. A primera hora o de noche sube el precio y escasean los taxis en los callejones: pida a su riad que reserve uno o tome un traslado." },
+    { q: "¿Hay taxis temprano por la mañana en Marrakech?", a: "Difícilmente en la medina antes de las 6 h. Pida a su alojamiento que reserve uno la víspera o reserve un traslado para un vuelo temprano." },
     {
       q: '¿Cuánto cuesta un taxi del aeropuerto de Marrakech a la medina?',
       a: "El panel oficial de la parada indica unos 100 a 150 MAD de día hacia la medina, Guéliz y el Hivernage, y 150 a 240 MAD de noche. El precio es por el coche entero, no por pasajero.",

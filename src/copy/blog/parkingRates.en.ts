@@ -33,6 +33,10 @@ export default {
 </div>
 <p class="small">Indicative amounts: ONDA may revise the rates and the sign at the entrance prevails. Approximate conversion €1 ≈ MAD 10.8. The full rate card and the three car parks are covered on our <a href="/en/parking/">airport parking</a> page.</p>
 
+<h2>Waiting for a traveller at Marrakech Menara Airport</h2>
+<p>The lane in front of the terminals is for drop-off only: to wait, enter the car park, where <strong>the first hour costs MAD 6</strong>. Do not arrive too early: between landing and leaving the hall, allow 30 to 60 minutes for border police and bags. Follow the real landing time on our <a href="/en/arrivals/">arrivals</a> page and leave home accordingly — that is the difference between MAD 6 and MAD 11.</p>
+<p>The three car parks hold about <strong>1,550 open-air spaces</strong>, open 24/7: 740 in car park 1, 460 in car park 2 and 350 in car park 3. Details on our <a href="/en/parking/">airport parking</a> page.</p>
+
 <h2>Parking, taxi or transfer: the break-even point</h2>
 <p>A return taxi to the medina costs MAD 200 to 300 by day: the price of <strong>5 to 7 days of parking</strong>. Two <a href="/en/book-transfer/">private transfers</a> come to about MAD 580, or <strong>two weeks of parking</strong>. If you live in or around Marrakech, leaving your car at the airport is almost always the cheapest option for trips of up to two weeks.</p>
 <div class="callout">
@@ -40,10 +44,15 @@ export default {
 <p>The spaces are open-air. In summer the inside of a car goes well above 60 °C: use a sunshade and leave no electronics, medicines or cosmetics inside.</p>
 </div>
 
-<h2>Three tips to pay the right price</h2>
+<h2>Three tips for Marrakech Menara Airport parking</h2>
 <p><strong>Keep the ticket</strong> from the barrier: you need it to pay before leaving. <strong>Carry dirhams in cash</strong>, as cards are not accepted everywhere. And if you are returning a <a href="/en/car-rental/">hire car</a>, follow the company's signs without taking a ticket at the public car park.</p>
+
+<h2>No car: the alternatives to parking</h2>
+<p>If nobody can keep the car at home or drop you off, compare with a <a href="/en/book-transfer/">return transfer</a>, which also removes the heat risk over a summer week, or with the rank taxi (fares on our <a href="/en/marrakech-airport-taxi/">airport taxi</a> page). For visitors, a rental car goes straight to the company's return area: see our <a href="/en/blog/car-rental-marrakech-airport/">airport car hire guide</a>.</p>
 `,
   faqs: [
+    { q: "How many spaces does Marrakech airport parking have?", a: "About 1,550 open-air spaces across three car parks: 740 in car park 1, 460 in car park 2 and 350 in car park 3." },
+    { q: "Is Marrakech airport parking open at night?", a: "Yes, the car parks run 24/7 and are guarded, including for flights arriving or leaving in the middle of the night." },
     { q: "How much is a day of parking at Marrakech airport?", a: "MAD 42 for 12 to 24 hours on the ONDA rate card, about €3.90. For shorter stays, MAD 22 covers 5 to 12 hours." },
     { q: "How much is a week of parking at RAK?", a: "About MAD 294 (≈ €27) at MAD 42 per 24-hour period, and about MAD 588 for two weeks." },
     { q: "Is parking cheaper than a return taxi?", a: "Yes for up to about a week: a return taxi to the medina costs MAD 200 to 300 by day, the price of 5 to 7 days of parking." },

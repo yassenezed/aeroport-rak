@@ -33,6 +33,10 @@ export default {
 </div>
 <p class="small">Richtbedragen: het ONDA kan het tarief herzien en het bord aan de ingang geldt. Omrekening bij benadering € 1 ≈ 10,8 MAD. Het volledige tarief en de drie parkings staan op onze pagina <a href="/nl/parking/">parkeren op de luchthaven</a>.</p>
 
+<h2>Op een reiziger wachten op luchthaven Marrakech-Menara</h2>
+<p>De rijstrook voor de terminals is alleen om af te zetten: om te wachten rijdt u het parkeerterrein op, waar <strong>het eerste uur 6 MAD kost</strong>. Kom niet te vroeg: tussen landing en het verlaten van de hal zit 30 tot 60 minuten voor grenspolitie en bagage. Volg de werkelijke landingstijd op onze pagina <a href="/nl/arrivals/">aankomsten</a> en vertrek op tijd — dat is het verschil tussen 6 en 11 MAD.</p>
+<p>De drie parkeerterreinen tellen samen zo'n <strong>1.550 plaatsen</strong> in de open lucht, 24 uur per dag open: 740 op parking 1, 460 op parking 2 en 350 op parking 3. Details op onze pagina <a href="/nl/parking/">parkeren op de luchthaven</a>.</p>
+
 <h2>Parkeren, taxi of transfer: het omslagpunt</h2>
 <p>Een taxi heen en terug naar de medina kost overdag 200 tot 300 MAD: de prijs van <strong>5 tot 7 dagen parkeren</strong>. Twee <a href="/nl/book-transfer/">privétransfers</a> kosten ongeveer 580 MAD, ofwel <strong>twee weken parkeren</strong>. Woont u in of rond Marrakech, dan is de auto op de luchthaven laten bijna altijd het goedkoopst voor reizen tot twee weken.</p>
 <div class="callout">
@@ -40,10 +44,15 @@ export default {
 <p>De plaatsen liggen in open lucht. In de zomer wordt het in de auto ruim boven 60 °C: zonnescherm, en geen elektronica, medicijnen of cosmetica in de wagen.</p>
 </div>
 
-<h2>Drie tips om de juiste prijs te betalen</h2>
+<h2>Drie tips voor parkeren op luchthaven Marrakech-Menara</h2>
 <p><strong>Bewaar het ticket</strong> van de slagboom: u hebt het nodig om voor vertrek te betalen. <strong>Neem dirham cash mee</strong>, kaarten worden niet overal aanvaard. En levert u een <a href="/nl/car-rental/">huurauto</a> in, volg dan de borden van de verhuurder zonder ticket aan de openbare parking te nemen.</p>
+
+<h2>Zonder auto: de alternatieven voor parkeren</h2>
+<p>Kan niemand de auto thuis houden of u wegbrengen, vergelijk dan met een <a href="/nl/book-transfer/">transfer heen en terug</a>, die ook het hitterisico van een zomerweek wegneemt, of met de taxi van de standplaats (tarieven op onze pagina <a href="/nl/marrakech-airport-taxi/">luchthaventaxi</a>). Voor bezoekers gaat een huurauto direct naar de inleverzone van de verhuurder: zie onze <a href="/nl/blog/car-rental-marrakech-airport/">gids voor autohuur op de luchthaven</a>.</p>
 `,
   faqs: [
+    { q: "Hoeveel plaatsen heeft het parkeerterrein van de luchthaven van Marrakech?", a: "Ongeveer 1.550 plaatsen in de open lucht verdeeld over drie terreinen: 740 op parking 1, 460 op parking 2 en 350 op parking 3." },
+    { q: "Is het parkeerterrein van de luchthaven van Marrakech 's nachts open?", a: "Ja, de parkeerterreinen zijn 24 uur per dag open en bewaakt, ook voor vluchten die midden in de nacht aankomen of vertrekken." },
     { q: "Wat kost een dag parkeren op de luchthaven van Marrakech?", a: "42 MAD voor 12 tot 24 uur volgens het ONDA-tarief, ongeveer € 3,90. Korter: 22 MAD voor 5 tot 12 uur." },
     { q: "Wat kost een week parkeren aan de RAK?", a: "Ongeveer 294 MAD (≈ € 27) aan 42 MAD per 24 uur, en ongeveer 588 MAD voor twee weken." },
     { q: "Is parkeren goedkoper dan een taxi heen en terug?", a: "Ja tot ongeveer een week: een taxi heen en terug naar de medina kost overdag 200 tot 300 MAD, de prijs van 5 tot 7 dagen parkeren." },

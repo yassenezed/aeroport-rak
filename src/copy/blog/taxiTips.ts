@@ -33,14 +33,32 @@ export default {
 <p>Au départ de l'aéroport, la pratique établie est un tarif forfaitaire affiché au panneau, pas le compteur. En ville, les petits taxis sont censés en avoir un, mais <strong>il est rarement enclenché avec les touristes</strong> : demandez-le en montant, ou convenez du prix avant de partir.</p>
 <p>Les ordres de grandeur en ville : <strong>15 à 30 MAD</strong> pour une course courte, <strong>30 à 50 MAD</strong> pour une traversée plus longue, avec une majoration d'environ 50 % la nuit. Si l'on vous annonce 100 MAD pour aller de Jemaa el-Fna à Guéliz, c'est le prix touriste : proposez 30 et attendez.</p>
 
+<h2>Les prix des courses en ville, en un tableau</h2>
+<div class="table-wrap">
+<table class="data">
+<thead><tr><th>Course</th><th>Jour</th><th>Nuit (≈ +50 %)</th></tr></thead>
+<tbody>
+<tr><td><strong>Courte</strong>, dans le même quartier</td><td class="num">15–30 DH</td><td class="num">25–45 DH</td></tr>
+<tr class="row-highlight"><td><strong>Traversée</strong> médina ↔ Guéliz, gare ou Hivernage</td><td class="num">30–50 DH</td><td class="num">45–75 DH</td></tr>
+<tr><td><strong>Médina → aéroport</strong></td><td class="num">70–150 DH</td><td class="num">plus élevé, à convenir</td></tr>
+</tbody>
+</table>
+</div>
+<p>Ce sont des ordres de grandeur pour un petit taxi : convenez toujours du prix, ou demandez le compteur, avant de partir.</p>
+
 <h2>Espèces, monnaie et petits billets</h2>
 <p>Prévoyez des dirhams : la carte n'est presque jamais acceptée et la monnaie manque souvent. Les distributeurs du hall des arrivées fonctionnent bien, mais délivrent volontiers des billets de 200 MAD, avec lesquels un chauffeur ne rendra pas la monnaie sur une course à 100. Retirez, puis fractionnez dès que possible — au café du terminal ou à la boutique — pour disposer de coupures de 50 et 100 MAD.</p>
 
 <h2>Quand le taxi n'est pas le bon choix</h2>
 <p>Il perd de son intérêt dans trois cas précis. Les <strong>arrivées très tardives</strong>, où le barème de nuit rapproche le taxi du prix d'un transfert réservé sans en offrir le confort. Les <strong>groupes de quatre et plus</strong>, qui paient souvent deux véhicules. Et les <strong>riads difficiles à situer</strong>, où le chauffeur vous déposera à la porte qui l'arrange plutôt qu'à la plus proche.</p>
 <p>Dans ces situations, comparez avec un <a href="/reserver-transfert/">transfert à prix fixe</a> : à 27 € le véhicule jusqu'à sept places, il devient le moins cher dès que vous êtes quatre.</p>
+
+<h2>Retour vers l'aéroport Marrakech-Ménara en taxi</h2>
+<p>Depuis la médina, un petit taxi vers l'aéroport coûte en général <strong>70 à 150 DH en journée</strong>, à négocier avant de monter. Tôt le matin, en revanche, les taxis ne circulent pas dans les ruelles : faites-en commander un par votre riad la veille, ou réservez un <a href="/reserver-transfert/">transfert</a> qui vous attend à la porte. Pour l'arrivée, tout est expliqué sur notre page <a href="/taxi-aeroport-marrakech/">taxi aéroport</a> ; pour l'heure d'enregistrement, voir la page <a href="/departs/">départs</a>.</p>
 `,
     faqs: [
+      { q: "Combien coûte un taxi de la médina à l'aéroport de Marrakech ?", a: "En général 70 à 150 DH en journée pour un petit taxi, à convenir avant de monter. Tôt le matin ou la nuit, le prix monte et les taxis sont rares dans les ruelles : faites-en réserver un par votre riad ou prenez un transfert." },
+      { q: "Trouve-t-on des taxis tôt le matin à Marrakech ?", a: "Difficilement dans la médina avant 6 h. Demandez à votre hébergement d'en commander un la veille, ou réservez un transfert pour un vol matinal." },
       {
         q: "Combien coûte un taxi de l'aéroport de Marrakech à la médina ?",
         a: "Le panneau officiel de la station affiche environ 100 à 150 MAD en journée vers la médina, Guéliz et l'Hivernage, et 150 à 240 MAD la nuit. Le prix vaut pour la voiture entière, pas par passager.",
