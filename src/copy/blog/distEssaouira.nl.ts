@@ -4,7 +4,7 @@ export default {
   title: "Luchthaven Marrakech-Menara → Essaouira: afstand, vervoer",
   description: "Van luchthaven Marrakech-Menara naar Essaouira: 180 km, 2,5 uur rijden, prijzen van CTM- en Supratours-bussen, privétransfer en huurauto.",
   eyebrow: "Afstanden",
-  h1: "Van luchthaven Marrakech naar Essaouira",
+  h1: "Van luchthaven Marrakech-Menara naar Essaouira",
   lede: "Honderdtachtig kilometer rechte weg door de arganbossen, tweeënhalf uur en tien graden minder bij aankomst. Hier de vier manieren om te reizen en wat ze kosten.",
   excerpt: "180 km en 2,5 uur tussen de RAK en Essaouira: bus, privétransfer, grand taxi of huurauto, met echte prijzen.",
   date: "2026-09-03",
@@ -15,7 +15,7 @@ export default {
     { label: "Privétransfer", value: "≈ € 95", sub: "per voertuig" },
   ],
   body: `
-<h2>De opties vergeleken</h2>
+<h2>Luchthaven Marrakech-Menara → Essaouira: de opties vergeleken</h2>
 <div class="table-wrap">
 <table class="data">
 <thead><tr><th>Optie</th><th>Prijs</th><th>Duur</th><th>Vertrek</th></tr></thead>
@@ -29,11 +29,18 @@ export default {
 </div>
 <p>Wat vaak wordt vergeten: de bussen <strong>vertrekken niet van de luchthaven</strong>, maar van het busstation van Marrakech. U moet dus een taxi en wachttijd optellen, wat de totale duur richting vier uur duwt.</p>
 
+<h2>De reis stap voor stap vanaf luchthaven Marrakech-Menara</h2>
+<ol>
+<li><strong>Met een transfer</strong>: de chauffeur wacht met een naambord in de aankomsthal en rijdt direct naar Essaouira — vanaf drie passagiers de eenvoudigste keuze. Boek op onze pagina <a href="/nl/book-transfer/">transfer</a>.</li>
+<li><strong>Met de auto</strong>: balies in de aankomsthal, daarna westwaarts via de weg naar Chichaoua en Essaouira. Alles over ophalen staat in ons artikel <a href="/nl/blog/car-rental-marrakech-airport/">autohuur op de luchthaven</a>.</li>
+<li><strong>Met de bus</strong>: taxi naar het busstation van Marrakech (tarieven op onze pagina <a href="/nl/marrakech-airport-taxi/">luchthaventaxi</a>), daarna drie tot drie en een half uur met CTM of Supratours.</li>
+</ol>
+
 <h2>De route</h2>
 <p>De N8 en daarna de R207 lopen gelijkmatig en goed geasfalteerd door de arganbossen, zonder bijzondere moeilijkheid. Een mooie route met enkele klassieke stops – de coöperaties voor arganolie en de geiten in de arganbomen, waarvan de enscenering een betaalde attractie is geworden waar u beter aan voorbij rijdt.</p>
 <p>Reken op tweeënhalf uur bij normaal rijden. De laatste kilometers richting Essaouira zijn vaak winderig: het handelsmerk van de stad.</p>
 
-<h2>Welke optie voor wie</h2>
+<h2>Welke optie kiezen vanaf luchthaven Marrakech-Menara</h2>
 <p><strong>De bus</strong> blijft qua prijs onverslaanbaar, met 80 tot 120 MAD per persoon afhankelijk van maatschappij en comfort. CTM en Supratours zijn betrouwbaar, hebben airco en een bagageruim. De juiste keuze alleen of met z'n tweeën zonder haast.</p>
 <p><strong>De privétransfer</strong> wordt verstandig vanaf drie of vier passagiers: € 95 per voertuig tegenover 400 MAD voor vier bustickets plus twee taxi's erheen verkleint het verschil sterk – en u vertrekt direct bij de terminal, zonder busstation.</p>
 <p><strong>De huurauto</strong> ligt voor de hand als u wilt rondtoeren: Sidi Kaouki, Diabat en de stranden ten zuiden van Essaouira hebben geen openbaar vervoer.</p>
@@ -44,8 +51,13 @@ export default {
 
 <h2>Hoe lang blijven</h2>
 <p>Essaouira verdient meer dan een dagtrip: met vijf uur rijden heen en terug blijven er maar een paar uur ter plaatse over. <strong>Twee nachten</strong> geven tijd voor de medina op de werelderfgoedlijst, de haven, de stadsmuren en een strand, en twee keer vis eten – het minimum om het verschil in sfeer met Marrakech te voelen.</p>
+
+<h2>Aankomen in Essaouira: de medina eindigt te voet</h2>
+<p>Net als in Marrakech is de medina van Essaouira autovrij. Auto's en transfers stoppen bij de poorten, waar betaalde parkeerplaatsen en kruiers met handkar het overnemen tot aan uw riad. Vraag uw accommodatie welke poort het dichtst bij is en geef die door aan de chauffeur. Huurt u een auto voor de kust, dan blijft die tijdens uw verblijf in de medina op een parkeerterrein. Voor de rest van de route, zie ook onze gids <a href="/nl/blog/distance-agadir-marrakech-airport/">luchthaven → Agadir</a>.</p>
 `,
   faqs: [
+    { q: "Wat kost een transfer van de luchthaven van Marrakech naar Essaouira?", a: "Ongeveer € 95 per voertuig voor tweeënhalf uur, met vertrek direct vanaf de terminal. Vanaf drie of vier reizigers is dat vaak voordeliger dan buskaartjes plus taxi's naar het busstation." },
+    { q: "Kun je op de luchthaven van Marrakech huren en in Essaouira inleveren?", a: "Bij sommige verhuurders wel, met een toeslag voor enkele reis en minder kantoren in Essaouira. Controleer het inleverpunt en het totaal voordat u boekt." },
     { q: "Hoe ver ligt Essaouira van Marrakech?", a: "Ongeveer 180 kilometer, dus tweeënhalf uur rijden via de N8 en daarna de R207, door de arganbossen. De weg is gelijkmatig en goed geasfalteerd, zonder bijzondere moeilijkheid." },
     { q: "Hoe kom je van luchthaven Marrakech naar Essaouira?", a: "Met een privétransfer vanaf de terminal voor ongeveer € 95 per voertuig, met een CTM- of Supratours-bus vanaf het busstation van Marrakech voor 80 tot 120 MAD per persoon, met een afgesproken grand taxi of met een huurauto." },
     { q: "Vertrekken de bussen naar Essaouira van luchthaven Marrakech?", a: "Nee, ze vertrekken van het busstation van Marrakech. U hebt dus een taxi vanaf de luchthaven en wachttijd nodig, wat de totale reis op ongeveer vier uur brengt." },

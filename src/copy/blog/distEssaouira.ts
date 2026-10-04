@@ -5,7 +5,7 @@ export default {
     title: "Aéroport Marrakech-Ménara → Essaouira : distance, transports",
     description: "Aller de l'aéroport de Marrakech-Ménara à Essaouira : 180 km, 2 h 30 de route, prix du bus CTM et Supratours, transfert privé et location de voiture.",
     eyebrow: 'Distances',
-    h1: 'De l\'aéroport de Marrakech à Essaouira',
+    h1: "De l'aéroport Marrakech-Ménara à Essaouira",
     lede: "Cent quatre-vingts kilomètres de route droite à travers l'arganeraie, deux heures trente, et dix degrés de moins à l'arrivée. Voici les quatre façons de faire ce trajet et ce qu'elles coûtent.",
     excerpt: "180 km et 2 h 30 entre le RAK et Essaouira : bus, transfert privé, grand taxi ou voiture de location, avec les prix réels.",
     date: '2026-09-03',
@@ -16,7 +16,7 @@ export default {
       { label: 'Transfert privé', value: '≈ 95 €', sub: 'par véhicule' },
     ],
     body: `
-<h2>Les options, comparées</h2>
+<h2>Aéroport Marrakech-Ménara → Essaouira : les options comparées</h2>
 <div class="table-wrap">
 <table class="data">
 <thead><tr><th>Option</th><th>Prix</th><th>Durée</th><th>Départ depuis</th></tr></thead>
@@ -30,11 +30,18 @@ export default {
 </div>
 <p>Le point souvent oublié : les bus <strong>ne partent pas de l'aéroport</strong> mais de la gare routière de Marrakech. Il faut donc ajouter un taxi et une marge d'attente, ce qui rapproche la durée totale des quatre heures.</p>
 
+<h2>Le trajet pas à pas depuis l'aéroport Marrakech-Ménara</h2>
+<ol>
+<li><strong>En transfert</strong> : le chauffeur vous attend avec une pancarte dans le hall des arrivées et part directement vers Essaouira — la solution la plus simple à partir de trois passagers. Réservation sur notre page <a href="/reserver-transfert/">transfert</a>.</li>
+<li><strong>En voiture</strong> : comptoirs dans le hall des arrivées, puis sortie vers l'ouest par la route de Chichaoua et d'Essaouira. Le guide complet du retrait est dans notre <a href="/blog/location-voiture-aeroport-marrakech/">location de voiture à l'aéroport</a>.</li>
+<li><strong>En bus</strong> : taxi jusqu'à la gare routière de Marrakech (tarifs sur notre page <a href="/taxi-aeroport-marrakech/">taxi aéroport</a>), puis autocar CTM ou Supratours pour trois heures à trois heures trente.</li>
+</ol>
+
 <h2>La route</h2>
 <p>La N8 puis la R207 traversent l'arganeraie sur un axe régulier, bien revêtu, sans difficulté particulière. C'est une belle route, avec quelques haltes classiques — les coopératives d'huile d'argan, et les chèvres dans les arganiers, dont la mise en scène est devenue une attraction payante à la sortie de laquelle il vaut mieux ne pas s'arrêter.</p>
 <p>Comptez deux heures trente en conduisant normalement. Les derniers kilomètres à l'approche d'Essaouira sont souvent venteux : c'est la signature de la ville.</p>
 
-<h2>Quelle option pour quel voyageur</h2>
+<h2>Quelle option choisir depuis l'aéroport Marrakech-Ménara</h2>
 <p><strong>Le bus</strong> reste imbattable en prix, à 80 à 120 MAD par personne selon la compagnie et le confort. CTM et Supratours sont fiables, climatisés, avec des bagages en soute. C'est le bon choix à une ou deux personnes, sans contrainte horaire.</p>
 <p><strong>Le transfert privé</strong> devient rationnel dès trois ou quatre passagers : 95 € par véhicule contre 400 MAD pour quatre billets de bus plus deux taxis d'accès, l'écart se réduit fortement — et vous partez directement du terminal, sans passer par la gare routière.</p>
 <p><strong>La voiture de location</strong> s'impose si vous comptez rayonner : Sidi Kaouki, Diabat, les plages au sud d'Essaouira ne sont pas desservies en transport public.</p>
@@ -45,8 +52,13 @@ export default {
 
 <h2>Combien de temps rester</h2>
 <p>Essaouira mérite mieux qu'une excursion à la journée : avec cinq heures de route aller-retour, il ne vous resterait que quelques heures sur place. <strong>Deux nuits</strong> permettent de voir la médina classée, le port, les remparts, une plage et de dîner deux fois au poisson — ce qui est le minimum pour comprendre la différence d'atmosphère avec Marrakech.</p>
+
+<h2>Arriver à Essaouira : la médina se finit à pied</h2>
+<p>Comme à Marrakech, la médina d'Essaouira est piétonne. Voitures et transferts s'arrêtent aux portes, où des parkings payants et des porteurs avec charrette prennent le relais jusqu'à votre riad. Demandez à votre hébergement la porte la plus proche et faites-la indiquer au chauffeur. Si vous louez une voiture pour la côte, la laisser au parking pendant le séjour en médina est la règle. Pour la suite de l'itinéraire, voir aussi notre guide <a href="/blog/distance-agadir-aeroport-marrakech/">aéroport → Agadir</a>.</p>
 `,
     faqs: [
+      { q: "Combien coûte un transfert de l'aéroport de Marrakech à Essaouira ?", a: "Environ 95 € par véhicule pour deux heures trente de route, départ direct du terminal. À partir de trois ou quatre voyageurs, c'est souvent plus intéressant que les billets de bus plus les taxis d'accès à la gare routière." },
+      { q: "Peut-on louer une voiture à l'aéroport de Marrakech et la rendre à Essaouira ?", a: "C'est possible chez certains loueurs, avec des frais d'abandon et un choix d'agences plus limité à Essaouira. Vérifiez le point de retour et le total avant de réserver." },
       {
         q: 'Quelle distance sépare Marrakech d\'Essaouira ?',
         a: "Environ 180 kilomètres, soit deux heures trente de route par la N8 puis la R207, à travers l'arganeraie. La route est régulière et bien revêtue, sans difficulté particulière.",

@@ -4,7 +4,7 @@ export default {
   title: "Marrakech Menara Airport to Fes: train, coach or road?",
   description: "From Marrakech Menara Airport to Fes: 530 km, a 7-hour ONCF train from Gueliz, coaches, a connection via Casablanca or the motorway.",
   eyebrow: 'Distances',
-  h1: 'From Marrakech to Fes: which option?',
+  h1: "From Marrakech Menara Airport to Fes: which option to choose",
   lede: "Five hundred and thirty kilometres separate the two imperial cities: the longest journey in this guide, and the one where your choice of transport changes your day the most.",
   excerpt: 'Overnight train, coach, a flight via Casablanca or the motorway: an honest comparison of the ways to link Marrakech and Fes.',
   date: '2026-08-30',
@@ -15,12 +15,21 @@ export default {
     { label: 'Second class', value: '200–250', sub: 'MAD' },
   ],
   body: `
-<h2>The train: long, but comfortable</h2>
+<h2>The train from Marrakech Menara Airport: long, but comfortable</h2>
 <p>ONCF links Marrakech to Fes in <strong>about seven hours</strong>, generally with a change at Casablanca. A ticket costs around <strong>MAD 200–250 in second class</strong>, MAD 300–380 in first. The trains are comfortable, punctual and let you work or sleep.</p>
 <p>An essential reminder: Marrakech station is in <strong>Gueliz</strong>, not at the airport. Allow MAD 50–70 for a taxi plus a waiting margin, which brings the total to around eight hours.</p>
 <p>Some overnight services let you make the journey while sleeping, saving a hotel night — an option worth taking seriously over this distance.</p>
 
-<h2>The four options compared</h2>
+<h2>The train journey step by step from Marrakech Menara Airport</h2>
+<ol>
+<li><strong>Taxi to Marrakech ONCF station</strong> (Gueliz): MAD 50 to 70 by day, ten to fifteen minutes — see our <a href="/en/marrakech-airport-taxi/">airport taxi</a> page.</li>
+<li><strong>Ticket</strong> at the counter, the machine, or in advance on the ONCF website and app, recommended on busy days.</li>
+<li><strong>Change</strong> usually in Casablanca: check the platform and connection time on your ticket.</li>
+<li><strong>Arrival at Fes station</strong>, in the new town, then a petit taxi to the medina gate closest to your accommodation.</li>
+</ol>
+<p>Leave at least an hour between landing and the train: passport control, bags and the ride to the station easily take that long.</p>
+
+<h2>Marrakech Menara Airport to Fes: the four options</h2>
 <div class="table-wrap">
 <table class="data">
 <thead><tr><th>Option</th><th>Price</th><th>Door-to-door</th><th>Comfort</th></tr></thead>
@@ -43,8 +52,13 @@ export default {
 
 <h2>What if you fly straight to Fes?</h2>
 <p>Fes has its own airport, <strong>Fes Saiss (FEZ)</strong>, served by several European airlines. If Fes is your main destination, a direct flight there spares you this journey entirely. Marrakech only works as an entry point if you plan to spend several days there.</p>
+
+<h2>Breaking the journey between Marrakech and Fes</h2>
+<p>Splitting the trip turns a long day into two pleasant stages. <strong>Casablanca</strong> is two and a half hours by road or three by train from Marrakech — see our <a href="/en/blog/distance-casablanca-marrakech-airport/">airport → Casablanca</a> guide; <strong>Rabat</strong>, an hour further, offers a quiet medina and the Kasbah of the Udayas. By car, hiring at the airport lets you stop freely: compare offers on our <a href="/en/car-rental/">car hire</a> page, allowing for a one-way fee if you return it in Fes.</p>
 `,
   faqs: [
+    { q: "How do I get from Marrakech airport to the train station?", a: "By taxi: MAD 50 to 70 by day for ten to fifteen minutes to the ONCF station in Gueliz. Bus 19 also runs into town, but it is impractical with luggage before a long train journey." },
+    { q: "Can I take a private transfer from Marrakech airport to Fes?", a: "Yes, on quotation, but the trip takes about six hours and costs far more than the train. It mostly makes sense for four or more passengers, or with a planned stop on the way." },
     {
       q: 'How long is the train between Marrakech and Fes?',
       a: "About seven hours, generally with a change at Casablanca, for MAD 200–250 in second class. Adding the taxi from the airport to Gueliz station, allow eight hours door to door.",

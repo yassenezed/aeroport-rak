@@ -4,7 +4,7 @@ export default {
   title: "Luchthaven Marrakech-Menara → Ouarzazate via de Tichka",
   description: "Van luchthaven Marrakech-Menara naar Ouarzazate: 200 km over de Tichka-pas op 2.260 m, 4 uur rijden, CTM-bussen, transfers en rijtips.",
   eyebrow: "Afstanden",
-  h1: "Van luchthaven Marrakech naar Ouarzazate",
+  h1: "Van luchthaven Marrakech-Menara naar Ouarzazate",
   lede: "Maar tweehonderd kilometer, en toch vier uur rijden: tussen de twee steden ligt de Tichka-pas, op 2.260 meter. Een van de mooiste routes van Marokko – en een die u niet moet onderschatten.",
   excerpt: "200 km en 4 uur over de Tichka: echte reistijd, vervoersopties, winterse omstandigheden en hoe u Aït-Ben-Haddou niet mist.",
   date: "2026-08-31",
@@ -19,7 +19,7 @@ export default {
 <p>De N9 steekt de Hoge Atlas over via de <strong>Tichka-pas op 2.260 meter</strong>. De weg is de laatste jaren verbreed en veiliger gemaakt, maar blijft over tientallen kilometers een opeenvolging van haarspeldbochten, met trage vrachtwagens en inhaalmanoeuvres. Het echte gemiddelde ligt rond vijftig kilometer per uur.</p>
 <p>Dat is geen nadeel: het is een van de mooiste routes van het land, met dorpen tegen de hellingen, panoramische passen en een volledige landschapswissel aan de zuidkant, waar groen plaats maakt voor oker.</p>
 
-<h2>De opties</h2>
+<h2>Luchthaven Marrakech-Menara → Ouarzazate: de opties</h2>
 <div class="table-wrap">
 <table class="data">
 <thead><tr><th>Optie</th><th>Prijs</th><th>Duur</th><th>Vertrek</th></tr></thead>
@@ -32,7 +32,16 @@ export default {
 </table>
 </div>
 
-<h2>De Tichka rijden</h2>
+<h2>De reis stap voor stap vanaf luchthaven Marrakech-Menara</h2>
+<ol>
+<li><strong>Ophalen van de auto</strong> aan de balie in de aankomsthal: een kleine auto volstaat, de weg is volledig verhard. Zie onze <a href="/nl/blog/car-rental-marrakech-airport/">gids voor autohuur op de luchthaven</a>.</li>
+<li><strong>Marrakech uit</strong> naar het oosten, richting Aït Ourir, over de N9: na een uur vlakte begint de klim de Atlas in.</li>
+<li><strong>Tichkapas</strong> (2.260 m), daarna afdalen naar de zuidhelling met haar okerkleurige landschappen.</li>
+<li><strong>Omweg naar Aït-Ben-Haddou</strong>, zo'n dertig kilometer voor Ouarzazate, en dan het laatste stuk.</li>
+</ol>
+<p>Zonder auto vertrekt een <a href="/nl/book-transfer/">privétransfer</a> direct vanaf de terminal en kan een stop in Aït-Ben-Haddou bevatten als u dat bij het boeken vraagt.</p>
+
+<h2>De Tichka rijden vanaf luchthaven Marrakech-Menara</h2>
 <ul>
 <li><strong>Vertrek 's ochtends.</strong> 's Nachts heeft de route niets te bieden en het zicht in de bochten verandert alles.</li>
 <li><strong>Plan pauzes.</strong> Passen klim je langzaam: vier uur bochten vermoeien meer dan vier uur snelweg.</li>
@@ -48,8 +57,13 @@ export default {
 <h2>Heen en terug op één dag: liever niet</h2>
 <p>Acht uur bergweg voor een paar uur ter plaatse: het kan, het is uitputtend, en het ontneemt de rit zijn zin. <strong>Eén nacht in Ouarzazate of Aït-Ben-Haddou</strong> verandert de ervaring volledig en laat u de zuidkant in het ochtendlicht zien.</p>
 <p>Gaat u verder naar de Dadès-kloven, de Drâa-vallei of Merzouga, dan is Ouarzazate hoe dan ook eerder een etappe dan een eindbestemming.</p>
+
+<h2>Laat landen op luchthaven Marrakech-Menara vóór de Tichka</h2>
+<p>Rijd de Tichka nooit 's nachts na een vlucht: haarspeldbochten, vrachtwagens en vermoeidheid gaan slecht samen. Landt u 's middags of 's avonds, overnacht dan in Marrakech — met onze selectie <a href="/nl/hotels/">hotels bij de luchthaven</a> vertrekt u vroeg zonder door de stad te rijden — en ga rond 8.00 uur op pad voor het licht op de zuidhelling. Huren? Vergelijk aanbiedingen op onze pagina <a href="/nl/car-rental/">autohuur</a>.</p>
 `,
   faqs: [
+    { q: "Heb je een 4x4 nodig van Marrakech naar Ouarzazate?", a: "Nee. De N9 over de Tichkapas is volledig verhard: een kleine auto volstaat. Een SUV of 4x4 is alleen nuttig voor pistes verderop, naar sommige valleien of de woestijn." },
+    { q: "Wat kost een transfer van de luchthaven van Marrakech naar Ouarzazate?", a: "Ongeveer € 120 tot 160 per voertuig voor vier uur rijden, met vertrek direct vanaf de terminal. Een stop in Aït-Ben-Haddou kan vaak op verzoek worden toegevoegd." },
     { q: "Hoe lang duurt de rit van Marrakech naar Ouarzazate?", a: "Ongeveer vier uur voor 200 kilometer, omdat de N9 de Tichka-pas op 2.260 meter oversteekt via een lange reeks haarspeldbochten. Het echte gemiddelde ligt rond vijftig kilometer per uur." },
     { q: "Is de Tichka-weg gevaarlijk?", a: "Hij is de laatste jaren verbreed en veiliger gemaakt en overdag niet bijzonder moeilijk, maar vraagt aandacht: bochten, trage vrachtwagens en inhaalmanoeuvres. In de winter kunnen sneeuw en ijzel de pas sluiten." },
     { q: "Kun je Ouarzazate op één dag doen vanuit Marrakech?", a: "Het kan, maar is uitputtend: acht uur bergweg voor een paar uur ter plaatse. Eén nacht in Ouarzazate of Aït-Ben-Haddou verandert de ervaring volledig en laat u de zuidkant 's ochtends zien." },

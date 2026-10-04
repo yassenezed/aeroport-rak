@@ -4,7 +4,7 @@ export default {
   title: "Luchthaven Marrakech-Menara → Agadir: afstand en vervoer",
   description: "Van luchthaven Marrakech-Menara naar Agadir: 250 km snelweg, 3 uur rijden, CTM- en Supratours-bussen, privétransfer en huurauto.",
   eyebrow: "Afstanden",
-  h1: "Van luchthaven Marrakech naar Agadir",
+  h1: "Van luchthaven Marrakech-Menara naar Agadir",
   lede: "Tweehonderdvijftig kilometer, drie uur snelweg en een volledige decorwissel: van de rode stad naar de Atlantische Oceaan. Zo maakt u de rit en dit kost hij echt.",
   excerpt: "250 km tussen de RAK en Agadir: bus, privétransfer, auto of vliegtuig, met reistijden en prijzen vergeleken.",
   date: "2026-09-01",
@@ -15,7 +15,7 @@ export default {
     { label: "Privétransfer", value: "€ 130–170", sub: "per voertuig" },
   ],
   body: `
-<h2>De opties</h2>
+<h2>Luchthaven Marrakech-Menara → Agadir: de opties</h2>
 <div class="table-wrap">
 <table class="data">
 <thead><tr><th>Optie</th><th>Prijs</th><th>Duur</th><th>Vertrek</th></tr></thead>
@@ -33,6 +33,13 @@ export default {
 <p>De snelweg A7 verbindt Marrakech met Agadir via een modern tracé door de westelijke Hoge Atlas. De weg is uitstekend, met regelmatige verzorgingsplaatsen, en in drie uur rustig af te leggen. De tol bedraagt enkele tientallen dirham.</p>
 <p>Twee aandachtspunten: de oversteek van het massief kan winderig zijn, en op het middenstuk worden tankstations schaars – tank vóór vertrek in Marrakech als uw tank laag is.</p>
 
+<h2>De reis stap voor stap vanaf luchthaven Marrakech-Menara</h2>
+<ol>
+<li><strong>Met de auto</strong>: haal de auto op aan de balie in de aankomsthal, neem de ringweg van Marrakech en daarna de snelweg A7 naar Agadir. Tank vol voordat u de stad verlaat. Documenten, borg en inspectie: zie onze <a href="/nl/blog/car-rental-marrakech-airport/">gids voor autohuur op de luchthaven</a>.</li>
+<li><strong>Met een transfer</strong>: de chauffeur wacht met een naambord in de aankomsthal en rijdt rechtstreeks naar uw adres in Agadir of Taghazout, zonder overstap.</li>
+<li><strong>Met de bus</strong>: neem eerst een taxi naar het busstation of het kantoor van de maatschappij (tarieven op onze pagina <a href="/nl/marrakech-airport-taxi/">luchthaventaxi</a>), daarna drie en een half tot vier uur met de touringcar.</li>
+</ol>
+
 <h2>De bus, met z'n tweeën de verstandigste optie</h2>
 <p>CTM en Supratours rijden meerdere keren per dag in bussen met airco en bagageruim, voor <strong>120 tot 180 MAD per persoon</strong>. Supratours is gekoppeld aan de ONCF, wat gecombineerde trein-busreizen vanuit het noorden vergemakkelijkt.</p>
 <p>Zoals alle langeafstandslijnen vertrekken de bussen van het <strong>busstation van Marrakech</strong>, niet van de luchthaven: tel een taxi en wachttijd erbij op.</p>
@@ -41,10 +48,15 @@ export default {
 <p>Controleer eerst of er een rechtstreekse vlucht naar Agadir Al Massira (AGA) vanaf uw stad bestaat. In Marrakech landen om daarna drie uur te rijden loont alleen als het ticket duidelijk goedkoper is, of als u toch een paar dagen in Marrakech doorbrengt.</p>
 </div>
 
-<h2>Welke optie kiezen</h2>
+<h2>Welke optie kiezen vanaf luchthaven Marrakech-Menara</h2>
 <p><strong>De bus</strong> alleen of met z'n tweeën, met tijd: comfortabel en heel goedkoop. <strong>De privétransfer</strong> vanaf vier passagiers, met kinderen of bij een late landing – vertrek direct bij de terminal. <strong>De huurauto</strong> als u de kust tussen Essaouira, Taghazout en Agadir wilt verkennen, wat met openbaar vervoer niet lukt.</p>
+
+<h2>'s Nachts landen op luchthaven Marrakech-Menara</h2>
+<p>Na een vlucht is drie uur snelweg in het donker over de Hoge Atlas geen goed idee, en de laatste bussen vertrekken ruim voor de late aankomsten. Twee oplossingen: een <a href="/nl/book-transfer/">privétransfer</a> die u direct naar Agadir brengt terwijl u uitrust, of een nacht in een <a href="/nl/hotels/">hotel bij de luchthaven</a> en 's ochtends vertrekken.</p>
 `,
   faqs: [
+    { q: "Vertrekt de bus naar Agadir vanaf de luchthaven van Marrakech?", a: "Nee. De bussen van CTM en Supratours vertrekken vanaf hun stations in de stad: neem eerst een taxi vanaf de luchthaven en reken daarna op drie en een half tot vier uur." },
+    { q: "Kun je op de luchthaven van Marrakech huren en in Agadir inleveren?", a: "Ja, de meeste grote verhuurders staan dat toe, maar rekenen vaak een toeslag voor inleveren in een andere stad. Vergelijk het totaal, inclusief toeslag, voordat u boekt." },
     { q: "Hoe ver ligt Agadir van Marrakech?", a: "Ongeveer 250 kilometer over de snelweg A7, dus drie uur rijden door de westelijke Hoge Atlas. De route is modern, met regelmatige verzorgingsplaatsen en enkele tientallen dirham tol." },
     { q: "Hoe kom je van luchthaven Marrakech naar Agadir?", a: "Met een CTM- of Supratours-bus vanaf het busstation van Marrakech voor 120 tot 180 MAD per persoon, met een privétransfer direct vanaf de terminal voor € 130 tot € 170 per voertuig, of met een huurauto." },
     { q: "Zijn er vluchten tussen Marrakech en Agadir?", a: "Geen nuttige rechtstreekse verbinding: een overstap in Casablanca maakt de reis veel langer dan drie uur rijden, tegen een hogere prijs. Is Agadir uw eindbestemming, zoek dan een rechtstreekse vlucht naar AGA." },

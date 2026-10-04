@@ -4,7 +4,7 @@ export default {
   title: "Aeropuerto de Marrakech-Menara → Ouarzazate por el Tichka",
   description: "Ir del aeropuerto de Marrakech-Menara a Ouarzazate: 200 km por el puerto de Tichka a 2.260 m, 4 h de carretera, autobuses CTM, traslados y consejos.",
   eyebrow: 'Distancias',
-  h1: 'Del aeropuerto de Marrakech a Ouarzazate',
+  h1: "Del aeropuerto de Marrakech-Menara a Uarzazat",
   lede: "Solo doscientos kilómetros, pero cuatro horas de carretera: entre las dos ciudades se alza el puerto de Tichka, a 2.260 metros. Es uno de los trayectos más bonitos de Marruecos y uno de los que no hay que subestimar.",
   excerpt: '200 km y 4 h por el Tichka: duración real, opciones de transporte, condiciones invernales y consejos para no perderse Ait Ben Haddou.',
   date: '2026-08-31',
@@ -19,7 +19,7 @@ export default {
 <p>La N9 cruza el Alto Atlas por el <strong>puerto de Tichka, a 2.260 metros</strong>. La carretera se ha ensanchado y asegurado en los últimos años, pero sigue siendo una sucesión de curvas a lo largo de decenas de kilómetros, con camiones lentos y adelantamientos que negociar. La media real ronda los cincuenta kilómetros por hora.</p>
 <p>No es un inconveniente: es uno de los itinerarios más bonitos del país, con pueblos colgados de las laderas, puertos panorámicos y un cambio completo de paisaje en la vertiente sur, donde el verde deja paso al ocre.</p>
 
-<h2>Las opciones</h2>
+<h2>Aeropuerto de Marrakech-Menara → Uarzazat: las opciones</h2>
 <div class="table-wrap">
 <table class="data">
 <thead><tr><th>Opción</th><th>Precio</th><th>Duración</th><th>Salida</th></tr></thead>
@@ -32,7 +32,16 @@ export default {
 </table>
 </div>
 
-<h2>Conducir el Tichka</h2>
+<h2>El trayecto paso a paso desde el aeropuerto de Marrakech-Menara</h2>
+<ol>
+<li><strong>Recogida del coche</strong> en el mostrador del vestíbulo de llegadas: basta un utilitario, la carretera está asfaltada de principio a fin. Vea nuestra <a href="/es/blog/car-rental-marrakech-airport/">guía del alquiler en el aeropuerto</a>.</li>
+<li><strong>Salida de Marrakech</strong> hacia el este, dirección Aït Ourir, por la N9: la subida al Atlas empieza tras una hora de llanura.</li>
+<li><strong>Puerto del Tichka</strong> (2.260 m) y bajada hacia la vertiente sur y sus paisajes ocres.</li>
+<li><strong>Desvío a Aït-Ben-Haddou</strong>, unos treinta kilómetros antes de Uarzazat, y último tramo.</li>
+</ol>
+<p>Sin coche, el <a href="/es/book-transfer/">traslado privado</a> sale directamente de la terminal y puede incluir la parada en Aït-Ben-Haddou si lo pide al reservar.</p>
+
+<h2>Conducir el Tichka desde el aeropuerto de Marrakech-Menara</h2>
 <ul>
 <li><strong>Salga por la mañana.</strong> La carretera de noche no tiene ningún interés y la visibilidad en las curvas lo cambia todo.</li>
 <li><strong>Prevea pausas.</strong> Los puertos se suben despacio: cuatro horas de curvas cansan más que cuatro de autopista.</li>
@@ -48,8 +57,13 @@ export default {
 <h2>Ida y vuelta en el día: mejor evitarlo</h2>
 <p>Ocho horas de carretera para unas horas allí, en una carretera de montaña: es factible, es agotador y vacía el trayecto de su interés. <strong>Una noche en Ouarzazate o en Ait Ben Haddou</strong> cambia por completo la experiencia y permite ver la vertiente sur con la luz de la mañana.</p>
 <p>Si continúa hacia las gargantas del Dadès, el valle del Draa o Merzouga, Ouarzazate es de todos modos una etapa natural más que un destino final.</p>
+
+<h2>Aterrizar tarde en el aeropuerto de Marrakech-Menara antes del Tichka</h2>
+<p>No suba nunca el Tichka de noche después de un vuelo: curvas, camiones y cansancio no combinan bien. Si aterriza por la tarde o la noche, duerma en Marrakech —nuestra selección de <a href="/es/hotels/">hoteles cerca del aeropuerto</a> permite salir temprano sin cruzar la ciudad— y póngase en marcha hacia las 8 h para disfrutar de la luz en la vertiente sur. Para alquilar, compare ofertas en nuestra página de <a href="/es/car-rental/">alquiler de coches</a>.</p>
 `,
   faqs: [
+    { q: "¿Hace falta un 4x4 para ir de Marrakech a Uarzazat?", a: "No. La N9 por el puerto del Tichka está totalmente asfaltada: basta un utilitario. Un SUV o 4x4 solo es útil para las pistas más allá, hacia algunos valles o el desierto." },
+    { q: "¿Cuánto cuesta un traslado del aeropuerto de Marrakech a Uarzazat?", a: "Unos 120 a 160 € por vehículo para cuatro horas de carretera, con salida directa desde la terminal. La parada en Aït-Ben-Haddou suele poder añadirse a petición." },
     {
       q: '¿Cuánto se tarda de Marrakech a Ouarzazate?',
       a: "Unas cuatro horas para 200 kilómetros, porque la N9 cruza el puerto de Tichka a 2.260 metros por una larga sucesión de curvas. La media real ronda los cincuenta kilómetros por hora.",
