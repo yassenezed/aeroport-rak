@@ -3,7 +3,7 @@
 //   1. le lien propre à l'hôtel (HOTEL_LINKS) ;
 //   2. le lien d'affiliation général Booking pour Marrakech (HOTEL_FALLBACK_LINK) ;
 //   3. à défaut, une recherche Booking sur le nom de l'hôtel (lien provisoire, non affilié).
-// À générer dans le compte Travelpayouts du projet 579106 (jamais un ancien lien du site Casa).
+// À générer dans le compte Travelpayouts du projet 581491 (jamais un ancien lien du site Casa).
 export const HOTEL_LINKS: Record<string, string> = {
   mamounia: '',
   royalMansour: '',

@@ -2,7 +2,7 @@
 // Paramètres d'affiliation et de mesure — point unique de configuration.
 //
 // À FOURNIR / CONFIRMER par le propriétaire du site :
-//  - `travelpayouts.trs` (projet AeroportRAK, 579106) et `.marker` (compte) :
+//  - `travelpayouts.trs` (projet AeroportRAK, 581491 — l'ancien 579106 visait airportrak.com par erreur) et `.marker` (compte) :
 //    identifiants Travelpayouts utilisés par tous les widgets et par Drive.
 //  - `travelpayouts.transfer.promoId` / `.campaignId` et `flights.*` :
 //    valeurs affichées dans le code du widget généré côté Travelpayouts.
@@ -13,11 +13,11 @@
 export const gaId = 'G-8596EGYJ0G';
 
 export const travelpayouts = {
-  trs: '579106',
+  trs: '581491',
   marker: '697149',
   /** Travelpayouts Drive du projet AeroportRAK : chargé en différé après
    *  l'affichage de la page, voir BaseLayout. */
-  trackingScript: 'https://emrld.ltd/NTc5MTA2.js?t=579106',
+  trackingScript: 'https://emrld.ltd/NTgxNDkx.js?t=581491',
 
   /** Widget de réservation de transferts (iframe). */
   transfer: {
