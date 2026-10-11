@@ -94,7 +94,7 @@ if (page.faqs?.length) {
     <div class="container hero__inner">
       <Breadcrumbs items={crumbs} />
       {page.eyebrow && <span class="eyebrow">{page.eyebrow}</span>}
-      <h1>{page.h1}<span class="h1-sub">{H1_SUB[locale] ?? H1_SUB.en}</span></h1>
+      <h1>{page.h1}<span class="sr-only">{locale === 'ar' ? '، ' : locale === 'fr' ? ' : ' : ': '}</span><span class="h1-sub">{H1_SUB[locale] ?? H1_SUB.en}</span></h1>
       <p class="lede">{page.lede}</p>
       <div class="hotel-meta">
         {page.stars && <span class="chip">{page.stars}</span>}
